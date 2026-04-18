@@ -12,8 +12,7 @@ const CONFIG = {
     STRATEGIES: {
         backup: [1, 4, 2, 3, 5],
         optimal: [2, 1, 2, 1, 3],
-        ai: [1, 4, 3, 1, 1, 3, 5, 5, 1, 1, 2, 1, 1, 1, 1, 1, 1, 3, 2, 2],
-        dynamic: [] // Will be selected in real-time
+        ai: [] // 동적 학습 알고리즘으로 대체됨
     },
     DANGER_RULES: [
         { id: 'bpb-b', prevPattern: 'BPB', firstMark: 'B', minMissStreak: 0, label: 'BPB 뒤 B' },
@@ -227,16 +226,22 @@ function getRoutinePred(rt, prev, c1) {
 
 function getPredictionByMode(mode, prev, buffer, colIndex) {
     if (!prev || buffer.length === 0) return { val: null, rt: null };
-    const seq = CONFIG.STRATEGIES[mode];
-    if (!seq || seq.length === 0) return { val: null, rt: null };
-    
-    const sequenceIdx = Math.max(0, colIndex - 1) % seq.length;
-    const routineId = seq[sequenceIdx];
-    const targetRt = CLASSIC_ROUTINES.find(r => r.id === routineId);
-    if (!targetRt) {
-        console.warn(`Routine ID ${routineId} not found in mode ${mode}`);
-        return { val: null, rt: null };
+
+    let routineId;
+    if (mode === 'ai') {
+        // AI SMART: 히스토리 및 현재 게임 기반 최적 루틴 시뮬레이션
+        const bestRt = findBestRoutineFromData();
+        routineId = bestRt ? bestRt.id : 1;
+    } else {
+        const seq = CONFIG.STRATEGIES[mode];
+        if (!seq || seq.length === 0) return { val: null, rt: null };
+        const sequenceIdx = Math.max(0, colIndex - 1) % seq.length;
+        routineId = seq[sequenceIdx];
     }
+
+    const targetRt = CLASSIC_ROUTINES.find(r => r.id === routineId);
+    if (!targetRt) return { val: null, rt: null };
+    
     const pred = getRoutinePred(targetRt, prev, buffer[0]);
     if (!pred) return { val: null, rt: null };
     
@@ -244,6 +249,53 @@ function getPredictionByMode(mode, prev, buffer, colIndex) {
         val: (buffer.length === 1 ? pred.p2 : pred.p3),
         rt: targetRt
     };
+}
+
+/**
+ * 학습지(히스토리) 데이터를 분석하여 현재 가장 적합한 루틴을 추출합니다.
+ */
+function findBestRoutineFromData() {
+    const history = JSON.parse(localStorage.getItem(CONFIG.HISTORY_KEY) || '[]');
+    const scores = CLASSIC_ROUTINES.map(rt => ({ ...rt, score: 0 }));
+
+    // 1. 과거 히스토리 학습 (장기 기억)
+    history.forEach(game => {
+        let prev = null;
+        game.forEach(row => {
+            if (prev && row.every(v => v !== null)) {
+                scores.forEach(rt => {
+                    const p = getRoutinePred(rt, prev, row[0]);
+                    if (p) {
+                        if (row[1] === p.p2) rt.score += 1;
+                        if (row[2] === p.p3) rt.score += 1;
+                    }
+                });
+            }
+            if (row.every(v => v !== null)) prev = row;
+        });
+    });
+
+    // 2. 현재 게임 흐름 학습 (단기 기억 - 3배 가중치)
+    let prevRow = null;
+    currentGame.forEach(row => {
+        if (prevRow && row.every(v => v !== null)) {
+            scores.forEach(rt => {
+                const p = getRoutinePred(rt, prevRow, row[0]);
+                if (p) {
+                    if (row[1] === p.p2) rt.score += 3;
+                    if (row[2] === p.p3) rt.score += 3;
+                }
+            });
+        }
+        prevRow = row;
+    });
+
+    // 3. 현재 연속 오답 중인 루틴은 패널티 부여
+    scores.forEach(rt => {
+        if (rt.currentMissStreak > 0) rt.score -= (rt.currentMissStreak * 2);
+    });
+
+    return scores.sort((a, b) => b.score - a.score)[0];
 }
 
 function getMasterPrediction(prev, buffer, colIndex) {
@@ -578,7 +630,7 @@ function updateUI() {
         dom.guideCard.classList.add('pred-skip');
     } else if (master.predictedVal) {
         dom.guideLabel.textContent = master.guideLabel;
-        badge.textContent = master.bestRtName;
+        badge.textContent = currentStrategyMode === 'ai' ? `학습 완료: ${master.bestRtName}` : master.bestRtName;
         dom.recommendation.textContent = `NEXT: ${master.predictedVal === 'P' ? 'PLAYER' : 'BANKER'}`;
         dom.guideCard.classList.add(master.predictedVal === 'P' ? 'pred-p' : 'pred-b');
 
@@ -617,10 +669,11 @@ function triggerCelebration() {
 }
 
 function archive() {
+    if (currentGame.length === 0) return;
     const history = JSON.parse(localStorage.getItem(CONFIG.HISTORY_KEY) || '[]');
     history.push(currentGame.map(row => [...row]));
     localStorage.setItem(CONFIG.HISTORY_KEY, JSON.stringify(history));
-    setTimeout(() => resetGame(), 1000);
+    console.log('Game archived to history. Total games:', history.length);
 }
 
 function handleInput(val) {
@@ -663,6 +716,10 @@ function undo() {
 }
 
 function resetGame() {
+    // 리셋 시 현재까지의 데이터도 히스토리에 저장 (학습용)
+    if (currentGame.length > 0) {
+        archive();
+    }
     currentGame = [];
     inputBuffer = [];
     recomputeDerivedState();
@@ -810,31 +867,38 @@ function showAnalysis() {
         const simRes = modes.map(m => {
             let p = 0;
             let streak = 0;
+            let maxStreak = 0;
             let completed = [];
             game.forEach((row, ri) => {
                 const prev = completed[completed.length - 1];
                 if (prev && row.every(v => v !== null)) {
                     const seq = CONFIG.STRATEGIES[m];
-                    const rtId = seq[ri % seq.length];
+                    const rtId = (m === 'ai') ? (findBestRoutineFromData().id) : (seq ? seq[ri % seq.length] : 1);
                     const rt = CLASSIC_ROUTINES.find(r => r.id === rtId);
                     const pred = getRoutinePred(rt, prev, row[0]);
-                    if (!pred) return; // Skip if no prediction available
+                    if (!pred) return;
                     const b1 = streak > 0 ? CONFIG.UNIT_STEPS[Math.min(streak, 4)] : 0;
                     if (row[1] === pred.p2) { p += b1; streak = 0; }
                     else {
                         streak++;
+                        maxStreak = Math.max(maxStreak, streak);
                         const b2 = CONFIG.UNIT_STEPS[Math.min(streak, 4)];
                         if (row[2] === pred.p3) { p += b2; streak = 0; }
-                        else { streak++; p -= (b1 + b2); }
+                        else { 
+                            streak++; 
+                            maxStreak = Math.max(maxStreak, streak);
+                            p -= (b1 + b2); 
+                        }
                     }
                 }
                 if (row.every(v => v !== null)) completed.push([...row]);
             });
-            return { mode: m, profit: p };
+            return { mode: m, profit: p, maxMiss: maxStreak };
         });
         const bestModeForGame = simRes.sort((a,b) => b.profit - a.profit)[0];
+        const safestModeForGame = simRes.sort((a,b) => a.maxMiss - b.maxMiss || b.profit - a.profit)[0];
 
-        // Standard metrics
+        // Standard metrics (using Master/Total strategy)
         const runtime = createRuntimeState();
         const completedRows = [];
         let maxGameMiss = 0;
@@ -878,6 +942,8 @@ function showAnalysis() {
             profit: gameProfit,
             winRate: runtime.stats.total > 0 ? (runtime.stats.wins / runtime.stats.total * 100).toFixed(1) : 0,
             bestStrategy: bestModeForGame.mode.toUpperCase(),
+            safestStrategy: safestModeForGame.mode.toUpperCase(),
+            safestMiss: safestModeForGame.maxMiss,
             isCurrent: isLive
         };
     });
@@ -923,10 +989,13 @@ function renderAnalysis(results) {
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>${res.index}</td>
-            <td>${res.maxMiss}</td>
+            <td style="color: ${res.maxMiss >= 4 ? '#ff5555' : 'inherit'}">${res.maxMiss}단</td>
             <td class="${res.profit >= 0 ? 'p-win' : 'p-loss'}">${res.profit > 0 ? '+' : ''}${res.profit}U</td>
             <td>${res.winRate}%</td>
-            <td style="font-size: 10px; opacity: 0.7;">Best: ${res.bestStrategy}</td>
+            <td style="font-size: 10px; opacity: 0.8;">
+                <div style="color: #00ff88">Best: ${res.bestStrategy}</div>
+                <div style="color: #66ccff">Safe: ${res.safestStrategy}(${res.safestMiss})</div>
+            </td>
         `;
         dom.analysisBody.appendChild(tr);
     });
