@@ -15,23 +15,23 @@ const CONFIG = {
         ai: [] // 동적 학습 알고리즘으로 대체됨
     },
     DANGER_RULES: [
-        { id: 'bpb-b', prevPattern: 'BPB', firstMark: 'B', minMissStreak: 0, label: 'BPB 뒤 B' },
-        { id: 'pbp-p', prevPattern: 'PBP', firstMark: 'P', minMissStreak: 0, label: 'PBP 뒤 P' },
-        { id: 'bbp-b-miss', prevPattern: 'BBP', firstMark: 'B', minMissStreak: 1, label: 'BBP 뒤 B' },
-        { id: 'ppb-p-miss', prevPattern: 'PPB', firstMark: 'P', minMissStreak: 1, label: 'PPB 뒤 P' },
-        { id: 'bbb-b-kill', prevPattern: 'BBB', firstMark: 'B', minMissStreak: 0, label: '포도 줄타기 경고' },
-        { id: 'ppp-p-kill', prevPattern: 'PPP', firstMark: 'P', minMissStreak: 0, label: '플레이어 줄타기 경고' }
+        { id: 'bpb-b', prevPattern: 'BPB', firstMark: 'B', minMissStreak: 0, label: 'BPB \ub4a4 B' },
+        { id: 'pbp-p', prevPattern: 'PBP', firstMark: 'P', minMissStreak: 0, label: 'PBP \ub4a4 P' },
+        { id: 'bbp-b-miss', prevPattern: 'BBP', firstMark: 'B', minMissStreak: 1, label: 'BBP \ub4a4 B' },
+        { id: 'ppb-p-miss', prevPattern: 'PPB', firstMark: 'P', minMissStreak: 1, label: 'PPB \ub4a4 P' },
+        { id: 'bbb-b-kill', prevPattern: 'BBB', firstMark: 'B', minMissStreak: 0, label: '\ud3ec\ub3c4 \uc904\ud0c0\uae30 \uacbd\uace0' },
+        { id: 'ppp-p-kill', prevPattern: 'PPP', firstMark: 'P', minMissStreak: 0, label: '\ud50c\ub808\uc774\uc5b4 \uc904\ud0c0\uae30 \uacbd\uace0' }
     ]
 };
 
 let currentStrategyMode = localStorage.getItem('pb_strategy_mode') || 'total';
 
 const CLASSIC_ROUTINES = [
-    { id: 1, name: '★ 별', crit: 2, p2: 1, p3: 0, hits: 0, currentMissStreak: 0, maxMissStreak: 0 },
-    { id: 2, name: 'ㅡ 바', crit: 0, p2: 2, p3: 1, hits: 0, currentMissStreak: 0, maxMissStreak: 0 },
-    { id: 3, name: 'X 엑스', crit: 1, p2: 0, p3: 2, hits: 0, currentMissStreak: 0, maxMissStreak: 0 },
-    { id: 4, name: '△ 세모', crit: 1, p2: 2, p3: 0, hits: 0, currentMissStreak: 0, maxMissStreak: 0 },
-    { id: 5, name: '三 삼', crit: 0, p2: 1, p3: 2, hits: 0, currentMissStreak: 0, maxMissStreak: 0 }
+    { id: 1, name: '\u2605 \ubcc4', crit: 2, p2: 1, p3: 0, hits: 0, currentMissStreak: 0, maxMissStreak: 0 },
+    { id: 2, name: '\u2014 \ubc14', crit: 0, p2: 2, p3: 1, hits: 0, currentMissStreak: 0, maxMissStreak: 0 },
+    { id: 3, name: 'X \uc5d1\uc2a4', crit: 1, p2: 0, p3: 2, hits: 0, currentMissStreak: 0, maxMissStreak: 0 },
+    { id: 4, name: '\u25b3 \uc138\ubaa8', crit: 1, p2: 2, p3: 0, hits: 0, currentMissStreak: 0, maxMissStreak: 0 },
+    { id: 5, name: '\u4e09 \uc0bc', crit: 0, p2: 1, p3: 2, hits: 0, currentMissStreak: 0, maxMissStreak: 0 }
 ];
 
 let currentGame = [];
@@ -300,7 +300,7 @@ function findBestRoutineFromData() {
 
 function getMasterPrediction(prev, buffer, colIndex) {
     if (!prev || buffer.length === 0 || colIndex < 1) {
-        return { predictedVal: null, bestRtName: '분석 대기', guideLabel: '패턴 시점분석 대기 중' };
+        return { predictedVal: null, bestRtName: '\ubd84\uc11d \ub300\uae30', guideLabel: '\ud328\ud134 \uc2dc\uc12c\ubd84\uc11d \ub300\uae30 \uc911' };
     }
 
     if (currentStrategyMode === 'dynamic') {
@@ -309,8 +309,8 @@ function getMasterPrediction(prev, buffer, colIndex) {
         const stepLabel = buffer.length === 1 ? 'STEP 2' : 'STEP 3';
         return {
             predictedVal: (buffer.length === 1 ? pred.p2 : pred.p3),
-            bestRtName: `최적 적중: ${bestRt.name.split(' ')[0]}`,
-            guideLabel: `${stepLabel} [동적 최적화 모드]`
+            bestRtName: `\ucd5c\uc801 \uc801\uc911: ${bestRt.name.split(' ')[0]}`,
+            guideLabel: `${stepLabel} [\ub3d9\uc801 \ucd5c\uc801\ud654 \ubaa8\ub4dc]`
         };
     }
 
@@ -331,8 +331,8 @@ function getMasterPrediction(prev, buffer, colIndex) {
         const stepLabel = buffer.length === 1 ? 'STEP 2' : 'STEP 3';
         return {
             predictedVal: finalVal,
-            bestRtName: `통합 다수결 (${score.P}:${score.B})`,
-            guideLabel: `${stepLabel} [다수결 모드]`
+            bestRtName: `\ud1b5\ud569 \ub2e4\uc218\uacb0 (${score.P}:${score.B})`,
+            guideLabel: `${stepLabel} [\ub2e4\uc218\uacb0 \ubaa8\ub4dc]`
         };
     }
 
@@ -340,8 +340,8 @@ function getMasterPrediction(prev, buffer, colIndex) {
     const res = getPredictionByMode(currentStrategyMode, prev, buffer, colIndex);
     return {
         predictedVal: res.val,
-        bestRtName: res.rt ? `${res.rt.name.split(' ')[0]} (${buffer.length === 1 ? 'S2' : 'S3'})` : '분석중',
-        guideLabel: `STEP ${buffer.length === 1 ? '2' : '3'} [${res.rt ? res.rt.name : '분석중'}]`
+        bestRtName: res.rt ? `${res.rt.name.split(' ')[0]} (${buffer.length === 1 ? 'S2' : 'S3'})` : '\ubd84\uc11d\uc911',
+        guideLabel: `STEP ${buffer.length === 1 ? '2' : '3'} [${res.rt ? res.rt.name : '\ubd84\uc11d\uc911'}]`
     };
 }
 
@@ -547,10 +547,10 @@ function updateSafetyIndicator() {
     const el = document.getElementById('safety-status');
     el.className = `status-badge ${safetyState.toLowerCase()}`;
 
-    if (safetyState === 'WAIT') dom.statusText.textContent = '관망 중';
-    else if (safetyState === 'DANGER') dom.statusText.textContent = '위험패턴 스킵';
-    else if (safetyState === 'TARGET_FOUND') dom.statusText.textContent = '타겟 공략';
-    else dom.statusText.textContent = `휴식(${breakLeft})`;
+    if (safetyState === 'WAIT') dom.statusText.textContent = '\uad00\ub9dd \uc911';
+    else if (safetyState === 'DANGER') dom.statusText.textContent = '\uc700\ud5d8\ud328\ud134 \uc2a4\ud0b5';
+    else if (safetyState === 'TARGET_FOUND') dom.statusText.textContent = '\ud0c0\uac9f \uac30\ub7b5';
+    else dom.statusText.textContent = `\ud734\uc2dd(${breakLeft})`;
 }
 
 function getUnit() {
@@ -624,21 +624,21 @@ function updateUI() {
     const badge = document.getElementById('ai-mode-badge');
 
     if (safetyState === 'DANGER' && currentDangerRule) {
-        dom.guideLabel.textContent = '위험 패턴 감지';
+        dom.guideLabel.textContent = '\uc700\ud5d8 \ud328\ud134 \uac10\uc9c0';
         badge.textContent = currentDangerRule.label;
         dom.recommendation.textContent = 'NEXT: SKIP';
         dom.guideCard.classList.add('pred-skip');
     } else if (master.predictedVal) {
         dom.guideLabel.textContent = master.guideLabel;
-        badge.textContent = currentStrategyMode === 'ai' ? `학습 완료: ${master.bestRtName}` : master.bestRtName;
+        badge.textContent = currentStrategyMode === 'ai' ? `\ud559\uc2b5 \uc604\ub8cc: ${master.bestRtName}` : master.bestRtName;
         dom.recommendation.textContent = `NEXT: ${master.predictedVal === 'P' ? 'PLAYER' : 'BANKER'}`;
         dom.guideCard.classList.add(master.predictedVal === 'P' ? 'pred-p' : 'pred-b');
 
         if (master.predictedVal === 'P') dom.btnP.classList.add('glow-pulse');
         else dom.btnB.classList.add('glow-pulse');
     } else {
-        dom.guideLabel.textContent = '패턴 시점분석 대기 중';
-        badge.textContent = '분석 대기';
+        dom.guideLabel.textContent = '\ud328\ud134 \uc2dc\uc12c\ubd84\uc11d \ub300\uae30 \uc911';
+        badge.textContent = '\ubd84\uc11d \ub300\uae30';
         dom.recommendation.textContent = 'NEXT: -';
     }
 
@@ -659,7 +659,7 @@ function updateUI() {
     dom.streak.classList.remove('hidden');
 
     if (currentStreak >= 2) {
-        dom.streak.textContent += `  🔥 ${currentStreak}연승!`;
+        dom.streak.textContent += `  \ud83d\udd25 ${currentStreak}\uc5f0\uc2b9!`;
     }
 }
 
@@ -855,7 +855,7 @@ function showAnalysis() {
     }
 
     if (allGames.length === 0) {
-        alert('분석할 데이터가 없습니다.');
+        alert('\ubd84\uc11d\ud560 \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.');
         return;
     }
 
@@ -970,15 +970,15 @@ function renderAnalysis(results) {
 
     const summaryHtml = `
         <div class="summary-card ${overallStats.profit >= 0 ? 'positive' : 'negative'}">
-            <label>누적 총 손익</label>
+            <label>\ub204\uc801 \ud631 \uc190\uc775</label>
             <span>${overallStats.profit > 0 ? '+' : ''}${overallStats.profit}U</span>
         </div>
         <div class="summary-card">
-            <label>종합 최대 미스</label>
-            <span>${overallStats.maxMiss}단</span>
+            <label>\uc885\ud569 \ucd5c\ub300 \ubbf8\uc2a4</label>
+            <span>${overallStats.maxMiss}\ub2e8</span>
         </div>
         <div class="summary-card">
-            <label>추천 전략</label>
+            <label>\ucd94\ucc1c \uc804\ub7b5</label>
             <span>${commonBest}</span>
         </div>
     `;
@@ -989,7 +989,7 @@ function renderAnalysis(results) {
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>${res.index}</td>
-            <td style="color: ${res.maxMiss >= 4 ? '#ff5555' : 'inherit'}">${res.maxMiss}단</td>
+            <td style="color: ${res.maxMiss >= 4 ? '#ff5555' : 'inherit'}">${res.maxMiss}\ub2e8</td>
             <td class="${res.profit >= 0 ? 'p-win' : 'p-loss'}">${res.profit > 0 ? '+' : ''}${res.profit}U</td>
             <td>${res.winRate}%</td>
             <td style="font-size: 10px; opacity: 0.8;">
@@ -1015,7 +1015,7 @@ function init() {
         console.log('App ready. Grid Rows:', CONFIG.TOTAL_ROWS);
     } catch (e) {
         console.error('Initialization Error:', e);
-        alert('앱 초기화 오류: ' + e.message);
+        alert('\uc571 \ucd08\uae30\ud654 \uc624\ub958: ' + e.message);
     }
 }
 
