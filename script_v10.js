@@ -267,6 +267,7 @@ function getPredictionByMode(mode, prev, buffer, colIndex) {
     let routineId;
     if (mode === 'vertical') {
         // \ub0b4\ub824\uc624\uae30 \ud2b9\uc218 \ub85c\uc9c1: \ud604\uc7ac \uc5f4 1\ud589 \uae30\ud638\ub97c \uadf8\ub300\ub85c \ubcf5\uc0ac
+        // NOTE: \uc774 \ubaa8\ub4dc\ub294 1\ud589\uc5d0\uc11c\ub294 \uc608\ucc21\uac12\uc774 null\uc774\uba70, 2\ud589 \uc785\ub825 \uc2dc\uc810\ubd80\ud130 \ud65c\uc131\ud654\ub428
         return { val: buffer[0], rt: { id: 0, name: '\ub0b4\ub824\uc624\uae30' } };
     }
 
@@ -296,8 +297,13 @@ function getPredictionByMode(mode, prev, buffer, colIndex) {
 /**
  * 학습지(히스토리) 데이터를 분석하여 현재 가장 적합한 루틴을 추출합니다.
  */
-function findBestRoutineFromData() {
-    const history = JSON.parse(localStorage.getItem(CONFIG.HISTORY_KEY) || '[]');
+function findBestRoutineFromData(customHistory = null) {
+    const history = customHistory || (function() {
+        try {
+            const raw = localStorage.getItem(CONFIG.HISTORY_KEY);
+            return raw ? JSON.parse(raw) : [];
+        } catch (e) { return []; }
+    })();
     const scores = CLASSIC_ROUTINES.map(rt => ({ ...rt, score: 0 }));
 
     // 1. \uacfc\uac70 \ud788\uc2a4\ud1a0\ub9ac \ud559\uc2b5 (\ucd5c\uadfc 5\uac8c\uc784\uc5d0 \uac15\ub825\ud55c \uac00\uc911\uce58)
@@ -425,11 +431,14 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
                         else if (mode === 'vertical') runtime.verticalMissStreak = 0;
                         else if (mode === 'total') runtime.totalMissStreak = 0;
                     } else {
-                        if (mode === 'optimal') runtime.optimalMissStreak++;
-                        else if (mode === 'ai') runtime.aiMissStreak++;
-                        else if (mode === 'backup') runtime.backupMissStreak++;
-                        else if (mode === 'vertical') runtime.verticalMissStreak++;
-                        else if (mode === 'total') runtime.totalMissStreak++;
+                        // \uc704\ud5d8 \uad6c\uac04(skipRule)\uc5d0\uc11c\ub294 \ubbf8\uc2a4\ub97c \uc313\uc9c0 \uc54a\uc74c (\uc0ac\uc6a9\uc790 \uc694\uccad: \uc274 \ub9ac\ud06c\ud2b8 \ubcf4\ud638)
+                        if (!skipRule) {
+                            if (mode === 'optimal') runtime.optimalMissStreak++;
+                            else if (mode === 'ai') runtime.aiMissStreak++;
+                            else if (mode === 'backup') runtime.backupMissStreak++;
+                            else if (mode === 'vertical') runtime.verticalMissStreak++;
+                            else if (mode === 'total') runtime.totalMissStreak++;
+                        }
                     }
                 }
             });
@@ -909,38 +918,56 @@ function showAnalysis() {
     const results = allGames.map((game, index) => {
         const isLive = (index === allGames.length - 1 && history.length < allGames.length);
         
-        // Simulation for best strategy
-        const modes = ['optimal', 'ai', 'backup'];
+        // \uc804\ub7b5\ubcc4 \uc2dc\ubbac\ub808\uc774\uc158 (\ud55c \uce78 \ub2e8\uc704 \uc815\ubc00 \uacc4\uc0b0)
+        const modes = ['optimal', 'ai', 'backup', 'vertical'];
         const simRes = modes.map(m => {
-            let p = 0;
+            let profit = 0;
             let streak = 0;
             let maxStreak = 0;
             let completed = [];
-            game.forEach((row, ri) => {
-                const prev = completed[completed.length - 1];
-                if (prev && row.every(v => v !== null)) {
-                    const seq = CONFIG.STRATEGIES[m];
-                    const rtId = (m === 'ai') ? (findBestRoutineFromData().id) : (seq ? seq[ri % seq.length] : 1);
-                    const rt = CLASSIC_ROUTINES.find(r => r.id === rtId);
-                    const pred = getRoutinePred(rt, prev, row[0]);
-                    if (!pred) return;
-                    const b1 = streak > 0 ? CONFIG.UNIT_STEPS[Math.min(streak, 4)] : 0;
-                    if (row[1] === pred.p2) { p += b1; streak = 0; }
-                    else {
-                        streak++;
-                        maxStreak = Math.max(maxStreak, streak);
-                        const b2 = CONFIG.UNIT_STEPS[Math.min(streak, 4)];
-                        if (row[2] === pred.p3) { p += b2; streak = 0; }
-                        else { 
-                            streak++; 
-                            maxStreak = Math.max(maxStreak, streak);
-                            p -= (b1 + b2); 
+            
+            allGames.forEach((shoe, shoeIdx) => {
+                // LIVE \uc5ec\ubd80\uc5d0 \ub530\ub77c \ucd08\uae30 \uc0c1\ud0dc \uc124\uc815
+                let currentStreak = 0;
+                let currentMax = 0;
+
+                shoe.forEach((row, ri) => {
+                    const prev = completed[completed.length - 1];
+                    const steps = [null, row[1], row[2]];
+
+                    for (let step = 1; step <= 2; step++) {
+                        const val = steps[step];
+                        if (val === null) continue;
+
+                        let pVal = null;
+                        if (m === 'vertical') {
+                            if (prev) pVal = row[0];
+                        } else {
+                            const seq = CONFIG.STRATEGIES[m];
+                            const rtId = (m === 'ai') ? (findBestRoutineFromData(completed).id) : (seq ? seq[ri % seq.length] : 1);
+                            const rt = CLASSIC_ROUTINES.find(r => r.id === rtId);
+                            const pred = getRoutinePred(rt, prev, row[0]);
+                            if (pred) pVal = (step === 1) ? pred.p2 : pred.p3;
+                        }
+
+                        if (pVal) {
+                            const bet = CONFIG.UNIT_STEPS[currentStreak] || 0;
+                            if (val === pVal) {
+                                profit += bet;
+                                currentStreak = 0;
+                            } else {
+                                profit -= bet;
+                                currentStreak++;
+                                currentMax = Math.max(currentMax, currentStreak);
+                                if (currentStreak >= 6) currentStreak = 0;
+                            }
                         }
                     }
-                }
-                if (row.every(v => v !== null)) completed.push([...row]);
+                    if (row.every(v => v !== null)) completed.push([...row]);
+                });
+                maxStreak = Math.max(maxStreak, currentMax);
             });
-            return { mode: m, profit: p, maxMiss: maxStreak };
+            return { mode: m, profit, maxMiss: maxStreak };
         });
         const bestModeForGame = simRes.sort((a,b) => b.profit - a.profit)[0];
         const safestModeForGame = simRes.sort((a,b) => a.maxMiss - b.maxMiss || b.profit - a.profit)[0];
@@ -1084,7 +1111,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.5.0...');
+        console.log('Initializing PB Master v4.6.0...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
