@@ -35,7 +35,7 @@ const VOCAB = {
     btn_export: '\ubc31\uc5c5 \uc800\uc7a5',
     btn_import: '\ubc31\uc5c5 \ubd88\ub7ec\uc624\uae30',
     install_title: '\uc548\ub4dc\ub85c\uc774\ub4dc \uc124\uce58 \uac00\ub2a5',
-    install_desc: '\ud648 \ud654\uba74\uc5d0 \ucd94\uac00\ud574\uc11c \uc571\ucc28\ub7ec \uc2e4\ud589\ud558\uc138\uc694.',
+    install_desc: '\ud648 \ud654\uba74\uc5d0 \ucd94\uac00\ud574\uc11c \uc571\uccece\ub7fc \uc2e4\ud589\ud558\uc138\uc694.',
     btn_install: '\uc124\uce58',
     guide_wait: '\uc544\uc774 \ub9c8\uc2a4\ud130 \ub300\uae30 \uc911',
     badge_wait: '\ubd84\uc11d \ub300\uae30',
@@ -653,7 +653,7 @@ function updateUI() {
     const badge = document.getElementById('ai-mode-badge');
 
     if (safetyState === 'DANGER' && currentDangerRule) {
-        dom.guideLabel.textContent = '\uc700\ud5d8 \ud328\ud134 \uac10\uc9c0';
+        dom.guideLabel.textContent = '\uc704\ud5d8 \ud328\ud134 \uac10\uc9c0';
         badge.textContent = currentDangerRule.label;
         dom.recommendation.textContent = 'NEXT: SKIP';
         dom.guideCard.classList.add('pred-skip');
@@ -1032,7 +1032,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v3.7.6...');
+        console.log('Initializing PB Master v3.7.7...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
