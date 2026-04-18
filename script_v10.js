@@ -599,10 +599,10 @@ function updateSafetyIndicator() {
     const el = document.getElementById('safety-status');
     el.className = `status-badge ${safetyState.toLowerCase()}`;
 
-    if (safetyState === 'WAIT') dom.statusText.textContent = '\uad00\ub9dd \uc911';
-    else if (safetyState === 'DANGER') dom.statusText.textContent = '\uc704\ud5d8\ud328\ud134 \uc2a4\ud0b5';
-    else if (safetyState === 'TARGET_FOUND') dom.statusText.textContent = '\ud0c0\uac9f \uacf5\ub7b5';
-    else dom.statusText.textContent = `\ud734\uc2dd(${breakLeft})`;
+    if (safetyState === 'WAIT') dom.statusText.textContent = '관망 중';
+    else if (safetyState === 'DANGER') dom.statusText.textContent = '위험패턴 스탑';
+    else if (safetyState === 'TARGET_FOUND') dom.statusText.textContent = '타겟 공략';
+    else dom.statusText.textContent = `휴식(${breakLeft})`;
 }
 
 function getUnit() {
@@ -616,7 +616,7 @@ function updateUI() {
     const prev = currentGame[currentGame.length - 1];
     const master = getMasterPrediction(prev, inputBuffer, currentGame.length + 1);
 
-    // \uc804\ub7b5 \uc5f0\uc18d \uc624\ub2f5 \uc9c0\ud45c \ub85c\uc9c1 (\ub300\uc2e0 \uc218\uc775)
+    // 전략 연속 오답 지표 로직 (대신 수익)
     const getStratStreak = (mode) => {
         if (mode === 'total') return strategyMissStreaks.total || 0;
         if (mode === 'optimal') return strategyMissStreaks.optimal || 0;
@@ -673,21 +673,21 @@ function updateUI() {
     const badge = document.getElementById('ai-mode-badge');
 
     if (safetyState === 'DANGER' && currentDangerRule) {
-        dom.guideLabel.textContent = '\uc704\ud5d8 \ud328\ud134 \uac10\uc9c0';
+        dom.guideLabel.textContent = '위험 패턴 감지';
         badge.textContent = currentDangerRule.label;
         dom.recommendation.textContent = 'NEXT: SKIP';
         dom.guideCard.classList.add('pred-skip');
     } else if (master.predictedVal) {
         dom.guideLabel.textContent = master.guideLabel;
-        badge.textContent = currentStrategyMode === 'ai' ? `\ud559\uc2b5 \uc644\ub8cc: ${master.bestRtName}` : master.bestRtName;
+        badge.textContent = currentStrategyMode === 'ai' ? `학습 완료: ${master.bestRtName}` : master.bestRtName;
         dom.recommendation.textContent = `NEXT: ${master.predictedVal === 'P' ? 'PLAYER' : 'BANKER'}`;
         dom.guideCard.classList.add(master.predictedVal === 'P' ? 'pred-p' : 'pred-b');
 
         if (master.predictedVal === 'P') dom.btnP.classList.add('glow-pulse');
         else dom.btnB.classList.add('glow-pulse');
     } else {
-        dom.guideLabel.textContent = '\ud328\ud134 \uc2dc\uc810\ubd84\uc11d \ub300\uae30 \uc911';
-        badge.textContent = '\ubd84\uc11d \ub300\uae30';
+        dom.guideLabel.textContent = '패턴 시점분석 대기 중';
+        badge.textContent = '분석 대기';
         dom.recommendation.textContent = 'NEXT: -';
     }
 
@@ -698,7 +698,7 @@ function updateUI() {
     dom.rowNum.textContent = `${Math.min(currentGame.length + 1, CONFIG.TOTAL_ROWS)}`;
     updateSafetyIndicator();
 
-    // \uc804\ub7b5\ubcc4 \uc5f0\uc18d \uc624\ub2f5 \ud45c\uc2dc
+    // 전략별 연속 오답 표시
     const streakInfo = [
         `OPTIMAL: ${strategyMissStreaks.optimal > 0 ? '-' + strategyMissStreaks.optimal : '0'}`,
         `AI: ${strategyMissStreaks.ai > 0 ? '-' + strategyMissStreaks.ai : '0'}`,
@@ -708,7 +708,7 @@ function updateUI() {
     dom.streak.classList.remove('hidden');
 
     if (currentStreak >= 2) {
-        dom.streak.textContent += `  \ud83d\udd25 ${currentStreak}\uc5f0\uc2b9!`;
+        dom.streak.textContent += `  🔥 ${currentStreak}연승!`;
     }
 }
 
@@ -765,7 +765,7 @@ function undo() {
 }
 
 function resetGame() {
-    // \ub9ac\uc14b \uc2dc \ud604\uc7ac\uae4c\uc9c0\uc758 \ub370\uc774\ud130\ub3c4 \ud788\uc2a4\ud1a0\ub9ac\uc5d0 \uc800\uc7a5 (\ud559\uc2b5\uc6a9)
+    // 리셋 시 현재까지의 데이터도 히스토리에 저장 (학습용)
     if (currentGame.length > 0) {
         archive();
     }
@@ -841,7 +841,7 @@ function importData(event) {
     const file = event.target.files[0];
     if (!file) return;
 
-    if (!confirm('\ud604\uc7ac \ubaa8\ub4e0 \ub370\uc774\ud130\uac00 \ubc31\uc5c5 \ud30c\uc77c\ub85c \uad50\uccb4\ub429\ub2c8\ub2e4. \uacc4\uc18d\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?')) return;
+    if (!confirm('현재 모든 데이터가 백업 파일로 교체됩니다. 계속하시겠습니까?')) return;
 
     const reader = new FileReader();
     reader.onload = (e) => {
@@ -849,10 +849,10 @@ function importData(event) {
             const data = JSON.parse(e.target.result);
             if (data.storage) localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(data.storage));
             if (data.history) localStorage.setItem(CONFIG.HISTORY_KEY, JSON.stringify(data.history));
-            alert('\uac00\uc838\uc624\uae30 \uc131\uacf5! \uc571\uc744 \uc7ac\uc2dc\uc791\ud569\ub2c8\ub2e4.');
+            alert('가져오기 성공! 앱을 재시작합니다.');
             window.location.reload();
         } catch (err) {
-            alert('\uc720\ud6a8\ud558\uc9c0 \uc54a\uc740 \ud30c\uc77c \ud615\uc2dd\uc785\ub2c8\ub2e4.');
+            alert('유효하지 않은 파일 형식입니다.');
         }
     };
     reader.readAsText(file);
@@ -869,7 +869,7 @@ function setup() {
     });
 
     setClick('btn-undo', () => undo());
-    setClick('btn-reset', () => confirm('\ub9ac\uc14b?') && resetGame());
+    setClick('btn-reset', () => confirm('리셋?') && resetGame());
     setClick('btn-reload', () => window.location.reload());
     setClick('btn-zen', (e) => {
         document.body.classList.toggle('zen-active');
@@ -906,20 +906,18 @@ function showAnalysis() {
     const history = JSON.parse(localStorage.getItem(CONFIG.HISTORY_KEY) || '[]');
     const allGames = [...history];
     
-    // Add current game if it has data
     if (currentGame.length > 0 || inputBuffer.length > 0) {
         allGames.push([...currentGame, inputBuffer.length > 0 ? normalizeRow(inputBuffer) : null].filter(r => r !== null));
     }
 
     if (allGames.length === 0) {
-        alert('\ubd84\uc11d\ud560 \ub370\uc774\ud130\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.');
+        alert('분석할 데이터가 없습니다.');
         return;
     }
 
     const results = allGames.map((game, index) => {
         const isLive = (index === allGames.length - 1 && history.length < allGames.length);
         
-        // \uc804\ub7b5\ubcc4 \uc2dc\ubbac\ub808\uc774\uc158 (\ud55c \uce78 \ub2e8\uc704 \uc815\ubc00 \uacc4\uc0b0)
         const modes = ['optimal', 'ai', 'backup', 'vertical'];
         const simRes = modes.map(m => {
             let profit = 0;
@@ -927,53 +925,45 @@ function showAnalysis() {
             let maxStreak = 0;
             let completed = [];
             
-            allGames.forEach((shoe, shoeIdx) => {
-                // LIVE \uc5ec\ubd80\uc5d0 \ub530\ub77c \ucd08\uae30 \uc0c1\ud0dc \uc124\uc815
-                let currentStreak = 0;
-                let currentMax = 0;
+            game.forEach((row, ri) => {
+                const prev = completed[completed.length - 1];
+                const steps = [null, row[1], row[2]];
 
-                shoe.forEach((row, ri) => {
-                    const prev = completed[completed.length - 1];
-                    const steps = [null, row[1], row[2]];
+                for (let step = 1; step <= 2; step++) {
+                    const val = steps[step];
+                    if (val === null) continue;
 
-                    for (let step = 1; step <= 2; step++) {
-                        const val = steps[step];
-                        if (val === null) continue;
+                    let pVal = null;
+                    if (m === 'vertical') {
+                        if (prev) pVal = row[0];
+                    } else {
+                        const seq = CONFIG.STRATEGIES[m];
+                        const rtId = (m === 'ai') ? (findBestRoutineFromData(completed).id) : (seq ? seq[ri % seq.length] : 1);
+                        const rt = CLASSIC_ROUTINES.find(r => r.id === rtId);
+                        const pred = getRoutinePred(rt, prev, row[0]);
+                        if (pred) pVal = (step === 1) ? pred.p2 : pred.p3;
+                    }
 
-                        let pVal = null;
-                        if (m === 'vertical') {
-                            if (prev) pVal = row[0];
+                    if (pVal) {
+                        const bet = CONFIG.UNIT_STEPS[streak] || 0;
+                        if (val === pVal) {
+                            profit += bet;
+                            streak = 0;
                         } else {
-                            const seq = CONFIG.STRATEGIES[m];
-                            const rtId = (m === 'ai') ? (findBestRoutineFromData(completed).id) : (seq ? seq[ri % seq.length] : 1);
-                            const rt = CLASSIC_ROUTINES.find(r => r.id === rtId);
-                            const pred = getRoutinePred(rt, prev, row[0]);
-                            if (pred) pVal = (step === 1) ? pred.p2 : pred.p3;
-                        }
-
-                        if (pVal) {
-                            const bet = CONFIG.UNIT_STEPS[currentStreak] || 0;
-                            if (val === pVal) {
-                                profit += bet;
-                                currentStreak = 0;
-                            } else {
-                                profit -= bet;
-                                currentStreak++;
-                                currentMax = Math.max(currentMax, currentStreak);
-                                if (currentStreak >= 6) currentStreak = 0;
-                            }
+                            profit -= bet;
+                            streak++;
+                            maxStreak = Math.max(maxStreak, streak);
+                            if (streak >= 6) streak = 0;
                         }
                     }
-                    if (row.every(v => v !== null)) completed.push([...row]);
-                });
-                maxStreak = Math.max(maxStreak, currentMax);
+                }
+                if (row.every(v => v !== null)) completed.push([...row]);
             });
             return { mode: m, profit, maxMiss: maxStreak };
         });
         const bestModeForGame = simRes.sort((a,b) => b.profit - a.profit)[0];
         const safestModeForGame = simRes.sort((a,b) => a.maxMiss - b.maxMiss || b.profit - a.profit)[0];
 
-        // 5\uac00\uc9c0 \uac1c\ubcc4 \ub8e8\ud23n \ubbf8\uc2a4 \uc2dc\ubbac\ub808\uc774\uc158
         const rtMaxMiss = {};
         CLASSIC_ROUTINES.forEach(rt => {
             let streak = 0;
@@ -998,7 +988,6 @@ function showAnalysis() {
             rtMaxMiss[rt.id] = max;
         });
 
-        // Standard metrics (using Master/Total strategy)
         const runtime = createRuntimeState();
         const completedRows = [];
         let maxGameMiss = 0;
@@ -1112,7 +1101,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.7.0...');
+        console.log('Initializing PB Master v4.8.0...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
