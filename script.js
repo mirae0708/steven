@@ -917,51 +917,6 @@ function renderAnalysis(results) {
         dom.analysisBody.appendChild(tr);
     });
 }
-    let totalProfit = 0;
-    let totalMaxMiss = 0;
-    let winGames = 0;
-
-    results.forEach(res => {
-        if (!res.isCurrent) {
-            totalProfit += res.profit;
-            totalMaxMiss += res.maxMiss;
-            if (res.profit > 0) winGames++;
-        }
-
-        const tr = document.createElement('tr');
-        if (res.isCurrent) tr.style.background = 'rgba(99,102,241,0.1)';
-        tr.innerHTML = `
-            <td>${res.index === 'Live' ? '<b>LIVE</b>' : res.index}</td>
-            <td class="${res.maxMiss >= 4 ? 'p-loss' : ''}">${res.maxMiss}</td>
-            <td class="${res.profit >= 0 ? 'p-win' : 'p-loss'}">${res.profit > 0 ? '+' : ''}${res.profit}U</td>
-            <td>${res.winRate}%</td>
-        `;
-        dom.analysisBody.appendChild(tr);
-    });
-
-    const historicalResults = results.filter(r => !r.isCurrent);
-    const count = historicalResults.length || 1;
-    const avgMaxMiss = (totalMaxMiss / count).toFixed(1);
-
-    dom.analysisSummary.innerHTML = `
-        <div class="summary-card">
-            <label>총 게임 수</label>
-            <span>${results.length}</span>
-        </div>
-        <div class="summary-card ${totalProfit >= 0 ? 'positive' : 'negative'}">
-            <label>총 누적 손익</label>
-            <span>${totalProfit > 0 ? '+' : ''}${totalProfit}U</span>
-        </div>
-        <div class="summary-card">
-            <label>평균 최대 미스</label>
-            <span>${avgMaxMiss}</span>
-        </div>
-        <div class="summary-card">
-            <label>수익 게임 비율</label>
-            <span>${((winGames / results.length) * 100).toFixed(1)}%</span>
-        </div>
-    `;
-}
 
 function init() {
     load();
