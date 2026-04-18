@@ -45,6 +45,7 @@ let betProgress = 0;
 let breakLeft = 0;
 let stats = createEmptyStats();
 let currentDangerRule = null;
+let strategyMissStreaks = { optimal: 0, ai: 0, backup: 0 };
 
 let dom = {};
 
@@ -418,6 +419,11 @@ function recomputeDerivedState() {
     breakLeft = runtime.breakLeft;
     stats = runtime.stats;
     currentDangerRule = runtime.dangerRule;
+    strategyMissStreaks = {
+        optimal: runtime.optimalMissStreak || 0,
+        ai: runtime.aiMissStreak || 0,
+        backup: runtime.backupMissStreak || 0
+    };
 }
 
 function render() {
@@ -605,9 +611,9 @@ function updateUI() {
 
     // 전략별 연속 오답 표시
     const streakInfo = [
-        `OPTIMAL: ${runtime.optimalMissStreak > 0 ? '-' + runtime.optimalMissStreak : '0'}`,
-        `AI: ${runtime.aiMissStreak > 0 ? '-' + runtime.aiMissStreak : '0'}`,
-        `BACKUP: ${runtime.backupMissStreak > 0 ? '-' + runtime.backupMissStreak : '0'}`
+        `OPTIMAL: ${strategyMissStreaks.optimal > 0 ? '-' + strategyMissStreaks.optimal : '0'}`,
+        `AI: ${strategyMissStreaks.ai > 0 ? '-' + strategyMissStreaks.ai : '0'}`,
+        `BACKUP: ${strategyMissStreaks.backup > 0 ? '-' + strategyMissStreaks.backup : '0'}`
     ].join(' | ');
     dom.streak.textContent = streakInfo;
     dom.streak.classList.remove('hidden');

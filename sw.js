@@ -1,9 +1,9 @@
-const CACHE_NAME = 'jongdari-pb-v8-cache';
+const CACHE_NAME = 'jongdari-pb-v9-cache';
 const urlsToCache = [
   './',
   './index.html',
   './style.css',
-  './script_v6.js',
+  './script_v7.js',
   './manifest.json',
   './bg.png',
   './icons/icon-192.png',
