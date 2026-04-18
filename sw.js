@@ -1,4 +1,4 @@
-const CACHE_NAME = 'jongdari-pb-v44-cache';
+const CACHE_NAME = 'jongdari-pb-v45-cache';
 const urlsToCache = [
   './',
   './index.html',

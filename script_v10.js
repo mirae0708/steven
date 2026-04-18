@@ -422,29 +422,31 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
                 total: getMasterPrediction(prevRow, buffer, colIndex)
             };
 
-            // \uac01 \uc804\ub7b5\ubcc4 \uc5f0\uc18d \uc624\ub2f5 \uce74\uc6b4\ud2b8 (\ub204\uc801)
-            Object.keys(preds).forEach(mode => {
-                const res = preds[mode];
-                const pVal = (mode === 'total' || mode === 'vertical') ? res.predictedVal : res.val;
-                if (pVal !== null) { 
-                    if (val === pVal) {
-                        if (mode === 'optimal') runtime.optimalMissStreak = 0;
-                        else if (mode === 'ai') runtime.aiMissStreak = 0;
-                        else if (mode === 'backup') runtime.backupMissStreak = 0;
-                        else if (mode === 'vertical') runtime.verticalMissStreak = 0;
-                        else if (mode === 'total') runtime.totalMissStreak = 0;
-                    } else {
-                        // \uc704\ud5d8 \uad6c\uac04(skipRule)\uc5d0\uc11c\ub294 \ubbf8\uc2a4\ub97c \uc313\uc9c0 \uc54a\uc74c (\uc0ac\uc6a9\uc790 \uc694\uccad: \uc274 \ub9ac\ud06c\ud2b8 \ubcf4\ud638)
-                        if (!skipRule) {
-                            if (mode === 'optimal') runtime.optimalMissStreak++;
-                            else if (mode === 'ai') runtime.aiMissStreak++;
-                            else if (mode === 'backup') runtime.backupMissStreak++;
-                            else if (mode === 'vertical') runtime.verticalMissStreak++;
-                            else if (mode === 'total') runtime.totalMissStreak++;
+            // \uac01 \uc804\ub7b5\ubcc4 \uc5f0\uc18d \uc624\ub2f5 \uce74\uc6b4\ud2b8 (\ub204\uc801) - \ucd08\ud310(1\uc5f4)\uc5d0\uc11c\ub294 \uacc4\uc0b0 \uc81c\uc678
+            if (colIndex > 1) {
+                Object.keys(preds).forEach(mode => {
+                    const res = preds[mode];
+                    const pVal = (mode === 'total' || mode === 'vertical') ? res.predictedVal : res.val;
+                    if (pVal !== null) { 
+                        if (val === pVal) {
+                            if (mode === 'optimal') runtime.optimalMissStreak = 0;
+                            else if (mode === 'ai') runtime.aiMissStreak = 0;
+                            else if (mode === 'backup') runtime.backupMissStreak = 0;
+                            else if (mode === 'vertical') runtime.verticalMissStreak = 0;
+                            else if (mode === 'total') runtime.totalMissStreak = 0;
+                        } else {
+                            // \uc704\ud5d8 \uad6c\uac04(skipRule)\uc5d0\uc11c\ub294 \ubbf8\uc2a4\ub97c \uc313\uc9c0 \uc54a\uc74c
+                            if (!skipRule) {
+                                if (mode === 'optimal') runtime.optimalMissStreak++;
+                                else if (mode === 'ai') runtime.aiMissStreak++;
+                                else if (mode === 'backup') runtime.backupMissStreak++;
+                                else if (mode === 'vertical') runtime.verticalMissStreak++;
+                                else if (mode === 'total') runtime.totalMissStreak++;
+                            }
                         }
                     }
-                }
-            });
+                });
+            }
 
             if (prevRow) {
                 CLASSIC_ROUTINES.forEach(rt => {
@@ -1099,7 +1101,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.9.2...');
+        console.log('Initializing PB Master v4.9.3...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
