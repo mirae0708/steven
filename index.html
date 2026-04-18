@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
     <title>PB Master</title>
     <script>
-        // Force version check to bust cache
-        const APP_VERSION = '3.7.4';
+        const APP_VERSION = '3.7.5';
         const storedVer = localStorage.getItem('app_version');
         if (storedVer !== APP_VERSION) {
-            console.log('New version detected, purging cache...');
+            console.log('Update detected, purging PWA cache...');
             if ('serviceWorker' in navigator) {
                 navigator.serviceWorker.getRegistrations().then(regs => {
                     for (let reg of regs) reg.unregister();
                 });
             }
             localStorage.setItem('app_version', APP_VERSION);
-            // We reload after script loads to avoid infinite loops
+            // Refresh occurs naturally once SW version changes
         }
     </script>
-    <meta name="description" content="Android-ready PB pattern dashboard.">
+    <meta name="description" content="PB Pattern Dashboard">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -48,7 +47,7 @@
                 <div class="stat-line">ACC: <span id="overall-accuracy">0%</span></div>
                 <div class="stat-line">DIRECT: <span id="step1-hits">0</span></div>
                 <div class="stat-line">BET: <span id="bet-counter">0/4</span> <strong id="recommended-unit">0U</strong></div>
-                <button id="btn-history" class="history-trigger" data-t="btn_hist"></button>
+                <button id="btn-history" class="history-trigger" data-t="btn_hist">HIST</button>
             </div>
         </aside>
 
@@ -109,10 +108,10 @@
             <footer class="action-bar">
                 <div class="row-indicator">R<b id="current-row-num">1</b></div>
                 <div class="control-btns">
-                    <button id="btn-zen" class="tool-btn">🔍</button>
-                    <button id="btn-reload" class="tool-btn">🔄</button>
-                    <button id="btn-undo" class="tool-btn">↩</button>
-                    <button id="btn-reset" class="tool-btn danger">✖</button>
+                    <button id="btn-zen" class="tool-btn" data-t="ic_zen"></button>
+                    <button id="btn-reload" class="tool-btn" data-t="ic_reload"></button>
+                    <button id="btn-undo" class="tool-btn" data-t="ic_undo"></button>
+                    <button id="btn-reset" class="tool-btn danger" data-t="ic_reset"></button>
                 </div>
                 <div class="input-hub">
                     <button class="btn-input p-btn" data-val="P" id="btn-p">P</button>
@@ -125,6 +124,6 @@
     <div id="hit-notification" class="hit-overlay hidden" data-t="hit_overlay"></div>
     <div id="streak-badge" class="streak-fire hidden"></div>
 
-    <script src="script_v10.js?v=3.7.4"></script>
+    <script src="script_v10.js?v=3.7.5"></script>
 </body>
 </html>

@@ -39,7 +39,11 @@ const VOCAB = {
     btn_install: '\uc124\ucc28',
     guide_wait: '\uc544\uc774 \ub9c8\uc2a4\ud130 \ub300\uae30 \uc911',
     badge_wait: '\ubd84\uc11d \ub300\uae30',
-    hit_overlay: '\ud83c\udfaf HIT!'
+    hit_overlay: '\ud83c\udfaf HIT!',
+    ic_zen: '\ud83d\udd0d',
+    ic_reload: '\ud83d\udd04',
+    ic_undo: '\u21a9',
+    ic_reset: '\u2716'
 };
 
 function applyTranslations() {
