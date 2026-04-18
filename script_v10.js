@@ -938,9 +938,6 @@ function showAnalysis() {
                         const rtId = (m === 'ai') ? (findBestRoutineFromData(completed).id) : (seq ? seq[ri % seq.length] : 1);
                         const rt = CLASSIC_ROUTINES.find(r => r.id === rtId);
                         const pred = getRoutinePred(rt, prev, row[0]);
-                        if (pred) pVal = (step === 1) ? pred.p2 : pred.p3;
-                    }
-
                     if (pVal) {
                         const bet = CONFIG.UNIT_STEPS[streak] || 0;
                         if (val === pVal) {
@@ -1098,7 +1095,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.9.0...');
+        console.log('Initializing PB Master v4.9.1...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
