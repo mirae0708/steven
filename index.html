@@ -5,18 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
     <title>PB Master</title>
     <script>
-        const APP_VERSION = '3.7.5';
-        const storedVer = localStorage.getItem('app_version');
-        if (storedVer !== APP_VERSION) {
-            console.log('Update detected, purging PWA cache...');
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.getRegistrations().then(regs => {
-                    for (let reg of regs) reg.unregister();
-                });
+        // NUCLEAR CACHE PURGE v3.7.6
+        (function() {
+            const VERSION = '3.7.6';
+            if (localStorage.getItem('app_version') !== VERSION) {
+                console.warn('CRITICAL UPDATE: Purging all caches...');
+                
+                // 1. Unregister all Service Workers
+                if (window.navigator && navigator.serviceWorker) {
+                    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                        for (let registration of registrations) {
+                            registration.unregister();
+                        }
+                    });
+                }
+
+                // 2. Delete all CacheStorage
+                if (window.caches) {
+                    caches.keys().then(function(names) {
+                        for (let name of names) caches.delete(name);
+                    });
+                }
+
+                localStorage.setItem('app_version', VERSION);
+                console.log('Caches purged. Reloading in 1s...');
+                setTimeout(() => { location.reload(true); }, 1000);
             }
-            localStorage.setItem('app_version', APP_VERSION);
-            // Refresh occurs naturally once SW version changes
-        }
+        })();
     </script>
     <meta name="description" content="PB Pattern Dashboard">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -124,6 +139,6 @@
     <div id="hit-notification" class="hit-overlay hidden" data-t="hit_overlay"></div>
     <div id="streak-badge" class="streak-fire hidden"></div>
 
-    <script src="script_v10.js?v=3.7.5"></script>
+    <script src="script_v10.js?v=3.7.6"></script>
 </body>
 </html>

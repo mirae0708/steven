@@ -34,9 +34,9 @@ const VOCAB = {
     th_rate: '\uc2b9\ub960',
     btn_export: '\ubc31\uc5c5 \uc800\uc7a5',
     btn_import: '\ubc31\uc5c5 \ubd88\ub7ec\uc624\uae30',
-    install_title: '\uc548\ub4dc\ub85c\uc774\ub4dc \uc124\ucc28 \uac00\ub2a5',
+    install_title: '\uc548\ub4dc\ub85c\uc774\ub4dc \uc124\uce58 \uac00\ub2a5',
     install_desc: '\ud648 \ud654\uba74\uc5d0 \ucd94\uac00\ud574\uc11c \uc571\ucc28\ub7ec \uc2e4\ud589\ud558\uc138\uc694.',
-    btn_install: '\uc124\ucc28',
+    btn_install: '\uc124\uce58',
     guide_wait: '\uc544\uc774 \ub9c8\uc2a4\ud130 \ub300\uae30 \uc911',
     badge_wait: '\ubd84\uc11d \ub300\uae30',
     hit_overlay: '\ud83c\udfaf HIT!',
@@ -1032,7 +1032,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v3.7.4...');
+        console.log('Initializing PB Master v3.7.6...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
