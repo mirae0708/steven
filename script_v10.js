@@ -120,7 +120,12 @@ function createRuntimeState() {
         betProgress: 0,
         breakLeft: 0,
         stats: createEmptyStats(),
-        dangerRule: null
+        dangerRule: null,
+        // \uc804\ub7b5\ubcc4 \uc5f0\uc18d \uc624\ub2f5 \ub204\uc801 \ud544\ub4dc
+        optimalMissStreak: 0,
+        aiMissStreak: 0,
+        backupMissStreak: 0,
+        totalMissStreak: 0
     };
 }
 
@@ -287,16 +292,18 @@ function findBestRoutineFromData() {
     const history = JSON.parse(localStorage.getItem(CONFIG.HISTORY_KEY) || '[]');
     const scores = CLASSIC_ROUTINES.map(rt => ({ ...rt, score: 0 }));
 
-    // 1. 과거 히스토리 학습 (장기 기억)
-    history.forEach(game => {
+    // 1. \uacfc\uac70 \ud788\uc2a4\ud1a0\ub9ac \ud559\uc2b5 (\ucd5c\uadfc 5\uac8c\uc784\uc5d0 \uac15\ub825\ud55c \uac00\uc911\uce58)
+    const recentHistory = history.slice(-5);
+    recentHistory.forEach((game, hIdx) => {
+        const weight = (hIdx + 1) * 2; // \ucd5c\uadfc \uac8c\uc784\uc77c\uc218\ub85d \uac00\uc911\uce58 \ub450 \ubc30 \uc99d\uac00
         let prev = null;
         game.forEach(row => {
             if (prev && row.every(v => v !== null)) {
                 scores.forEach(rt => {
                     const p = getRoutinePred(rt, prev, row[0]);
                     if (p) {
-                        if (row[1] === p.p2) rt.score += 1;
-                        if (row[2] === p.p3) rt.score += 1;
+                        if (row[1] === p.p2) rt.score += (1 * weight);
+                        if (row[2] === p.p3) rt.score += (1 * weight);
                     }
                 });
             }
@@ -304,27 +311,33 @@ function findBestRoutineFromData() {
         });
     });
 
-    // 2. 현재 게임 흐름 학습 (단기 기억 - 3배 가중치)
+    // 2. \ud604\uc7ac \uac8c\uc784 \ud760\ub984 \ud559\uc2b5 (\ub2e8\uae30 \uae30\uc5b5 - \ucd5c\uc0c1\uc704 \uac00\uc911\uce58)
     let prevRow = null;
     currentGame.forEach(row => {
         if (prevRow && row.every(v => v !== null)) {
             scores.forEach(rt => {
                 const p = getRoutinePred(rt, prevRow, row[0]);
                 if (p) {
-                    if (row[1] === p.p2) rt.score += 3;
-                    if (row[2] === p.p3) rt.score += 3;
+                    if (row[1] === p.p2) rt.score += 20; // \ud604\uc7ac \uac8c\uc784 \uc801\uc911 \uc2dc \ud3ed\ubaa8\uc801 \uc810\uc218
+                    if (row[2] === p.p3) rt.score += 20;
                 }
             });
         }
         prevRow = row;
     });
 
-    // 3. 현재 연속 오답 중인 루틴은 패널티 부여
+    // 3. \uc2ac\ub7fc\ud504 \ubc29\uc9c0 \ubc0f \ud544\ud130\ub9c1 (\ucd5c\uc2e0 \uc5f0\uc18d \uc624\ub2f5 \ub8e8\ud23n \uc81c\uc678)
     scores.forEach(rt => {
-        if (rt.currentMissStreak > 0) rt.score -= (rt.currentMissStreak * 2);
+        // \ud604\uc7ac \uc5f0\uc18d \uc624\ub2f5 \uc911\uc774\uba74 \uc810\uc218\ub97c \ub9c8\uc774\ub108\uc2a4\ub85c \ub5a4\uad74
+        if (rt.currentMissStreak > 0) {
+            rt.score -= (rt.currentMissStreak * 50); 
+        }
+        // \ucd5c\ub300 \ubbf8\uc2a4 \uae30\ub85d\uc5d0 \ub530\ub978 \uc548\uc804 \ub4f1\uae09 \ucc28\ub4f1
+        if (rt.maxMissStreak >= 4) rt.score -= 30;
     });
 
-    return scores.sort((a, b) => b.score - a.score)[0];
+    // \uc810\uc218\uac00 \ub3d9\uc77c\ud560 \uacbd\uc6b0 ID \uc21c\uc73c\ub85c \uc120\ud0dd\ud558\uc9c0 \uc54a\uace0 \ucd5c\ub300 \ubbf8\uc2a4\uac00 \uc801\uc740 \uac83 \uc6b0\uc120
+    return scores.sort((a, b) => b.score - a.score || a.maxMissStreak - b.maxMissStreak)[0];
 }
 
 function getMasterPrediction(prev, buffer, colIndex) {
@@ -376,12 +389,7 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
     }
 
 
-    // 전략별 연속 오답 카운트
-    let missStreaks = {
-        optimal: 0,
-        ai: 0,
-        backup: 0
-    };
+    // \uc804\ub7b5\ubcc4 \uc5f0\uc18d \uc624\ub2f5 \ub204\uc801 \ub85c\uc9c1
 
     for (const val of values) {
         const idx = buffer.length;
@@ -395,14 +403,20 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
                 total: getMasterPrediction(prevRow, buffer, colIndex)
             };
 
-            // 각 전략별 연속 오답 카운트
+            // \uac01 \uc804\ub7b5\ubcc4 \uc5f0\uc18d \uc624\ub2f5 \uce74\uc6b4\ud2b8 (\ub204\uc801)
             Object.keys(preds).forEach(mode => {
                 const pVal = (mode === 'total') ? preds[mode].predictedVal : preds[mode].val;
-                if (pVal !== null) { // 예측값이 있을 때만 비교 (1열 무효화)
+                if (pVal !== null) { 
                     if (val === pVal) {
-                        missStreaks[mode] = 0;
+                        if (mode === 'optimal') runtime.optimalMissStreak = 0;
+                        else if (mode === 'ai') runtime.aiMissStreak = 0;
+                        else if (mode === 'backup') runtime.backupMissStreak = 0;
+                        else if (mode === 'total') runtime.totalMissStreak = 0;
                     } else {
-                        missStreaks[mode] = (missStreaks[mode] || 0) + 1;
+                        if (mode === 'optimal') runtime.optimalMissStreak++;
+                        else if (mode === 'ai') runtime.aiMissStreak++;
+                        else if (mode === 'backup') runtime.backupMissStreak++;
+                        else if (mode === 'total') runtime.totalMissStreak++;
                     }
                 }
             });
@@ -457,11 +471,6 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
 
         buffer.push(val);
         runtime.predictedVal = skipRule ? null : getMasterPrediction(prevRow, buffer, colIndex).predictedVal;
-        // 연속 오답 카운트 runtime에 저장
-        runtime.optimalMissStreak = missStreaks.optimal;
-        runtime.aiMissStreak = missStreaks.ai;
-        runtime.backupMissStreak = missStreaks.backup;
-        runtime.totalMissStreak = missStreaks.total;
     }
 
     if (finalizeRow && buffer.length === 3) {
@@ -1061,7 +1070,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.1.0...');
+        console.log('Initializing PB Master v4.3.0...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
