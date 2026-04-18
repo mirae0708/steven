@@ -922,6 +922,31 @@ function showAnalysis() {
         const bestModeForGame = simRes.sort((a,b) => b.profit - a.profit)[0];
         const safestModeForGame = simRes.sort((a,b) => a.maxMiss - b.maxMiss || b.profit - a.profit)[0];
 
+        // 5\uac00\uc9c0 \uac1c\ubcc4 \ub8e8\ud23n \ubbf8\uc2a4 \uc2dc\ubbac\ub808\uc774\uc158
+        const rtMaxMiss = {};
+        CLASSIC_ROUTINES.forEach(rt => {
+            let streak = 0;
+            let max = 0;
+            let completed = [];
+            game.forEach(row => {
+                const prev = completed[completed.length - 1];
+                if (prev && row.every(v => v !== null)) {
+                    const pred = getRoutinePred(rt, prev, row[0]);
+                    if (pred) {
+                        if (row[1] === pred.p2) { streak = 0; }
+                        else {
+                            streak++;
+                            max = Math.max(max, streak);
+                            if (row[2] === pred.p3) { streak = 0; }
+                            else { streak++; max = Math.max(max, streak); }
+                        }
+                    }
+                }
+                if (row.every(v => v !== null)) completed.push([...row]);
+            });
+            rtMaxMiss[rt.id] = max;
+        });
+
         // Standard metrics (using Master/Total strategy)
         const runtime = createRuntimeState();
         const completedRows = [];
@@ -968,6 +993,7 @@ function showAnalysis() {
             bestStrategy: bestModeForGame.mode.toUpperCase(),
             safestStrategy: safestModeForGame.mode.toUpperCase(),
             safestMiss: safestModeForGame.maxMiss,
+            rtMaxMiss,
             isCurrent: isLive
         };
     });
@@ -1020,6 +1046,13 @@ function renderAnalysis(results) {
             <td style="font-size: 10px; opacity: 0.8;">
                 <div style="color: #00ff88">Best: ${res.bestStrategy}</div>
                 <div style="color: #66ccff">Safe: ${res.safestStrategy}(${res.safestMiss})</div>
+                <div class="rt-mini-row">
+                    ${CLASSIC_ROUTINES.map(rt => {
+                        const miss = res.rtMaxMiss[rt.id] || 0;
+                        const icon = VOCAB[`rt_icon_${rt.id}`] || '';
+                        return `<span class="rt-mini-badge ${miss >= 4 ? 'bad' : ''}">${icon} <b>${miss}</b></span>`;
+                    }).join('')}
+                </div>
             </td>
         `;
         dom.analysisBody.appendChild(tr);
@@ -1028,7 +1061,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.0.0...');
+        console.log('Initializing PB Master v4.1.0...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
