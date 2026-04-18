@@ -123,12 +123,8 @@ function createRuntimeState() {
         breakLeft: 0,
         stats: createEmptyStats(),
         dangerRule: null,
-        // \uc804\ub7b5\ubcc4 \uc5f0\uc18d \uc624\ub2f5 \ub204\uc801 \ud544\ub4dc
-        optimalMissStreak: 0,
-        aiMissStreak: 0,
-        backupMissStreak: 0,
-        verticalMissStreak: 0,
-        totalMissStreak: 0
+        totalMissStreak: 0,
+        lastHit: false
     };
 }
 
@@ -474,15 +470,14 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
             if (!skipRule && colIndex > 1) {
                 if (val === runtime.predictedVal) {
                     runtime.currentStreak++;
-                    runtime.missStreak = 0;
-                    runtime.betProgress = 0;
-                    runtime.safetyState = 'WAIT';
                     runtime.breakLeft = 0;
                     runtime.dangerRule = null;
+                    runtime.lastHit = true; 
                     runtime.stats.wins++;
                     runtime.stats.total++;
                     if (idx === 1) runtime.stats.directWins++;
                 } else {
+                    runtime.lastHit = false;
                     runtime.currentStreak = 0;
                     runtime.missStreak++;
                     runtime.betProgress = runtime.missStreak;
@@ -545,7 +540,8 @@ function recomputeDerivedState() {
         ai: runtime.aiMissStreak,
         backup: runtime.backupMissStreak,
         vertical: runtime.verticalMissStreak,
-        total: runtime.totalMissStreak
+        total: runtime.totalMissStreak,
+        lastHit: runtime.lastHit
     };
 }
 
@@ -749,7 +745,7 @@ function handleInput(val) {
         render();
         updateUI();
 
-        if (stats.wins > prevWins) triggerCelebration();
+        if (strategyMissStreaks.lastHit === true) triggerCelebration();
         if (currentGame.length >= CONFIG.TOTAL_ROWS && inputBuffer.length === 0) archive();
     } catch (e) {
         console.error('Input Error:', e);
@@ -1101,7 +1097,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.9.4...');
+        console.log('Initializing PB Master v4.9.5...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
