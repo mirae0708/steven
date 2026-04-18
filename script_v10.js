@@ -8,7 +8,7 @@ const CONFIG = {
     STRATEGIES: {
         backup: [1, 4, 2, 3, 5],
         optimal: [2, 1, 2, 1, 3],
-        ai: [] // 동적 학습 알고리즘으로 대체됨
+        ai: [] // \ub3d9\uc801 \ud559\uc2b5 \uc54c\uace0\ub9ac\uc998\uc73c\ub85c \ub300\uccb4\ub428
     },
     DANGER_RULES: [
         { id: 'bpb-b', prevPattern: 'BPB', firstMark: 'B', minMissStreak: 0, label: 'BPB \ub4a4 B' },
@@ -35,7 +35,7 @@ const VOCAB = {
     btn_export: '\ubc31\uc5c5 \uc800\uc7a5',
     btn_import: '\ubc31\uc5c5 \ubd88\ub7ec\uc624\uae30',
     install_title: '\uc548\ub4dc\ub85c\uc774\ub4dc \uc124\uce58 \uac00\ub2a5',
-    install_desc: '\ud648 \ud654\uba74\uc5d0 \ucd94\uac00\ud574\uc11c \uc571\uccece\ub7fc \uc2e4\ud589\ud558\uc138\uc694.',
+    install_desc: '\ud648 \ud654\uba74\uc5d0 \ucd94\uac00\ud574\uc11c \uc571\ucc18\ub7fc \uc2e4\ud589\ud558\uc138\uc694.',
     btn_install: '\uc124\uce58',
     guide_wait: '\uc544\uc774 \ub9c8\uc2a4\ud130 \ub300\uae30 \uc911',
     badge_wait: '\ubd84\uc11d \ub300\uae30',
@@ -577,8 +577,8 @@ function updateSafetyIndicator() {
     el.className = `status-badge ${safetyState.toLowerCase()}`;
 
     if (safetyState === 'WAIT') dom.statusText.textContent = '\uad00\ub9dd \uc911';
-    else if (safetyState === 'DANGER') dom.statusText.textContent = '\uc700\ud5d8\ud328\ud134 \uc2a4\ud0b5';
-    else if (safetyState === 'TARGET_FOUND') dom.statusText.textContent = '\ud0c0\uac9f \uac30\ub7b5';
+    else if (safetyState === 'DANGER') dom.statusText.textContent = '\uc704\ud5d8\ud328\ud134 \uc2a4\ud0b5';
+    else if (safetyState === 'TARGET_FOUND') dom.statusText.textContent = '\ud0c0\uac9f \uacf5\ub7b5';
     else dom.statusText.textContent = `\ud734\uc2dd(${breakLeft})`;
 }
 
@@ -593,7 +593,7 @@ function updateUI() {
     const prev = currentGame[currentGame.length - 1];
     const master = getMasterPrediction(prev, inputBuffer, currentGame.length + 1);
 
-    // Strategy streak indicator logic (instead of profit)
+    // \uc804\ub7b5 \uc5f0\uc18d \uc624\ub2f5 \uc9c0\ud45c \ub85c\uc9c1 (\ub300\uc2e0 \uc218\uc775)
     const getStratStreak = (mode) => {
         if (mode === 'total') return strategyMissStreaks.total;
         if (mode === 'optimal') return strategyMissStreaks.optimal;
@@ -659,14 +659,14 @@ function updateUI() {
         dom.guideCard.classList.add('pred-skip');
     } else if (master.predictedVal) {
         dom.guideLabel.textContent = master.guideLabel;
-        badge.textContent = currentStrategyMode === 'ai' ? `\ud559\uc2b5 \uc604\ub8cc: ${master.bestRtName}` : master.bestRtName;
+        badge.textContent = currentStrategyMode === 'ai' ? `\ud559\uc2b5 \uc644\ub8cc: ${master.bestRtName}` : master.bestRtName;
         dom.recommendation.textContent = `NEXT: ${master.predictedVal === 'P' ? 'PLAYER' : 'BANKER'}`;
         dom.guideCard.classList.add(master.predictedVal === 'P' ? 'pred-p' : 'pred-b');
 
         if (master.predictedVal === 'P') dom.btnP.classList.add('glow-pulse');
         else dom.btnB.classList.add('glow-pulse');
     } else {
-        dom.guideLabel.textContent = '\ud328\ud134 \uc2dc\uc12c\ubd84\uc11d \ub300\uae30 \uc911';
+        dom.guideLabel.textContent = '\ud328\ud134 \uc2dc\uc810\ubd84\uc11d \ub300\uae30 \uc911';
         badge.textContent = '\ubd84\uc11d \ub300\uae30';
         dom.recommendation.textContent = 'NEXT: -';
     }
@@ -678,7 +678,7 @@ function updateUI() {
     dom.rowNum.textContent = `${Math.min(currentGame.length + 1, CONFIG.TOTAL_ROWS)}`;
     updateSafetyIndicator();
 
-    // 전략별 연속 오답 표시
+    // \uc804\ub7b5\ubcc4 \uc5f0\uc18d \uc624\ub2f5 \ud45c\uc2dc
     const streakInfo = [
         `OPTIMAL: ${strategyMissStreaks.optimal > 0 ? '-' + strategyMissStreaks.optimal : '0'}`,
         `AI: ${strategyMissStreaks.ai > 0 ? '-' + strategyMissStreaks.ai : '0'}`,
@@ -745,7 +745,7 @@ function undo() {
 }
 
 function resetGame() {
-    // 리셋 시 현재까지의 데이터도 히스토리에 저장 (학습용)
+    // \ub9ac\uc14b \uc2dc \ud604\uc7ac\uae4c\uc9c0\uc758 \ub370\uc774\ud130\ub3c4 \ud788\uc2a4\ud1a0\ub9ac\uc5d0 \uc800\uc7a5 (\ud559\uc2b5\uc6a9)
     if (currentGame.length > 0) {
         archive();
     }
@@ -821,7 +821,7 @@ function importData(event) {
     const file = event.target.files[0];
     if (!file) return;
 
-    if (!confirm('현재 모든 데이터가 백업 파일로 교체됩니다. 계속하시겠습니까?')) return;
+    if (!confirm('\ud604\uc7ac \ubaa8\ub4e0 \ub370\uc774\ud130\uac00 \ubc31\uc5c5 \ud30c\uc77c\ub85c \uad50\uccb4\ub429\ub2c8\ub2e4. \uacc4\uc18d\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?')) return;
 
     const reader = new FileReader();
     reader.onload = (e) => {
@@ -829,10 +829,10 @@ function importData(event) {
             const data = JSON.parse(e.target.result);
             if (data.storage) localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(data.storage));
             if (data.history) localStorage.setItem(CONFIG.HISTORY_KEY, JSON.stringify(data.history));
-            alert('가져오기 성공! 앱을 재시작합니다.');
+            alert('\uac00\uc838\uc624\uae30 \uc131\uacf5! \uc571\uc744 \uc7ac\uc2dc\uc791\ud569\ub2c8\ub2e4.');
             window.location.reload();
         } catch (err) {
-            alert('유효하지 않은 파일 형식입니다.');
+            alert('\uc720\ud6a8\ud558\uc9c0 \uc54a\uc740 \ud30c\uc77c \ud615\uc2dd\uc785\ub2c8\ub2e4.');
         }
     };
     reader.readAsText(file);
@@ -844,7 +844,7 @@ function setup() {
     });
 
     document.getElementById('btn-undo').onclick = () => undo();
-    document.getElementById('btn-reset').onclick = () => confirm('리셋?') && resetGame();
+    document.getElementById('btn-reset').onclick = () => confirm('\ub9ac\uc14b?') && resetGame();
     document.getElementById('btn-reload').onclick = () => window.location.reload();
     document.getElementById('btn-zen').onclick = () => {
         document.body.classList.toggle('zen-active');
@@ -1032,7 +1032,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v3.7.7...');
+        console.log('Initializing PB Master v3.7.8...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
