@@ -20,16 +20,16 @@
         <!-- Dashboard Sidebar (Left 25%) -->
         <aside class="side-panel">
             <div class="status-badge" id="safety-status">
-                <span id="status-text">관망 중</span>
+                <span id="status-text">관�?�?/span>
             </div>
             
             <div class="routine-list" id="routine-board">
                 <!-- 5 Routines Mini Cards -->
-                <div class="mini-rt" data-rid="1"><span>★</span> <b id="rt-p-1">-</b> <div class="rt-metrics"><i id="rt-h-1">0</i><em id="rt-m-1">0</em></div></div>
-                <div class="mini-rt" data-rid="2"><span>ㅡ</span> <b id="rt-p-2">-</b> <div class="rt-metrics"><i id="rt-h-2">0</i><em id="rt-m-2">0</em></div></div>
+                <div class="mini-rt" data-rid="1"><span>??/span> <b id="rt-p-1">-</b> <div class="rt-metrics"><i id="rt-h-1">0</i><em id="rt-m-1">0</em></div></div>
+                <div class="mini-rt" data-rid="2"><span>??/span> <b id="rt-p-2">-</b> <div class="rt-metrics"><i id="rt-h-2">0</i><em id="rt-m-2">0</em></div></div>
                 <div class="mini-rt" data-rid="3"><span>X</span> <b id="rt-p-3">-</b> <div class="rt-metrics"><i id="rt-h-3">0</i><em id="rt-m-3">0</em></div></div>
-                <div class="mini-rt" data-rid="4"><span>△</span> <b id="rt-p-4">-</b> <div class="rt-metrics"><i id="rt-h-4">0</i><em id="rt-m-4">0</em></div></div>
-                <div class="mini-rt" data-rid="5"><span>三</span> <b id="rt-p-5">-</b> <div class="rt-metrics"><i id="rt-h-5">0</i><em id="rt-m-5">0</em></div></div>
+                <div class="mini-rt" data-rid="4"><span>??/span> <b id="rt-p-4">-</b> <div class="rt-metrics"><i id="rt-h-4">0</i><em id="rt-m-4">0</em></div></div>
+                <div class="mini-rt" data-rid="5"><span>�?/span> <b id="rt-p-5">-</b> <div class="rt-metrics"><i id="rt-h-5">0</i><em id="rt-m-5">0</em></div></div>
             </div>
 
             <div class="hud-stats">
@@ -44,7 +44,7 @@
         <div id="analysis-modal" class="modal-overlay hidden">
             <div class="modal-content">
                 <header class="modal-header">
-                    <h2>히스토리 분석 레포트</h2>
+                    <h2>?�스?�리 분석 ?�포??/h2>
                     <button id="close-analysis" class="close-btn">&times;</button>
                 </header>
                 <div class="analysis-summary" id="analysis-summary">
@@ -55,9 +55,9 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>최대 미스</th>
-                                <th>손익 (Unit)</th>
-                                <th>승률</th>
+                                <th>최�? 미스</th>
+                                <th>?�익 (Unit)</th>
+                                <th>?�률</th>
                             </tr>
                         </thead>
                         <tbody id="analysis-body">
@@ -66,8 +66,8 @@
                     </table>
                 </div>
                 <div class="modal-footer" style="padding: 15px; display: flex; gap: 10px; border-top: 1px solid rgba(255,255,255,0.1);">
-                    <button id="btn-export" class="tool-btn" style="flex: 1;">백업 저장</button>
-                    <button id="btn-import-trigger" class="tool-btn" style="flex: 1;">백업 불러오기</button>
+                    <button id="btn-export" class="tool-btn" style="flex: 1;">백업 ?�??/button>
+                    <button id="btn-import-trigger" class="tool-btn" style="flex: 1;">백업 불러?�기</button>
                     <input type="file" id="import-file" class="hidden" accept=".json" style="display:none;">
                 </div>
             </div>
@@ -78,24 +78,24 @@
         <main class="main-panel">
             <section class="install-banner hidden" id="install-banner">
                 <div class="install-copy">
-                    <strong>안드로이드 설치 가능</strong>
-                    <span>홈 화면에 추가해서 앱처럼 실행하세요.</span>
+                    <strong>?�드로이???�치 가??/strong>
+                    <span>???�면??추�??�서 ?�처???�행?�세??</span>
                 </div>
-                <button id="btn-install" class="install-btn" type="button">설치</button>
+                <button id="btn-install" class="install-btn" type="button">?�치</button>
             </section>
 
             <!-- Master Guide (Center Top) -->
             <section class="master-guide-area">
                 <div class="guide-card" id="guide-card">
                     <div class="strategy-selector" id="strategy-selector">
-                        <button class="strat-btn" data-mode="optimal" title="수익극대화">OPTIMAL</button>
-                        <button class="strat-btn" data-mode="ai" title="AI 승률기반">AI SMART</button>
-                        <button class="strat-btn" data-mode="dynamic" title="최고 승률 자동추적">DYNAMIC</button>
+                        <button class="strat-btn" data-mode="optimal" title="?�익극�???>OPTIMAL</button>
+                        <button class="strat-btn" data-mode="ai" title="AI ?�률기반">AI SMART</button>
+                        <button class="strat-btn" data-mode="dynamic" title="최고 ?�률 ?�동추적">DYNAMIC</button>
                         <button class="strat-btn" data-mode="backup" title="기존 루틴">BACKUP</button>
-                        <button class="strat-btn active" data-mode="total" title="통합 다수결">TOTAL</button>
+                        <button class="strat-btn active" data-mode="total" title="?�합 ?�수�?>TOTAL</button>
                     </div>
-                    <div class="guide-label" id="ai-label">AI 마스터 대기 중</div>
-                    <div class="analysis-badge" id="ai-mode-badge">분정 분석 대기</div>
+                    <div class="guide-label" id="ai-label">AI 마스???��?�?/div>
+                    <div class="analysis-badge" id="ai-mode-badge">분정 분석 ?��?/div>
                     <div class="guide-result" id="master-recommendation">NEXT: -</div>
                 </div>
             </section>
@@ -109,10 +109,10 @@
             <footer class="action-bar">
                 <div class="row-indicator">R<b id="current-row-num">1</b></div>
                 <div class="control-btns">
-                    <button id="btn-zen" class="tool-btn" title="포커스 모드">🔍</button>
-                    <button id="btn-reload" class="tool-btn">🔄</button>
-                    <button id="btn-undo" class="tool-btn">↩</button>
-                    <button id="btn-reset" class="tool-btn danger">✖</button>
+                    <button id="btn-zen" class="tool-btn" title="?�커??모드">?��</button>
+                    <button id="btn-reload" class="tool-btn">?��</button>
+                    <button id="btn-undo" class="tool-btn">??/button>
+                    <button id="btn-reset" class="tool-btn danger">??/button>
                 </div>
                 <div class="input-hub">
                     <button class="btn-input p-btn" data-val="P" id="btn-p">P</button>
@@ -123,10 +123,10 @@
     </div>
 
     <!-- Victory Overlay -->
-    <div id="hit-notification" class="hit-overlay hidden">🎯 HIT!</div>
+    <div id="hit-notification" class="hit-overlay hidden">?�� HIT!</div>
     <!-- PWA Streak Badge -->
-    <div id="streak-badge" class="streak-fire hidden">🔥 0</div>
+    <div id="streak-badge" class="streak-fire hidden">?�� 0</div>
 
-    <script src="script_v7.js"></script>
+    <script src="script_v8.js"></script>
 </body>
 </html>

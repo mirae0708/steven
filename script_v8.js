@@ -214,10 +214,15 @@ function save() {
 }
 
 function getRoutinePred(rt, prev, c1) {
-    if (!prev || !isMark(c1)) return null;
-    const match = prev[rt.crit] === c1;
-    const resolve = symbol => (!match ? (symbol === 'P' ? 'B' : 'P') : symbol);
-    return { p2: resolve(prev[rt.p2]), p3: resolve(prev[rt.p3]) };
+    if (!rt || !prev || !isMark(c1)) return null;
+    try {
+        const match = prev[rt.crit] === c1;
+        const resolve = symbol => (!match ? (symbol === 'P' ? 'B' : 'P') : symbol);
+        return { p2: resolve(prev[rt.p2]), p3: resolve(prev[rt.p3]) };
+    } catch (e) {
+        console.error('Routine Prediction Error:', e, rt);
+        return null;
+    }
 }
 
 function getPredictionByMode(mode, prev, buffer, colIndex) {
@@ -225,9 +230,13 @@ function getPredictionByMode(mode, prev, buffer, colIndex) {
     const seq = CONFIG.STRATEGIES[mode];
     if (!seq || seq.length === 0) return { val: null, rt: null };
     
-    const sequenceIdx = (colIndex - 1) % seq.length;
+    const sequenceIdx = Math.max(0, colIndex - 1) % seq.length;
     const routineId = seq[sequenceIdx];
     const targetRt = CLASSIC_ROUTINES.find(r => r.id === routineId);
+    if (!targetRt) {
+        console.warn(`Routine ID ${routineId} not found in mode ${mode}`);
+        return { val: null, rt: null };
+    }
     const pred = getRoutinePred(targetRt, prev, buffer[0]);
     if (!pred) return { val: null, rt: null };
     
