@@ -707,10 +707,6 @@ function registerInstallPrompt() {
     updateInstallBanner();
 }
 
-    renderAnalysis(results);
-    dom.analysisModal.classList.remove('hidden');
-}
-
 function exportData() {
     const data = {
         storage: JSON.parse(localStorage.getItem(CONFIG.STORAGE_KEY) || '{}'),
