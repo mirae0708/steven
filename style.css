@@ -739,10 +739,16 @@ body {
   box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
 }
 
+.tool-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+  transform: scale(1.1);
+}
+
 /* Zen Mode (Focus Mode) */
 body.zen-active .side-panel {
-  transform: translateX(-100%);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: none !important;
 }
 
 body.zen-active .main-panel {

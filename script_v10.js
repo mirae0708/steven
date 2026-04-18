@@ -833,8 +833,9 @@ function setup() {
     document.getElementById('btn-undo').onclick = () => undo();
     document.getElementById('btn-reset').onclick = () => confirm('\ub9ac\uc14b?') && resetGame();
     document.getElementById('btn-reload').onclick = () => window.location.reload();
-    document.getElementById('btn-zen').onclick = () => {
+    document.getElementById('btn-zen').onclick = (e) => {
         document.body.classList.toggle('zen-active');
+        e.currentTarget.classList.toggle('active');
         render();
     };
     
@@ -965,6 +966,7 @@ function showAnalysis() {
     });
 
     renderAnalysis(results);
+    dom.analysisModal.classList.remove('hidden');
 }
 
 function renderAnalysis(results) {
@@ -1019,7 +1021,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v3.8.1...');
+        console.log('Initializing PB Master v3.8.3...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
