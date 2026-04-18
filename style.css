@@ -482,8 +482,8 @@ body {
   }
 
   .grid-area {
-    flex: none;
-    min-height: clamp(180px, 28dvh, 300px);
+    flex: 1;
+    min-height: 220px; overflow-x: auto !important; display: flex;
     padding: 0 10px 12px;
   }
 
