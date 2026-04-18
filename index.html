@@ -7,8 +7,8 @@
     <script>
         // NUCLEAR CACHE PURGE v3.7.6
         (function() {
-            const VERSION = '4.3.0';
-            const CACHE_NAME = 'jongdari-pb-v26-cache';
+            const VERSION = '4.5.0';
+            const CACHE_NAME = 'jongdari-pb-v27-cache';
             if (localStorage.getItem('app_version') !== VERSION) {
                 console.warn('CRITICAL UPDATE: Purging all caches...');
                 
@@ -110,6 +110,7 @@
                         <button class="strat-btn" data-mode="optimal">OPTIMAL</button>
                         <button class="strat-btn" data-mode="ai">AI SMART</button>
                         <button class="strat-btn" data-mode="backup">BACKUP</button>
+                        <button class="strat-btn" data-mode="vertical" data-t="strat_vertical">VERTICAL</button>
                         <button class="strat-btn active" data-mode="total">TOTAL</button>
                     </div>
                     <div class="guide-label" id="ai-label" data-t="guide_wait"></div>
@@ -139,6 +140,6 @@
     <div id="hit-notification" class="hit-overlay hidden" data-t="hit_overlay"></div>
     <div id="streak-badge" class="streak-fire hidden"></div>
 
-    <script src="script_v10.js?v=4.3.0"></script>
+    <script src="script_v10.js?v=4.5.0"></script>
 </body>
 </html>

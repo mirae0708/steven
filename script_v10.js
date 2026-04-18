@@ -3,12 +3,13 @@ const CONFIG = {
     HISTORY_KEY: 'ox_master_history',
     TOTAL_ROWS: 20,
     SERVICE_WORKER_PATH: './sw.js',
-    UNIT_STEPS: [1, 3, 7, 17, 35],
+    UNIT_STEPS: [1, 3, 7, 3, 9, 21],
     ROTATION_SEQUENCE: [2, 1, 2, 1, 3],
     STRATEGIES: {
         backup: [1, 4, 2, 3, 5],
         optimal: [2, 1, 2, 1, 3],
-        ai: [] // \ub3d9\uc801 \ud559\uc2b5 \uc54c\uace0\ub9ac\uc998\uc73c\ub85c \ub300\uccb4\ub428
+        vertical: [0], // \ub0b4\ub824\uc624\uae30 \ubaa8\ub4dc (\ud2b9\uc218 \ub85c\uc9c1)
+        ai: [] 
     },
     DANGER_RULES: [
         { id: 'bpb-b', prevPattern: 'BPB', firstMark: 'B', minMissStreak: 0, label: 'BPB \ub4a4 B' },
@@ -43,7 +44,8 @@ const VOCAB = {
     ic_zen: '\ud83d\udd0d',
     ic_reload: '\ud83d\udd04',
     ic_undo: '\u21a9',
-    ic_reset: '\u2716'
+    ic_reset: '\u2716',
+    strat_vertical: '\ub0b4\ub824\uc624\uae30(VERT)'
 };
 
 function applyTranslations() {
@@ -73,7 +75,7 @@ let betProgress = 0;
 let breakLeft = 0;
 let stats = createEmptyStats();
 let currentDangerRule = null;
-let strategyMissStreaks = { optimal: 0, ai: 0, backup: 0 };
+let strategyMissStreaks = { optimal: 0, ai: 0, backup: 0, vertical: 0 };
 
 let dom = {};
 
@@ -125,6 +127,7 @@ function createRuntimeState() {
         optimalMissStreak: 0,
         aiMissStreak: 0,
         backupMissStreak: 0,
+        verticalMissStreak: 0,
         totalMissStreak: 0
     };
 }
@@ -262,6 +265,11 @@ function getPredictionByMode(mode, prev, buffer, colIndex) {
     if (!prev || buffer.length === 0) return { val: null, rt: null };
 
     let routineId;
+    if (mode === 'vertical') {
+        // \ub0b4\ub824\uc624\uae30 \ud2b9\uc218 \ub85c\uc9c1: \ud604\uc7ac \uc5f4 1\ud589 \uae30\ud638\ub97c \uadf8\ub300\ub85c \ubcf5\uc0ac
+        return { val: buffer[0], rt: { id: 0, name: '\ub0b4\ub824\uc624\uae30' } };
+    }
+
     if (mode === 'ai') {
         // AI SMART: 히스토리 및 현재 게임 기반 최적 루틴 시뮬레이션
         const bestRt = findBestRoutineFromData();
@@ -349,7 +357,8 @@ function getMasterPrediction(prev, buffer, colIndex) {
         const votes = {
             optimal: getPredictionByMode('optimal', prev, buffer, colIndex).val,
             ai: getPredictionByMode('ai', prev, buffer, colIndex).val,
-            backup: getPredictionByMode('backup', prev, buffer, colIndex).val
+            backup: getPredictionByMode('backup', prev, buffer, colIndex).val,
+            vertical: getPredictionByMode('vertical', prev, buffer, colIndex).val
         };
 
         const score = { P: 0, B: 0 };
@@ -400,22 +409,26 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
                 optimal: getPredictionByMode('optimal', prevRow, buffer, colIndex),
                 ai: getPredictionByMode('ai', prevRow, buffer, colIndex),
                 backup: getPredictionByMode('backup', prevRow, buffer, colIndex),
+                vertical: { predictedVal: getPredictionByMode('vertical', prevRow, buffer, colIndex).val },
                 total: getMasterPrediction(prevRow, buffer, colIndex)
             };
 
             // \uac01 \uc804\ub7b5\ubcc4 \uc5f0\uc18d \uc624\ub2f5 \uce74\uc6b4\ud2b8 (\ub204\uc801)
             Object.keys(preds).forEach(mode => {
-                const pVal = (mode === 'total') ? preds[mode].predictedVal : preds[mode].val;
+                const res = preds[mode];
+                const pVal = (mode === 'total' || mode === 'vertical') ? res.predictedVal : res.val;
                 if (pVal !== null) { 
                     if (val === pVal) {
                         if (mode === 'optimal') runtime.optimalMissStreak = 0;
                         else if (mode === 'ai') runtime.aiMissStreak = 0;
                         else if (mode === 'backup') runtime.backupMissStreak = 0;
+                        else if (mode === 'vertical') runtime.verticalMissStreak = 0;
                         else if (mode === 'total') runtime.totalMissStreak = 0;
                     } else {
                         if (mode === 'optimal') runtime.optimalMissStreak++;
                         else if (mode === 'ai') runtime.aiMissStreak++;
                         else if (mode === 'backup') runtime.backupMissStreak++;
+                        else if (mode === 'vertical') runtime.verticalMissStreak++;
                         else if (mode === 'total') runtime.totalMissStreak++;
                     }
                 }
@@ -513,10 +526,11 @@ function recomputeDerivedState() {
     stats = runtime.stats;
     currentDangerRule = runtime.dangerRule;
     strategyMissStreaks = {
-        optimal: runtime.optimalMissStreak || 0,
-        ai: runtime.aiMissStreak || 0,
-        backup: runtime.backupMissStreak || 0,
-        total: runtime.totalMissStreak || 0
+        optimal: runtime.optimalMissStreak,
+        ai: runtime.aiMissStreak,
+        backup: runtime.backupMissStreak,
+        vertical: runtime.verticalMissStreak,
+        total: runtime.totalMissStreak
     };
 }
 
@@ -1070,7 +1084,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.3.0...');
+        console.log('Initializing PB Master v4.5.0...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
