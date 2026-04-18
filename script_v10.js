@@ -826,26 +826,34 @@ function importData(event) {
 }
 
 function setup() {
+    const setClick = (id, fn) => {
+        const el = document.getElementById(id);
+        if (el) el.onclick = fn;
+    };
+
     document.querySelectorAll('.btn-input').forEach(button => {
         button.onclick = () => handleInput(button.dataset.val);
     });
 
-    document.getElementById('btn-undo').onclick = () => undo();
-    document.getElementById('btn-reset').onclick = () => confirm('\ub9ac\uc14b?') && resetGame();
-    document.getElementById('btn-reload').onclick = () => window.location.reload();
-    document.getElementById('btn-zen').onclick = (e) => {
+    setClick('btn-undo', () => undo());
+    setClick('btn-reset', () => confirm('\ub9ac\uc14b?') && resetGame());
+    setClick('btn-reload', () => window.location.reload());
+    setClick('btn-zen', (e) => {
         document.body.classList.toggle('zen-active');
         e.currentTarget.classList.toggle('active');
         render();
-    };
+    });
     
     if (dom.historyBtn) dom.historyBtn.onclick = () => showAnalysis();
     if (dom.modalClose) dom.modalClose.onclick = () => dom.analysisModal.classList.add('hidden');
 
-    document.getElementById('btn-export').onclick = () => exportData();
+    setClick('btn-export', () => exportData());
+    
     const importInput = document.getElementById('import-file');
-    document.getElementById('btn-import-trigger').onclick = () => importInput.click();
-    importInput.onchange = (e) => importData(e);
+    if (importInput) {
+        setClick('btn-import-trigger', () => importInput.click());
+        importInput.onchange = (e) => importData(e);
+    }
 
     if (dom.stratBtns) {
         dom.stratBtns.forEach(btn => {
@@ -856,7 +864,6 @@ function setup() {
                 recomputeDerivedState();
                 updateUI();
             };
-            // Sync initial state
             btn.classList.toggle('active', btn.dataset.mode === currentStrategyMode);
         });
     }
@@ -1021,7 +1028,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v3.8.3...');
+        console.log('Initializing PB Master v4.0.0...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
