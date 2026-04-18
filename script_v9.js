@@ -522,6 +522,7 @@ function updateUI() {
                     const rtId = seq[(colIndex - 1) % seq.length];
                     const rt = CLASSIC_ROUTINES.find(r => r.id === rtId);
                     const pred = getRoutinePred(rt, prev, row[0]);
+                    if (!pred) return;
                     
                     const p2 = pred.p2, p3 = pred.p3;
                     const bet1 = streak > 0 ? CONFIG.UNIT_STEPS[Math.min(streak, 4)] : 0;
@@ -839,6 +840,7 @@ function showAnalysis() {
                     const rtId = seq[ri % seq.length];
                     const rt = CLASSIC_ROUTINES.find(r => r.id === rtId);
                     const pred = getRoutinePred(rt, prev, row[0]);
+                    if (!pred) return; // Skip if no prediction available
                     const b1 = streak > 0 ? CONFIG.UNIT_STEPS[Math.min(streak, 4)] : 0;
                     if (row[1] === pred.p2) { p += b1; streak = 0; }
                     else {
