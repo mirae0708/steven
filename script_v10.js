@@ -321,12 +321,14 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
             const preds = {
                 optimal: getPredictionByMode('optimal', prevRow, buffer, colIndex),
                 ai: getPredictionByMode('ai', prevRow, buffer, colIndex),
-                backup: getPredictionByMode('backup', prevRow, buffer, colIndex)
+                backup: getPredictionByMode('backup', prevRow, buffer, colIndex),
+                total: getMasterPrediction(prevRow, buffer, colIndex)
             };
 
             // 각 전략별 연속 오답 카운트
             Object.keys(preds).forEach(mode => {
-                if (val === preds[mode].val) {
+                const pVal = (mode === 'total') ? preds[mode].predictedVal : preds[mode].val;
+                if (val === pVal) {
                     missStreaks[mode] = 0;
                 } else {
                     missStreaks[mode] = (missStreaks[mode] || 0) + 1;
@@ -387,6 +389,7 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
         runtime.optimalMissStreak = missStreaks.optimal;
         runtime.aiMissStreak = missStreaks.ai;
         runtime.backupMissStreak = missStreaks.backup;
+        runtime.totalMissStreak = missStreaks.total;
     }
 
     if (finalizeRow && buffer.length === 3) {
@@ -431,7 +434,8 @@ function recomputeDerivedState() {
     strategyMissStreaks = {
         optimal: runtime.optimalMissStreak || 0,
         ai: runtime.aiMissStreak || 0,
-        backup: runtime.backupMissStreak || 0
+        backup: runtime.backupMissStreak || 0,
+        total: runtime.totalMissStreak || 0
     };
 }
 
@@ -462,7 +466,8 @@ function render() {
         dom.grid.appendChild(colEl);
     }
 
-    dom.grid.scrollLeft = dom.grid.scrollWidth;
+    // Auto-scroll removed for manual user control
+    // dom.grid.scrollLeft = dom.grid.scrollWidth;
 }
 
 function toggle(c, r) {
@@ -507,57 +512,30 @@ function updateUI() {
     const prev = currentGame[currentGame.length - 1];
     const master = getMasterPrediction(prev, inputBuffer, currentGame.length + 1);
 
-    // Strategy performance indicator logic
-    const calcStratProfit = (mode) => {
-        let p = 0;
-        let streak = 0;
-        const history = JSON.parse(localStorage.getItem(CONFIG.HISTORY_KEY) || '[]');
-        history.concat([currentGame]).forEach((game, gIdx) => {
-            let completedRows = [];
-            game.forEach((row, rIdx) => {
-                const colIndex = rIdx + 1;
-                const prev = completedRows[completedRows.length - 1];
-                if (prev && row.every(v => v !== null)) {
-                    const seq = CONFIG.STRATEGIES[mode];
-                    const rtId = seq[(colIndex - 1) % seq.length];
-                    const rt = CLASSIC_ROUTINES.find(r => r.id === rtId);
-                    const pred = getRoutinePred(rt, prev, row[0]);
-                    if (!pred) return;
-                    
-                    const p2 = pred.p2, p3 = pred.p3;
-                    const bet1 = streak > 0 ? CONFIG.UNIT_STEPS[Math.min(streak, 4)] : 0;
-                    if (row[1] === p2) { p += bet1; streak = 0; }
-                    else {
-                        streak++;
-                        const bet2 = CONFIG.UNIT_STEPS[Math.min(streak, 4)];
-                        if (row[2] === p3) { p += bet2; streak = 0; }
-                        else { streak++; p -= (bet1 + bet2); }
-                    }
-                }
-                if (row.every(v => v !== null)) completedRows.push([...row]);
-            });
-        });
-        return { profit: p, streak: streak };
+    // Strategy streak indicator logic (instead of profit)
+    const getStratStreak = (mode) => {
+        if (mode === 'total') return strategyMissStreaks.total;
+        if (mode === 'optimal') return strategyMissStreaks.optimal;
+        if (mode === 'ai') return strategyMissStreaks.ai;
+        if (mode === 'backup') return strategyMissStreaks.backup;
+        if (mode === 'dynamic') {
+             // Dynamic is the "Master" best routine, we use the global missStreak here
+             return missStreak;
+        }
+        return 0;
     };
 
     if (dom.stratBtns) {
         dom.stratBtns.forEach(btn => {
             const m = btn.dataset.mode;
-            if (m !== 'total') {
-                const data = calcStratProfit(m);
-                const existingBadge = btn.querySelector('.strat-perf');
-                const badge = existingBadge || document.createElement('span');
-                let text = '';
-                if (data.streak > 0) {
-                    text = `-${data.streak}`;
-                    badge.className = 'strat-perf loss'; // Always red for streak
-                } else {
-                    text = `${data.profit > 0 ? '+' : ''}${data.profit}`;
-                    badge.className = 'strat-perf ' + (data.profit >= 0 ? 'win' : 'loss');
-                }
-                badge.textContent = text;
-                if (!existingBadge) btn.appendChild(badge);
-            }
+            const streak = getStratStreak(m);
+            const existingBadge = btn.querySelector('.strat-perf');
+            const badge = existingBadge || document.createElement('span');
+            
+            badge.textContent = streak > 0 ? `-${streak}` : '0';
+            badge.className = 'strat-perf ' + (streak > 0 ? 'loss' : 'win');
+            
+            if (!existingBadge) btn.appendChild(badge);
         });
     }
 
