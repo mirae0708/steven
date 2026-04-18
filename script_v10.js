@@ -363,8 +363,7 @@ function getMasterPrediction(prev, buffer, colIndex) {
         const votes = {
             optimal: getPredictionByMode('optimal', prev, buffer, colIndex).val,
             ai: getPredictionByMode('ai', prev, buffer, colIndex).val,
-            backup: getPredictionByMode('backup', prev, buffer, colIndex).val,
-            vertical: getPredictionByMode('vertical', prev, buffer, colIndex).val
+            backup: getPredictionByMode('backup', prev, buffer, colIndex).val
         };
 
         const score = { P: 0, B: 0 };
@@ -401,6 +400,10 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
         runtime.breakLeft = 0;
         runtime.betProgress = runtime.missStreak;
         runtime.dangerRule = skipRule;
+    }
+
+    if (colIndex === 1) {
+        runtime.safetyState = 'WAIT';
     }
 
 
@@ -492,7 +495,8 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
         }
 
         buffer.push(val);
-        runtime.predictedVal = skipRule ? null : getMasterPrediction(prevRow, buffer, colIndex).predictedVal;
+        const nextPred = getMasterPrediction(prevRow, buffer, colIndex);
+        runtime.predictedVal = (skipRule || colIndex === 1) ? null : nextPred.predictedVal;
     }
 
     if (finalizeRow && buffer.length === 3) {
@@ -1095,7 +1099,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.9.1...');
+        console.log('Initializing PB Master v4.9.2...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
