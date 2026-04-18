@@ -448,7 +448,7 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
                 });
             }
 
-            if (prevRow) {
+            if (prevRow && colIndex > 1) {
                 CLASSIC_ROUTINES.forEach(rt => {
                     const pred = getRoutinePred(rt, prevRow, buffer[0]);
                     const hit = pred && (
@@ -471,7 +471,7 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
                 });
             }
 
-            if (!skipRule) {
+            if (!skipRule && colIndex > 1) {
                 if (val === runtime.predictedVal) {
                     runtime.currentStreak++;
                     runtime.missStreak = 0;
@@ -1101,7 +1101,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.9.3...');
+        console.log('Initializing PB Master v4.9.4...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
