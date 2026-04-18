@@ -329,18 +329,7 @@ function findBestRoutineFromData() {
 
 function getMasterPrediction(prev, buffer, colIndex) {
     if (!prev || buffer.length === 0 || colIndex < 1) {
-        return { predictedVal: null, bestRtName: '\ubd84\uc11d \ub300\uae30', guideLabel: '\ud328\ud134 \uc2dc\uc12c\ubd84\uc11d \ub300\uae30 \uc911' };
-    }
-
-    if (currentStrategyMode === 'dynamic') {
-        const bestRt = [...CLASSIC_ROUTINES].sort((a, b) => b.hits - a.hits || a.currentMissStreak - b.currentMissStreak)[0];
-        const pred = getRoutinePred(bestRt, prev, buffer[0]);
-        const stepLabel = buffer.length === 1 ? 'STEP 2' : 'STEP 3';
-        return {
-            predictedVal: (buffer.length === 1 ? pred.p2 : pred.p3),
-            bestRtName: `\ucd5c\uc801 \uc801\uc911: ${bestRt.name.split(' ')[0]}`,
-            guideLabel: `${stepLabel} [\ub3d9\uc801 \ucd5c\uc801\ud654 \ubaa8\ub4dc]`
-        };
+        return { predictedVal: null, bestRtName: '\ubd84\uc11d \ub300\uae30', guideLabel: '\ud328\ud134 \uc2dc\uc810\ubd84\uc11d \ub300\uae30 \uc911' };
     }
 
     if (currentStrategyMode === 'total') {
@@ -409,10 +398,12 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
             // 각 전략별 연속 오답 카운트
             Object.keys(preds).forEach(mode => {
                 const pVal = (mode === 'total') ? preds[mode].predictedVal : preds[mode].val;
-                if (val === pVal) {
-                    missStreaks[mode] = 0;
-                } else {
-                    missStreaks[mode] = (missStreaks[mode] || 0) + 1;
+                if (pVal !== null) { // 예측값이 있을 때만 비교 (1열 무효화)
+                    if (val === pVal) {
+                        missStreaks[mode] = 0;
+                    } else {
+                        missStreaks[mode] = (missStreaks[mode] || 0) + 1;
+                    }
                 }
             });
 
@@ -599,10 +590,6 @@ function updateUI() {
         if (mode === 'optimal') return strategyMissStreaks.optimal;
         if (mode === 'ai') return strategyMissStreaks.ai;
         if (mode === 'backup') return strategyMissStreaks.backup;
-        if (mode === 'dynamic') {
-             // Dynamic is the "Master" best routine, we use the global missStreak here
-             return missStreak;
-        }
         return 0;
     };
 
@@ -1032,7 +1019,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v3.7.8...');
+        console.log('Initializing PB Master v3.8.1...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
