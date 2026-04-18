@@ -214,22 +214,27 @@ function getRoutinePred(rt, prev, c1) {
     return { p2: resolve(prev[rt.p2]), p3: resolve(prev[rt.p3]) };
 }
 
+function getPredictionByMode(mode, prev, buffer, colIndex) {
+    if (!prev || buffer.length === 0) return { val: null, rt: null };
+    const seq = CONFIG.STRATEGIES[mode];
+    if (!seq || seq.length === 0) return { val: null, rt: null };
+    
+    const sequenceIdx = (colIndex - 1) % seq.length;
+    const routineId = seq[sequenceIdx];
+    const targetRt = CLASSIC_ROUTINES.find(r => r.id === routineId);
+    const pred = getRoutinePred(targetRt, prev, buffer[0]);
+    if (!pred) return { val: null, rt: null };
+    
+    return { 
+        val: (buffer.length === 1 ? pred.p2 : pred.p3),
+        rt: targetRt
+    };
+}
+
 function getMasterPrediction(prev, buffer, colIndex) {
     if (!prev || buffer.length === 0 || colIndex < 1) {
         return { predictedVal: null, bestRtName: '분석 대기', guideLabel: '패턴 시점분석 대기 중' };
     }
-
-    const getModePred = (mode) => {
-        const seq = CONFIG.STRATEGIES[mode];
-        const sequenceIdx = (colIndex - 1) % seq.length;
-        const routineId = seq[sequenceIdx];
-        const targetRt = CLASSIC_ROUTINES.find(r => r.id === routineId);
-        const pred = getRoutinePred(targetRt, prev, buffer[0]);
-        return { 
-            val: (buffer.length === 1 ? pred.p2 : pred.p3),
-            rt: targetRt
-        };
-    };
 
     if (currentStrategyMode === 'dynamic') {
         const bestRt = [...CLASSIC_ROUTINES].sort((a, b) => b.hits - a.hits || a.currentMissStreak - b.currentMissStreak)[0];
@@ -244,9 +249,9 @@ function getMasterPrediction(prev, buffer, colIndex) {
 
     if (currentStrategyMode === 'total') {
         const votes = {
-            optimal: getModePred('optimal').val,
-            ai: getModePred('ai').val,
-            backup: getModePred('backup').val
+            optimal: getPredictionByMode('optimal', prev, buffer, colIndex).val,
+            ai: getPredictionByMode('ai', prev, buffer, colIndex).val,
+            backup: getPredictionByMode('backup', prev, buffer, colIndex).val
         };
 
         const score = { P: 0, B: 0 };
@@ -265,11 +270,11 @@ function getMasterPrediction(prev, buffer, colIndex) {
     }
 
     // Specific mode logic
-    const res = getModePred(currentStrategyMode);
+    const res = getPredictionByMode(currentStrategyMode, prev, buffer, colIndex);
     return {
         predictedVal: res.val,
-        bestRtName: `${res.rt.name.split(' ')[0]} (${buffer.length === 1 ? 'S2' : 'S3'})`,
-        guideLabel: `STEP ${buffer.length === 1 ? '2' : '3'} [${res.rt.name}]`
+        bestRtName: res.rt ? `${res.rt.name.split(' ')[0]} (${buffer.length === 1 ? 'S2' : 'S3'})` : '분석중',
+        guideLabel: `STEP ${buffer.length === 1 ? '2' : '3'} [${res.rt ? res.rt.name : '분석중'}]`
     };
 }
 
@@ -299,9 +304,9 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
         if (idx > 0) {
             // 각 전략별 예측값
             const preds = {
-                optimal: getModePred('optimal'),
-                ai: getModePred('ai'),
-                backup: getModePred('backup')
+                optimal: getPredictionByMode('optimal', prevRow, buffer, colIndex),
+                ai: getPredictionByMode('ai', prevRow, buffer, colIndex),
+                backup: getPredictionByMode('backup', prevRow, buffer, colIndex)
             };
 
             // 각 전략별 연속 오답 카운트
