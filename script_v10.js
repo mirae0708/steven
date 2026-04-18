@@ -312,7 +312,7 @@ function findBestRoutineFromData(customHistory = null) {
         const weight = (hIdx + 1) * 2; // \ucd5c\uadfc \uac8c\uc784\uc77c\uc218\ub85d \uac00\uc911\uce58 \ub450 \ubc30 \uc99d\uac00
         let prev = null;
         game.forEach(row => {
-            if (prev && row.every(v => v !== null)) {
+            if (prev && Array.isArray(row) && row.every(v => v !== null)) {
                 scores.forEach(rt => {
                     const p = getRoutinePred(rt, prev, row[0]);
                     if (p) {
@@ -321,14 +321,14 @@ function findBestRoutineFromData(customHistory = null) {
                     }
                 });
             }
-            if (row.every(v => v !== null)) prev = row;
+            if (Array.isArray(row) && row.every(v => v !== null)) prev = row;
         });
     });
 
     // 2. \ud604\uc7ac \uac8c\uc784 \ud760\ub984 \ud559\uc2b5 (\ub2e8\uae30 \uae30\uc5b5 - \ucd5c\uc0c1\uc704 \uac00\uc911\uce58)
     let prevRow = null;
     currentGame.forEach(row => {
-        if (prevRow && row.every(v => v !== null)) {
+        if (prevRow && Array.isArray(row) && row.every(v => v !== null)) {
             scores.forEach(rt => {
                 const p = getRoutinePred(rt, prevRow, row[0]);
                 if (p) {
@@ -337,7 +337,7 @@ function findBestRoutineFromData(customHistory = null) {
                 }
             });
         }
-        prevRow = row;
+        if (Array.isArray(row)) prevRow = row;
     });
 
     // 3. \uc2ac\ub7fc\ud504 \ubc29\uc9c0 \ubc0f \ud544\ud130\ub9c1 (\ucd5c\uc2e0 \uc5f0\uc18d \uc624\ub2f5 \ub8e8\ud23n \uc81c\uc678)
@@ -918,7 +918,7 @@ function showAnalysis() {
     const results = allGames.map((game, index) => {
         const isLive = (index === allGames.length - 1 && history.length < allGames.length);
         
-        const modes = ['optimal', 'ai', 'backup', 'vertical'];
+        const modes = ['optimal', 'ai', 'backup'];
         const simRes = modes.map(m => {
             let profit = 0;
             let streak = 0;
@@ -934,10 +934,7 @@ function showAnalysis() {
                     if (val === null) continue;
 
                     let pVal = null;
-                    if (m === 'vertical') {
-                        if (prev) pVal = row[0];
-                    } else {
-                        const seq = CONFIG.STRATEGIES[m];
+                    const seq = CONFIG.STRATEGIES[m];
                         const rtId = (m === 'ai') ? (findBestRoutineFromData(completed).id) : (seq ? seq[ri % seq.length] : 1);
                         const rt = CLASSIC_ROUTINES.find(r => r.id === rtId);
                         const pred = getRoutinePred(rt, prev, row[0]);
@@ -1101,7 +1098,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.8.0...');
+        console.log('Initializing PB Master v4.9.0...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
