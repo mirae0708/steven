@@ -46,30 +46,35 @@ let breakLeft = 0;
 let stats = createEmptyStats();
 let currentDangerRule = null;
 
-const dom = {
-    grid: document.getElementById('prediction-grid'),
-    guideCard: document.getElementById('guide-card'),
-    guideLabel: document.getElementById('ai-label'),
-    recommendation: document.getElementById('master-recommendation'),
-    accuracy: document.getElementById('overall-accuracy'),
-    s1: document.getElementById('step1-hits'),
-    bet: document.getElementById('bet-counter'),
-    unit: document.getElementById('recommended-unit'),
-    statusText: document.getElementById('status-text'),
-    rowNum: document.getElementById('current-row-num'),
-    streak: document.getElementById('streak-badge'),
-    popup: document.getElementById('hit-notification'),
-    btnP: document.getElementById('btn-p'),
-    btnB: document.getElementById('btn-b'),
-    installBanner: document.getElementById('install-banner'),
-    installBtn: document.getElementById('btn-install'),
-    historyBtn: document.getElementById('btn-history'),
-    analysisModal: document.getElementById('analysis-modal'),
-    modalClose: document.getElementById('close-analysis'),
-    stratBtns: document.querySelectorAll('.strat-btn'),
-    analysisBody: document.getElementById('analysis-body'),
-    analysisSummary: document.getElementById('analysis-summary')
-};
+let dom = {};
+
+function initDom() {
+    dom = {
+        grid: document.getElementById('prediction-grid'),
+        guideCard: document.getElementById('guide-card'),
+        guideLabel: document.getElementById('ai-label'),
+        recommendation: document.getElementById('master-recommendation'),
+        accuracy: document.getElementById('overall-accuracy'),
+        s1: document.getElementById('step1-hits'),
+        bet: document.getElementById('bet-counter'),
+        unit: document.getElementById('recommended-unit'),
+        statusText: document.getElementById('status-text'),
+        rowNum: document.getElementById('current-row-num'),
+        streak: document.getElementById('streak-badge'),
+        popup: document.getElementById('hit-notification'),
+        btnP: document.getElementById('btn-p'),
+        btnB: document.getElementById('btn-b'),
+        installBanner: document.getElementById('install-banner'),
+        installBtn: document.getElementById('btn-install'),
+        historyBtn: document.getElementById('btn-history'),
+        analysisModal: document.getElementById('analysis-modal'),
+        modalClose: document.getElementById('close-analysis'),
+        stratBtns: document.querySelectorAll('.strat-btn'),
+        analysisBody: document.getElementById('analysis-body'),
+        analysisSummary: document.getElementById('analysis-summary')
+    };
+    console.log('DOM refs initialized:', Object.keys(dom).filter(k => !!dom[k]).length);
+}
 
 let deferredInstallPrompt = null;
 
@@ -625,23 +630,28 @@ function archive() {
 }
 
 function handleInput(val) {
-    if (!isMark(val) || currentGame.length >= CONFIG.TOTAL_ROWS || inputBuffer.length >= 3) return;
+    try {
+        console.log('handleInput:', val);
+        if (!isMark(val) || currentGame.length >= CONFIG.TOTAL_ROWS || (inputBuffer && inputBuffer.length >= 3)) return;
 
-    const prevWins = stats.wins;
-    inputBuffer.push(val);
+        const prevWins = stats.wins;
+        inputBuffer.push(val);
 
-    if (inputBuffer.length === 3) {
-        currentGame.push([...inputBuffer]);
-        inputBuffer = [];
+        if (inputBuffer.length === 3) {
+            currentGame.push([...inputBuffer]);
+            inputBuffer = [];
+        }
+
+        recomputeDerivedState();
+        save();
+        render();
+        updateUI();
+
+        if (stats.wins > prevWins) triggerCelebration();
+        if (currentGame.length >= CONFIG.TOTAL_ROWS && inputBuffer.length === 0) archive();
+    } catch (e) {
+        console.error('Input Error:', e);
     }
-
-    recomputeDerivedState();
-    save();
-    render();
-    updateUI();
-
-    if (stats.wins > prevWins) triggerCelebration();
-    if (currentGame.length >= CONFIG.TOTAL_ROWS && inputBuffer.length === 0) archive();
 }
 
 function undo() {
@@ -881,6 +891,8 @@ function showAnalysis() {
 }
 
 function renderAnalysis(results) {
+    if (!results || results.length === 0) return;
+    
     const overallStats = results.reduce((acc, cur) => {
         acc.profit += cur.profit;
         acc.maxMiss = Math.max(acc.maxMiss, cur.maxMiss);
@@ -891,7 +903,9 @@ function renderAnalysis(results) {
         acc[cur.bestStrategy] = (acc[cur.bestStrategy] || 0) + 1;
         return acc;
     }, {});
-    const commonBest = Object.entries(totalBestStrategy).sort((a,b) => b[1] - a[1])[0][0];
+    
+    const entries = Object.entries(totalBestStrategy);
+    const commonBest = entries.length > 0 ? entries.sort((a,b) => b[1] - a[1])[0][0] : 'N/A';
 
     const summaryHtml = `
         <div class="summary-card ${overallStats.profit >= 0 ? 'positive' : 'negative'}">
@@ -924,13 +938,26 @@ function renderAnalysis(results) {
 }
 
 function init() {
-    load();
-    recomputeDerivedState();
-    setup();
-    render();
-    updateUI();
-    registerServiceWorker();
-    registerInstallPrompt();
+    try {
+        console.log('Initializing PB Master v3.6.6...');
+        initDom();
+        load();
+        recomputeDerivedState();
+        setup();
+        render();
+        updateUI();
+        registerServiceWorker();
+        registerInstallPrompt();
+        console.log('App ready. Grid Rows:', CONFIG.TOTAL_ROWS);
+    } catch (e) {
+        console.error('Initialization Error:', e);
+        alert('앱 초기화 오류: ' + e.message);
+    }
 }
+
+window.onerror = function(msg, url, line) {
+    console.error('Window Error:', msg, 'at', url, ':', line);
+    return false;
+};
 
 init();
