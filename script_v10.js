@@ -618,10 +618,11 @@ function updateUI() {
 
     // \uc804\ub7b5 \uc5f0\uc18d \uc624\ub2f5 \uc9c0\ud45c \ub85c\uc9c1 (\ub300\uc2e0 \uc218\uc775)
     const getStratStreak = (mode) => {
-        if (mode === 'total') return strategyMissStreaks.total;
-        if (mode === 'optimal') return strategyMissStreaks.optimal;
-        if (mode === 'ai') return strategyMissStreaks.ai;
-        if (mode === 'backup') return strategyMissStreaks.backup;
+        if (mode === 'total') return strategyMissStreaks.total || 0;
+        if (mode === 'optimal') return strategyMissStreaks.optimal || 0;
+        if (mode === 'ai') return strategyMissStreaks.ai || 0;
+        if (mode === 'backup') return strategyMissStreaks.backup || 0;
+        if (mode === 'vertical') return strategyMissStreaks.vertical || 0;
         return 0;
     };
 
@@ -1111,7 +1112,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.6.0...');
+        console.log('Initializing PB Master v4.7.0...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
