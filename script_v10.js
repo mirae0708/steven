@@ -128,6 +128,7 @@ function createRuntimeState() {
         stats: createEmptyStats(),
         dangerRule: null,
         totalMissStreak: 0,
+        consensus7MissStreak: 0,
         lastHit: false
     };
 }
@@ -414,6 +415,27 @@ function getMasterPrediction(prev, buffer, colIndex, streaks = {}) {
     };
 }
 
+/**
+ * v4.12.0: 7\uc778 \ud1b5\ud569 \ubd84\uc11d \uc804\uc6a9 \uc5d4\uc9c4
+ * 7\uac00\uc9c0 \ub8e8\ud2b9\uc744 \ud569\ucc28\uc11c 4\ud45c \uc774\uc0c1 \uc77c\uce58 \uc2dc \uc608\ucc21\uac12 \ubc18\ud658
+ */
+function getConsensus7Prediction(prev, buffer, colIndex) {
+    if (!prev || buffer.length === 0 || colIndex < 1) return { val: null, count: 0 };
+
+    const votes = { P: 0, B: 0 };
+    CLASSIC_ROUTINES.forEach(rt => {
+        const pred = getRoutinePred(rt, prev, buffer[0]);
+        if (pred) {
+            const pVal = buffer.length === 1 ? pred.p2 : pred.p3;
+            if (isMark(pVal)) votes[pVal]++;
+        }
+    });
+
+    if (votes.P >= 4) return { val: 'P', count: votes.P };
+    if (votes.B >= 4) return { val: 'B', count: votes.B };
+    return { val: null, count: Math.max(votes.P, votes.B) };
+}
+
 function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
     const buffer = [];
     const rowHits = new Set();
@@ -468,7 +490,6 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
                             else if (mode === 'vertical') runtime.verticalMissStreak = 0;
                             else if (mode === 'total') runtime.totalMissStreak = 0;
                         } else {
-                            // \uc704\ud5d8 \uad6c\uac04(skipRule)\uc5d0\uc11c\ub294 \ubbf8\uc2a4\ub97c \uc313\uc9c0 \uc54a\uc74c
                             if (!skipRule) {
                                 if (mode === 'optimal') runtime.optimalMissStreak++;
                                 else if (mode === 'ai') runtime.aiMissStreak++;
@@ -479,6 +500,16 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
                         }
                     }
                 });
+
+                // v4.12.0: 7\uc778 \ud1b5\ud569 \uc5d4\uc9c4 \ub3c5\ub9bd \uc2a4\ud2b8\ub9ad \ud2b8\ub798\ud0b9
+                const c7Pred = getConsensus7Prediction(prevRow, buffer, colIndex);
+                if (c7Pred.val) {
+                    if (val === c7Pred.val) {
+                        runtime.consensus7MissStreak = 0;
+                    } else {
+                        runtime.consensus7MissStreak++;
+                    }
+                }
             }
 
             if (prevRow && colIndex > 1) {
@@ -578,6 +609,7 @@ function recomputeDerivedState() {
         backup: runtime.backupMissStreak,
         vertical: runtime.verticalMissStreak,
         total: runtime.totalMissStreak,
+        consensus7: runtime.consensus7MissStreak,
         lastHit: runtime.lastHit
     };
 }
@@ -709,6 +741,27 @@ function updateUI() {
     dom.btnP.classList.remove('glow-pulse');
     dom.btnB.classList.remove('glow-pulse');
     dom.guideCard.classList.remove('pred-p', 'pred-b', 'pred-skip');
+
+    const master = getMasterPrediction(prev, inputBuffer, currentGame.length + 1, strategyMissStreaks);
+    const c7Res = getConsensus7Prediction(prev, inputBuffer, currentGame.length + 1);
+
+    // 7\uc778 \ubd84\uc11d \ucc3d \uc5c5\ub370\uc774\ud2b8
+    const c7Card = document.getElementById('consensus-7-card');
+    const c7StreakEl = document.getElementById('c7-streak-badge');
+    const c7CountEl = document.getElementById('c7-consensus-count');
+    const c7RecEl = document.getElementById('c7-recommendation');
+
+    if (c7Res.val) {
+        c7StreakEl.textContent = strategyMissStreaks.consensus7 > 0 ? `-${strategyMissStreaks.consensus7}` : '0';
+        c7CountEl.textContent = `${c7Res.count}/7 \uc77c\uce58`;
+        c7RecEl.textContent = `NEXT: ${c7Res.val === 'P' ? 'PLAYER' : 'BANKER'}`;
+        c7Card.className = `consensus-7-card ${c7Res.val === 'P' ? 'pred-p' : 'pred-b'}`;
+    } else {
+        c7StreakEl.textContent = '-';
+        c7CountEl.textContent = 'WAIT';
+        c7RecEl.textContent = 'NEXT: -';
+        c7Card.className = 'consensus-7-card';
+    }
 
     const badge = document.getElementById('ai-mode-badge');
 

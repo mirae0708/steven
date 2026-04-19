@@ -7,8 +7,8 @@
     <script>
         // NUCLEAR CACHE PURGE v3.7.6
         (function() {
-            const VERSION = '4.11.0';
-            const CACHE_NAME = 'jongdari-pb-v53-cache';
+            const VERSION = '4.12.0';
+            const CACHE_NAME = 'jongdari-pb-v54-cache';
             if (localStorage.getItem('app_version') !== VERSION) {
                 console.warn('CRITICAL UPDATE: Purging all caches...');
                 
@@ -107,6 +107,17 @@
             </section>
 
             <section class="master-guide-area">
+                <!-- \uc0c8\ub85c\uc6b4 7\uc778 \ud1b5\ud569 \ubd84\uc11d \ucc3d -->
+                <div class="consensus-7-card" id="consensus-7-card">
+                    <div class="c7-header">7\uc778 \ud1b5\ud569 \ubd84\uc11d</div>
+                    <div class="c7-info">
+                        <span id="c7-streak-badge" class="c7-streak">-</span>
+                        <span id="c7-consensus-count" class="c7-count">WAIT</span>
+                    </div>
+                    <div class="c7-result" id="c7-recommendation">NEXT: -</div>
+                </div>
+
+                <!-- \uae30\uc804 AI \ub9c8\uc2a4\ud130 \ubd84\uc11d \ucc3d -->
                 <div class="guide-card" id="guide-card">
                     <div class="strategy-selector" id="strategy-selector">
                         <button class="strat-btn" data-mode="optimal">OPTIMAL</button>
@@ -142,7 +153,7 @@
     <div id="hit-notification" class="hit-overlay hidden" data-t="hit_overlay"></div>
     <div id="streak-badge" class="streak-fire hidden"></div>
 
-    <script src="script_v10.js?v=4.11.0"></script>
+    <script src="script_v10.js?v=4.12.0"></script>
     <!-- v4.9.0 Ultra Force Update -->
 </body>
 </html>
