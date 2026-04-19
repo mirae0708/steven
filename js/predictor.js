@@ -274,13 +274,11 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
                             else if (mode === 'vertical') runtime.verticalMissStreak = 0;
                             else if (mode === 'total') runtime.totalMissStreak = 0;
                         } else {
-                            if (!skipRule) {
-                                if (mode === 'optimal') runtime.optimalMissStreak++;
-                                else if (mode === 'ai') runtime.aiMissStreak++;
-                                else if (mode === 'backup') runtime.backupMissStreak++;
-                                else if (mode === 'vertical') runtime.verticalMissStreak++;
-                                else if (mode === 'total') runtime.totalMissStreak++;
-                            }
+                            if (mode === 'optimal') runtime.optimalMissStreak++;
+                            else if (mode === 'ai') runtime.aiMissStreak++;
+                            else if (mode === 'backup') runtime.backupMissStreak++;
+                            else if (mode === 'vertical') runtime.verticalMissStreak++;
+                            else if (mode === 'total') runtime.totalMissStreak++;
                         }
                     }
                 });
