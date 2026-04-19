@@ -391,11 +391,17 @@ function getMasterPrediction(prev, buffer, colIndex, streaks = {}) {
         if (weightedScores.P > weightedScores.B) finalVal = 'P';
         else if (weightedScores.B > weightedScores.P) finalVal = 'B';
 
+        const consensusCount = Math.max(weightedScores.P, weightedScores.B);
+        const actualAgreementCount = Object.values(voteResults).filter(v => v === finalVal).length;
+        const isStrong = actualAgreementCount >= 4;
+
         const stepLabel = buffer.length === 1 ? 'STEP 2' : 'STEP 3';
         return {
             predictedVal: finalVal,
             bestRtName: `\uc9c0\ub2a5\ud615 \ud1b5\ud569 (${weightedScores.P.toFixed(1)}:${weightedScores.B.toFixed(1)})`,
-            guideLabel: `${stepLabel} [\uac00\uc911\uce58 \ub2e4\uc218\uacb0]`
+            guideLabel: `${stepLabel} [\uac00\uc911\uce58 \ub2e4\uc218\uacb0]`,
+            consensusCount: actualAgreementCount,
+            isStrong: isStrong
         };
     }
 
@@ -709,7 +715,12 @@ function updateUI() {
     if (master.predictedVal) {
         dom.guideLabel.textContent = master.guideLabel;
         badge.textContent = currentStrategyMode === 'ai' ? `학습 완료: ${master.bestRtName}` : master.bestRtName;
-        dom.recommendation.textContent = `NEXT: ${master.predictedVal === 'P' ? 'PLAYER' : 'BANKER'}`;
+        
+        let displayRec = `NEXT: ${master.predictedVal === 'P' ? 'PLAYER' : 'BANKER'}`;
+        if (master.isStrong) {
+            displayRec += ` 🔥 [강력 ${master.consensusCount}명 일치]`;
+        }
+        dom.recommendation.textContent = displayRec;
         
         if (safetyState === 'DANGER' && currentDangerRule) {
             dom.guideCard.classList.add('pred-skip');
@@ -1132,7 +1143,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.9.9...');
+        console.log('Initializing PB Master v4.11.0...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
