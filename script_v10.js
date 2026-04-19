@@ -406,6 +406,7 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
     // \uc804\ub7b5\ubcc4 \uc5f0\uc18d \uc624\ub2f5 \ub204\uc801 \ub85c\uc9c1
 
     for (const val of values) {
+        runtime.lastHit = false; // \ub9e4 \uce78 \ucc98\ub9ac \uc2dc\uc791 \uc2dc \uc801\uc911 \uae30\ub85d \ucd08\uae30\ud654 (\ub204\uc218 \ubc29\uc9c0)
         const idx = buffer.length;
 
         if (idx > 0) {
@@ -1097,7 +1098,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.9.5...');
+        console.log('Initializing PB Master v4.9.6...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
