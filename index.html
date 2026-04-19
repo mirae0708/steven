@@ -4,36 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
     <title>PB Master</title>
-    <script>
-        // NUCLEAR CACHE PURGE v3.7.6
-        (function() {
-            const VERSION = '4.12.1';
-            const CACHE_NAME = 'jongdari-pb-v55-cache';
-            if (localStorage.getItem('app_version') !== VERSION) {
-                console.warn('CRITICAL UPDATE: Purging all caches...');
-                
-                // 1. Unregister all Service Workers
-                if (window.navigator && navigator.serviceWorker) {
-                    navigator.serviceWorker.getRegistrations().then(function(registrations) {
-                        for (let registration of registrations) {
-                            registration.unregister();
-                        }
-                    });
-                }
 
-                // 2. Delete all CacheStorage
-                if (window.caches) {
-                    caches.keys().then(function(names) {
-                        for (let name of names) caches.delete(name);
-                    });
-                }
-
-                localStorage.setItem('app_version', VERSION);
-                console.log('Caches purged. Reloading in 1s...');
-                setTimeout(() => { location.reload(true); }, 1000);
-            }
-        })();
-    </script>
     <meta name="description" content="PB Pattern Dashboard">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -153,7 +124,11 @@
     <div id="hit-notification" class="hit-overlay hidden" data-t="hit_overlay"></div>
     <div id="streak-badge" class="streak-fire hidden"></div>
 
-    <script src="script_v10.js?v=4.12.1"></script>
-    <!-- v4.9.0 Ultra Force Update -->
+    <script src="js/config.js?v=5.0.0"></script>
+    <script src="js/state.js?v=5.0.0"></script>
+    <script src="js/predictor.js?v=5.0.0"></script>
+    <script src="js/ui.js?v=5.0.0"></script>
+    <script src="js/app.js?v=5.0.0"></script>
+    <!-- v5.0.0 PWA Optimized Architecture -->
 </body>
 </html>

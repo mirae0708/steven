@@ -1,9 +1,13 @@
-const CACHE_NAME = 'jongdari-pb-v55-cache';
+const CACHE_NAME = 'jongdari-pb-v5-0-0-cache';
 const urlsToCache = [
   './',
   './index.html',
   './style.css',
-  './script_v10.js',
+  './js/config.js',
+  './js/state.js',
+  './js/predictor.js',
+  './js/ui.js',
+  './js/app.js',
   './manifest.json',
   './bg.png',
   './icons/icon-192.png',
@@ -13,9 +17,27 @@ const urlsToCache = [
 ];
 
 self.addEventListener('install', event => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
+  );
+});
+
+self.addEventListener('activate', event => {
+  event.waitUntil(self.clients.claim());
+  
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheName !== CACHE_NAME) {
+            console.log('Service Worker: Clearing Old Cache', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
   );
 });
 
