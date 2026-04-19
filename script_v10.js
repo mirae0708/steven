@@ -359,7 +359,8 @@ function getMasterPrediction(prev, buffer, colIndex) {
         const votes = {
             optimal: getPredictionByMode('optimal', prev, buffer, colIndex).val,
             ai: getPredictionByMode('ai', prev, buffer, colIndex).val,
-            backup: getPredictionByMode('backup', prev, buffer, colIndex).val
+            backup: getPredictionByMode('backup', prev, buffer, colIndex).val,
+            vertical: getPredictionByMode('vertical', prev, buffer, colIndex).val
         };
 
         const score = { P: 0, B: 0 };
@@ -1098,7 +1099,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.9.6...');
+        console.log('Initializing PB Master v4.9.7...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
