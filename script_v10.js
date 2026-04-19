@@ -62,7 +62,9 @@ const CLASSIC_ROUTINES = [
     { id: 2, name: '\u2014 \ubc14', crit: 0, p2: 2, p3: 1, hits: 0, currentMissStreak: 0, maxMissStreak: 0 },
     { id: 3, name: 'X \uc5d1\uc2a4', crit: 1, p2: 0, p3: 2, hits: 0, currentMissStreak: 0, maxMissStreak: 0 },
     { id: 4, name: '\u25b3 \uc138\ubaa8', crit: 1, p2: 2, p3: 0, hits: 0, currentMissStreak: 0, maxMissStreak: 0 },
-    { id: 5, name: '\u4e09 \uc0bc', crit: 0, p2: 1, p3: 2, hits: 0, currentMissStreak: 0, maxMissStreak: 0 }
+    { id: 5, name: '\u4e09 \uc0bc', crit: 0, p2: 1, p3: 2, hits: 0, currentMissStreak: 0, maxMissStreak: 0 },
+    { id: 6, name: '\u2014R \ubc14R', crit: 0, p2: 2, p3: 1, hits: 0, currentMissStreak: 0, maxMissStreak: 0, inverse: true },
+    { id: 7, name: 'XR \uc5d1\uc2a4R', crit: 1, p2: 0, p3: 2, hits: 0, currentMissStreak: 0, maxMissStreak: 0, inverse: true }
 ];
 
 let currentGame = [];
@@ -249,7 +251,16 @@ function getRoutinePred(rt, prev, c1) {
     if (!rt || !prev || !isMark(c1)) return null;
     try {
         const match = prev[rt.crit] === c1;
-        const resolve = symbol => (!match ? (symbol === 'P' ? 'B' : 'P') : symbol);
+        const resolve = symbol => {
+            const flipped = symbol === 'P' ? 'B' : 'P';
+            if (rt.inverse) {
+                // Reverse Logic: Match -> Flip, NoMatch -> Same
+                return match ? flipped : symbol;
+            } else {
+                // Classic Logic: Match -> Same, NoMatch -> Flip
+                return match ? symbol : flipped;
+            }
+        };
         return { p2: resolve(prev[rt.p2]), p3: resolve(prev[rt.p3]) };
     } catch (e) {
         console.error('Routine Prediction Error:', e, rt);
@@ -350,31 +361,39 @@ function findBestRoutineFromData(customHistory = null) {
     return scores.sort((a, b) => b.score - a.score || a.maxMissStreak - b.maxMissStreak)[0];
 }
 
-function getMasterPrediction(prev, buffer, colIndex) {
+function getMasterPrediction(prev, buffer, colIndex, streaks = {}) {
     if (!prev || buffer.length === 0 || colIndex < 1) {
         return { predictedVal: null, bestRtName: '\ubd84\uc11d \ub300\uae30', guideLabel: '\ud328\ud134 \uc2dc\uc810\ubd84\uc11d \ub300\uae30 \uc911' };
     }
 
     if (currentStrategyMode === 'total') {
-        const votes = {
+        const voteResults = {
             optimal: getPredictionByMode('optimal', prev, buffer, colIndex).val,
             ai: getPredictionByMode('ai', prev, buffer, colIndex).val,
             backup: getPredictionByMode('backup', prev, buffer, colIndex).val,
             vertical: getPredictionByMode('vertical', prev, buffer, colIndex).val
         };
 
-        const score = { P: 0, B: 0 };
-        Object.values(votes).forEach(v => { if (v) score[v]++; });
+        const weightedScores = { P: 0, B: 0 };
+        Object.keys(voteResults).forEach(mode => {
+            const val = voteResults[mode];
+            if (val) {
+                const miss = streaks[mode] || 0;
+                // \uac01 \uc804\ub7b5\ubcc4 \uc5f0\uc18d \uc624\ub2f5(streak)\uc774 \ub9ce\uc744\uc218\ub85d \ud22c\ud45c\uad8c \uac10\uc18c
+                const weight = 1 / (1 + miss);
+                weightedScores[val] += weight;
+            }
+        });
 
         let finalVal = null;
-        if (score.P > score.B) finalVal = 'P';
-        else if (score.B > score.P) finalVal = 'B';
+        if (weightedScores.P > weightedScores.B) finalVal = 'P';
+        else if (weightedScores.B > weightedScores.P) finalVal = 'B';
 
         const stepLabel = buffer.length === 1 ? 'STEP 2' : 'STEP 3';
         return {
             predictedVal: finalVal,
-            bestRtName: `\ud1b5\ud569 \ub2e4\uc218\uacb0 (${score.P}:${score.B})`,
-            guideLabel: `${stepLabel} [\ub2e4\uc218\uacb0 \ubaa8\ub4dc]`
+            bestRtName: `\uc9c0\ub2a5\ud615 \ud1b5\ud569 (${weightedScores.P.toFixed(1)}:${weightedScores.B.toFixed(1)})`,
+            guideLabel: `${stepLabel} [\uac00\uc911\uce58 \ub2e4\uc218\uacb0]`
         };
     }
 
@@ -411,13 +430,21 @@ function processSequence(values, runtime, prevRow, finalizeRow, colIndex) {
         const idx = buffer.length;
 
         if (idx > 0) {
+            // \uac01 \uc804\ub7b5\ubcc4 \uc57d\uc18d \ud604\ud669 (가중치 계산용)
+            const currentStreaks = {
+                optimal: runtime.optimalMissStreak,
+                ai: runtime.aiMissStreak,
+                backup: runtime.backupMissStreak,
+                vertical: runtime.verticalMissStreak
+            };
+
             // 각 전략별 예측값
             const preds = {
                 optimal: getPredictionByMode('optimal', prevRow, buffer, colIndex),
                 ai: getPredictionByMode('ai', prevRow, buffer, colIndex),
                 backup: getPredictionByMode('backup', prevRow, buffer, colIndex),
                 vertical: { predictedVal: getPredictionByMode('vertical', prevRow, buffer, colIndex).val },
-                total: getMasterPrediction(prevRow, buffer, colIndex)
+                total: getMasterPrediction(prevRow, buffer, colIndex, currentStreaks)
             };
 
             // \uac01 \uc804\ub7b5\ubcc4 \uc5f0\uc18d \uc624\ub2f5 \uce74\uc6b4\ud2b8 (\ub204\uc801) - \ucd08\ud310(1\uc5f4)\uc5d0\uc11c\ub294 \uacc4\uc0b0 \uc81c\uc678
@@ -676,19 +703,22 @@ function updateUI() {
 
     const badge = document.getElementById('ai-mode-badge');
 
-    if (safetyState === 'DANGER' && currentDangerRule) {
-        dom.guideLabel.textContent = '위험 패턴 감지';
-        badge.textContent = currentDangerRule.label;
-        dom.recommendation.textContent = 'NEXT: SKIP';
-        dom.guideCard.classList.add('pred-skip');
-    } else if (master.predictedVal) {
+    if (master.predictedVal) {
         dom.guideLabel.textContent = master.guideLabel;
         badge.textContent = currentStrategyMode === 'ai' ? `학습 완료: ${master.bestRtName}` : master.bestRtName;
         dom.recommendation.textContent = `NEXT: ${master.predictedVal === 'P' ? 'PLAYER' : 'BANKER'}`;
-        dom.guideCard.classList.add(master.predictedVal === 'P' ? 'pred-p' : 'pred-b');
-
-        if (master.predictedVal === 'P') dom.btnP.classList.add('glow-pulse');
-        else dom.btnB.classList.add('glow-pulse');
+        
+        if (safetyState === 'DANGER' && currentDangerRule) {
+            dom.guideCard.classList.add('pred-skip');
+            dom.recommendation.textContent += ` (${currentDangerRule.label})`;
+        } else if (safetyState === 'BREAK') {
+            dom.guideCard.classList.add('pred-skip');
+            dom.recommendation.textContent += ' (PAUSE)';
+        } else {
+            dom.guideCard.classList.add(master.predictedVal === 'P' ? 'pred-p' : 'pred-b');
+            if (master.predictedVal === 'P') dom.btnP.classList.add('glow-pulse');
+            else dom.btnB.classList.add('glow-pulse');
+        }
     } else {
         dom.guideLabel.textContent = '패턴 시점분석 대기 중';
         badge.textContent = '분석 대기';
@@ -1099,7 +1129,7 @@ function renderAnalysis(results) {
 
 function init() {
     try {
-        console.log('Initializing PB Master v4.9.7...');
+        console.log('Initializing PB Master v4.9.9...');
         initDom();
         applyTranslations(); // 번역 주입
         load();
