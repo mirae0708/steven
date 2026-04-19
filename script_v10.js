@@ -28,6 +28,8 @@ const VOCAB = {
     rt_icon_3: 'X',
     rt_icon_4: '\u25b3',
     rt_icon_5: '\u4e09',
+    rt_icon_6: '\u2014R',
+    rt_icon_7: 'XR',
     btn_hist: 'HIST',
     analysis_title: '\ud788\uc2a4\ud1a0\ub9ac \ubd84\uc11d \ub808\ud3ec\ud2b8',
     th_miss: '\ucd5c\ub300 \ubbf8\uc2a4',
@@ -659,6 +661,7 @@ function updateUI() {
 
     if (dom.stratBtns) {
         dom.stratBtns.forEach(btn => {
+            const CACHE_NAME = 'jongdari-pb-v52-cache';
             const m = btn.dataset.mode;
             const streak = getStratStreak(m);
             const existingBadge = btn.querySelector('.strat-perf');
