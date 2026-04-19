@@ -685,7 +685,9 @@ function getUnit() {
 function updateUI() {
     const idx = inputBuffer.length;
     const prev = currentGame[currentGame.length - 1];
-    const master = getMasterPrediction(prev, inputBuffer, currentGame.length + 1);
+    
+    const master = getMasterPrediction(prev, inputBuffer, currentGame.length + 1, strategyMissStreaks);
+    const c7Res = getConsensus7Prediction(prev, inputBuffer, currentGame.length + 1);
 
     // 전략 연속 오답 지표 로직 (대신 수익)
     const getStratStreak = (mode) => {
@@ -741,9 +743,6 @@ function updateUI() {
     dom.btnP.classList.remove('glow-pulse');
     dom.btnB.classList.remove('glow-pulse');
     dom.guideCard.classList.remove('pred-p', 'pred-b', 'pred-skip');
-
-    const master = getMasterPrediction(prev, inputBuffer, currentGame.length + 1, strategyMissStreaks);
-    const c7Res = getConsensus7Prediction(prev, inputBuffer, currentGame.length + 1);
 
     // 7\uc778 \ubd84\uc11d \ucc3d \uc5c5\ub370\uc774\ud2b8
     const c7Card = document.getElementById('consensus-7-card');
