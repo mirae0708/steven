@@ -1,0 +1,12 @@
+# Claude 자동 트리거 예시 (선택)
+name: Claude Auto Sync
+on:
+  push:
+    branches: [ main ]
+jobs:
+  claude-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Claude Code Trigger (예시)
+        run: echo "Trigger Claude Code for sync or automation"
