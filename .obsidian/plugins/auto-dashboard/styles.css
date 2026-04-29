@@ -1,0 +1,94 @@
+/* styles.css - Auto Dashboard 플러그인용 스타일 */
+.dashboard-container {
+  padding: 16px;
+}
+.dashboard-container h2 {
+  margin-top: 0;
+}
+.dashboard-container h3 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.dashboard-container h4 {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.dashboard-container pre {
+  background: #1e1e1e;
+  color: #a8d4a8;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  max-height: 300px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.dashboard-section {
+  background: var(--background-secondary);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.dashboard-section .flex-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.dashboard-section input[type="text"] {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--background-modifier-border);
+}
+.dashboard-section button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border: none;
+  cursor: pointer;
+}
+.dashboard-section button:hover {
+  opacity: 0.8;
+}
+.dashboard-section button.danger {
+  background: #c43e3e;
+}
+.dashboard-section button.success {
+  background: #3e9e3e;
+}
+.hermes-res {
+  margin-top: 8px;
+  background: #1e1e2e;
+  color: #a0d8a0;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  max-width: 100%;
+  max-height: 250px;
+  overflow: auto;
+  word-break: break-all;
+  white-space: pre-wrap;
+  font-family: var(--font-monospace);
+}
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-left: 6px;
+}
+.badge.green { background: #3e9e3e; color: #fff; }
+.badge.red { background: #c43e3e; color: #fff; }
+.badge.yellow { background: #d4a017; color: #fff; }
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.status-dot.online { background: #3e9e3e; }
+.status-dot.offline { background: #c43e3e; }

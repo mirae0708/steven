@@ -213,3 +213,44 @@
 - **\[긴급\] portfolio.json 복원** — 014950.KQ 34주(매입가 10,040, 현재 9,910) 포지션 수동 복원. 포지션 스냅샷 백업 메커니즘 구축 필요.
 - Telegram 404 원인 파악 및 봇 채팅 ID 재설정
 - AI Council 분석 결과 absent — 오늘 장 마감 후 분석 미실시로 추정
+
+---
+
+## 📋 2026-04-29 20:00 — 야간 스냅샷 기록
+
+### 시스템 현황 스냅샷
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 64547, 4일차) |
+| WebUI | ✅ 정상 (PID 466, Apr25~) |
+| Jongdari 배틀루프 | ⚠️ **중복 실행 지속** — PID 87594(05:06~,kitty) + PID 50459(16:00~,tmux) |
+| paper_portfolio | ✅ 014950.KQ 34주 @10,040원 보유 (현재 9,900원, -1.4%) |
+| Data 수집 | ✅ KOSPI 6,691 / KOSDAQ 1,221 / WTI $103.36 / USD/KRW 1,479 |
+| KOSPI 3일 변동 | +3.32% |
+
+### 새로 발견된 매매 이력 (paper_portfolio.history)
+| 시간 | 종목 | 종류 | 수량 | 가격 | 손익 |
+|:----|:-----|:----|:----|:----|:----|
+| 11:44 | 464580.KQ (닷밀) | BUY | 155주 | 2,100원 | - |
+| 12:22 | 464580.KQ (닷밀) | SELL | 155주 | 2,080원 | -3,100원 |
+
+- **464580.KQ 매매**: AI Council 분석관:SELL(30%)/조사관:BUY(65%)/리스크관:SELL(50%) → 2:1 SELL로 매도. 38분 보유, -3,100원 손실.
+- **당일 순손익**: -3,100원 (464580.KQ 손실만 발생, 014950.KQ 미실현 -1.4%)
+- **불일치**: portfolio.json은 빈 포지션이나 paper_portfolio.json은 정상 보유 중
+
+### 시장 변동사항
+- **WTI $103.36** — $100→$103 급등 (+4.4%). CRISIS MODE 지속.
+- **USD/KRW 1,479원** — 원화 약세 심화 (오전 1,476→야간 1,479)
+- **KOSPI 6,691** — 사상 최고 유지. RSI 87.9 과매수 경고 지속.
+- **CB Score**: market_intel 새 구조에서 누락 (16:00 기준 16/100)
+
+### 발견 이슈
+1. **portfolio vs paper_portfolio 불일치** — 운영용 portfolio.json(빈 포지션)과 실제 paper_portfolio.json(014950.KQ 34주 보유)가 불일치. paper_portfolio.json이 실제임.
+2. **중복 실행 미해결** — PID 87577(kitty bash)+87594(실제) + 50459(tmux). 3개 체인.
+3. **CB Score 데이터 누락 지속** — 새 market_intel 구조에 CB Score 미포함.
+4. **WTI $103 급등** — 추가 상승 시 포트폴리오 리스크 증가.
+
+### Action Required
+- portfolio.json을 paper_portfolio.json 기준으로 복원 필요
+- 중복 세션 정리 (하나만 유지)
+- CB Score 재수집 파이프라인 복원
