@@ -1,3 +1,33 @@
+# Obsidian - 개인 캐시/작업공간 제외
 .obsidian/workspace*
 .obsidian/cache*
 .obsidian/plugins/*/data.json
+.obsidian/workspace.json
+.obsidian/vault-statistics.json
+
+# 불필요한 웹 에셋 (원래 PWA용, 지식과 무관)
+icons/
+bg.png
+favicon.ico
+sw.js
+manifest.json
+
+# 스크래치/테스트 파일 (지식 아님)
+scratch/
+js/app.js
+js/highlight.js
+js/toc.js
+style.css
+index.html
+
+# 시스템 로그
+*.log
+*.csv
+hermes_dashboard.json
+
+# OS 쓰레기
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~

@@ -1,0 +1,1 @@
+// 분석/실험 코드 (기존 analyze_screenshot.js 복사)
