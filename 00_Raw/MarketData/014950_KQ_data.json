@@ -3,16 +3,16 @@
   "industry": "Biotechnology",
   "marketCap": 90980417536,
   "previousClose": 9790.0,
-  "open": 9910.0,
-  "dayLow": 9760.0,
-  "dayHigh": 10070.0,
-  "volume": 38717,
+  "open": 0.0,
+  "dayLow": 0.0,
+  "dayHigh": 0.0,
+  "volume": 0,
   "averageVolume": 120143,
-  "fiftyTwoWeekLow": 6650.0,
+  "fiftyTwoWeekLow": 0.0,
   "fiftyTwoWeekHigh": 25050.0,
   "dividendYield": 0.41,
   "debtToEquity": 4.376,
   "returnOnEquity": -0.01248,
   "profitMargins": -0.01258,
-  "fetched_at": "2026-04-29 15:00:03.828396+00:00"
+  "fetched_at": "2026-04-29 19:00:20.197772+00:00"
 }
