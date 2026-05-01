@@ -318,4 +318,28 @@
 - 3중 중복 Jongdari 세션 정리(3→1)
 - CB Score 데이터 복원 (market_intel 구조 변경)
 - portfolio.json 복원 (paper_portfolio 기준 34주 동기화)
-- WTI $106 급등 → 포트폴리오 리스크 최대치, FOMC 앞둔 변동성 주의
+|- WTI $106 급등 → 포트폴리오 리스크 최대치, FOMC 앞둔 변동성 주의
+
+|---
+## 📋 2026-05-02 04:00 — 주말 스냅샷 기록
+
+### 시스템 현황 스냅샷
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 293, 5/2 01:04 재시작됨) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 784, 1개 세션만) |
+| portfolio.json | ✅ 정상 — 014950.KQ 34주 @10,040원 |
+| tmux 세션 | ✅ hermes / hermes-mcp / jongdari 각 1개 |
+| WTI | $102.19 |
+| USD/KRW | ₩1,472.47 |
+
+### 신규 발견
+1. **459510.KQ(나우로보틱스) 신규 매수** — 4/30 20:28 AI Council BUY 결정(📊70%/🔍40%/📉60%), 10주 @30,550원 진입. paper_portfolio에 기록됨.
+2. **Jongdari 3중 중복 해소** — 4/29 3개 세션에서 현재 1개(pid 784)로 정상화. tmux 세션도 1개만 유지.
+3. **portfolio.json 정상 복원 완료** — 014950.KQ 34주 포지션 정상 유지 중 (cash 4,654,970 + 34주 = 4,991,970원).
+4. **paper_portfolio current_price 미갱신** — 459510.KQ current_price가 buy_price=30,550원과 동일, yfinance 미갱신 상태.
+
+### 미해결 이슈
+- paper_portfolio.json 459510.KQ current_price 갱신 필요
+- WTI $102 (여전히 $100+) — CRISIS MODE 감시 지속
+- CB Score market_intel 구조 누락 지속
