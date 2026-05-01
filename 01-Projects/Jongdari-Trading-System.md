@@ -62,7 +62,7 @@ python3 nexus_orchestrator.py --mode daily
 ```
 
 ## 관련 링크
-- [[02-Knowledge/System-Architecture|시스템 아키텍처 상세]]
-- [[02-Knowledge/AI-Council|AI Council 분석 방법론]]
-- [[02-Knowledge/Trading-Strategies|트레이딩 전략]]
-- [[02-Knowledge/Operations-Guide|운영 가이드]]
+- [[01_지식/System-Architecture|시스템 아키텍처 상세]]
+- [[01_지식/AI-Council|AI Council 분석 방법론]]
+- [[03_경제/Trading-Strategies|트레이딩 전략]]
+- [[03_경제/Operations-Guide|운영 가이드]]

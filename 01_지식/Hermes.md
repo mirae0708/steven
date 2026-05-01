@@ -41,8 +41,8 @@
 - "Obsidian에 저장해" → Vault에 기록
 
 ## 내 자세한 정보
-- [[02-Knowledge/System-Architecture|시스템 아키텍처]]
-- [[02-Knowledge/AI-Council|AI Council 분석 방법론]]
-- [[02-Knowledge/Trading-Strategies|트레이딩 전략]]
-- [[02-Knowledge/Operations-Guide|운영 가이드]]
+- [[01_지식/System-Architecture|시스템 아키텍처]]
+- [[01_지식/AI-Council|AI Council 분석 방법론]]
+- [[03_경제/Trading-Strategies|트레이딩 전략]]
+- [[03_경제/Operations-Guide|운영 가이드]]
 - [[01-Projects/Jongdari-Trading-System|종다리 모의투자 시스템]]

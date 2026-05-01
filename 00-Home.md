@@ -4,20 +4,20 @@
 
 ## Quick Links
 - [[01-Projects/Jongdari-Trading-System|📈 종다리 모의투자 시스템]]
-- [[02-Knowledge/Hermes|🤖 Hermes — AI 어시스턴트]]
-- [[02-Knowledge/System-Architecture|🏗️ 시스템 아키텍처]]
-- [[02-Knowledge/AI-Council|🧠 AI Council 분석]]
-- [[02-Knowledge/Trading-Strategies|📊 트레이딩 전략]]
-- [[02-Knowledge/Operations-Guide|⚙️ 운영 가이드]]
+- [[01_지식/Hermes|🤖 Hermes — AI 어시스턴트]]
+- [[01_지식/System-Architecture|🏗️ 시스템 아키텍처]]
+- [[01_지식/AI-Council|🧠 AI Council 분석]]
+- [[03_경제/Trading-Strategies|📊 트레이딩 전략]]
+- [[03_경제/Operations-Guide|⚙️ 운영 가이드]]
 |- [[01-Projects/Invoice-Auto-System|📋 미래해운항공 물류 자동화]]
-|- [[02-Knowledge/Invoice-Auto-Workflow|🔄 인보이스 워크플로우]]
-|- [[02-Knowledge/Invoice-AI-Prompt|🤖 AI 추출 프롬프트]]
+|- [[04_프로젝트/Invoice-Auto-Workflow|🔄 인보이스 워크플로우]]
+|- [[04_프로젝트/Invoice-AI-Prompt|🤖 AI 추출 프롬프트]]
 |- [[01-Projects/Invoice-Auto-Status|📋 인보이스 자동화 현황→]]
 |- [[01-Projects/CLP-Auto-System|📦 CLP 자동화 시스템 v28]]
-|- [[02-Knowledge/CLP-Auto-Workflow|🔗 CLP 워크플로우]]
+|- [[04_프로젝트/CLP-Auto-Workflow|🔗 CLP 워크플로우]]
 |- [[01-Projects/Project-Alpha]]
 |- [[03-Meetings/Weekly Sync 2026-04]]
-|- [[02-Knowledge/Tech Stack]]
+|- [[01_지식/Tech Stack]]
 
 ## 📊 LLM Wiki 주식 분석 시스템
 ### 📈 종목
