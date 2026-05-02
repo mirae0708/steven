@@ -21,7 +21,8 @@
 
 ## 📊 LLM Wiki 주식 분석 시스템
 ### 📈 종목
-- [[10_Wiki/Stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — 보유중
+- [[10_Wiki/Stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — 보유중 (-3.59%)
+- [[10_Wiki/Stocks/나우로보틱스|🤖 나우로보틱스 (459510.KQ)]] — 보유중 (상한가 진입)
 - [[10_Wiki/Stocks/에이치엘사이언스|📉 에이치엘사이언스 (473980.KQ)]] — 이전매매
 
 ### 💾 섹터 & 테마
@@ -30,10 +31,10 @@
 - [[10_Wiki/Themes/장비부품|🔧 장비부품]]
 
 ### 💵 거시경제
-- [[10_Wiki/Macros/KOSPI|📊 KOSPI (6,615)]]
-- [[10_Wiki/Macros/KOSDAQ|📈 KOSDAQ (1,226)]]
-- [[10_Wiki/Macros/환율|💵 환율 (1,473원)]]
-- [[10_Wiki/Macros/국제유가WTI|🛢️ WTI ($99.86)]]
+- [[10_Wiki/Macros/KOSPI|📊 KOSPI (6,599)]] 🔴 -1.38%
+- [[10_Wiki/Macros/KOSDAQ|📈 KOSDAQ (1,192)]] 🔴 -2.29%
+- [[10_Wiki/Macros/환율|💵 환율 (1,471원)]] 🟢 -0.19%
+- [[10_Wiki/Macros/국제유가WTI|🛢️ WTI ($101.94)]] 🟡 고유가 $100↑
 
 ### 🧠 시스템
 - [[99_System/GEMINI.md|🧠 시스템 스키마 (GEMINI.md)]]

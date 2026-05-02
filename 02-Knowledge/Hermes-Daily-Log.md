@@ -1,22 +1,27 @@
-# Hermes Daily Log
+File unchanged since last read. The content from the earlier read_file result in this conversation is still current — refer to that instead of re-reading.
 
-## 2026-05-02 (토) 16:30 — Brain Sync #11
+## 2026-05-02 (Sat) 22:30 — Brain Sync #13 (Night Sync)
 
-**변경 감지:** 0개 (7개 재동기 → 안정화됨)
+**Changes detected:** 0 (all hashes match — stable)
 
-**현황 요약:**
-- 📈 삼성부광 9,680원 (-24.14% YTD / 포트폴리오 -3.59%) — 보유 34주
-- 📈 에이치엘사이언스 17,650원 (-1.67% YTD / 매도 완료)
-- 📊 KOSPI 6,598.87 (RSI 83.8 과매수, 4/30 -1.38% 조정)
-- 📊 KOSDAQ 1,192.35 (RSI 76.1 과매수, 4/30 -2.29% 조정)
-- 🛢️ WTI $101.94 (고유가 유지, $107→$101.94 하락 중, RSI 52.7)
-- 💵 USD/KRW 1,471.22 (원화 강세, RSI 47.2)
+**Summary:**
+- Samsung Bookwang 9,680 won (-3.59% position) — holding 34 shares
+- Now Robotics 30,550 won (upper limit entry) — new position 10 shares
+- KOSPI 6,598.87 (RSI 83.8 overbought, -1.38% correction)
+- KOSDAQ 1,192.35 (RSI 76.1 overbought, -2.29% correction)
+- WTI $101.94 (high oil maintained, declining from $107)
+- USD/KRW 1,471.22 (won strength, stable)
 
-**트리거 점검:**
-- ✅ 포트폴리오 ±3%: -3.59% — 범위 내
-- ✅ WTI $100↑: $101.94 — 유지 중 (변화 없음)
-- ✅ 환율 1,480↑: 1,471 — 이하
-- ✅ KOSPI -3%↓: -1.38% — 초과하지 않음
-- ✅ 신규 종목: 없음
+**Trigger checks:**
+- RED Portfolio +/-3%: Samsung Bookwang -3.59% — monitoring
+- YELLOW WTI $100+: $101.94 — maintained (easing trend)
+- GREEN Exchange 1,480+: 1,471 — normal
+- GREEN KOSPI -3%: -1.38% — normal
+- DONE New stock report created: Now Robotics (459510.KQ)
 
-**결론:** 모든 지표 안정 상태. 특별 알림 불필요.
+**Actions taken:**
+- Created 10_Wiki/Stocks/NowRobotics.md report
+- Updated 00-Home.md with new stock + latest macro values
+- Brain state saved with 13 discoveries
+
+---
