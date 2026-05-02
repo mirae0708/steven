@@ -103,7 +103,10 @@ CB Score 기반으로 최종 사이즈 결정:
 - **portfolio.json**: 정상 복원 완료
 
 ### 경고
-- WTI $102.19 — CRISIS MODE 감시 지속
+- WTI $102.50 — CRISIS MODE 감시 지속
+- 014950.KQ -3.29% — 9,400원 지지선 모니터링 필요
+- 459510.KQ 첫 거래일(5/4 월) current_price 갱신 확인 필요
+- 458650.KQ 배틀루프 지속 스캔 중 — 매수 조건 미달로 진입 없음
 
 ## 감독관(Hermes)의 역할
 - AI Council의 분석 결과 검토
