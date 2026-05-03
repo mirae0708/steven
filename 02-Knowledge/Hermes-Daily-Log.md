@@ -192,3 +192,55 @@
 - OpenWebUI는 16:02 재시작 후 정상 복구
 - MCP 서버 중복 이슈 지속 (18개 > 정상 8개)
 - 오늘 9시 장 개시 전까지 MetaClaw 복구 시도 필요
+
+---
+
+## 2026-05-04 (Mon) 04:01 — 장 개시 전 새벽 스냅샷
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 316995, May03 15:33 KST~, 12h+ 가동) |
+| Hermes CLI | tmux hermes 세션 유지 (May02~) |
+| Jongdari 배틀루프 | ⚠️ PID 712, yfinance 014950/459510 "possibly delisted" 오류 반복 |
+| OpenWebUI | ✅ 정상 (PID 319500, port 3000, 방금 keepalive가 재시작) |
+| MetaClaw | ❌ **다운** (port 30000 미청취, 프로세스 없음) |
+| Hermes WebUI | ⚠️ port 8642 Gateway는 listen중이나 404 응답 |
+| tmux 세션 | hermes / hermes-mcp / jongdari 각 1개 |
+| keepalive v7 | ✅ BULLETPROOF — 2개 프로세스 정상 작동 |
+| 메모리 | 2,126MB / 7,748MB (27%) |
+| 디스크 | 2% |
+
+### 🚨 Critical: yfinance KOSPI/KOSDAQ 종목 "possibly delisted" 오류
+- **삼성부광(014950.KS)**와 **나우로보틱스(459510.KS)** 모두 yfinance에서 `"No data found, symbol may be delisted"` 오류
+- 종가 데이터(5d)를 전혀 가져오지 못함 — 이전 **014950.KQ** 티커 변환(→ .KS)에 실패한 것으로 보임
+- `473980.KS` (나우로보틱스 실제 티커)도 동일 패턴 확인 필요
+- 배틀루프가 사실상 데이터 없는 상태로 반복 루프 중 → **수동 티커 검증 및 수정 필요**
+
+### 포트폴리오
+- **삼성부광(014950.KQ/KS)**: 34주, 데이터 미갱신 (yfinance 오류로 previousClose 미확인)
+- **나우로보틱스(459510.KQ → 473980.KQ?)**: 10주, cost 30,550원, 데이터 미갱신
+- **paper_portfolio**: 자본 5,000,000 / 현금 0 / 포지션 2개
+- **현금**: 4,349,470원 추정
+
+### Macro (4/30 종가 기준, 장 개시 전)
+| 지표 | 값 |
+|:-----|:----|
+| KOSPI | 6,598.87 (4/30 종가, 전일대비 -1.38%) |
+| KOSDAQ | 1,192.35 (4/30 종가, 전일대비 -2.29%) |
+| CB Score | 16/100 — 극단 공포 지속 |
+| 장 개시 | **5/4(월) 09:00 KST** — 약 5시간 후 |
+
+### 🎯 오늘(5/4 월) 체크포인트
+1. **yfinance 티커 문제**: 014950.KS 대신 014950.KQ 복원 또는 Yahoo Finance 티커 확인 (Yahoo는 .KQ 접미사 사용)
+2. **나우로보틱스 티커 실제 확인**: 459510은 코스닥 신규상장 (2025~) — Yahoo에 473980.KQ로 등록되어 있을 가능성
+3. **MetaClaw 복구**: 48h+ 다운 상태 — 수동 개입 필요
+4. **장 개시 모니터링**: 09:00 KOSPI/KOSDAQ 오프닝, 삼성부광 9,400원 지지선
+5. **CB Score 16**: 극단 공포 — 신규 진입 보류
+
+### 알려진 문제
+- MetaClaw 다운 (48h+)
+- yfinance 티커 오류 → 포트폴리오 가치 계산 불가
+- MCP 서버 18개 인스턴스 중복 (정상 8set × 2)
+- Gateway port 8642 404 (API server 연결됨 상태이나 라우트 미설정)
+- Hermes WebUI (port 8648) 미작동
