@@ -1,6 +1,6 @@
 ---
 source: arxiv
-collected: 2026-05-03 11:00
+collected: 2026-05-03 11:30
 category: Artificial_Intelligence/LLM
 
 
@@ -19,7 +19,9 @@ authors: Lincan Li, Zheng Chen, Yushun Dong
 - 🔗 [Original](http://arxiv.org/abs/2604.28178v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+- Uses LLMs to refine graph structure for EEG seizure detection, removing redundant/noisy edges from correlation-based graphs
+- Addresses noise problem in EEG signals that makes graph representation learning challenging
+- Novel: LLM-guided graph refinement improves representation quality for clinical diagnosis
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

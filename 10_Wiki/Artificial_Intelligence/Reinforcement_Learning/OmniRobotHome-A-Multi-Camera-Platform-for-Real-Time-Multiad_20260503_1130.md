@@ -1,6 +1,6 @@
 ---
 source: arxiv
-collected: 2026-05-03 11:00
+collected: 2026-05-03 11:30
 category: Artificial_Intelligence/Reinforcement_Learning
 
 
@@ -19,7 +19,9 @@ authors: Junyoung Lee, Sookwan Han, Jeonghwan Kim
 - 🔗 [Original](http://arxiv.org/abs/2604.28197v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+- Multi-camera platform for real-time multiadic (multiple humans + robots) interaction in home settings
+- Goes beyond dyadic/sequential HRI to handle concurrent, interleaved subtasks with tight spatial-temporal coupling
+- Addresses an under-explored regime in human-robot collaboration
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

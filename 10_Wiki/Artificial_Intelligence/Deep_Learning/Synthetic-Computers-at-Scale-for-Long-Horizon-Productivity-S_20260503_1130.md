@@ -1,6 +1,6 @@
 ---
 source: arxiv
-collected: 2026-05-03 11:00
+collected: 2026-05-03 11:30
 category: Artificial_Intelligence/Deep_Learning
 
 
@@ -19,7 +19,11 @@ authors: Tao Ge, Baolin Peng, Hao Cheng
 - 🔗 [Original](http://arxiv.org/abs/2604.28181v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+- Creates 1,000 synthetic computers with realistic folder hierarchies, documents, and artifacts for long-horizon productivity simulation
+- Two-agent architecture: one generates objectives, another acts as user navigating filesystem and producing artifacts
+- Each simulation: 8+ hours agent runtime, 2,000+ turns average
+- Produces rich experiential learning signals that improve performance on both in-domain and out-of-domain productivity tasks
+- Can scale to millions of synthetic user worlds — promising for agent self-improvement and RL in productivity scenarios
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

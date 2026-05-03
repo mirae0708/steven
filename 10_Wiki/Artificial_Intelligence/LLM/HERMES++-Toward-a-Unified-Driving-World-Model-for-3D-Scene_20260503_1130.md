@@ -1,6 +1,6 @@
 ---
 source: arxiv
-collected: 2026-05-03 11:00
+collected: 2026-05-03 11:30
 category: Artificial_Intelligence/LLM
 
 
@@ -19,7 +19,11 @@ authors: Xin Zhou, Dingkang Liang, Xiwu Chen
 - 🔗 [Original](http://arxiv.org/abs/2604.28196v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+- Unified driving world model integrating 3D scene understanding + future geometry prediction in single framework
+- Uses BEV (Bird's Eye View) representation to consolidate multi-view spatial info for LLM consumption
+- Novel components: LLM-enhanced world queries, Current-to-Future Link bridging temporal gap, Joint Geometric Optimization
+- Outperforms specialist approaches in both future point cloud prediction and 3D scene understanding
+- Extended version of ICCV 25 paper — code: github.com/H-EmbodVis/HERMESV2
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_
