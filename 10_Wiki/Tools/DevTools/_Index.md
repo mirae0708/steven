@@ -1,5 +1,5 @@
 # Devtools
-_Documents: 0 | Last sync: 2026-05-03 16:02_
+_Documents: 0 | Last sync: 2026-05-03 17:00_
 
 > 자동 수집된 Devtools 관련 기술 문서  
 > _Last updated: 2026-05-03 10:59_

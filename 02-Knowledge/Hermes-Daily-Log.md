@@ -113,3 +113,41 @@
 - 다음 거래일(5/4 월) 전까지 MetaClaw/WebUI 복구 필요
 - Python MCP 서버 CancelledError — 근본 원인 분석 필요
 - 정보 변동 없음: 기록 완료
+
+---
+
+## 2026-05-03 (Sun) 16:02 — 오후 스냅샷 (Gateway 재시작 + OpenWebUI 복구)
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | 정상 (PID 271100, 15:33 재시작) |
+| Hermes CLI | tmux hermes 세션 유지 |
+| Jongdari 배틀루프 | 정상 (PID 784, proc=2, 62h 가동) |
+| tmux 세션 | hermes / hermes-mcp / jongdari 각 1개 |
+| OpenWebUI | ✅ **복구됨** (PID 273200, port 3000, 16:02 재시작) |
+| MetaClaw | ❌ 다운 (port 30000 미청취) |
+| MCP 서버 8개 | 모두 정상 (15:31 Gateway nuke 후 재시작) |
+| 메모리 | 2,092MB / 7,748MB (27%) |
+| 디스크 | 2% |
+
+### 포트폴리오
+- (주말 — 데이터 미갱신, 이전 스냅샷 참조)
+- 현금: 4,349,470원 추정
+
+### Macro
+- CB Score: 16/100 (극단 공포 지속) | KOSPI 1M +20.4% | Vol 3.7%
+- WTI: $102 | USD/KRW: ₩1,471
+- Market State: NORMAL | KOSPI 3일 +1.90%
+
+### AI Council
+- 나우로보틱스(459510.KQ): HOLD(신뢰도 14%) — 기술적:HOLD(50%) / 뉴스:HOLD(50%) / 리스크:SELL(30%)
+- 성우(458650.KQ): HOLD(신뢰도 15%) — 기술적:HOLD(60%) / 뉴스:HOLD(50%) / 리스크:HOLD(40%)
+- Deep Dive 사이클 정상: 1분 간격 15개 코스닥 종목 순환
+
+### 이슈
+1. Gateway 15:33 재시작 (MCP 서버 전면 재시작 동반) — 약 1시간 다운
+2. OpenWebUI 자동 복구됨 (16:02 재시작 감지)
+3. MetaClaw 여전히 다운 — 수동 복구 필요
+4. MCP 서버 중복: antigravity/vscode/docker/obsidian/anythingllm/googledrive 각 2개 인스턴스 (이전 + 신규) — 부하 없음
+5. 다음 거래일 5/4(월) 오전 9시 개장
