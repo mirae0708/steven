@@ -1,5 +1,5 @@
 # Computer Vision
-_Documents: 0 | Last sync: 2026-05-03 12:30_
+_Documents: 0 | Last sync: 2026-05-03 13:30_
 
 > 자동 수집된 Computer Vision 관련 기술 문서  
 > _Last updated: 2026-05-03 10:59_
