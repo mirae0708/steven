@@ -1,5 +1,5 @@
 # Deep Learning
-_Documents: 1 | Last sync: 2026-05-04 08:00_
+_Documents: 4 | Last sync: 2026-05-04 18:00_
 
 > 자동 수집된 Deep Learning 관련 기술 문서  
 > _Last updated: 2026-05-03 10:59_

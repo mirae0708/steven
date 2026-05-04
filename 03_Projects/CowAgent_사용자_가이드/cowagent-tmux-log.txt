@@ -1,0 +1,176 @@
+[INFO][2026-05-04 16:36:05][config.py:313] -   ____                _
+        _
+[INFO][2026-05-04 16:36:05][config.py:314] -  / ___|_____      __ / \   __ _  __
+_ _ __ | |_
+[INFO][2026-05-04 16:36:05][config.py:315] - | |   / _ \ \ /\ / // _ \ / _` |/ _
+ \ '_ \| __|
+[INFO][2026-05-04 16:36:05][config.py:316] - | |__| (_) \ V  V // ___ \ (_| |  _
+_/ | | | |_
+[INFO][2026-05-04 16:36:05][config.py:317] -  \____\___/ \_/\_//_/   \_\__, |\__
+_|_| |_|\__|
+[INFO][2026-05-04 16:36:05][config.py:318] -                           |___/
+
+[INFO][2026-05-04 16:36:05][config.py:319] -
+[INFO][2026-05-04 16:36:05][config.py:354] - [INIT] load config: {'channel_type'
+: 'web,weixin', 'model': 'deepseek-chat', 'deepseek_api_key': 'sk-*****c6a', 'de
+epseek_api_base': 'https://api.deepseek.com/v1', 'open_ai_api_key': '*****', 'op
+en_ai_api_base': 'https://api.openai.com/v1', 'gemini_api_key': '*****', 'gemini
+_api_base': 'https://generativelanguage.googleapis.com', 'claude_api_key': '****
+*', 'claude_api_base': 'https://api.anthropic.com/v1', 'zhipu_ai_api_key': '****
+*', 'minimax_api_key': '*****', 'moonshot_api_key': '*****', 'ark_api_key': '***
+**', 'dashscope_api_key': '*****', 'voice_to_text': 'openai', 'text_to_voice': '
+openai', 'voice_reply_voice': False, 'speech_recognition': True, 'group_speech_r
+ecognition': False, 'use_linkai': False, 'linkai_api_key': '*****', 'linkai_app_
+code': '', 'wecom_bot_id': '', 'wecom_bot_secret': '*****', 'web_password': 'her
+mes_cow_2026', 'agent': True, 'agent_workspace': '~/cow_workspace', 'agent_max_c
+ontext_tokens': 50000, 'agent_max_context_turns': 30, 'agent_max_steps': 30, 'en
+able_thinking': True, 'knowledge': True, 'proxy': '', 'character_desc': "당신은
+Steven Lee의 AI 비서 'CowAgent'입니다. 한국어로 대화하며, 친근하고 전문적인 어조
+로 응답합니다. 복잡한 작업은 계획을 세워 단계적으로 실행합니다."}
+[INFO][2026-05-04 16:36:05][config.py:357] - [INIT] ============================
+============
+[INFO][2026-05-04 16:36:05][config.py:358] - [INIT] System Initialization
+[INFO][2026-05-04 16:36:05][config.py:359] - [INIT] ============================
+============
+[INFO][2026-05-04 16:36:05][config.py:360] - [INIT] Channel: web,weixin
+[INFO][2026-05-04 16:36:05][config.py:361] - [INIT] Model: deepseek-chat
+[INFO][2026-05-04 16:36:05][config.py:366] - [INIT] Mode: Agent (workspace: ~/co
+w_workspace)
+[INFO][2026-05-04 16:36:05][config.py:370] - [INIT] Debug: False
+[INFO][2026-05-04 16:36:05][config.py:371] - [INIT] ============================
+============
+[INFO][2026-05-04 16:36:05][config.py:421] - [INIT] Synced 5 config values to en
+vironment variables
+[INFO][2026-05-04 16:36:05][app.py:305] - [App] Synced 3 builtin skill(s) to wor
+kspace
+[INFO][2026-05-04 16:36:05][app.py:338] - [App] Starting channels: ['web', 'weix
+in']
+/home/steven/CowAgent/venv/lib/python3.11/site-packages/pydub/utils.py:170: Runt
+imeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not w
+ork
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work"
+, RuntimeWarning)
+[WARNING][2026-05-04 16:36:05][plugin_manager.py:113] - Failed to import plugin
+agent: No module named 'agentmesh'
+[INFO][2026-05-04 16:36:05][godcmd.py:196] - [Godcmd] 因未设置口令，本次的临时口
+令为5019。
+[INFO][2026-05-04 16:36:05][web_channel.py:542] - [WebChannel] 全部可用通道如下
+，可修改 config.json 配置文件中的 channel_type 字段进行切换，多个通道用逗号分隔
+：
+[INFO][2026-05-04 16:36:05][web_channel.py:544] - [WebChannel]   1. weixin
+     - 微信
+[INFO][2026-05-04 16:36:05][web_channel.py:545] - [WebChannel]   2. web
+     - 网页
+[INFO][2026-05-04 16:36:05][web_channel.py:546] - [WebChannel]   3. terminal
+     - 终端
+[INFO][2026-05-04 16:36:05][web_channel.py:547] - [WebChannel]   4. feishu
+     - 飞书
+[INFO][2026-05-04 16:36:05][web_channel.py:548] - [WebChannel]   5. dingtalk
+     - 钉钉
+[INFO][2026-05-04 16:36:05][web_channel.py:549] - [WebChannel]   6. wecom_bot
+     - 企微智能机器人
+[INFO][2026-05-04 16:36:05][web_channel.py:550] - [WebChannel]   7. wechatcom_ap
+p    - 企微自建应用
+[INFO][2026-05-04 16:36:05][web_channel.py:551] - [WebChannel]   8. wechatmp
+     - 个人公众号
+[INFO][2026-05-04 16:36:05][web_channel.py:552] - [WebChannel]   9. wechatmp_ser
+vice - 企业公众号
+[INFO][2026-05-04 16:36:05][web_channel.py:553] - [WebChannel] ✅ Web控制台已运
+行
+[INFO][2026-05-04 16:36:05][web_channel.py:554] - [WebChannel] 🌐 本地访问: http
+://localhost:9899
+[INFO][2026-05-04 16:36:05][web_channel.py:555] - [WebChannel] 🌍 服务器访问: ht
+tp://YOUR_IP:9899 (请将YOUR_IP替换为服务器IP)
+[INFO][2026-05-04 16:36:05][weixin_channel.py:118] - [Weixin] No token found, st
+arting QR login...
+[INFO][2026-05-04 16:36:05][weixin_channel.py:226] - [Weixin] 微信二维码链接: ht
+tps://liteapp.weixin.qq.com/q/7GiQu1?qrcode=c53f789ea95f1d3eb31d8dacd5e65ee8&bot
+_type=3
+
+============================================================
+  请使用微信扫描二维码登录 (二维码约2分钟后过期)
+============================================================
+█▀▀▀▀▀▀▀█▀████▀▀▀▀█▀███▀▀▀▀█▀██▀▀▀▀▀▀▀█
+█ █▀▀▀█ █ ▀█▄ ▄▀▀▀▀ ▄  ▄█ █▀█▄█ █▀▀▀█ █
+█ █   █ █▄  █ ▄█ ▀█ ██▀  █▀ ▀▄█ █   █ █
+█ ▀▀▀▀▀ █ ▄ █▀▄▀█ ▄ ▄ █▀█▀█▀█ █ ▀▀▀▀▀ █
+█▀▀██▀▀▀███ ▄▀█    ▄██ ▄███▄▄ ██▀█▀▀▀▀█
+██▄█▀█▀▀▄▀ ▀██ █  ▀ █▄    █▄ ▄▀▀▀▄▀▄ ██
+███▄▄█▀▀▄▀█▀▀▄▀ ▄▀ ▀▀  ▀▄▄▀▄▀█▀▀ █▄ █ █
+█▀▄▄▀▄█▀  █▄▀ ▀  ▄▀▀█▀▀█  ▄█ █ ▀▀ ▄▄▄██
+█ █  █▄▀ ██▀▄▀ █▀▀ ▄▀█ ▀█▀█▄ █ ▀▄█▄ ▄▀█
+█  ▀▀ █▀▄▄ ███▄▄▀ ▀ █ ▀▀ ▀▄▀ ▄▀▀█ ▄▄▄██
+█ ██▀▀█▀█ ▄▀▀▄▀ ▄▀   █ █ ▄█ ▀█▀▀ ▄█  ▀█
+██▀█▄▀▀▀▀ █ ▀ ▀▀ ▄█▀█▄    ▄█ ▄█▀▄▄  ▄██
+██▄▀ ▀█▀ ▄▀▄▄▀ █▀█ ▀ ▀ █▄ █ █▄▄ ███  ▀█
+█▄▄██ ▄▀▀▀▀███▄▄  ▀▀█▀▀▄ █▀▀  █▀█▄█ ▄██
+█▀▀▄ ▄▀▀▄█▄▄▀▄▀ █▄ ▄▀  ▀▄ █▄▀▀  ▀▀▀ ▄██
+█▀▀▀▀▀▀▀█▄ ▄▀ ▀▀  ▀ █▀██ ▀▄██ █▀█  ▀███
+█ █▀▀▀█ █ ▀ ▄▀ ███ ▄ █ ▄▀ █▄▄ ▀▀▀ █ ███
+█ █   █ ██ ▄██▄▄ ▀▀ █▄▀  ▀ █ ▀▄ ▀█▄▀▄▄█
+█ ▀▀▀▀▀ █ █ ▀▄▀     ▀  ▀█▀██▀█ ▀ ▀█  ▀█
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+
+  等待扫码...
+
+[INFO][2026-05-04 16:37:31][service.py:50] - [SkillService] query: 3 skills foun
+d
+  二维码已过期，正在刷新（1/10）...
+[INFO][2026-05-04 16:38:07][weixin_channel.py:269] - [Weixin] 微信二维码链接 (1/
+10): https://liteapp.weixin.qq.com/q/7GiQu1?qrcode=421a76d7489af5649395d431a842d
+6f5&bot_type=3
+
+============================================================
+  请使用微信扫描二维码登录 (二维码约2分钟后过期)
+============================================================
+█▀▀▀▀▀▀▀█▀████▀▀▀▀███▀█▀▀▀▀█▀██▀▀▀▀▀▀▀█
+█ █▀▀▀█ █ ▀█▄ ▄▀▀▀  ▄  ▄▀██▀█▄█ █▀▀▀█ █
+█ █   █ █▄  █ ▄█ ▀███ █  █▀ ▀▄█ █   █ █
+█ ▀▀▀▀▀ █ ▄ █▀▄▀█ █ ▄ ▄ █▀█▀█ █ ▀▀▀▀▀ █
+█▀▀██▀▀▀███ ▄▀█    ▄▀   ▄██▄▄ ██▀█▀▀▀▀█
+█▀ ▀  ▄▀█ ▄███ █  ▀▄█▀▀█ ▄█▄ ▄▀▀▀▄▀▄ ██
+█ ▀ ▄▀▄▀▄█▄ ▀▄▀ ▄▀  ▀▄ ▄██▀▄▀█▀▀ █▄ █ █
+████▄▄█▀█▀▀▀▀ ▀  ▄ ██ █▄ ▄▄█ █ ▀▀ ▄▄▄██
+█▄ ▄▀▀▄▀ ▄▀▀▄▀ █▀▀ ▀██ █▄▄█▄ █ ▀▄█▄ ▄▀█
+█▄ ▀▄▀▀▀ ▀ ▀██▄▄▀ ▀▀█ ▀▄  ▄▀ ▄▀▀█ ▄▄▄██
+█▀ █▀▀▄▀▀▀ █▀▄▀ ▄▀ ▀ █ ▄ ▄█ ▀█▀▀ ▄█  ▀█
+█ ▀█▄ █▀ ██▄▀ ▀▀ ▄███     ▄█ ▄█▀▄▄  ▄██
+███▄▀▄█▀▄▀  ▄▀ █▀█ ███ ▄▄ █ █▄▄ ███  ▀█
+█▄██▄▄ ▀▄██ ██▄▄  ▀ █▄   █▀▀  █▀█▄█ ▄██
+█▀▀▀▀▄▀▀ ▄█▄▀▄▀ █▄ ▀▀▄ ▀▄ █▄▀▀  ▀▀▀ ▄██
+█▀▀▀▀▀▀▀█▄▄█▀ ▀▀  █▀█▄▀▀ ▀▄██ █▀█  ▀███
+█ █▀▀▀█ █ ▄▄▄▀ ███ █ ▄ ▀▀ █▄▄ ▀▀▀ █ ███
+█ █   █ ███▄██▄▄ ██ █ ██ ▀ █ ▀▄ ▀█▄▀▄▄█
+█ ▀▀▀▀▀ █  █▀▄▀ ▄▀ ▀▀▄ ▄█▀██▀█ ▀ ▀█  ▀█
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+
+  二维码已过期，正在刷新（2/10）...
+[INFO][2026-05-04 16:40:08][weixin_channel.py:269] - [Weixin] 微信二维码链接 (2/
+10): https://liteapp.weixin.qq.com/q/7GiQu1?qrcode=77a09767275cf597e6a5e523fccd6
+267&bot_type=3
+
+============================================================
+  请使用微信扫描二维码登录 (二维码约2分钟后过期)
+============================================================
+█▀▀▀▀▀▀▀██▀██████▀██▀██▀▀▀█▀███▀▀▀▀▀▀▀█
+█ █▀▀▀█ █▄ ▀ ▄█  █▄ █  ▀█ ▄ ▄ █ █▀▀▀█ █
+█ █   █ █▄▄▀▄▀ ▀▄ ▄▄▀▄▀▀▀▀█▄███ █   █ █
+█ ▀▀▀▀▀ █ █ █▀█ ▄ ▄ █ █ █▀▄ ▄ █ ▀▀▀▀▀ █
+█▀▀▀▀▀█▀▀▀▀▀█ ▀▄▄▀▀██▄▄▄█ ▀  ▀▀█▀█▀█▀██
+█▀▄ ▀▄▄▀▀ ▄▀▀▀▀▄▀▄▀▄▄ ▄ ▄█▄█▀ ██ █  ▄▀█
+█ ▄██▄▀▀▀ ▄▄ ██▄  ▀▄█ ▄█▄██ █▄  ▄▀ ▀▄▀█
+█▀▄▀ ██▀▀▄▀██▄ ▀▀ ▀ ▄▀▄ ▄▄█▄▀▀▄█ ▀█  ▀█
+█▄▀█▀▄ ▀▄▄ ██ ▄▀█ ▀███▄▄▄█▀ ▄▄▀  ▀ ▀█ █
+█▀▀█ ██▀█▀▀█▀▀██ ▄▀ ▄▄▄▄▄▄█ ▀ ██▄▀█  ▀█
+█▀▀█▄ ▀▀▀█▄  ██▄  ▀█▄ ▄█▀█▀▄█▄  ▄ ▀▀▀ █
+██ ██▀█▀█▄▀██▄  ▀ █▄▄▀▄ ▄▄█▄▀ ▀███▀▄ ▀█
+█▀▄▀▀▄ ▀█▀▀ █ ▄▀█▄▀ █▄▄▄█▀▀▄▀██▀▀▀▀▀▀ █
+█ █ █▀▄▀▄▀▄▀▀▀██▀▄▀█▄   ▄▀  ▀▄▀█▄█▄▄ ▀█
+█ ██  █▀▀ █  ██▄▀█▀ ▄ ▄ █▀▀ █ ▀▀▀▀█▀█▄█
+█▀▀▀▀▀▀▀█ ▄██▄  ▀▄▀▀▄▀▄█▄██▄▄ █▀█ ▀█▀▀█
+█ █▀▀▀█ █▀  █ ▄▀▀▄▀ ▀▀▄  ▀▀   ▀▀▀ ▀▀▄▄█
+█ █   █ █ ▀▄▀▀██▀▀▀█▄▀▄▀▄█▀▄▀█ ▄ ▄██  █
+█ ▀▀▀▀▀ █ ██ ██▄▀ ▀ █ ▄█▄ ▀▀█▄▀ ▄█▀▀▀ █
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+
+

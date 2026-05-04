@@ -244,3 +244,185 @@
 - MCP 서버 18개 인스턴스 중복 (정상 8set × 2)
 - Gateway port 8642 404 (API server 연결됨 상태이나 라우트 미설정)
 - Hermes WebUI (port 8648) 미작동
+
+---
+
+## 2026-05-04 (Mon) 08:00 — 개장 전 아침 스냅샷 (거래일 D-DAY, 1시간 전)
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 332941, 06:33 재시작, 1.5h 가동) |
+| Hermes CLI | tmux hermes 세션 유지 (May02~) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 784, May02~, 79h+ 가동) |
+| OpenWebUI | ⚠️ 프로세스 기동됨 (PID 338471, 08:00) but port 3000 미청취 |
+| MetaClaw | ❌ **72h+ 다운** (port 30000, 프로세스 없음) |
+| MCP 서버 | 8종 정상 (18개 인스턴스 중복 지속) |
+| 메모리 | 2,164MB / 7,748MB (28%) |
+| 디스크 | 2% |
+| WSL Uptime | 54.9h |
+
+### 📊 Macro (4/30~5/3 종가)
+| 지표 | 값 | 비고 |
+|:-----|:----|:------|
+| KOSPI | 6,598.87 (4/30) | 전주대비 +1.90% |
+| KOSDAQ | 1,192.35 (4/30) | 전주대비 -0.96% |
+| WTI | **$100.96** (5/3) | ⚠️ $100선 임박 |
+| USD/KRW | ₩1,471.22 (5/2) | 안정적 |
+| CB Score | 16/100 | 극단 공포 지속 |
+
+### 포트폴리오
+- **삼성부광(014950.KQ)**: 34주 @9,710원 (cost 10,040원, -3.29%)
+- **나우로보틱스(473980.KQ)**: 10주 @17,650원 (cost 30,550원, **-42.2%**)
+- **현금**: 4,349,470원 추정
+- **paper_portfolio**: 자본 5,000,000 / 현금 0 / 포지션 2개
+
+### 🚨 주요 포인트
+1. **나우로보틱스 -42.2%**: 473980.KQ(Yahoo 정식 티커) 17,650원 확인. 459510.KQ는 Yahoo 미등록. cost 대비 -42.2%로 손절 기준 초과.
+2. **WTI $100.96**: 전주 고점 $106.88에서 $6 하락. $100 이탈 시 CRISIS MODE 전환 가능.
+3. **MetaClaw 72h+ 다운**: keepalive 3회 실패 후 프로세스 자체 없음. 수동 복구 필요.
+4. **OpenWebUI 재기동 중**: 08:00 keepalive가 시작, 개장 전까지 정상화 예상.
+5. **yfinance 티커 확정**: 014950.**KQ**=9,710원 정상, 473980.**KQ**=17,650원 정상. 459510 → 473980 수정 필요.
+
+### 🎯 개장 체크리스트 (1시간 후 09:00)
+- [ ] KOSPI 6,600선 유지 여부
+- [ ] 삼성부광 9,400원 지지선 모니터링
+- [ ] 나우로보틱스 손절/보유 판단 (-42.2%)
+- [ ] WTI $100선 이탈 감시
+- [ ] Jongdari 티커 473980.KQ로 수정
+- [ ] MetaClaw 복구 시도
+
+---
+
+## 2026-05-04 (Mon) 16:30 — 장 마감 스냅샷 (사상 최고치: KOSPI 6,936.99)
+
+### 🏆 시장 요약 (5/4 월 거래일)
+
+| 지표 | 값 | 변동 |
+|:-----|:----|:------|
+| KOSPI 종가 | **6,936.99** | **+338.12p (+5.12%)** — 사상 최초 6,900선 돌파 |
+| KOSDAQ 종가 | ~1,213.74 | +21.39p (+1.79%) |
+| USD/KRW | 1,462.8 | **↓20.5원** (원화 급강세) |
+| WTI | $100.96 (5/3) | $100선 유지 |
+| CB Score | 16→? → 극단 공포 → **5%↑에도 공포 유지 (추정)** |
+
+- **외국인 순매수**: 3.2조원 / **기관 순매수**: 1.9조원 / 개인 순매도: 5.1조원
+- SK하이닉스 **시총 1,000조 돌파** (최초), 삼성전자와 '1000조 클럽' 2개
+- SK하이닉스 +11.9%, 삼성전자 +4.1%, 삼성전자우 +5.9%, SK스퀘어 +14.4%
+- **코스피 4월 한 달 +30.6%** — 세계 최고 월간 상승률
+
+### 시스템 현황
+
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 378667, 14:30 chat 세션) |
+| Hermes CLI | tmux hermes 세션 유지 (May02~) |
+| Jongdari 배틀루프 | ✅ PID 784 (May02~, 87h+ 가동) |
+| tmux 세션 | hermes / hermes-mcp / jongdari / **cowagent** (신규) 각 1개 |
+| OpenWebUI | ✅ 정상 (PID 371246, port 3000, 200 OK) |
+| MetaClaw | ❌ **~96h+ 다운** (port 30000 미청취, keepalive에서 permanently skipped) |
+| keepalive v7.1 | ✅ BULLETPROOF — 정상 작동 |
+| MCP 서버 8종 | 정상 (18개 인스턴스 중복) |
+| 메모리 | 4,322MB / 7,748MB (56% — OpenWebUI 사용량 포함) |
+| 디스크 | 2% |
+| WSL Uptime | 63h+ |
+| Windows 전원 | NEVER SLEEP 설정 유지 |
+
+### 포트폴리오
+
+- **삼성부광(014950.KQ)**: 34주 @9,710원 추정 (cost 10,040원) → 장중 KOSPI 5%↑로 반등 가능
+- **나우로보틱스(473980.KQ)**: 10주 @17,650원 추정 (cost 30,550원, **-42.2%**) — 지속적 손실
+- **paper_portfolio**: 자본 5,000,000 / 현금 0 / 포지션 2개
+- **현금**: 4,349,470원 추정
+
+### 🚨 주요 이슈
+
+1. **🔴 MetaClaw ~96h+ 다운**: keepalive v7.1에서 `permanently skipped` 처리 — 복구 시도 없이 지속적 생략 중
+2. **🔴 MCP Python 서버 중복 (18개)**: 6개 Python MCP 서버 × 3세트 (PID 472~482 → 256104~256114 → 378710~378720)
+3. **🔴 cowagent session 등장**: tmux에 `cowagent` 세션 생성됨 (16:20) — 정체 확인 필요
+4. **🟡 DingTalk 인증 실패**: cowagent 세션 로그에서 `[authFailed] 鉴权失败` 반복 — DingTalk 채널 토큰 문제
+5. **🟡 Gateway port 8642 404**: Hermes WebUI API 미연결
+6. **✅ yfinance 티커**: 014950.KQ / 473980.KQ 정상 확인 — 459510.KQ→473980.KQ 수정 완료
+
+### 배운 점
+
+- KOSPI가 단기간에 6,600→6,936으로 5.12%↑ 폭등, 7,000선 눈앞 — AI 반도체 밸류체인 멜트업
+- USD/KRW 1,462.8로 **20.5원 급락** (원화 강세) — 외국인 자금 유입에 따른 강달러 완화
+- MetaClaw는 keepalive v7.1에서 permanently skipped — 수동 복구 외에는 자동화 불가
+- cowagent 세션 + DingTalk authFailed 로그 — 새로운 에이전트가 DingTalk 채널 연결 시도 중?
+
+### 📋 내일(5/5 화) 할 일
+
+- [ ] 삼성부광 9,400원 지지선 재확인 (KOSPI 6,936 상승 반영)
+- [ ] 나우로보틱스 손절/재평가: cost 대비 -42.2%, KOSPI 급등도 못 따라옴
+- [ ] WTI $100선 모니터링 (5/3 $100.96) — 이탈 시 CRISIS MODE
+- [ ] MetaClaw 수동 복구 시도 (keepalive bypass)
+- [ ] cowagent session 정체 확인 및 DingTalk authFailed 해결
+- [ ] MCP 서버 중복 인스턴스 정리
+- [ ] Hermes WebUI (port 8642/8648) 복구
+
+## 2026-05-04 (Mon) 17:00 — Brain Sync
+
+### 수집 결과
+| 항목 | 발견 | 저장 | 중복 |
+|:-----|:----:|:----:|:----:|
+| arXiv 논문 | 12 | 0 | 12 |
+| GitHub 트렌딩 | 10 | 0 | 5 |
+
+→ 신규 콘텐츠 없음. 82개 파일이 16:00 배치로 업데이트됨.
+
+### Vault 핵심 콘텐츠 요약
+1. **Hermes 진화 전략 보고서** (414줄) — MCP 통합 #1, 멀티-에이전트, 의미론적 메모리 3대 업그레이드
+2. **CowAgent 기술 분석** — Dream Distillation, 하이브리드 메모리 검색 이식 가능
+3. **GitHub 지식허브** — HIVE(10K⭐/102 MCP tools), CCXT(42K⭐), nexu-io/open-design(20.5K⭐)
+4. **arXiv** — RunAgent, LLM procedural execution, Affordance Agent Harness, RAG security
+
+### Vault 통계
+- 전체: 118개 문서 (AI_Agents 13, LLM 31, Agent_LLM 5, MCP 리포트 33)
+
+---
+
+## 2026-05-04 (Mon) 17:20 — Tech Scavenger Scan
+
+### 📡 수집 결과 (15:20 최초 실행, 38개 신규 저장)
+
+| 소스 | 수집 |
+|:----|:----:|
+| GitHub 트렌딩 | 30개 (저장: 17개) |
+| arXiv 논문 | 21개 (저장: 14개) |
+| HuggingFace Daily Papers | 10개 (저장: 1개) |
+| **신규 저장 합계** | **38개** |
+| 16:20/17:20 재실행 | 0개 신규 (중복 스킵) |
+
+### 🔥 주목할 만한 발견
+
+**헤르메스 즉시 적용 가능:**
+
+1. **affaan-m/everything-claude-code** (⭐172K) — 완전범용 Agent Harness. Instincts(능동행동), 메모리 아키텍처, 시큐리티 모델이 Hermes의 자가발전 시스템과 유사한 패턴. `instincts` 시스템 → Hermes의 proactive behavior와 mapping 가능
+
+2. **ComposioHQ/awesome-claude-skills** (⭐57K) — Claude Skills 생태계 큐레이션. MCP 서버 설정, Skill 패턴, 프롬프트 전략 추출 가능
+
+3. **wshobson/agents** (⭐34K) — Claude Code용 멀티-에이전트 오케스트레이션. subtask 조정 패턴 참고
+
+4. **shareAI-lab/learn-claude-code** (⭐57K) — bash 기반 미니멀 Agent Harness. Hermes의 tool loop 코어 프리미티브 이해에 유용
+
+**아카이브 논문 (High Relevance):**
+
+5. **Affordance Agent: Verification-Gated Skill Orchestra** — OpenAI/DeepMind 계열. Skill 실행 전 verification gate(신뢰도 임계값)로 오류 캐스케이드 방지. Hermes tool loop에 `confidence gate` 도입 가능
+
+6. **RunAgent: Constraint-Guided NL Plan Execution** — Plan step 추적 + constraint (rubric) 기반 실행. Hermes plan-following 강화에 적용
+
+7. **Persistent Visual Memory** — Visual Signal Dilution 문제 해결을 위한 영구 메모리. Hermes의 long agentic chain에서 context dilution 방지 패턴
+
+8. **Themis: Multilingual Code Reward Model** — 정확성+효율성+스타일+안전성 다중 평가. Hermes 코드 생성 self-critique 용도
+
+**보안 경고:**
+
+9. **When RAG Chatbots Expose Their Backend** — RAG 시스템 백엔드 노출 및 PII 유출 사례 연구. Hermes의 웹/채널 인터페이스에 적용되는 보안 교훈
+
+### 📋 Action Items
+
+- [ ] `affaan-m/everything-claude-code` instincts architecture → Hermes self-evolving 시스템과 비교/이식 검토
+- [ ] `awesome-claude-skills` 저장소 크롤링하여 MCP server config + skill 패턴 추출
+- [ ] Affordance Agent verification gate → Hermes tool loop에 도입 가능성 평가
+- [ ] RAG 보안 리뷰: Hermes Telegram/API 인터페이스 취약점 진단

@@ -1,5 +1,5 @@
 # 🧠 기술 지식 인덱스
-_Documents: 39 | Last sync: 2026-05-04 08:00_
+_Documents: 40 | Last sync: 2026-05-04 18:00_
 
 > 자동 수집 + 요약된 AI/딥러닝/코딩 기술 문서  
 > _Last synced: 2026-05-03 10:59_

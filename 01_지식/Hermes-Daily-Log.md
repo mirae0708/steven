@@ -1,3 +1,75 @@
+# Hermes Daily Log — 2026-05-04 (월)
+
+## 📋 시스템 현황 스냅샷 — 16:45
+
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes CLI | ✅ 정상 (PID 378, 5/2 01:04 재시작) |
+| Hermes chat 세션 | ✅ 정상 (PID 378667, tmux hermes) |
+| OpenWebUI | ✅ 정상 (PID 371246, port 3000) |
+| tmux hermes-mcp | ✅ 정상 (신규, 16:36 생성) |
+| tmux jongdari | ✅ 정상 (1개 세션) |
+| tmux cowagent | ✅ 정상 (16:36 생성) |
+| MCP 서버(3군데) | ✅ 전원 정상 |
+| 메모리 사용 | ~799MB (OpenWebUI) + ~269MB (chat) |
+
+### 포트폴리오 (5/4 종가 기준)
+| 종목 | 수량 | 매입가 | 현재가 | 손익률 |
+|:-----|:----|:-------|:-------|:-------|
+| 014950.KQ (삼성부광) | 34주 | 10,040원 | 9,540원 | -4.98% |
+| 459510.KQ (나우로보틱스) | 10주 | 30,550원 | 미갱신 | - |
+| 현금 | - | 4,349,470원 | - | - |
+
+### Macro
+- KOSPI: **6,936.99** (+5.12% 반등, 사상 최고 근접)
+- KOSDAQ: **1,213.74** (+1.79% 반등)
+- 삼성부광: 9,540원 (-1.45%) — 9,400원 지지선 근접
+- 에이치엘사이언스: 17,620원 (-0.17%)
+- WTI: $100.96 (-0.96%, $100선 위태)
+- USD/KRW: 1,469.58원 (-0.30%, 소폭 강세)
+
+### 이슈
+- 삼성부광 -4.98% — 9,400원 지지선 이탈 시 손절 검토 필요
+- 나우로보틱스 current_price 미갱신 지속 (5/4 16:45)
+- WTI $100.96, $100선 붕괴 임박
+- MetaClaw 96h+ 다운 지속
+- 459510.KQ 실제 종목명 확인 필요 (paper_portfolio에 종목명 누락)
+
+## 🧬 Auto-Evolution Cycle — 16:30
+
+### Step 1: Knowledge Absorption Scan
+- **Scanned:** 50 documents across AI_Agents, Agent_LLM, LLM, Deep_Learning, RL categories
+- **Source types:** arXiv papers (16), GitHub repos (16), HF Daily papers (1), Strategy report (1)
+- **New categories discovered:** Agent_LLM (agent-native LLMs, agent harnesses)
+
+### Step 2-3: Applicability Analysis & Application
+**6 high-impact technologies absorbed:**
+
+| Technology | Stars/Link | Impact | Action Taken |
+|------------|-----------|--------|-------------|
+| RunbookHermes | ⭐373 | Hermes-native AIOps runbook agent | Knowledge recorded → future MCP integration |
+| nexu-io/open-design | ⭐20,562 | Design generation, Hermes-supported | Skill template created |
+| RunAgent (arXiv) | 2605.00798 | Constraint-guided execution | Meta rules updated for verification gates |
+| Affordance Agent Harness (arXiv) | 2605.00663 | Verification-gated skills | Skill pipeline enhanced with pre/post conditions |
+| awesome-claude-skills | ⭐57,796 | Skill patterns reference | Mapped to Hermes skill format |
+| everything-claude-code | ⭐172,821 | Agent harness reference | Studied for instincts/memory/security patterns |
+
+### Created/Updated
+1. ✅ Created `AI_Agents/_Index.md` — knowledge index for agent research
+2. ✅ Created `Agent_LLM/_Index.md` — knowledge index for agent-capable LLMs
+3. ✅ Created `01_지식/Hermes-Auto-Evolution-20260504.md` — detailed evolution report
+4. ✅ Updated Meta Rules: verification gates, MCP-first, security-first
+5. ✅ Updated L1 Skill Index: 3 new skill templates
+6. ✅ Updated L2 Global Facts: MCP ecosystem stats, agent LLM pricing, benchmark strategy
+
+### Key Insights
+- **MCP is Hermes #1 gap** — 2,000+ servers, de facto standard, all competitors have it
+- **Qwen3-Coder $0.4/M tokens** — agent-native LLM cost just dropped dramatically
+- **Benchmark gaming discovered** — all 8 major agent benchmarks can be cheated. Real task success > benchmark score
+- **Hermes is unique** — only open-source agent with self-learning + persistent memory (6-12mo lead)
+
+---
+
 # Hermes Daily Log — 2026-04-29 (수)
 
 ## 오늘의 주요 작업
