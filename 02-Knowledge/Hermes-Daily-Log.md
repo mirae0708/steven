@@ -426,3 +426,45 @@
 - [ ] `awesome-claude-skills` 저장소 크롤링하여 MCP server config + skill 패턴 추출
 - [ ] Affordance Agent verification gate → Hermes tool loop에 도입 가능성 평가
 - [ ] RAG 보안 리뷰: Hermes Telegram/API 인터페이스 취약점 진단
+
+---
+
+## 2026-05-04 (Mon) 21:05 — 저녁 스냅샷 (MetaClaw 복구, 장 마감 후)
+
+### 시스템 현황
+
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 404633, 15:32~, 6h+ 가동) |
+| Hermes CLI | tmux hermes 세션 유지 (May02~) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 784, May02~, **91h+ 가동**) |
+| OpenWebUI | ✅ 정상 (PID 371246, port 3000) |
+| MetaClaw | ✅ **복구됨** (PID 460779, port 30000, 18:32 기동) — ~96h 다운 후 최초 복구 |
+| CowAgent/Vite | ✅ port 5173, OpenDesign dev server |
+| tmux 세션 | hermes / hermes-mcp / jongdari 각 1개 |
+| MCP 서버 | 8종 정상 (중복 18개 인스턴스 지속) |
+| 메모리 | 4,700MB / 7,748MB (61%) — OpenWebUI + MetaClaw + CowAgent 부하 |
+| 디스크 | 2% |
+| WSL Uptime | **2d 20h** |
+
+### 🔔 MetaClaw 복구 경과
+- **18:32** MetaClaw `skills_only` 모드로 기동 성공 (port 30000 listen)
+- keepalive v7.1에서 `permanently skipped` 상태였으나 수동 기동으로 복구
+- 이전: 토요일경 ~96h+ 크래시 후 지속적 기동 실패
+- 현재: 정상 작동 확인
+
+### 시장 (장 마감, 5/4 월)
+- KOSPI: **6,936.99** (+5.12%, 사상 최고) | KOSDAQ: ~1,213.74 (+1.79%)
+- USD/KRW: 1,462.8 (원화 강세)
+- 장 마감 후 추가 변동 없음
+
+### 포트폴리오 (데이터 미갱신, 장 마감 기준)
+- 삼성부광(014950.KQ): 34주, 전일종가 9,710원 — KOSPI 5%↑ 반영 시 반등 예상
+- 나우로보틱스(473980.KQ): 10주, cost 대비 -42.2% 지속
+- 현금: 4,349,470원 추정
+
+### 지속적 이슈
+- MCP 서버 18개 인스턴스 중복 (정상 8set × 2~3) — 리소스 영향 미미
+- Gateway port 8642 404 (Hermes WebUI API 미연결)
+- 나우로보틱스 -42.2% 손절 판단 미결
+- MetaClaw `skills_only` 모드로 기동 — full mode 복구 여부 확인 필요

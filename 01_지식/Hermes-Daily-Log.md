@@ -45,15 +45,37 @@
 ### Step 2-3: Applicability Analysis & Application
 **6 high-impact technologies absorbed:**
 
-| Technology | Stars/Link | Impact | Action Taken |
-|------------|-----------|--------|-------------|
-| RunbookHermes | ⭐373 | Hermes-native AIOps runbook agent | Knowledge recorded → future MCP integration |
-| nexu-io/open-design | ⭐20,562 | Design generation, Hermes-supported | Skill template created |
-| RunAgent (arXiv) | 2605.00798 | Constraint-guided execution | Meta rules updated for verification gates |
-| Affordance Agent Harness (arXiv) | 2605.00663 | Verification-gated skills | Skill pipeline enhanced with pre/post conditions |
-| awesome-claude-skills | ⭐57,796 | Skill patterns reference | Mapped to Hermes skill format |
-| everything-claude-code | ⭐172,821 | Agent harness reference | Studied for instincts/memory/security patterns |
+... [existing content] ...
 
+### Key Insights
+- **MCP is Hermes #1 gap** — 2,000+ servers, de facto standard, all competitors have it
+- **Qwen3-Coder $0.4/M tokens** — agent-native LLM cost just dropped dramatically
+- **Benchmark gaming discovered** — all 8 major agent benchmarks can be cheated. Real task success > benchmark score
+- **Hermes is unique** — only open-source agent with self-learning + persistent memory (6-12mo lead)
+
+---
+
+## 🧬 Auto-Evolution Cycle — 22:30 (Delta)
+
+### Scanned
+- 1 new document since 20:30: **club-3090** (noonghunna, ⭐469, Python)
+
+### Absorbed Knowledge
+- **club-3090**: Community recipes for running LLMs on RTX 3090 (vLLM, SGLang, llama.cpp)
+- Qwen3.6-27B config for 1×/2× 3090 cards — enables local Hermes inference at zero API cost
+- Multi-engine support documented for future local LLM deployment
+
+### Created/Updated
+- ✅ Updated `Hermes-Auto-Evolution-20260504.md` — added club-3090 as 7th technology
+- ✅ Created `Hermes_Evo_Report_20260504_2230.md` — delta cycle report
+- ✅ Updated Next Actions: added club-3090 config testing
+
+### Cumulative Today
+- **13 documents absorbed**, **8 technologies documented**, **51 total scanned**
+- **8 critical gaps remain** (MCP integration still #1 priority)
+- MCP pipeline: 20 multi-search reports generated today, 5.9s avg latency
+
+---
 ### Created/Updated
 1. ✅ Created `AI_Agents/_Index.md` — knowledge index for agent research
 2. ✅ Created `Agent_LLM/_Index.md` — knowledge index for agent-capable LLMs
