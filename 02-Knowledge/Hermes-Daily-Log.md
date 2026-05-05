@@ -664,3 +664,70 @@
 - 📌 **yfinance 티커 수정 최우선**: nexus_orchestrator `.KS` → `.KQ`
 - 📌 삼성부광 9,400원 지지선 / 나우로보틱스 손절 판단
 - 📌 KiwoomAuth 8050 재등록
+
+---
+
+## 2026-05-06 (Wed) 00:47 — 거래일 재개 새벽 스냅샷
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 42536, May05~, 9h+ 가동) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 15259, tmux jongdari, 3h 가동) |
+| OpenWebUI | ✅ 정상 (PID 10353, port 3000) |
+| MetaClaw | ✅ 정상 (port 30000, PID 188742, trinity-meta, ~30h+) |
+| CowAgent | ✅ 정상 (trinity-cow 세션) |
+| OpenDesign | ✅ 정상 (port 17456, trinity-od) |
+| keepalive v7 | ✅ 정상 |
+| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od — 총 6개 |
+| MCP 서버 | filesystem/fetch/time + Python 6종 모두 정상 |
+| 메모리 | **7,247MB / 7,748MB (93%) — 🚨 CRITICAL** |
+| 디스크 | 3% (28G/1007G) |
+| WSL Uptime | 20.7h (5/5 04:04 기동) |
+
+### 📊 시장 현황 (market_intel, 5/6 기준)
+| 지표 | 값 | 비고 |
+|:-----|:----|:------|
+| KOSPI | **6,936.99** (5/4 종가) | 사상 최고, +5.12% 반영 |
+| KOSDAQ | 1,213.74 (5/4 종가) | +1.79% |
+| WTI | $101.64 | $100선 방어 |
+| USD/KRW | 1,468.56 | 원화 강세 |
+| CB Score | **30/100** CAUTION MODE | 이전 27→30 소폭 상승 |
+| kospi_trend_3d | +4.87% | 단기 모멘텀 강함 |
+
+### 포트폴리오
+| 종목 | 평가 | 상태 |
+|:-----|:-----|:------|
+| 삼성부광(014950.KQ) | 34주 @10,040→9,610원 (-4.28%) | 🟡 9,400 지지선 근접 |
+| 나우로보틱스(459510.KQ) | 10주 @30,550→30,300원 (-0.82%) | 🟢 비교적 안정 |
+| 현금 | 4,349,470원 | — |
+| **총 평가** | **5,007,910원 (+0.16%)** | 🟢 초기자본 대비 소폭 플러스 |
+
+### 🚨 Critical Issues
+| # | 이슈 | 상태 |
+|:-:|:-----|:----:|
+| 1 | **yfinance .KS 티커 오류 (4일차)** — KOSPI=NaN, 종목 현재가 미갱신 | 🔴 미해결 |
+| 2 | **KiwoomAuth 8050 지정단말기 인증 실패** — 현물 데이터 연동 차단 | 🔴 미해결 |
+| 3 | **메모리 93% 사용 (7.2GB/7.7GB)** — OOM 위험 | 🚨 CRITICAL |
+| 4 | **CB Score 30/100 CAUTION MODE** — 극단 공포 지속 | 🟡 지속 |
+
+### 배틀루프 동향 (00:47)
+- Deep Dive 사이클 정상: 10초 간격 KOSDAQ 종목 순환 분석
+- 469750.KQ (아이비젼웍스) → HOLD(신뢰도 15%) — 기술적:HOLD(50%) / 뉴스:HOLD(50%) / 리스크:SELL(28%)
+- CB Score 30/100 — Oil+FX 위험 감지로 인한 보수 모드
+- yfinance .KS 오류로 KOSPI=NaN 상태 유지 (3거래일째)
+- 모든 Council 결정 HOLD — 신규 진입 없음
+
+### 🚨 메모리 부족 경고
+- 7,247MB/7,748MB (93%) — OOM Killer 트리거 직전
+- OpenWebUI (PID 10353) + Gateway (PID 42536) + CLI chat (PID 29186) + Trinity 3종 동시 부하
+- **조치 필요**: 불필요한 CLI 세션 종료 또는 Trinity 중 일부 축소
+
+### 오늘(5/6 수) 체크포인트
+- [x] 🚨 **메모리 정리** — 93%→39.5% (3,062MB/7,748MB) 자동 해소 (04:45) ✅
+- [ ] Jongdari 배틀루프 — 프로세스 없음 (재시작 필요) ⚠️
+- [ ] yfinance 티커 .KS→.KQ 수정 (4일차, 거래일 개장 전)
+- [ ] KOSPI 6,900선 추가 상승/조정 관찰
+- [ ] 삼성부광 9,400원 지지선 — 5/4 사상 최고에도 9,610원 정체
+- [ ] CB Score 30 → 장중 변화 추이
+- [ ] KiwoomAuth 8050 재등록
