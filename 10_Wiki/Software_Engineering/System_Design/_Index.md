@@ -1,5 +1,5 @@
 # System Design
-_Documents: 4 | Last sync: 2026-05-05 14:01_
+_Documents: 4 | Last sync: 2026-05-05 18:00_
 
 > 자동 수집된 System Design 관련 기술 문서  
 > _Last updated: 2026-05-03 10:59_

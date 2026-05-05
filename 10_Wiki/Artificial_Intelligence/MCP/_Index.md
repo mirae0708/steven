@@ -1,5 +1,5 @@
 ---
-_Documents: 1 | Last sync: 2026-05-05 14:01_
+_Documents: 2 | Last sync: 2026-05-05 18:00_
 type: category_index
 category: Artificial_Intelligence/MCP
 updated: 2026-05-05 00:30
@@ -15,6 +15,7 @@ entries: 1
 | File | Source | Stars | Relevance |
 |------|--------|-------|-----------|
 | [warpdot-dev/composio](./warpdot-devcomposio_20260505_0000.md) | GitHub | ⭐210 | MCP framework bridging 200+ SaaS tools |
+| [PRGA — Progressive Risk-Gated Actuation](./Executor-Side%20Progressive%20Risk-Gated%20Actuation%20for%20Agentic%20A_20260505_1620.md) | arXiv | 2605.02697 | 🟡 SCOPED — C0/C1/C2 risk-gating architecture pattern |
 
 ## Underlying Principles
 
