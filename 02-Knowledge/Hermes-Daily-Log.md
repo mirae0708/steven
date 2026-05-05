@@ -559,3 +559,36 @@
 - [ ] KiwoomAuth 8050 오류 해결 (지정단말기 인증 재등록)
 - [ ] WTI $105선 / USD/KRW 1,470선 모니터링
 - [ ] CB Score 27 추이 — CAUTION MODE 유지 여부
+
+---
+
+### 📡 Tech Scavenger 11:26 — 15 New Papers Today (2 from 10:21, 13 from 11:26)
+
+**AI Agents (4):**
+- **RL for LLM-based Multi-Agent Systems** (arXiv:2605.02801) — Orchestration traces taxonomy; Dynamic-Dec-POMDP framework; bridges Kimi/Codex/Claude Code to MARL theory. 7 key differences from classical MARL identified. Artifact: github.com/xxzcc/awesome-llm-mas-rl
+- **MAGIC** (arXiv:2605.01805) — Multi-step advantage-gated causal influence for MARL; +26.9% over SOTA on MPE benchmarks
+- **Talk is Cheap, Communication is Hard** (arXiv:2605.01750) — 4 failure modes in multi-LLM negotiation (coordination degrades, stubborn anchoring, perfunctory fairness, referential binding failures)
+- **Koopman Early Outbreak Warning** (arXiv:2605.01803) — Minimal counterfactual intervention (1 agent, 1 day) can shift epidemic trajectories below threshold
+
+**LLM (5):**
+- **Trust, but Verify (YES)** (arXiv:2605.02853) — Layer-wise "peeling" monitors transformer training quality; OpenLLaMA-3B binary/ternary quantization
+- **Standing on the Shoulders of Giants** (arXiv:2605.02860) — KD from DeepSeek-R1 → Phi-3/Qwen for cross-language code clone detection; response rate from 24.3%→67.7%
+- **FunFuzz** (arXiv:2605.02789) — Multi-island LLM evolutionary fuzzing; 119 bugs found, 80 confirmed in GCC/Clang
+- **GeoSAE** (arXiv:2605.01835) — Geometric prior-guided sparse autoencoders; AUC 0.746 for AD conversion using 2% dims
+- **Semantic Risk-Aware Heuristic Planning** (arXiv:2605.02862) — LLM-inspired geometric heuristic for A*; 62% success, ~2.61ms/plan, zero LLM at deployment
+
+**Tools/DevTools (1):**
+- **EvoPoC** (arXiv:2605.02859) — Automated exploit synthesis for DeFi; 98% recall, $116.2M recovered, 16 confirmed 0-days
+
+**RL/Robotics (1):**
+- **SHAP-RL Generalizability** (arXiv:2605.02867) — SHAP explainability for RL generalization; code: github.com/engineerkong/SHAP-RLROBO
+
+**CV/HPC (2):**
+- **From Sensors to Insight** (arXiv:2605.02859/02844) — AI-assisted edge-to-core workflow development; 1-1.5 day dev cycle
+- **N-Body on RISC-V** (arXiv:2605.02744) — Gravitational sim porting to Tenstorrent Wormhole
+
+**ML/Dynamical Systems (1):**
+- **Koopman for Coupled Systems** (arXiv:2605.01835) — Hybrid analytic+data-driven Koopman operator learning
+
+**🔥 Applicable to Hermes:** (1) RL for LLM-MAS — Multi-agent orchestration patterns, stopping decision theory for Hermes subagent spawning; (2) Talk is Cheap — Dynamic grounding failures inform AI Council multi-agent communication design; (3) FunFuzz — Multi-island evolution applicable to CowAgent hybrid search strategy; (4) YES framework — Training quality monitoring for fine-tuning workflows.
+|       |\n\n---\n\n## 2026-05-05 (Tue) 12:45 — 어린이날 휴장 스냅샷\n\n### System Status\n| Item | Status |\n|:-----|:-------|\n| Hermes Gateway | ✅ Normal (PID 301, 04:04 restart) |\n| Hermes CLI chat | ✅ Normal (PID 789, tmux hermes) |\n| Open WebUI | ✅ Normal (PID 785, port 3000) |\n| MetaClaw | ✅ Normal (PID 156299, port 30000, skills_only) |\n| Jongdari Nexus | ✅ Normal (PID 2811, nexus_orchestrator) |\n| tmux sessions | hermes / jongdari (1 each) |\n| Memory | ~2,560MB / 7,748MB (33%) — healthy |\n\n### Portfolio (paper_portfolio)\n- 014950.KQ (삼성부광): 34 shares @10,040 → 9,610 (-4.28%) 🟡\n- 459510.KQ (나우로보틱스): 10 shares @30,550 → 30,300 (-0.82%) 🟢\n- Cash: 4,349,470원 | Total: 5,007,910원 (+0.16%)\n\n### Macro (5/4 close)\n- KOSPI: 6,936.99 (+5.12%, all-time high) | KOSDAQ: 1,213.74 (+1.79%)\n- WTI: $104.47 (↑$3.51, off $100 danger zone) | USD/KRW: 1,475.21 (won weakening)\n\n### Issues\n1. 🔴 **self_heal.py missing** — script deleted, auto-heal cron runs but script not found (Errno 2)\n2. 🟡 **Telegram intermittent** — 5/4 14:55 log shows connectivity instability\n3. 🟡 **portfolio.json vs paper_portfolio mismatch** — operational port has only 014950.KQ\n4. 🟢 **459510.KQ current_price updated** to 30,300 (resolved)\n5. 🟢 **WTI $104.47** — above $100, risk reduced
