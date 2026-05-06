@@ -778,3 +778,15 @@
 - CB Score 30/100 유지 추정
 - **거래 결정 없음** — 데이터 소스 2중 차단 (yfinance + Kiwoom)으로 사실상 트레이딩 중단
 - 5/6(수) 장 개장 전 — 대응 없을 시 5거래일째 데이터 공백
+
+## 📡 Tech Scavenger — 2026-05-06 11:21
+**14 new documents** (all arXiv, May 5, 2026)
+- 🔥 **MemFlow** — Intent-driven memory orchestration (3-tier Router/Memory/Answer/Validator). 2x accuracy on Qwen3-1.7B. **L0-L4 layer memory 개선 참고**
+- 🔥 **OpenSeeker-v2** — SOTA search agent with SFT-only on 10.6K data. Beats Tongyi DeepResearch. **Hermes search agent 구축 참고**
+- 🔥 **RTriever-4B / BRIGHT-Pro** — ACL 2026, aspect-aware retrieval for agentic search. **Tavily 후처리 개선**
+- 🟡 **QKVShare** — Quantized KV-cache handoff for multi-agent on-device. TTFT 397ms vs 1029ms
+- 🟡 **FINER-SQL** — 3B model Text-to-SQL with fine-grained RL rewards. 67.73% BIRD accuracy
+- 🟡 **Clinical LLM Safety** — "Evidence quality > model scale" — 중요 설계 원칙
+- 🟡 **AI-Text Detection** — DeBERTa-v3+FeatAttn, 85.9% cross-domain on M4
+- 🔵 Rust memory safety RL, HPC Human-AI collab, robotics, CV papers (7 low relevance)
+**적용 가능 기술: ✅ MemFlow + OpenSeeker-v2 + RTriever**
