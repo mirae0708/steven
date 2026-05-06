@@ -1,7 +1,7 @@
 ---
-_Documents: 44 | Last sync: 2026-05-06 18:00_
+_Documents: 45 | Last sync: 2026-05-06 22:00_
 created: 2026-05-04 16:30
-updated: 2026-05-05 12:30
+updated: 2026-05-06 20:30
 type: index
 category: AI_Agents
 ---
@@ -10,7 +10,7 @@ category: AI_Agents
 
 This index catalogs research papers, tools, and frameworks related to AI agents, autonomous systems, and multi-agent orchestration.
 
-## Latest Additions (2026-05-05)
+## Latest Additions (2026-05-06)
 
 ### 🟢 New — Applied in Current Cycle
 
@@ -21,50 +21,38 @@ This index catalogs research papers, tools, and frameworks related to AI agents,
 | [[FlexSQL-Flexible-Exploration-and-Execution-Make-Better-Text_20260505_1200\|FlexSQL]] | arXiv 2605.02815 | Iterative schema exploration for Text-to-SQL agents | ABSORBED — dynamic data exploration pattern for Hermes data ops |
 | [[Talk is Cheap, Communication is Hard Dynamic Grounding Fail_20260505_1126\|Talk is Cheap — Grounding in Multi-Agent]] | arXiv 2605.01750 | Dynamic grounding failures & repair in multi-agent negotiation | ABSORBED — explicit grounding check protocol for Hermes sub-agent coordination |
 | [[MAGIC Multi-Step Advantage-Gated Causal Influence for Multi_20260505_1126\|MAGIC — Causal MARL Coordination]] | arXiv 2605.01805 | Causal influence quantification for multi-agent coordination | ABSORBED — causal credit assignment for Hermes agent cooperation optimization |
-|| [[FunFuzz-An-LLM-Powered-Evolutionary-Fuzzing-Framework_20260505_1200\|FunFuzz]] | arXiv 2605.02789 | Multi-island evolutionary LLM fuzzing with cross-pollination | ABSORBED — parallel evolution islands concept for Hermes self-evolution |
-|| [[FitText Evolving Agent Tool Ecologies via Memetic Retrieval_20260505_1620\|FitText — Memetic Tool Retrieval]] | arXiv 2605.02411 | Evolving agent tool ecologies via memetic retrieval — generates pseudo-tool probes, refines via evolutionary selection | ✅ ABSORBED — memetic_tool_retrieval pattern for dynamic MCP tool selection |
-|| [[When Stress Becomes Signal Detecting Antifragility-Compatib_20260505_1620\|CAFE — Antifragility Stress Detection]] | arXiv 2605.02463 | Statistical framework detecting antifragility-compatible stress geometry in multi-agent LLM systems | ✅ ABSORBED — pre-commit stress measurement for evolution pipeline |
-|| [[Executor-Side Progressive Risk-Gated Actuation for Agentic A_20260505_1620\|PRGA — Risk-Gated Actuation]] | arXiv 2605.02697 | Three-tier risk gating (C0/C1/C2) for agentic intent execution | 🟡 SCOPED — C0/C1/C2 pattern for execution safety architecture |
-||| [[MolmoAct2 Action Reasoning Models for Real-world Deployment_20260505_1521\|MolmoAct2]] | arXiv 2605.02881 | Open VLA model for robotics with action reasoning | ⏭️ SKIPPED — robotics-specific |
-||| [[AlbumFill-Album-Guided-Reasoning-and-Retrieval-for-Personal_20260505_1500\|AlbumFill]] | arXiv 2605.02892 | Personalized image completion via album-guided retrieval | ⏭️ SKIPPED — CV domain |
-||| [[SpecKV Adaptive Speculative Decoding with Compression-Aware_20260505_1321\|SpecKV]] | arXiv 2605.02888 | Adaptive speculative decoding with compression-aware gamma selection | 🟡 SCOPED — adaptive confidence-based gating pattern for inference optimization |
-||| [[../Reinforcement_Learning/ynsmroztascPanelSniper_20260506_0000\|cPanelSniper]] | GitHub ⭐312 | CVE-2026-41940 — cPanel auth bypass exploit tool | 🟡 SCOPED — security reference for Hermes self-audit |
-||| [[../Reinforcement_Learning/simchowitzlabpublicnano-world-model_20260506_0000\|nano-world-model]] | GitHub ⭐346 | Minimalist world model for RL with clean architecture | 🟡 SCOPED — world model concepts for Hermes environment simulation |
+| [[FunFuzz-An-LLM-Powered-Evolutionary-Fuzzing-Framework_20260505_1200\|FunFuzz]] | arXiv 2605.02789 | Multi-island evolutionary LLM fuzzing with cross-pollination | ABSORBED — parallel evolution islands concept for Hermes self-evolution |
+| [[FitText Evolving Agent Tool Ecologies via Memetic Retrieval_20260505_1620\|FitText — Memetic Tool Retrieval]] | arXiv 2605.02411 | Evolving agent tool ecologies via memetic retrieval | ✅ ABSORBED — memetic_tool_retrieval pattern for dynamic MCP tool selection |
+| [[When Stress Becomes Signal Detecting Antifragility-Compatib_20260505_1620\|CAFE — Antifragility Stress Detection]] | arXiv 2605.02463 | Statistical framework detecting antifragility-compatible stress geometry in multi-agent LLM systems | ✅ ABSORBED — pre-commit stress measurement for evolution pipeline |
+| [[Redefining-AI-Red-Teaming-in-the-Agentic-Era-From-Weeks-to_20260506_1200\|Redefining AI Red Teaming]] | arXiv 2605.04019 | Agentic security testing — from weeks to hours via coding agent workflows | ✅ ABSORBED — agentic_red_teaming skill added |
+| [[Evaluating Generative Models as Interactive Emergent Represe_20260506_1121\|Evaluating Generative Models for Collaboration]] | arXiv 2605.03855 | Human-AI collaboration evaluation framework | ✅ ABSORBED — human_ai_collaboration_eval skill added |
+| [[Safety-and-accuracy-follow-different-scaling-laws-in-clinica_20260506_1100\|Safety Scaling Laws in Clinical LLMs]] | arXiv 2605.04039 | Safety ≠ accuracy in LLM scaling — critical insight | ✅ ABSORBED — safety_scaling_awareness skill added |
+| [[XBuilderLABcheat-on-content_20260506_1200\|cheat-on-content (⭐336)]] | GitHub ⭐336 | Auto-evolving content ops with Claude Code workflow | ✅ ABSORBED — self_evolving_content_ops skill added |
+| [[FINER-SQL Boosting Small Language Models for Text-to-SQL_20260506_1121\|FINER-SQL]] | arXiv 2605.03465 | SLM optimization for Text-to-SQL | ✅ ABSORBED — slm_text_to_sql skill added |
 
 ### 🟡 Medium Priority — Contextual Value
 
 | Document | Source | Relevance |
 |----------|--------|-----------|
+| [[Executor-Side Progressive Risk-Gated Actuation for Agentic A_20260505_1620\|PRGA — Risk-Gated Actuation]] | arXiv 2605.02697 | Three-tier risk gating (C0/C1/C2) for agentic intent execution |
+| [[SpecKV Adaptive Speculative Decoding with Compression-Aware_20260505_1321\|SpecKV]] | arXiv 2605.02888 | Adaptive speculative decoding with compression-aware gamma selection |
+| [[../Reinforcement_Learning/ynsmroztascPanelSniper_20260506_0000\|cPanelSniper]] | GitHub ⭐312 | CVE-2026-41940 — cPanel auth bypass exploit tool |
+| [[../Reinforcement_Learning/simchowitzlabpublicnano-world-model_20260506_0000\|nano-world-model]] | GitHub ⭐346 | Minimalist world model for RL with clean architecture |
 | [[Semantic Risk-Aware Heuristic Planning for Robotic Navigatio_20260505_1126\|Semantic Risk-Aware Planning]] | arXiv 2605.02862 | LLM-inspired cost functions for planning — conceptual for Hermes planning module |
 | [[Remote Action Generation Remote Control with Minimal Commun_20260505_1101\|Remote Action Generation]] | arXiv 2605.01833 | Minimal-communication remote agent control — applicable to distributed Hermes agents |
 | [[Trust,-but-Verify-Peeling-Low-Bit-Transformer-Networks-for_20260505_1200\|Trust but Verify]] | arXiv 2605.02853 | Low-bit transformer training monitoring — conceptual for Hermes learning quality |
 | [[Standing-on-the-Shoulders-of-Giants-Stabilized-Knowledge-Di_20260505_1200\|Knowledge Distillation for Code Clone Detection]] | arXiv 2605.02860 | Cross-language code clone detection — relevant if Hermes handles multi-lang codebases |
-
-## Latest Additions (2026-05-04)
-
-### 🔴 High Priority — Directly Applicable to Hermes
-
-| Document | Source | Relevance | Action |
-|----------|--------|-----------|--------|
-| [[Tommy-ywRunbookHermes_20260504_1600\|RunbookHermes]] | GitHub ⭐373 | Hermes-native AIOps agent for incident response | Integrate runbook learning into Hermes self-evolution |
-| [[RunAgent-Interpreting-Natural-Language-Plans-with-Constrain_20260504_1600\|RunAgent]] | arXiv 2605.00798 | Constraint-guided plan execution | Enhance Hermes procedural execution with constraint rubrics |
-| [[When-LLMs-Stop-Following-Steps-A-Diagnostic-Study-of-Proced_20260504_1600\|Procedural Execution Study]] | arXiv 2605.00817 | Diagnostic benchmark for procedural fidelity | Build Hermes procedural accuracy testing |
-| [[Affordance Agent Harness Verification-Gated Skill Orchestra_20260504_1520\|Affordance Agent Harness]] | arXiv 2605.00663 | Verification-gated skill orchestration | Apply verification gates to Hermes skill execution |
-| [[wshobsonagents_20260504_1520\|wshobson/agents]] | GitHub ⭐34,702 | Multi-agent orchestration for Claude Code | Reference for Hermes multi-agent architecture |
-
-### 🟡 Medium Priority — Contextual Value
-
-| Document | Source | Relevance |
-|----------|--------|-----------|
 | [[When-RAG-Chatbots-Expose-Their-Backend-An-Anonymized-Case-S_20260504_1600\|RAG Security Study]] | arXiv 2605.00796 | RAG backend privacy risks — inform Hermes security audit |
 | [[Can-Coding-Agents-Reproduce-Findings-in-Computational-Materi_20260504_1600\|Coding Agents in Science]] | arXiv 2605.00803 | Coding agent limitations in scientific workflows |
 | [[Learning to Act and Cooperate for Distributed Black-Box Cons_20260504_1520\|Distributed Consensus]] | HF Daily | Multi-agent cooperation for optimization |
 | [[LLM-Emu Native Runtime Emulation of LLM Inference via Profi_20260504_1520\|LLM-Emu]] | arXiv 2605.00616 | LLM serving simulation — useful for cost modeling |
 
-### 🔵 Low Priority — Domain-Specific
+### ⏭️ Skipped — Domain-Specific
 
 | Document | Source | Notes |
 |----------|--------|-------|
+| [[MolmoAct2 Action Reasoning Models for Real-world Deployment_20260505_1521\|MolmoAct2]] | arXiv 2605.02881 | Open VLA model for robotics with action reasoning |
+| [[AlbumFill-Album-Guided-Reasoning-and-Retrieval-for-Personal_20260505_1500\|AlbumFill]] | arXiv 2605.02892 | Personalized image completion via album-guided retrieval |
 | [[Paired-CSLiDAR Height-Stratified Registration for Cross-Sou_20260504_1520\|Paired-CSLiDAR]] | arXiv | LiDAR pose refinement (robotics domain) |
 
 ## Related Categories
@@ -84,9 +72,11 @@ This index catalogs research papers, tools, and frameworks related to AI agents,
 8. **Dynamic Grounding Protocol**: Talk is Cheap shows multi-agent systems systematically fail at grounding unless explicit verification is built in. Hermes should add grounding checks after each sub-agent handoff — verify shared understanding before proceeding to next step.
 9. **Causal Coordination Credit**: MAGIC provides a method to quantify "did my action help your outcome?" — Hermes can use causal influence scores to preferentially evolve high-impact coordination patterns.
 10. **Iterative Schema Exploration**: FlexSQL's interleaved exploration-execution pattern applies to any structured data operation Hermes performs (SQL, CSV, API schemas).
-11. **Memetic Tool Retrieval (FitText)**: Dynamic tool retrieval via memetic search (generating pseudo-tool descriptions as probes, refining via evolutionary selection) significantly outperforms static tool lookups. Add to Hermes' MCP tool selection logic.
-12. **Antifragility Stress Sensor (CAFE)**: Before committing new skills to Hermes' evolution pipeline, measure whether the stress of integration creates learnable structure (positive Jensen Gap) or just noise. Acts as a pre-commit quality gate for the evolution cycle.
-13. **C0/C1/C2 Risk Gating (PRGA)**: Three-tier execution safety architecture — local triage (C0), on-demand evidence (C1), post-hoc provenance (C2). C0 runs fast deterministic checks, C1 only fires when uncertainty is flagged, C2 stays offline. Applicable to Hermes' tool execution safety layer.
-
----
-*Auto-generated by Hermes Tech Brain Sync on 2026-05-04 16:30*
+11. **Memetic Tool Retrieval (FitText)**: Dynamic tool retrieval via memetic search significantly outperforms static tool lookups. Add to Hermes' MCP tool selection logic.
+12. **Antifragility Stress Sensor (CAFE)**: Before committing new skills, measure whether integration stress creates learnable structure (positive Jensen Gap) or just noise. Acts as a pre-commit quality gate.
+13. **C0/C1/C2 Risk Gating (PRGA)**: Three-tier execution safety architecture — local triage (C0), on-demand evidence (C1), post-hoc provenance (C2).
+14. **Agentic Red Teaming (New)**: Hermes can autonomously probe its own code and tools for vulnerabilities before deployment, reducing the attack surface.
+15. **Human-AI Collaboration Eval (New)**: Hermes can measure and improve the quality of its collaboration with 대장님, not just output correctness.
+16. **Safety Scaling Awareness (New)**: More compute ≠ safer outputs. Hermes must maintain independent safety metrics alongside accuracy metrics.
+17. **Self-Evolving Content Ops (New)**: Learn user-specific patterns rather than global averages — adapt to 대장님's workflows over time.
+18. **SLM Text-to-SQL (New)**: Efficient SQL generation with smaller models, enabling faster and cheaper database interactions.

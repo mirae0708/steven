@@ -869,3 +869,46 @@
 - [ ] KiwoomAuth 8050 재등록 (지정단말기 인증)
 - [ ] WTI $100선 / USD/KRW 1,480선 모니터링
 - [ ] CB Score 장중 변화 추이 체크
+
+## 2026-05-06 (Wed) 20:45 — 자동 저녁 스냅샷
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 25169, 18:48 --replace 재시작) |
+| Hermes CLI | ✅ tmux hermes 세션 유지 (5/5 04:04 기동) |
+| Jongdari 배틀루프 | ✅ 정상 (AI Council v4.0 — 20:43 Cycle Complete) |
+| MetaClaw | ✅ 정상 (trinity-meta, 5일차) |
+| CowAgent | ✅ 정상 (trinity-cow) |
+| OpenDesign | ✅ 정상 (trinity-od) |
+| OpenWebUI | ✅ 정상 (PID 87604, port 3000, 17h+) |
+| tmux 세션 | hermes/hermes-mcp/jongdari/trinity×3 — 6개 |
+| 메모리 | 4,020MB / 7,748MB (52%) |
+| 디스크 | 3% (29G/1007G) 🟢 |
+| MCP 서버 | filesystem/time/fetch/tavily + Python MCP 2종 |
+
+### 📊 시장 현황
+| 지표 | 값 | 비고 |
+|:-----|:----|:------|
+| KOSPI | 7,384.56 (전일 7,280.38) | +1.43% 사상 최고 |
+| KOSDAQ | 1,210.17 | |
+| 삼성부광 | 8,970원 | 하락 — 8,500선 관찰 |
+| 나우로보틱스 | 28,300원 | |
+
+### 🔧 주요 작업
+**Gateway 재시작 (18:48)**: Telegram 충돌 해소 --replace 실행. 단일화 성공, antigravity MCP 제거됨.
+**Jongdari Council (20:43)**: 457370.KQ HOLD(16%), 5종 Deep Dive 완료
+**yfinance .KS 오류 6일차**: Nexus가 계속 .KS 조회 → 우회 실패
+
+### 🐛 이슈
+| # | 이슈 | 상태 |
+|:-:|:-----|:----:|
+| 1 | yfinance .KS 티커 (6일차) | 🔴 |
+| 2 | KiwoomAuth 8050 | 🔴 |
+| 3 | Telegram 안정성 (재시작 후) | 🟡 |
+| 4 | CB Score 미기록 | 🟡 |
+
+### 📚 배운 점
+1. Gateway --replace는 MCP 재연결 중 일부 서버(antigravity) 제거됨. 재시작 후 MCP 검증 필요
+2. Jongdari AI Council 장 마감 후 20시에도 정상 분석 지속
+3. 삼성부광 8,970원 (5/4 9,710 대비 -7.6%) — 8,500선 지지 관찰
