@@ -1,12 +1,12 @@
 {
   "sector": "Healthcare",
   "industry": "Biotechnology",
-  "marketCap": 82359287808,
+  "marketCap": 82634432512,
   "previousClose": 9540.0,
   "open": 9260.0,
   "dayLow": 8800.0,
   "dayHigh": 9510.0,
-  "volume": 81292,
+  "volume": 99057,
   "averageVolume": 94532,
   "fiftyTwoWeekLow": 6650.0,
   "fiftyTwoWeekHigh": 25050.0,
@@ -14,5 +14,5 @@
   "debtToEquity": 4.376,
   "returnOnEquity": -0.01248,
   "profitMargins": -0.01258,
-  "fetched_at": "2026-05-06 03:10:26.137695+00:00"
+  "fetched_at": "2026-05-06 05:11:00.772705+00:00"
 }
