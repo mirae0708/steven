@@ -790,3 +790,82 @@
 - 🟡 **AI-Text Detection** — DeBERTa-v3+FeatAttn, 85.9% cross-domain on M4
 - 🔵 Rust memory safety RL, HPC Human-AI collab, robotics, CV papers (7 low relevance)
 **적용 가능 기술: ✅ MemFlow + OpenSeeker-v2 + RTriever**
+
+---
+
+## 2026-05-06 (Wed) 16:30 — 오후 스냅샷 (거래일, Telegram Troubleshooting)
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 97082, 03:29 재시작, 13h+ 가동) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 15259, 18.7h 가동, nexus_orchestrator) |
+| MetaClaw | ✅ 정상 (PID 188742, port 30000, trinity-meta, **4일차 유지**) |
+| CowAgent | ✅ 정상 (trinity-cow 세션) |
+| OpenDesign | ✅ 정상 (port 17456, trinity-od) |
+| OpenWebUI | ✅ 정상 (PID 87604, port 3000, 13.6h 가동) |
+| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od — 6개 |
+| MCP 서버 | 8종 정상 (filesystem/time/fetch + Python 6종, 중복 인스턴스 지속) |
+| 메모리 | **4,100MB / 7,748MB (53%)** — 04:45 자동 정리 후 안정 유지 |
+| 디스크 | 3% (29G/1007G) 🟢 |
+| WSL Uptime | **1d 12.4h** (5/5 04:04 기동) |
+
+### 📊 시장 현황
+| 지표 | 값 | 비고 |
+|:-----|:----|:------|
+| KOSPI | 6,936.99 (5/4 종가) | 사상 최고 유지 — 금일 거래일 추가 변동 확인 필요 |
+| KOSDAQ | 1,213.74 (5/4 종가) | +1.79% |
+| WTI | $100.82 | $100선 위협 지속 |
+| USD/KRW | 1,476.05 | 원화 약세 |
+| CB Score | **30/100 CAUTION MODE** | 극단 공포 지속 |
+
+### 🔧 주요 작업 내역
+
+**1. Telegram Troubleshooting (15:16~)**
+- 사용자 신고: Telegram 30분간 "typing" 표시 후 응답 없음
+- 진단 결과: **Gateway 2개 중복 프로세스** (PID 82609 + 97082)로 인한 Telegram polling 충돌 확인
+- Gateway 로그에서 `Bad Gateway → Timed Out → reconnect loop` 패턴 발견 (10:11부터 시작)
+- KeepAlive v7 + systemd 이중 관리로 인한 충돌 패턴 (hermes-telegram-troubleshooting skill에 기록된 증상과 일치)
+- ❌ **중간에 세션 종료로 복구 미완료** — 추가 Gateway 재시작 필요
+
+**2. Tech Scavenger 정기 스캔 (13:20~16:20 총 4회)**
+- 13:20: GitHub 30개 + arXiv 21개 → **1개 신규 저장** (Physics-Grounded Multi-Agent Architecture for Manufacturing — arXiv:2605.04003)
+- 14:20~16:20 (3회 연속): 전부 **0개 신규** (중복 스킵)
+- Hermes Evo Report (14:30)에서 신규 문서를 **SCOPED(reference only)** 평가 — 제조 도메인 특화로 Hermes 직접 적용 불가
+- 누적 흡수 지식: 26개 문서 / 22개 스킬
+
+**3. Hera MCP 서버 신규 감지 (16:19)**
+- 새 `hermes_mcp_server.py` 프로세스 (PID 93524)가 `pts/7`에서 `hermes-mcp` tmux 세션으로 실행됨
+- mcp_server.log는 아직 0 bytes — 초기화 단계
+
+**4. 메모리 93%→53% 자동 안정화 유지**
+- 04:45 메모리 93% 정리 후 **안정적 유지** 중 — 재발 없음
+- OpenWebUI(10.2%) + 배틀루프(6.0%) + Gateway(6.0%) + CLI(4.4%) + MCP 서버들
+
+### 🐛 이슈 트래커
+| # | 이슈 | 상태 |
+|:-:|:-----|:----:|
+| 1 | **yfinance .KS 티커 오류 (5일차)** — 014950.KS/459510.KS "possibly delisted", KOSPI=NaN | 🔴 미해결 |
+| 2 | **KiwoomAuth 8050 지정단말기 인증 실패** — 현물 거래 인터페이스 차단 | 🔴 미해결 |
+| 3 | **Telegram polling 충돌 (Gateway 중복)** — 15:16 진단 완료, 복구 미완료 | 🔴 미해결 |
+| 4 | **MCP 서버 중복 인스턴스** — filesystem×5, fetch×3, time×3 + Python 6종(×2) | 🟡 지속 |
+| 5 | **CB Score 30/100 CAUTION MODE** — 극단 공포, 신규 진입 보류 | 🟡 지속 |
+| 6 | **WTI $100선 위협** — $100.82, 추가 하락 시 CRISIS MODE 전환 가능 | 🟡 관찰 |
+| 7 | **메모리 53%** — 04:45 자동 정리 후 안정 유지 | ✅ 해소 |
+| 8 | **arXiv API 간헐적 타임아웃** — 15:20 cs.SE 카테고리 read timed out | 🟡 경미 |
+
+### 📚 배운 점
+1. **Telegram 무응답의 근본 원인**: Gateway 중복 실행 (KeepAlive + systemd)으로 인한 polling 충돌이 일관된 패턴. 해결하려면 `--replace` 플래그가 제대로 작동하는지 또는 KeepAlive가 systemd를 인식하고 생성하지 않도록 설정 필요
+2. **Tech Scavenger 포화 단계 진입**: 13:20 이후 3회 연속 0개 신규 — arXiv 신규 논문이 일 3~4개 수준으로 둔화. 수집률은 정상이나 신규 발견 감소 추세
+3. **MetaClaw 4일차 정상 유지**: 5/4 18:32 복구 후 **4일 연속 정상** — keepalive permanent skip에도 수동 기동으로 안정화 성공
+4. **메모리 자동 회복 패턴**: 93%→39.5% 자동 해소 후 53% 유지 — OOM 직전까지 가도 시스템이 자체적으로 프로세스 정리하는 패턴 확인
+5. **거래일 재개에도 실제 거래 불가**: yfinance + KiwoomAuth 이중 차단으로 5거래일째 데이터 공백 상태
+
+### 📋 내일(5/7 목) 할 일
+- [ ] **Telegram 복구 최우선**: Gateway 중복 프로세스 정리 후 단일 인스턴스 재시작
+- [ ] **yfinance 티커 수정**: nexus_orchestrator .KS → .KQ 접미사 복원 (5일차!)
+- [ ] 삼성부광 9,400원 지지선 재확인
+- [ ] 나우로보틱스 손절/재평가 (-42.2%)
+- [ ] KiwoomAuth 8050 재등록 (지정단말기 인증)
+- [ ] WTI $100선 / USD/KRW 1,480선 모니터링
+- [ ] CB Score 장중 변화 추이 체크

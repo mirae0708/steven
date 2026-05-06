@@ -1,5 +1,5 @@
 # Jax
-_Documents: 0 | Last sync: 2026-05-06 14:00_
+_Documents: 0 | Last sync: 2026-05-06 18:00_
 
 > 자동 수집된 Jax 관련 기술 문서  
 > _Last updated: 2026-05-03 10:59_
