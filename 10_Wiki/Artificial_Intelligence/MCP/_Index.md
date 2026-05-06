@@ -1,9 +1,9 @@
 ---
-_Documents: 2 | Last sync: 2026-05-06 22:00_
+_Documents: 3 | Last sync: 2026-05-07 06:00_
 type: category_index
 category: Artificial_Intelligence/MCP
-updated: 2026-05-05 00:30
-entries: 1
+updated: 2026-05-07 00:30
+entries: 2
 ---
 
 # MCP (Model Context Protocol) Index
@@ -16,6 +16,7 @@ entries: 1
 |------|--------|-------|-----------|
 | [warpdot-dev/composio](./warpdot-devcomposio_20260505_0000.md) | GitHub | ⭐210 | MCP framework bridging 200+ SaaS tools |
 | [PRGA — Progressive Risk-Gated Actuation](./Executor-Side%20Progressive%20Risk-Gated%20Actuation%20for%20Agentic%20A_20260505_1620.md) | arXiv | 2605.02697 | 🟡 SCOPED — C0/C1/C2 risk-gating architecture pattern |
+| [craft-agents-oss (NEW ⭐229)](./warpdot-devcraft-agents-oss_20260507_0000.md) | GitHub | ⭐229 | ✅ ABSORBED — Electron desktop agent with MCP, WebSocket thin-client, multi-LLM |
 
 ## Underlying Principles
 
@@ -24,6 +25,7 @@ entries: 1
 3. **Async Tasks**: call-now, fetch-later patterns with queued/working/input_required/completed/failed/cancelled states
 4. **Sampling & Elicitation**: Servers can make bidirectional requests to clients
 5. **A2A (Agent-to-Agent)**: Roadmap item for agent collaboration
+6. **WebSocket Thin-Client (NEW)**: craft-agents uses persistent WebSocket connections instead of HTTP REST for lower-latency MCP tool calls
 
 ## Hermes Integration Strategy
 
@@ -31,6 +33,7 @@ entries: 1
 - **Phase 2**: Connect to Composio for 200+ tool access
 - **Phase 3**: Add MCP server health checks to self_evolve
 - **Phase 4**: L5 MCP Context Cache in memory layer
+- **Phase 5 (NEW)**: WebSocket-based MCP transport for latency-sensitive tools + multiclient (Electron desktop agent pattern)
 
 ## MCP Pipeline (Current Operational)
 

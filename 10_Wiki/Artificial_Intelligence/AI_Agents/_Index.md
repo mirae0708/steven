@@ -1,7 +1,7 @@
 ---
-_Documents: 45 | Last sync: 2026-05-06 22:00_
+_Documents: 45 | Last sync: 2026-05-07 06:00_
 created: 2026-05-04 16:30
-updated: 2026-05-06 20:30
+updated: 2026-05-07 00:30
 type: index
 category: AI_Agents
 ---
@@ -10,7 +10,7 @@ category: AI_Agents
 
 This index catalogs research papers, tools, and frameworks related to AI agents, autonomous systems, and multi-agent orchestration.
 
-## Latest Additions (2026-05-06)
+## Latest Additions (2026-05-06/07)
 
 ### 🟢 New — Applied in Current Cycle
 
@@ -29,6 +29,8 @@ This index catalogs research papers, tools, and frameworks related to AI agents,
 | [[Safety-and-accuracy-follow-different-scaling-laws-in-clinica_20260506_1100\|Safety Scaling Laws in Clinical LLMs]] | arXiv 2605.04039 | Safety ≠ accuracy in LLM scaling — critical insight | ✅ ABSORBED — safety_scaling_awareness skill added |
 | [[XBuilderLABcheat-on-content_20260506_1200\|cheat-on-content (⭐336)]] | GitHub ⭐336 | Auto-evolving content ops with Claude Code workflow | ✅ ABSORBED — self_evolving_content_ops skill added |
 | [[FINER-SQL Boosting Small Language Models for Text-to-SQL_20260506_1121\|FINER-SQL]] | arXiv 2605.03465 | SLM optimization for Text-to-SQL | ✅ ABSORBED — slm_text_to_sql skill added |
+| [[MCP/warpdot-devcraft-agents-oss_20260507_0000\|craft-agents-oss (⭐229)]] | GitHub ⭐229 | Electron desktop AI agent with MCP, websocket thin-client, multi-LLM, OAuth | ✅ ABSORBED — desktop_mcp_agent_integration skill added |
+| [[LLM/virgiliojr94book-to-skill_20260507_0000\|book-to-skill (⭐351)]] | GitHub ⭐351 | Turn technical book PDFs into Claude Code skills | ✅ ABSORBED — pdf_to_skill_pipeline skill added |
 
 ### 🟡 Medium Priority — Contextual Value
 
@@ -54,6 +56,16 @@ This index catalogs research papers, tools, and frameworks related to AI agents,
 | [[MolmoAct2 Action Reasoning Models for Real-world Deployment_20260505_1521\|MolmoAct2]] | arXiv 2605.02881 | Open VLA model for robotics with action reasoning |
 | [[AlbumFill-Album-Guided-Reasoning-and-Retrieval-for-Personal_20260505_1500\|AlbumFill]] | arXiv 2605.02892 | Personalized image completion via album-guided retrieval |
 | [[Paired-CSLiDAR Height-Stratified Registration for Cross-Sou_20260504_1520\|Paired-CSLiDAR]] | arXiv | LiDAR pose refinement (robotics domain) |
+| [[../LLM/Composio-HQpolymarket-kalshi-arbitrage-bot_20260507_0000\|Composio polymarket-kalshi (⭐231)]] | GitHub ⭐231 | Prediction markets arbitrage — domain-specific trading, no direct Hermes capability improvement |
+| [[Large-Language-Models-are-Universal-Reasoners-for-Visual-Gen_20260506_1200\|LLMs as Universal Reasoners for Visual Generation]] | arXiv 2605.04040 | Visual generation reasoning — not directly applicable to Hermes' text/agent domain |
+| [[UniCorrn-Unified-Correspondence-Transformer-Across-2D-and-3_20260506_1200\|UniCorrn]] | arXiv 2605.04044 | 2D/3D correspondence transformer — vision/sensor domain |
+| [[Audio-Visual-Intelligence-in-Large-Foundation-Models_20260506_1200\|Audio-Visual Intelligence Survey]] | arXiv 2605.04045 | Multimodal AV foundation models survey — reference only |
+| [[Feature-Augmented Transformers for Robust AI-Text Detection _20260506_1121\|AI-Text Detection]] | arXiv 2605.03969 | AI-generated text detection — not applicable (Hermes IS an AI) |
+| [[Task-Aware Scanning Parameter Configuration for Robotic Insp_20260506_1121\|Robotic Inspection Config]] | arXiv 2605.03909 | Robotics sensor configuration — domain-specific |
+| [[Label-Efficient School Detection from Aerial Imagery via Wea_20260506_1121\|School Detection from Aerial Imagery]] | arXiv 2605.03968 | Remote sensing — domain-specific |
+| [[SigLoMa Learning Open-World Quadrupedal Loco-Manipulation f_20260506_1121\|SigLoMa]] | arXiv 2605.03846 | Quadrupedal loco-manipulation — robotics |
+| [[../Reinforcement_Learning/Implementing True MPI Sessions and Evaluating MPI Initializa_20260506_1121\|MPI Sessions]] | arXiv 2605.03983 | HPC MPI-4 standard — infrastructure knowledge only |
+| [[../Reinforcement_Learning/Mitigating False Positives in Static Memory Safety Analysis _20260506_1121\|Rust Memory Safety RL]] | arXiv 2605.04000 | RL for Rust static analysis — domain-specific |
 
 ## Related Categories
 - [[../Agent_LLM/_Index|Agent-Capable LLMs]]
@@ -75,8 +87,10 @@ This index catalogs research papers, tools, and frameworks related to AI agents,
 11. **Memetic Tool Retrieval (FitText)**: Dynamic tool retrieval via memetic search significantly outperforms static tool lookups. Add to Hermes' MCP tool selection logic.
 12. **Antifragility Stress Sensor (CAFE)**: Before committing new skills, measure whether integration stress creates learnable structure (positive Jensen Gap) or just noise. Acts as a pre-commit quality gate.
 13. **C0/C1/C2 Risk Gating (PRGA)**: Three-tier execution safety architecture — local triage (C0), on-demand evidence (C1), post-hoc provenance (C2).
-14. **Agentic Red Teaming (New)**: Hermes can autonomously probe its own code and tools for vulnerabilities before deployment, reducing the attack surface.
-15. **Human-AI Collaboration Eval (New)**: Hermes can measure and improve the quality of its collaboration with 대장님, not just output correctness.
-16. **Safety Scaling Awareness (New)**: More compute ≠ safer outputs. Hermes must maintain independent safety metrics alongside accuracy metrics.
-17. **Self-Evolving Content Ops (New)**: Learn user-specific patterns rather than global averages — adapt to 대장님's workflows over time.
-18. **SLM Text-to-SQL (New)**: Efficient SQL generation with smaller models, enabling faster and cheaper database interactions.
+14. **Agentic Red Teaming**: Hermes can autonomously probe its own code and tools for vulnerabilities before deployment, reducing the attack surface.
+15. **Human-AI Collaboration Eval**: Hermes can measure and improve the quality of its collaboration with 대장님, not just output correctness.
+16. **Safety Scaling Awareness**: More compute ≠ safer outputs. Hermes must maintain independent safety metrics alongside accuracy metrics.
+17. **Self-Evolving Content Ops**: Learn user-specific patterns rather than global averages — adapt to 대장님's workflows over time.
+18. **SLM Text-to-SQL**: Efficient SQL generation with smaller models, enabling faster and cheaper database interactions.
+19. **Desktop MCP Agent Integration (New)**: craft-agents-oss demonstrates an Electron-based desktop agent with MCP protocol, websocket thin-client, and multi-LLM support. Hermes can use this pattern for local desktop integration and MCP server management.
+20. **PDF-to-Skill Pipeline (New)**: book-to-skill converts technical book PDFs → structured skills with study/reference capabilities. Hermes can ingest any technical PDF as a reusable skill with key concepts, patterns, and ready-to-use code.
