@@ -1,7 +1,7 @@
 ---
-_Documents: 46 | Last sync: 2026-05-07 10:00_
+|_Documents: 74 | Last sync: 2026-05-07 12:30_
 created: 2026-05-04 16:30
-updated: 2026-05-07 00:30
+updated: 2026-05-07 12:30
 type: index
 category: AI_Agents
 ---
@@ -10,9 +10,9 @@ category: AI_Agents
 
 This index catalogs research papers, tools, and frameworks related to AI agents, autonomous systems, and multi-agent orchestration.
 
-## Latest Additions (2026-05-06/07)
+## Latest Additions (2026-05-07 12:30)
 
-### 🟢 New — Applied in Current Cycle
+### 🟢 New — Applied in This Cycle (EVO 2026-05-07 12:30)
 
 | Document | Source | Relevance | Action |
 |----------|--------|-----------|--------|
@@ -30,7 +30,15 @@ This index catalogs research papers, tools, and frameworks related to AI agents,
 | [[XBuilderLABcheat-on-content_20260506_1200\|cheat-on-content (⭐336)]] | GitHub ⭐336 | Auto-evolving content ops with Claude Code workflow | ✅ ABSORBED — self_evolving_content_ops skill added |
 | [[FINER-SQL Boosting Small Language Models for Text-to-SQL_20260506_1121\|FINER-SQL]] | arXiv 2605.03465 | SLM optimization for Text-to-SQL | ✅ ABSORBED — slm_text_to_sql skill added |
 | [[MCP/warpdot-devcraft-agents-oss_20260507_0000\|craft-agents-oss (⭐229)]] | GitHub ⭐229 | Electron desktop AI agent with MCP, websocket thin-client, multi-LLM, OAuth | ✅ ABSORBED — desktop_mcp_agent_integration skill added |
-| [[LLM/virgiliojr94book-to-skill_20260507_0000\|book-to-skill (⭐351)]] | GitHub ⭐351 | Turn technical book PDFs into Claude Code skills | ✅ ABSORBED — pdf_to_skill_pipeline skill added |
+|| [[LLM/virgiliojr94book-to-skill_20260507_0000\|book-to-skill (⭐351)]] | GitHub ⭐351 | Turn technical book PDFs into Claude Code skills | ✅ ABSORBED — pdf_to_skill_pipeline skill added |
+|| [[Tree-based Credit Assignment for Multi-Agent Memory System_20260507_1221\|Tree-based Credit Assignment for Multi-Agent Memory]] | arXiv 2605.04811 | RL-based tree credit assignment for multi-agent memory pipelines | ✅ ABSORBED — tree_credit_assignment_memory skill added |
+|| [[Evolving Idea Graphs with Learnable Edits-and-Commits for Mu_20260507_1221\|Evolving Idea Graphs with Edits-and-Commits]] | arXiv 2605.04922 | Version-controlled idea evolution with learnable edit operators | ✅ ABSORBED — evolving_idea_graphs skill added |
+|| [[Continual Knowledge Updating in LLM Systems Learning Throug_20260507_1122\|Multi-Timescale Memory Dynamics]] | arXiv 2605.05097 | Biological-inspired memory with coupled short/medium/long-term dynamics | ✅ ABSORBED — multi_timescale_memory_dynamics skill added |
+|| [[affaan-meverything-claude-code_20260507_1120\|affaan-m/everything-claude-code (⭐174,715)]] | GitHub ⭐174,715 | Agent harness optimization: skills, instincts, memory, security | ✅ ABSORBED — everything_claude_code_harness skill added |
+|| [[wshobsonagents_20260507_1120\|wshobson/agents (⭐34,897)]] | GitHub ⭐34,897 | Multi-agent orchestration for Claude Code | ✅ ABSORBED — multi_agent_orchestration_claude_code skill added |
+|| [[HKUDSnanobot_20260507_1120\|HKUDS/nanobot (⭐41,818)]] | GitHub ⭐41,818 | Ultra-lightweight personal AI agent architecture | ✅ ABSORBED — nanobot_lightweight_agent skill added |
+|| [[ComposioHQawesome-claude-skills_20260507_1120\|ComposioHQ/awesome-claude-skills (⭐58,368)]] | GitHub ⭐58,368 | Curated collection of Claude Skills and tools | ✅ ABSORBED — skill knowledge reference expanded |
+|| [[fprompts.chat_20260507_1120\|f/prompts.chat (⭐161,722)]] | GitHub ⭐161,722 | Community-driven prompt discovery and sharing platform | ✅ ABSORBED — prompt_engineering_knowledge skill added |
 
 ### 🟡 Medium Priority — Contextual Value
 
@@ -93,4 +101,10 @@ This index catalogs research papers, tools, and frameworks related to AI agents,
 17. **Self-Evolving Content Ops**: Learn user-specific patterns rather than global averages — adapt to 대장님's workflows over time.
 18. **SLM Text-to-SQL**: Efficient SQL generation with smaller models, enabling faster and cheaper database interactions.
 19. **Desktop MCP Agent Integration (New)**: craft-agents-oss demonstrates an Electron-based desktop agent with MCP protocol, websocket thin-client, and multi-LLM support. Hermes can use this pattern for local desktop integration and MCP server management.
-20. **PDF-to-Skill Pipeline (New)**: book-to-skill converts technical book PDFs → structured skills with study/reference capabilities. Hermes can ingest any technical PDF as a reusable skill with key concepts, patterns, and ready-to-use code.
+20. **PDF-to-Skill Pipeline**: book-to-skill converts technical book PDFs → structured skills with study/reference capabilities. Hermes can ingest any technical PDF as a reusable skill with key concepts, patterns, and ready-to-use code.
+21. **Tree-Based Credit Assignment**: Instead of final-reward-only for multi-agent memory pipelines, decompose reward via tree structure. Enables targeted retraining of underperforming agents — Hermes can identify bottleneck stages in its own pipeline.
+22. **Evolving Idea Graphs**: Track Hermes' evolution as version-controlled idea graphs with learnable edit operators. Learn which types of modifications (strengthen, counter-argue, synthesize) yield better outcomes — prune ineffective branches.
+23. **Multi-Timescale Memory Dynamics**: Replace explicit memory management with biological-inspired coupled timescales (working/episodic/semantic). New knowledge immediately usable in working memory, promoted to semantic only if consistently useful.
+24. **Everything Claude Code Harness**: Instinct hooks (behavior triggers on events), security gates (tiered permissions: read/write/execute/system), and performance budgets for agent operations — applicable to Hermes' own tool access and execution.
+25. **Multi-Agent Orchestration (wshobson/agents)**: Parallel agent execution with result reconciliation — enables Hermes to run multiple analysis strategies simultaneously and synthesize the best outcome.
+26. **Nanobot Lightweight Architecture**: Local-first, lazy-loaded, progressive enhancement — Hermes should maintain a lightweight core with heavy capabilities on-demand, not always resident.
