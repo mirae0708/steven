@@ -1,5 +1,5 @@
 # Best Practices
-_Documents: 0 | Last sync: 2026-05-07 12:01_
+_Documents: 0 | Last sync: 2026-05-07 14:00_
 
 > 자동 수집된 Best Practices 관련 기술 문서  
 > _Last updated: 2026-05-03 10:59_

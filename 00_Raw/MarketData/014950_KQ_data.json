@@ -6,7 +6,7 @@
   "open": 8780.0,
   "dayLow": 8000.0,
   "dayHigh": 8920.0,
-  "volume": 71983,
+  "volume": 78647,
   "averageVolume": 94813,
   "fiftyTwoWeekLow": 6650.0,
   "fiftyTwoWeekHigh": 25050.0,
@@ -14,5 +14,5 @@
   "debtToEquity": 4.376,
   "returnOnEquity": -0.01248,
   "profitMargins": -0.01258,
-  "fetched_at": "2026-05-07 03:11:03.266845+00:00"
+  "fetched_at": "2026-05-07 05:10:39.477140+00:00"
 }
