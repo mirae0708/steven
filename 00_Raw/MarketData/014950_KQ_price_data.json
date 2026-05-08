@@ -414,8 +414,18 @@
     "Open": 8780.0,
     "High": 8920.0,
     "Low": 8000.0,
-    "Close": 8480.0,
-    "Volume": 78647,
+    "Close": 8470.0,
+    "Volume": 96580,
+    "Dividends": 0.0,
+    "Stock Splits": 0.0
+  },
+  {
+    "Date": "2026-05-08",
+    "Open": 8580.0,
+    "High": 8750.0,
+    "Low": 8410.0,
+    "Close": 8610.0,
+    "Volume": 8594,
     "Dividends": 0.0,
     "Stock Splits": 0.0
   }

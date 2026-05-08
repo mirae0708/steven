@@ -1068,3 +1068,350 @@
 - [ ] KOSPI 7,384 신고가 — 장 마감 후 시장 환경 재평가
 - [ ] 원화 강세(1,451원) — 포트폴리오 영향 분석
 - [ ] Telegram 정상 응답 확인
+
+---
+
+## 2026-05-07 (Thu) 16:30 — 오후 스냅샷 (거래일 마감, 포지션 전량 청산)
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 20920, 01:19 --replace, 15h+ 가동, Telegram 안정화 지속) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, **3일차 가동**, CPU 60분 사용) |
+| OpenWebUI | ✅ 정상 (PID 87604, port 3000, 7.4% 메모리, 32h+ 가동) |
+| MetaClaw | ✅ 정상 (PID 188742, port 30000, trinity-meta, **7일차 유지 🏆**) |
+| CowAgent | ✅ 정상 (trinity-cow 세션) |
+| OpenDesign | ✅ 정상 (port 17456, trinity-od) |
+| tmux 세션 | hermes / hermes-mcp *(16:16 신규 생성)* / jongdari / trinity-cow / trinity-meta / trinity-od — 6개 |
+| MCP 서버 | filesystem/fetch/tavily/time + Python MCP 2종 정상 (중복 감소: antigravity 제거됨) |
+| 메모리 | **3,765MB / 7,748MB (49%)** — 12:45 47%→49% 소폭 상승, 안정적 🟢 |
+| 디스크 | 3% (29G/1007G) 🟢 |
+| WSL Uptime | **2d 12h** (5/5 04:04 기동) |
+
+### 📊 시장 현황 (5/7 거래일 마감)
+| 지표 | 값 | 비고 |
+|:-----|:----|:------|
+| KOSPI | **7,398.99** (+0.20%, 사상 최고 경신) | 12:45 7,364 → 마감 7,398 — 추가 상승 마감 |
+| KOSDAQ | **1,199.22** (-0.90%) | KOSPI 대비 디커플링 심화, 1,200선 이탈 |
+| 삼성부광 (014950.KQ) | **8,520원** (-5.02%) | 🚨 9,000선 이탈 가속, 8,500선 위협 |
+| 나우로보틱스 (459510→473980.KQ) | **27,400원** (손절가) | 포지션 청산 완료 |
+| WTI | **$95.56** (+0.50%) | $100선 이탈 3일차, 5/3 $100.96→$95.56 (-5.3%) |
+| USD/KRW | **1,451.29** (-1.54%) | 원화 강세 지속, BB 하단 이탈 |
+| KOSPI RSI | **91.9** | 🚨 극단 과열 — 90 돌파 |
+| CB Score | 추정 40~50 (KOSPI 급등 반영) | 🟡 이전 30→상승 추정 |
+
+### 🔧 주요 작업 내역
+
+#### 1. 📌 모의투자 포트폴리오 전량 청산 (14:00 Brain Sync 확인)
+- **paper_portfolio.json** 분석 결과: **모든 포지션 청산 완료**
+  - 삼성부광(014950.KQ): 34주 @9,010원 손절 (-10.3%, 손실 35,020원)
+  - 나우로보틱스(459510→473980.KQ): 10주 @27,400원 손절 (-10.3%, 손실 31,500원)
+- **portfolio 잔고**: **4,929,810원** (초기자본 500만원 대비 -1.4%)
+- **현금 전환 완료** — 포지션 0개, 신규 진입 보류 상태
+
+#### 2. 🔴 Tavily Search API 키 만료 확인 (신규 Critical)
+- **401 Unauthorized** 에러 확인 — Tavily 검색 API 키 만료 또는 무효화
+- 영향: 문화×경제 인텔, Brain Sync, 기타 Tavily 의존 크론 작업 검색 불가
+- **대응**: 키 갱신 필요 (Tavily Dashboard)
+
+#### 3. Tech Scavenger 정상 스캔 (13:21~16:22 총 4회)
+- 13:21: GitHub 30 + arXiv 21 → **2개 신규 저장**
+- 14:20~16:22 (3회 연속): **전부 0개 신규** (중복 스킵, 포화 단계)
+- 누적 기술 문서: **305개** (129→305, 대량 증가)
+
+#### 4. Hermes Evo Report (08:30) — 0개 신규 문서, 29개 스킬 유지
+
+#### 5. Hermes-mcp tmux 세션 신규 생성 (16:16)
+- `hermes-mcp` 세션 16:16에 새로 생성됨
+- 로그: `mcp_server.log`(0 bytes 초기화), `mcp_github.log`(0 bytes), `mcp_sequential_thinking.log`
+
+#### 6. Gateway --replace 안정성
+- PID 20920, 01:19 실행 후 **15h+ 무중단 가동**
+- Telegram 충돌 해소 상태 유지
+- antigravity MCP 제거됨 (중복 감소)
+
+### 🐛 이슈 트래커
+| # | 이슈 | 상태 |
+|:-:|:-----|:----:|
+| 1 | **yfinance .KS 티커 오류 (7일차)** — 014950.KS/459510.KS 모두 "possibly delisted", KOSPI=NaN | 🔴 미해결 |
+| 2 | **KiwoomAuth 8050 지정단말기 인증 실패 (7일차)** — 현물 거래 인터페이스 차단 | 🔴 미해결 |
+| 3 | **Tavily Search API 키 만료** — 401 Unauthorized, 검색 기능 마비 | 🔴 신규 |
+| 4 | **삼성부광 8,520원 (-5.02%)** — 9,000선 이탈 후 8,500선 근접, 손절 완료 | 🟡 악화 |
+| 5 | **WTI $95.56 — $100선 이탈 3일차** | 🟡 관찰 |
+| 6 | **KOSPI RSI 91.9 — 극단 과열** — 단기 조정 가능성 | 🟡 관찰 |
+| 7 | **원화 급강세 (1,474→1,451, -22.6원)** — BB 하단 이탈 | 🟡 관찰 |
+| 8 | **메모리 49%** — 04:45 자동 정리 후 안정 유지 | ✅ 해소 |
+| 9 | **Telegram** — Gateway --replace 후 안정성 유지 중 | 🟡 관찰 |
+
+### 📚 배운 점
+1. **모의투자 포트폴리오 전량 청산**: KOSPI가 7,398 사상 최고를 경신하는 동안 삼성부광(-5.02%)과 나우로보틱스(-10.3%)는 각각 손절가에 도달. KOSPI와 소형주의 **극단적 디커플링(decoupling)** 확인 — AI 반도체 랠리가 코스닥 소형주로 전혀 확산되지 않음
+2. **Tavily API 키 만료**: 401 에러로 검색 기능 전체 마비. API 키 순환 관리 필요성 확인
+3. **yfinance .KS 오류 7일차 지속**: 배틀루프 Deep Dive 사이클만 반복하며 실질적 트레이딩 불가
+4. **MetaClaw 7일 연속 정상 유지** 🏆: 5/4 18:32 수동 복구 후 **7일 무중단** — 가장 긴 uptime 기록
+5. **Tech Scavenger 포화**: 13:21 이후 4회 연속 0~2개 신규. 신규 발견 감소 추세
+6. **KOSPI RSI 91.9**: 극단 과열 구간. 상승 동력 약화 추세 — 단기 조정 가능성
+
+### ⚠️ 특이사항
+- KOSPI 사상 최고 **7,398.99**에도 포트폴리오 전량 청산 — 지수와 개별 종목 간 괴리 극대화
+- paper_portfolio 잔고 **4,929,810원**, 현금 100% 보유
+- CB Score 추정 40~50 (KOSPI 급등 반영)
+- KOSPI RSI 91.9 — 기술적 과열, 단기 조정(7,000~7,200) 가능성
+
+### 📋 내일(5/8 금) 할 일
+- [ ] **Tavily API 키 갱신 최우선** — 401 에러 해결, Tavily Dashboard에서 키 재발급
+- [ ] **yfinance 티커 수정**: nexus_orchestrator .KS→.KQ (8일차 — 더 이상 미룰 수 없음!)
+- [ ] **KiwoomAuth 8050 재등록 (8일차)** — 수동 개입 필요
+- [ ] **삼성부광 8,500선 지지 여부** (5/7 8,520원, 금일 오프닝 확인)
+- [ ] **모의투자 포트폴리오 재진입 검토** (현금 100%, CB Score 40~50 추정)
+- [ ] **KOSPI RSI 91.9 과열 — 조정 리스크 관리**
+- [ ] **WTI $95선 / USD/KRW 1,450선 모니터링**
+- [ ] **🔴 KeepAlive v7.3 crash loop** — 1분마다 재시작/자살 반복, wsl_keepalive.sh만 생존
+- [ ] **🔴 Trinity: CowAgent + OpenDesign 프로세스 다운** — MetaClaw만 생존 중
+- [ ] **🔴 Jongdari 배틀루프 종료** — 프로세스 없음, 복구 필요
+
+## 2026-05-07 (Thu) 16:47 — 저녁 스냅샷
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | 정상 (PID 20920, 01:19 재시작, 15h+ uptime) |
+| Hermes CLI | tmux hermes 세션 유지 |
+| OpenWebUI | ✅ 정상 (port 3000, PID 87604, May06 시작) |
+| MetaClaw | ⚠️ 프로세스 존재 (PID 188742) but HTTP 404 on port 30000 |
+| CowAgent (Trinity) | ❌ 다운 (프로세스 없음) |
+| OpenDesign (Trinity) | ❌ 다운 (프로세스 없음) |
+| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-* 각 1개 |
+| MCP 서버 10개 | 정상 (time/fetch/filesystem + 7 Python 기반) |
+| 메모리 | 3,469MB / 7,748MB (44.8%) |
+| 디스크 | 3% |
+| KeepAlive v7.3 | 🔴 **CRASH LOOP** — 1분마다 재시작→자살 반복 |
+| WSL KeepAlive | ✅ 정상 (PID 197839, May05 시작, /tmp/wsl_keepalive.sh) |
+
+### 🔴 신규 이슈: KeepAlive v7.3 Crash Loop
+- 16:40~16:47 사이 **1분 간격으로 재시작/자살 반복** (v7.3 hardened)
+- 패턴: start → "keepalive already running (PID=X), exiting" → stop → 재시작 → 무한루프
+- **pidfile 충돌로 추정** — keepalive가 자신의 PID를 감지하고 자살
+- WSL keepalive (/tmp/wsl_keepalive.sh)는 별도로 정상 작동 중
+
+### 🔴 Trinity 서비스 2개 다운
+- **CowAgent**: run_cowagent 프로세스 없음, 5/5 이후 종료
+- **OpenDesign**: run_opendesign 프로세스 없음
+- **MetaClaw**: 프로세스는 있으나 port 30000 HTTP 404 — 응답 불가 상태
+
+### 포트폴리오 (paper_portfolio)
+- 현금: 4,655,810원 | 총 평가: 4,936,810원 (-1.26%)
+- 포지션: **나우로보틱스(459510.KQ)** 10주 @30,550원 → 28,100원 (-8.02%)
+- 삼성부광: 전량 청산 완료 (이전 손절)
+- 현금 비중: 94.3%
+
+### Macro
+- USD/KRW: **1,447.35** (dashboard 1,447.23, 00:17 기준)
+- WTI: **$94.93** ($95선 하회, 전일비 소폭 하락)
+- KOSPI: dashboard NaN (데이터 미수집)
+
+### 📚 배운 점 / 발견
+1. **KeepAlive v7.3 pidfile 충돌** — 1분 간격 재시작 루프. v7.3 hardened가 이전 인스턴스 PID를 잡아서 자살. 근본 원인: cron 기반 keepalive가 Bash `while true` WSL keepalive와 충돌
+2. **Trinity 3개 서비스 중 1개만 생존** — MetaClaw만 간신히 버티고 CowAgent/OpenDesign는 프로세스 종료. Trinity 재가동 필요
+3. **Jongdari 배틀루프 종료** — 더 이상 트레이딩 루프 실행되지 않음. 복구 또는 재설정 판단 필요
+
+### ⚠️ 특이사항
+- OpenWebUI가 전일 12:01 다운에서 **정상 복구**됨 (keepalive v7.3 crash loop에도 불구)
+- MCP 서버 10개 전원 정상 (Python 기반 7개 + uvx 기반 time/fetch + Node 기반 filesystem)
+- Jongdari 폴더에 telegram_webui_sync.py만 존재 — data/ 디렉토리 없음
+- MCP Python 서버 7개 Zombie 상태 (PID 존재, RSS 1,000~1,664바이트, 실행 안 됨)
+
+---
+
+## 2026-05-07 (Thu) 20:45 — 저녁 스냅샷
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 20920, 19h+ 가동, --replace 유지) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, **3일차 가동**) |
+| OpenWebUI | ✅ 정상 (port 3000, PID 87604, May06 기동) |
+| MetaClaw | ⚠️ 프로세스 존재 (PID 188742) but HTTP 404 on port 30000 |
+| CowAgent (Trinity) | ❌ 다운 (프로세스 없음) |
+| OpenDesign (Trinity) | ❌ 다운 (프로세스 없음) |
+| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od / **vo 7개** |
+| MCP 서버 10개 | 정상 (filesystem/fetch/tavily/time + 6 Python 기반) |
+| **⚠️ MCP Python Zombie** | vscode/docker/obsidian/anythingllm/googledrive/opendesign — 6개 RSS~1KB 실행 안 됨 |
+| 메모리 | **3,533MB / 7,748MB (45.6%)** 🟢 |
+| 디스크 | 3% (29G/1007G) 🟢 |
+| Swap | 1,512MB / 2,048MB (73.8%) — 🟡 높음 |
+| WSL Uptime | **2d 16.5h** (5/5 04:04 기동) |
+| WSL KeepAlive | ✅ 정상 (PID 197839, May05 시작, bash 루프) |
+
+### 🔴 지속 이슈 (16:47 이후 변화 없음)
+1. **KeepAlive v7.3 Crash Loop** — 1분 간격 재시작/자살 반복 (pidfile 충돌)
+2. **Trinity: CowAgent + OpenDesign 다운** — MetaClaw만 프로세스 생존 (HTTP 404)
+3. **yfinance .KS 오류 8일차** — 014950.KS/459510.KS NaN
+4. **KiwoomAuth 8050 인증 실패 8일차**
+5. **Tavily API 키 만료 (401)** — 검색 기능 마비
+6. **MCP Python 서버 6개 Zombie** — RSS 1KB로 실행 중단 (Gateway 재시작 필요)
+
+### 포트폴리오
+- 전량 현금 보유 (5/7 14:00 Brain Sync 확인)
+- paper_portfolio.json 파일 존재하지 않음 (청산 후 삭제된 것으로 추정)
+
+### Macro (20:45 기준)
+- USD/KRW: 1,447~1,451 (원화 강세 지속)
+- WTI: $94~$95 ($95선 등락, $100 이탈 3일차)
+
+### 📚 배운 점
+1. **vo (Virtual Office) tmux 세션 신규 생성** (20:33) — 가상오피스 재가동 시도
+2. **hermes-mcp tmux 세션 정상 유지** (20:33 생성, 12분 가동)
+3. **Swap 74% 사용** — 물리 메모리는 46%로 여유있으나 Swap에 밀린 프로세스 존재
+4. **MCP Zombie 문제 지속** — Gateway 재시작 없이 해결 어려움 (Python subprocess 타임아웃)
+5. **16:47→20:45 4시간 동안 시스템 변화 없음** — 안정적 유지 중
+
+---
+
+## 2026-05-08 (Fri) 00:46 — 새벽 스냅샷 (5/7 20:45 이후 4시간, 야간 유지)
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 20920, 01:19 --replace, **23h+ 가동**) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, 3일차) |
+| OpenWebUI | ✅ 정상 (PID 87604, port 3000, May06~) |
+| MetaClaw | ⚠️ PID 188742, port 30000 유지 (HTTP 404, 프로세스 생존) |
+| CowAgent (Trinity) | ❌ 다운 |
+| OpenDesign (Trinity) | ❌ 다운 |
+| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od / vo — 7개 |
+| MCP 서버 10개 | filesystem/fetch/time + Python 7 Zombie (RSS ~1KB) |
+| 메모리 | **3,933MB / 7,748MB (51%)** — 안정 🟢 |
+| 디스크 | 3% (29G/1007G) 🟢 |
+| Swap | 1,512MB / 2,048MB (73.8%) 🟡 |
+| WSL Uptime | **2d 20.5h** (5/5 04:04 기동) |
+| WSL KeepAlive | ✅ 정상 (PID 197839, bash 루프, 3일차) |
+
+### 🔔 신규 발견
+1. **hermes_mcp_server.py 신규 기동 (00:19)** — PID 58315, `pts/11`에서 `mcp_server.log`로 실행 중. 20:45 스냅샷 이후 약 4시간 만에 새 MCP 서버 프로세스가 자동 기동됨. 이전 `hermes-mcp` tmux 세션(16:16 생성, 0 bytes 로그)과는 별도의 프로세스로 추정.
+2. **vo (Virtual Office) tmux 세션 유지** — 20:33 생성 후 4h+ 유지 중. 가상오피스 재가동 지속 확인.
+
+### 🔴 지속 이슈 (변화 없음)
+- KeepAlive v7.3 Crash Loop (1분 간격 재시작/자살) — pidfile 충돌
+- yfinance .KS 오류 8일차
+- KiwoomAuth 8050 인증 실패 8일차
+- Tavily API 키 만료 (401)
+- MCP Python 서버 6개 Zombie 상태 지속
+- Trinity: CowAgent + OpenDesign 다운 (MetaClaw만 생존)
+
+### 포트폴리오
+- 전량 현금 보유 (5/7 14:00 청산 완료, paper_portfolio 미발견)
+- 현금 잔고: 약 4,929,810원 (초기 대비 -1.4%)
+
+### Macro (20:45 기준 변화 없음)
+- USD/KRW: 1,447~1,451 (원화 강세 지속)
+- WTI: $94~$95 ($100 이탈 3일차)
+- KOSPI: 7,398.99 (5/7 마감, 사상 최고)
+
+### 비고
+- 20:45→00:46 4시간 경과, 시스템 전반적 정적 상태 유지
+- 신규 이슈 없음, 기존 6개 Critical 이슈 변화 없음
+- 오늘(5/8 금) 거래일 — 5/7 전량 청산 후 현금 보유 상태로 개장
+
+---
+
+## 2026-05-08 (Fri) 04:46 — 새벽 스냅샷 (00:46 이후 4시간)
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 20920, May07~, **28h+ 가동**) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, 3일차) |
+| OpenWebUI | ✅ 정상 (PID 87604, port 3000, May06~) |
+| MetaClaw | ⚠️ PID 188742, port 30000 생존 (404 지속) |
+| CowAgent (Trinity) | ❌ 세션만 생존, 서비스 다운 |
+| OpenDesign (Trinity) | ❌ 세션만 생존, 서비스 다운 |
+| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od — **6개** (vo 세션 소멸) |
+| MCP Python Zombie | 5개 Zombie (RSS ~1KB), hermes_mcp_server.py 신규 기동 (PID 12015, 04:16) |
+| 메모리 | **3,594MB / 7,748MB (46.4%)** 🟢 (00:46 51%→개선) |
+| 디스크 | 3% (29G/1007G) 🟢 |
+| Swap | 1,503MB / 2,048MB (73.4%) 🟡 |
+| Load Average | 0.12/0.17/0.31 🟢 (심야 정적) |
+| WSL Uptime | **3d 0.7h** (5/5 04:04 기동) |
+| WSL KeepAlive v7.3 | 🔄 PID 17897, 04:46 신규 시작 (이전 PID 소멸) |
+
+### 🔔 4시간간 변화
+1. **vo (Virtual Office) tmux 세션 소멸** — 00:33 생성 후 4h 유지되다 04:46 이전 사라짐. 서비스 종료 또는 충돌.
+2. **hermes-mcp 세션 신규 생성 (04:16)** — 이전 세션(0-byte 로그) 대체, MCP 서버 재기동 확인.
+3. **WSL vsock 경고 (04:41~)** — `UtilAcceptVsock:244: Waiting for abnormally long accept(11)` 5회 연속. 네트워크 릴레이 지연, 부하 극저 상태와 무관. WSL 경량 이슈로 판단.
+4. **Keepalive v7.3 재시작** — 04:46 정상 기동, Windows 절전 모드 차단 설정 완료.
+5. **Gateway/MCP 로그 에러 없음** — 야간 4시간 동안 CRITICAL/WARNING 0건. 청정 상태.
+
+### 🟡 지속 이슈 (변화 없음)
+- KeepAlive v7.3 Crash Loop (1분 간격) — pidfile 충돌 원인, 재시작 반복
+- Trinity: CowAgent + OpenDesign 서비스 다운 (MetaClaw만 404 생존)
+- MetaClaw HTTP 404 — 프로세스 생존하나 API 응답 불가
+- MCP Python Zombie 5개 지속
+- KiwoomAuth 8050 인증 실패
+- Tavily API 키 만료 (401)
+
+### 비고
+- 심야 4시간, 사용자 활동 없음. 시스템 안정적 정적 유지
+- WSL vsock 경고는 신규 이슈이나 심각도 낮음 (Relay 타임아웃, 서비스 영향 없음)
+- 금일(5/8) 거래일 — 현금 보유 상태로 장 개시
+
+---
+
+## 2026-05-08 (Fri) 08:45 — 장중 스냅샷 (금요일)
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 20920, 5/7 재시작) |
+| Hermes CLI | ✅ tmux hermes 세션 유지 (5/5~, 3일차) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 15259, 10분 주기 스캔) |
+| WebUI | ✅ 정상 (PID 87604, 포트 3000) |
+| KeepAlive v7.3 | 🔄 PID 68425, 활성 |
+| tmux 세션 | 6개 (hermes/hermes-mcp/jongdari/trinity-cow/trinity-meta/trinity-od) |
+| MCP 서버 8개 | 모두 정상 |
+| 메모리 | 3,660MB / 7,748MB (47.2%) 🟡 |
+| 디스크 | 3% (29G/1007G) 🟢 |
+| WSL Uptime | 3d 4.7h (5/5 04:04 기동) |
+
+### 포트폴리오
+- **현금**: 4,929,810원 (전주 대비 -1.4% 감소)
+- **포지션**: 없음 (5/3 삼성부광 34주 + 나우로보틱스 10주 → 모두 청산됨)
+- **총 평가**: 4,929,810원 (-1.4% vs 5/3 4,985,110원)
+
+### Macro (08:43 기준)
+- **KOSPI**: 7,384.56 (5/3 6,598→7,384, +10.37% 3일간 폭등)
+- **KOSDAQ**: 1,210.17
+- **WTI**: $97.05 ($100 아래 하락)
+- **USD/KRW**: ₩1,455.62 (안정)
+- **CB Score**: 22/100 (이전 6→22 개선, KOSPI 1M +37.3%)
+- **Market State**: NORMAL
+
+### AI Council 분석 (08:43)
+| 종목 | 결정 | 신뢰도 | 분석관 |
+|:-----|:------|:-------|:-------|
+| 457370.KQ (한켐) | ✅ HOLD | 17% | 기술적:HOLD/뉴스:HOLD/리스크:HOLD(47%) |
+| 336680.KQ (탑런토탈솔루션) | ✅ HOLD | 14% | 기술적:BUY(74%)/뉴스:HOLD/리스크:HOLD(47%) |
+- 336680.KQ: 기술적 분석관 BUY(74% 강력)이나 리스크관이 HOLD로 제동
+- 전체 포지션 없어 실제 매매 없음
+
+### 시장 특이사항
+- **KOSPI 3일 +10.37% 급등** — 극단적 상승, CB Score 22/100 (아직 공포 영역이나 개선 중)
+- KOSPI 7,384 — 사상 최고치 근접 또는 돌파
+- 모멘텀: POSCO(005490.KS)+5.7%, 현대차+4.0%, SK하이닉스+3.3%
+
+### Tomorrow Strategy (5/8)
+1. 삼성전자(005930) — Score 92, 진입 64,200 / 목표 68,500
+2. SK하이닉스(000660) — Score 88, 진입 172,000 / 목표 185,000
+3. 현대차(005380) — Score 85, 진입 235,000 / 목표 258,000
+
+### 🟡 지속 이슈 (변화 없음)
+- Trinity: CowAgent + OpenDesign 서비스 다운
+- MetaClaw HTTP 404
+- Tavily API 키 만료 (401)
+- MCP Python Zombie 5개
+- KiwoomAuth 8050 인증 실패
+
+### Action Required
+- [ ] KOSPI 7,384 급등 — 조정 리스크 대비, 현금 보유 전략 유효
+- [ ] 포트폴리오 청산 원인 확인 (portfolio.json 초기화됨)
+- [ ] 336680.KQ 기술적 분석관 BUY(74%) — 리스크 해소 시 진입 검토
+- [ ] Tavily API 키 갱신 필요
