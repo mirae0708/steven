@@ -1,7 +1,7 @@
 ---
-|_Documents: 62 | Last sync: 2026-05-08 10:03_
+|_Documents: 8 | Last sync: 2026-05-09 10:01_
 created: 2026-05-04 16:30
-|updated: 2026-05-07 14:30
+|updated: 2026-05-08 22:30
 type: index
 category: AI_Agents
 ---
@@ -10,7 +10,20 @@ category: AI_Agents
 
 This index catalogs research papers, tools, and frameworks related to AI agents, autonomous systems, and multi-agent orchestration.
 
-## Latest Additions (2026-05-07 12:30)
+## Latest Additions (2026-05-08 22:30)
+
+### 🟢 New — Applied in This Cycle (EVO 2026-05-08 22:30)
+
+| Document | Source | Relevance | Action |
+|----------|--------|-----------|--------|
+|| [[When No Benchmark Exists Validating Comparative LLM Safety _20260508_2220\|When No Benchmark Exists — Benchmarkless Safety Scoring]] | arXiv 2605.06652 ⭐ | Instrumental-validity chain for LLM safety scoring without ground-truth labels | ✅ ABSORBED — benchmarkless_safety_scoring skill added — pre/post-evolution safety gate |
+|| [[Verifier-Backed Hard Problem Generation for Mathematical Rea_20260508_2220\|Verifier-Backed Hard Problem Generation]] | arXiv 2605.06660 ⭐ | Verifier-backed generation loop for creating valid, challenging, novel problems | ✅ ABSORBED — verifier_backed_problem_generation skill added — self-testing & benchmark creation |
+|| [[EMO Pretraining Mixture of Experts for Emergent Modularity_20260508_2220\|EMO: Emergent Modularity from MoE Pretraining]] | arXiv 2605.06663 ⭐ | MoE experts naturally specialize into domains without explicit routing labels | ✅ ABSORBED — moe_module_architecture_knowledge skill added — emergent skill clustering |
+|| [[UniPool A Globally Shared Expert Pool for Mixture-of-Expert_20260508_2220\|UniPool: Globally Shared Expert Pool for MoE]] | arXiv 2605.06665 ⭐ | Cross-layer shared expert pool decouples expert count from model depth | ✅ ABSORBED — (merged into moe_module_architecture_knowledge) skill reuse across contexts |
+|| [[BAMI Training-Free Bias Mitigation in GUI Grounding_20260508_2220\|BAMI: Bias Mitigation in GUI Grounding]] | arXiv 2605.06664 | Masked Prediction Distribution for GUI element bias correction | ⏭️ SKIPPED — GUI-grounding domain-specific, no text/code agent applicability |
+|| [[Relit-LiVE-Relight-Video-by-Jointly-Learning-Environment-Vi_20260508_1200\|Relit-LiVE: Video Relighting]] | arXiv 2605.06658 | Video diffusion models as neural renderers for relighting | ⏭️ SKIPPED — computer vision, not agent-related |
+
+### Previous Batch (2026-05-07 12:30)
 
 ### 🟢 New — Applied in This Cycle (EVO 2026-05-07 12:30)
 

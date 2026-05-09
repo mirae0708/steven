@@ -410,12 +410,22 @@
     "Stock Splits": 0.0
   },
   {
+    "Date": "2026-05-07",
+    "Open": 7499.06982421875,
+    "High": 7531.8798828125,
+    "Low": 7257.89013671875,
+    "Close": 7490.0498046875,
+    "Volume": 767500,
+    "Dividends": 0.0,
+    "Stock Splits": 0.0
+  },
+  {
     "Date": "2026-05-08",
-    "Open": 7353.93994140625,
-    "High": 7404.3701171875,
-    "Low": 7318.9599609375,
-    "Close": 7390.14990234375,
-    "Volume": 180511,
+    "Open": NaN,
+    "High": NaN,
+    "Low": NaN,
+    "Close": NaN,
+    "Volume": 523091,
     "Dividends": 0.0,
     "Stock Splits": 0.0
   }

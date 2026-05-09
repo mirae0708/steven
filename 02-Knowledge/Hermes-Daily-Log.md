@@ -1415,3 +1415,118 @@
 - [ ] 포트폴리오 청산 원인 확인 (portfolio.json 초기화됨)
 - [ ] 336680.KQ 기술적 분석관 BUY(74%) — 리스크 해소 시 진입 검토
 - [ ] Tavily API 키 갱신 필요
+
+---
+
+## 2026-05-09 (Sat) 00:45 — 토요일 새벽 스냅샷 (주말, 휴장)
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 20920, 5/7 01:19 --replace, **47h+ 가동**) |
+| Hermes CLI | ✅ tmux hermes 세션 유지 (5/5~, 4일차) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, 4일차) |
+| OpenWebUI | ✅ 정상 (PID 87604, port 3000, 5/6~) |
+| MetaClaw | ⚠️ PID 188742 생존 (port 30000, 404 지속, 8일차) |
+| CowAgent (Trinity) | ❌ 다운 |
+| OpenDesign (Trinity) | ❌ 다운 |
+| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-* — 6개 |
+| MCP 서버 | filesystem/fetch/tavily/time + Python 6종 (Zombie) |
+| MCP Python Zombie | 6개 RSS ~1KB, 실행 중단 상태 |
+| 메모리 | **3,730MB / 7,748MB (48%)** 🟢 안정 |
+| 디스크 | 3% (29G/1007G) 🟢 |
+| Swap | 1,503MB / 2,048MB (73.4%) 🟡 |
+| WSL Uptime | **3d 20.7h** (5/5 04:04 기동) |
+| WSL KeepAlive | ✅ 정상 (bash 루프, 4일차) |
+
+### 📊 Macro (KOSPI_data.json 기준)
+| 지표 | 값 | 비고 |
+|:-----|:----|:------|
+| KOSPI | **7,490.05** (5/7 종가, +1.43%) | 사상 최고 경신, 5/8 NaN (휴장/미수집) |
+| KOSDAQ | 1,199 (5/7) | 1,200선 이탈 |
+| USD/KRW | 1,447~1,451 | 원화 강세 지속 |
+| WTI | $94~$97 | $100 이탈 5일차 |
+
+### 포트폴리오
+- **현금 100%**: 4,929,810원 (초기자본 대비 -1.4%)
+- **포지션**: 없음 (5/7 전량 청산 완료)
+- 삼성부광(014950.KQ): 5/7 장중 8,520원까지 하락 후 손절
+- 나우로보틱스(473980.KQ): 5/7 27,400원 손절
+
+### 🐛 지속 이슈 (변화 없음, 5/7 08:45 이후)
+| # | 이슈 | 상태 |
+|:-:|:-----|:----:|
+| 1 | **yfinance .KS 티커 오류 (9일차)** — KOSPI=NaN, 종목 데이터 미수집 | 🔴 미해결 |
+| 2 | **KiwoomAuth 8050 지정단말기 인증 실패 (9일차)** | 🔴 미해결 |
+| 3 | **Tavily API 키 만료 (401)** — 검색 기능 마비 | 🔴 미해결 |
+| 4 | **MCP Python Zombie 6개** — RSS 1KB, Gateway 재시행 필요 | 🔴 지속 |
+| 5 | **Trinity: CowAgent + OpenDesign 서비스 다운** | 🔴 지속 |
+| 6 | **MetaClaw HTTP 404** — 프로세스 생존하나 API 응답 불가 | 🟡 지속 |
+| 7 | **Swap 73.4% 사용** — 물리 메모리는 48% 여유 | 🟡 관찰 |
+
+### 비고
+- 5/7 08:45→5/9 00:45, 약 40시간 경과. 시스템 정적 상태 유지.
+- KOSPI 5/7 마감 7,490.05 (08:45 스냅샷의 7,384→7,490으로 상향 조정) — KOSPI_data.json 갱신됨
+- 5/8(금) 데이터 NaN — 휴장 또는 데이터 미수집
+- KOSPI RSI 91.9 극단 과열에도 5/7 추가 상승 마감 (7,384→7,490)
+- 주말(5/9~5/10) 휴장, 다음 거래일 5/11(월)
+- 기록학 내용: 기존 6개 Critical 이슈 전부 미해결 상태로 주말 진입
+
+---
+
+## 2026-05-09 (Sat) 04:45 — 토요일 새벽 스냅샷 (주말, 00:45 이후 4시간)
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 20920, 5/7 01:19 --replace, **51h+ 가동**, 연속 uptime 경신) |
+| Hermes CLI | ✅ tmux hermes 세션 유지 (5/5~, 4일차) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, 5/5~, **4일차**, CPU 79분 누적) |
+| OpenWebUI | ✅ 정상 (PID 87604, port 3000, 5/6~, 3일차) |
+| MetaClaw (Trinity) | ⚠️ PID 188742 생존 (port 30000, 404 지속, 5/4 복구 후 8일차) |
+| **CowAgent MCP 신규** | ✅ PID 83776, 02:01 기동 — cowagent MCP server tool |
+| **MetaClaw MCP 신규** | ✅ PID 84102, 02:02 기동 — metaclaw MCP server tool |
+| CowAgent (Trinity 서비스) | ❌ 세션만 생존 |
+| OpenDesign (Trinity) | ❌ 세션만 생존 |
+| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od — **6개 유지** |
+| MCP 서버 | filesystem×6 / time×5 / fetch×5 — MCP 중복 증가 |
+| 메모리 | **4,200MB / 7,748MB (54%)** 🟢 (00:45 48%→소폭 상승, 정상 범위) |
+| 디스크 | 3% (29G/1007G) 🟢 |
+| Swap | 1,312MB / 2,048MB (64%) 🟡 (00:45 73.4%→64% 개선) |
+| WSL Uptime | **4일 35분** (5/5 04:04 기동) |
+| WSL KeepAlive | ✅ 정상 (bash 루프, 4일차) |
+
+### 🔔 00:45→04:45 변화점
+1. **CowAgent/MetaClaw MCP 서버 신규 기동** (02:01~02:02) — `~/.hermes/mcp-tools/cowagent/server.py` 및 `metaclaw/server.py`가 각각 기동되어 MCP tool로 등록됨. 이전에는 없던 신규 프로세스로, Trinity 서비스 복구 시도의 일환으로 추정.
+2. **Swap 73.4%→64% 개선** — 1,503MB→1,312MB로 약 191MB 해소. 물리 메모리는 안정적 유지.
+3. **Gateway 51h+ uptime 경신** — 5/7 01:19 --replace 재시작 후 연속 가동 기록 갱신 중.
+4. **야간 4시간, 신규 Critical 이슈 없음** — 시스템 전반 정적 상태 유지.
+
+### 📊 Macro (00:45 기준 변화 없음)
+| 지표 | 값 | 비고 |
+|:-----|:----|:------|
+| KOSPI | **7,490.05** (5/7 종가) | 사상 최고 유지, 주말 휴장 |
+| KOSDAQ | 1,199 (5/7) | 1,200선 이탈 |
+| USD/KRW | 1,447~1,451 | 원화 강세 지속 |
+| WTI | $94~$97 | $100 이탈 5일차 |
+
+### 포트폴리오
+- **현금 100%**: 4,929,810원 (초기자본 대비 -1.4%)
+- **포지션**: 없음 (5/7 전량 청산 완료)
+- 다음 거래일: 5/11(월)
+
+### 🐛 지속 이슈 (00:45 이후 변화 없음)
+| # | 이슈 | 상태 |
+|:-:|:-----|:----:|
+| 1 | **yfinance .KS 티커 오류 (9일차)** — KOSPI=NaN, 종목 데이터 미수집 | 🔴 미해결 |
+| 2 | **KiwoomAuth 8050 지정단말기 인증 실패 (9일차)** | 🔴 미해결 |
+| 3 | **Tavily API 키 만료 (401)** — 검색 기능 마비 | 🔴 미해결 |
+| 4 | **MCP Python Zombie 5~6개** — RSS ~1KB 실행 중단 | 🔴 지속 |
+| 5 | **Trinity: CowAgent + OpenDesign 서비스 다운** | 🔴 지속 |
+| 6 | **MetaClaw HTTP 404** — 프로세스 생존하나 API 응답 불가 | 🟡 지속 |
+
+### 비고
+- 주말(5/9 토~5/10 일) 휴장, 다음 거래일 5/11(월)
+- Gateway 51h+ 무중단 기록, Jongdari 배틀루프 4일 연속 정상
+- CowAgent/MetaClaw MCP tool 신규 기동 — Trinity 생태계 복원 시도로 보이나 Trinity 서비스 자체는 미복구
+- 기록학 내용: 6개 Critical 이슈 전부 주말로 이월

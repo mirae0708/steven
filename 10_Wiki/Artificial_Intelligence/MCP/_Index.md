@@ -1,5 +1,5 @@
 ---
-_Documents: 3 | Last sync: 2026-05-08 10:03_
+_Documents: 0 | Last sync: 2026-05-09 10:01_
 type: category_index
 category: Artificial_Intelligence/MCP
 updated: 2026-05-07 00:30
