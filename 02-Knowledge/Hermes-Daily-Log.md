@@ -1634,3 +1634,37 @@
 - **Fix applied (v1.2)**: Early-abort on DNS failure — if DNS error detected, skip remaining queries instead of timing out on each one sequentially
 - **Script fixed**: `~/.hermes/scripts/hermes_tech_scavenger.py` — `dns_ok` flag in `scavenge_github()` and `scavenge_arxiv()`
 - **Skill updated**: `devops/hermes-tech-scavenger` — DNS failure section added
+
+## 2026-05-10 (Sun) 20:45 — 주말 저녁 스냅샷
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | 정상 (PID 298, 15:44 재시작) |
+| Hermes CLI | tmux hermes 세션 유지 |
+| MetaClaw | 정상 (port 30000, PID 3626) |
+| Jongdari 배틀루프 | 정상 — 10분 주기 사이클 완료 |
+| WebUI | 정상 (port 3000, PID 307) |
+| MCP 서버 5개 | 모두 정상 |
+| 메모리 | 3,641MB / 7,748MB (47%) |
+| 디스크 | 26G/1007G (3%) |
+| Gateway Uptime | ~5시간 (15:44 재시작) |
+
+### 포트폴리오 (Dashboard 5/7 기준 — 미갱신)
+- 현금: 4,655,810원 | 총 평가: 4,936,810원 (-1.26%)
+- 나우로보틱스(459510.KQ): 10주 @30,550원 → 28,100원 (-8.02%)
+- **참고**: 실제 포지션은 5/8(금) 청산 후 100% 현금(4,929,810원) 상태로 확인됨. Dashboard 갱신 필요.
+
+### 시장 (5/8 마감 기준 — 휴장)
+- KOSPI: 7,498.00 (RSI 91.7, 과열) | KOSDAQ: 1,207.72
+- USD/KRW: 1,461.48 (중립) | WTI: $95.42 (중립, 주간 -10%)
+- 삼성부광: 8,980원 (+6.02%) | 에이치엘사이언스: 17,700원 (+4.49%)
+
+### 지속 이슈 (11일차)
+- 6건 미해결: KiwoomAuth 8050, yfinance NaN, Tavily API 만료, MCP 좀비, MetaClaw 404, CowAgent/OpenDesign 다운
+- Dashboard 3일 이상 미갱신 (마지막: 5/7 00:17)
+
+### 주말 요약
+- DNS 장애(fix v1.2) 적용 확인. Tech Scavenger 정상화.
+- Skill 라이브러리 47개 유지 (신규 흡수 없음)
+- 월요일(5/11) 개장 준비: KOSPI 7,500 고점 테스트 관찰, Dashboard 갱신
