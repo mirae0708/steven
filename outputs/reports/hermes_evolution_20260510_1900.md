@@ -1,0 +1,116 @@
+---
+timestamp: 2026-05-10 19:00
+type: evo_report
+cycle: 2026-05-10_1900
+status: idle
+---
+
+# 🧬 Hermes Auto Evolution Report — 2026-05-10 19:00
+
+## Overview
+
+| Metric | Value |
+|--------|-------|
+| New documents scanned | **1** (solidity-cot-auditor — already assessed at 18:30, not skill-worthy) |
+| New MCP reports | **2** (올리브영 2026인기상품, 2026년4월증시핫이슈 — market/culture research, not technical skill material) |
+| New skills absorbed | **0** |
+| Skills cumulative | **47** (unchanged) |
+| Last skill absorption | 2026-05-09 06:30 |
+| Brain Sync 19:00 | ✅ 12 arXiv + 10 GitHub — all duplicates, 0 saved |
+| Cycle duration | ~2 min |
+| Status | 🟢 **IDLE — Sunday evening, no new knowledge to absorb** |
+
+---
+
+## 1단계: 지식 흡수 스캔
+
+### 10_Wiki/ 폴더 — 신규 파일 분석 (since 18:30 evo cycle)
+
+| File | Type | Assessment |
+|------|------|-----------|
+| `MCP-멀티검색-20260510_1840.md` | MCP Auto Research (올리브영) | 📊 Market/culture research report. Not technical knowledge for skill absorption. |
+| `MCP-멀티검색-20260510_1850.md` | MCP Auto Research (증시) | 📊 Market research report (4월 증시 핫이슈). Not technical knowledge for skill absorption. |
+
+**Assessment**: Both MCP 멀티검색 reports are consumer-facing market research outputs from the `auto_research_agent.py` pipeline. They document K-beauty trends (올리브영 포켓몬 콜라보, 초개인화 뷰티 컨시어지) and stock market sentiment (중동 휴전, 반도체 랠리, KOSPI 7,500). These are **not skill-worthy technical knowledge** — they are business intelligence reports. The pipeline architecture (Playwright + Sequential Thinking + Hermes AI) is already documented in the existing `mcp-auto-research-agent` skill.
+
+### Brain Sync 19:00 Result
+
+| Source | Found | Saved | Note |
+|--------|-------|-------|------|
+| arXiv papers | 12 | 0 | All duplicates |
+| GitHub trending | 10 | 0 | All duplicates |
+| Wiki documents total | — | — | **42** (unchanged) |
+
+### Daily Log Check
+
+**Last entry** (line 1636): Tech Scavenger DNS failure at 17:20 — fix applied (v1.2 early-abort). Already logged by 18:30 cycle. No new entries since.
+
+### Ongoing Critical Issues (all unchanged, day 11)
+
+| # | Issue | Duration | Status |
+|:-:|:------|:---------|:-------|
+| 1 | yfinance .KS ticker error (KOSPI=NaN) | 11 days | 🔴 Unresolved |
+| 2 | KiwoomAuth 8050 auth failure | 11 days | 🔴 Unresolved |
+| 3 | Tavily API key expired (401) | ~5 days | 🔴 Unresolved |
+| 4 | MCP Python Zombie 5-6 instances | ~5 days | 🔴 Unresolved |
+| 5 | Trinity: CowAgent+OpenDesign down | ~5 days | 🔴 Unresolved |
+| 6 | MetaClaw HTTP 404 | ~6 days | 🔴 Unresolved |
+
+---
+
+## 2단계: 메모리/스킬 통합
+
+### No new skills this cycle
+
+No new technical knowledge to absorb. The two MCP reports are market research, and the solidity-cot-auditor was already assessed as not skill-worthy. Skills library remains at **47**.
+
+---
+
+## 3단계: 진화 리포트 — System State & Key Insights
+
+### System Health (19:00 KST snapshot)
+
+| Component | Status | Details |
+|-----------|--------|---------|
+| Hermes Gateway | ✅ OK | Record uptime continuing (~3d 18h+) |
+| Memory | ✅ ~10% | ~778MB/7.6Gi |
+| Disk | ✅ 3% | 26G/1007G |
+| Dashboard JSON | 🔴 Stale | Last update: 5/7 — **3+ days stale** |
+| Brain Sync | ✅ Normal | 19:00 ran cleanly — all duplicates, no errors |
+| Tech Scavenger | ⚠️ Fixed | v1.2 early-abort applied for DNS failure resilience |
+
+### Market State (5/8 Definitive Close — Last Trading Day)
+
+| Indicator | Value | Technical State |
+|-----------|-------|-----------------|
+| **KOSPI** | **7,498.00** | RSI 91.7 과매수, BB% 99.7% 상단 근접, 7,500선 목전 |
+| **KOSDAQ** | 1,207.72 | RSI 63.6 중립, BB% 69.6% |
+| **삼성부광** | 8,980원 (+6.02%) | RSI 30.2 과매도 탈출 |
+| **에이치엘사이언스** | 17,700원 (+4.49%) | RSI 34.2 과매도 탈출 |
+| **USD/KRW** | 1,461.48 | RSI 48.5 중립 |
+| **WTI Crude** | $95.42 | RSI 56.9 중립, 주간 -10.33% 폭락 후 $95선 |
+| **Portfolio** | 100% cash | 4,929,810원 ready for Monday 5/11 |
+
+### Key Insights
+
+1. 🟢 **No new knowledge in this cycle**: Brain Sync 19:00 found only duplicates. Two MCP market research reports are not skill-worthy.
+2. 🟢 **System stable**: Gateway record uptime continuing, memory 10%, disk 3%.
+3. 🟢 **Portfolio 100% cash**: Ready for Monday 5/11 open.
+4. 🟡 **Tech Scavenger DNS failure fixed** — v1.2 early-abort prevents cascading timeouts.
+5. 🔴 **Dashboard JSON stale (3+ days)**: Needs refresh with 5/8 definitive data before Monday open.
+6. 🔴 **6 critical issues at day 11**: None resolved.
+
+### Action Items for Monday 5/11
+
+| Priority | Action | Target |
+|----------|--------|--------|
+| 🥇 | Wire constraint_decay_awareness into code gen safety gate | Week of 5/11 |
+| 🥇 | Apply recursive_agent_optimization to evolution pipeline | Week of 5/11 |
+| 🥈 | Refresh hermes_dashboard.json with 5/8 definitive data | Before market open 5/11 |
+| 🥈 | Monitor Monday 5/11 open — KOSPI 7,500 test, 삼성부광 SMA20 re-entry | 5/11 09:00 KST |
+| 🥈 | Review MCP zombie root cause — Gateway --replace | 5/11 |
+| 🥉 | Renew Tavily API key | ASAP |
+
+---
+
+*Generated by Hermes Auto Evolution Engine | DeepSeek-Chat backend | Cycle 2026-05-10_1900 | Status: IDLE — Sunday evening, no new knowledge to absorb*

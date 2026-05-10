@@ -15,7 +15,13 @@ authors: Apurva Gandhi, Satyaki Chakraborty, Xiangjun Wang
 
 ## Summary
 
-We introduce Recursive Agent Optimization (RAO), a reinforcement learning approach for training recursive agents: agents that can spawn and delegate sub-tasks to new instantiations of themselves recursively. Recursive agents implement an inference-time scaling algorithm that naturally allows agents 
+We introduce Recursive Agent Optimization (RAO), a reinforcement learning approach for training recursive agents: agents that can spawn and delegate sub-tasks to new instantiations of themselves recursively. Recursive agents implement an inference-time scaling algorithm that naturally allows agents to scale compute at test time by spawning sub-agents. Key insight: RAO trains agents to make optimal spawning decisions — when to delegate, how many sub-agents to create, and how to merge results — via RL rewards that balance task completion against compute cost.
+
+## Key Takeaways
+- RAO trains recursive agents via RL to make optimal spawning decisions (when to delegate, how many sub-agents, how to merge)
+- Inference-time scaling: more sub-agents = more compute = better results on complex tasks
+- Directly relevant to Hermes delegate_task — this validates the multi-agent spawning approach with RL optimization
+- Novel approach: agent learns spawning strategy end-to-end rather than using fixed heuristics
 
 ## Original
 

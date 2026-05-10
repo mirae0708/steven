@@ -19,7 +19,9 @@ language: Python
 - 🔗 [Original](https://github.com/yaojingang/yao-open-prompts)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+- ⭐1.3k stars — 中文 AI 프롬프트 라이브러리
+- Covers work, study, content, marketing, and daily life scenarios in Chinese
+- Good reference for Chinese-language prompt engineering patterns
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

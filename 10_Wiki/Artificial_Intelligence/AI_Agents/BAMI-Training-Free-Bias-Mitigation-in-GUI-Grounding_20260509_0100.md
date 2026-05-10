@@ -19,7 +19,10 @@ authors: Borui Zhang, Bo Zhang, Bo Wang
 - 🔗 [Original](http://arxiv.org/abs/2605.06664v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+- BAMI: Training-Free Bias Mitigation for GUI Grounding agents
+- Uses Masked Prediction Distribution (MPD) to reduce bias in click/drag operations
+- Improves performance on ScreenSpot-Pro benchmark
+- Relevant to visual agent systems: improves GUI interaction accuracy without fine-tuning
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

@@ -36,3 +36,4 @@ Represents AI agent operations as a **Directed Acyclic Graph (DAG)** instead of 
 - tree_credit_assignment_memory
 - verifier_backed_problem_generation
 - multi_agent_orchestration_claude_code
+- moe_module_architecture_knowledge

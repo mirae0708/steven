@@ -19,7 +19,10 @@ authors: Yuhang Lai, Jiazhan Feng, Yee Whye Teh
 - 🔗 [Original](http://arxiv.org/abs/2605.06660v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+- Verifier-Backed Hard Problem Generation: LLMs generate challenging math problems with verifier feedback
+- Verifier ensures generated problems are valid, novel, and genuinely difficult (not solvable by trivial patterns)
+- Combined with verifier_backed_problem_generation skill — this is the research paper behind that skill
+- Key for autonomous scientific research: agents that can generate and validate their own training data
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

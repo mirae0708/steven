@@ -30,10 +30,10 @@
 - [[10_Wiki/Themes/코스닥 중소형|📊 코스닥 중소형]]
 
 ### 💵 거시경제
-- [[10_Wiki/Macros/KOSPI|📊 KOSPI (7,490)]] 🔴 5/7 확정가 (5/8 지수 NaN, 개별종목 정상거래)
-- [[10_Wiki/Macros/KOSDAQ|📈 KOSDAQ (1,199)]] 🔴 5/7 확정가 (5/8 지수 NaN)
-- [[10_Wiki/Macros/환율|💵 환율 (1,462원)]] 🟡 -0.77% 주간 (5/8 확정)
-|- [[10_Wiki/Macros/국제유가WTI|🛢️ WTI ($94.88)]] 🟡 -11.29% 주간 (5/8 확정)
+- [[10_Wiki/Macros/KOSPI|📊 KOSPI (7,498)]] 🔴 +0.11% (5/8 확정)
+- [[10_Wiki/Macros/KOSDAQ|📈 KOSDAQ (1,208)]] 🟢 +0.71% (5/8 확정)
+- [[10_Wiki/Macros/환율|💵 환율 (1,461원)]] 🟡 -0.99% 주간 (5/8 확정)
+- [[10_Wiki/Macros/국제유가WTI|🛢️ WTI ($95.42)]] 🔴 -6.70% 3일 (5/8 확정)
 
 ### 🧠 시스템
 - [[99_System/GEMINI.md|🧠 시스템 스키마 (GEMINI.md)]]

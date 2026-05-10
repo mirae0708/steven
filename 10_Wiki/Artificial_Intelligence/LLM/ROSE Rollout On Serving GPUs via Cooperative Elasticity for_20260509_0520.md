@@ -15,7 +15,7 @@ authors: Wei Gao, Yuheng Zhao, Dilxat Muhtar
 
 ## Summary
 
-Agentic reinforcement learning (RL) has emerged as a key driver for improving the multi-step reasoning and tool-use capabilities of LLMs. However, its efficiency is bottlenecked by long-tail rollouts with multi-turn environment interactions, making static GPU provisioning a poor fit: overprovisionin
+Agentic reinforcement learning (RL) has emerged as a key driver for improving the multi-step reasoning and tool-use capabilities of LLMs. However, its efficiency is bottlenecked by long-tail rollouts with multi-turn environment interactions, making static GPU provisioning a poor fit: overprovisioning wastes resources and underprovisioning stalls training. ROSE proposes cooperative elasticity — dynamically allocating serving GPU capacity for RL rollouts, reducing idle time while accelerating agentic RL training.
 
 ## Original
 

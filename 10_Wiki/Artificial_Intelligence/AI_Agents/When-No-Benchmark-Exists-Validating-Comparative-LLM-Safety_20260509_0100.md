@@ -19,7 +19,10 @@ authors: Sushant Gautam, Finn Schwall, Annika Willoch Olstad
 - 🔗 [Original](http://arxiv.org/abs/2605.06652v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+- Formalizes "benchmarkless comparative safety scoring" — comparing LLM safety without existing benchmarks
+- Scenario-based audit framework for new languages, sectors, or regulatory regimes
+- Specifies contract under which safety comparisons are valid without ground-truth labels
+- Relevant to Hermes' safety_scaling_awareness and benchmarkless_safety_scoring skills
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_
