@@ -85,3 +85,4 @@
 - sources/news/ — 신규 파일 없음
 - 생성: outputs/market_briefing/2026-05-11_week-start-briefing.md
 변경: **1건** (market briefing 신규).
+| 2026-05-11 | 10:10 | 📊 Wiki 확장기 5/11 신규 거래일 Raw 갱신 | **5/11(월) 신규 거래일 데이터 반영 — 전 종목 갱신. KOSPI 7,867.42(+4.93% 급등, BB 상단 돌파, RSI 95.0). 삼성부광 8,480(-5.57%, RSI 22.8 과매도). 에이치엘 16,900(-4.52%, RSI 34.0). KOSDAQ 1,194.36(-1.11%, RSI 57.1). USD_KRW 1,470.78(+1.10%, RSI 50.6). WTI $99.03(+3.78%, $100선 임박). **KOSPI 폭발적 상승(대형주 주도) vs KOSDAQ 소폭 하락 — 이례적 괴리**. 삼성부광 포트폴리오 손실 -15.54%. 변경: **6건** (wiki/stocks/삼성부광, 에이치엘사이언스, wiki/macros/KOSPI, KOSDAQ, 환율, 국제유가WTI). |

@@ -22,7 +22,8 @@ KOSDAQ 5/8 1,207.72 마감 — SMA20(1,174) 상회 유지. RSI 63.6 중립 영�
 
 ## 관련 지표
 - [[10_Wiki/Macros/KOSPI|KOSPI]]
-- [[10_Wiki/Macros/환율|USD/KRW 환율]]
+- [[10_Wiki/Macros/환율|USD/KRW 환율 — 1,461.43원 (5/10)]]
+- [[10_Wiki/Macros/국제유가WTI|국제유가(WTI) — $98.33 (5/10)]]
 
 ## 원본 데이터: [[00_Raw/MarketData/KOSDAQ_data.json]]
 

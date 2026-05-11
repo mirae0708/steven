@@ -22,6 +22,8 @@ KOSPI 5/8 7,498.00 마감 — 5/7 7,490 대비 +0.11% 소폭 상승. 20일 전 5
 
 ## 관련 지표
 - [[10_Wiki/Macros/KOSDAQ|KOSDAQ]]
+- [[10_Wiki/Macros/환율|USD/KRW 환율 — 1,461.43원 (5/10, +0.46%)]]
+- [[10_Wiki/Macros/국제유가WTI|국제유가(WTI) — $98.33 (5/10, +3.05%)]]
 - [[10_Wiki/Macros/환율|USD/KRW 환율]]
 - [[10_Wiki/Macros/국제유가WTI|국제유가(WTI)]]
 

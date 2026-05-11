@@ -1,18 +1,18 @@
 {
   "sector": "Industrials",
   "industry": "Specialty Business Services",
-  "marketCap": 194369404928,
-  "previousClose": 16940.0,
-  "open": 0.0,
-  "dayLow": 0.0,
-  "dayHigh": 0.0,
-  "volume": 0,
+  "marketCap": 185584336896,
+  "previousClose": 17700.0,
+  "open": 17690.0,
+  "dayLow": 16660.0,
+  "dayHigh": 17690.0,
+  "volume": 11542,
   "averageVolume": 94458,
-  "fiftyTwoWeekLow": 0.0,
+  "fiftyTwoWeekLow": 15420.0,
   "fiftyTwoWeekHigh": 38000.0,
   "dividendYield": null,
   "debtToEquity": 0.894,
   "returnOnEquity": 0.15642,
   "profitMargins": 0.19607,
-  "fetched_at": "2026-05-10 21:10:18.472711+00:00"
+  "fetched_at": "2026-05-11 01:10:25.981606+00:00"
 }
