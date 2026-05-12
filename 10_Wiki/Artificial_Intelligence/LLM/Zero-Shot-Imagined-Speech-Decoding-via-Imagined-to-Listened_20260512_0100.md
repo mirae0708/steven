@@ -19,7 +19,7 @@ authors: Maryam Maghsoudi, Shihab Shamma
 - 🔗 [Original](http://arxiv.org/abs/2605.08075v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+⏭️ **SKIPPED** — BCI/neuroscience domain. Zero-shot imagined speech decoding from MEG via listened-speech transfer learning.
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

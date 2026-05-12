@@ -19,7 +19,7 @@ authors: James Petullo, Sonny George, Dylan Cashman
 - 🔗 [Original](http://arxiv.org/abs/2605.08070v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+**VecCISC — Trace Clustering for Self-Consistency**: Improves confidence-informed self-consistency by clustering reasoning traces and selecting candidates via trace similarity + confidence weighting. Applicable to Hermes' multi-model consensus: trace-level clustering outperforms simple answer-aggregation for test-time scaling.
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

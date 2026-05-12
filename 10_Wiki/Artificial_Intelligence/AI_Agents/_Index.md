@@ -1,7 +1,7 @@
 ---
-|_Documents: 13 | Last sync: 2026-05-12 10:02_
-created: 2026-05-04 16:30
-|updated: 2026-05-08 22:30
+||_Documents: 20 | Last sync: 2026-05-12 13:26_
+|created: 2026-05-04 16:30
+||updated: 2026-05-12 12:00
 type: index
 category: AI_Agents
 ---
@@ -10,7 +10,18 @@ category: AI_Agents
 
 This index catalogs research papers, tools, and frameworks related to AI agents, autonomous systems, and multi-agent orchestration.
 
-## Latest Additions (2026-05-08 22:30)
+## Latest Additions (2026-05-12 11:00)
+
+### 🟢 New — Applied in This Cycle (EVO 2026-05-12 11:00)
+
+| Document | Source | Relevance | Action |
+|----------|--------|-----------|--------|
+|| [[LLMs-Improving-LLMs-Agentic-Discovery-for-Test-Time-Scaling_20260512_0100\|LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling]] | arXiv 2605.08083 ⭐ | LLMs design own reasoning patterns via agentic search for inference-time compute allocation | ✅ PROCESSED — automated TTS strategy discovery applicable to Hermes self-evolution |
+|| [[The-Memory-Curse-How-Expanded-Recall-Erodes-Cooperative-Int_20260512_0100\|The Memory Curse: How Expanded Recall Erodes Cooperative Intent]] | arXiv 2605.08060 🔴 | CRITICAL: expanded memory degrades cooperation in 64% of multi-agent settings across 7 LLMs × 4 games | 🚨 FLAGGED — potential threat to Hermes AI Council; implement cooperative intent safeguards |
+|| [[VecCISC-Improving-Confidence-Informed-Self-Consistency-with_20260512_0100\|VecCISC: Confidence-Informed Self-Consistency with Trace Clustering]] | arXiv 2605.08070 | Trace clustering + confidence weighting improves over simple self-consistency majority vote | ✅ PROCESSED — applicable to Hermes multi-model consensus mechanism |
+|| [[Conformal-Path-Reasoning-Trustworthy-Knowledge-Graph-Questi_20260512_0100\|Conformal Path Reasoning for KGQA]] | arXiv 2605.08077 | Path-level conformal prediction for KGQA with statistical coverage guarantees | 🟡 MEDIUM — path-level calibration for structured knowledge retrieval |
+|| [[shareAI-lablearn-claude-code_20260512_0120\|shareAI-lab/learn-claude-code (⭐59,773)]] | GitHub ⭐59.8K | Bash-only nano agent harness built from 0 to 1 | 🟡 MEDIUM — minimalist agent harness pattern for reference |
+|| [[123D-Unifying-Multi-Modal-Autonomous-Driving-Data-at-Scale_20260512_0100\|123D: Unifying Autonomous Driving Data]] | arXiv 2605.08084 | Multi-modal sensor unification across 20+ autonomous driving datasets | ⏭️ SKIPPED — autonomous driving domain |
 
 ### 🟢 New — Applied in This Cycle (EVO 2026-05-08 22:30)
 

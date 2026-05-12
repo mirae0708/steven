@@ -19,7 +19,7 @@ authors: Jiatao Gu, Tianrong Chen, Ying Shen
 - 🔗 [Original](http://arxiv.org/abs/2605.08078v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+⏭️ **SKIPPED** — Generative modeling domain. Few-step diffusion alternative using normalizing flows on trajectories. Not directly applicable.
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

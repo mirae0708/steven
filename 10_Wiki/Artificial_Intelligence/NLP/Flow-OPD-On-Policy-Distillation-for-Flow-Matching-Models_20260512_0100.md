@@ -19,7 +19,7 @@ authors: Zhen Fang, Wenxuan Huang, Yu Zeng
 - 🔗 [Original](http://arxiv.org/abs/2605.08063v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+**Flow-OPD — On-Policy Distillation**: Solves multi-task 'seesaw effect' in Flow Matching text-to-image models via on-policy distillation. Conceptual relevance: gradient interference mitigation could inform Hermes' multi-objective skill evolution strategy.
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

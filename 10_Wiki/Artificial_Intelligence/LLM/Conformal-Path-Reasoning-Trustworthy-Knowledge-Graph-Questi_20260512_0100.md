@@ -19,7 +19,7 @@ authors: Shuhang Lin, Chuhao Zhou, Xiao Lin
 - 🔗 [Original](http://arxiv.org/abs/2605.08077v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+**Conformal Path Reasoning for KGQA**: Path-level conformal prediction provides statistical coverage guarantees for knowledge graph QA. Relevant for Hermes' structured knowledge retrieval — path-level calibration is stronger than entity-level for trustworthy answers.
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

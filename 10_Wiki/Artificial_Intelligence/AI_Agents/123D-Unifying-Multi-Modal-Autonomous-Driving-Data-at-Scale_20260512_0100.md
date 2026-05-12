@@ -19,7 +19,7 @@ authors: Daniel Dauner, Valentin Charraut, Bastian Berle
 - 🔗 [Original](http://arxiv.org/abs/2605.08084v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+⏭️ **SKIPPED** — Autonomous driving domain. Multi-modal sensor unification (camera, lidar, traffic, HD map) across 20+ datasets. Not applicable to Hermes.
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

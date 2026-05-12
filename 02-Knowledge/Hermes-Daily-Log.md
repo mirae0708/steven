@@ -1870,3 +1870,113 @@
 - 포트폴리오 현금 100% 유지 — 시장 급등에도 소형주 디커플링으로 진입 자제 타당
 - 6개 Critical 이슈 13일차 진입 — 수동 개입 필요
 - 신규 지식 흡수: 1개 (비즈니스 인텔리전스), 스킬 변화 없음
+
+## 2026-05-12 (Tue) 11:00 — 🧠 Brain Sync
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 |
+| Tech Brain Sync | ✅ 70개 문서 유지, 9개 arXiv + 2개 GitHub 처리 |
+| 신규 문서 | 11개 (9 arXiv + 2 GitHub) — 모두 기존 중복 → 스킵 |
+| 중복 스킵 | 9개 arXiv (429 rate limit 복구 후 기존 데이터 활용) |
+| Brain Sync 상태 | Key Takeaways 작성 완료, AI_Agents Index 업데이트 |
+
+### Today's Paper Batch Analysis
+
+| Paper | Category | Verdict |
+|-------|----------|---------|
+| **LLMs Improving LLMs: Agentic Discovery for TTS** (2605.08083) | AI_Agents | ✅ HIGH — Hermes self-evolution pattern |
+| **The Memory Curse** (2605.08060) 🔴 | AI_Agents | 🚨 CRITICAL — multi-agent cooperation risk |
+| **VecCISC: Confidence-Informed Self-Consistency** (2605.08070) | LLM | ✅ HIGH — consensus mechanism upgrade |
+| **Conformal Path Reasoning for KGQA** (2605.08077) | LLM | 🟡 Medium — structured retrieval calibration |
+| **Flow-OPD: On-Policy Distillation** (2605.08063) | NLP | 🟡 Medium — gradient interference concept |
+| **EmambaIR** (2605.08073) | CV | ⏭️ Skipped — CV domain |
+| **Normalizing Trajectory Models** (2605.08078) | DL | ⏭️ Skipped — generative |
+| **123D: Autonomous Driving Data** (2605.08084) | Robotics | ⏭️ Skipped — driving domain |
+| **Zero-Shot Imagined Speech Decoding** (2605.08075) | BCI | ⏭️ Skipped — neuroscience |
+
+### GitHub Trending
+| Repo | Stars | Notes |
+|------|-------|-------|
+| haydenbleasel/files-sdk | ⭐337 | Unified storage SDK for blob/object backends |
+| shareAI-lab/learn-claude-code | ⭐59,773 | Bash-only nano agent harness (0→1) |
+
+### Key Insight — The Memory Curse
+**⚠️ This is the most important finding today.** The paper empirically demonstrates that LLM agents with *more* context history become *less* cooperative in multi-agent settings. This is counterintuitive — we assume more memory helps — but the data shows it doesn't. For Hermes' AI Council (multiple agents voting/negotiating), this means:
+- Shared context windows between council members may *worsen* consensus quality
+- Bounded, scoped memory per interaction may outperform full-history sharing
+- Implement cooperative intent verification gates between agent handoffs
+
+### 지속 이슈 (14일차)
+1. yfinance .KS 티커 오류 (KOSPI=NaN) — 🔴 미해결
+2. KiwoomAuth 8050 인증 실패 — 🔴 미해결
+3. Tavily API 키 만료 (401) — 🔴 미해결
+4. MCP Python Zombie — 🔴 지속
+5. Trinity: CowAgent+OpenDesign 다운 — 🔴 지속
+6. MetaClaw HTTP 404 — 🟡 지속
+
+### 포트폴리오
+- 현금 100% 유지 (₩4,929,810)
+- KOSPI 7,867 RSI 95.0 — 5/12 조정 리스크 지속
+
+---
+
+## 2026-05-12 (Tue) 12:00 — 🧠 Brain Sync (2차 — 1120~1200 배치)
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Tech Brain Sync | ✅ 99개 문서 유지, 10개 신규 저장 (2개 중복 스킵) |
+| 신규 문서 | 10개 (arXiv + GitHub Trending) |
+| 10_Wiki Index | ✅ 갱신 완료 (12→75 docs, AI_Agents/MCP 카테고리 추가) |
+
+### Today's 2nd Batch Analysis
+
+| Paper/Source | Category | Verdict |
+|-------------|----------|---------|
+| **Agentic MIP Research** (2605.09186) | AI_Agents | 🟡 Medium — LLM-driven MIP constraint handler generation |
+| **Beyond Autonomy: Tiered AgentRunner** (2605.10223) | AI_Agents | ✅ HIGH — Enterprise governable agent framework (write-review gates, acceptance verification) |
+| **FusionRCG** (2605.10312) | HPC | ⏭️ Skipped — GPU memory for quantum chemistry |
+| **RADAR: Redundancy-Aware Diffusion** (2605.09907) | AI_Agents | ✅ HIGH — Multi-agent comm structure generation via diffusion |
+| **STAR: Failure-Aware Markov Routing** (2605.10057) | AI_Agents | ✅ HIGH — Multi-agent spatiotemporal reasoning with failure recovery |
+| **GELATO: Adaptive Token Offloading** (2605.10124) | LLM | 🟡 Medium — Device-edge speculative LLM inference |
+| **Open Ontologies** (2605.09184) | MCP | ✅ HIGH — Rust-based ontology engineering via MCP protocol |
+| **DP-LAC: Adaptive Clipping** (2605.10272) | LLM | 🟡 Medium — Federated fine-tuning DP-SGD optimization |
+| **Usability as a Weapon** (2605.10133) | LLM/Security | ✅ HIGH — Usability requirements used to bypass LLM code safety |
+| **Positive Alignment: AI for Human Flourishing** (2605.10310) | RL/Alignment | 🟡 Medium — Beyond safety to positive AI design |
+| **shareAI-lab/learn-claude-code** (⭐59,773) | GitHub | 🟡 Medium — Bash-only nano agent harness 0→1 |
+| **PixelFlowCast** (2605.10046) | DL/CV | ⏭️ Skipped — weather nowcasting domain |
+| **MARGIN: Vulnerability Detection** (2605.10240) | LLM/Security | 🟡 Medium — Imbalanced vulnerability detection via geometry |
+| **Nano-U: Terrain Segmentation** (2605.10265) | MLOps | ⏭️ Skipped — tiny robot navigation |
+| **PaMoSplat: Gaussian Splatting** (2605.10099) | CV | ⏭️ Skipped — 3D reconstruction |
+| **Emergent Semantic Role Understanding** (2605.10290) | CV | ⏭️ Skipped |
+| **Active Tabular Augmentation via Diffusion** (2605.10304) | DL | ⏭️ Skipped |
+| **GRAPHLCP: Conformal Prediction** (2605.10262) | Tools | 🟡 Medium — Structure-aware localized conformal prediction |
+| **Signature Approach for Contextual Bandits** (2605.10283) | LLM | ⏭️ Skipped |
+| **MCP-멀티검색: 올리브영 2026 인기상품** | MCP | 📊 Culture-Economy intelligence report |
+
+### Key Findings for Hermes
+
+1. **🔴 Memory Curse confirmed** (already in 11:00 log) — the most critical paper this cycle for Hermes AI Council
+2. **🟢 Beyond Autonomy/AgentRunner** — enterprise agent frameworks converging on 3-tier architecture: independent review gates, acceptance verification, tiered compute allocation → aligns with Hermes' constraint_decay_awareness and execution_lineage_dag patterns
+3. **🟢 RADAR** — multi-agent communication optimization via redundancy-aware structure generation → applicable to Hermes Trinity coordination optimization
+4. **🟢 STAR** — failure-aware routing with MARL for multi-agent systems → applicable to Hermes delegation failure recovery
+5. **🟢 Open Ontologies** — MCP-based ontology engineering in Rust → MCP protocol expanding into knowledge engineering domain
+6. **🟢 Usability as a Weapon** — usability requirements (high-signal) override implicit security requirements (low-signal) in LLM code gen → defensive coding guidance for Hermes' own code generation
+
+### 지속 이슈 (14일차 — 변화 없음)
+1. yfinance .KS 티커 오류 (KOSPI=NaN) — 🔴
+2. KiwoomAuth 8050 인증 실패 — 🔴
+3. Tavily API 키 만료 (401) — 🔴
+4. MetaClaw HTTP 404 — 🟡
+5. Trinity: CowAgent+OpenDesign — 🔴
+6. Dashboard JSON stale (5/7) — 🔴
+7. MCP Python Zombie — 🔴
+
+### 포트폴리오
+- 현금 100% 유지 (₩4,929,810)
+- KOSPI 7,948 (+6.00%) RSI 84.9 — 극단 과매수 유지
+- 삼성부광 8,240원 RSI 29.4 — 과매도 진입 (포트폴리오 -17.93%)
+- USD/KRW 1,482.63 (+1.51%) — 4일 연속 원화 약세
+- WTI $98.54 — $100 저항 재확인

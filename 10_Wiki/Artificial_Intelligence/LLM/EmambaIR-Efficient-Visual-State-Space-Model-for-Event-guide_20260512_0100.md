@@ -19,7 +19,7 @@ authors: Wei Yu, Yunhang Qian
 - 🔗 [Original](http://arxiv.org/abs/2605.08073v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+⏭️ **SKIPPED** — Computer vision domain (event-based image reconstruction with Mamba state space models). Not directly applicable to Hermes' text/agent systems.
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_
