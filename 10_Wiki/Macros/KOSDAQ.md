@@ -18,10 +18,10 @@ KOSDAQ 5/12 1179.29 마감 — SMA20(1185) 근접. RSI 51.2 중립으로 모멘�
 
 ## 관련 지표
 - [[10_Wiki/Macros/KOSPI|KOSPI]]
-- [[10_Wiki/Macros/환율|USD/KRW 환율 — 1488.91원 (5/12)]]
-- [[10_Wiki/Macros/국제유가WTI|국제유가(WTI) — $101.73 (5/12)]]
+- [[10_Wiki/Macros/환율|USD/KRW 환율 — 1491.98원 (5/12, yfinance 3차)]]
+- [[10_Wiki/Macros/국제유가WTI|국제유가(WTI) — $102.50 (5/12, yfinance 3차)]]
 
 ## 원본 데이터: [[00_Raw/MarketData/KOSDAQ_data.json]]
 
-*분석일: 2026-05-12 23:10 KST (WTI $101.73 re-settlement 반영) | 출처: Hermes | Raw: yfinance*
+*분석일: 2026-05-13 04:10 KST (USD/KRW 1491.98, WTI $102.50 — yfinance 3차 revision 반영) | 출처: Hermes | Raw: yfinance 3차*
 

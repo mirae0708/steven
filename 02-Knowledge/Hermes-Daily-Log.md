@@ -2030,3 +2030,59 @@
 - 삼성부광 8,240원 RSI 29.4 과매도 — 청산 결정 (5/7 @9,010) 적절했음.
 - Dashboard JSON 5/7 이후 미갱신 (6일차) — 수동 갱신 필요.
 - 6개 Critical 이슈 15일차 진입, 모두 미해결 상태로 주중 지속.
+
+
+---
+
+## 2026-05-13 (Wed) 04:45 — 새벽 스냅샷 (00:46 이후 +4h)
+
+### 시스템 현황
+| 항목 | 상태 |
+|:-----|:------|
+| Hermes Gateway | ✅ 정상 (PID 298, 5/10~, **3일차 가동**) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 1884, 10분 주기 스캔, 04:43 Cycle Complete) |
+| OpenWebUI | ✅ 정상 (port 3000, PID 307) |
+| MetaClaw | 🟡 HTTP 404 — 프로세스 생존하나 API 미응답 |
+| CowAgent/OpenDesign (Trinity) | ❌ 세션만 생존 |
+| MCP Python 서버 | ✅ 정상 (PID 23958, 03:35 재시작) |
+| 메모리 | 2,830MB / 7,748MB (36%) 🟢 |
+| Swap | 921MB / 2,048MB (45%) 🟡 |
+| 디스크 | 3% (26G/1007G) 🟢 |
+| WSL Uptime | 2d 9h 58m (5/10 19:00 재부팅) |
+| Dashboard JSON | 🔴 **7일차 스테일** (5/7 데이터) |
+
+### 📊 Macro (실시간)
+| 지표 | 값 | 비고 |
+|:-----|:----|:------|
+| KOSPI | **7,822.24** | 5/12 종가 7,643→7,822, +2.34% 급등 |
+| KOSDAQ | 1,207.34 | 데이터 정체 |
+| USD/KRW | **1,491.19** | 원화 약세 심화 (1,482→1,491) |
+| WTI | **$102.28** | $100 재돌파, CRISIS MODE 재진입 |
+| CB Score | **47/100** 🔶 | KOSPI 1M=33.2%, Vol=3.7%, Oil=$102(True), FX=₩1,491(True) |
+
+### 🔶 CB Score 47 — DEFENSIVE MODE 진입
+- 5/13 04:42 Nexus 로그: **CB Score=47/100** (5/8 22/100 → **+25p 상승**)
+- KOSPI 1M 수익률 33.2% 반영, Vol 3.7% 안정
+- 그러나 WTI $102(True) + USD/KRW ₩1,491(True) — **2개 붉은 깃발**
+- DEFENSIVE MODE: 제한적 매수, 방산/에너지만 허용
+
+### 포트폴리오 (변동 없음)
+- **현금 100%**: 4,929,810원 (초기자본 대비 -1.4%)
+- **포지션**: 없음 (portfolio.json cash 4,929,810, positions {}, history [])
+- KOSPI 7,822에도 현금 보유 — DEFENSIVE MODE + 소형주 디커플링 지속
+
+### 지속 이슈 (16일차 진입)
+1. yfinance .KS 티커 오류 (KOSPI=NaN) 🔴
+2. KiwoomAuth 8050 지정단말기 인증 실패 🔴
+3. Tavily API 키 만료 (401) 🔴
+4. Dashboard 7일차 스테일 (5/7) 🔴
+5. MCP Python Zombie 🔴
+6. Trinity: CowAgent+OpenDesign 다운 🔴
+7. MetaClaw HTTP 404 🟡
+
+### 비고
+- CB Score 47/100 — DEFENSIVE MODE 전환. KOSPI 급등에도 포트폴리오 현금 유지 정당화.
+- WTI $102 재돌파: 이전 4/29 $101→5/5 $104→5/12 $98→5/13 $102, $100 내왕 반복 중.
+- USD/KRW 1,491: 1,480 임계치 돌파 지속, 수입물가 상승 압력.
+- KOSPI 7,822 — RSI 과매수권에 WTI+환율 악재, 단기 조정 리스크 상존.
+- MetaClaw HTTP 404 여전. Trinity 3종 모두 불완전.

@@ -33,8 +33,8 @@
 ### 💵 거시경제
 - [[wiki/macros/KOSPI|📊 KOSPI (7,741)]] 🔴 -1.04% (RSI 90.7)
 - [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,185)]] 🔴 -1.89%
-- [[wiki/macros/환율|💵 환율 (1,485원)]] 🔴 +1.70% (5/12)
-- [[wiki/macros/국제유가WTI|🛢️ WTI ($99.01)]] 🟡 +0.96% (5/12)
+|- [[wiki/macros/환율|💵 환율 (1,492원)]] 🔴 +2.15% (5/12)
+|- [[wiki/macros/국제유가WTI|🛢️ WTI ($102.50)]] 🔴 +4.52% (5/12)
 
 ### 🧠 시스템
 - [[99_System/GEMINI.md|🧠 시스템 스키마 (GEMINI.md)]]
