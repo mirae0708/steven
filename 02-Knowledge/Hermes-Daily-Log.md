@@ -2113,3 +2113,55 @@
 ### 이슈
 - 7개 지속 이슈 (16일차) + Swap 36% 재악화 신규
 - Tech Scavenger Cron job 미실행 (`last_run_at: null`)
+
+### 2026-05-13 (Wed) 20:45 — 저녁 Cron Wiki Update
+
+### 📋 시스템 현황
+| 항목 | 상태 | 비고 |
+|:-----|:----:|:-----|
+| Hermes Gateway (systemd) | ✅ | PID 298, 3일차 (5/10~) |
+| Jongdari 배틀루프 | ✅ | PID 57763, 사이클 정상 |
+| Open WebUI | ✅ | port 3000, PID 307 |
+| MetaClaw | 🟡 | HTTP 404, PID 3626 생존 |
+| CowAgent (Trinity) | ❌ | 세션만 유지 |
+| OpenDesign (Trinity) | ❌ | 세션만 유지 |
+| tmux 세션 (6개) | ✅ | hermes / hermes-mcp / jongdari / trinity-3종 |
+| 메모리 | 🟢 | 2.5Gi / 7.6Gi (33%) |
+| Swap | 🟡 | 720Mi / 2.0Gi (35%) |
+| 디스크 | 🟢 | 33Gi / 1007Gi (4%) |
+| Uptime | 🟢 | 3d 1h |
+
+### 📊 시장 현황 (5/13 close 기준, 변동 없음)
+| 지표 | 값 | 비고 |
+|:-----|:----:|:-----|
+| KOSPI | 7,822.24 | RSI 86.2 과매수, 사상 최고 근접 |
+| KOSDAQ | 1,207.34 | 데이터 정체 |
+| WTI | $102.28 | $100 재돌파, CRISIS MODE |
+| USD/KRW | 1,491.19 | 원화 약세 심화 |
+| 삼성부광 | 7,840원 (-2.00%) | RSI 21.8 심각 과매도, 포트폴리오 **-21.91%** |
+| CB Score | 47/100 🔶 | DEFENSIVE MODE — WTI+FX 붉은깃발 2개 |
+
+### 포트폴리오
+- **현금 100%**: ₩4,929,810 (초기자본 대비 -1.4%)
+- **포지션**: 없음 (5/7 전량 청산)
+
+### 📋 16:30→20:45 변화 요약 (4시간)
+1. **MCP 멀티검색 3건 연속 수집** (18:41~18:52) — AI 에이전트 오픈소스 트렌드 2026 주제, 5.5초 avg latency
+2. **MetaClaw HTTP 404 지속** — PID 3626 생존하나 API 미응답 (16일차)
+3. **Swap 36%→35% 소폭 개선** — 739Mi→720Mi, 안정 범위
+4. **메모리 31%→33% 소폭 상승** — 정상 변동 범위
+5. **Gateway 3일차 무중단 유지** — PID 298, May10 19:00부터 71h+ 가동
+6. **Jongdari 재시작 감지** — 이전 PID 1884(3일차)→PID 57763(16:07 신규), 배틀루프 사이클 정상
+7. **대시보드 8일차 스테일** — 5/7 이후 미갱신 (수동 갱신 필요)
+8. **신규 지식 발견 없음** — 기존 7개 Critical 이슈 변화 없음
+
+### 🐛 지속 이슈 (16일차, 변화 없음)
+| # | 이슈 | 심각도 |
+|:-:|:-----|:------:|
+| 1 | yfinance .KS 티커 오류 (KOSPI=NaN) | 🔴 |
+| 2 | KiwoomAuth 8050 지정단말기 인증 실패 | 🔴 |
+| 3 | Tavily API 키 만료 (401) | 🔴 |
+| 4 | Dashboard 8일차 스테일 | 🔴 |
+| 5 | MCP Python Zombie | 🔴 |
+| 6 | Trinity: CowAgent+OpenDesign 다운 | 🔴 |
+| 7 | MetaClaw HTTP 404 | 🟡 |
