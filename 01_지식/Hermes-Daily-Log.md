@@ -530,4 +530,73 @@
 - KOSPI 사상 최고 6,936.99 달성 (5/4 +5.12%)
 - 삼성부광 9,540→9,610 (소폭 반등, 9,400 지지선 안정)
 - 나우로보틱스 현재가 정상 갱신 확인
+
+---
+
+## 2026-05-13 (수) 16:45 — Cron Wiki Update
+
+### 📋 시스템 현황
+| 항목 | 상태 | 비고 |
+|:-----|:----:|:-----|
+| Hermes Gateway (systemd) | ✅ | PID 298, 3일차 (5/10~) |
+| Jongdari 배틀루프 | ✅ | PID 15259, 사이클 정상 |
+| KeepAlive v7+ | ✅ | BULLETPROOF 모드, PID 파일 미스매치 버그 |
+| Open WebUI | ✅ | port 3000 |
+| tmux 세션 (6개) | ✅ | hermes / hermes-mcp / jongdari / trinity-3종 |
+| 메모리 | 🟢 | 2.4Gi / 7.6Gi (31%) |
+| Swap | 🟡 | 739Mi / 2.0Gi (36%) — 전일 1%→재악화 |
+| 디스크 | 🟢 | 33Gi / 1007Gi (4%) |
+
+### 📊 시장 현황 (5/13 actual close 기준)
+| 지표 | 값 | 비고 |
+|:-----|:----:|:-----|
+| KOSPI | 7,829.27 (+2.44%) | RSI 86.3 과매수, BB% 94.3% 상단 근접 |
+| KOSDAQ | 1,170.79 (-0.72%) | RSI 47.8 약세 — KOSPI 디커플링 심화 |
+| WTI | $100.73 (-1.42%) | $100선 유지, RS 55.6 BB% 64.5% |
+| USD/KRW | 1,490.28 (+1.07%) | RSI 55.0, BB% 91.9% 상단 근접 |
+| 삼성부광 | 7,840원 (-2.00%) | RSI **21.8** 심각 과매도, 신저가, 포트폴리오 **-21.91%** |
+| 에이치엘사이언스 | 16,440원 (+2.18%) | RSI 36.5 과매도 탈출 시도 |
+| 나우로보틱스 | 27,600원 (+0.73%) | 5/13 **신규 Wiki 등록** |
+
+### 🔬 오늘의 주요 발견 — 신규 지식
+
+**🏆 첫 MCP 보안 논문 수집**
+- `Attacks and Mitigations for Distributed Governance of Agentic AI` (arXiv 2605.12364)
+- 5/4 MCP 카테고리 추가 후 첫 수집된 MCP 관련 학술 논문
+- MCP 프로토콜의 보안 취약점과 분산 거버넌스 이슈를 다룸
+
+**🧬 Tech Scavenger: 19개 신규 arXiv 페이퍼 수집 (15:20 대규모 배치)**
+- AlphaGRPO (2605.12495) — 멀티모달 GRPO 확장
+- LongMemEval-V2 (2605.12493) — 에이전트 장기메모리 벤치마크
+- MEME (2605.12477) — 에이전트 메모리 평가
+- Learning, Fast and Slow (2605.12484) — LLM 학습 동학
+- Beyond GRPO (2605.12491) — GRPO 후속 연구
+- Cumulative: 144회 실행, 21회 실제 수집 (14.6%)
+
+**🔄 Tech Scavenger 8시간 갭 (07:21→15:20)**
+- 실행 프로세스 사망 추정 — Cron job(`625ae3e2ffff`) `last_run_at: null`
+- 실행 메커니즘 개선 필요
+
+**🟡 Swap 재악화 추세**
+- 5/12 25MB(1%) → 5/13 739Mi(36%) — 약 700MB 증가, 과거 93% OOM 경험 대비 주시 필요
+
+### ⏳ 지속 이슈 (17일차)
+| # | 이슈 | 심각도 | 상태 |
+|:-:|:-----|:------:|:----:|
+| 1 | yfinance .KS 티커 오류 (KOSPI=NaN) | 🔴 | 미해결 |
+| 2 | KiwoomAuth 8050 | 🔴 | 미해결 |
+| 3 | Tavily API 키 만료 (401) | 🔴 | 미해결 |
+| 4 | Dashboard 6일 스테일 | 🔴 | 미해결 |
+| 5 | MCP Python Zombie | 🔴 | 미해결 |
+| 6 | Trinity: CowAgent+OpenDesign 다운 | 🔴 | 미해결 |
+| 7 | MetaClaw HTTP 404 | 🟡 | 미해결 |
+| 8 | Swap 36% 재악화 | 🟡 | 신규 |
+| 9 | KeepAlive PID 파일 누락 | 🟡 | 신규 |
+
+### 🎯 내일 우선순위
+1. [ ] Swap 모니터링 — 50% 도달 시 조치 필요
+2. [ ] Tech Scavenger Cron job 실행 불가 원인 조사
+3. [ ] Tavily API 키 갱신 (401 만료 지속)
+4. [ ] Dashboard 강제 갱신 고려
+5. [ ] MetaClaw / CowAgent / OpenDesign 복구 시도
 - WTI $104.47로 $100선 이탈 리스크 완화
