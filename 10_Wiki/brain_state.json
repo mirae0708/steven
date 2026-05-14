@@ -1,0 +1,14 @@
+{
+  "last_sync": "2026-05-14 16:00 KST",
+  "files_processed": 16,
+  "papers_filled": ["SkillOps", "TFlow (Good Agentic Friends)", "KVServe", "EconAI", "QueST", "PMNet", "MinT", "GRIP-VLM", "WARDEN", "DisAgg", "Topology-Preserving Neural Operator"],
+  "market_updated": ["KOSPI", "KOSDAQ", "USD/KRW", "WTI", "삼성부광", "나우로보틱스", "에이치엘사이언스"],
+  "mcp_reports": ["AI 반도체 2026 2분기 전망"],
+  "key_insights": [
+    "SkillOps: Skill Technical Debt 개념 — Hermes 179+ 스킬에 Skill Contract (P,O,A,V,F) 도입 검토",
+    "TFlow: Weight-space multi-agent 통신 — Trio Brainstorming Lab token 절감에 활용 가능",
+    "KVServe: Service-aware KV cache compression — 9.13× JCT speedup in PD-separated serving",
+    "Phasor Memory Networks: Stable BPTT for explicit memory — 119M param matches 3× larger Mamba",
+    "KOSPI 7,981.41 +1.75% — 8,000선 근접, RSI 87.1 과매수 심화, BB 상단 극근접"
+  ]
+}
