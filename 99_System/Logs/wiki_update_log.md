@@ -102,3 +102,4 @@
 - USD_KRW **1,490.28→1,489.54원**(-0.74원, RSI 55.0→54.7, BB% 91.9%→90.4% 상단 근접, +1.02% 전일대비 상승). 
 삼성부광(7,840)·KOSDAQ(1,176.93)·WTI($103.49) — wiki 일치, 변경 없음. wiki/sectors/헬스케어·로보틱스 sector 주가 참조 갱신. 10_Wiki/ 구조 4건 동시 갱신. 00-Home.md 거시경제·종목 지표 일괄 갱신. 변경: **8건** (wiki/stocks 2, wiki/macros 2, wiki/sectors 2, 10_Wiki/Stocks 2, 10_Wiki/Macros 2, 00-Home.md). |
 
+|2026-05-14 | 03:10 | 📊 Wiki 확장기 10_Wiki 구 구조 후처리 — 02:10 누락분 정정 | **02:10 스캔이 반영하지 못한 10_Wiki/Macros/KOSDAQ·국제유가WTI settlement revision 반영**. KOSDAQ **1,170.79(16:10 actual close)→1,176.93(−0.20%, RSI 49.4, BB% 38.6% 중립). WTI **$100.73(16:10 actual close)→$103.49(+1.28%, RSI 58.8, BB% 75.6%, $100선 확고 상회). 환율 참조값도 1,490.28→1,489.54원 정정 반영. 변경: **2건** (10_Wiki/Macros/KOSDAQ, 국제유가WTI — 5/13 settlement revision 동기화 완료). |
