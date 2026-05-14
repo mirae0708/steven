@@ -624,3 +624,86 @@
 
 ### ⚡ 복구 우선순위
 🔴 Jongdari tmux 재시작 → 🔴 MCP 서버 재시작 → 🟡 Open WebUI → 🟡 trinity 서비스
+
+---
+
+# Hermes Daily Log — 2026-05-14 (목) 12:46 — WSL 재부팅 후 복구 + 5/14 장중 데이터 반영
+
+## 📋 시스템 현황 스냅샷 — 12:46 KST
+
+| 항목 | 상태 | 비고 |
+|:-----|:----:|:-----|
+| Hermes Gateway | ❌ **inactive** | WSL 재부팅(01:58) 후 systemd 미작동 |
+| KeepAlive | ✅ | WSL 재부팅 후 자동 재개 |
+| Jongdari 배틀루프 | ✅ **복구됨** | PID 4908 (tmux jongdari, 02:35) |
+| tmux 세션 (6개) | ✅ | hermes / hermes-mcp / jongdari / cowagent / metaclaw / opendesign — 전원 복구 |
+| MCP 서버 | ✅ | hermes-mcp 세션 활성 (12:46 신규 생성) |
+| 메모리 | 🟢 | 3.1Gi / 7.6Gi (41%) |
+| Swap | 🟢 | 0B / 2.0Gi (0% — fresh) |
+| WSL Uptime | 🟢 | **10시간 48분** (재부팅 01:58→12:46) |
+| 디스크 | 🟢 | 27Gi / 1007Gi (3%) |
+
+### WSL 재부팅 복구 현황
+- ✅ **tmux 세션 복구 완료**: hermes / hermes-mcp / jongdari / cowagent / metaclaw / opendesign — 모두 12:46 기준 정상
+- ❌ **Hermes Gateway inactive**: systemd 서비스 복구 필요 (PID 확인)
+- ✅ **Jongdari 배틀루프**: 02:35 재시작되어 정상 작동 중
+- ✅ **Swap 초기화**: 재부팅 효과로 0%, 일시적
+
+## 📊 시장 현황 (5/14 장중/actual close 기준)
+
+| 지표 | 값 | 전일(5/13) 대비 | 비고 |
+|:-----|:----:|:--------------:|:-----|
+| **KOSPI** | **7,897.02** | +53.01p (+0.68%) | 장중 고가 7,991.04(8,000선 눈앞), RSI 과매수 지속 |
+| **KOSDAQ** | — | — | yfinance 5/14 아직 미갱신 가능 |
+| **USD/KRW** | **1,493.08** | +0.09원 (+0.01%) | 1,493선 유지, 보합권 |
+| **WTI ($/bbl)** | **$101.48** | -0.70 (-0.68%) | $100선 유지 (5/13 close, 5/14 아직) |
+| **삼성부광** | **8,020원** | **+180원 (+2.30%)** 🟢 | **첫 반등!** RSI 과매도서 반등 시작 |
+| **에이치엘사이언스** | **16,990원** | **+780원 (+4.81%)** 🟢 | **강한 반등!** 5/12 16,090 저점 대비 +5.6% |
+| **나우로보틱스** | **27,700원** | -150원 (-0.54%) 🔴 | 소폭 하락, 보합권 |
+
+**주요 발견 — 5/14 긍정 신호:**
+- **삼성부광 +2.30% 반등**: 5일 연속 하락 마감. 7,640원(장중 저) → 8,020원(종가). 첫 반등 신호. 포트폴리오 -20.12% (전일 -21.91% 대비 개선).
+- **에이치엘사이언스 +4.81% 급등**: 5/13 16,210 → 5/14 16,990. BB 하단(16,163) 이탈 폭 축소, 17,000선 회복 시도. 강한 반등.
+- **KOSPI 7,897**: 장중 7,991로 8,000선 테스트. RSI 과매수 지속이나 모멘텀 유지.
+- **USD/KRW 1,493**: 전일 1,490과 유사, 원화 약세 지속.
+
+## 🔬 오늘의 주요 발견 — 신규 지식
+
+### 🧪 Tech Scavenger 신규 arXiv 페이퍼 수집 (12:20 배치 — 3건)
+
+**① Good Agentic Friends Do Not Just Give Verbal Advice: They Can Update Your Weights**
+- arXiv 2605.13839 | AI_Agents
+- 멀티에이전트 LLM 시스템이 자연어 메시지 대신 가중치 직접 전송 방식 제안
+- 토큰 비용 절감, 추론 효율성 개선
+- **Hermes 영향도**: 🔴 높음 — 에이전트 간 효율적 지식 전달 방식 혁신 가능
+
+**② WARDEN: Endangered Indigenous Language Transcription and Translation with 6 Hours of Training Data**
+- arXiv 2605.13846 | NLP
+- 단 6시간 annotated audio로 원주민 언어(wardaman) 전사/번역
+- 극소량 데이터로 고품질 언어 모델 구축 방법론
+
+**③ GRIP-VLM: Group-Relative Importance Pruning for Efficient Vision-Language Models**
+- arXiv 2605.13375 | Computer_Vision
+- VLM 시각 토큰 프루닝 — 연산 효율성 개선
+- Training-aware pruning 대신 Group-Relative Importance 기반
+
+### 📊 MCP 멀티검색 리포트 (11:01 — 3건)
+- **알테오젠 코스피 이전 바이오시밀러 2026** — 처리시간 5.9초
+- **삼성전자 파업 위기 반도체 생산 영향 2026** — 삼전 창사 이래 첫 총파업 위기, 파운드리 생산 58% 급락
+- **삼성SDI GM 배터리 합작 중단 3.5조** — 미국 인디애나 35억불 합작 이슈
+
+### 🔴 지속 이슈 (19일차)
+| # | 이슈 | 심각도 | 일수 | 상태 |
+|:-:|:-----|:------:|:----:|:----:|
+| 1 | yfinance .KS 티커 오류 (KOSPI=NaN) | 🔴 | 19일 | 미해결 |
+| 2 | KiwoomAuth 8050 | 🔴 | 19일 | 미해결 |
+| 3 | Tavily API 키 만료 (401) | 🔴 | 19일 | 미해결 |
+| 4 | Dashboard 7일 스테일 | 🔴 | 7일 | 미해결 |
+| 5 | MetaClaw HTTP 404 | 🟡 | 19일 | 미해결 |
+| 6 | **Hermes Gateway inactive** | 🔴 | **신규** | WSL 재부팅 후 systemd 복구 필요 |
+| 7 | Trinity: CowAgent+OpenDesign 재가동 | 🟡 | **복구 후 재점검** | tmux 세션 복구됨 |
+
+### 🎯 오늘 할 일
+1. 🔴 Hermes Gateway systemd 복구 (inactive)
+2. 🟢 삼성부광·에이치엘 반등 모니터링 — USD/KRW 1,493 추가 관찰
+3. 🟡 지속 이슈 재점검 (WSL 재부팅 후 일부 해소/초기화)
