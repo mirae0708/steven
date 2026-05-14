@@ -2229,3 +2229,47 @@
 5. 🔴 **Dashboard 8일 스테일**: 여전히 미갱신
 6. 🔴 **KOSPI RSI 87.1**: 극단 과매수, 8,000선 조정 위험
 7. 🟢 **삼성부광 첫 반등**: RSI 23.7에서 회복 중
+
+## 2026-05-14 (Thu) 20:45 — 야간 스냅샷 + 지식 기록
+
+> **Watchdog Cron (05:46 KST 5/15 실행)** — 전일 데이터 통합 기록 완료
+
+### 📊 시장 요약 (5/14 확정)
+
+| 지표 | 확정가 | 전일비 |
+|:-----|-------:|:------:|
+| KOSPI | 7,981.41 | +1.75% 🟢 |
+| KOSDAQ | 1,191.09 | +1.20% 🟢 |
+| USD/KRW | 1,490.26 | 보합 |
+| WTI | $101.00 | -2.41% 🔴 |
+| 삼성부광 | 8,150원 | +3.95% 🟢 |
+| 에이치엘사이언스 | 17,200원 | +4.75% 🟢 |
+| 나우로보틱스 | 27,900원 | 보합 |
+
+### 🔬 오늘의 지식 수집 (21건 신규)
+
+**주요 논문 요약:**
+
+| 논문 | 의의 | Hermes 적용 |
+|:-----|:-----|:------------|
+| **SkillOps** (arXiv 2605.13716) | 스킬 라이브러리 유지보수 프레임워크. Skill Contract(P,O,A,V,F) + 계층적 의존성 그래프. 4차원 건강도 진단 | Hermes 47개 스킬 라이브러리 자동 유지보수 도입 검토 |
+| **Good Agentic Friends** (arXiv 2605.13839) | Multi-agent weight-space 통신 (TFlow). Token 83% 절감, 속도 4.6× | Trio Brainstorming Lab 통신 효율화 |
+| **Phasor Memory Networks** (arXiv 2605.13370) | NTM gradient 불안정성 해결. 안정적 BPTT + 확장 가능한 명시적 메모리 | Layer Memory System L0-L4 참고 |
+| **EconAI** (arXiv 2605.13762) | 동적 페르소나 진화 + 메모리 인식 에이전트 | 가상오피스 경제 시뮬레이션 연계 |
+| **EVA-Bench** (arXiv 2605.13841) | Voice Agent 최초 end-to-end 평가 프레임워크 | 향후 음성 에이전트 도입 시 참고 |
+| **WARDEN** (arXiv 2605.13846) | 6시간 데이터로 멸종위기 언어 전사/번역 | Few-shot NLP 참고 |
+
+**기술 트렌드:**
+- **MCP 첫 보안 논문** (5/13 arXiv) — Attacks/Mitigations on MCP. 생태계 성숙 신호
+- **GRIP-VLM** — VLM 그룹별 중요도 기반 프루닝, 효율적 비전 모델 경량화
+- **R-DMesh** — Video-guided 3D Animation via Rectified Dynamic Mesh
+
+### 🏢 비즈니스 사업분석 — 8개 아이템 인덱스 갱신 완료
+- 모든 시뮬레이션 리포트(낙관적/보수적) 및 워크플로우 엔진 선택 문서 최종 갱신
+- AI 물류 에이전트 SaaS (⭐1순위), 중국-한국 물류 브릿지 (⭐1순위), 인보이스 OCR (🥈2순위) 업데이트
+- 사업성 평가 공식 확립: (시장규모×수요강도×진입장벽) / (초기투자×운영복잡성)
+
+### 📋 지속 이슈 트래커 (20일차)
+- 🔴 yfinance KOSPI NaN (20일) | KiwoomAuth 8050 (20일) | Tavily API 401 (20일) | Dashboard 8일 스테일
+- 🟡 MetaClaw port 30000 복구됨 | Trinity tmux 복구완료
+- ✅ WSL 14.5h+ 정상 | Gateway active | Swap 0% 리셋 유지
