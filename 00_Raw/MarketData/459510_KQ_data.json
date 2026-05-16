@@ -1,18 +1,18 @@
 {
   "sector": "Industrials",
   "industry": "Specialty Industrial Machinery",
-  "marketCap": 360297299968,
-  "previousClose": 27850.0,
-  "open": 28400.0,
-  "dayLow": 27350.0,
-  "dayHigh": 28700.0,
-  "volume": 142200,
-  "averageVolume": 249473,
+  "marketCap": 366754234368,
+  "previousClose": 27900.0,
+  "open": 29050.0,
+  "dayLow": 27450.0,
+  "dayHigh": 30650.0,
+  "volume": 560700,
+  "averageVolume": 252894,
   "fiftyTwoWeekLow": 12850.0,
   "fiftyTwoWeekHigh": 38250.0,
   "dividendYield": null,
   "debtToEquity": 67.598,
   "returnOnEquity": -0.75894,
   "profitMargins": -0.66450995,
-  "fetched_at": "2026-05-14 07:11:55.722232+00:00"
+  "fetched_at": "2026-05-16 09:11:41.446457+00:00"
 }

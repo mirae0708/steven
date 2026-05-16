@@ -1,14 +1,36 @@
 {
-  "last_sync": "2026-05-14 16:00 KST",
-  "files_processed": 16,
-  "papers_filled": ["SkillOps", "TFlow (Good Agentic Friends)", "KVServe", "EconAI", "QueST", "PMNet", "MinT", "GRIP-VLM", "WARDEN", "DisAgg", "Topology-Preserving Neural Operator"],
+  "last_sync": "2026-05-15 01:00 KST (Hourly Cron)",
+  "files_processed": 29,
+  "new_content_since_last_sync": [
+    "MCP ecosystem trends (AI autonomous agents, 18:42)",
+    "Apple AI Strategy 2026 (18:50)",
+    "Global AI competition: Google/Meta/OpenAI (22:40)",
+    "Night knowledge digest: 21 new papers + market snapshot (20:45)",
+    "00-Home.md: Business analysis section added"
+  ],
+  "papers_filled": [
+    "SkillOps", "TFlow (Good Agentic Friends)", "KVServe", "EconAI",
+    "QueST", "PMNet", "MinT", "GRIP-VLM", "WARDEN", "DisAgg",
+    "Topology-Preserving Neural Operator"
+  ],
   "market_updated": ["KOSPI", "KOSDAQ", "USD/KRW", "WTI", "삼성부광", "나우로보틱스", "에이치엘사이언스"],
-  "mcp_reports": ["AI 반도체 2026 2분기 전망"],
-  "key_insights": [
-    "SkillOps: Skill Technical Debt 개념 — Hermes 179+ 스킬에 Skill Contract (P,O,A,V,F) 도입 검토",
-    "TFlow: Weight-space multi-agent 통신 — Trio Brainstorming Lab token 절감에 활용 가능",
-    "KVServe: Service-aware KV cache compression — 9.13× JCT speedup in PD-separated serving",
-    "Phasor Memory Networks: Stable BPTT for explicit memory — 119M param matches 3× larger Mamba",
-    "KOSPI 7,981.41 +1.75% — 8,000선 근접, RSI 87.1 과매수 심화, BB 상단 극근접"
+  "mcp_reports": [
+    "AI 반도체 2026 2분기 전망",
+    "MCP 생태계 트렌드 (AI 자율에이전트)",
+    "애플 AI 전략 2026",
+    "글로벌 AI 경쟁 구글 메타 오픈AI"
+  ],
+  "key_insights_absorbed": [
+    "KOSPI 7,981.41 (+1.75%) — 8,000선 근접, RSI 87.1 극단 과매수, BB% 94.6% 상단 극근접 — 단기 조정 위험",
+    "삼성부광 8,150원 (+3.95%) — 첫 반등, RSI 23.7에서 회복 중, 포트폴리오 -18.82%",
+    "에이치엘사이언스 17,200원 (+4.75%) — 강한 반등, RSI 44.4 중립 회복",
+    "USD_KRW 5/14 actual close 1,490.26 (보합), historical revision 1,492.99 (5/13)",
+    "WTI $101.00 (-2.41%), $100선 유지, historical revision $101.02 (5/13)",
+    "SkillOps: 스킬 라이브러리 유지보수 프레임워크 — Skill Contract(P,O,A,V,F) + 계층적 의존성 그래프",
+    "TFlow (Good Agentic Friends): Multi-agent weight-space 통신, Token 83% 절감, 속도 4.6×",
+    "Meta: AI 조직 6개월 만에 4번째 개편, 디지털 광고시장 구글 추월 전망",
+    "Google I/O 2026: 5/19 개최, Gemini + Agent 코딩 공개 예정",
+    "Anthropic: Claude for Small Business 출시, 기업용 AI 시장 확대",
+    "Business analysis index: 8 items finalized. Scoring formula: (market_size × demand × barrier) / (initial_investment × complexity)"
   ]
 }

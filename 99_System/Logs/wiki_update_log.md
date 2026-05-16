@@ -116,4 +116,16 @@
 ||2026-05-14 | 16:45 | 🔍 Hermes Cron 지식 기록 — Daily Log + 00-Home 업데이트 | **01_지식/Hermes-Daily-Log.md 5/14 16:30 스냅샷 추가** — KOSPI 7,981 actual close, 시스템 현황, 포트폴리오, 21개 신규 지식. **00-Home.md 거시경제·종목 지표 5/14 종가 기준 갱신**. 변경: **3건** (01_지식/Hermes-Daily-Log.md, 00-Home.md, wiki_update_log.md). |
 ||2026-05-14 | 18:10 | 📊 Wiki 확장기 섹터 파일 갱신 | **5/14 종가 기준 wiki/sectors/로보틱스·헬스케어 + 10_Wiki/Sectors/산업재·헬스케어 4개 섹터 파일 갱신**. 삼성부광(7,840→8,150 +3.95%), 에이치엘사이언스(16,440→17,200 +6.11%), 나우로보틱스(27,600→27,900 +0.18%). 변경: **4건** (wiki/sectors/로보틱스, 헬스케어, 10_Wiki/Sectors/산업재, 헬스케어). |
 
-|2026-05-14 | 21:00 | 🧠 Hermes Brain Sync | **21개 신규 arXiv 논문 스캔 완료. TFlow(Weight-space communication), SkillOps(스킬 라이브러리 유지보수), GRIP-VLM(비전 프루닝) 핵심 발견. KOSPI 7,981 마감 — 8,000선 눈앞. 시장 현황 5/14 업데이트 확인. WSL 재부팅 복구 완료. 변경: 0건 (지식만 동기화).
+||2026-05-14 | 21:00 | 🧠 Hermes Brain Sync | **21개 신규 arXiv 논문 스캔 완료. TFlow(Weight-space communication), SkillOps(스킬 라이브러리 유지보수), GRIP-VLM(비전 프루닝) 핵심 발견. KOSPI 7,981 마감 — 8,000선 눈앞. 시장 현황 5/14 업데이트 확인. WSL 재부팅 복구 완료. 변경: 0건 (지식만 동기화).
+|||2026-05-15 | 00:10 | 📊 Wiki 확장기 yfinance 5/14 재정정 반영 | **yfinance USD_KRW·WTI historical close revision 감지 (cron 수집 3차분 vs 1차분 불일치 — yfinance adjusted close 보정)**: USD_KRW 5/13 close **1,489.54→1,492.99원**(+3.45원 revision) → 5/14 change **-0.18%** (이전 +0.05%→수정). WTI 5/13 close **$103.49→$101.02**(-$2.47 revision) → 5/14 change **-0.02%** (이전 -2.41%→수정). 5/14 Close 값 자체는 14,901원·$101.00으로 불변. 환율·국제유가WTI·KOSPI(참조)·KOSDAQ(참조) 4개 문서 각각 wiki/·10_Wiki/ 2개 구조 모두 갱신. 00-Home.md 지표 및 업데이트 로그 갱신. 변경: **8건** (wiki/macros 환율·국제유가WTI·KOSPI·KOSDAQ, 10_Wiki/Macros 환율·국제유가WTI·KOSPI·KOSDAQ, 00-Home.md). |
+|||2026-05-15 | 00:45 | 🔍 Hermes Cron 지식 기록 — Daily Log 업데이트 | **01_지식/Hermes-Daily-Log.md 5/15 00:45 자정 스냅샷 추가**. 시스템 현황(6개 tmux 정상, 메모리 42%), 포트폴리오(현금 492만, 포지션 없음), 자기 진화 사이클(00:00 정상), Tech Scavenger(마지막 5/14 21:21, 캐시 포화), 신규 지식(MCP 글로벌 AI 경쟁 리포트), 미해결 이슈 21일차 7건. 변경: **2건** (01_지식/Hermes-Daily-Log.md, wiki_update_log.md). |
+||2026-05-15 | 01:00 | 🧠 Brain Sync Cron — 5/14 16:00 이후 신규 지식 흡수 | **6개 커밋 스캔 완료**. 신규 흡수: MCP 생태계 트렌드(18:42), 애플 AI 전략 2026(18:52), 국내 게임산업 글로벌 진출(18:50), 글로벌 AI 경쟁 구글·메타·오픈AI(22:40), 야간 지식 기록(20:45) 21개 논문 요약. 시장 데이터: KOSPI 7,981.41(+1.75%), 삼성부광 8,150원(+3.95%), 에이치엘 17,200원(+4.75%), USD_KRW 1,490.26(보합), WTI $101.00(-2.41%). yfinance 00:10 USD_KRW/WTI historical revision 반영. brain_state.json 갱신 완료. 변경: **3건** (brain_state.json, .hermes_last_check, wiki_update_log.md). |
+||2026-05-15 | 18:10 | 📊 Wiki 확장기 5/15 신규 거래일 전면 갱신 — KOSPI -6.12%·KOSDAQ -5.14% 급락, 나우로보틱스만 독자 강세 | **yfinance 5/15 신규 거래일 데이터 전종목 갱신 — KOSPI/KOSDAQ 역대급 단일 낙폭. 변경 14건**:
+- 삼성부광 **8150→7700원(-5.52%, RSI 23.7→22.4 심각 과매도 심화, BB% 11.1%→5.2% 하단 극근접, 포트폴리오 -18.82%→-23.31%, 7700 신저가).
+- 에이치엘사이언스 **17200→17010원(-1.10%, RSI 44.4→44.6 중립 유지, BB% 36.4%→31.6% 소폭 하락).
+- 나우로보틱스 **27900→28400원(+1.79%, RSI 63.5→65.8, BB% 65.6%→67.3%, KOSPI 급락 속 독자 강세).
+- KOSPI **7981.41→7493.18(-6.12%, RSI 87.1→70.1 과매수 급격 해소, BB% 94.6%→72.5% 상단→중립 급락, 8,000선 차익실현).
+- KOSDAQ **1191.09→1129.82(-5.14%, RSI 52.6→40.9 약세 전환, BB% 49.0%→-16.7% 하단 이탈).
+- USD_KRW **1490.26→1497.76원(+0.30%, 5/16, RSI 54.1→59.7, BB% 86.4%→92.1% 상단 극근접 1500선 임박).
+- WTI **$101.00→$105.42(+4.20%, 5/15, RSI 57.8→60.2, BB% 64.2%→83.2%, $100선 확고 상회).
+변경: **14건** (wiki/stocks 3, wiki/macros 4, wiki/sectors 2, 10_Wiki/Stocks 3, 10_Wiki/Macros 4, 10_Wiki/Sectors 2, 00-Home.md 거시경제·최근업데이트).
