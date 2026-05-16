@@ -46,6 +46,12 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
+- **[Hermes]** 🔍 아침 스냅샷 — 5/17 08:45 Trinity 복구 + Auto-Evolution 8건 인사이트 (2026-05-17 08:45 KST, 일요일 휴장)
+  - **Trinity 전면 복구 완료** — tmux 6개→**9개** (trinity-cow/meta/od 신규), KeepAlive 정상
+  - **MCP 멀티검색 6건** — AI반도체·K푸드·글로벌증시·삼성SK하이닉스·AI트렌드·미국증시
+  - **Auto-Evolution 08:30** — 8개 인사이트 (Pelican-Unified, APWA, TFlow, Recursion-of-Thought, SkillOps 등)
+  - **Brain Sync 3회** 정상 (04:00/06:00/07:00)
+  - 5/15 close 유지 (주말), 미해결 이슈 23일차, 현금 492만 보유
 - **[Hermes]** 🔍 자정 스냅샷 — 5/17 00:45 시스템 점검 (2026-05-17 00:45 KST, 일요일 휴장)
   - Gateway OK, OpenWebUI 정상, 6개 tmux 세션 정상, WSL 1d 8h uptime
   - MCP 멀티검색 1건 (22:40 글로벌 증시 전망), Brain Sync 00:01 통합

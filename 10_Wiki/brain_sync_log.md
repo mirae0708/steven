@@ -43,3 +43,16 @@
   - Positive Alignment: AI for human flourishing — philosophical foundation for Hermes alignment
   - GRAPHLCP: structure-aware conformal prediction on graphs (PPR kernel)
 - **Market snapshot** (from wiki/, stale since 5/15-16): KOSPI 7493 (-6.12%), KOSDAQ 1129 (-5.14%), USD/KRW 1497.76
+
+## 🧠 Brain Sync — 2026-05-17 07:00 KST
+- **Vault stats**: wiki/ 276 files, 10_Wiki/ 210 papers (19 categories), 10_Wiki/_Index.md synced (171 docs)
+- **New since 06:01 KST**: 6 MCP 멀티검색 reports (06:40~06:51)
+  - AI 반도체 2026 시장 전망 — IDC $1.29T 반도체 시장 전망, HBM 완판
+  - K푸드 글로벌 수출 2026 — Q1 $3.35B (+3.5%), 연간 $16B 목표
+  - 글로벌 경제 증시 2026.5 — US CPI 3.8% 쇼크, HBM TAM $35B→$100B(2028)
+  - 삼성전자·SK하이닉스 2026 반도체 — SK하닉 영업익 48.7조 전망, 삼전 추월
+  - AI 인공지능 2026 트렌드 — 딥테크 스타트업, 9M+ 글로벌 추적
+  - 미국주식 나스닥 S&P500 — S&P500 7,409(-1.24%), 나스닥 선물 -1.54%
+- **Market data** (5/15 close): KOSPI 7,493(-6.12%), KOSDAQ 1,129(-5.14%), USD/KRW 1,497(+0.30%), WTI $105.42(+4.20%)
+- **Auto-Evolution Report**: 06:34 KST — 6 new insights catalogued
+- **Key finding**: Hermes Gateway (systemd) inactive since 5/14 reboot
