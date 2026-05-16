@@ -114,6 +114,7 @@
 |- WTI **$103.49→$101.00(-2.41%, RSI 58.8→57.8, BB% 75.6%→64.2%, $100선 유지).
 |변경: **14건** (wiki/stocks 3, wiki/macros 4, 10_Wiki/Stocks 3, 10_Wiki/Macros 4).
 ||2026-05-14 | 16:45 | 🔍 Hermes Cron 지식 기록 — Daily Log + 00-Home 업데이트 | **01_지식/Hermes-Daily-Log.md 5/14 16:30 스냅샷 추가** — KOSPI 7,981 actual close, 시스템 현황, 포트폴리오, 21개 신규 지식. **00-Home.md 거시경제·종목 지표 5/14 종가 기준 갱신**. 변경: **3건** (01_지식/Hermes-Daily-Log.md, 00-Home.md, wiki_update_log.md). |
+||2026-05-16 | 20:45 | 🔍 Hermes Cron 지식 기록 (토요일 스냅샷) | **토요일 휴장 — 5/15 actual close 유지**. **Hermes-Daily-Log.md 5/16 스냅샷 추가** (시스템 현황, MCP 멀티검색 5건 요약). **outputs/2026-05-16-daily-log.md 신규 생성** — 토요일 종합 리포트. **00-Home.md 최근 업데이트 로그 5/16 추가**. 변경: **4건** (01_지식/Hermes-Daily-Log.md, outputs/2026-05-16-daily-log.md, 00-Home.md, wiki_update_log.md). |
 ||2026-05-14 | 18:10 | 📊 Wiki 확장기 섹터 파일 갱신 | **5/14 종가 기준 wiki/sectors/로보틱스·헬스케어 + 10_Wiki/Sectors/산업재·헬스케어 4개 섹터 파일 갱신**. 삼성부광(7,840→8,150 +3.95%), 에이치엘사이언스(16,440→17,200 +6.11%), 나우로보틱스(27,600→27,900 +0.18%). 변경: **4건** (wiki/sectors/로보틱스, 헬스케어, 10_Wiki/Sectors/산업재, 헬스케어). |
 
 ||2026-05-14 | 21:00 | 🧠 Hermes Brain Sync | **21개 신규 arXiv 논문 스캔 완료. TFlow(Weight-space communication), SkillOps(스킬 라이브러리 유지보수), GRIP-VLM(비전 프루닝) 핵심 발견. KOSPI 7,981 마감 — 8,000선 눈앞. 시장 현황 5/14 업데이트 확인. WSL 재부팅 복구 완료. 변경: 0건 (지식만 동기화).
