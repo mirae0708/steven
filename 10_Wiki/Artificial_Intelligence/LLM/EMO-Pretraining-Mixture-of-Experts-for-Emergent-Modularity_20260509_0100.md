@@ -26,7 +26,12 @@ authors: Ryan Wang, Akshita Bhagia, Sewon Min
 - 🔗 [Original](http://arxiv.org/abs/2605.06663v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+- Standard MoEs suffer severe performance degradation when inference is restricted to a subset of experts per domain — EMO is designed to solve this
+- Core idea: tokens within a document share an expert pool (since they share a domain), while different documents use different pools — no human-defined priors needed
+- Emergent modularity: expert subsets naturally specialize at the semantic/domain level (e.g., math, code) rather than the low-level syntactic specialization seen in standard MoEs
+- Pretrained a 1B-active, 14B-total EMO model on 1 trillion tokens — matches standard MoE performance as a full model
+- Selective expert use works: retaining only 25% of experts → just ~1% absolute performance drop; retaining 12.5% → only ~3% drop — standard MoEs break entirely under the same conditions
+- Enables modular, memory-efficient deployment of large sparse models without requiring domain labels during training
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

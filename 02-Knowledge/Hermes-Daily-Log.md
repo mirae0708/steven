@@ -2273,3 +2273,36 @@
 - 🔴 yfinance KOSPI NaN (20일) | KiwoomAuth 8050 (20일) | Tavily API 401 (20일) | Dashboard 8일 스테일
 - 🟡 MetaClaw port 30000 복구됨 | Trinity tmux 복구완료
 - ✅ WSL 14.5h+ 정상 | Gateway active | Swap 0% 리셋 유지
+
+
+## 2026-05-17 (Sun) 00:45 — Midnight Snapshot (Weekend)
+
+### System Status
+| Item | Status | Note |
+|:-----|:----:|:-----|
+| Hermes Gateway | OK | /health responding |
+| OpenWebUI | OK | PID 312, port 3000 |
+| tmux sessions (6) | OK | All Trinity + jongdari |
+| WSL Uptime | OK | 1d 8h |
+| Memory | OK | 3.3Gi / 7.6Gi (43%) |
+| Swap | OK | ~0% |
+| Disk | OK | 27Gi / 1007Gi (3%) |
+| Cron | OK | All active |
+
+### Activity Summary (May 16-17)
+- **MCP Multi-Search 1**: Global stock outlook (22:40)
+- **Brain Sync**: 00:01 KST — May 15-16 knowledge integrated
+- **Self-Heal**: 2 runs normal
+- **MetaClaw**: Unreachable (ongoing)
+
+### Market (May 15 close, weekend hold)
+- KOSPI 7,493 (-6.12%) | KOSDAQ 1,130 (-5.14%)
+- USD/KRW 1,498 (+0.30%) | WTI $105.42 (+4.20%)
+- Samsung Bookgwang 7,700 (-5.52%, new low) | HL Science 17,010 (-1.10%) | Now Robotics 28,400 (+1.79%)
+
+### Portfolio
+- Cash: 4,929,810 won (fully liquidated - crash avoidance successful, Day 22)
+
+### Issues Tracker (23 days persistent)
+- RED: yfinance NaN | KiwoomAuth 8050 | Tavily 401 | Dashboard stale | MCP Zombie
+- YELLOW: Trinity services (recovered but MetaClaw unreachable)

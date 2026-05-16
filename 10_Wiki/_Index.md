@@ -1,5 +1,5 @@
 # 🧠 기술 지식 인덱스
-_Documents: 16 | Last sync: 2026-05-13 07:04_
+| _Documents: 171 | Last sync: 2026-05-17 04:00_
 
 > 자동 수집 + 요약된 AI/딥러닝/코딩 기술 문서  
 > _Last synced: 2026-05-12 12:00_
@@ -7,13 +7,14 @@ _Documents: 16 | Last sync: 2026-05-13 07:04_
 ---
 
 ## 🤖 Artificial Intelligence
-- [[10_Wiki/Artificial_Intelligence/LLM/_Index|LLM (Large Language Models)]] (27 docs)
-- [[10_Wiki/Artificial_Intelligence/AI_Agents/_Index|AI Agents]] (20 docs)
-- [[10_Wiki/Artificial_Intelligence/Deep_Learning/_Index|Deep Learning]] (7 docs)
-- [[10_Wiki/Artificial_Intelligence/Computer_Vision/_Index|Computer Vision]] (7 docs)
-- [[10_Wiki/Artificial_Intelligence/NLP/_Index|NLP (Natural Language Processing)]] (1 doc)
-- [[10_Wiki/Artificial_Intelligence/Reinforcement_Learning/_Index|Reinforcement Learning]] (4 docs)
-- [[10_Wiki/Artificial_Intelligence/MCP/_Index|MCP Protocol]] (2 docs)
+- [[10_Wiki/Artificial_Intelligence/LLM/_Index|LLM (Large Language Models)]] (58 docs)
+- [[10_Wiki/Artificial_Intelligence/AI_Agents/_Index|AI Agents]] (41 docs)
+- [[10_Wiki/Artificial_Intelligence/Agent_LLM/_Index|Agent LLM]] (2 docs)
+- [[10_Wiki/Artificial_Intelligence/Deep_Learning/_Index|Deep Learning]] (13 docs)
+- [[10_Wiki/Artificial_Intelligence/Computer_Vision/_Index|Computer Vision]] (11 docs)
+- [[10_Wiki/Artificial_Intelligence/NLP/_Index|NLP (Natural Language Processing)]] (3 docs)
+- [[10_Wiki/Artificial_Intelligence/Reinforcement_Learning/_Index|Reinforcement Learning]] (9 docs)
+- [[10_Wiki/Artificial_Intelligence/MCP/_Index|MCP Protocol]] (3 docs)
 
 ## 💻 Software Engineering
 - [[10_Wiki/Software_Engineering/Python/_Index|Python]]
@@ -21,13 +22,13 @@ _Documents: 16 | Last sync: 2026-05-13 07:04_
 - [[10_Wiki/Software_Engineering/Best_Practices/_Index|Best Practices]]
 
 ## 🛠 Tools
-- [[10_Wiki/Tools/DevTools/_Index|DevTools]] (5 docs)
+- [[10_Wiki/Tools/DevTools/_Index|DevTools]] (11 docs)
 - [[10_Wiki/Tools/Git/_Index|Git]]
 - [[10_Wiki/Tools/Docker_K8s/_Index|Docker & Kubernetes]]
 
 ## 🔧 MLOps
-- [[10_Wiki/MLOps/Training_Inference/_Index|Training & Inference]]
-- [[10_Wiki/MLOps/Deployment/_Index|Deployment]] (2 docs)
+- [[10_Wiki/MLOps/Training_Inference/_Index|Training & Inference]] (3 docs)
+- [[10_Wiki/MLOps/Deployment/_Index|Deployment]] (5 docs)
 - [[10_Wiki/MLOps/Monitoring/_Index|Monitoring]]
 
 ## 📚 Frameworks

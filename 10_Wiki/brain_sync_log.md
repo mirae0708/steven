@@ -1,0 +1,45 @@
+## 🧠 Brain Sync — 
+- Vault wiki/ content: No new files since last sync (last updated May 4-12 range)
+- 10_Wiki/: 7 MCP 멀티검색 reports from May 16 (today)
+- Wiki skill docs: 18 knowledge docs in ai/skills/ — all already absorbed or referenced from existing Hermes skills
+- New knowledge: MCP 멀티검색 reports cover HBM market (00B), AI agent ecosystem (Hermes Agent featured), K-Food exports (.96B in May), and logistics AI trends
+
+## 🧠 Brain Sync — 2026-05-16 23:01 KST
+- Vault wiki/ content: No new files since last scan (content from May 4-12)
+- 10_Wiki/: 7 MCP 멀티검색 reports from May 16
+- Wiki ai/skills/: 18 knowledge docs — already absorbed or referenced from Hermes skills
+- Key findings in latest MCP reports: HBM market outlook, AI agent ecosystem (Hermes featured), K-Food exports .96B
+
+## 🧠 Brain Sync — 2026-05-17 04:00 KST
+- **Vault stats**: wiki/ 276 files, 10_Wiki/ 210 papers (19 categories)
+- **Changes since last sync**: 0 new files (last populated May 16)
+- **Papers processed for Key Takeaways**: 17 unfilled entries → ALL filled ✓
+  - AI_Agents(2): Agentic-MIP-Research, PolarVSR
+  - Computer_Vision(3): PaMoSplat, Emergent-Semantic-Role, Maritime-DETR
+  - LLM(5): Pelican-Unified, Relations-Are-Channels, Signature-Bandits, UniPool, EMO-Pretraining
+  - Deep_Learning(2): Active-Tabular-Augmentation, Relit-LiVE
+  - MCP(1): Open-Ontologies
+  - Reinforcement_Learning(1): Positive-Alignment
+  - DevTools(2): GRAPHLCP, ActCam
+  - GitHub(2): files-sdk, cs2-external-overlay
+- **Truncated summaries fixed**: 2 (Pelican-Unified, Hand-in-the-Loop)
+- **Market snapshot** (from wiki/, last update 5/15-16):
+  - KOSPI 7493 (-6.12%), KOSDAQ 1129 (-5.14%)
+  - USD/KRW 1497.76 (+0.30%, BB% 92.1% near upper band)
+  - WTI $105.42 (+4.20%) — above $100 crisis threshold
+  - Portfolio: 삼성부광 -23.31%(RSI 22.4), 나우로보틱스 -7.04%
+- **7 New MCP reports**: K-Food $3.96B, HBM market, AI agent ecosystem, logistics trends
+- **Notable papers**: Pelican-Unified (first unified embodied foundation model), Open-Ontologies (MCP-based F1=0.717 vs LLM-only 0.431), EMO-Pretraining (emergent modularity in MoE)
+
+## 🧠 Brain Sync — 2026-05-17 06:00 KST
+- **No new files** since last sync (05:02)
+- **State**: 10_Wiki/ fully populated with 210 papers, all Key Takeaways filled
+- **Notable holdings already processed**:
+  - Pelican-Unified 1.0: first unified embodied foundation model (VLM + UFG)
+  - Open-Ontologies: MCP-based ontology F1=0.717 vs LLM-only 0.431 — validates Hermes/MCP paradigm
+  - EMO-Pretraining: globally shared expert pool, 12.5% experts → ~3% perf drop (vs MoE breaks entirely)
+  - files-sdk: unified blob storage SDK with AI SDK tool wrappers — relevant for Hermes storage layer
+  - Hand-in-the-Loop: 99.8% takeover jitter reduction in dexterous VLA
+  - Positive Alignment: AI for human flourishing — philosophical foundation for Hermes alignment
+  - GRAPHLCP: structure-aware conformal prediction on graphs (PPR kernel)
+- **Market snapshot** (from wiki/, stale since 5/15-16): KOSPI 7493 (-6.12%), KOSDAQ 1129 (-5.14%), USD/KRW 1497.76

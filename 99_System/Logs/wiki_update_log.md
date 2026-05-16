@@ -130,3 +130,5 @@
 - USD_KRW **1490.26→1497.76원(+0.30%, 5/16, RSI 54.1→59.7, BB% 86.4%→92.1% 상단 극근접 1500선 임박).
 - WTI **$101.00→$105.42(+4.20%, 5/15, RSI 57.8→60.2, BB% 64.2%→83.2%, $100선 확고 상회).
 변경: **14건** (wiki/stocks 3, wiki/macros 4, wiki/sectors 2, 10_Wiki/Stocks 3, 10_Wiki/Macros 4, 10_Wiki/Sectors 2, 00-Home.md 거시경제·최근업데이트).
+||||2026-05-17 | 00:45 | 🔍 Hermes Cron 지식 기록 — 자정 스냅샷 (일요일) | **주말 휴장 — 5/15 close 유지. 01_지식/Hermes-Daily-Log.md + 02-Knowledge/Hermes-Daily-Log.md 5/17 00:45 스냅샷 추가**. 시스템 현황(Gateway OK, 6개 tmux, WSL 1d 8h), MCP 멀티검색 1건(22:40 글로벌 증시 전망), Brain Sync 00:01 통합. 미해결 이슈 23일차 지속. 변경: **3건** (01_지식/Hermes-Daily-Log.md, 02-Knowledge/Hermes-Daily-Log.md, wiki_update_log.md). |
+||2026-05-17 | 06:10 | 📊 Wiki 확장기 Raw 재확인 — 5/15 데이터 유지 (일요일 휴장) | **주말 휴장 — 5/15 actual close 유지. 변경 없음.** Raw 데이터 12건 5/16 18:11 KST 수집분 그대로 — wiki/stocks 3건, wiki/macros 4건, 10_Wiki/Stocks 3건, 10_Wiki/Macros 4건, wiki/sectors/로보틱스·헬스케어·코스닥중소형 3건, 10_Wiki/Sectors/산업재·헬스케어 2건, 00-Home.md 모두 5/15 데이터와 일치. **신규: 03_경제/05_시장현황_20260515.md 생성** — 5/15 KOSPI -6.12%·KOSDAQ -5.14% 급락 분석, USD/KRW 1,497·WTI $105 동향, 개별종목 3종 정리. 변경: **1건** (03_경제/05_시장현황_20260515.md 신규). |

@@ -899,3 +899,56 @@
 | 4 | Dashboard 스테일 | 🔴 | 22일 |
 | 5 | MCP Python Zombie | 🔴 | 22일 |
 | 6-7 | Trinity 서비스 | 🟡 | 22일 (복구 유지) |
+
+
+---
+
+## 2026-05-17 (Sun) 00:45 -- Midnight Snapshot (Sunday)
+
+### System Status
+| Item | Status | Note |
+|:-----|:----:|:-----|
+| Hermes Gateway | OK | /health responding normally |
+| OpenWebUI | OK | PID 312, port 3000, running |
+| tmux sessions (6) | OK | hermes / hermes-mcp / jongdari / cowagent / metaclaw / opendesign |
+| WSL Uptime | OK | 1d 8h (since 5/15 16:28) |
+| Memory | OK | 3.3Gi / 7.6Gi (43%) |
+| Swap | OK | 1.3MiB / 2.0Gi (~0%) |
+| Disk | OK | 27Gi / 1007Gi (3%) |
+| Cron | OK | self-heal 1min, dashboard 2min, self-evolve hourly, clawsweeper 03:00 |
+
+### Activity (May 16 follow-up)
+- **MCP Multi-Search 1** -- 22:40 Global stock market outlook (Naver+GitHub hybrid)
+- **Brain Sync** -- 00:01 brain_sync_log updated (May 15-16 knowledge integration)
+- **Self-Heal** -- 2 runs normal (00:40, 00:12)
+- **MetaClaw** -- Unreachable (ongoing)
+
+### Market (May 15 actual close -- weekend, no change)
+| Indicator | Value | Change |
+|:----------|:-----:|:------:|
+| KOSPI | **7,493.18** | -6.12% |
+| KOSDAQ | **1,129.82** | -5.14% |
+| USD/KRW | **1,497.76 won** | +0.30% |
+| WTI | **$105.42** | +4.20% |
+| Samsung Bookgwang | **7,700 won** | -5.52% (new low) |
+| HL Science | **17,010 won** | -1.10% |
+| Now Robotics | **28,400 won** | +1.79% |
+
+### Portfolio
+- **Cash**: 4,929,810 won (fully liquidated, unchanged)
+- KOSPI -6.12% crash avoided by holding cash (Day 22)
+
+### Unresolved Issues (Day 23)
+| # | Issue | Severity | Duration |
+|:-:|:------|:--------:|:--------:|
+| 1 | yfinance .KS NaN | RED | 23 days |
+| 2 | KiwoomAuth 8050 port | RED | 23 days |
+| 3 | Tavily API key expired (401) | RED | 23 days |
+| 4 | Dashboard stale | RED | 23 days |
+| 5 | MCP Python Zombie | RED | 23 days |
+| 6-7 | Trinity services | YELLOW | 23 days (recovered) |
+
+### Next Week Outlook
+- **Monday (5/18)**: Technical rebound vs further decline after KOSPI -6.12%
+- **Watch points**: Support level discovery after 8,000 profit-taking, WTI $105 Middle East risk, USD/KRW 1,500 breakthrough
+- **Trinity**: MetaClaw recovery monitoring needed

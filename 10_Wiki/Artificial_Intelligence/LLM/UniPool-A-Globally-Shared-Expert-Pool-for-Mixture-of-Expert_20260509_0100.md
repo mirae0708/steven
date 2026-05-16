@@ -25,7 +25,12 @@ authors: Minbin Huang, Han Shi, Chuanyang Zheng
 - 🔗 [Original](http://arxiv.org/abs/2605.06665v1)
 
 ## Key Takeaways
-_To be filled during Brain Sync processing..._
+- UniPool replaces per-layer expert ownership with a single globally shared expert pool accessed by independent per-layer routers
+- Routing probe reveals redundancy: replacing deeper layer's top-k router with random routing drops accuracy by only 1.0–1.6 points
+- Introduces pool-level auxiliary loss for balanced expert utilization and NormRouter for sparse, scale-stable routing
+- Consistently improves validation loss (up to 0.0386) and perplexity over vanilla MoE at 182M–978M parameter scales trained on 30B tokens
+- Pool size becomes an explicit depth-scaling hyperparameter — reduced-pool variants using 41.6%–66.7% of vanilla expert-parameter budget match or outperform layer-wise MoE
+- Expert parameters need not grow linearly with depth under shared-pool design; sublinear growth is more efficient and effective
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_
