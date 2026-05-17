@@ -2340,3 +2340,10 @@
 - **5th Auto-Evolution cycle**: Swap monitoring 신규 제안
 - **Monday 대비**: KOSPI 3개 시나리오, USD/KRW 1,500 경계, WTI $105.42
 - **미해결**: 23일차 5건 RED, Tech Scavenger 캐시 미리셋
+
+## 2026-05-17 (Sun) 16:00 — Brain Sync
+- **Swap**: 452MiB (+41MiB since 14:30, growth slowing from ~95→~27MiB/h)
+- **MCP 2건**: 2차전지 + 바이오헬스케어 — 모두 LOW SIGNAL (Naver 광고 오염)
+- **Tech Scavenger**: 8일차 캐시 스턱 지속
+- **내일 09:00 KST**: KOSPI -6.12% crash 후 첫 거래일 — 3 entry scenarios ready
+- **시스템**: Trinity ✅ 3/3, KeepAlive ✅, 9 tmux, WSL up 1d22h+

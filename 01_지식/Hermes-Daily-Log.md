@@ -611,3 +611,10 @@
 | Swap 모니터링 | ✅ **신규 추가 (14:30)** |
 | 지식 문서 생성 (3건) | ❌ 13일차 지연 |
 | Deep Diagnosis (5건) | 📋 계획 수립 완료, 월요일 실행 예정 |
+
+
+### 16:00 Update — Swap Growth Confirmed
+- Swap: 452MiB (from 411MiB at 14:30) — +41MiB in 1.5h, growth slowing from ~95MiB/h to ~27MiB/h
+- 2 new MCP reports (2차전지, 바이오헬스케어) — both LOW SIGNAL (Naver SEO farm contamination)
+- Tech Scavenger cache still stuck (8d gap since May 9)
+- Market: Sunday closed. TOMORROW 09:00 = first trading day since -6.12% crash

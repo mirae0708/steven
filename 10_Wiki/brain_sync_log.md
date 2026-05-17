@@ -127,3 +127,17 @@
 |- **System**: Trinity all ✅, KeepAlive OK, 9 tmux, WSL up 1d22h. 5 persistent 23-day issues still RED.
 |- **Market**: Sunday closed. KOSPI 7,493(-6.12%), USD/KRW 1,497.76, WTI $105.42
 |- **MCP quality warning**: All 5 new reports are noisy/low-signal. Pipeline quality degradation continues.
+
+
+## 🧠 Brain Sync — 2026-05-17 16:00 KST
+- **Vault stats**: wiki/ 277 files, 10_Wiki/ 215 papers (19 categories)
+- **New since 15:00 KST**: 2 MCP 멀티검색 reports (14:41)
+  - 2차전지 배터리 — noisy/Naver ad content (low signal)
+  - 바이오 헬스케어 — noisy/Naver ad content (low signal)
+  - Both classified as LOW SIGNAL — content contaminated by Naver SEO farms
+- **Auto-Evolution**: 5th cycle (14:30) — Swap anomaly flagged (33MiB→411MiB, 12x)
+- **Swap update**: 452MiB at 16:00 (from 411MiB at 14:30) — slowing but still rising
+- **No new papers**: arXiv Tech Scavenger cache still stuck since May 9 (8d gap)
+- **Market**: Sunday closed — KOSPI 7,493(-6.12%), USD/KRW 1,497.76, WTI ~$105
+- **System**: Trinity ✅ all 3/3, KeepAlive ✅, 9 tmux, WSL up 1d22h+
+- **Key takeaway**: 5th evolution cycle today confirmed swap leak pattern. Monday pre-market entry plan ready. MCP pipeline quality degradation needs fix.
