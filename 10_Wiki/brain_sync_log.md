@@ -56,3 +56,39 @@
 - **Market data** (5/15 close): KOSPI 7,493(-6.12%), KOSDAQ 1,129(-5.14%), USD/KRW 1,497(+0.30%), WTI $105.42(+4.20%)
 - **Auto-Evolution Report**: 06:34 KST — 6 new insights catalogued
 - **Key finding**: Hermes Gateway (systemd) inactive since 5/14 reboot
+
+## 🧠 Brain Sync — 2026-05-17 10:00 KST
+- **Vault stats**: wiki/ 277 files, 10_Wiki/ 215 papers (+44 new since last 04:00 sync)
+- **New since 08:00 KST**: 0 new papers (no arXiv/GitHub collection run), 6 MCP 멀티검색 reports (06:40~06:51)
+- **Notable growth**: 10_Wiki jumped from 171→215 papers (+25.7%) — MCP 멀티검색 reports grew to 43 total
+- **Key papers from latest batch**:
+  - **APWA**: Distributed architecture for parallelizable agentic workflows — addresses scaling bottlenecks in multi-agent systems
+  - **AI Knows When It's Being Watched**: LLM-based agents exhibit functional strategic action under observation — relevant to Hermes monitoring/auditing
+  - **FutureSim**: Replaying world events to evaluate adaptive agents — grounded simulation for dynamic environments
+  - **Is Grep All You Need?**: Agent harnesses reshape agentic search — compares RAG vs grep-based retrieval for agents
+  - **Viverra**: Text-to-Code with correctness guarantees via formal verification
+  - **Veritas**: Agentic framework for memory corruption vulnerability detection in stripped binaries — security relevance
+  - **ATLAS**: Agentic or Latent visual reasoning — one token suffix enables both approaches
+  - **Pelican-Unified 1.0**: first unified embodied foundation model (already processed last cycle)
+  - **RefDecoder**: Conditional video decoding — asymmetric architecture fix in diffusion models
+  - **EntityBench**: Entity-consistent long-range multi-shot video generation benchmark
+- **MCP 멀티검색 insights**:
+  - AI 반도체: 글로벌 반도체 매출 $1T 전망, HBM 물량 완판, 인텔 +107% 폭등
+  - 글로벌 경제: US CPI 3.8% 쇼크, PPI 4년만 최대 상승
+  - 삼성전자/SK하이닉스: SK하닉 영업익 48.7조, HBM 슈퍼사이클
+  - 미국주식: S&P500 7,409(-1.24%), 나스닥 선물 -1.54%
+- **Market snapshot** (from wiki/, 5/15-16 close):
+  - KOSPI 7,493(-6.12%), KOSDAQ 1,129(-5.14%) — 급락 day
+  - USD/KRW 1,497.76(+0.30%) — 원화 약세, 1500선 임박
+  - WTI $105.42(+4.20%) — $100 crisis threshold 확고 상회
+  - Portfolio: 삼성부광 -23.31%(RSI 22.4 심각과매도), 나우로보틱스 -7.04%
+- **Index updated**: _Index.md doc count corrected 171→215
+
+## 🧠 Brain Sync — 2026-05-17 10:30 KST
+- **3rd evolution cycle today**: Auto-Evolution-20260517-1030.md created
+- **Vault stats**: wiki/ 277 files, 10_Wiki/ 215 papers — no change
+- **System health**: WSL up 1d18h, Trinity all ✅, Portfolio cash 4,929,810 won
+- **Cross-cycle synthesis**: 6 insights consolidated from 3 cycles today
+- **Key new finding**: Tech Scavenger cache saturation confirmed as 3-day consistent pattern across ALL cycles
+- **Monday action plan**: 11 items organized by pre-market/morning/afternoon
+- **23-day issue tracker**: Trinity RESOLVED, 5 remaining RED — Deep Diagnosis plan defined
