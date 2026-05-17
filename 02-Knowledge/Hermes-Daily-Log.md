@@ -2374,4 +2374,83 @@
 2. 또는 429 발생 시 지수 백오프 재시도 로직 추가
 3. GitHub: 캐시 정상 동작 — trending set 변화 시 자동 수집됨
 
+## 2026-05-18 (Mon) 04:45 — Pre-Market Delta (T-4h15m)
 
+### 🧬 Overnight Summary: WSL Double-Reboot Event
+
+**Critical event**: WSL was rebooted **twice** overnight (between 22:30 May 17 and 03:10 May 18):
+- 1st reboot (between 20:45~22:30): Cleared 602MiB swap
+- 2nd reboot (between 22:30~03:10): Likely triggered by swap re-accumulation or OOM
+- **Effect**: All services auto-recovered both times. Swap fully cleared to 0MiB. Memory leanest observed (3.0Gi/7.6Gi = 39%).
+
+### Process Landscape (Post-2nd-Reboot, 04:45 KST)
+
+| Process | PID | RSS | Status |
+|:--------|:---:|:---:|:------:|
+| OpenWebUI (:3000) | 315 | 799MiB | ✅ Running |
+| MetaClaw (skills_only) | 1985 | 515MiB | ✅ Running |
+| Hermes Gateway | 306 | 388MiB | ✅ Running (leaner: 406→388MiB) |
+| Nexus Orchestrator | 4162 | 327MiB | ✅ Single instance |
+| Hermes CLI (×2) | 470, 825 | ~254MiB each | ✅ Running |
+| Quote Web App | 4258 | 148MiB | ✅ Running |
+| MCP servers (4×) | — | ~61–86MiB each | ✅ All normal |
+
+### Overnight Knowledge Intake
+
+| Source | Items | Details |
+|:-------|:-----:|:--------|
+| GitHub Trending (23:23) | 12 repos | High-signal: OpenSquilla (⭐951), tokenspeed (⭐1035), Photo-agents (⭐918), awesome-agentic-ai-zh (⭐1494), elephant-agent (⭐275) |
+| GitHub Trending (00:20) | 4 repos | okx-agent-trade-kit, DeepSeek-Code-Whale, CloakBrowser, solana-trading-bot |
+| GitHub Trending (03:20) | 2 repos | SD WebUI guide (low signal), Roblox FPS unlocker (noise) |
+| MCP multi-search | 2 reports | Crypto market, K-Food/K-Beauty export |
+| **Total new intake** | **~18 items** | All logged in brain_sync_log and 10_Wiki/ |
+
+### 🏆 Top-Signal Repos (Overnight Batch)
+
+1. **opensquilla/opensquilla** (⭐951) — Token-efficient AI agents, "higher intelligence density" on same budget
+2. **lightseekorg/tokenspeed** (⭐1035) — Speed-of-light LLM inference; potential backend candidate
+3. **jmerelnyc/Photo-agents** (⭐918) — Self-evolving agents with vision-grounded layered memory + self-written skills
+4. **agentic-in/elephant-agent** (⭐275) — "Personal-Model First Self Evolving AI Agent"
+5. **WenyuChiou/awesome-agentic-ai-zh** (⭐1494) — Trilingual AI learning roadmap (8 stages, 145+ curated projects)
+
+### 📊 Portfolio & Entry Scenarios (Mon May 18, First Trading Day After -6.12% Crash)
+
+| Ticker | Price (5/15) | Change | RSI | Note |
+|:-------|:-----------:|:------:|:---:|:-----|
+| 삼성부광 (014950.KQ) | 7,700원 | -5.52% | 22.4 | 🔴 Severe oversold |
+| 나우로보틱스 (459510.KQ) | 28,400원 | +1.79% | 65.8 | 🟢 Defensive strength |
+| 에이치엘사이언스 (473980.KQ) | 17,010원 | -1.10% | 44.6 | 🟡 Neutral |
+| **Cash** | **~4,930,000원** | — | — | **100% liquid** |
+
+**Entry Strategy (Cash: ~4.93M won):**
+- KOSPI >7,500 (gap-up): HOLD — dead-cat bounce risk
+- KOSPI 7,300~7,500: 25% entry (~1.23M won)
+- KOSPI <7,200: 50% entry (~2.46M won)
+- USD/KRW >1,500 & WTI >$105: DELAY ALL (stagflation)
+
+### 🚨 Persistent Issues Tracker (24 Days and Counting)
+
+| Issue | Age | Status | Notes |
+|:------|:---:|:------:|:------|
+| yfinance .KS NaN | 24d | ❌ | KOSDAQ ticker suffix on Yahoo Finance |
+| KiwoomAuth 8050 blocked | 24d | ❌ | Windows firewall / WSL port conflict |
+| Tavily API key expired | 24d | ❌ | Need re-registration |
+| Dashboard stale | 11d | ❌ | Stale since May 7; NaN for KOSPI |
+| MCP Python Zombie on restart | 24d | ❌ | CancelledError on Gateway restart |
+| Tech Scavenger cache | 9d | ❌ | Stuck since May 9; arXiv 429 errors |
+| **WSL reboot pattern (new)** | **~6h** | ⚠️ | 2 reboots overnight; root cause unknown |
+
+### ⏰ Pre-Market Checklist
+
+| Time (KST) | Remaining | Action |
+|:-----------|:---------:|:-------|
+| **04:45 NOW** | T-4h15m | 🧬 Evolution cycle complete |
+| 08:00 | T-1h00m | US futures check (S&P500, Nasdaq, VIX) |
+| 08:15 | T-0h45m | USD/KRW Asia open |
+| 08:30 | T-0h30m | WTI pre-market (>$105 = stagflation) |
+| 08:45 | T-0h15m | AI Council simulation |
+| **09:00** | **D-DAY** | **KOSPI OPEN — execute or hold** |
+
+---
+
+*Recorded by Hermes Cron on 2026-05-18 04:45 KST — Pre-market delta snapshot, Mon May 18*
