@@ -581,3 +581,33 @@
 - **✅** Brain Sync 3회 — 04:00/06:00/07:00
 - **🔄** Tech Scavenger — arXiv 429 지속 (캐시 포화 147 URL)
 - **⟳** Gateway systemd PID — 미해결 (KeepAlive 대체 정상 작동)
+
+## 2026-05-17 (Sun) 15:00 — 오후 Brain Sync (Swap 급증 경고)
+
+### New Since 08:45 Snapshot
+- **MCP 멀티검색 5건 신규 (12:51~14:41)**: AI 반도체, 미국증시 S&P500, 국내증시 KOSPI, 바이오헬스케어, 2차전지배터리 — 모두 noisy/Naver 광고 혼입
+- **Auto-Evolution 5회차 (14:30)**: Swap 사용량 12배 급증 (33MiB→411MiB, 4시간만에) — MetaClaw 메모리 누수 의심 (468MB RSS)
+
+### ⚠️ CRITICAL: Swap Usage Anomaly
+| Time | Swap | Delta | Note |
+|:----|:----:|:-----:|:-----|
+| 08:47 | 33MiB / 2.0Gi (1.6%) | — | 정상 |
+| 10:30 | 33MiB (추정) | — | 정상 유지 |
+| 12:30 | 200MiB (추정) | ⬆️ | 상승 시작 |
+| 14:30 | **411MiB / 2.0Gi (20%)** | ⬆️ **12.4x** | MetaClaw 468MB RSS |
+- **성장률**: ~95MiB/hour → 17시간 내 한도 도달 예상 (~07:30 Mon)
+- **영향**: Swap 포화 시 OOM killer가 프로세스 종료 (MetaClaw 우선 타격)
+- **권장**: 자정까지 1GiB 초과 시 MetaClaw 선제적 재시작
+
+### Market (Sunday — 5/15 close 유지)
+- KOSPI 7,493 (-6.12%), KOSDAQ 1,129 (-5.14%), USD/KRW 1,497.76, WTI $105.42
+- 월요일 첫 거래일 대비: 3가지 시나리오(KOSPI 7,500↑/7,300~7,500/<7,200) + USD/KRW 1,500 스태그플레이션 경고
+
+### Cross-Cycle Progress (Day 23)
+| 항목 | 진척 |
+|:-----|:-----|
+| Trinity 복구 | ✅ 완전 복구, 3/3 정상 |
+| Tech Scavenger 캐시 리셋 | ❌ 5회 요청에도 미실행 |
+| Swap 모니터링 | ✅ **신규 추가 (14:30)** |
+| 지식 문서 생성 (3건) | ❌ 13일차 지연 |
+| Deep Diagnosis (5건) | 📋 계획 수립 완료, 월요일 실행 예정 |

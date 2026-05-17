@@ -114,5 +114,16 @@
 - **Auto-Evolution Report**: 10:30 KST — 3rd evolution cycle today, 6 cross-cycle insights, 6 enhancement proposals, Monday pre-market entry plan, Trinity full recovery confirmed ✅
 - **Cross-cycle findings**: Tech Scavenger cache saturation confirmed 3d consistent (arXiv 429 errors), 5 persistent 23-day issues still RED, Trinity ✅ all recovered and stable
 - **No new papers** since 11:00 — only the 3 MCP reports were fresh content
-- **Market freeze**: Sunday, data stuck at May 15 close — KOSPI 7,493(-6.12%), USD/KRW 1,497.76
-- **Stale data warning**: All 3 new MCP reports contain noisy/corrupted Naver search results (ads mixed in) — low actionable signal
+| **Market freeze**: Sunday, data stuck at May 15 close — KOSPI 7,493(-6.12%), USD/KRW 1,497.76
+|- **Stale data warning**: All 3 new MCP reports contain noisy/corrupted Naver search results (ads mixed in) — low actionable signal
+
+## 🧠 Brain Sync — 2026-05-17 15:00 KST
+|- **Vault stats**: wiki/ 277 files, 10_Wiki/ 215 papers — no change
+|- **New since 12:00 KST**: 3 MCP reports (12:51~12:52), 2 MCP reports (14:41), 1 Auto-Evolution (14:30 — 5th cycle today)
+|  - MCP 12:51~12:52: AI 반도체, 미국증시 S&P500, 국내증시 KOSPI
+|  - MCP 14:41: 바이오헬스케어, 2차전지배터리 — all noisy/corrupted Naver ads
+|  - Auto-Evolution 14:30: New critical finding — Swap 12x increase (33MiB→411MiB in 4h), potential MetaClaw memory leak (468MB RSS)
+|- **New insight**: Swap growth ~95MiB/hour; at this rate could hit 2.0Gi limit by ~07:30 Mon. MetaClaw restart may be needed.
+|- **System**: Trinity all ✅, KeepAlive OK, 9 tmux, WSL up 1d22h. 5 persistent 23-day issues still RED.
+|- **Market**: Sunday closed. KOSPI 7,493(-6.12%), USD/KRW 1,497.76, WTI $105.42
+|- **MCP quality warning**: All 5 new reports are noisy/low-signal. Pipeline quality degradation continues.

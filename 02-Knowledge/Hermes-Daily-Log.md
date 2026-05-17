@@ -2333,3 +2333,10 @@
 **API Issues Today**: arXiv rate-limiting (HTTP 429 cs.SE/DC/MA) and timeouts (cs.RO) — 9 categories affected across several runs. GitHub Trending stable.
 
 **Cumulative**: 174 runs since May 4, ~230+ papers/projects documented in Wiki.
+
+## 2026-05-17 (Sun) 15:00 — Brain Sync
+- **Swap 급증 경고**: 33MiB→411MiB (4h, 12.4x), MetaClaw 468MB RSS
+- **MCP 5건**: 모두 noisy/Naver 광고 — pipeline quality degradation
+- **5th Auto-Evolution cycle**: Swap monitoring 신규 제안
+- **Monday 대비**: KOSPI 3개 시나리오, USD/KRW 1,500 경계, WTI $105.42
+- **미해결**: 23일차 5건 RED, Tech Scavenger 캐시 미리셋
