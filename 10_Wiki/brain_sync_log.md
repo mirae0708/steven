@@ -215,4 +215,26 @@
   4. **Trilingual Knowledge Gap** — awesome-agentic-ai-zh (⭐1494, trilingual roadmap) shows strong demand for Chinese-language agentic AI education
   5. **Code Search Beyond Grep** — semble_rs (BM25+semantic hybrid, Tree-sitter AST) confirms the "Is Grep All You Need?" paper's findings — hybrid approaches are emerging
 - **System**: WSL up 2h50m (post-reboot). Memory stable, Swap 0B. No new issues.
-- **Notable**: opensquilla (⭐951) and awesome-agentic-ai-zh (⭐1494) are the breakout repos this cycle — high growth trajectories
+|- **Notable**: opensquilla (⭐951) and awesome-agentic-ai-zh (⭐1494) are the breakout repos this cycle — high growth trajectories
+
+
+## 🧠 Brain Sync — 2026-05-18 04:00 KST
+- **Time**: 2026-05-18 04:00 KST
+- **Vault stats**: wiki/ 277 files, 10_Wiki/ 292 papers+reports (+31 from 23:00's 261, new batch added)
+- **New since 00:00 KST**: 6 new GitHub Trending entries via tech-scavenger (0020+0320 batch)
+  - **0020 batch (May 18 00:20)**: 
+    - MCP: dex-original/okx-agent-trade-kit (⭐141, OKX crypto trading MCP agent kit)
+    - MCP: usewhale/DeepSeek-Code-Whale (⭐148, DeepSeek-optimized AI coding assistant w/ MCP+Skills+cache)
+    - DL: VAENPP/solana-trading-bot (⭐78, keyword-stuffed SEO noise)
+    - SysDesign: KenKaneki18/CloakBrowser (⭐381, anti-detect browser, fingerprint spoofing)
+  - **0320 batch (May 18 03:20)**:
+    - DL: BasZ4ll/Stable-Diffusion-WebUI (⭐147, SD WebUI SEO noise)
+    - MLOps/Monitoring: Sunislazi/rbxfpsunlocker (⭐158, Roblox FPS unlocker — miscategorized)
+- **2323 batch committed**: 22 files (27 entries including 22 tracked + MCP reports overlap) now fully git-tracked
+- **All 28 unstaged files committed** — vault clean
+- **System**: WSL up 49min (rebooted ~03:10 KST — WSL VM recycling). Memory 3.0Gi/7.6Gi, Swap 0B ✅ (reset clean). Load avg 0.77.
+- **Key assessment**: All 6 new entries are **low-signal SEO keyword noise** — no actionable technical content. KenKaneki18/CloakBrowser (⭐381) is the most interesting (anti-detect browser) but primarily keyword-stuffed. usewhale/DeepSeek-Code-Whale has potential as MCP-based tool but is early-stage (⭐148, Go lang).
+- **Pattern note**: GitHub Trending entries continue to be dominated by SEO-optimized keyword dumps. The signal-to-noise ratio remains very low — the 5 patterns identified at 23:00 (token efficiency, agent self-evolution, MCP as OS, trilingual knowledge, code search beyond grep) remain the primary actionable insights.
+- **No new papers** since last sync — arXiv Tech Scavenger cache still stuck since May 9 (9d gap).
+- **No new MCP reports** since 23:00 — pipeline appears idle overnight.
+
