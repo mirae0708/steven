@@ -176,3 +176,12 @@
 |- **System**: Memory 3.6Gi/7.6Gi. WSL up 2d 4h. Sunday — no market activity.
 |- **Key takeaway**: No new knowledge in wiki/ folder. Swap re-acceleration is the only delta but already documented in auto-evolution report. This cycle is a zero-knowledge cycle.
 |- **Next cycle**: 22:00 KST brain sync
+
+## 🧠 Brain Sync — 2026-05-17 22:00 KST
+|- **Time**: 2026-05-17 22:00 KST
+|- **Vault stats**: wiki/ 277 files, 10_Wiki/ 261 papers — unchanged since 21:10
+|- **New since 21:10 KST**: None — zero-knowledge cycle
+|- **🚨 WSL Reboot at 21:10**: System restarted at exactly 21:10:23 KST (coincident with previous brain sync cron). Swap cleared from 602MiB → 0B. No OOM/crash in dmesg — likely Windows-side WSL VM recycling due to swap pressure. All services will need restart.
+|- **System (post-reboot)**: Memory 3.2Gi/7.6Gi, Swap 0B/2.0Gi. Load avg 0.35. Uptime ~51min.
+|- **Key takeaway**: No new wiki knowledge. System reboot is the only delta — swap reset is healthy but services (Hermes Agent, cron jobs) will auto-restore. Need to verify Trinity services recovery.
+|- **Next cycle**: 23:00 KST brain sync
