@@ -163,3 +163,16 @@
 - **Market**: Sunday closed. KOSPI 7,493(-6.12%), USD/KRW 1,497.76, WTI $105.42 — same since May 15 close
 - **Key takeaway**: Quiet hour. All 6 MCP reports (18:40~18:51) already synced at 19:00. No new content to absorb. Monday 09:00 KST = first trading day after -6.12% crash — pre-market entry plan ready.
 - **Next cycle**: 21:00 KST brain sync
+
+
+## 🧠 Brain Sync — 2026-05-17 21:10 KST
+|- **Time**: 2026-05-17 21:10 KST
+|- **Vault stats**: wiki/ 277 files, 10_Wiki/ 261 papers — unchanged since 19:00
+|- **New since 20:00 KST**: Auto-Evolution Delta (20:45) created — Swap re-acceleration detected
+|  - Swap: 480MiB(18:30) → 602MiB(20:45) — 61MiB/hr re-acceleration (was decelerating to ~17MiB/hr)
+|  - Projection: ~920MiB by Mon 08:00 KST if trend continues
+|  - All other findings from 20:45 report already captured
+|- **wiki/ folder**: No changes — 277 files, no new content to absorb
+|- **System**: Memory 3.6Gi/7.6Gi. WSL up 2d 4h. Sunday — no market activity.
+|- **Key takeaway**: No new knowledge in wiki/ folder. Swap re-acceleration is the only delta but already documented in auto-evolution report. This cycle is a zero-knowledge cycle.
+|- **Next cycle**: 22:00 KST brain sync
