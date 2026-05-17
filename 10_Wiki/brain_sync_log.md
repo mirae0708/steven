@@ -196,3 +196,23 @@
 - **Miscategorization fixed**: Zelda-TP-Native-Port moved from NLP → Gaming/ (new category)
 - **System**: WSL up 1h50m (post-reboot at 21:10). Memory 3.2Gi/7.6Gi, Swap 0B (cleared by reboot). Load avg 0.30.
 - **Index updated**: _Index.md doc count 53→241 total, Gaming category added, NLP 4→3, RL 9→10, LLM 59, AI_Agents 46
+
+## 🧠 Brain Sync — 2026-05-18 00:00 KST
+- **Time**: 2026-05-18 00:00 KST
+- **Vault stats**: wiki/ 277 files, 10_Wiki/ 241 papers+reports + MCP reports
+- **New since 23:00 KST**: 0 new papers — same state as 23:00
+- **GitHub batch (2323, May 17)**: 27 new GitHub Trending entries added to 10_Wiki/:
+  - **AI Agents (7)**: harmonist-orchestral (⭐420, multi-agent orchestration), elephant-agent (⭐275, self-evolving AI), opensquilla (⭐951, token-efficient agent), token-tracker (⭐224, token usage tracker), semble_rs (⭐86, Rust hybrid code search), BAMI (duplicate), FutureSim, ATLAS, EntityBench (arXiv already captured)
+  - **LLM (5)**: agents-best-practices (⭐666, provider-neutral agent skill), tokenspeed (⭐1035, speed-of-light inference), Photo-agents (⭐918, vision-grounded self-evolving agents), agent-notch (macOS computer-use), Zelda-TP (miscategorized, moved to Gaming/)
+  - **MCP (7)**: OpenOSINT (⭐70, OSINT agent), taw-computer (⭐6, sandboxed computer MCP), best-of-algorithmic-trading (⭐183), openpets (⭐715, desktop pets for agents), wpvibe-ai-mcp (WordPress MCP), pronounce (dev jargon), awesome-agentic-ai-zh (⭐1494, trilingual agentic AI roadmap)
+  - **Deep Learning**: yao-open-prompts (⭐2116, Chinese AI prompt library)
+  - **RL**: YellowKey-Bitlocker (⭐393, Windows BitLocker bypass PoC)
+  - **DevTools**: gograph (Go repo structure CLI)
+- **Key Patterns Identified**:
+  1. **Token Efficiency is the New Frontier** — opensquilla (⭐951, "same budget, higher intelligence density") and ATLAS (functional tokens replacing explicit visual generation) both point to making every token count
+  2. **Agent Self-Evolution Momentum** — elephant-agent ("personal-model first self evolving"), Photo-agents ("vision-grounded layered memory and self-written skills") — the self-evolving agent paradigm is accelerating
+  3. **MCP as OS for Agents** — taw-computer (sandboxed computer), OpenOSINT, wpvibe, openpets all use MCP protocol — MCP is becoming the universal abstraction layer for agent-tool interaction
+  4. **Trilingual Knowledge Gap** — awesome-agentic-ai-zh (⭐1494, trilingual roadmap) shows strong demand for Chinese-language agentic AI education
+  5. **Code Search Beyond Grep** — semble_rs (BM25+semantic hybrid, Tree-sitter AST) confirms the "Is Grep All You Need?" paper's findings — hybrid approaches are emerging
+- **System**: WSL up 2h50m (post-reboot). Memory stable, Swap 0B. No new issues.
+- **Notable**: opensquilla (⭐951) and awesome-agentic-ai-zh (⭐1494) are the breakout repos this cycle — high growth trajectories
