@@ -141,3 +141,15 @@
 - **Market**: Sunday closed — KOSPI 7,493(-6.12%), USD/KRW 1,497.76, WTI ~$105
 - **System**: Trinity ✅ all 3/3, KeepAlive ✅, 9 tmux, WSL up 1d22h+
 - **Key takeaway**: 5th evolution cycle today confirmed swap leak pattern. Monday pre-market entry plan ready. MCP pipeline quality degradation needs fix.
+
+
+## 🧠 Brain Sync — 2026-05-17 19:00 KST
+|- **Time**: 2026-05-17 19:00 KST
+|- **Vault stats**: wiki/ 277 files, 10_Wiki/ 261 papers — wiki unchanged, 10_Wiki +28 since 18:00 (recount: 261 vs previous 233)
+|- **New since 18:00 KST**: 3 MCP 멀티검색 reports (18:40~18:51)
+|  - **주제 1: 코스피 8000 붕괴 글로벌 증시 충격** — 셋째주 코스피 8000선 돌파 직후 급락, 매도 사이드카 발동, 5월 12일 장중 7999.67까지 오른 후 외국인 매도세로 하락. 코스피는 5월 6일 처음 7000선 돌파 후 단 6일만에 8000선 근접. 미국 맥도날드 주가 2년 최저, 펄어비스 1분기 영업익 2000억 역대 최대. 2
+|  - **주제 2: AI 반도체 HBM SK하이닉스 삼성전자 동향** — HBM4 전망, 삼성전기 목표주가 100만원 리포트 등장. AI 반도체 슈퍼사이클 지속. 5월 15일 글로벌 반도체 산업 뉴스: 삼성전자·SK하이닉스 1분기 R&D 투자 확대. 반도체 소부장 관련주 동반 상승.
+|  - **주제 3: 글로벌 관세전쟁 미중 정상회담 한국 수출 영향** — 美 대법원 '상호관세 무효' 판결, 트럼프 10% 신규 관세. 미중 정상회담 5월 14~15일 베이징 개최 (9년만의 방중). 공동성명 없었으나 정면충돌 회피. AI 반도체 수출 규제·희토류·보잉 500대·대만 문제·이란 의제. 한국 수출기업: 기회와 위험 공존. 코스피 8000선 영향.
+|- **MCP quality**: First 2 reports (1840 batch) same noisy Naver ad issue. Third report (1851 batch) also has Naver noise. All 3 classified LOW SIGNAL for actionable trading data.
+|- **System**: Memory 3.7Gi/7.6Gi, Swap 491MiB (+39MiB from 16:00's 452MiB — slowing growth). WSL up 2d2h. Load avg 0.32 (low/idle — Sunday).
+|- **Key takeaway**: Sunday — no market action until Mon 09:00 KST. Three MCP reports added but low actionable signal. Swap growth slowing but still rising — may hit 2Gi by Mon morning if trend continues. Next evolution cycle scheduled.
