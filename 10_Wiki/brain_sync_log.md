@@ -153,3 +153,13 @@
 |- **MCP quality**: First 2 reports (1840 batch) same noisy Naver ad issue. Third report (1851 batch) also has Naver noise. All 3 classified LOW SIGNAL for actionable trading data.
 |- **System**: Memory 3.7Gi/7.6Gi, Swap 491MiB (+39MiB from 16:00's 452MiB — slowing growth). WSL up 2d2h. Load avg 0.32 (low/idle — Sunday).
 |- **Key takeaway**: Sunday — no market action until Mon 09:00 KST. Three MCP reports added but low actionable signal. Swap growth slowing but still rising — may hit 2Gi by Mon morning if trend continues. Next evolution cycle scheduled.
+
+## 🧠 Brain Sync — 2026-05-17 20:02 KST
+- **Time**: 2026-05-17 20:02 KST
+- **Vault stats**: wiki/ 277 files, 10_Wiki/ 261 papers — no change since 19:00
+- **New since 19:00 KST**: None — no new MCP reports, no new papers, no Auto-Evolution cycles
+- **System**: Memory 3.7Gi/7.6Gi, Swap:          2.0Gi       512Mi       1.5Gi. 20:02:31 up 2 days,  3:35,  2 users,  load average: 0.42, 0.31, 0.23
+- **Swap trend**: 491MiB at 19:00 → 512MiB at 20:00 (+21MiB/h, slowing from earlier ~95MiB/h) — manageable
+- **Market**: Sunday closed. KOSPI 7,493(-6.12%), USD/KRW 1,497.76, WTI $105.42 — same since May 15 close
+- **Key takeaway**: Quiet hour. All 6 MCP reports (18:40~18:51) already synced at 19:00. No new content to absorb. Monday 09:00 KST = first trading day after -6.12% crash — pre-market entry plan ready.
+- **Next cycle**: 21:00 KST brain sync
