@@ -2306,3 +2306,30 @@
 ### Issues Tracker (23 days persistent)
 - RED: yfinance NaN | KiwoomAuth 8050 | Tavily 401 | Dashboard stale | MCP Zombie
 - YELLOW: Trinity services (recovered but MetaClaw unreachable)
+
+
+### 🔬 Tech Scavenger Update (05/17 12:20 KST)
+| Source | Scanned | New Docs |
+|:-------|:-------:|:--------:|
+| GitHub Trending | 30 repos | 0 |
+| arXiv (6 cats) | 21 papers | 0 |
+| HuggingFace Daily | 10 papers | 0 |
+| **Total** | **61** | **0** |
+
+**Latest batch** (05/16 18:21): 16 new arXiv papers saved to Wiki
+- **EntityBench** — Entity-Consistent Long-Range Multi-Shot
+- **ATLAS** — Agentic or Latent Visual Reasoning
+- **FutureSim** — Replaying World Events for Adaptive Agents
+- **RefDecoder** — Visual Generation with Conditional Video Decoder
+- **Is Grep All You Need** — Agent Harnesses Reshape Agentic Search
+- **Veritas** — Semantically Grounded Agentic Framework for Memory
+- **Viverra** — Text-to-Code with Guarantees
+- **APWA** — Distributed Parallelizable Agentic Workflows
+- **AI Knows When It's Being Watched** — Strategic Action in Audits
+- **Articraft** — Scalable Articulated 3D Asset Generation
+- **Hand-in-the-Loop** — Dexterous VLA with Seamless Interaction
+- **Pelican-Unified 1.0** — Unified Embodied Intelligence Model
+
+**API Issues Today**: arXiv rate-limiting (HTTP 429 cs.SE/DC/MA) and timeouts (cs.RO) — 9 categories affected across several runs. GitHub Trending stable.
+
+**Cumulative**: 174 runs since May 4, ~230+ papers/projects documented in Wiki.
