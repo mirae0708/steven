@@ -185,3 +185,14 @@
 |- **System (post-reboot)**: Memory 3.2Gi/7.6Gi, Swap 0B/2.0Gi. Load avg 0.35. Uptime ~51min.
 |- **Key takeaway**: No new wiki knowledge. System reboot is the only delta — swap reset is healthy but services (Hermes Agent, cron jobs) will auto-restore. Need to verify Trinity services recovery.
 |- **Next cycle**: 23:00 KST brain sync
+
+## 🧠 Brain Sync — 2026-05-17 23:00 KST
+- **Time**: 2026-05-17 23:00 KST
+- **Vault stats**: wiki/ 277 files, 10_Wiki/ 241 papers+reports (19 categories + Gaming new)
+- **New since 22:00 KST**: 2 MCP 멀티검색 reports (22:41~22:42)
+  - 암호화폐 가상자산 2026년 5월 시장동향 — Naver noise, low signal
+  - K푸드 K뷰티 글로벌 수출 5월 트렌드 — K-뷰티 $10B 돌파, 라면 수출 호조
+- **Papers fixed (4)**: ATLAS, EntityBench, FutureSim, Is Grep All You Need — full abstracts restored, Key Takeaways expanded
+- **Miscategorization fixed**: Zelda-TP-Native-Port moved from NLP → Gaming/ (new category)
+- **System**: WSL up 1h50m (post-reboot at 21:10). Memory 3.2Gi/7.6Gi, Swap 0B (cleared by reboot). Load avg 0.30.
+- **Index updated**: _Index.md doc count 53→241 total, Gaming category added, NLP 4→3, RL 9→10, LLM 59, AI_Agents 46

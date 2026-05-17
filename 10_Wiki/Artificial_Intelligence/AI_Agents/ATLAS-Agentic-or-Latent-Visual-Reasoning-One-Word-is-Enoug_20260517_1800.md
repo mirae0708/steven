@@ -13,15 +13,17 @@ authors: Ziyu Guo, Rain Liu, Xinyan Chen
 
 👤 Ziyu Guo, Rain Liu, Xinyan Chen
 
-> Visual reasoning, often interleaved with intermediate visual states, has emerged as a promising direction in the field. A straightforward approach is to directly generate images via unified models during reasoning, but this is computationally expensive and architecturally non-trivial. Recent alterna
+> Visual reasoning, often interleaved with intermediate visual states, has emerged as a promising direction in the field. A straightforward approach is to directly generate images via unified models during reasoning, but this is computationally expensive and architecturally non-trivial. Recent alternatives include agentic reasoning through code or tool calls, and latent reasoning with learnable hidden embeddings. However, agentic methods incur context-switching latency from external execution, while latent methods lack task generalization and are difficult to train with autoregressive parallelization. To combine their strengths while mitigating their limitations, we propose ATLAS, a framework in which a single discrete 'word', termed as a functional token, serves both as an agentic operation and a latent visual reasoning unit. Each functional token is associated with an internalized visual operation, yet requires no visual supervision and remains a standard token in the tokenizer vocabulary, which can be generated via next-token prediction. This design avoids verbose intermediate visual content generation, while preserving compatibility with the vanilla scalable SFT and RL training, without architectural or methodological modifications. To further address the sparsity of functional tokens during RL, we introduce Latent-Anchored GRPO (LA-GRPO), which stabilizes the training by anchoring functional tokens with a statically weighted auxiliary objective, providing stronger gradient updates. Extensive experiments and analyses demonstrate that ATLAS achieves superior performance on challenging benchmarks while maintaining clear interpretability. We hope ATLAS offers a new paradigm inspiring future visual reasoning research.
 
 ## Links
 - 🔗 [Original](http://arxiv.org/abs/2605.15198v1)
 
 ## Key Takeaways
-- Proposes ATLAS framework for visual reasoning that uses a single latent word to bridge agentic and latent reasoning paradigms
-- Avoids computationally expensive intermediate image generation by unified models
-- Enables efficient visual reasoning without architectural complexity_
+- Proposes ATLAS framework for visual reasoning that uses a single "functional token" (one discrete word) to bridge agentic and latent reasoning paradigms
+- Avoids computationally expensive intermediate image generation by unified models — the functional token internalizes visual operations without visual supervision
+- Introduces Latent-Anchored GRPO (LA-GRPO) to stabilize RL training by anchoring functional tokens with a statically weighted auxiliary objective
+- Achieves superior performance on challenging visual reasoning benchmarks while maintaining clear interpretability
+- Relevance to Hermes: Demonstrates how a single token can serve as both an agentic operation and latent reasoning unit, offering a template for token-efficient agentic reasoning in LLMs
 
 ---
 _Automatically collected by Hermes Tech Brain Sync_

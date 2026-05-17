@@ -1,5 +1,5 @@
 # 🧠 기술 지식 인덱스
-| _Documents: 53 | Last sync: 2026-05-17 18:00_
+| _Documents: 241 total papers + reports | Last sync: 2026-05-17 23:00_
 
 > 자동 수집 + 요약된 AI/딥러닝/코딩 기술 문서  
 > _Last synced: 2026-05-12 12:00_
@@ -13,13 +13,14 @@
 - [[10_Wiki/Artificial_Intelligence/Deep_Learning/_Index|Deep Learning]] (13 docs)
 - [[10_Wiki/Artificial_Intelligence/Computer_Vision/_Index|Computer Vision]] (11 docs)
 - [[10_Wiki/Artificial_Intelligence/NLP/_Index|NLP (Natural Language Processing)]] (3 docs)
-- [[10_Wiki/Artificial_Intelligence/Reinforcement_Learning/_Index|Reinforcement Learning]] (9 docs)
+- [[10_Wiki/Artificial_Intelligence/Reinforcement_Learning/_Index|Reinforcement Learning]] (10 docs)
 - [[10_Wiki/Artificial_Intelligence/MCP/_Index|MCP Protocol]] (3 docs)
 
 ## 💻 Software Engineering
 - [[10_Wiki/Software_Engineering/Python/_Index|Python]]
 - [[10_Wiki/Software_Engineering/System_Design/_Index|System Design]]
 - [[10_Wiki/Software_Engineering/Best_Practices/_Index|Best Practices]]
+- [[10_Wiki/Software_Engineering/Gaming/_Index|Gaming]] (1 doc)
 
 ## 🛠 Tools
 - [[10_Wiki/Tools/DevTools/_Index|DevTools]] (11 docs)
