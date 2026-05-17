@@ -25,6 +25,13 @@
 ||||- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **17,010원** 🔴 **-1.10%** (5/15 종가)
 |||- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — 28,400원 🟢 +1.79% (5/15 종가, KOSPI 급락 속 독자 강세)
 
+### 🧠 최근 Brain Sync (18:00)
+- [[10_Wiki/Artificial_Intelligence/AI_Agents/ATLAS-Agentic-or-Latent-Visual-Reasoning-One-Word-is-Enoug_20260517_1800|ATLAS: Agentic Visual Reasoning]]
+- [[10_Wiki/Artificial_Intelligence/AI_Agents/EntityBench-Towards-Entity-Consistent-Long-Range-Multi-Shot_20260517_1800|EntityBench: Video Generation Eval]]
+- [[10_Wiki/Artificial_Intelligence/AI_Agents/FutureSim-Replaying-World-Events-to-Evaluate-Adaptive-Agent_20260517_1800|FutureSim: Adaptive Agent Eval]]
+- [[10_Wiki/Artificial_Intelligence/AI_Agents/Is-Grep-All-You-Need-How-Agent-Harnesses-Reshape-Agentic-Se_20260517_1800|Is Grep All You Need? — Agentic Search]]
+- [[10_Wiki/Artificial_Intelligence/LLM/JUk1-GHgpt-promo-scanner_20260517_1800|gpt-promo-scanner (507★)]]
+
 ### 💾 섹터 & 테마
 - [[wiki/sectors/헬스케어|💊 헬스케어/바이오테크]]
 - [[wiki/sectors/코스닥 중소형|📊 코스닥 중소형]]
@@ -46,6 +53,11 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
+- **[Hermes]** 🔍 오후 세션 업데이트 — Auto-Evolution 3회 추가 + Swap 경고 (2026-05-17 16:45 KST, 일요일 휴장)
+  - **Swap 12.4x 급증** (33MiB→411MiB, 4h) — MetaClaw 메모리 누수 의심 (468MB RSS)
+  - **MCP Quality Degradation 발견** — Naver SEO 광고 오염·GitHub URL 인코딩 문제
+  - Auto-Evolution 5회 사이클 (06:34/08:30/10:30/12:30/14:30), MCP 14건, Brain Sync 5회
+  - Trinity 전원 정상 (tmux 9개), 미해결 이슈 23일차 5건
 - **[Hermes]** 🔍 아침 스냅샷 — 5/17 08:45 Trinity 복구 + Auto-Evolution 8건 인사이트 (2026-05-17 08:45 KST, 일요일 휴장)
   - **Trinity 전면 복구 완료** — tmux 6개→**9개** (trinity-cow/meta/od 신규), KeepAlive 정상
   - **MCP 멀티검색 6건** — AI반도체·K푸드·글로벌증시·삼성SK하이닉스·AI트렌드·미국증시
