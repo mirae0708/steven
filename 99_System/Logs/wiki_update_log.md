@@ -148,3 +148,6 @@
 - USD_KRW **1497.76→1505.08원(+0.79%, 5/18, RSI 59.7→61.9 강세 강화, BB% 92.1%→102.8% 상단 돌파! 1500선 돌파).
 - WTI **$105.42(5/15)→$103.20(5/17, -2.11%, RSI 60.2→53.8 중립, BB% 83.2%→70.1%, $100선 유지).
 변경: **17건** (wiki/stocks 3, wiki/macros 4, wiki/sectors/로보틱스·헬스케어·코스닥중소형 3, wiki_update_log). |
+||2026-05-18 | 16:10 | 🔄 10_Wiki/Macros 2차 동기화 (cron run) | **wiki/macros → 10_Wiki/Macros 4건 동기화 완료 (5/18 actual close 반영)**: KOSPI 7562.00·KOSDAQ 1109.92·환율 1505.08·WTI $103.20. 00_Raw/MarketData 12개 파일 모두 5/18 12:11 갱신 상태 — wiki/(stocks/macros/sectors) 7개 5/18 12:12 이미 갱신 완료. 변경: **4건** (10_Wiki/Macros 4 = KOSPI·KOSDAQ·환율·국제유가WTI). |
+
+| 2026-05-18 | 16:45 | 🔍 Hermes Cron EOD 지식 기록 — Post-Market 스냅샷 | **시장 (5/18 actual close 확정):** KOSPI 7,562(+0.92%)·KOSDAQ 1,110(-1.76%)·환율 1,505(+0.79% 1500돌파)‡WTI $103.20. 삼성부광 7,480(-2.86%, RSI 21.7, 포트폴리오 -25.50%), 에이치엘 16,380(-3.70%, RSI 36.5), 나우로보틱스 28,800(+1.41%, RSI 65.2). **시스템:** WSL 13.5h 안정, Swap 3.5MiB 정상, Trinity 전원 정상, 스킬 197. **금일 활동:** 진화 17회·Scavenger 8회·MCP 9건·Brain Sync 6회·Wiki 17건 전체 갱신. 변경: **2건** (01_지식/Hermes-Daily-Log.md, wiki_update_log.md). |

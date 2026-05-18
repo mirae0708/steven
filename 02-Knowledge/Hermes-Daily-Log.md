@@ -2453,4 +2453,45 @@
 
 ---
 
+## 2026-05-18 (Mon) 15:00 — Hourly Brain Sync
+
+### 🧬 Knowledge Absorption Summary
+- **6 new arXiv papers** (14:20 batch) — all single-instance ingests, no skill-worthy
+- **3 MCP reports** (14:40) — LOW SIGNAL (Naver noise, 5th consecutive batch)
+- **FORGE paper** (arXiv 2605.16233): Self-evolving agent memory via population broadcast — HIGH SIGNAL but covered by existing layer-memory-system and recursive-agent-optimization skills
+- **GitHub**: 12 repos overnight (highlights: OpenSquilla ⭐951, Photo-agents ⭐918, tokenspeed ⭐1035)
+- **GitHub Hub**: Updated 05:00 KST (+1 DeepSeek-TUI entry)
+
+### 📊 Market (wiki refresh 12:10 KST, already absorbed)
+| Ticker | Price | Change | RSI | Note |
+|:-------|:-----:|:------:|:---:|:-----|
+| KOSPI | 7,562 | +0.92% | 70.9 | HOLD zone confirmed |
+| KOSDAQ | 1,110 | -1.76% | 30.1 | BB 하단 이탈 |
+| USD/KRW | **1,505.08** 🔴 | **+0.79%** | 61.9 | **1500선 돌파! 연중 신고가** |
+| WTI | $103.20 | -2.11% | 53.8 | $100선 유지 |
+| 삼성부광 | 7,480원 🔴 | -2.86% | 21.7 | 신저가 2일, 포트폴리오 -25.50% |
+| 나우로보틱스 | 28,800원 🟢 | +1.41% | 65.2 | 2일 연속 상승, ROE -75.89% 주의 |
+| 에이치엘사이언스 | 16,380원 | -3.70% | 36.5 | 하단 근접 |
+
+### 🔄 System
+- All Trinity services green. WSL uptime ~12h.
+- brain_state.json updated ✅ (598 docs, 20 new insights)
+
+### 🚨 Issues Tracker
+| Issue | Age | Status |
+|:------|:---:|:------|
+| yfinance .KS NaN | 25d | ❌ |
+| Tavily API key expired | 25d | ❌ |
+| Tech Scavenger stalled | 10d | ❌ |
+| MCP 멀티검색 quality | 5+ batches | ⚠️ Degraded |
+
+*Recorded by Hermes Cron on 2026-05-18 15:05 KST — Brain Sync v2.0*
+
 *Recorded by Hermes Cron on 2026-05-18 04:45 KST — Pre-market delta snapshot, Mon May 18*
+
+## 🧠 Brain Sync — 2026-05-18 16:00 KST
+- **Status**: Zero-knowledge cycle (no new content since 15:05)
+- **Vault stats**: wiki/ 277 files, 10_Wiki/ 321 files = 598 total
+- **Latest commit**: 2a50409 — MCP 멀티검색 14:41 batch (already absorbed at 15:05)
+- **No new papers/MCP reports** — last brain sync fully captured all content
+- **Next cycle**: Hourly brain sync

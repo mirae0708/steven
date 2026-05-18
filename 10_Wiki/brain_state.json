@@ -1,59 +1,32 @@
 {
-  "last_sync": "2026-05-16 19:00 KST (Hourly Brain Sync Cron)",
-  "files_processed": 45,
+  "last_sync": "2026-05-18 17:00 KST (Hourly Brain Sync Cron)",
+  "files_processed": 598,
   "new_content_since_last_sync": [
-    "MCP multi-search: K-Food global exports May 2026 (18:52)",
-    "MCP multi-search: AI open-source agent frameworks comparison (18:51)",
-    "MCP multi-search: Global logistics startup trends 2026 (18:51)",
-    "MCP multi-search: AI semiconductor HBM market outlook May 2026 (18:51)",
-    "MCP multi-search: Global market weekly wrap + next week outlook (18:43)",
-    "21 new arXiv papers absorbed (14 papers, 7 additional MLOps/long papers)"
+    "00-Home.md (EOD update 16:45)",
+    "Hermes_Evo_Report_20260518_1630.md",
+    "02-Knowledge/Hermes-Daily-Log.md (EOD section 16:00)",
+    "01_지식/Hermes-Daily-Log.md (EOD section 16:45)",
+    "10_Wiki/Macros (2차 동기화 4건 16:10)",
+    "outputs/2026-05-18-daily-log.md (16:34)",
+    "wiki_update_log.md (EOD entry 16:45)",
+    "brain_sync_log.md (15:04 entry)",
+    "brain_sync_log.md (17:00 entry)"
   ],
-  "papers_filled": [
-    "FutureSim (Replaying World Events to Evaluate Adaptive Agents)",
-    "APWA (Distributed Architecture for Parallelizable Agentic Workflows)",
-    "AI Knows When It's Being Watched (Strategic LLM behavior under observation)",
-    "EntityBench (Entity-consistent long-range video generation)",
-    "Accelerating State-Vector Quantum Simulation on Integrated GPUs",
-    "ATLAS (Agentic or Latent Visual Reasoning)",
-    "Articraft (Agentic System for Articulated 3D Generation)",
-    "Is Grep All You Need (Agent harnesses in agentic search)",
-    "Pelican-Unified 1.0 (Unified Embodied Intelligence Model)",
-    "Veritas (Memory corruption vulnerability detection in binaries)",
-    "Viverra (Text-to-Code with Guarantees)",
-    "RefDecoder (Conditional Video Decoding for Visual Generation)",
-    "Hand-in-the-Loop (Dexterous VLA via Interventional Correction)",
-    "Embedded Made Easy (Embedded + Cloud Software Development)",
-    "Prototyping Framework for Distributed Control of Multi-Robot Systems"
+  "trinity_crash_event": "2026-05-18 15:48 KST — CowAgent+MetaClaw+open-design simultaneous offline → auto-recovered. Root cause unknown.",
+  "new_insights_absorbed": [
+    "Trinity simultaneous crash — P1: first cascading failure",
+    "FORGE population-based memory broadcast — HIGH SIGNAL for L0-L4 enhancement",
+    "AI-Mediated Communication → Council independence risk mitigation required",
+    "Layer Equivalence Testing → script dedup methodology",
+    "9 improvement proposals generated (3 P1, 3 P2, 3 P3)"
   ],
-  "market_updated": ["KOSPI", "KOSDAQ", "USD/KRW", "WTI", "삼성부광", "나우로보틱스", "에이치엘사이언스"],
-  "mcp_reports": [
-    "2026년 5월 셋째주 글로벌 증시 마감 및 다음주 전망",
-    "AI 반도체 HBM 시장 전망 2026년 5월",
-    "글로벌 물류 스타트업 트렌드 2026",
-    "AI 오픈소스 에이전트 프레임워크 비교 2026",
-    "K-푸드 글로벌 수출 동향 2026년 5월"
-  ],
-  "key_insights_absorbed": [
-    "KOSPI 7,493.18 (-6.12%) — 5/15 차익실현 급락, RSI 87.1→70.1 과매수 급격 해소, BB 94.6%→72.5%",
-    "KOSDAQ 1,129.82 (-5.14%) — RSI 52.6→40.9 약세 전환, BB -16.7% 하단 이탈",
-    "USD/KRW 1,497.76 (+0.30%) — RSI 59.7, BB 92.1% 상단 극근접, 1500선 저항 테스트 임박",
-    "WTI $105.42 (+4.20%) — 원유 강세 반전",
-    "삼성부광 7,700원 (-5.52%, 신저가) — RSI 22.4 심각 과매도 심화, BB 하단(7,506) 이탈 직전, 포트폴리오 -23.31%",
-    "나우로보틱스 28,400원 (+1.79%) — KOSPI -6.12% 급락 속 독자 강세, RSI 65.8",
-    "에이치엘사이언스 17,010원 (-1.10%) — RSI 44.6 중립 유지, ROE +15.64% 양호",
-    "FutureSim: 세계 이벤트 리플레이로 적응형 에이전트 평가 — 실세계 시뮬레이션 벤치마킹",
-    "APWA: 분산 아키텍처로 병렬화 가능한 에이전틱 워크플로우 — LLM 에이전트의 추론/조정/연산 병목 해결",
-    "AI Knows When Watched: LLM 기반 멀티에이전트 시스템이 관찰 상황 인지 시 체계적 언어 적응(register modulation)",
-    "ATLAS: 시각적 추론에서 agentic vs latent 접근법 통합 — 'one word'로 두 방식 모두 지원",
-    "Pelican-Unified 1.0: 최초의 통합 임베디드 인텔리전스 모델 — VLM이 이해/추론/상상/행동 모두 처리",
-    "Veritas: 시맨틱 기반 에이전틱 프레임워크로 바이너리 메모리 취약점 탐지",
-    "Is Grep All You Need: 에이전트 하네스(harness)가 Agentic Search의 RAG 활용 방식을 근본적으로 재정의",
-    "HBM 시장 2026년 약 200억 달러 전망 — HBM4 상용화, DRAM 생산의 30%가 HBM",
-    "K-푸드 수출 5월 39.6억 달러(+7.6% YoY), 10년 CAGR 8%, 160억 불 시대 진입",
-    "물류 트렌드 2026: AI 기반 지능형 물류 생태계 — 인간-기계 협업 + 회복탄력성 + 지속가능성",
-    "AI 오픈소스 에이전트: CrewAI vs OpenClaw 경쟁, Agent Harness 아키텍처 70개 프로젝트 분석",
-    "Viverra: Text-to-Code with Guarantees — 생성 코드 정확성 증명 가능 프레임워크",
-    "Google I/O 2026 (5/19) — Gemini + Agent 코딩 공개 예정"
-  ]
+  "system_status": {
+    "wsl_uptime_hours": 13.8,
+    "memory_percent": 41,
+    "swap_mib": 3.5,
+    "skills_count": 197,
+    "issues_day": 25,
+    "cb_score": 47
+  },
+  "market_state": "EOD 5/18 actual close: KOSPI 7,562 (+0.92%), KOSDAQ 1,110 (-1.76%), USD/KRW 1,505 (+0.79%), WTI $103.20"
 }

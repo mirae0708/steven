@@ -328,6 +328,33 @@
 |- **Key takeaway**: No new actionable intelligence since 11:00. 3 arXiv papers are real research signals (not Naver noise) but summaries are truncated in vault. Tech Scavenger pipeline needs unblocking — 3 uncommitted papers.
 |- **Next cycle**: Next scheduled brain sync
 
+## 🧠 Brain Sync — 2026-05-18 15:05 KST
+|- **Time**: 2026-05-18 15:05 KST
+|- **Vault stats**: wiki/ 277 files, 10_Wiki/ 321 files = 598 total technical documents
+|- **Since 14:01 KST**: 
+|  - **6 new arXiv papers (14:20 batch)**:
+|    1. Runtime-Orchestrated Second-Order Optimization (Asteria) — removes systems bottleneck for second-order LLM training
+|    2. DexJoCo — Dexterous Manipulation Benchmark on MuJoCo; robotics, low relevance
+|    3. Learn Where Outcomes Diverge — Efficient VLA RL via Probabilistic Chunk Masking; moderate signal
+|    4. XSearch — Explainable Code Search via Concept-to-Code Alignment; code retrieval utility
+|    5. Dynamics-Level Watermarking of Flow Matching Models — generative model watermarking; low relevance
+|    6. From Backup Restoration to Minimum Viable Factory Recovery — manufacturing; low relevance
+|  - **3 MCP 멀티검색 reports (14:40 batch)** — LOW SIGNAL (Naver noise persists)
+|- **Knowledge Absorption Assessment**:
+|  - FORGE — HIGH SIGNAL: self-evolving agent memory via population broadcast. Maps to existing layer-memory-system and recursive-agent-optimization skills. No new skill needed.
+|  - paper.json — MODERATE SIGNAL: structured paper format for agent consumption
+|  - Photo-agents (⭐918) — validates self-evolution direction (self-written skills)
+|  - OpenSquilla (⭐951) — token-efficient agents; concept already covered
+|- **brain_state.json updated**: 2026-05-18 15:04 KST — 20 new key insights encoded
+|- **New skills absorbed**: 0 (existing 47 skills cover all concepts)
+|- **System**: WSL up ~12h. GitHub hub updated (+1 entry). All services green.
+|- **Key takeaways**:
+|  1. FORGE population-based memory broadcast → evaluate for L0-L4 system enhancement
+|  2. MCP quality: 5+ consecutive low-signal batches → recommend rate limiting
+|  3. USD/KRW 1,505 🔴 — dominant macro risk factor
+|  4. Tech Scavenger stalled day 10 → needs manual reset
+|- **Next cycle**: Hourly brain sync
+
 ## 🧠 Brain Sync — 2026-05-18 14:01 KST
 ||- **Time**: 2026-05-18 14:01 KST
 ||- **Vault stats**: wiki/ 277 files, 10_Wiki/ 293+ papers+reports — stable
@@ -369,3 +396,64 @@
 ||  - USD/KRW >1,500 → update CB Score weighting and entry scenarios
 ||  - Tech Scavenger cache needs reset (day 10 stalled)
 ||- **Next cycle**: Next scheduled brain sync
+
+## 🧠 Brain Sync — 2026-05-18 15:05 KST
+|- **Time**: 2026-05-18 15:05 KST
+|- **Vault stats**: wiki/ 277 files, 10_Wiki/ 321 files = 598 total technical documents
+|- **Since 14:01 KST**: 
+|  - **6 new arXiv papers (14:20 batch)** — all from May 15 arXiv dump:
+|    1. **Runtime-Orchestrated Second-Order Optimization (Asteria)** — removes systems bottleneck for second-order LLM training; relevant if Hermes ever scales to fine-tuning
+|    2. **DexJoCo** — Dexterous Manipulation Benchmark on MuJoCo; robotics research, low relevance
+|    3. **Learn Where Outcomes Diverge** — Efficient VLA RL via Probabilistic Chunk Masking; RL efficiency, moderate signal
+|    4. **XSearch** — Explainable Code Search via Concept-to-Code Alignment; useful for code retrieval
+|    5. **Dynamics-Level Watermarking of Flow Matching Models** — Generative model watermarking; low relevance
+|    6. **From Backup Restoration to Minimum Viable Factory Recovery** — DevTools/Manufacturing; low relevance
+|  - **3 MCP 멀티검색 reports (14:40 batch)** — still LOW SIGNAL (Naver noise continues):
+|    - 삼성전자 반등 분석 / KOSPI 사이드카 / 이란 전쟁 영향 — all Naver-sourced, no new signal
+|- **Knowledge Absorption Assessment**:
+|  - FORGE (Self-Evolving Agent Memory) — HIGH SIGNAL: maps directly to Hermes Layer Memory System (L0-L4). No new skill warranted; concepts align with existing `layer-memory-system` and `recursive-agent-optimization` skills
+|  - paper.json convention — MODERATE SIGNAL: suggests structured paper format for agent consumption, could improve Hermes' arXiv ingestion pipeline
+|  - Photo-agents (⭐918) — self-written skills + vision-grounded memory → validates Hermes' self-evolution direction
+|  - OpenSquilla (⭐951) — token-efficient agents → concept already covered by existing skills
+|- **Market** (wiki refresh at 12:10 KST — already absorbed in prior syncs):
+|  - KOSPI 7,562 (+0.92%) — HOLD zone confirmed
+|  - USD/KRW 1,505 🔴 — 1500선 돌파, 연중 신고가 (primary macro risk factor)
+|  - KOSDAQ 1,110 (-1.76%) — BB 하단 이탈, 2일 연속 하락
+|  - 삼성부광 7,480 (-2.86%, RSI 21.7) — 포트폴리오 -25.50% 심화
+|- **brain_state.json updated**: 2026-05-18 15:04 KST — 20 new key insights encoded
+|- **New skills created**: 0 (no content warrants dedicated skill — all concepts covered by 47 existing skills)
+|- **System**: WSL up ~12h. All Trinity services green. GitHub hub updated at 05:00 KST (+1 DeepSeek-TUI entry)
+|- **Key takeaways**:
+|  1. FORGE's population-based memory broadcast is the most notable new concept — evaluate for potential L0-L4 system enhancement
+|  2. MCP 멀티검색 quality remains problematic (5+ consecutive low-signal batches) — recommend rate limiting
+|  3. USD/KRW 1,505 is sustained institutional concern — dominates near-term trading decisions
+|  4. 14:20 batch of 6 papers are all single-instance ingests → no new skills needed
+|  5. Tech Scavenger cache remains stalled (day 10) — needs manual reset
+|- **Next cycle**: Hourly brain sync
+
+
+## 🧠 Brain Sync — 2026-05-18 17:00 KST
+|- **Time**: 2026-05-18 17:00 KST
+|- **Vault stats**: wiki/ 277 files, 10_Wiki/ 321 files = 598 total technical documents (unchanged)
+|- **Since 15:05 KST — New findings absorbed**:
+|  - **Hermes Evo Report 16:30** — 15 documents scanned, 6 core insights:
+|    1. 🆕 **Trinity 15:48 전면 사망 이벤트**: CowAgent(9899)+MetaClaw(30000)+open-design(17456) simultaneously offline → auto-recovered via self-heal. Root cause UNKNOWN — not OOM (3.1Gi/7.6Gi). Possible MCP server cascade failure or WSL signal issue.
+|    2. FORGE 메모리 진화 (arXiv 2605.16233) — HIGH SIGNAL: population broadcast memory for MetaClaw
+|    3. paper.json (arXiv 2605.16194) — MODERATE SIGNAL: structured paper format for agent consumption
+|    4. AI-Mediated Communication (arXiv 2605.16245) — AI Council independence risk identified
+|    5. Layer Equivalence Testing — script dedup validation methodology
+|    6. KOSPI 7,500-7,000 defense zone — CB Score 47 DEFENSIVE maintained
+|  - **9 개선 제안 생성** (3 P1: 사망원인분석/스크립트통합/CB Score디버깅, 3 P2: FORGE접목/KOSPI7000매수/paper.json, 3 P3: AI Council독립성/LayerEquivalence/지식그래프)
+|  - **Market data** (16:45 EOD 로그 재확인 — 변경 없음, actual close 기준):
+|    - KOSPI 7,562 (+0.92%), KOSDAQ 1,110 (-1.76%), USD/KRW 1,505 (+0.79% 1500돌파), WTI $103.20
+|- **Knowledge Absorption Assessment**:
+|  - Trinity simultaneous crash — P1 concern: first time all 3 Trinity services died together. Needs root cause investigation (OOM kill? WSL signal? network?)
+|  - FORGE → MetaClaw enhancement concept — HIGH SIGNAL, already tracked in prior sync
+|  - 16:30 Evo Report proposals are actionable — 3 P1 items should be flagged for next available session
+|- **System snapshot**:
+|  - All Trinity services UP (auto-recovered at 15:48)
+|  - WSL uptime: ~13h 48m (from 03:12) — stable after recovery
+|  - Swap: 3.5MiB ✅ — leak fully resolved
+|  - Memory: 3.1Gi/7.6Gi (41%) ✅
+|  - 6 persistent issues (day 25): yfinance NaN, KiwoomAuth 8050, Tavily 401, Dashboard stale, MCP Zombie, Tech Scavenger cache
+|- **Next cycle**: Hourly brain sync
