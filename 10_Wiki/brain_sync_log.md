@@ -327,3 +327,45 @@
 |- **Vault stats**: wiki/ 277 files, 10_Wiki/ 293+ papers+reports — stable
 |- **Key takeaway**: No new actionable intelligence since 11:00. 3 arXiv papers are real research signals (not Naver noise) but summaries are truncated in vault. Tech Scavenger pipeline needs unblocking — 3 uncommitted papers.
 |- **Next cycle**: Next scheduled brain sync
+
+## 🧠 Brain Sync — 2026-05-18 14:01 KST
+||- **Time**: 2026-05-18 14:01 KST
+||- **Vault stats**: wiki/ 277 files, 10_Wiki/ 293+ papers+reports — stable
+||- **Since 12:00 KST**: 
+||  - **Auto-Evolution 12:30 KST report** — detailed midday post-market analysis:
+||    - KOSPI 7,562 (+0.92% 반등, HOLD zone 유지) ✅ 시나리오 예측 정확도 검증
+||    - USD/KRW 1,505 🔴 1,500선 돌파! 연중 신고가 (CB Score 하향 압력)
+||    - KOSDAQ 1,110 (-1.76%) — 2일 연속 하락, BB 하단 이탈
+||    - WTI $103.20 (-2.11%) — $105 아래, 스태그플레이션 임계 미달 →⚠️ 경계선
+||    - HOLD 시나리오 정확: 현금 492만 보존, Counterfactual 진입도 정당화 안 됨
+||  - **6 new arXiv/GitHub papers (13:20 batch)**:
+||    1. FORGE: Self-Evolving Agent Memory via Population Broadcast (arXiv 2605.16233) — FAILURE-optimized prompt memory, no weight updates
+||    2. paper.json: Coordination Convention for LLM-Agent-Actionable Papers (arXiv 2605.16194) — structured paper format for agent consumption
+||    3. Context, Reasoning, and Hierarchy: Cost-Performance of Compound LLM Agent Design in Adversarial POMDP (arXiv 2605.16205)
+||    4. IVGT: Implicit Visual Geometry Transformer for Neural Scene Representation (arXiv 2605.16258)
+||    5. Designing Datacenter Power Delivery for AI Era (arXiv 2605.16255) — 1MW/rack by 2027
+||    6. EA-Studio-SHARK/ai-agent-guide (GitHub, 6⭐) — low signal, Chinese AI Agent tutorial
+||  - **MCP 멀티검색 12:51~12:52 batch (3 reports)** — still LOW SIGNAL (Naver noise):
+||    1. 삼성전자 반등 + 이재명 대통령 파업 경고 (5/18) — 노조 총파업 예고, 대통령 경고
+||    2. KOSPI 급락 급등 매도 사이드카 (5/15 분석) — 5/15 8,000→7,500 사이드카 발동
+||    3. 이란 전쟁 미국 국채 금리 급등 증시 영향 — WTI/Bond 데이터 혼재
+||  - **wiki sector/stock entries (new)**:
+||    - 로보틱스 섹터: 나우로보틱스 28,800 (+1.41%) — 2거래일 연속 상승, KOSDAQ 급락 속 독자 강세
+||    - 헬스케어 섹터: 삼성부광 7,480 (-2.86%) — 신저가 연속, RSI 21.7 극단 과매도
+||    - 나우로보틱스 stock analysis: SMA20 대비 +9.0%, BB% 68.2%, ROE -75.89% 주의
+||- **System**: WSL up ~9h 30m (post-reboot ~03:10). Memory stable 3.1Gi/7.6Gi. Swap ~0B.
+||  - All Trinity services green (Hermes, Open WebUI, MetaClaw, CowAgent, open-design, Nexus, Jongdari, Virtual Office)
+||- **Market**: KOSPI 7,562 (12:30 close data) — HOLD zone confirmed. USD/KRW 1,505 🔴
+||- **Key takeaways**:
+||  1. FORGE paper is high-signal for Hermes — population-based prompt memory evolution maps directly to Hermes memory architecture
+||  2. paper.json convention could improve how Hermes consumes academic papers (structured actionable format)
+||  3. MCP multi-search quality still problematic — Naver noise persists 4th batch in a row
+||  4. USD/KRW 1,505 is the dominant macro risk — outweighs KOSPI bounce signal
+||  5. Self-Evolving Agent trend (Photo-agents 918⭐, opensquilla 951⭐, elephant-agent 275⭐) → needs architecture v2 planning
+||  6. Culture-Economy intelligence (7 reports) already fully absorbed — actionable K-컬처 물류 insights
+||- **Recommendations**:
+||  - Reduce MCP 멀티검색 frequency or add time filters (4 consecutive batches = noise)
+||  - Investigate FORGE for memory evolution layer improvement
+||  - USD/KRW >1,500 → update CB Score weighting and entry scenarios
+||  - Tech Scavenger cache needs reset (day 10 stalled)
+||- **Next cycle**: Next scheduled brain sync
