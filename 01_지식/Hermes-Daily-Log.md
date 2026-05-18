@@ -110,3 +110,98 @@
 
 ---
 *2026-05-17 20:45 KST — Hermes Cron 일지*
+
+---
+
+## 🔴 D-DAY — 시스템 현황 스냅샷 08:45 KST (T-15m)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | 5h 34m (3:12 KST 재부팅, 재부팅 없이 안정적) |
+| tmux 세션 | 7개 — 전원 정상 |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 Alive |
+| Hermes Gateway | ✅ 정상 (PID 306) |
+| OpenWebUI | ✅ 정상 (PID 315, 799MiB RSS) |
+| MetaClaw | ✅ 정상 (PID 1985, 515MiB RSS, skills_only) |
+| Jongdari 배틀루프 | ✅ 정상 (PID 4162, nexus_orchestrator live) |
+| Self-Heal Cron (04:35, 06:35, 07:25) | ✅ 전회 정상 |
+| Brain Sync (04:00) | ✅ 정상 |
+| Tech Scavenger (00:20, 03:20, 05:20) | ✅ 6건 신규 수집 (캐시 부분 갱신) |
+| MCP 멀티검색 (06:40~06:51) | ✅ 6건 신규 (글로벌 증시·AI 반도체·미중 관세) |
+| Auto-Evolution (04:30, 06:30, 08:30) | ✅ 3회 정상 완료 |
+| 메모리 | 3.1Gi / 7.6Gi (41%) ✅ 안정적 |
+| Swap | **780KiB** ✅ 0에 가까움 (재부팅 효과 유지) |
+| CB Score | 47/100 DEFENSIVE (확인) |
+
+### 📊 D-DAY Pre-Market 체크리스트
+
+| 항목 | 상태 | 비고 |
+|:-----|:----:|:-----|
+| US Futures (S&P/Nasdaq/VIX) | ⏳ 미확인 | 08:00 KST 기확인 필요 |
+| USD/KRW Asia Open | **₩1,498 (5/16)** | ⚠️ 1,500선 임박 |
+| WTI Pre-Market | **$101 (5/15 close)** | ⚠️ $105 미만이나 고공행진 |
+| KOSPI Last Close | **7,493 (-6.12%)** | 🔴 급락 후 첫 거래일 |
+| 포트폴리오 | 현금 4,929,810원 | 포지션 0 |
+| 진입 시나리오 | >7,500 HOLD / 7,300~7,500 25% / <7,200 50% | ALL DELAY: USD>1,500 & WTI>$105 |
+
+### 🆕 금일 신규 지식 요약
+
+**Tech Scavenger 6건 (00:20~05:20):**
+1. ⭐148 `usewhale/DeepSeek-Code-Whale` — Go, MCP 터미널 AI 코딩 도우미 (DeepSeek 최적화)
+2. ⭐141 `dex-original/okx-agent-trade-kit` — TypeScript, OKX MCP 암호화폐 트레이딩 봇
+3. ⭐381 `KenKaneki18/CloakBrowser` — TypeScript, 안티-디텍트 브라우저 + 자동화
+4. ⭐147 `BasZ4ll/Stable-Diffusion-WebUI` — TypeScript, SD WebUI Forge + low VRAM
+5. ⭐60 `zimingttkx/QuantumFlow` — Python, 분산 LLM 추론 스케줄링 (vLLM/TGI/SGLang)
+6. `VAENPP/solana-trading-bot` — MLOps, 솔라나 트레이딩 봇
+
+**Auto-Evolution 08:30 추가 발견 (23:20~23:23 배치):**
+7. ⭐951 `opensquilla/opensquilla` — Token-efficient AI Agent (자기진화)
+8. ⭐1,035 `lightseekorg/tokenspeed` — 광속 LLM 추론 엔진
+9. ⭐918 `jmerelnyc/Photo-agents` — 자기진화 에이전트 + 계층형 메모리
+10. ⭐275 `agentic-in/elephant-agent` — Personal-Model-First 자기진화 Agent
+11. ⭐1,494 `WenyuChiou/awesome-agentic-ai-zh` — 삼중언어 Agentic AI 로드맵
+
+**MCP 멀티검색 6건 (06:40~06:51):**
+- KOSPI 5월 셋째주 마감/전망 — 5/15 -6.12% 폭락 분석
+- 미중 관세전쟁 한국 수출 영향 — 트럼프 방중, 관세 15% 완화
+- AI 반도체 HBM — SK 53% vs 삼성 35% 점유율, HBM4 전쟁
+- SK하이닉스/삼성전자 HBM4 엔비디아 — 수율 경쟁
+- KOSPI 5월 넷째주 전망 — 엔비디아 실적 발표, FOMC 의사록
+
+### 🚨 지속적 이슈 (25일차)
+
+| Issue | Age | Status |
+|:------|:---:|:------:|
+| yfinance .KS NaN | 25d | ❌ 미해결 |
+| KiwoomAuth 8050 blocked | 25d | ❌ 미해결 |
+| Tavily API key expired | 25d | ❌ 미해결 |
+| Dashboard stale | 12d (since May 7) | ❌ 미해결 |
+| MCP Python Zombie on restart | 25d | ❌ 미해결 |
+| Tech Scavenger cache | 10d (since May 9) | ❌ 일부 갱신 (6건 신규) |
+| **WSL 재부팅 패턴** | **밤새 2회** | ⚠️ 3:12 KST 재부팅 — 5h 34m 안정적 지속 중 |
+
+### 💡 금일 Cycle 요약 (08:45 기준)
+
+| 시간 | 내용 |
+|:-----|:------|
+| 00:00~03:12 | WSL 3:12 재부팅 (밤새 2회째) |
+| 03:20 | 서비스 자동 복구 완료 (Gateway·WebUI·MetaClaw·Jongdari) |
+| 04:00 | Brain Sync + Dashboard Sync |
+| 04:30 | Auto-Evolution 04:30 리포트 (Pre-Market Delta) |
+| 04:45 | ⚡ Hermes Cron 지식 기록 — Pre-Market 최종 점검 |
+| 06:30 | Auto-Evolution 06:30 리포트 |
+| 06:40~06:51 | MCP 멀티검색 6건 배치 |
+| 08:30 | Auto-Evolution 08:30 리포트 (5개 오픈소스 자기진화 Agent) |
+| **08:45 NOW** | **D-DAY Pre-Market 최종 — T-15m** |
+
+### 🔑 핵심 인사이트
+
+1. **자기진화 Agent 명확한 트렌드**: opensquilla(951⭐), Photo-agents(918⭐), elephant-agent(275⭐) 모두 self-evolving 패턴
+2. **MCP 금융/트레이딩 확장**: okx-agent-trade-kit(141⭐) — MCP 기반 암호화폐 트레이딩. Jongdari 통합 가능
+3. **토큰 효율성 경쟁**: opensquilla + tokenspeed(1,035⭐) — 동일 예산 더 높은 성능
+4. **Swap 0 정상 유지**: WSL 재부팅 후 5h 34m간 Swap 780KiB — MetaClaw memory leak 일시 해소
+5. **KOSPI D-DAY**: 7,493 close (-6.12%). Cash 492만 전량 대기
+
+---
+
+*2026-05-18 08:45 KST — Hermes Cron 일지 (D-DAY Pre-Market)*
