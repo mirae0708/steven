@@ -1,25 +1,5 @@
 [
   {
-    "Date": "2026-03-16",
-    "Open": 12120.0,
-    "High": 12170.0,
-    "Low": 11800.0,
-    "Close": 11950.0,
-    "Volume": 45162,
-    "Dividends": 0.0,
-    "Stock Splits": 0.0
-  },
-  {
-    "Date": "2026-03-17",
-    "Open": 12060.0,
-    "High": 12300.0,
-    "Low": 11770.0,
-    "Close": 11970.0,
-    "Volume": 42915,
-    "Dividends": 0.0,
-    "Stock Splits": 0.0
-  },
-  {
     "Date": "2026-03-18",
     "Open": 11980.0,
     "High": 12200.0,
@@ -426,6 +406,16 @@
     "Low": 7520.0,
     "Close": 7700.0,
     "Volume": 69207,
+    "Dividends": 0.0,
+    "Stock Splits": 0.0
+  },
+  {
+    "Date": "2026-05-18",
+    "Open": 7700.0,
+    "High": 7700.0,
+    "Low": 7200.0,
+    "Close": 7480.0,
+    "Volume": 17935,
     "Dividends": 0.0,
     "Stock Splits": 0.0
   }

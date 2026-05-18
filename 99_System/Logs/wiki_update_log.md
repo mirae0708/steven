@@ -1,4 +1,4 @@
-     1|| Date | Time | Action | Details |
+1|| Date | Time | Action | Details |
      2||:-----|:-----|:-------|:--------|
      3||2026-05-05 | 13:10 | 📊 Wiki 확장기 Raw 갱신 스캔 | **yfinance 5/5 USD_KRW/WTI 재정정 감지**: USD_KRW **1,475.24원**(RSI 53.1, BB 44.6%, +0.24%), WTI **$104.34**(5/5, RSI 62.6, BB 82.2%, -1.95%). 5/5 어린이날 휴장 — 신규 거래일 없음. 개별종목(9,540·17,550)·KOSPI(6,937)·KOSDAQ(1,214) 일치 — 변경 없음. 환율·국제유가WTI·KOSPI(WTI/환율 참조) 3개 문서 갱신 완료. 변경: 3건 (환율, 국제유가WTI, KOSPI). |
      4||2026-05-05 | 16:10 | 📊 Wiki 확장기 Raw 재집계 스캔 | **USD_KRW 5/5 yfinance 재정정 반영**: 1,475.24→**1,473.27원**(RSI 52.1, BB 38.3%, +0.10%), WTI **$104.42**(5/5, RSI 62.7, BB 82.5%, -1.88%). 개별종목(삼성부광·에이치엘사이언스)·KOSPI(6,937)·KOSDAQ(1,214) 변동 없음. 환율·국제유가WTI·KOSPI 3개 문서 재갱신 완료. 변경: 3건 (환율, 국제유가WTI, KOSPI). |
@@ -138,3 +138,13 @@
 ||| 2026-05-17 | 16:45 | 🔍 Hermes Cron 오후 지식 기록 — outputs/ 일일로그 오후 세션 추가 | **outputs/2026-05-17-daily-log.md 오후 세션 업데이트 (10:30~16:45)**. Swap 경고(MetaClaw 468MB), MCP Quality Degradation 분석, Auto-Evolution 5회 사이클 기록. 00-Home.md 최근 업데이트 및 거시경제 지표 갱신. 변경: **3건** (outputs/2026-05-17-daily-log.md, 00-Home.md, wiki_update_log.md). |
 || 2026-05-17 | 18:00 | 🧠 Brain Sync v2.0 — 9 new entries, wiki 총 233건 | **4 new arXiv papers** (ATLAS visual reasoning, EntityBench video, FutureSim adaptive agents, Grep-vs-RAG agentic search) + **5 new GitHub repos** (gpt-promo-scanner 507★, Claude-Code-Design-AI 380★, Zelda-TP-Native-Port 423★, YellowKey-Bitlocker 393★, Umbrella-HWID 375★). Dedup skipped: 2 arxiv + 1 GitHub. Key Takeaways filled for all 9 new entries. 변경: **5건** (01_지식/Hermes-Daily-Log.md, 02-Knowledge/Hermes-Daily-Log.md, 10_Wiki/brain_sync_log.md, wiki_update_log.md, 9 wiki entry files). |
 || 2026-05-18 | 08:45 | 🔍 Hermes Cron 지식 기록 — D-DAY Pre-Market 최종 점검 | **5/18 (월) 첫 거래일 D-DAY — 09:00 KST 오픈 (T-15m). 01_지식/Hermes-Daily-Log.md 08:45 스냅샷 추가**. WSL 3:12 재부팅 후 5h 34m 안정적. 6 Tech Scavenger 신규 수집(okx-agent-trade-kit 141⭐, DeepSeek-Code-Whale 148⭐, CloakBrowser 381⭐, SD-WebUI 147⭐, QuantumFlow 60⭐, solana-trading-bot). 5개 오픈소스 자기진화 Agent 발견(opensquilla 951⭐, tokenspeed 1,035⭐, Photo-agents 918⭐, elephant-agent 275⭐, awesome-agentic-ai-zh 1,494⭐). MCP 멀티검색 6건(06:40~51): KOSPI 폭락 분석, 미중 관세전쟁, HBM4 전쟁, 엔비디아 실적 전망. Swap 780KiB ✅ 안정. CB Score 47/100 DEFENSIVE. 포트폴리오 현금 492만 전량 대기. 지속 이슈 25일차. 변경: **2건** (01_지식/Hermes-Daily-Log.md, wiki_update_log.md). |
+|
+|| 2026-05-18 | 12:10 | 📊 Wiki 확장기 5/18 신규 거래일 전면 갱신 — KOSPI +0.92% 반등, KOSDAQ -1.76% 추가 하락, 환율 1500선 돌파 | **yfinance 5/18 신규 거래일 데이터 전종목 갱신 — 변경 17건**:
+- 삼성부광 **7700→7480원(-2.86%, RSI 22.4→21.7 극단 과매도 심화, BB% 5.2%→5.8% 하단 극근접 지속, 포트폴리오 -23.31%→-25.50%, 7480 신저가 2일 연속 갱신, 거래량 급감 30%).
+- 에이치엘사이언스 **17010→16380원(-3.70%, RSI 44.6→36.5 약세 전환, BB% 31.6%→9.8% 하단 극근접, 5/14 급등분 대부분 반납).
+- 나우로보틱스 **28400→28800원(+1.41%, RSI 65.8→65.2 중립~강세 유지, BB% 67.3%→68.2%, 2거래일 연속 상승, KOSDAQ 급락 속 유일 강세).
+- KOSPI **7493.18→7562.00(+0.92%, RSI 70.1→70.9 강세 유지, BB% 72.5%→72.9% 중립~상단 안정, 5/15 -6.12% 급락 후 소폭 반등).
+- KOSDAQ **1129.82→1109.92(-1.76%, RSI 40.9→30.1 약세 심화 과매도 직전, BB% -16.7%→-19.0% 하단 이탈 심화, KOSPI 반등에도 2거래일 연속 하락).
+- USD_KRW **1497.76→1505.08원(+0.79%, 5/18, RSI 59.7→61.9 강세 강화, BB% 92.1%→102.8% 상단 돌파! 1500선 돌파).
+- WTI **$105.42(5/15)→$103.20(5/17, -2.11%, RSI 60.2→53.8 중립, BB% 83.2%→70.1%, $100선 유지).
+변경: **17건** (wiki/stocks 3, wiki/macros 4, wiki/sectors/로보틱스·헬스케어·코스닥중소형 3, wiki_update_log). |

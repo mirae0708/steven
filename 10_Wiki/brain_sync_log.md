@@ -291,3 +291,39 @@
 |- **Key takeaway**: Minimal new content. Single QuantumFlow entry is low-signal. The GitHub-지식허브.md update shows AI-Trader (⭐17.8k) as a notable new entry — fully autonomous agent-native trading platform. No knowledge absorption needed beyond what's already captured.
 |- **Next cycle**: 07:00 KST brain sync
 |
+
+## 🧠 Brain Sync — 2026-05-18 11:00 KST
+|- **Time**: 2026-05-18 11:00 KST
+|- **Since 07:04 KST**: 
+|  - **MCP 멀티검색 10:40 batch (3 reports)** — all LOW SIGNAL (Naver noise):
+|    1. KOSPI/글로벌증시/미국관세협상 — mixed date references, no actionable data
+|    2. AI 반도체 HBM SK하이닉스 삼성전자 — same Naver noise pattern
+|    3. 미중 관세전쟁 트럼프 방중 — dated (May 14-15), mostly blog/지식iN
+|  - **Git commits**: 3 (the MCP batch at 10:40)
+|  - **No new Auto-Evolution reports** between 08:30 and 11:00 — pipeline idle
+|  - **No new arXiv/GitHub Trending papers** — Tech Scavenger stalled day 9
+|- **System**: WSL up ~7h 50m (post-reboot ~03:10). tmux 7 세션 정상.
+|  - Memory: ~3.1Gi/7.6Gi (41%) ✅ Stable
+|  - Swap: ~0B ✅ No re-accumulation
+|- **Market**: KOSPI 현재 거래일 세션 중 (09:00 오픈)
+|  - CB Score 47/100 DEFENSIVE confirmed (08:30)
+|  - WTI $101, USD/KRW ₩1,498 (08:30 snapshot)
+|- **Key takeaway**: Diminishing returns — MCP Naver noise continues 3rd consecutive batch, Tech Scavenger stalled 9d, no new papers. Only actionable: Culture-Economy set (7 reports) already absorbed. Auto-Evolution idle since 08:30.
+|- **Recommendation**: Reduce MCP 멀티검색 frequency (4h→12h) or switch to targeted searches. Investigate Tech Scavenger cache stall.
+|- **Next cycle**: Next scheduled brain sync
+
+## 🧠 Brain Sync — 2026-05-18 12:00 KST
+|- **Time**: 2026-05-18 12:00 KST
+|- **Since 11:00 KST**:
+|  - **3 new untracked arXiv papers (1121 batch)** — collected by Tech Scavenger, not yet committed:
+|    1. arxiv 2605.16245 — AI-Mediated Communication Can Steer Collective Opinion (Stratis Tsirtsis et al.) — LLMs on social platforms can steer collective opinion via biased content polishing; ethical implications for platform design
+|    2. arxiv 2605.16234 — Layer Equivalence Is Not a Property of Layers Alone (Gabriel Garcia) — Transformer layer redundancy tests (replacement vs. interchange) yield different results; methodology matters for model compression decisions
+|    3. arxiv 2605.16250 — Generative AI Framework for Utility Billing CO2 Analytics (Manjunath, Pruefer) — End-to-end framework: readable billing + carbon attribution + grid load scheduling against emissions constraints
+|  - **No new MCP multi-search reports** since 10:40 batch
+|  - **No new Auto-Evolution** reports since 08:30
+|  - **Tech Scavenger** stalled day 9 — 3 arXiv papers collected but not committed/pushed
+|- **Market**: KOSPI/Today session — post -6.12% crash on 5/15, first full trading day
+|- **System**: WSL up ~9h (post-reboot ~03:10). Memory ~3.1Gi/7.6Gi stable. tmux 세션 정상.
+|- **Vault stats**: wiki/ 277 files, 10_Wiki/ 293+ papers+reports — stable
+|- **Key takeaway**: No new actionable intelligence since 11:00. 3 arXiv papers are real research signals (not Naver noise) but summaries are truncated in vault. Tech Scavenger pipeline needs unblocking — 3 uncommitted papers.
+|- **Next cycle**: Next scheduled brain sync
