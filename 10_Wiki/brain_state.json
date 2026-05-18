@@ -1,32 +1,27 @@
 {
-  "last_sync": "2026-05-18 17:00 KST (Hourly Brain Sync Cron)",
+  "last_sync": "2026-05-18 20:46 KST (Evening Steady-State Cron)",
   "files_processed": 598,
   "new_content_since_last_sync": [
-    "00-Home.md (EOD update 16:45)",
-    "Hermes_Evo_Report_20260518_1630.md",
-    "02-Knowledge/Hermes-Daily-Log.md (EOD section 16:00)",
-    "01_지식/Hermes-Daily-Log.md (EOD section 16:45)",
-    "10_Wiki/Macros (2차 동기화 4건 16:10)",
-    "outputs/2026-05-18-daily-log.md (16:34)",
-    "wiki_update_log.md (EOD entry 16:45)",
-    "brain_sync_log.md (15:04 entry)",
-    "brain_sync_log.md (17:00 entry)"
-  ],
-  "trinity_crash_event": "2026-05-18 15:48 KST — CowAgent+MetaClaw+open-design simultaneous offline → auto-recovered. Root cause unknown.",
-  "new_insights_absorbed": [
-    "Trinity simultaneous crash — P1: first cascading failure",
-    "FORGE population-based memory broadcast — HIGH SIGNAL for L0-L4 enhancement",
-    "AI-Mediated Communication → Council independence risk mitigation required",
-    "Layer Equivalence Testing → script dedup methodology",
-    "9 improvement proposals generated (3 P1, 3 P2, 3 P3)"
+    "01_지식/Hermes-Daily-Log.md (Evening entry 20:46)",
+    "02-Knowledge/Hermes-Daily-Log.md (Brain Sync entry 20:46)"
   ],
   "system_status": {
-    "wsl_uptime_hours": 13.8,
+    "wsl_uptime_hours": 17,
     "memory_percent": 41,
     "swap_mib": 3.5,
     "skills_count": 197,
     "issues_day": 25,
-    "cb_score": 47
+    "cb_score": 47,
+    "cb_score_fix_applied": true
   },
-  "market_state": "EOD 5/18 actual close: KOSPI 7,562 (+0.92%), KOSDAQ 1,110 (-1.76%), USD/KRW 1,505 (+0.79%), WTI $103.20"
+  "market_state": "EOD 5/18 actual close: KOSPI 7,562 (+0.92%), KOSDAQ 1,110 (-1.76%), USD/KRW 1,505 (+0.79%), WTI $103.20",
+  "key_events_today": [
+    "CB Score N/A → 3-tier fallback hotfix applied and confirmed",
+    "Trinity 15:47 simultaneous crash → auto-recovered, root cause unknown",
+    "MCP 멀티검색 quality crisis: 7 batches ALL LOW SIGNAL today",
+    "KOSPI 7,142 intraday low → recovered to 7,562 (7,500선 수성)",
+    "USD/KRW 1,500 돌파 (연중 신고가)",
+    "XSearch concept-to-code → P2 skill search upgrade identified"
+  ],
+  "next_critical": "5/19 화요일 pre-market: KOSPI 7,500 지지 / USD/KRW 1,500 방향성 / NVDA 실적주간 / FOMC 의사록(수)"
 }

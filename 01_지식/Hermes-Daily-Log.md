@@ -264,3 +264,58 @@
 5. **5/19(화) 관전 포인트**: NVDA 실적 주간 시작, KOSPI 7,500 지지 여부, FOMC 의사록(수).
 
 *2026-05-18 16:45 KST — Hermes Cron EOD Post-Market 기록*
+
+---
+
+## 🧬 Hermes Auto-Evolution — 2026-05-18 (Mon) 20:46 KST Evening Steady-State
+
+### 📋 시스템 현황 스냅샷 — 20:46 KST
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | ~17h (03:10 KST 재부팅 후, 안정적) |
+| Memory | 3.1Gi / 7.6Gi (41%) ✅ |
+| Swap | 3.5MB ✅ (재부팅 이후 축적 없음) |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 (15:47 복구 후 5h+ 안정) |
+| Hermes Gateway | ✅ 정상 |
+| OpenWebUI | ✅ 정상 (port 3000) |
+| CB Score | ✅ **47/100 DEFENSIVE — N/A 핫픽스 적용 확인** |
+| Cash | ₩4,929,810 (HOLD, 0 positions) |
+
+### 📊 시장 (EOD 기준)
+
+| 항목 | 값 | 변동 |
+|:-----|-----:|:----:|
+| **KOSPI** | **7,562** | 📉 -0.92% (장중저 7,142 → 반등) |
+| **KOSDAQ** | **1,110** | 📉 -1.76% (BB 하단 이탈 심화) |
+| **USD/KRW** | **₩1,505** | 🔴 +0.79% (1,500선 돌파, 연중 신고가) |
+| **WTI** | **$103.20** | 🟡 -2.11% ($100~$105 레인지) |
+
+### 🔑 금일 주요 이벤트 요약
+
+1. **CB Score N/A 핫픽스 완료**: `self_heal.py` 3-tier fallback 패치 적용 → `~47/100 DEFENSIVE` 정상 반환 확인
+2. **Trinity 15:47 동시 크래시 → 복구**: CowAgent+MetaClaw+open-design 동시 오프라인 → keepalive가 12분내 전원 복구. WSL CPU 버스트 스로틀링 의심 (메모리 41%, OOM 아님)
+3. **MCP 멀티검색 품질 위기 지속**: 18:40~18:55 배치 8건 전원 LOW SIGNAL (Naver 노이즈만 수집). 금일 7번째 배치 연속 품질 저하 — 검색 쿼리 리팩토링 필요
+4. **장중 KOSPI 7,142 급락 → 7,562 회복**: 변동성 극심했으나 결국 7,500선 수성. USD/KRW 1,500 돌파가 추가 하방 리스크 요인
+5. **새로운 기술 인사이트**: XSearch concept-to-code alignment (10_Wiki 신규 논문) → 스킬 검색 엔진 업그레이드 방안 발견
+
+### ⚠️ 지속적 이슈 트래커 (25일차)
+
+| Issue | Age | Status |
+|:------|:---:|:------:|
+| yfinance .KS NaN | 25d | ❌ 미해결 |
+| KiwoomAuth 8050 blocked | 25d | ❌ 미해결 |
+| MetaClaw tokenizer (skills_only mode) | 12d+ | 🟡 대기 |
+| MCP 멀티검색 quality crisis | 금일 7배치 | ⚠️ 쿼리 리팩토링 필요 |
+| C: Drive 77% (348/456GB) | 지속 | 🟡 85% 알람 설정 예정 |
+| 트레이딩 중단 (CB DEFENSIVE) | 3주+ | 🔴 기회비용 누적 |
+| Trinity 크래시 원인 | 1회 (15:47) | ❓ dmesg 로깅 필요 |
+
+### 📌 저녁 결론
+
+- 시스템 안정적: Trinity 전원 정상, CB Score 복구 완료, 메모리/스왑 양호
+- **5/19(화) 관전 포인트**: KOSPI 7,500 지지 여부 / USD/KRW 1,500 방향성 / NVDA 실적 주간 시작 / FOMC 의사록(수)
+- MCP 멀티검색 Naver 쿼리 전략 전면 재검토 필요 (금일 7배치 연속 Low Signal)
+- XSearch concept-to-code alignment → 내일 중 우선순위 P2로 스킬 검색 리팩토링 검토
+
+*2026-05-18 20:46 KST — Hermes Cron Evening Steady-State 기록*

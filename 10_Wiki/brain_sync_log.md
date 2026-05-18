@@ -457,3 +457,37 @@
 |  - Memory: 3.1Gi/7.6Gi (41%) ✅
 |  - 6 persistent issues (day 25): yfinance NaN, KiwoomAuth 8050, Tavily 401, Dashboard stale, MCP Zombie, Tech Scavenger cache
 |- **Next cycle**: Hourly brain sync
+
+## 🧠 Brain Sync — 2026-05-18 19:01 KST
+|- **Time**: 2026-05-18 19:01 KST
+|- **Vault stats**: wiki/ 277 files, 10_Wiki/ 321+ files = 598+ total (stable)
+|- **Since 17:00 KST**:
+|  - **Hermes Evo Report 18:30** — 4 new docs scanned, 5 insights absorbed:
+|    1. XSearch concept-to-code → skill search innovation (🔴 P2)
+|    2. KOSPI intraday low 7,142 (0.6% from 7,000) — CB 47 DEFENSIVE
+|    3. CB Score "N/A" root cause FOUND & FIXED — 3-tier fallback in self_heal.py
+|    4. Trinity 15:48 crash → WSL CPU burst throttling suspected (not OOM)
+|    5. FORGE + MetaClaw GraphRAG synergy design
+|  - **8 MCP 멀티검색 reports (18:40~18:55 batch)** — ALL LOW SIGNAL:
+|    - 미중 관세전쟁/공급망 (18:41) — Naver noise
+|    - AI 반도체/HBM/엔비디아 (18:41) — Naver noise
+|    - 코스피/코스닥 장마감 (18:40) — Naver noise
+|    - 코스피/코스닥 글로벌 증시 (18:52) — Naver noise
+|    - AI Agent/MCP 트렌드 (18:52) — Naver noise
+|    - 글로벌 증시 전망 (18:52) — Naver noise
+|    - AI/암호화폐/비트코인 (18:55) — Naver noise
+|    - 해상운임/SCFI/해운물류 (18:55) — Naver noise
+|- **Knowledge Absorption Assessment**:
+|  - Evo Report 18:30 is operational-focused (CB Score hotfix, crash analysis) — no new skills needed
+|  - XSearch concept-to-code is the only actionable innovation — tracked as P2 proposal
+|  - MCP multi-search quality crisis continues (8 consecutive LOW SIGNAL — 7th batch today)
+|  - 3 P1 items carried forward: crash logging, C: drive 77%, trading pause
+|- **System snapshot**:
+|  - WSL up ~16h (from ~03:10) — stable
+|  - Memory 3.1Gi/7.6Gi (41%), Swap 3.5MB ✅
+|  - All Trinity services green (post-15:47 recovery)
+|  - CB Score ~47/100 DEFENSIVE — FIXED from N/A
+|  - KOSPI 7,562 / WTI $103 / USD/KRW ₩1,505
+|- **Key takeaway**: Late-day batch: 1 Evo Report (operational hotfix) + 8 MCP reports (all noise). CB Score N/A fix is most impactful — prevents cascade failures. Trinity crash root cause still UNKNOWN (WSL CPU throttling best hypothesis).
+|- **Next cycle**: Next scheduled brain sync
+

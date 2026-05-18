@@ -2494,4 +2494,14 @@
 - **Vault stats**: wiki/ 277 files, 10_Wiki/ 321 files = 598 total
 - **Latest commit**: 2a50409 — MCP 멀티검색 14:41 batch (already absorbed at 15:05)
 - **No new papers/MCP reports** — last brain sync fully captured all content
-- **Next cycle**: Hourly brain sync
+| **Next cycle**: Hourly brain sync
+
+## 🧠 Brain Sync — 2026-05-18 20:46 KST
+- **Status**: Steady-state — no new content (EOD 16:00 captured)
+- **System**: All services healthy, CB Score 47/100 DEFENSIVE ✅ (N/A fixed)
+- **MCP 18:40~18:55 batch**: 8 reports, ALL LOW SIGNAL (Naver noise only) — 7th batch today
+- **Trinity**: Post-15:47 crash recovery stable for 5h+
+- **Market**: KOSPI 7,562 (-0.92%), KOSDAQ 1,110 (-1.76%), USD/KRW 1,505, WTI $103.20
+- **Key event**: CB Score N/A hotfix confirmed working
+- **Cash held**: ₩4,929,810 (0 positions, CB DEFENSIVE)
+- **Next**: Hourly brain sync / 5/19 Pre-market prep
