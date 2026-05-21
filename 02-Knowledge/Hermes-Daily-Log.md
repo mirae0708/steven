@@ -2505,3 +2505,30 @@
 - **Key event**: CB Score N/A hotfix confirmed working
 - **Cash held**: ₩4,929,810 (0 positions, CB DEFENSIVE)
 - **Next**: Hourly brain sync / 5/19 Pre-market prep
+
+
+## 2026-05-19 (Tue) 00:00 — Midnight Brain Sync
+
+### System Snapshot
+| Item | Status |
+|:-----|:-------|
+| WSL Uptime | ~21h (from 03:10) — stable |
+| Memory | 3.1Gi/7.6Gi (41%) |
+| Swap | 3.5MiB ✅ (no leak) |
+| Trinity | ✅ All green (post-15:47 recovery) |
+| CB Score | 47/100 DEFENSIVE (N/A fix stable) |
+
+### Vault Status
+- **3 new MCP reports** (22:40~22:41) — ALL LOW SIGNAL (8th batch today with 0 high-signal)
+- **Total vault**: 277 wiki/ + 296 10_Wiki/ = 598 processed files
+
+### Key Issues
+1. MCP 멀티검색 quality crisis: 8 batches today = 0 actionable reports. Naver noise pattern confirmed.
+2. KOSPI 7,562 / USD/KRW 1,505 — USD 1,500 돌파로 진입 유보 조건 충족
+3. 금일 Trinity 15:47 crash 원인 미확인 (WSL CPU throttling 추정)
+
+### 5/19(화) Pre-Market Watch
+- KOSPI 7,500 지지 여부
+- USD/KRW 1,500 방향성 (원화 약세 지속?)
+- NVDA 실적 주간 시작 (화요일)
+- FOMC 의사록 (수요일)
