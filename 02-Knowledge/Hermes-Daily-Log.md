@@ -2528,7 +2528,75 @@
 3. 금일 Trinity 15:47 crash 원인 미확인 (WSL CPU throttling 추정)
 
 ### 5/19(화) Pre-Market Watch
-- KOSPI 7,500 지지 여부
-- USD/KRW 1,500 방향성 (원화 약세 지속?)
-- NVDA 실적 주간 시작 (화요일)
-- FOMC 의사록 (수요일)
+|- KOSPI 7,500 지지 여부
+|- USD/KRW 1,500 방향성 (원화 약세 지속?)
+|- NVDA 실적 주간 시작 (화요일)
+|- FOMC 의사록 (수요일)
+
+---
+
+## 2026-05-21 (Thu) 12:45 — Cron 지식 기록 + Brain Sync 갱신
+
+### System Snapshot
+| Item | Status |
+|:-----|:-------|
+| WSL Uptime | 1d 17h (안정) |
+| Memory | 3.0Gi/7.6Gi (39%) ✅ |
+| Swap | 0B ✅ (완전 정상) |
+| Load Avg | 0.25 (유휴) |
+| Git | Clean — 모든 파일 커밋 완료 |
+
+### Vault Status
+- **wiki/**: 277 files — 5/21 intraday update 완료 (10건 수정: stocks 3 + macros 4 + sectors 3)
+- **10_Wiki/**: 389 papers+reports (+18 from 1120/1220 batch today)
+- **Brain Sync 12:02 KST**: 62개 신규 파일 인제스트, 10_Wiki/AI_Agents·LLM·RL·CV·MLOps 전 영역 신규 논문 반영
+
+### 📄 18 New arXiv Papers (5/21 Batch) — Key Highlights
+1. **Equilibrium Reasoners** 🔥 — 어트랙터 기반 상태 공간 추론, Test-time scaling via iterative latent updates
+2. **ProCrit** 🔥 — 자기 유도 다관점 추론 + Critic-guided revision (Multi-LLM Roundtable 패턴)
+3. **Lost in Fog** 🔥 — 센서 교란으로 LLM 추론 취약성 노출 (Perturbation-based reasoning fragility)
+4. **DeepWeb-Bench** — 대규모 딥 리서치 벤치마크 (Massive context demanding benchmark)
+5. **TIDE** — I/O-aware expert offload for MoE Diffusion LLM (로컬 LLM 배포 최적화)
+6. **DashAttention** — 미분 가능 적응형 희소 주의 (Top-k 대신 learned sparsity)
+7. **DelTA** — 판별적 토큰 신용 할당을 통한 강화 학습
+8. **SMoA** — 스펙트럼 변조 어댑터 PEFT (LoRA 주파수 도메인 대안)
+9. **Frontier** — 포괄적·정확한 LLM 추론 시스템
+10. **PALS** — Power-Aware MoE 모델 서빙 (전력 효율 인지)
+11. **Agentic Model Checking** — formal verification meets LLM agents
+12. **AI-Generated Python Refactoring Quality** — 생성 코드의 품질·보안 신호
+13. **Leveraging LLMs for Grammar Adaptation** — 메타모델 기반 문법 적응
+14. **You Only Need Minimal RLVR Training** — 최소 RLVR로 LLM 추론 확장
+15. **AiraXiv** — AI-Driven 오픈액세스 학술 플랫폼 (HuggingFace)
+16. **HITL-D** — Human-In-The-Loop Diffusion 공유 제어
+17. **Variance Reduction for Diffusion Teachers** — 확산 모델 기댓값 분산 감소
+18. **Detecting Trojaned DNNs** — Spectral Regression 분석
+
+### Market (5/20 confirmed close, 5/21 intraday)
+| 지표 | 5/20 종가 | 5/21 장중 | 비고 |
+|:-----|:---------:|:---------:|:-----|
+| KOSPI | 7,209 (-0.86%) | **7,688 (+6.64%)** ⚡ | 3일 연속 조정 후 급반등 |
+| KOSDAQ | 1,056 (-2.61%) | **+4.80% 반등** | RSI 19.0 극단 과매도→반등 |
+| USD/KRW | 1,508 (+1.04%) | 1,502 (-0.40%) | 1500선 유지, BB 상단 근접 |
+| WTI | $98.62 (-8.49%) | 미갱신 | $100선 하회 급락 |
+| 삼성부광 | 7,290 (-7.13%) | 7,270 (-0.27%) | KOSPI 급등에도 약세 지속 |
+| 에이치엘 | 14,740 (-8.28%) | 14,820 (+0.54%) | 소폭 반등 |
+| 나우로보틱스 | 24,400 (-9.63%) | 25,800 (+5.74%) | 급반동 주도 |
+
+### Portfolio
+- 삼성부광(014950.KQ): 34주 @10,040 → 7,290원 (-27.39%) — RSI 25.0 과매도 심화
+- 나우로보틱스(459510.KQ): 10주 @30,550 → 24,400원 (-20.13%) — 2거래일 누적 -14.0% 후 +5.74% 반등
+- 현금: ~492만원 전량 대기 (CB Score DEFENSIVE, 진입 유보)
+
+### Knowledge Highlights
+- 🔴 P1: "When Skills Don't Help" (arXiv) — 기존 Hermes Skill 시스템에 per-task validation 부재. Skills가 특정 태스크(offensive cybersecurity 등)에 오히려 해가 될 수 있음 → Skill loading architecture audit 필요
+- 🟡 P2: Equilibrium Reasoners — n-step-reasoning skill에 어트랙터 기반 접목 가능성
+- 🟡 P2: PRO TEA — 오프라인 멀티에이전트 워크플로우 평가 패턴 (Trinity 디버깅 활용)
+- 🟢 P3: TIDE / DashAttention / UniPool / EMO — MoE 추론 최적화 기술, 로컬 LLM 배포 역량 빠른 발전
+- ⚪ MCP 멀티검색: 11연속 LOW SIGNAL 배치 — Naver noise 크라이시스 지속
+
+### Key Concerns
+- 🔴 삼성부광 절대적 약세: KOSPI +6.64%에도 불구하고 -0.27% — 대형주 랠리에도 포트폴리오 종목 미참여
+- 🟡 KOSDAQ 1,056 (RSI 19.0) — 극단 과매도이나 반등 시 KOSPI 주도일 가능성
+- 🟡 WTI $98.62 $100선 하회 급락 — 글로벌 경기 침체 리스크 시그널
+- 🟡 USD/KRW 1,508 — BB 상단 근접, 원화 약세 지속 시 수입물가 상승 압력
+- ✅ WSL 1d17h 안정, Swap 0B, 메모리 39% — 시스템 최상 상태
