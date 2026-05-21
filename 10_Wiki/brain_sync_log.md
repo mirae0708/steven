@@ -509,3 +509,52 @@
 |- **Key takeaway**: Late-day batch: 1 Evo Report (operational hotfix) + 8 MCP reports (all noise). CB Score N/A fix is most impactful — prevents cascade failures. Trinity crash root cause still UNKNOWN (WSL CPU throttling best hypothesis).
 |- **Next cycle**: Next scheduled brain sync
 
+
+## 🧠 Brain Sync — 2026-05-21 12:02 KST
+|- **Time**: 2026-05-21 12:02 KST
+|- **Vault stats**: wiki/ 277 files, 10_Wiki/ 389 papers+reports
+|- **New since 19 May 00:01 KST**: 62 new files ingested
+|  - **Papers (academic)**: ~52 new from arXiv across AI_Agents, LLM, RL, Deep_Learning, CV, MLOps
+|  - **MCP 멀티검색 reports**: 10 new (18~21 May batch)
+|    1. 5/18 MCP batch (18:40~18:55): KOSPI/반도체/관세전쟁/AI Agent/암호화폐/해상운임 **ALL LOW SIGNAL** (Naver noise)
+|    2. 5/18 MCP batch (22:40~22:41): 증시동향/HBM/관세전쟁 **ALL LOW SIGNAL**
+|    3. 5/21 MCP batch (10:41~10:43): 증시/HBM/관세전쟁 (today) **LOW SIGNAL** (recycled Naver noise)
+|  - **10_Wiki AI_Agents key new papers**:
+|    1. "When Skills Don't Help" (20260520) — **CRITICAL**: Agent Skills show 16.2pp avg improvement but 16/84 tasks NEGATIVE delta. Skills can HURT in adversarial domains (offensive cybersecurity). Implication: skill loading should have per-task validation, not blanket apply.
+|    2. "Does Code Cleanliness Affect Coding Agents?" (20260520) — Codebase structural quality significantly affects agent task completion. Dirty code → agent performance degrades.
+|    3. "PROTEA" (20260519) — Offline evaluation + iterative refinement for multi-agent LLM workflows. Debug intermediate outputs at node level.
+|    4. "Decoupling Communication from Policy in MARL" (20260521) — Bandwidth-constrained multi-agent communication, decoupled bottleneck architecture.
+|  - **10_Wiki LLM key new papers**:
+|    1. "Equilibrium Reasoners" (20260521) — Reasoning via learning attractors in latent state space. Test-time scaling through iterative latent updates. Connection to diffusion-based reasoning.
+|    2. "ProCrit" (20260521) — Self-elicited multi-perspective reasoning + critic-guided revision. Related to multi-LLM roundtable/ensemble approach.
+|    3. "SMoA" (20260521) — Spectrum Modulation Adapter for PEFT. Alternative to LoRA in frequency domain.
+|    4. "TIDE" (20260520) — I/O-aware expert offload for MoE Diffusion LLM inference. Lossless expert offloading. Relevant to local LLM deployment.
+|    5. "DashAttention" (20260519) — Differentiable adaptive sparse hierarchical attention. Top-k is too rigid; learned sparsity is better.
+|    6. "UniPool" (20260520) — Globally shared expert pool for MoE. Alternative architecture to per-layer MoE routing.
+|    7. "EMO Pretraining" (20260520) — Mixture of Experts for emergent modularity in pretraining.
+|    8. "SpecKV" (20260505) — Adaptive speculative decoding with compression-aware KV cache.
+|  - **10_Wiki Computer_Vision/Deep_Learning/Robotics**:
+|    1. "Syn4D" (20260507) — Multiview synthetic 4D dataset generation.
+|    2. "SigLoMa" (20260506) — Open-world quadrupedal loco-manipulation.
+|    3. "Relit-LiVE" (20260508) — Relight video via joint learning of environment video.
+|    4. "ActCam" (20260508) — Zero-shot joint camera & 3D motion control for video.
+|  - **10_Wiki Reinforcement_Learning**:
+|    1. "Beyond Scaling: Agents Are Heading to the Edge" (20260519) — Edge deployment of RL agents.
+|    2. "Robo-Cortex" (20260519) — Self-evolving embodied agent via dual-grain concept memory.
+|    3. "When Life Gives You BC, Make Q-functions" (20260507) — Extracting Q-values from behavioral cloning data.
+|  - **Stock/sector wiki files (wiki/)**: 10 files updated (KOSPI, KOSDAQ, 환율, 유가WTI, 로보틱스, 반도체, 헬스케어, 코스닥중소형, 나우로보틱스, 삼성부광, 에이치엘사이언스)
+|- **Knowledge Absorption Assessment**:
+|  - 🔴 P1: "When Skills Don't Help" paper — existing Hermes skill system lacks per-task validation. Skills are loaded globally. Need to audit: which skills might have NEGATIVE impact on which task types? Check skill overlap/collisions.
+|  - 🟡 P2: "Equilibrium Reasoners" — attractor-based reasoning could inform n-step-reasoning skill upgrade. Latent state iteration paradigm.
+|  - 🟡 P2: "PROTEA" — offline multi-agent workflow evaluation pattern could apply to Trinity orchestrator debugging.
+|  - 🟢 P3: "TIDE" I/O-aware MoE offloading — potential for optimizing local Hermes LLM inference.
+|  - 🟢 P3: "DashAttention" — differentiable sparse attention could reduce KV cache needs.
+|  - ⚪ MCP-batch: All 3 batches (18~21 May) continue to show **LOW SIGNAL** (Naver noise + recycled content). MCP multi-search quality crisis: 11th consecutive batch flagged as noise.
+|- **System snapshot**:
+|  - WSL state: stable (check ongoing)
+|  - C: drive usage: needs check (was 77% on 19 May)
+|  - KOSPI: 7,000~8,000 range (volatile week: 8,000 touched → 6% crash → recovery)
+|  - Key events since last sync: 미중 베이징 정상회담 (5/14~15), 코스피 8,000 돌파 후 사이드카 급락 (5/15), 삼성전자 노조 파업 위기
+|- **Key takeaway**: Highest-value insight from this batch: the "When Skills Don't Help" negative result paper. This is directly applicable to Hermes' skill system architecture. The MCP batch quality issue is chronic (now 11 batches flagged). New papers on MoE inference optimization (TIDE, UniPool, EMO, DashAttention) suggest local LLM deployment capabilities are rapidly advancing.
+|- **Next cycle**: Next scheduled brain sync
+
