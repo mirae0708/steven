@@ -1,28 +1,34 @@
 {
-  "last_sync": "2026-05-19 00:00 KST (Brain Sync Cron)",
-  "files_processed": 601,
+  "last_sync": "2026-05-21 17:00 KST (Brain Sync Cron)",
+  "files_processed": 608,
   "new_content_since_last_sync": [
-    "10_Wiki/MCP-멀티검색-20260518_224048.md (KOSPI/금리 전망)",
-    "10_Wiki/MCP-멀티검색-20260518_224122.md (AI 반도체 HBM 동향)",
-    "10_Wiki/MCP-멀티검색-20260518_224154.md (글로벌 관세전쟁 미중 무역)"
+    "10_Wiki/MCP-멀티검색-20260521_144049.md (코스닥 바이오/2차전지 테마주 동향)",
+    "10_Wiki/MCP-멀티검색-20260521_144139.md (글로벌 빅테크 실적 AI 투자 트렌드)",
+    "10_Wiki/MCP-멀티검색-20260521_144225.md (한국 부동산 시장 금리 전망)",
+    "10_Wiki/Macros/KOSPI.md (5/21 close: 7,687.63 +6.64%)",
+    "10_Wiki/Macros/KOSDAQ.md (5/21 close: 1,106.78 +4.80%)",
+    "10_Wiki/Macros/환율.md (5/21 close: 1,501.79원)",
+    "10_Wiki/Macros/국제유가WTI.md (5/20 close: $98.62)",
+    "wiki/sectors/로보틱스.md, 코스닥중소형.md, 헬스케어.md (sector wiki expansion)",
+    "wiki/stocks/나우로보틱스.md (+5.74%), 삼성부광.md, 에이치엘사이언스.md (stock wiki expansion)"
   ],
   "system_status": {
-    "wsl_uptime_hours": 21,
-    "memory_percent": 41,
-    "swap_mib": 3.5,
+    "wsl_uptime_hours": 46,
+    "memory_percent": 45,
+    "swap_mib": 0.0,
     "skills_count": 197,
-    "issues_day": 25,
-    "cb_score": 47,
-    "cb_score_fix_applied": true
+    "issues_day": 27,
+    "chronic_issues": ["yfinance .KS NaN (27일차)", "KiwoomAuth 8050 (27일차)", "Dashboard stale (27일차)", "MCP Python Zombie (27일차)"],
+    "dns_outage_recovery": true
   },
-  "market_state": "EOD 5/18 close: KOSPI 7,562 (+0.92%), KOSDAQ 1,110 (-1.76%), USD/KRW 1,505 (+0.79%), WTI $103.20",
+  "market_state": "5/21 EOD: KOSPI 7,687.63 (+6.64%), KOSDAQ 1,106.78 (+4.80%), USD/KRW 1,501.79 (-0.40%), WTI $98.62 (5/20 close). 대형주 중심 급반등 — KOSPI 7,500대 수성 후 7,687로 마감, Swap 사용량 0B 2일차",
   "key_events_today": [
-    "CB Score N/A → 3-tier fallback hotfix applied and confirmed",
-    "Trinity 15:47 simultaneous crash → auto-recovered, root cause unknown",
-    "MCP 멀티검색 quality crisis: 8 batches today ALL LOW SIGNAL (Naver noise)",
-    "KOSPI 7,142 intraday low → recovered to 7,562 (7,500선 수성)",
-    "USD/KRW 1,500 돌파 (연중 신고가)",
-    "XSearch concept-to-code → P2 skill search upgrade identified"
+    "KOSPI +6.64% 급반등 — 5/15 사이드카 급락 이후 4거래일 만에 7,687 회복",
+    "Swap 0B 2일차 지속 — 메모리 누수 완전 해소 확인",
+    "Tech Scavenger 21건 신규 저장 (10:20~12:20, DNS 장애 극복)",
+    "MCP 멀티검색 9건 실행 + 3건 Wiki 저장 (14:40~14:42)",
+    "DNS 장애 08:20~09:20 → 10:20 자동 복구",
+    "MCP quality crisis 지속 — Naver noise + recycled content"
   ],
-  "next_critical": "5/19 화요일 pre-market: KOSPI 7,500 지지 / USD/KRW 1,500 방향성 / NVDA 실적주간 / FOMC 의사록(수)"
+  "next_critical": "5/22 금요일 pre-market: KOSPI 7,700선 안착 여부 / USD/KRW 1,500 방향성 / 주말 리스크 관리"
 }
