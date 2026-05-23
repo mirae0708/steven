@@ -584,3 +584,51 @@
 3. Tech Scavenger 21건 신규 저장 (DNS 장애 극복)
 4. MCP 멀티검색 14번째 연속 LOW SIGNAL 배치
 5. 시스템 46시간 연속 안정 운영 — Trinity 6개 서비스 전원 정상
+## 🧠 Brain Sync — 2026-05-23 19:58 KST
+
+### Files Since Last Sync (2026-05-21 17:00 KST)
+- **MCP 멀티검색 (3건, 2026-05-23 12:50~12:52)**:
+  1. KOSPI 글로벌 증시 주간 리뷰 (12:50) — **LOW SIGNAL** (Naver noise)
+  2. AI 인공지능/MCP 생태계 동향 (12:51) — **LOW SIGNAL** (Naver noise)
+  3. 글로벌 물류 해상운임 한국 수출입 동향 (12:52) — **LOW SIGNAL** (Naver noise)
+- **Cron 주말 스냅샷**: WSL 재부팅 후 복구 + Pre-Open 체크리스트 (05:40~05:50)
+- **시스템 현황** (14:00 KST):
+  - WSL uptime: 1h 30m (재부팅 후 — 부팅 시점~12:30 KST 추정)
+  - Memory: 3.5Gi/7.6Gi (46%), Swap: **0B** ✅ (재부팅으로 완전 해소)
+  - Load Avg: 1.32 — 정상 범위
+- **Market data** (from wiki, 5/21 close): KOSPI 7,687.63 (+6.64%), KOSDAQ 1,106.78 (+4.80%), USD/KRW 1,501.79, WTI $98.62
+
+### Tech Scavenger Batch (13 new arXiv papers, 13:20 KST)
+**🔴 HIGH SIGNAL 발견 — 3건 ⭐**:
+
+1. **⭐ HarnessAPI (arXiv 2605.22733)** — `harnessapi` Python framework. Skill folder as single source of truth → auto-generates streaming HTTP (SSE), OpenAPI/Swagger UI, AND MCP tool from one handler.py + Pydantic. Solves the dual-stack problem (FastAPI + FastMCP). 74% boilerplate reduction. Reinforces Hermes' `native-mcp` direction: MCP + HTTP unification from a single skill spec. *Implication: Hermes tool registry could adopt `harnessapi` pattern for dual-mode (SSE streaming + JSON) tool serving.*
+
+2. **⭐ Contractual Skills / GovernSpec (arXiv 2605.22634)** — Formal skill contracts: input boundaries, permissions, evidence requirements, output contracts, quality criteria, verification steps, human approval points, handoff rules. 960 outputs evaluation: contractual skills outperform no-skill baselines; gains over expanded plain skills are small/mixed — **key insight**: contractual fields improve *checkability and maintainability*, not raw generation quality. *Directly relevant to Hermes skill system evolution.*
+
+3. **⭐ DecentMem: Self-Evolving MAS via Decentralized Memory (arXiv 2605.22721)** — Each agent maintains dual-pool memory (exploitation + exploration), reweighted via LLM-as-a-judge. Proven O(log T) regret bound, matching stochastic bandit lower bound. Up to 23.8% improvement over centralized memory, 52.5% over no-memory baseline, 49% token reduction. *Directly relevant to Hermes Layer Memory System (L0-L4) architecture: validates decentralized memory direction.*
+
+4. 🟡 **LCGuard** (arXiv 2605.227xx) — Latent Communication Guard for safe KV sharing in multi-agent systems. *Relevant to Trinity inter-agent communication security.*
+
+5. 🟢 Other 9 papers (Cloud provisioning, VLN robotics, chatbot evaluation, gesture-aware VLA, policy optimization, etc.) — low-to-moderate relevance to Hermes core architecture.
+
+### Knowledge Absorption Assessment
+- 🔴 **MCP 멀티검색 Quality Crisis 지속 (15번째 연속 LOW SIGNAL 배치)** — 3개 검색 모두 네이버 노이즈 + 재활용 컨텐츠.
+- 🟢 **Tech Scavenger 배치는 고품질 신호 유지** — 13개 신규 arXiv 논문 중 3건 HIGH SIGNAL (HarnessAPI, Contractual Skills, DecentMem)
+- 🟢 **Swap 0B 지속** — 재부팅으로 완전 해소, 메모리 안정화
+- 🟡 **HarnessAPI** → MCP unified serving 패턴: Hermes가 HTTPS+MCP 듀얼스택 문제에 적용 가능. `pip install harnessapi` (PyPI)
+- 🟡 **Contractual Skills** → Hermes skill.md 구조 개선: GovernSpec-style contracts to input/output/quality/verification fields. Generation quality 개선 X, but maintainability/checkability 개선 O.
+- 🟡 **DecentMem** → L0-L4 메모리 시스템 방향성 검증: 분산 메모리, dual-pool, LLM-as-a-judge reweighting 개념이 기존 Hermes 아키텍처와 정렬
+- 🔴 **Chronic Issues 유지**: yfinance .KS NaN(29일차), KiwoomAuth 8050(29일차), Dashboard stale(29일차)
+
+### Action Items
+- [ ] **HarnessAPI 기술 조사**: `pip install harnessapi` → Hermes tool_registry.py에 통합 가능성 평가
+- [ ] **Contractual Skills**: Hermes skill.md에 GovernSpec-style contract 필드 (goals/inputs/permissions/outputs/quality) 추가 검토
+- [ ] **DecentMem**: L0-L4 메모리 아키텍처에 dual-pool + LLM-as-a-judge reweighting 개념 적용 연구
+
+### Key Takeaways
+1. 3건 신규 MCP 보고서 모두 LOW SIGNAL — 15번째 연속 저품질 배치
+2. **Tech Scavenger 13건 arXiv 배치 — 3건 HIGH SIGNAL discovered!** (HarnessAPI, Contractual Skills, DecentMem)
+3. WSL 재부팅 발생 (~12:30 KST) — Swap 완전 해소 (0B), 서비스 자동 복구 확인
+4. KOSPI 7,687 고점 유지 — 5/21 급반등 이후 주말(토) 휴장
+5. 시스템 정상 운영: Memory 46%, Swap 0B, Load Avg 1.32
+6. 새로운 기술 지식 3건 발견 → 후속 세션에서 기술 조사 필요
