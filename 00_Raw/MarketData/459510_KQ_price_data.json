@@ -412,10 +412,20 @@
   {
     "Date": "2026-05-21",
     "Open": 24900.0,
-    "High": 25900.0,
+    "High": 26700.0,
     "Low": 24700.0,
-    "Close": 25800.0,
-    "Volume": 66190,
+    "Close": 26600.0,
+    "Volume": 147323,
+    "Dividends": 0.0,
+    "Stock Splits": 0.0
+  },
+  {
+    "Date": "2026-05-22",
+    "Open": 26200.0,
+    "High": 26500.0,
+    "Low": 25450.0,
+    "Close": 26150.0,
+    "Volume": 141485,
     "Dividends": 0.0,
     "Stock Splits": 0.0
   }
