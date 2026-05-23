@@ -54,6 +54,12 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
+- **[Hermes]** 🔍 주말 스냅샷 — WSL 재부팅(12:32) 후 Trinity 복구 완료, Pre-Open 체크리스트 기록 (2026-05-23 12:45 KST, 토요일 휴장)
+  - **WSL 재부팅**: 43h 30m 만에 12:32 KST 재시작 — Swap 0B 초기화✅, Trinity 전원 정상 복구
+  - **시장**: 5/21 confirmed close 유지 — KOSPI +6.64%·KOSDAQ +4.80% 급반등, 환율 1,502 안정
+  - **다음 거래일**: 5/25(월) 09:00 KST 오픈 예정
+  - **Pre-Open 체크리스트**: MCP 기동 확인·Brain Sync·Tech Scavenger·yfinance 5/21 반영
+  - 시스템: 메모리 3.1Gi/7.6Gi(41%), Cron 18개 정상, Chronic Issues 29일차 5건
 - **[Hermes]** 🔍 EOD Post-Market 지식 기록 — 5/21 confirmed close: KOSPI +6.64%·KOSDAQ +4.80% 급반등 확정, Swap 0B 2일차 유지 (2026-05-21 16:45 KST)
   - KOSPI(7,688🟢+6.64%🔥 4거래일 연속 하락 종료, RSI 64.8 강세 전환, BB% 74.6% 복귀)
   - KOSDAQ(1,107🟢+4.80%🔥 RSI 19.0→42.7 과매도 탈출, BB% 하단 이탈→복귀)

@@ -390,3 +390,47 @@
 ---
 
 *2026-05-21 16:45 KST — Hermes Cron EOD Post-Market 기록 (KOSPI +6.64% 급반등! 삼성부광 유일 하락)*
+
+---
+
+## 🧬 Hermes Auto-Evolution — 2026-05-23 (Sat) 12:45 KST Weekend Snapshot
+
+### 📋 시스템 현황 스냅샷 — 12:45 KST (주말 휴장)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | 14m (12:32 재부팅 직후) |
+| tmux 세션 | 6개 — 전원 정상 (hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign) |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 |
+| Hermes Gateway | ✅ 정상 |
+| Swap | **0B** ✅ (신규 부팅으로 완전 클리어) |
+| 메모리 | 3.1Gi / 7.6Gi (41%) |
+| Self-Heal Cron (12:36) | ✅ 정상 |
+| Cron Jobs | 18개 정상 |
+
+### 📊 시장 메모 (주말 — 5/21 confirmed close 유지)
+- **KOSPI 7,688** 🟢 +6.64% 급반등, RSI 64.8 강세 전환
+- **KOSDAQ 1,107** 🟢 +4.80% 급반등, RSI 42.7 과매도 탈출
+- **환율 1,502원** 🟢 -0.40% 소폭 안정 (1500선 유지)
+- **WTI $98.62 (5/20)** 🔴 $100 하회 유지
+- **나우로보틱스** 🟢 +5.74% 반등 선도, RSI 50.2 중립
+- **삼성부광** 🔴 -0.27% 유일 하락, RSI 30.0 과매도 지속
+- **에이치엘사이언스** 🟡 +0.54% 미미 반등, RSI 32.6 과매도
+
+### 🔑 5/21~5/23 주말 간 주요 관찰
+1. **WSL 재부팅 (12:32 KST)** — 5/21 17:00 이후 약 43h 30m 만에 재시작. Swap 0B 유지 중이었으나 재부팅으로 완전 초기화. Trinity 전원 정상 자동 복구 완료.
+2. **5/21 금요일 확정 종가 기준 주말 유지** — KOSPI +6.64% 대반등, KOSDAQ +4.80% 반등, 환율 1,502원 안정.
+3. **5/22~5/23 주말**: 시장 휴장, 데이터 동결. 다음 거래일: **5/25 (월) 09:00 KST 오픈**.
+4. **Tech Scavenger**: 마지막 정상 실행 5/21 18:20 — 0 신규 (캐시 포화). DNS 장애 시점 이후 캐시 리셋 고려.
+5. **Chronic Issues 유지** (27일차→29일차): yfinance NaN, KiwoomAuth 8050, Tavily API key 만료, Dashboard stale, MCP Zombie.
+
+### 🚧 Pre-Open (5/25 월) 체크리스트
+- [ ] WSL 재부팅 후 모든 MCP 서버 정상 기동 확인 (특히 Tavily·GitHub)
+- [ ] Brain Sync 재수행 (재부팅 후 첫 동기화)
+- [ ] Tech Scavenger 재실행 (DNS 캐시 초기화 후 정상 여부 확인)
+- [ ] yfinance 5/21 confirmed close 데이터 위키 반영 확정
+- [ ] 포트폴리오: 현금 492만 전량 보유 중
+
+---
+
+*2026-05-23 12:45 KST — Hermes Cron 주말 스냅샷 (WSL 재부팅, 다음 거래일 5/25 월)*
