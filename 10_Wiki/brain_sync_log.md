@@ -632,3 +632,25 @@
 4. KOSPI 7,687 고점 유지 — 5/21 급반등 이후 주말(토) 휴장
 5. 시스템 정상 운영: Memory 46%, Swap 0B, Load Avg 1.32
 6. 새로운 기술 지식 3건 발견 → 후속 세션에서 기술 조사 필요
+
+## 🧠 Brain Sync — 2026-05-25 02:01 KST
+
+| **Time** | 2026-05-25 02:01 KST |
+|---|---|
+| **Vault stats** | Context/ 9 files (Company 1, Product 6, TechStack 2), Agents/Hermes 2 files, Members/ 1 draft, 10_Wiki/ 300+ papers, wiki/ 277+ files |
+| **New since last sync** | Context/ fully built (5/25 00:27~00:42 4 commits, 7 files +553 lines), Claude-Code-Hybrid guide, Telegram-Commands, WSL-Troubleshooting, Quote-Tool/Logistics-ERP integration guides promoted |
+| **System** | Post-D-DAY 스냅샷: KOSPI 7,848(목표 8,000 근접), KOSDAQ 1,161 급등, 환율 1,521 1520선 돌파, WTI $96.60 $100 하회. Swap ~780KiB ✅, Memory 46%, Trinity 정상 |
+| **Quality Assessment** | Context 4계층 시스템 **최초 구축 완료**. Claude Code 하이브리드 환경 가이드(Templates 3개 + PowerShell/WSL script) 신규 추가. Members/Steven/Ideas/LLM-Wiki-개선아이디어.md의 5개 문서 모두 승격 완료. 향후 Brain Sync는 Context/ 신규 문서 모니터링 + Members/ 신규 초안 감지에 집중 |
+
+### Key Learnings
+1. **Context 4계층 시스템 가동** — Company(팀 규칙/코딩가이드), Product(시스템아키텍처/AI-Council/로드맵/Quote-Tool/텔레그램명령어/Claude-Code), TechStack(물류-ERP/WSL-문제해결)로 3분류. 승인된 공식 지식만 위치.
+2. **Claude Code 하이브리드 환경** — Hermes(총지휘관) → Claude Code(코딩 실행) 분리. Cloud(Claude 3.7 Sonnet/Opus) + Local(Hermes-3 8B/70B) 전략. Templates/llm-wiki/에 배치/쉘 템플릿 포함.
+3. **Context 승격 제안서** — 총 17개 문서 후보 중 🥇 8개(코딩가이드, Hermes-Git-지식베이스, Operations-Guide, Trading-Strategies, AI-Council, System-Architecture, Business-Portfolio-Index, Vault-구조-설계도) 최우선. 🥈 5개, 🥉 3개. Members/Steven/Ideas/에 아이디어 초안 보관 중.
+4. **Brain Sync 마지막 실행 이후 24h+ 경과** — LOW SIGNAL 지속 (MCP 멀티검색 15번째 연속 저품질). 단, Tech Scavenger arXiv 논문은 3건 HIGH SIGNAL (HarnessAPI, Contractual Skills, DecentMem) 발견됨.
+5. **Chronic Issues (30일차)** — yfinance .KS NaN, KiwoomAuth 8050, Tavily 만료, Dashboard stale 지속.
+
+### Action Items
+- [ ] 5/25(월) 09:00 KST Pre-Open 체크리스트 실행 — MCP 서버 기동 확인, Brain Sync 완료, Trinity 정상 확인, Pre-Market 배틀루프
+- [ ] Context_승격_제안서 🥇 8건 우선 승격 — Operations-Guide, Hermes-Git-지식베이스, Trading-Strategies, Business-Portfolio-Index, Vault-구조-설계도
+- [ ] Members/Steven/Ideas/LLM-Wiki-개선아이디어.md 모니터링 — 새 아이디어 감지 시 알림
+- [ ] HarnessAPI 기술 조사 (HIGH SIGNAL from last Tech Scavenger batch)
