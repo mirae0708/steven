@@ -19,6 +19,7 @@ tags: [context/]
 - [[../Product/자율형-에이전트-로드맵|🚀 자율형 에이전트 로드맵]]
 - [[../Product/Quote-Tool-연동가이드|📦 Freight Quote Tool 연동가이드]]
 - [[../Product/텔레그램-명령어-모음|📱 텔레그램 명령어 모음]]
+- [[../Product/Claude-Code-하이브리드-환경|🤖 Claude Code 하이브리드 환경]]
 
 ## 🔧 TechStack — 기술 스택
 - [[../TechStack/물류-ERP-연동가이드|📋 물류 ERP 연동가이드 (MRCloud + Invoice Auto)]]
