@@ -1,5 +1,8 @@
 # 미래해운항공 물류 자동화 시스템 (Invoice Auto)
 
+> ✅ **Context 승격 완료** → [[Context/TechStack/물류-ERP-연동가이드]]
+> 이 파일은 Members/ 원본입니다. 수정 시 Context 버전도 함께 업데이트하세요.
+
 ## 개요
 MRCloud ERP에 인보이스(PI/PL) 데이터를 자동으로 추출하여 입력하는 **RPA 자동화 시스템**. 해운(SEA), 항공(AIR), 특송(EXPRESS) 세 모드를 지원한다.
 

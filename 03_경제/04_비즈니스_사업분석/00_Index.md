@@ -5,6 +5,9 @@ updated: 2026-05-14
 
 # 🏢 비즈니스 사업 분석 인덱스
 
+> ✅ **Context 승격 완료** → [[Context/Product/Quote-Tool-연동가이드]], [[Context/TechStack/물류-ERP-연동가이드]]
+> 이 파일은 Members/ 원본입니다. 수정 시 Context 버전도 함께 업데이트하세요.
+
 > 미래해운항공(MIRAE LOGISTICS)을 중심으로 한 물류/IT 융합 비즈니스 포트폴리오
 
 ---

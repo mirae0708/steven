@@ -8,6 +8,9 @@ estimated_revenue: 5억~50억/년
 
 # 🚀 AI 물류 에이전트 SaaS
 
+> ✅ **Context 승격 완료** → [[Context/Product/Quote-Tool-연동가이드]], [[Context/TechStack/물류-ERP-연동가이드]]
+> 이 파일은 Members/ 원본입니다. 수정 시 Context 버전도 함께 업데이트하세요.
+
 > 우리의 `invoice_auto` + `Hermes Agent` 기술을 SaaS로 상품화
 
 ## 💡 개요
