@@ -654,3 +654,22 @@
 - [ ] Context_승격_제안서 🥇 8건 우선 승격 — Operations-Guide, Hermes-Git-지식베이스, Trading-Strategies, Business-Portfolio-Index, Vault-구조-설계도
 - [ ] Members/Steven/Ideas/LLM-Wiki-개선아이디어.md 모니터링 — 새 아이디어 감지 시 알림
 - [ ] HarnessAPI 기술 조사 (HIGH SIGNAL from last Tech Scavenger batch)
+
+
+## 🧠 Brain Sync — 2026-05-25 07:03 KST
+
+| **Time** | 2026-05-25 07:03 KST |
+|---|---|
+| **Vault stats** | Context/ 11 files (Company 1, Product 6, TechStack 2, Index 1, Promotion-proposal 1), Agents/Hermes 2 files, Members/ 1 draft, 10_Wiki/ 300+, 03_Projects/ 55+ culture-econ files |
+| **New since last sync** | **10 files (+326 lines)**: 9 Culture-Economy intel (7 revenue-model + 2 logistics-opportunity) + 1 Wiki Auto-Expander (06:52 batch). MCP multi-search 6 new — all LOW SIGNAL (16th consecutive). GitHub Knowledge Hub weekly update (34 repos). MarketData 9 files expanded from yfinance. |
+| **Key Intel** | K-Beauty CAGR 9.6%, BTS 34-city 79-show tour merch logistics, Alibaba Trade Assurance Korea launch, OliveYoung vs SILICON2 US distribution war, K-Food 30 global hubs, K-Beauty Trinity thesis (Georgetown Journal) |
+| **System** | Pre-Open D-2h. WSL 13.4h up, Memory 46% (3.5Gi/7.6Gi), Swap 36MB, Load Avg 0.72. KOSPI 7,848 (5/22 close). Chronic Issues 31일차. |
+| **Quality** | Context/ stable — no changes. Members/ draft static. Culture-Econ intel = research-grade, not yet Context-ready. MCP 16th consecutive LOW SIGNAL. |
+
+### Key Takeaways
+1. **Culture-Economy Intel batch** — 9 new files with rich logistics-forwarding synergy for Quote-Tool. K-Beauty CAGR 9.6%, BTS tour logistics demand, Alibaba Trade Assurance in Korea.
+2. **Context/ stable** — no new changes. Ready for Pre-Open.
+3. **GitHub Knowledge Hub** — 34 repos updated. Notable: superpowers(204.8k), CodeGraph(21.7k, Hermes-native), CloakBrowser(20.2k).
+4. **System healthy** — 13.4h uptime, Memory 46%, minimal swap.
+5. **MCP low quality continues** — 16th consecutive batch.
+
