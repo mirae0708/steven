@@ -1,6 +1,19 @@
-# Team Living Wiki
+# Team Living Wiki — LLM Wiki System v2
 
-**[[Wiki Basic Model]]**에 따라 누구나(팀원+Claude) 자유롭게 편집하세요.
+**[[Wiki Basic Model]]**에 따라 누구나(팀원+AI) 자유롭게 편집하세요.
+
+## 🏛️ LLM Wiki 4계층
+- [[Context/Company/직원용-코딩-아키텍처-가이드|🏢 Company/ — 공식 팀 지식]]
+  - [[Context/Company/직원용-코딩-아키텍처-가이드|📐 직원용 코딩 & 아키텍처 가이드]]
+- [[Context/Product/시스템-아키텍처|📦 Product/ — 제품/시스템 문서]]
+  - [[Context/Product/시스템-아키텍처|🏗️ 시스템 아키텍처]]
+  - [[Context/Product/AI-Council-분석방법론|🧠 AI Council 분석 방법론]]
+  - [[Context/Product/자율형-에이전트-로드맵|🚀 자율형 에이전트 로드맵]]
+- [[Agents/Hermes/역할과-책임|🤖 Agents/ — AI 에이전트]]
+  - [[Agents/Hermes/역할과-책임|Hermes 역할과 책임]]
+- **_Private/_ — 개인 메모 (Git 무시)**
+
+> 💡 **지식 승격**: Members/에 초안 작성 → @Hermes 에게 요청 → AI 검토 → PR → 사람 승인 → Context/
 
 ## Quick Links
 - [[01-Projects/Jongdari-Trading-System|📈 종다리 모의투자 시스템]]

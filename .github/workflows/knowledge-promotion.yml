@@ -1,0 +1,61 @@
+name: LLM Wiki Knowledge Promotion
+on:
+  pull_request:
+    paths:
+      - 'Context/**'
+      - 'Members/**'
+    branches: [main]
+
+jobs:
+  validate-knowledge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate YAML frontmatter
+        run: |
+          ERROR=0
+          for f in $(find Context/ -name '*.md'); do
+            if ! head -1 "$f" | grep -q '^---$'; then
+              echo "❌ Missing frontmatter: $f"
+              ERROR=1
+            fi
+            STATUS=$(grep -m1 '^status:' "$f" | sed 's/status: *//')
+            if [ "$STATUS" != "approved" ]; then
+              echo "⚠️  Status not 'approved': $f ($STATUS)"
+            fi
+          done
+          exit $ERROR
+
+      - name: Check broken wiki links
+        run: |
+          ERROR=0
+          for f in $(find . -name '*.md'); do
+            # Find [[wikilinks]] that don't have a matching file
+            for link in $(grep -oP '\[\[([^\]|]+)(\|[^\]]+)?\]\]' "$f" | sed 's/\[\[\|]]//g' | cut -d'|' -f1); do
+              # Skip external/URL links
+              if echo "$link" | grep -qE '^(http|https|ftp)://'; then continue; fi
+              # Check if link target exists anywhere in vault
+              if ! find . -name "$link.md" | grep -q .; then
+                echo "⚠️  Broken link in $f: [[$link]]"
+                ERROR=1
+              fi
+            done
+          done
+          exit $ERROR
+
+      - name: Check duplicate content
+        run: |
+          python3 -c "
+          import os, hashlib
+          seen = {}
+          for root, _, files in os.walk('Context/'):
+            for f in files:
+              if not f.endswith('.md'): continue
+              path = os.path.join(root, f)
+              title = open(path).read().split('#')[1] if '#' in open(path).read() else ''
+              title = title.strip().split('\n')[0] if title else ''
+              if title in seen:
+                print(f'⚠️  Duplicate title suggestion: \"{title}\" in {path} and {seen[title]}')
+              seen[title] = path
+          "
