@@ -73,7 +73,12 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
-- **[Hermes]** 📊 Wiki 확장기 — 5/22 confirmed close 00-Home.md 동기화: KOSPI 7,848(+0.41%), KOSDAQ 1,161(+4.99% 급등!), 환율 1,521(+1.07% 1520선 돌파), WTI $96.60($100 하회 지속) (2026-05-24 01:10 KST, 일요일 휴장, 주말 스냅샷)
+- **[Hermes]** 🏗️ **LLM Wiki 4계층 Context 시스템 구축 완료** — Company/Product/TechStack/Agents 공식 지식 체계 확립: Claude Code 하이브리드 환경·텔레그램 명령어 모음·WSL 문제해결 가이드·물류 ERP 연동가이드 Context 승격 (2026-05-25 00:42 KST, 월요일 오픈 전)
+  - **7개 파일(+553 lines) 커밋**: Context/Company/직원용-코딩-가이드, Context/Product/(시스템-아키텍처·AI-Council·자율형-에이전트·Quote-Tool·텔레그램·Claude-Code), Context/TechStack/(물류-ERP·WSL), Templates/llm-wiki/(CLAUDE-Hybrid-Template·profile.ps1·wsl.sh)
+  - **00-Home.md** LLM Wiki 4계층에 Claude Code 하이브리드 링크 추가
+  - **시스템**: WSL 7h 안정, Swap 780KiB ✅, Memory 46%, Trinity 정상
+  - **다음 거래일**: 5/25(월) 09:00 KST 오픈까지 약 8h — KOSPI 7,848(+0.41% 소폭, 주간 +4.41% 강세 마감)
+  - Chronicle Issues 30일차 지속
   - **Wiki 7개 문서 이미 5/22 데이터로 갱신 완료 (5/23 20:00)**
   - **00-Home.md 5/21→5/22 데이터 정정**: 삼성부광 7,400🟢+3.06%, 에이치엘 15,450🟢+7.59%, 나우로보틱스 26,150🔴-1.69%
   - **거시경제**: KOSPI 7,848🟢+0.41%(주간 +4.41%), KOSDAQ 1,161🟢+4.99%(주간 +4.50%), 환율 1,521🔴+1.07%(1520 돌파), WTI $96.60🔴(주간 -11.10%)
