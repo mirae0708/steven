@@ -872,3 +872,13 @@
 | **System state (04:30 AE)** | WSL 1d 10h 49m up. Mem 3.4Gi/7.6Gi (44%). **Swap 385MiB 🟡** (uptick Nexus restart). Disk 4%. Trinity ALL OK. **Nexus Orchestrator RESTARTED** 04:32 — 2.5d stuck resolved. CB Score: 22/100(Nexus, live) / 55/100(self_heal). 모의투자 ₩4,929,810 HOLD 33일차. |
 | **Market** | KOSPI 7,848 / KOSDAQ 1,161 / USD/KRW 1,511 / WTI $96.60. **D-DAY+1 — 09:00 KST 개장.** |
 | **Key Observations** | (1) 🔴🔴 **Nexus 2.5d stuck → RESOLVED**: PID 1413 was alive but `wait_woken` 2.5d (5/23→5/26). Self_heal `pgrep >= 1` = false negative. Lesson: "alive ≠ working". (2) ✅ **CB Score recovery confirmed**: 10→22/100(Nexus), 55/100(self_heal). (3) 🟡 **Swap 385MiB** — under 500MiB threshold. (4) ✅ **MCP cron stopped** — 27th consecutive LOW SIGNAL. (5) 🟡 **Context 31h+ pending** — 8 candidates. |
+
+## 🧠 Brain Sync — 2026-05-26 08:00 KST
+
+| **Time** | 2026-05-26 08:00 KST |
+|---|---|
+| **Vault stats** | Context/ 11 files (stable), Members/ 1 draft, Agents/ 2 files, 10_Wiki/ ~479 files, wiki/ ~279 files |
+| **New since 07:00 KST** | **None** — only brain_sync_log.md and timestamp refreshed. Git: 3 dirty MarketData files from 07:10 auto-expansion (USD_KRW analysis enhancement, Index refresh, wiki_update_log). |
+| **Context/Members/Agents** | No changes since 5/25 00:42. **8 Context promotion candidates still pending Steven approval (32h+ delayed).** |
+| **System** | WSL 1d14h up. Mem 3.3Gi/7.6Gi (43%). **Swap 361MiB** (↓ from 385MiB at 04:30 — stabilization trend confirmed). Load 1.17. Trinity ALL OK. |
+| **Key Observations** | (1) Swap 361MiB continued downtrend from 436MiB peak — Nexus restart impact absorbed. (2) CB Score recovery from 10→22/100(Nexus) confirmed. (3) Context 32h+ pending — 8 candidates unchanged. (4) No new knowledge to absorb this cycle — all Context docs already re-read. (5) Next: 09:00 KST 개장 — D-DAY+1 실거래일. |

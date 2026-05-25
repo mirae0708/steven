@@ -1,10 +1,12 @@
-🧠 Brain Sync — 2026-05-26 07:00 KST
-Status: MINOR — 8 MCP LOW SIGNAL reports, MarketData refresh, Context 31h+ pending.
-Context 11 files — unchanged (31h+ pending approval for 8 promotion candidates).
-Members 1 draft (Steven/Ideas/) — unchanged. All items already promoted.
+🧠 Brain Sync — 2026-05-26 08:00 KST
+Status: MINOR — No new content in Context/Members/Agents since 07:00 sync.
+Context 11 files — unchanged (32h+ pending approval for 8 promotion candidates).
+Members 1 draft (Steven/Ideas/) — unchanged.
 Agents 2 files — unchanged.
-10_Wiki/ ~479 files — 7 MCP reports (LOW SIGNAL batch), 2 MarketData refreshes.
-Auto-Evolution 04:30 confirms: Nexus RESTARTED (2.5d stuck → resolved). CB Score: 22/100 live / 55/100 dashboard.
-Core lesson: "alive ≠ working" — log freshness check needed for self-diagnosis.
-D-DAY+1 — 5/26 (Tue) 09:00 KST 개장. KOSPI 7,848 / KOSDAQ 1,161 / USD 1,511 / WTI $96.60.
-Chronic Issues: Day 33 — 5건 미해결. Nexus 재시작 완료, Council HOLD 바이어스 지속.
+10_Wiki/ ~479 files — 3 dirty files (USD_KRW analysis enhancement, Index refresh, log update).
+Git working tree: 3 uncommitted MarketData refresh files (routine auto-expansion).
+System: Mem 3.3Gi/7.6Gi (43%), Swap 361MiB (↓ from 385MiB at 04:30), Load 1.17.
+Nexus running post-restart. CB Score recovery ongoing.
+Only change: brain_sync_log.md and timestamp refresh.
+Chronic Issues: 5건 미해결 — same as 07:00 sync.
+

@@ -318,3 +318,89 @@ File unchanged since last read. The content from the earlier read_file result in
 ---
 
 *2026-05-26 00:46 KST — Auto-Evolution (D-DAY+1, Swap 369MiB 🟡, MCP 27×LOW SIGNAL)*
+
+---
+
+## 🧬 Hermes Pre-Open Update — 2026-05-26 (Tue) 08:45 KST (D-DAY+1, Pre-Open T-15m)
+
+### 📋 시스템 현황 — 08:45 KST
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | 1d 15h (5/24 17:40 이후 재부팅 없음) |
+| tmux 세션 | 6개 — all normal (hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign) |
+| Trinity | ✅ 전원 정상 (5/25 20:26 재시작 유지) |
+| Hermes Gateway (port 8642) | ✅ 200 OK |
+| Memory | 3.3Gi / 7.6Gi (43%) |
+| **Swap** | **371MiB 🟡** (08:30 361MiB→08:45 371MiB, 안정적 유지) |
+| Disk | 4% ✅ |
+| Load Avg | 0.30 / 0.30 / 0.39 — 매우 안정 |
+| BattleLoop (Nexus) | ✅ 실행 중 (08:42 사이클 정상 완료, 20+ 사이클 안정) |
+| Self-Evolve | ✅ 정상 (08:45 사이클 완료) |
+| CB Score (Dashboard) | **?/100** 🔴 — self_heal.py 21일 중단 지속 |
+| CB Score (Nexus) | 22/100 추정 — 프로세스 내부 정상 |
+| 모의투자 | ₩4,929,810 (0 포지션, 34일차) |
+
+### 📊 대시보드 데이터 (08:44 KST)
+
+| 항목 | 값 | 분석 |
+|:-----|:---|:------|
+| **KOSPI** | 7,847.71 (5/22 close) | D-DAY+1, 오늘(5/26) 09:00 개장. 전주 +0.41% 마감 후 첫 거래일. |
+| **USD/KRW** | **1,517.23** | 🔴 전일 Brain Sync(1,511) 대비 +6원 상승. 1520선 재돌파 가능성. |
+| **WTI** | **$91.02** | 🔴🔴 전주 마감($96.60) 대비 **-5.8% 추가 하락!** $100선 하회 **6일차**, $90선 위협. |
+| **삼성부광** | 7,400 (5/22 close) | 포트폴리오 -26.29% 심화, RSI 27.0 과매도, 오늘 반등 여부 관건. |
+| **에이치엘** | 15,450 (5/22 close) | 5/22 +7.59% 급반등 후 첫 거래일, RSI 36.5 과매도 개선 테스트. |
+| **나우로보틱스** | 26,150 (5/22 close) | 5/22 KOSDAQ +4.99%에도 유일 하락, 포트폴리오 -14.40%. |
+
+### ⏰ 금일 타임라인 (5/26 KST)
+
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 00:46 | 🧬 Auto-Evolution 스냅샷 (Swap 369MiB 🟡, CB Score 48h 결함) |
+| 02:00 | 🧠 Brain Sync (Context 안정, Freight-Quote link 추가) |
+| 02:30 | 🧬 Auto-Evolution (CB Score 48h 결함 수리: self_heal.py + nexus 대시보드 fallback) |
+| 04:30 | 🧬 Auto-Evolution 6차 (Swap 385→361MiB 하향 안정화, WTI $90.91 발견) |
+| 05:00 | 🧠 Brain Sync (00-Home.md pipe 포맷 수리) |
+| 06:41~06:53 | 📡 MCP 멀티검색 8건 — **35회 연속 LOW SIGNAL** (결정적 타협점 초과) |
+| 07:00 | 🧠 Brain Sync (MarketData refresh, Nexus 재시작 확인) |
+| 08:30 | 🧬 Auto-Evolution 7차 Pre-Open (self_heal 21일 중단 신규 발견, WTI $90.91 위험) |
+| **08:45** | **NOW** → 본 Pre-Open 업데이트 |
+| **09:00** | 🔵 **KOSPI 장 개시** (D-DAY+1) |
+
+### 💡 Pre-Open 핵심 포인트 (08:45)
+
+1. **🔴🔴 WTI $91.02 — 전주 대비 -5.8% 급락 지속, $100 하회 6일차**
+   전주 마감($96.60) 대비 $5.58(-5.8%) 추가 하락. $90선 위협. 글로벌 경기 침체 신호 vs 스태그플레이션 완화 해석 충돌. Council 분석에 WTI 급락 리스크 반영 필요.
+
+2. **🔴 USD/KRW 1,517.23 — 1520선 재돌파 가능성**
+   전일 대비 +6원 상승. WTI 급락에도 원화 약세 지속 — 원자재 수출국 대비 원화 디커플링 심화. 1520선 돌파 시 추가 약세 재료.
+
+3. **🔴 Self_heal.py 21일 중단 — CB Score 대시보드 미기입**
+   08:30 사이클에서 신규 발견. `self_heal.log` 5/5 04:11 이후 갱신 없음. 02:30 사이클에서 CB Score 결함 수리 시도(nexus 내부 fallback) 했으나 dashboard.json의 CB Score는 계속 `?/100`. **대시보드의 자가 진단 데이터는 여전히 missing.**
+
+4. **🟢 Swap 371MiB 안정적 유지 — 18시간 연속 300~385MiB 범위**
+   5/25 11:00 436MiB 피크 이후 18시간 연속 300~385MiB 안정. MetaClaw 재시작(20:26) 후 12시간 경과, 메모리 누수 의심 해소 확정. 다음 재부팅 예상: 5/29~30 (500MiB 도달 시).
+
+5. **🟡 MCP 멀티검색 35회 연속 LOW SIGNAL — 결정적 타협점 초과**
+   5/24~5/26 3일간 35회 연속 LOW SIGNAL = 리소스 100% 낭비. 8개 파일 새벽 배치(06:41~06:53) 모두 Naver 지식iN/쇼핑 노이즈. Google News API + Yahoo Finance 조합 전환 필요.
+
+6. **🟡 모의투자 34일차 정체 — KOSPI 4/27 저점(6,900) 대비 +13.7% 상승에도 현금 보유**
+   CB Score 미복구로 Council 신뢰도 17% 유지 → HOLD 바이어스 고정. 기회비용 13.7% 누적 손실 중. **Nexus 자체 CB Score(22/100)는 DEFENSIVE로 HOLD가 합리적이지만, 대시보드 반영 실패가 전체 시스템 신뢰도 저하의 근본 원인.**
+
+### 🚧 Action Items (오픈 전 체크리스트)
+
+| # | 항목 | 상태 | 비고 |
+|:--|:-----|:-----|:------|
+| 1 | 🔴 CB Score 대시보드 복구 | **21일 지속** | self_heal.py 재가동 + dashboard.json CB Score fallback 경로 수리 |
+| 2 | 🔴 MCP 멀티검색 소스 전환 | **결정 시점** | 35회 LOW SIGNAL → Google News + Yahoo Finance로 전환 |
+| 3 | 🟡 WTI $91 급락 Council 반영 | 미반영 | 배틀루프 Council 분석 시 WTI 급락 리스크 가중치 반영 필요 |
+| 4 | 🟡 Context 승격 8건 대기 | **48h+** | Operations-Guide 우선, Brain Sync 기준 문서 Context 승격 |
+| 5 | 🟡 SkillOpt/QGP PoC | 연구 단계 | skill.md `evolution_strategy` 필드 + 배틀루프 n-step 검증 |
+| 6 | 🟢 Swap 모니터링 | 371MiB 🟡 | 500MiB 도달 시 재부팅, 현재 추세로 5/29~30 예상 |
+
+> **D-DAY+1: 5/26(화) 09:00 KST 오픈까지 T-15m.** KOSPI 7,848에서 시작. WTI $91 급락, USD/KRW 1,517 약세, 삼성부광 -26.29% 포트폴리오 부담.
+
+---
+
+*2026-05-26 08:45 KST — Pre-Open Update (D-DAY+1, Swap 371MiB 🟡, WTI $91 🔴, CB Score ?/100 🔴)*
+|
