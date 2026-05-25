@@ -838,3 +838,26 @@
 - QGP n-step-reasoning evaluation
 - Context promotion: 8 candidates for Steven
 
+
+
+## 🧠 Brain Sync — 2026-05-25 23:02 KST
+
+| **Time** | 2026-05-25 23:02 KST |
+|---|---|
+| **Vault stats** | Context/ 11 files, Members/ 1 draft, Agents/ 2 files, 10_Wiki/ ~471 files, wiki/ ~279 files |
+| **New since 19:00 KST** | 3 MCP 멀티검색 reports (22:41~22:42) — **26th consecutive LOW SIGNAL** (confirmed Naver noise). Auto-Evolution 22:30—all key findings already documented in prior syncs. Evening Wrap 20:46 + Wiki auto-expand 20:46 committed. |
+| **Context/Members/Agents** | No changes since 00:42 creation. 8 promotion candidates still pending Steven approval. |
+| **System** | WSL 1d5h up. Mem 3.3Gi/7.6Gi (43%). **Swap 374MiB** (stabilized: 436MiB→374MiB, -14.2% over 12h downtrend confirmed). Load 0.76. Trinity all OK. |
+| **Market** | KOSPI 7,848, KOSDAQ 1,161, USD/KRW 1,513, WTI $96.60. Cash KRW 4,929,810 HOLD (9d). |
+| **Key Observations** | MCP quality crisis now 26회 연속 — highly degraded source pipeline. CB Score 10/100 frozen due to self_heal.py WTI/FX collection failure (P1, 27h+). Swap 374MiB stable improvement — no reboot needed yet. |
+
+## 🧠 Brain Sync — 2026-05-26 00:02 KST
+
+| **Time** | 2026-05-26 00:02 KST |
+|---|---|
+| **Vault stats** | Context/ 11 files (stable), Members/ 1 draft, Agents/ 2 files, 10_Wiki/ ~477 files, wiki/ ~279 files |
+| **New since 23:02 KST** | 3 more MCP reports (22:41~22:42) — **27th consecutive LOW SIGNAL** (confirmed Naver noise). Auto-Evolution 22:30 already documented all findings. Only changes are 00-Home.md market data refresh (KRW 1,521->1,511, WTI flat) and log updates. |
+| **Context/Members/Agents** | No changes since 00:42 creation on 5/25. 8 promotion candidates still pending Steven approval (~24h delayed). |
+| **System** | WSL 1d6h up. Mem 3.3Gi/7.6Gi (43%). **Swap 371MiB** (stable: 374->371MiB, confirmed stabilization trend). Load 0.49. Trinity ALL OK. |
+| **Market** | KOSPI 7,848, KOSDAQ 1,161, USD/KRW 1,511, WTI $96.60. Cash KRW 4,929,810 HOLD (10d). |
+| **Key Observations** | 1) MCP quality crisis now 27th consecutive (5/24~5/26, day 3). 2) Swap 371MiB stable improvement confirmed - downtrend from 436MiB peak. 3) CB Score 10/100 frozen ~28h due to self_heal.py WTI/FX collection failure (P1 still unresolved). 4) Context promotion: 8 1st-priority candidates pending Steven approval for 24h+. All 11 Context docs re-read and absorbed this cycle. |

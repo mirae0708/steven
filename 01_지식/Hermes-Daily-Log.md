@@ -246,3 +246,75 @@ File unchanged since last read. The content from the earlier read_file result in
 ---
 
 *2026-05-25 20:46 KST — Evening Wrap (D-DAY close, Swap 378MiB 하향 안정화 🟡)*
+
+---
+
+## 🧬 Hermes Auto-Evolution — 2026-05-26 (Tue) 00:46 KST (Post-Market D-DAY+1)
+
+### 📋 시스템 현황 — 00:46 KST (화요일, D-DAY+1)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | 1d 7h (5/24 17:40 이후 재부팅 없음) |
+| tmux 세션 | 6개 — all normal |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 (5/25 20:26 재시작 유지) |
+| Hermes Gateway (port 8642) | ✅ active (health 200) |
+| Memory | 3.3Gi / 7.6Gi (43%) |
+| **Swap** | **369MiB 🟡** (20:46 378MiB→00:46 369MiB, 지속 하향 안정화) |
+| Disk | 4% ✅ |
+| Load Avg | 0.70 / 0.34 / 0.25 — 안정 |
+| Cron Jobs | 9개 등록 |
+| Brain Sync | 5/26 00:02 KST (44min 경과) |
+
+### 📋 지난 12시간 타임라인 (5/25 12:46 → 5/26 00:46)
+
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 5/25 12:46 | 🧬 Midday Update (Swap 434MiB 🚨) |
+| 5/25 14:41 | 📡 MCP 멀티검색 3건 — 19회 연속 LOW SIGNAL |
+| 5/25 15:00 | 🧠 Brain Sync — Swap 385MiB로 안정화 시작 |
+| 5/25 16:30 | 🧬 Auto-Evolution 3차 — 11개 개선 제안 |
+| 5/25 18:50 | 📚 Wiki Auto-Expander (무역수지/배터리/바이오) |
+| 5/25 20:26 | 🔄 Trinity 재시작 (CowAgent/MetaClaw/open-design 재시작 완료) |
+| 5/25 20:46 | 🧬 Evening Wrap (Swap 378MiB 🟡 하향 안정화 확인) |
+| 5/25 22:42 | 🤖 MCP 멀티검색 3건 최종 배치 — **27회 연속 LOW SIGNAL** |
+| 5/25 23:10 | 📊 Wiki 확장기 — 00-Home.md 스냅샷 정리 (환율 1,511, WTI 보합) |
+| 5/26 00:02 | 🧠 Brain Sync (Swap 371MiB, CB Score 10/100 frozen ~28h) |
+| **5/26 00:46** | **NOW** → 본 스냅샷 |
+
+### 📊 Swap 추이 (5/25→5/26)
+
+| 시점 (KST) | Swap 사용량 | 판정 |
+|:-----------|:----------:|:-----|
+| 5/25 08:33 | 35MiB | ⚠️ 재축적 조짐 |
+| 5/25 11:00 | 436MiB | 🚨 급증 (12.5x) |
+| 5/25 12:46 | 434MiB | 🚨 심각 |
+| 5/25 15:00 | 385MiB | 🟡 안정화 시작 |
+| 5/25 16:30 | 385MiB | 🟡 유지 |
+| 5/25 20:46 | **378MiB** | 🟡 하향 추세 |
+| 5/25 23:02 | **374MiB** | 🟡 지속 하향 |
+| 5/26 00:02 | **371MiB** | 🟡 안정적 개선 |
+| **5/26 00:46** | **369MiB** | **🟡 16시간 연속 하향 (436→369MiB, -15.4%)** |
+
+> **분석**: Swap 369MiB — 436MiB 피크 대비 16시간 연속 하향 안정화(-15.4%). MetaClaw 재시작(20:26) 후에도 하향 추세 유지되어 메모리 누수 가설 사실상 기각. **다음 재부팅 예상: 5/29~30 (500MiB 도달 시)** — 현재 탈축적 속도로는 2~3일 추가 안정 가능.
+
+### 💡 핵심 포인트
+
+1. **D-DAY+1 (화요일) — KOSPI 7,848 (5/22 close 기준)**. 오늘(5/26) 장 개시 전. 5/25 휴일효과 소멸. 5/22 KOSPI +0.41%, KOSDAQ +4.99% 급등 이후 첫 거래일. 8,000선 재돌파 관건.
+2. **Swap 369MiB 🟡 안정적 하향 추세** — 12시간 연속 자발적 탈축적. MetaClaw 잔여 누수 의심 해소. 재부팅 시점 완화.
+3. **MCP 멀티검색 Quality Crisis: 27회 연속 LOW SIGNAL** — 5/24~5/26 3일째. 결정 시점 도래. 매일 3회 배치에도 0건 HIGH SIGNAL.
+4. **CB Score 10/100 frozen (28h+)** — self_heal.py WTI/FX 수집 실패로 Priority 1 상태 지속.
+5. **Context 승격 8건 대기 중** — 24h+ 경과. Operations-Guide 우선.
+
+### 🚧 Action Items (누적)
+
+- [ ] 🔴 **CB Score 파이프라인 복구**: self_heal.py WTI/FX 직접 수집 코드 추가 (P1, 28h+)
+- [ ] 🔴 **MCP 멀티검색 Quality 결정**: 27회 연속 LOW SIGNAL → 소스 전환(B+C: Google News + Yahoofinance/Bloomberg)
+- [ ] 🟡 **Context 승격**: 8건 대기 (Operations-Guide 우선, Brain Sync 기준 문서)
+- [ ] 🟡 **SkillOpt (arXiv 2605.23904)**: skill.md `evolution_strategy` 필드 PoC
+- [ ] 🟡 **QGP (arXiv 2605.23574)**: 배틀루프 n-step 검증 도입 연구
+- [ ] 🟢 **Swap 모니터링**: 369MiB 하향 추세, 500MiB 도달 시 재부팅
+
+---
+
+*2026-05-26 00:46 KST — Auto-Evolution (D-DAY+1, Swap 369MiB 🟡, MCP 27×LOW SIGNAL)*

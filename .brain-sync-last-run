@@ -1,9 +1,9 @@
-🧠 Brain Sync — 2026-05-25 22:01 KST
-Status: NO CHANGE — no new commits since 21:00, clean working tree (only git-tracked macro data refresh committed at 20:46)
-Context stable — 8 promotion candidates still pending Steven approval
-CB Score pipeline status unknown (not checked this cycle)
-Swap 374MiB — stabilizing in 370-380 range (down from 436MiB peak)
-No new Members/ drafts detected
-Memory 3.3Gi/7.6Gi (43%), Swap 374MiB, Uptime 28h20m, Load 0.47
-Clean working tree — last commit: 📊 Wiki auto-expand 20:46 (KOSPI/KOSDAQ/환율 refresh)
+🧠 Brain Sync — 2026-05-26 00:02 KST
+Status: LOW SIGNAL — 27th consecutive MCP failure confirmed. Swap 371MiB stable.
+Context stable — 8 promotion candidates still pending Steven approval (24h+).
+CB Score pipeline failure continues (28h). self_heal.py WTI/FX collection still dead.
+Swap 371MiB — stabilized in 370-380 range (confirmed downtrend from 436MiB peak).
+Memory 3.3Gi/7.6Gi (43%), Swap 371MiB, Uptime 1d6h, Load 0.49
+Dirty working tree — 00-Home.md (환율 1,511, WTI 보합), brain_sync_log.md, wiki_update_log.md uncommitted
 No Activity Since Last Sync — D-DAY hours, next trading at 09:00 KST Tue
+
