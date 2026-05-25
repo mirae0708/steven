@@ -1,10 +1,10 @@
-🧠 Brain Sync — 2026-05-26 06:00 KST
-Status: NO_CHANGE — All files stable since 05:00 sync.
-Context 11 files — unchanged (32h+ pending approval for 7 promotion candidates).
-Members 1 draft (Steven/Ideas/) — unchanged. All 5 items already promoted.
+🧠 Brain Sync — 2026-05-26 07:00 KST
+Status: MINOR — 8 MCP LOW SIGNAL reports, MarketData refresh, Context 31h+ pending.
+Context 11 files — unchanged (31h+ pending approval for 8 promotion candidates).
+Members 1 draft (Steven/Ideas/) — unchanged. All items already promoted.
 Agents 2 files — unchanged.
-10_Wiki/ ~479 files — no new files since 05:00.
-Auto-Evolution 04:30 report confirms: Nexus Orchesrator RESTARTED (PID 1413 → tmux 재시작). CB Score: 10/100(stuck) → 22/100(실시간). 2.5일 정체 해소. 핵심 발견: "살아있음 ≠ 작동 중" — self_heal.py는 pgrep>=1만 확인, 로그 갱신 확인 안 해서 2.5일간 미발견.
-Swap 385MiB (Nexus 재시작 영향 소폭 상승). Memory 3.4Gi/7.6Gi (44%). Uptime 1d 10h 49m.
-D-DAY+1 — 5/26 (Tue) 09:00 KST 개장. KOSPI 7,848 / KOSDAQ 1,161 / USD 1,512 / WTI $96.60 (5/22 close).
-Chronic Issues: Day 32 — 5건 미해결. Nexus 재시작 완료되었으나 Council HOLD 바이어스 지속.
+10_Wiki/ ~479 files — 7 MCP reports (LOW SIGNAL batch), 2 MarketData refreshes.
+Auto-Evolution 04:30 confirms: Nexus RESTARTED (2.5d stuck → resolved). CB Score: 22/100 live / 55/100 dashboard.
+Core lesson: "alive ≠ working" — log freshness check needed for self-diagnosis.
+D-DAY+1 — 5/26 (Tue) 09:00 KST 개장. KOSPI 7,848 / KOSDAQ 1,161 / USD 1,511 / WTI $96.60.
+Chronic Issues: Day 33 — 5건 미해결. Nexus 재시작 완료, Council HOLD 바이어스 지속.

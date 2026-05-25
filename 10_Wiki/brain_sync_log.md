@@ -861,3 +861,14 @@
 | **System** | WSL 1d6h up. Mem 3.3Gi/7.6Gi (43%). **Swap 371MiB** (stable: 374->371MiB, confirmed stabilization trend). Load 0.49. Trinity ALL OK. |
 | **Market** | KOSPI 7,848, KOSDAQ 1,161, USD/KRW 1,511, WTI $96.60. Cash KRW 4,929,810 HOLD (10d). |
 | **Key Observations** | 1) MCP quality crisis now 27th consecutive (5/24~5/26, day 3). 2) Swap 371MiB stable improvement confirmed - downtrend from 436MiB peak. 3) CB Score 10/100 frozen ~28h due to self_heal.py WTI/FX collection failure (P1 still unresolved). 4) Context promotion: 8 1st-priority candidates pending Steven approval for 24h+. All 11 Context docs re-read and absorbed this cycle. |
+## 🧠 Brain Sync — 2026-05-26 07:00 KST
+
+| **Time** | 2026-05-26 07:00 KST |
+|---|---|
+| **Vault stats** | Context/ 11 files, Members/ 1 draft, Agents/ 2 files, 10_Wiki/ ~479 files, wiki/ ~279 files |
+| **New since 06:00 KST** | 7 MCP 멀티검색 reports (06:41~06:53 batch) — **27회 연속 LOW SIGNAL** (Naver noise). Topics: AI/MCP, ocean freight, KOSPI credit risk, HBM/semiconductors, US-China tariffs/SpaceX, stock outlook, Trump tariff Korea. No technical/architectural innovations. |
+| **MarketData** | 10_Wiki/MarketData/ refreshed: 459510_IndustrialMachinery.md + _Index.md. KOSPI 7,848 (+45.17%🔥), KOSDAQ 1,161 (+5.86%), USD/KRW 1,511 (+0.90%), WTI $96.60 (+4.60%). |
+| **Context/Members/Agents** | No changes since 5/25 00:42. **8 Context promotion candidates still pending Steven approval (31h+ delayed).** |
+| **System state (04:30 AE)** | WSL 1d 10h 49m up. Mem 3.4Gi/7.6Gi (44%). **Swap 385MiB 🟡** (uptick Nexus restart). Disk 4%. Trinity ALL OK. **Nexus Orchestrator RESTARTED** 04:32 — 2.5d stuck resolved. CB Score: 22/100(Nexus, live) / 55/100(self_heal). 모의투자 ₩4,929,810 HOLD 33일차. |
+| **Market** | KOSPI 7,848 / KOSDAQ 1,161 / USD/KRW 1,511 / WTI $96.60. **D-DAY+1 — 09:00 KST 개장.** |
+| **Key Observations** | (1) 🔴🔴 **Nexus 2.5d stuck → RESOLVED**: PID 1413 was alive but `wait_woken` 2.5d (5/23→5/26). Self_heal `pgrep >= 1` = false negative. Lesson: "alive ≠ working". (2) ✅ **CB Score recovery confirmed**: 10→22/100(Nexus), 55/100(self_heal). (3) 🟡 **Swap 385MiB** — under 500MiB threshold. (4) ✅ **MCP cron stopped** — 27th consecutive LOW SIGNAL. (5) 🟡 **Context 31h+ pending** — 8 candidates. |
