@@ -29,22 +29,22 @@
 - [[03_경제/05_시장현황_20260518|📊 시장현황 2026-05-18]] ⭐
 - [[03_경제/Trading-Strategies|📊 트레이딩 전략]]
 - [[03_경제/Operations-Guide|⚙️ 운영 가이드]]
-||- [[01-Projects/Freight-Quote-System|🚢 Freight Quote — 견적 시스템]]
-|- [[01-Projects/Invoice-Auto-System|📋 미래해운항공 물류 자동화]]
-||- [[04_프로젝트/Invoice-Auto-Workflow|🔄 인보이스 워크플로우]]
-||- [[04_프로젝트/Invoice-AI-Prompt|🤖 AI 추출 프롬프트]]
-||- [[01-Projects/Invoice-Auto-Status|📋 인보이스 자동화 현황→]]
-||- [[01-Projects/CLP-Auto-System|📦 CLP 자동화 시스템 v28]]
-||- [[04_프로젝트/CLP-Auto-Workflow|🔗 CLP 워크플로우]]
-||- [[01-Projects/Project-Alpha]]
-||- [[03-Meetings/Weekly Sync 2026-04]]
-||- [[01_지식/Tech Stack]]
+- [[01-Projects/Freight-Quote-System|🚢 Freight Quote — 견적 시스템]]
+- [[01-Projects/Invoice-Auto-System|📋 미래해운항공 물류 자동화]]
+- [[04_프로젝트/Invoice-Auto-Workflow|🔄 인보이스 워크플로우]]
+- [[04_프로젝트/Invoice-AI-Prompt|🤖 AI 추출 프롬프트]]
+- [[01-Projects/Invoice-Auto-Status|📋 인보이스 자동화 현황→]]
+- [[01-Projects/CLP-Auto-System|📦 CLP 자동화 시스템 v28]]
+- [[04_프로젝트/CLP-Auto-Workflow|🔗 CLP 워크플로우]]
+- [[01-Projects/Project-Alpha]]
+- [[03-Meetings/Weekly Sync 2026-04]]
+- [[01_지식/Tech Stack]]
 
 ## 📊 LLM Wiki 주식 분석 시스템
 ### 📈 종목
-||||||- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **7,400원** 🟢 **+3.06%** (5/22 확정, RSI 27.0 과매도 심화, BB% 19.3% 하단 근접, 포트폴리오 -26.29%)
-||||||||- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **15,450원** 🟢 **+7.59%** (5/22 확정, RSI 36.5 과매도 개선, BB% 16.7% 하단 회복)
-||||||- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **26,150원** 🔴 **-1.69%** (5/22 확정, RSI 50.2→37.2 급락, KOSDAQ +4.99%에도 유일 하락, 포트폴리오 -14.40%)
+- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **7,400원** 🟢 **+3.06%** (5/22 확정, RSI 27.0 과매도 심화, BB% 19.3% 하단 근접, 포트폴리오 -26.29%)
+- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **15,450원** 🟢 **+7.59%** (5/22 확정, RSI 36.5 과매도 개선, BB% 16.7% 하단 회복)
+- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **26,150원** 🔴 **-1.69%** (5/22 확정, RSI 50.2→37.2 급락, KOSDAQ +4.99%에도 유일 하락, 포트폴리오 -14.40%)
 
 ### 🧠 최근 Brain Sync (18:00)
 - [[10_Wiki/Artificial_Intelligence/AI_Agents/ATLAS-Agentic-or-Latent-Visual-Reasoning-One-Word-is-Enoug_20260517_1800|ATLAS: Agentic Visual Reasoning]]
@@ -59,10 +59,10 @@
 - [[wiki/sectors/로보틱스|🤖 로보틱스]]
 
 ### 💵 거시경제
-||||||- [[wiki/macros/KOSPI|📊 KOSPI (7,848)]] 🟢 **+0.41% 소폭 상승** (RSI 69.5 강세, BB% 78.9% 상단 근접, 주간 +4.41% 강세 마감)
-||||||- [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,161)]] 🟢 **+4.99% 급등!** (RSI 42.7→45.3 개선, BB% 14.9%→43.7% 대폭 개선, 주간 +4.50%)
-|||||||- [[wiki/macros/환율|💵 환율 (1,511원)]] 🟡 **+0.43% 소폭 상승** (5/25, RSI 63.4 강세, BB% 90.5% 상단 내 회귀, 1520 Open→1510 Close — 원화 소폭 강세)
-|||||||- [[wiki/macros/국제유가WTI|🛢️ WTI ($96.60)]] 🟡 **±0.00% 보합** (RSI 42.2 약세~중립, $100선 하회 5일째 지속, 주간 -11.10% 폭락)
+- [[wiki/macros/KOSPI|📊 KOSPI (7,848)]] 🟢 **+0.41% 소폭 상승** (RSI 69.5 강세, BB% 78.9% 상단 근접, 주간 +4.41% 강세 마감)
+- [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,161)]] 🟢 **+4.99% 급등!** (RSI 42.7→45.3 개선, BB% 14.9%→43.7% 대폭 개선, 주간 +4.50%)
+- [[wiki/macros/환율|💵 환율 (1,511원)]] 🟡 **+0.43% 소폭 상승** (5/25, RSI 63.4 강세, BB% 90.5% 상단 내 회귀, 1520 Open→1510 Close — 원화 소폭 강세)
+- [[wiki/macros/국제유가WTI|🛢️ WTI ($96.60)]] 🟡 **±0.00% 보합** (RSI 42.2 약세~중립, $100선 하회 5일째 지속, 주간 -11.10% 폭락)
 
 ### 🧠 시스템
 - [[99_System/GEMINI.md|🧠 시스템 스키마 (GEMINI.md)]]
