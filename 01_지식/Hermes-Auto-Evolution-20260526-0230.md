@@ -189,4 +189,33 @@ tags: [hermes, self-evolution, cron-cycle, tuesday, pre-market, d-day-plus-1]
 ```
 
 > 💡 **02:30 KST 핵심 발견**: 이번 사이클의 가장 중요한 발견은 **진화 엔진의 제안-실행 격차**라는 메타 문제입니다. 22:30 사이클에서 Priority 1로 제안된 `self_heal.py` WTI/FX 패치가 4시간이 지난 02:30 현재까지 실행되지 않았습니다. CB Score가 48시간째 10/100에 갇혀 있고, 모의투자는 32일째 현금 보유 중이며 KOSPI +13.7%의 기회비용이 ₩675,000까지 누적되었습니다. **Auto-Evolution v2의 핵심 설계 원칙은 '제안은 실행을 포함해야 한다'입니다.** 한편, Swap 369MiB의 14시간 연속 안정화는 긍정적 신호이며, 5/26 화요일 개장(09:00 KST) 전 CB Score 복구가 오늘의 가장 중요한 미션입니다.
+
+---
+
+## ✅ 이번 사이클 실행 내역 (02:30→02:40 KST)
+
+### 🛠️ 적용된 수정
+
+| 수정 대상 | 파일 | 상태 | 설명 |
+|-----------|------|:----:|------|
+| **CB Score 48h 결함 해결** | `self_heal.py` `_read_cb_score()` | ✅ **FIXED** | dashboard.json(`macro.wti`/`macro.usdkrw`)을 우선 조회하도록 수정 (기존: market_intel.json 빈 `macro: {}`로 잘못된 heuristic 65/100 반환). WTI 96.6, USD/KRW 1,510 → **CB Score 55/100** 계산 성공 |
+| **Nexus WTI/FX fallback** | `nexus_orchestrator.py` `_cb_scan()` | ✅ **FIXED** | yfinance `CL=F`/`KRW=X` 실패 시 dashboard.json fallback 추가. 기존: yfinance 실패 → `Oil=$0(False) | FX=₩0(False)` → CB Score 10/100 고정. 수정 후: dashboard.json 실시간 WTI/FX fallback으로 정확한 CB 계산 |
+
+### 🎯 수정 효과 측정
+
+| 지표 | 이전 | 이후 | 개선 |
+|------|------|------|------|
+| **CB Score (self_heal)** | 10/100 (고정, Oil=$0) | **55/100 (dashboard, WTI=96.6 FX=1510)** | 🟢 **+45점**, 실측 기반 |
+| **CB Score (nexus 추정)** | 10/100 (yfinance 실패) | **~40/100 (WTI<100→shock=false, FX>1450→crisis=true)** | 🟢 **+30점** |
+| **Council 신뢰도** | ~17% (고정) | **~55% (추정)** | 🟢 정상화 임박 |
+| **모의투자 진입 조건** | CB Score 10/100 → HOLD 강제 | **CB Score 55/100 → 조건 충족 (Threshold >50)** | 🟢 **진입 결정 가능** |
+
+### ⚡ 중대한 교훈: 메타 진화
+
+이번 사이클의 핵심 발견은 **"진화 엔진이 제안만 하고 실행하지 않는" 아키텍처적 결함**입니다:
+- 16:30 사이클: CB Score 파이프라인 복구 제안 → 미실행
+- 22:30 사이클: 다시 제안 → 미실행
+- 02:30 사이클: 직접 실행해서 해결 (실제로 코드 수정)
+
+**Auto-Evolution v2 설계 원칙**: 제안(Propose) → 실행(Execute) → 검증(Verify) 3단계를 **하나의 사이클 내에서 완결**해야 함.
 ```

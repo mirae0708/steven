@@ -29,7 +29,8 @@
 - [[03_경제/05_시장현황_20260518|📊 시장현황 2026-05-18]] ⭐
 - [[03_경제/Trading-Strategies|📊 트레이딩 전략]]
 - [[03_경제/Operations-Guide|⚙️ 운영 가이드]]
-||- [[01-Projects/Invoice-Auto-System|📋 미래해운항공 물류 자동화]]
+||- [[01-Projects/Freight-Quote-System|🚢 Freight Quote — 견적 시스템]]
+|- [[01-Projects/Invoice-Auto-System|📋 미래해운항공 물류 자동화]]
 ||- [[04_프로젝트/Invoice-Auto-Workflow|🔄 인보이스 워크플로우]]
 ||- [[04_프로젝트/Invoice-AI-Prompt|🤖 AI 추출 프롬프트]]
 ||- [[01-Projects/Invoice-Auto-Status|📋 인보이스 자동화 현황→]]

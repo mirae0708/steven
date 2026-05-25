@@ -44,6 +44,12 @@
 
 ---
 
+## 개별 종목 상세
+
+- [[459510_IndustrialMachinery|459510 나우로보틱스 (KOSDAQ)]]
+- [[473980_SpecialtyBusinessServices|473980 에이치엘사이언스 (KOSDAQ)]]
+- [[014950_Biotechnology|014950 삼성부광 (KOSDAQ)]]
+
 ## Raw 데이터 위치
-- `00_Raw/MarketData/` — yfinance JSON raw 데이터 (15개 파일)
-- `10_Wiki/MarketData/` — 가공된 위키 페이지 (4개: KOSPI, KOSDAQ, USD_KRW, WTI)
+- `00_Raw/MarketData/` — yfinance JSON raw 데이터 (10개 파일)
+- `10_Wiki/MarketData/` — 가공된 위키 페이지 (7개: KOSPI, KOSDAQ, USD_KRW, WTI, 459510, 473980, 014950)
