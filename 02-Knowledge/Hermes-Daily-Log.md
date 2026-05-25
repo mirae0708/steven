@@ -2600,3 +2600,25 @@
 - 🟡 WTI $98.62 $100선 하회 급락 — 글로벌 경기 침체 리스크 시그널
 - 🟡 USD/KRW 1,508 — BB 상단 근접, 원화 약세 지속 시 수입물가 상승 압력
 - ✅ WSL 1d17h 안정, Swap 0B, 메모리 39% — 시스템 최상 상태
+
+### 🔍 Tech Scavenger 리포트 — 2026-05-25 14:21 KST
+
+**오늘 수집된 신규 문서: 17개**
+
+| 시간 | 수량 | 비고 |
+|:---:|:----:|:----|
+| 11:20 | 6개 | arXiv — Agentic Proving, Push Your Agent 등 |
+| 12:20 | 11개 | arXiv — PhotoFlow, CHRONOS, LLMs as Noisy Channels 등 |
+
+**하이라이트:**
+- 🤖 **Agentic Proving for Program Verification** — LLM이 프로그램 증명 자동화
+- ⏱️ **CHRONOS** — 시간 인식 멀티에이전트 조정 (진화하는 환경 대응)
+- 📸 **PhotoFlow** — 에이전트 기반 3D 가상 사진술
+- 🔧 **SkillOpt** — 자기 진화 에이전트 스킬 최적화 전략
+- 🎯 **Push Your Agent** — LLM 에이전트의 정량적 목표 달성 측정
+- 📡 **LLMs as Noisy Channels** — Shannon 정보이론 관점 LLM 용량
+
+**상태:**
+- GitHub Trending: 14/15회 성공 (93%), 1회 Network Unreachable
+- arXiv: 8회 오류 (429/timeout 혼합) — cs.CL/SE/DC/MA/RO 취약
+- 캐시: 305개 URL — 대부분 중복 필터링 정상 동작
