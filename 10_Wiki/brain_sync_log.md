@@ -752,3 +752,55 @@
 - [ ] 🔬 Push Your Agent (QGP) → n-step-reasoning skill evaluation.
 - [ ] 🔬 SkillOpt skill-as-optimizer paradigm → FORGE memory PoC integration.
 - [ ] 📝 Context 승격: 8건 대기 (Operations-Guide 우선).
+
+
+## 🧠 Brain Sync — 2026-05-25 15:00 KST
+
+| **Time** | 2026-05-25 15:00 KST |
+|---|---|
+| **Vault stats** | Context/ 11 files, Members/ 1 draft, Agents/ 2 files, 10_Wiki/ ~468 files |
+| **New since 13:04 KST** | **3 MCP 멀티검색 reports (14:41 batch)** — ALL LOW SIGNAL (19th consecutive):<br>1. K-컬처 K팝 K푸드 K뷰티 글로벌 시장 트렌드 — LOW (Naver noise/ads)<br>2. 글로벌 AI 규제법 EU AI Act 한국 디지털플랫폼정부 — LOW (truncated/empty)<br>3. AI 에이전트 MCP 프로토콜 오픈소스 트렌드 — LOW (mostly ads)<br>**No new arXiv papers.**<br>**Working tree clean** — all 18+ commits today, no unstaged changes. |
+| **Market** | KOSPI 7,847.71 (5/22 close), USD/KRW 1,510.83, WTI $96.60. Cash KRW 4,929,810 HOLD (7d). D-DAY session ended. |
+| **System** | WSL 21h20m, Mem 3.3Gi/7.6Gi (43%), **Swap 385MiB (improving: 436-434-385)** , Load 0.64. Trinity all OK. |
+| **Context/ Members/** | Stable — no new changes. No new draft ideas. |
+
+### Knowledge Absorption
+- 🟢 **Swap 385MiB improving** — down from 434MiB at 13:04 (11% improvement in 2h). Still above 300MiB threshold but trend is positive.
+- 🟢 **All files committed** — clean working tree, no pending sync.
+- 🟡 **MCP quality crisis: 19th consecutive LOW SIGNAL** — needs alternative sourcing strategy.
+- 🟡 **8 Context promotion candidates pending** (Operations-Guide first, no progress since 13:04).
+
+### Action Items
+- [ ] 🔴 **WSL reboot review** — Swap 385MiB still above 300MiB threshold. Improving but not resolved.
+- [ ] 🔬 Push Your Agent (QGP) → n-step-reasoning skill evaluation (carried over).
+- [ ] 🔬 SkillOpt skill-as-optimizer paradigm → FORGE memory PoC (carried over).
+- [ ] 📝 Context promotion: 8 candidates waiting for Steven approval.
+
+## 🧠 Brain Sync — 2026-05-25 16:00 KST
+
+| **Time** | 2026-05-25 16:00 KST |
+|---|---|
+| **Vault stats** | Context/ 11 files, Members/ 1 draft, Agents/ 2 files — unchanged |
+| **New since 15:00 KST** | **No new files.** No new git commits. No new MCP reports. No new arXiv papers. Brain tracking files only (`.brain-sync-last-run`, `brain_sync_log.md`). |
+| **System** | WSL 22h21m, Mem 3.3Gi/7.6Gi (43%), **Swap 385MiB (unchanged since 15:00, flat 4h now)**, Load 0.47 → 1.11 (afternoon load increase). Trinity all OK. |
+| **Context/Members/Agents** | Stable — no changes since the 00:42 KST creation batch. No new draft ideas. |
+| **Context promotion** | 8 candidates still pending Steven approval — no progress since initial proposal. |
+
+### Knowledge Absorption
+- 🟢 **Swap 385MiB flat** — no increase in 4h (was 385MiB at 15:00). Still above 300MiB threshold but stable trend is positive.
+- 🟢 **All files committed** — clean working tree.
+- 🟡 **MCP quality crisis: 19th consecutive LOW SIGNAL** — unchanged from 15:00 assessment.
+- 🟡 **8 Context promotion candidates still pending** (same as 13:04/15:00 — no progress).
+- 🟡 **No new arXiv/GitHub content** since the 14:41 MCP batch.
+
+### Memory Notes
+- **Swap 재축적 패턴 진단**: 4일차 급가속 패턴 확인됨. 5/24 00:45 재부팅 후 385MiB까지 도달했으나 안정화 구간 진입. 4일차 임계 도달 전(3일 이내) 선제 재부팅 권장 유지.
+- **Agents/Hermes/ 2개 문서** (역할과-책임, Claude-Code-명령패턴) — 5/23 생성, Context 시스템의 Agents 레이어 일부로 승인 완료. 지식 흡수 완료.
+- **Context_승격_제안서** — 17개 후보 중 8개 🥇 우선순위 대기. Operations-Guide 우선 권장.
+
+### Action Items (carried forward)
+- [ ] 🔴 **WSL reboot review** — Swap 385MiB above 300MiB threshold. Stable but not resolved.
+- [ ] 🔬 Push Your Agent (QGP) → n-step-reasoning skill evaluation.
+- [ ] 🔬 SkillOpt skill-as-optimizer paradigm → FORGE memory PoC integration.
+- [ ] 📝 Context promotion: 8 candidates waiting for Steven approval.
+
