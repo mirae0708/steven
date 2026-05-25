@@ -1,34 +1,40 @@
 {
-  "last_sync": "2026-05-21 17:00 KST (Brain Sync Cron)",
-  "files_processed": 608,
+  "last_sync": "2026-05-25 11:00 KST (Brain Sync Cron)",
+  "files_processed": 610,
   "new_content_since_last_sync": [
-    "10_Wiki/MCP-멀티검색-20260521_144049.md (코스닥 바이오/2차전지 테마주 동향)",
-    "10_Wiki/MCP-멀티검색-20260521_144139.md (글로벌 빅테크 실적 AI 투자 트렌드)",
-    "10_Wiki/MCP-멀티검색-20260521_144225.md (한국 부동산 시장 금리 전망)",
-    "10_Wiki/Macros/KOSPI.md (5/21 close: 7,687.63 +6.64%)",
-    "10_Wiki/Macros/KOSDAQ.md (5/21 close: 1,106.78 +4.80%)",
-    "10_Wiki/Macros/환율.md (5/21 close: 1,501.79원)",
-    "10_Wiki/Macros/국제유가WTI.md (5/20 close: $98.62)",
-    "wiki/sectors/로보틱스.md, 코스닥중소형.md, 헬스케어.md (sector wiki expansion)",
-    "wiki/stocks/나우로보틱스.md (+5.74%), 삼성부광.md, 에이치엘사이언스.md (stock wiki expansion)"
+    "01_지식/Hermes-Auto-Evolution-20260525-0830.md — 7일간 누적 142건 신규 문서 분석, Pre-Market (Mon week re-opening)",
+    "02-Knowledge/Swap-재축적-패턴-진단.md — Swap 재축적 진단 문서 신규 생성",
+    "02_문화/Shopee-동남아-종합전략-리포트-2026.md, Shopee-입점-전략, Lazada-vs-Shopee 비교 등 12개 Culture-Econ 인텔리전스 신규",
+    "10_Wiki/MCP-멀티검색-20260525_1041{16,47,217}.md — 3건 LOW SIGNAL (Naver noise 지속)",
+    "10_Wiki/Macros/KOSPI.md, KOSDAQ.md, 환율.md, WTI.md — 5/22 close + 5/25 intraday 업데이트"
   ],
   "system_status": {
-    "wsl_uptime_hours": 46,
-    "memory_percent": 45,
-    "swap_mib": 0.0,
-    "skills_count": 197,
-    "issues_day": 27,
-    "chronic_issues": ["yfinance .KS NaN (27일차)", "KiwoomAuth 8050 (27일차)", "Dashboard stale (27일차)", "MCP Python Zombie (27일차)"],
-    "dns_outage_recovery": true
+    "wsl_uptime_hours": 17,
+    "memory_percent": 42,
+    "swap_mib": 436,
+    "last_known_swap_mib": 35,
+    "swap_alert": "SWAP 436MiB — 08:33 대비 12.5배 급증, 300MiB 위험 임계 초과. 재부팅 시점 도래",
+    "skills_count": 205,
+    "issues_day": 31,
+    "chronic_issues": [
+      "yfinance .KS NaN (31일차)",
+      "KiwoomAuth 8050 (31일차)",
+      "Tavily 만료 (31일차)",
+      "Dashboard stale (19일차)",
+      "MCP Python CancelledError (31일차)",
+      "Swap 재축적 🚨 — 436MiB (08:33 35MiB→11:00 436MiB, 12.5x)"
+    ],
+    "context_system": "4계층(Context/Company/Product/TechStack/Agents) 구축 완료 (5/25 00:27)"
   },
-  "market_state": "5/21 EOD: KOSPI 7,687.63 (+6.64%), KOSDAQ 1,106.78 (+4.80%), USD/KRW 1,501.79 (-0.40%), WTI $98.62 (5/20 close). 대형주 중심 급반등 — KOSPI 7,500대 수성 후 7,687로 마감, Swap 사용량 0B 2일차",
+  "market_state": "5/22(금) confirmed close: KOSPI 7,847.71(+0.41%, 주간 +4.41%), KOSDAQ 1,161, USD/KRW 1,510.83 (5/25 intraday, -0.64%, 1510선 회귀), WTI $96.60. KOSPI 8,000 재돌파 관건 / USD 1,500선 확정 안착 / WTI $100 하회 스태그플레이션 완화",
   "key_events_today": [
-    "KOSPI +6.64% 급반등 — 5/15 사이드카 급락 이후 4거래일 만에 7,687 회복",
-    "Swap 0B 2일차 지속 — 메모리 누수 완전 해소 확인",
-    "Tech Scavenger 21건 신규 저장 (10:20~12:20, DNS 장애 극복)",
-    "MCP 멀티검색 9건 실행 + 3건 Wiki 저장 (14:40~14:42)",
-    "DNS 장애 08:20~09:20 → 10:20 자동 복구",
-    "MCP quality crisis 지속 — Naver noise + recycled content"
+    "Context 4계층 시스템 구축 완료 — 7개 파일 +553 lines",
+    "KOSPI 7,848 — 5/18 저점 7,493→7,848 (+4.7%) 반등 성공, 8,000선 관건",
+    "USD/KRW 1,510.83 (intraday, -0.64% 원화 소폭 강세)",
+    "WTI $96.60 — $100 하회 3일째, 스태그플레이션 리스크 완화",
+    "Swap 780KiB(5/24)→35MiB(08:33)→436MiB(11:00) — 12.5x 급증, 300MiB 임계 초과",
+    "MCP 멀티검색 품질: 3건 모두 LOW SIGNAL Naver noise — 15+회 연속",
+    "52개 Culture-Econ 인텔리전스 파일 스캔 완료 (02_문화/) — Shopee/Lazada 동남아 분석"
   ],
-  "next_critical": "5/22 금요일 pre-market: KOSPI 7,700선 안착 여부 / USD/KRW 1,500 방향성 / 주말 리스크 관리"
+  "next_critical": "Swap 436MiB 지속 상승 — WSL 재부팅 권장 (300MiB 임계 초과). Context 승격 8건 대기 중 (Operations-Guide 우선). FORGE 메모리 PoC 이번주 목표."
 }
