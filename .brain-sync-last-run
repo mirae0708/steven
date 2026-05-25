@@ -1,5 +1,12 @@
-🧠 Brain Sync — 2026-05-25 11:00 KST
-Status: Complete — 3 new MCP reports (2h batch), 52 Culture-Econ files, Macros updated
-Swap 436MiB 🚨 (08:33→11:00: 35MiB→436MiB, 12.5x, 300MiB 임계 초과)
-Memory 3.2Gi/7.6Gi (42%), Uptime 17h 20m
-Context 4계층 안정. Chronic issues 31일차. MCP quality crisis 지속.
+🧠 Brain Sync — 2026-05-25 12:00 KST
+Status: Complete — 6 new arXiv papers (1120 batch), KOSPI/환율/WTI 갱신, Swap 436MiB 🚨
+Memory 3.2Gi/7.6Gi (42%), Uptime 18h 20m
+Context 4계층 안정. Chronic issues 31일차. MCP quality crisis 17회 연속.
+
+⚠️ New papers (6): Agentic Proving for Program Verification, Misleading JVM Microbenchmarks,
+  Enhancing Energy Efficiency via PIVAEs, Learned Indexing in RocksDB,
+  Push Your Agent (QGP benchmark for long-horizon LLM agents), SDNator for CPS
+⚠️ Key insight: Push Your Agent paper's QGP (Quantitative Goal Persistence) problem
+  directly relevant to Hermes long-horizon task completion validation.
+⚠️ Swap 436MiB still at 11:00 level — no improvement, needs monitoring.
+⚠️ No new Members/ drafts or Context promotion candidates detected.

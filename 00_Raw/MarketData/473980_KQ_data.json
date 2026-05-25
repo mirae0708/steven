@@ -6,13 +6,13 @@
   "open": 14330.0,
   "dayLow": 14330.0,
   "dayHigh": 15680.0,
-  "volume": 71099,
-  "averageVolume": 85267,
+  "volume": 71534,
+  "averageVolume": 82023,
   "fiftyTwoWeekLow": 14300.0,
   "fiftyTwoWeekHigh": 38000.0,
   "dividendYield": null,
-  "debtToEquity": 0.894,
-  "returnOnEquity": 0.15642,
-  "profitMargins": 0.19607,
-  "fetched_at": "2026-05-23 11:04:59.260587+00:00"
+  "debtToEquity": 0.762,
+  "returnOnEquity": 0.14173001,
+  "profitMargins": 0.18827999,
+  "fetched_at": "2026-05-25 01:11:20.915705+00:00"
 }

@@ -703,3 +703,26 @@
   - Chronic issues 31일차 — 전반적 미해결
 - **Quality Assessment**: 3 MCP reports 모두 LOW SIGNAL. 52개 Culture-Econ 파일은 높은 비즈니스 가치 (동남아 물류 연계). Context 4계층 안정화. Swap 436MiB가 최대 리스크.
 - **Next**: Next scheduled brain sync
+
+
+## 🧠 Brain Sync — 2026-05-25 12:00 KST
+
+| **Time** | 2026-05-25 12:00 KST |
+|---|---|
+| **Vault stats** | Context/ 11 files, Members/ 1 draft, Agents/ 2 files, 10_Wiki/ ~430+ papers+reports, wiki/ ~277 files |
+| **New since 11:00 KST** | **6 arXiv papers (1120 batch)** — all from arXiv 2026-05-22, not yet committed:<br>1. **Agentic Proving for Program Verification** — Claude Code on CLEVER Lean 4 benchmark. Moderate signal.<br>2. **Misleading Microbenchmarks on the JVM** — JMH pitfalls. Low relevance.<br>3. **Enhancing Energy Efficiency in Scientific Workflows via CFD-based PIVAEs** — HPC scheduling. Low relevance.<br>4. **A Pragmatic Approach to Learned Indexing in RocksDB** — Learned indexes. Low relevance.<br>5. **⭐ Push Your Agent: Measuring and Enforcing QGP** — **HIGH SIGNAL**: QGP benchmark reveals agents lack quantitative goal persistence. Directly relevant to Hermes multi-step validation.<br>6. **SDNator is Not Another SDN Controller** — CPS SDN. Low relevance.<br>**3 MCP 멀티검색 reports (10:41~10:42)** — ALL LOW SIGNAL (17th consecutive) |
+| **Market** (5/22 close + 5/25 intraday): KOSPI 7,847.71 (+0.41%), KOSDAQ 1,161.13 (+4.99%), USD/KRW 1,510.83 (-0.64%), WTI $96.60 (+0.26%). Cash ₩4,929,810 HOLD (7d). |
+| **System**: WSL 18h20m, Mem 3.2Gi/7.6Gi (42%), **Swap 436MiB 🚨** (악화 없으나 해소 없음), Load 0.46. Trinity all ✅. |
+| **Context/ Members/** | Stable — no new changes. No new draft ideas. |
+
+### Knowledge Absorption
+- ⭐ **Push Your Agent (arXiv 2605.23574)** — HIGH SIGNAL: QGP problem directly maps to Hermes long-horizon task completion validation.
+- 🟢 **Swap 436MiB stable** — same as 11:00, no worsening but no improvement.
+- 🟡 **6 new papers all uncommitted** (24 unstaged files total).
+- 🔴 **MCP quality crisis: 17회 연속** — needs source diversification.
+
+### Action Items
+- [ ] 6 papers + 3 MCP reports Git commit & push
+- [ ] Swap 436MiB monitoring — WSL reboot if >500MiB
+- [ ] Push Your Agent (QGP) paper → n-step-reasoning skill evaluation
+- [ ] MCP multi-search quality fix investigation
