@@ -804,3 +804,37 @@
 - [ ] 🔬 SkillOpt skill-as-optimizer paradigm → FORGE memory PoC integration.
 - [ ] 📝 Context promotion: 8 candidates waiting for Steven approval.
 
+
+
+## 🧠 Brain Sync — 2026-05-25 19:00 KST
+
+| **Time** | 2026-05-25 19:00 KST |
+|---|---|
+| **Vault stats** | Context/ 11 files, Members/ 1 draft, Agents/ 2 files, 10_Wiki/ ~468 papers, wiki/ ~279 files |
+| **New since 16:00 KST** | Working tree **clean** — all commits synced. Last: `📚 Wiki auto-expand: 2026-05-25 18:50`. MCP 18:41 batch expected LOW (20th consecutive). MarketData Index pages created. |
+| **System** | WSL ~25h20m up. Mem 3.3Gi/7.6Gi (43%). **Swap 380MiB ** (down from 385MiB, -12.8% from 436MiB peak). Trinity all OK. |
+| **Context/Members/Agents** | Stable since 00:42 creation. 8 promotion candidates still pending. |
+| **Market** | KOSPI 7,848, KOSDAQ 1,161, USD/KRW 1,511, WTI $96.60. Cash KRW 4,929,810 HOLD (8d). |
+
+### Knowledge Absorption
+- Working tree clean — all committed.
+- Swap 380MiB continuing downtrend — peak 436MiB stable decline.
+- MCP 20th consecutive LOW SIGNAL expected.
+- 8 Context promotion candidates pending Steven approval.
+- MarketData pages fully built (KOSPI/KOSDAQ/WTI Q2 Index).
+
+### Key Takeaways
+1. Swap downtrend confirmed: 436MiB→380MiB (-12.8%) over 6h.
+2. All commits synced — clean working tree.
+3. MCP 20th consecutive LOW SIGNAL — urgent action needed.
+4. CB Score pipeline broken 16h+ — P1 unfixed.
+5. Context promotion stalled — 8 candidates waiting.
+
+### Action Items (carried forward)
+- CB Score pipeline fix — self_heal.py WTI/FX collection (P1, 16h)
+- MCP quality crisis decision (20th consecutive LOW)
+- WSL reboot planning — 380MiB, threshold 500MiB. Next ~5/29-30.
+- SkillOpt skill-as-optimizer PoC
+- QGP n-step-reasoning evaluation
+- Context promotion: 8 candidates for Steven
+
