@@ -1,7 +1,9 @@
-🧠 Brain Sync — 2026-05-25 18:00 KST
-Status: Complete — NO CHANGE (1h idle since 17:00)
-Context stable — 12 promotion candidates still awaiting Steven approval
-CB Score pipeline unrepaired (16h+), Swap 385MiB flat
+🧠 Brain Sync — 2026-05-25 22:01 KST
+Status: NO CHANGE — no new commits since 21:00, clean working tree (only git-tracked macro data refresh committed at 20:46)
+Context stable — 8 promotion candidates still pending Steven approval
+CB Score pipeline status unknown (not checked this cycle)
+Swap 374MiB — stabilizing in 370-380 range (down from 436MiB peak)
 No new Members/ drafts detected
-Memory 3.3Gi/7.6Gi (43%), Swap 385MiB (flat), Uptime 23h25m, Load 0.34
-No uncommitted changes beyond Auto-Evolution docs
+Memory 3.3Gi/7.6Gi (43%), Swap 374MiB, Uptime 28h20m, Load 0.47
+Clean working tree — last commit: 📊 Wiki auto-expand 20:46 (KOSPI/KOSDAQ/환율 refresh)
+No Activity Since Last Sync — D-DAY hours, next trading at 09:00 KST Tue
