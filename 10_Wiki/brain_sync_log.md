@@ -726,3 +726,29 @@
 - [ ] Swap 436MiB monitoring — WSL reboot if >500MiB
 - [ ] Push Your Agent (QGP) paper → n-step-reasoning skill evaluation
 - [ ] MCP multi-search quality fix investigation
+
+## 🧠 Brain Sync — 2026-05-25 13:04 KST
+
+| **Time** | 2026-05-25 13:04 KST |
+|---|---|
+| **Vault stats** | Context/ 11 files, Members/ 1 draft, Agents/ 2 files, 10_Wiki/ ~465 papers+reports, wiki/ ~279 files |
+| **New since 12:00 KST** | **10 arXiv papers (1220 batch)** — all committed in Midday Log (2ea6cfa):<br>1. ⭐ **SkillOpt: Self-Evolving Agent Skills** — skills should be trained like optimizers, not hand-crafted. **HIGH SIGNAL**.<br>2. ⭐ **CHRONOS: Temporally-Aware Multi-Agent Coordination** — temporal KG data marketplaces. **HIGH SIGNAL**.<br>3. ⭐ **Beyond Binary Edits: Robust Multimodal Knowledge Editing** — adversarial subspace alignment. **HIGH SIGNAL**.<br>4. Complete-muE: MoE Hyperparameter Transfer — MEDIUM.<br>5. ETCHR: Editing To Clarify and Harness Reasoning — MEDIUM.<br>6. Good Token Hunting — LOW (3D vision domain).<br>7. ⭐ **LLMs as Noisy Channels: Shannon Scaling Law** — fundamental LLM capacity theory. **HIGH SIGNAL**.<br>8. Multilingual Knowledge Transfer — MEDIUM.<br>9. ⭐ **JOPAT / Point Tracking Improves World Action Models** — generalizable RL representation technique. **HIGH SIGNAL**.<br>10. PhotoFlow / Strawberry Harvesting — LOW (domain-specific).<br>**3 MCP 멀티검색 reports (12:51~12:52)** — ALL LOW SIGNAL (18th consecutive).<br>**Hermes Midday Log (12:46)** — Swap accelerated reaccumulation pattern documented. |
+| **Market** | KOSPI 7,847.71 (5/22 close), USD/KRW 1,510.83, WTI $96.60. Cash ₩4,929,810 HOLD (7d). D-DAY 장중. |
+| **System** | WSL 19h23m, Mem 3.2Gi/7.6Gi (42%), **Swap 434MiB 🚨** (stable since 11:00, not worsening), Load 0.57. Trinity all ✅. |
+| **Context/ Members/** | Stable — no new changes since 12:00. |
+
+### Knowledge Absorption
+- ⭐ **SkillOpt (arXiv 2605.23904)** — HIGH SIGNAL: Skill-as-optimizer paradigm directly applicable to Hermes skill evolution pipeline.
+- ⭐ **CHRONOS (arXiv 2605.23887)** — HIGH SIGNAL: Temporal multi-agent coordination — relevant to Hermes nightly batch coordination patterns.
+- ⭐ **Beyond Binary Edits (arXiv 2605.23780)** — HIGH SIGNAL: Knowledge editing generality is a key limitation — relevant to Hermes memory update reliability.
+- ⭐ **LLMs as Noisy Channels (arXiv 2605.23901)** — HIGH SIGNAL: Shannon Scaling Law explains model capacity limits — relevant to model selection decisions.
+- ⭐ **JOPAT (arXiv 2605.23856)** — HIGH SIGNAL: Point tracking as representation bottleneck — generalizable to world model learning.
+- 🟢 **Swap 434MiB stable** — not worsening since 11:00, but still above 300MiB threshold.
+- 🟢 **All files committed** — 18 commits today, clean working tree.
+- 🔴 **MCP quality crisis: 18회 연속** — needs urgent source diversification.
+
+### Action Items
+- [ ] 🔴 **WSL 재부팅** — Swap 434MiB, >300MiB threshold. 장 마감(15:30) 후 권장.
+- [ ] 🔬 Push Your Agent (QGP) → n-step-reasoning skill evaluation.
+- [ ] 🔬 SkillOpt skill-as-optimizer paradigm → FORGE memory PoC integration.
+- [ ] 📝 Context 승격: 8건 대기 (Operations-Guide 우선).
