@@ -404,3 +404,37 @@ File unchanged since last read. The content from the earlier read_file result in
 
 *2026-05-26 08:45 KST — Pre-Open Update (D-DAY+1, Swap 371MiB 🟡, WTI $91 🔴, CB Score ?/100 🔴)*
 |
+## 🧠 Brain Sync — 2026-05-26 12:01 KST
+
+### 📋 스캔 결과
+| 항목 | 결과 |
+|:-----|:------|
+| Context/ | 11개 파일, 40h+ 미변경 (5/25 00:42 이후) |
+| Members/ | Steven/Ideas 정적, LLM-Wiki-개선아이디어.md 마지막 변경 5/25 00:27 |
+| Agents/ | Hermes 2개 파일 정적 |
+| 00-Home.md | 5/26 Today 갱신됨 (Wiki 확장기 10:10 스캔) |
+| Git Changes (4h) | 35개 파일 — MCP 멀티검색 3건 (1045~4121), Daily Log 08:45, Auto-Evolution 0830·1030, wiki/macros·stocks 일괄 갱신 |
+| Context 승격 후보 | 17건 제안 (8건 🥇, 7건 🥈, 3건 🥉) — 33h+ 미승인 |
+| Brain Sync 이전 | 5/26 09:00 KST (3h 전) |
+
+### 💡 신규 발견 (금일)
+1. **🟢🟢 KOSPI 8,000선 돌파 (8,055 intraday)** — 4/27 저점 6,900 대비 +16.7% 상승. 현금 보유 기회비용 약 82만원 추정.
+2. **🔴 WTI $90.91 → $91.77 소폭 반등** — 전주 $96.60 대비 -5.9% 하락, $100선 하회 6일차.
+3. **🔴 Swap 371MiB 재축적** — 5/23 재부팅 후 3일째 35MiB→371MiB 증가. MetaClaw 468MB RSS 확인.
+4. **🔴 Self_heal.py 22일 중단** — 5/5 마지막 로그 이후 갱신 없음. CB Score 미기입 지속.
+5. **MCP 35회 연속 LOW SIGNAL** — 결정적 타협점 초과. MCP 검색 품질 개선 필요.
+
+### 📊 시장 현황 (5/26 Tue 장중)
+| 항목 | 값 |
+|:-----|:---|
+| KOSPI | 8,055 (+2.65% 오늘, 8,000선 돌파! 🟢) |
+| WTI | $91.77 ($100 하회 6일차 🔴) |
+| USD/KRW | 1,507 (전주 1,511 대비 소폭 안정 🟡) |
+| 포트폴리오 | 현금 ₩492만 전량 보유 (34일차) |
+
+### 🔄 Context 승격 상태
+- **8건 🥇 우선순위** 제안 (33시간 경과) — 미승인 상태 지속
+- 승격 진행이 안 되어 Context/ 파일 목록 5/25 00:42 이후 변화 없음
+- 제안서(Context_승격_제안서.md)에 승격 기준, 경로, 사유까지 상세 작성됨
+
+---
