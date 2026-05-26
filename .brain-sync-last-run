@@ -1,12 +1,6 @@
-🧠 Brain Sync — 2026-05-26 08:00 KST
-Status: MINOR — No new content in Context/Members/Agents since 07:00 sync.
-Context 11 files — unchanged (32h+ pending approval for 8 promotion candidates).
-Members 1 draft (Steven/Ideas/) — unchanged.
-Agents 2 files — unchanged.
-10_Wiki/ ~479 files — 3 dirty files (USD_KRW analysis enhancement, Index refresh, log update).
-Git working tree: 3 uncommitted MarketData refresh files (routine auto-expansion).
-System: Mem 3.3Gi/7.6Gi (43%), Swap 361MiB (↓ from 385MiB at 04:30), Load 1.17.
-Nexus running post-restart. CB Score recovery ongoing.
-Only change: brain_sync_log.md and timestamp refresh.
-Chronic Issues: 5건 미해결 — same as 07:00 sync.
-
+🧠 Brain Sync — 2026-05-26 09:00 KST
+Status: MINOR — No new content in Context/Members/Agents since 08:00 sync.
+Market just opened (09:00 KST) — D-DAY+1.
+Swap 371MiB 🟡, Mem 3.3Gi/7.6Gi, Load 0.61.
+Self_heal.py 21d down — CB Score ?/100 on dashboard.
+8 Context promotion candidates 33h+ pending.
