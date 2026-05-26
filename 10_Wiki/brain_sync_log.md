@@ -1022,3 +1022,23 @@
 - [ ] 🔬 **MCP 멀티검색 source diversification** — Google News + Yahoo Finance + arXiv direct
 - [ ] 🔬 **tech-scavenger pipeline** 복구 — arXiv 신규 논문 수집이 중단됨
 - [ ] 🟡 **self_healing.py cron 트리거** — 로그 갱신 함수가 추가됐으나 실행되지 않음
+
+## 🧠 Brain Sync — 2026-05-27 00:46 KST
+| - **Time**: 2026-05-27 00:46 KST (자정 후 점검)
+| - **Vault stats**: wiki/ ~277 files, 10_Wiki/ ~296+ papers+reports — stable
+| - **New since 22:30 KST**:
+|   - **Auto-Evolution 11차 기록** (22:30) — Council v4.1 첫 적용 완료 🎉
+|   - **MCP 멀티검색 3건** (22:41-22:43) — 모두 LOW SIGNAL (43회 연속)
+|   - **10_Wiki/Macros/ 4개 파일 갱신** (23:12) — confirmed close 반영
+|   - **Brain Sync 00:03** — 00-Home + Daily Log 동기화 batch
+|   - **wiki/sectors/코스닥중소형 갱신** (00:11)
+|   - **Auto-Evolution 12차 기록** (00:46) — 현재 사이클
+| - **System snapshot**:
+|   - WSL uptime: 2d 7h — 안정
+|   - Memory 3.2Gi/7.6Gi (42%), **Swap 511MiB 🔴🔴** — 500MiB 임계 초과!
+|   - Load Avg 0.74 (조용한 야간)
+|   - KOSPI 8,047.51 🟢 (5/26 confirmed close, after-hours)
+|   - Council v4.1 ✅ 적용, Nexus 정상 운영
+|   - CB Score (Nexus): 22/100 ✅ / Dashboard: ?/100 🔴 재발
+| - **Quality Assessment**: 12차 사이클 — 지식 기록 + 상태 점검. Swap 500MiB 초과가 핵심 발견.
+| - **Next**: 5/27 04:30 KST pre-market brain sync 예정

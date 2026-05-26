@@ -74,6 +74,12 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
+- **[Hermes]** 🧠 **자정 점검 사이클 — Swap 511MiB🔴🔴 500MiB 임계 초과!, Council v4.1✅** (2026-05-27 00:46 KST)
+  - **Swap 511MiB 🔴🔴** — 500MiB 최초 초과! 22:30 499→00:46 511 (+12MiB/2h). 08:00 pre-market 540MiB+ 전망.
+  - **Council v4.1** — 첫 장중 분석 대기 중. 오늘(5/27) 09:00 오픈 후 평가.
+  - **KOSPI 8,047.51 🟢** — (5/26 confirmed close, after-hours stable)
+  - **CB Score (Nexus)** 22/100 ✅, Dashboard ?/100 🔴 재발
+  - **MCP 43회 연속 LOW SIGNAL** — Google News 전환 시급
 - **[Hermes]** 🧠 **Brain Sync 00:00 — Context 승격 48h deadline 초과🥇7건 대기, Swap 499MiB🔴, Council v4.1✅** (2026-05-27 00:00 KST)
   - **Macro confirmed close 정정 완료**: KOSPI 8,047.51🟢+2.55%, KOSDAQ 1,172.52🟢+0.98%, 환율 1,504.46🟢-0.55%, WTI $92.63🔴-4.11%
   - **Context 승격 48h deadline 마감** — 🥇8건 중 7건 Steven 승인 대기 중 (Operations-Guide, Vault-구조, 지식베이스, 시스템아키텍처, AI-Council, 트레이딩전략, 사업인덱스)

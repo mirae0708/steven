@@ -524,3 +524,74 @@ File unchanged since last read. The content from the earlier read_file result in
 1. **Swap 499MiB** — 500MiB 임계 도달, 재부팅 필요
 2. **Dashboard CB Score ?/100 재발** — 12시간만에 복귀
 3. **MCP source diversification 필요** — Naver 의존도 100%
+
+## 2026-05-27 00:46 KST — 자정 후 상태 점검 사이클
+
+**상태**: 🔴 CRITICAL — Swap 500MiB 임계 초과!, 나머지 MINOR
+
+### 📊 시스템 스냅샷 (00:46 KST)
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | 2d 7h (5/24 17:40 재부팅 이후, 3일차) |
+| Memory | 3.2Gi/7.6Gi (42%) |
+| **Swap** | **511MiB 🔴🔴 — 500MiB 초과!** |
+| Load Avg | 0.74 / 0.43 / 0.42 |
+| Disk | 4% |
+| KOSPI | 8,047.51 🟢 (5/26 confirmed close) |
+| CB Score (Nexus) | 22/100 🟢 (v4.1 정상) |
+| CB Score (Dashboard) | ?/100 🔴 (재발) |
+| Portfolios | ₩4,929,810 (포지션 0, 35일차) |
+
+### 📋 22:30→00:46 사이 타임라인
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 22:30 | 🧬 Auto-Evolution 11차 — Council v4.1 첫 적용 완료 |
+| 22:41-22:43 | 📡 MCP 멀티검색 3건 (모두 LOW SIGNAL — 43회 연속) |
+| 23:12 | 📊 10_Wiki/Macros/ 4개 confirmed close 갱신 |
+| 00:03 | 🧠 Brain Sync log + 00-Home + Daily Log 동기화 batch |
+| 00:11 | 📊 wiki/sectors/코스닥중소형 갱신 |
+| **00:46** | **NOW — Swap 511MiB 🔴🔴 500MiB 임계 초과 확인** |
+
+### 🔴 주요 리스크
+1. **Swap 511MiB 🔴🔴** — 500MiB 임계 최초 초과! 22:30 499→00:46 511 (+12MiB/2h). 추세 유지 시 08:00 pre-market 540MiB+ 전망. 재부팅 시급.
+2. **Dashboard CB Score ?/100 재발** — 12h cycle 패턴 입증 (10:30 복구→22:32 재발)
+3. **Council v4.1 첫 장중 분석** — 오늘(5/27) 09:00 오픈 후 첫 분석. 포지션 진입 가능성 평가 필요.
+4. **MCP 43회 연속 LOW SIGNAL** — Google News 전환 필요
+
+*Recorded by Hermes Agent on 2026-05-27 00:46 KST — Swap 511MiB 🔴🔴 임계 초과 | Council v4.1 ✅ | KOSPI 8,047 🟢*
+
+---
+
+## 2026-05-27 04:46 KST — Pre-Market 새벽 점검 (Swap 위기 심화)
+
+**상태**: 🔴 CRITICAL — Swap 608MiB, 500MiB 임계 대폭 초과, 급가속 중
+
+### 📊 시스템 현황 (04:46 KST)
+| 항목 | 00:46 | 04:46 | 변화 |
+|:-----|:-----:|:-----:|:----:|
+| **Swap** | 511MiB 🔴🔴 | **608MiB 🔴🔴🔴** | **+97MiB (+19%) in 3.7h** |
+| Memory | 3.2Gi (42%) | 3.4Gi (45%) | +200MiB |
+| Load Avg | 0.74 | 1.56 | Nexus 재시작 영향 |
+| WSL Uptime | 2d 7h | 2d 10h 50m | +3h 45m |
+
+### 🗓️ 거래일 현황
+- **5/27(수) — 석가탄신일 휴장** (wiki log 기준, 다음 거래일 5/28 목)
+- Council v4.1 첫 장중 분석은 5/28(목) 오픈으로 연기
+
+### 🚨 Swap 긴급 — 가속 패턴 발견
+| 시간 | Swap | 증가율 |
+|:-----|:----:|:------:|
+| 5/26 22:30 | 499MiB | 기준 |
+| 5/27 00:46 | 511MiB | +6MiB/h |
+| 5/27 04:30 | 608MiB | **+26MiB/h (4x 가속!)** |
+
+Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 — 5/28(목) 장 마감 후 재부팅 최적.
+
+### 🔴 주요 리스크 (업데이트)
+1. **Swap 608MiB 🔴🔴🔴** — 500MiB 임계 +108MiB 초과. 증가율 4배 가속. 08:00 ~700MiB 예상.
+2. **Dashboard CB Score ?/100 🔴** — 12h+ 미복구 (00:46→04:46)
+3. **Nexus Council v4.1 정상 운영** ✅ — 04:05 재시작 이후 27분 정상 사이클 (457370→SELL(19%), 474650→SELL(18%))
+4. **KiwoomAuth 8050 🔴 35일차** — 지정단말기 인증 실패 지속
+5. **Hermes 3442 commits behind 🟡** — 업데이트 필요
+
+*Recorded by Hermes Agent on 2026-05-27 04:46 KST — Swap 608MiB 🔴🔴🔴 급가속 중 | 석가탄신일 휴장 | Council v4.1 ✅*
