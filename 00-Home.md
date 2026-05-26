@@ -42,9 +42,9 @@
 
 ## 📊 LLM Wiki 주식 분석 시스템
 ### 📈 종목
-- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **7,400원** 🟢 **+3.06%** (5/22 확정, RSI 27.0 과매도 심화, BB% 19.3% 하단 근접, 포트폴리오 -26.29%)
-- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **15,450원** 🟢 **+7.59%** (5/22 확정, RSI 36.5 과매도 개선, BB% 16.7% 하단 회복)
-- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **26,150원** 🔴 **-1.69%** (5/22 확정, RSI 50.2→37.2 급락, KOSDAQ +4.99%에도 유일 하락, 포트폴리오 -14.40%)
+- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **7,220원** 🔴 **-2.43%** (5/26 confirmed close, RSI 26.8 과매도 심화, BB% 18.0% 하단 근접, 포트폴리오 -28.09%)
+- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **15,030원** 🔴 **-2.72%** (5/26 confirmed close, RSI 35.1 과매도 임박, BB% 11.6% 하단 근접)
+- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **26,150원** 🟡 **보합** (5/26 confirmed close, RSI 37.8 약세, SMA20(27,263) 회복 필요, 포트폴리오 -14.40%)
 
 ### 🧠 최근 Brain Sync (18:00)
 - [[10_Wiki/Artificial_Intelligence/AI_Agents/ATLAS-Agentic-or-Latent-Visual-Reasoning-One-Word-is-Enoug_20260517_1800|ATLAS: Agentic Visual Reasoning]]
@@ -59,10 +59,10 @@
 - [[wiki/sectors/로보틱스|🤖 로보틱스]]
 
 ### 💵 거시경제
-- [[wiki/macros/KOSPI|📊 KOSPI (7,848)]] 🟢 **+0.41% 소폭 상승** (RSI 69.5 강세, BB% 78.9% 상단 근접, 주간 +4.41% 강세 마감)
-- [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,161)]] 🟢 **+4.99% 급등!** (RSI 42.7→45.3 개선, BB% 14.9%→43.7% 대폭 개선, 주간 +4.50%)
-- [[wiki/macros/환율|💵 환율 (1,511원)]] 🟡 **+0.43% 소폭 상승** (5/25, RSI 63.4 강세, BB% 90.5% 상단 내 회귀, 1520 Open→1510 Close — 원화 소폭 강세)
-- [[wiki/macros/국제유가WTI|🛢️ WTI ($91.63)]] 🔴 **-5.14% 급락!** (RSI 37.1 약세, BB% 2.4% 하단 근접! $100선 하회 6일째, $95지지선 붕괴, 주간 -15.67% 폭락 심화)
+- [[wiki/macros/KOSPI|📊 KOSPI (8,048)]] 🟢 **+2.55% 급등! 8,000선 돌파!** (RSI 68.1 강세, BB% 85.3% 상단 근접, 2026년 신고점)
+- [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,173)]] 🟢 **+0.98% 상승** (RSI 43.5 중립, BB% 49.6% 중립, KOSPI 대비 상대적 약세)
+- [[wiki/macros/환율|💵 환율 (1,504원)]] 🟢 **-0.55% 원화 강세** (5/26 confirmed close, RSI 61.0 강세, BB% 77.9% 상단 근접, KOSPI 급등 따른 외국인 유입)
+- [[wiki/macros/국제유가WTI|🛢️ WTI ($92.63)]] 🔴 **-4.11% 급락!** (RSI 38.0 과매도 임박, BB% 6.5% 하단 직전! $100선 하회 7일째, $95지지선 붕괴 유지, 주간 -14.75% 폭락 심화)
 
 ### 🧠 시스템
 - [[99_System/GEMINI.md|🧠 시스템 스키마 (GEMINI.md)]]
@@ -74,6 +74,14 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
+- **[Hermes]** 📊 **Wiki 확장기 22:10 — 5/26 confirmed close 전면 정정: yfinance 12:33 intraday→22:10 확정 종가 반영** (2026-05-26 22:10 KST)
+  - **전면 정정**: wiki/stocks/ 3종 + wiki/macros/ 4종 + wiki/sectors/ 2종 + 00-Home.md — 5/26 confirmed close 확정 종가 반영
+  - wiki/sectors/헬스케어·로보틱스·코스닥중소형 3종 5/26 confirmed close 반영
+  - 00-Home.md 종목·거시경제 지표 5/26 close로 갱신
+  - **Sectors**: 헬스케어 7,220 -2.43%, 로보틱스 26,150 보합 반영 (22:10 confirmed close 정정)
+  - **에이치엘사이언스** 15,280🔴-1.10% (RSI 36.1, BB% 16.5%)
+  - **나우로보틱스** 26,350🟢+0.76% (RSI 38.5, 포트폴리오 -13.75%)
+  - 포트폴리오: 삼성부광 -28.09%, 나우로보틱스 -14.40% | KOSPI 8,047.51🟢+2.55% 8,000선!, KOSDAQ 1,172.52🟢+0.98%, 환율 1,504.46🟢-0.55%, WTI $92.63🔴-4.11%
 - **[Hermes]** 🏗️ **LLM Wiki 4계층 Context 시스템 구축 완료** — Company/Product/TechStack/Agents 공식 지식 체계 확립: Claude Code 하이브리드 환경·텔레그램 명령어 모음·WSL 문제해결 가이드·물류 ERP 연동가이드 Context 승격 (2026-05-25 00:42 KST, 월요일 오픈 전)
   - **7개 파일(+553 lines) 커밋**: Context/Company/직원용-코딩-가이드, Context/Product/(시스템-아키텍처·AI-Council·자율형-에이전트·Quote-Tool·텔레그램·Claude-Code), Context/TechStack/(물류-ERP·WSL), Templates/llm-wiki/(CLAUDE-Hybrid-Template·profile.ps1·wsl.sh)
   - **00-Home.md** LLM Wiki 4계층에 Claude Code 하이브리드 링크 추가

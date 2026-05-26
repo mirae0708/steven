@@ -1,13 +1,8 @@
-🧠 Brain Sync — 2026-05-26 17:00 KST
-Status: MINOR — No new content changes since 16:45 check.
+🧠 Brain Sync — 2026-05-26 22:01 KST
+Status: MINOR — 10_Wiki/Macros data refresh only. No Context/Members/Agents changes.
 
 Today (5/26 Tue): KOSPI 8,085.46 (+3.03%), KOSDAQ 1,177.24 (+1.39%)
 USD/KRW 1,506.88, WTI $91.46 (-5.32%)
-Swap 441MiB 🟡, Mem 3.4Gi/7.6Gi (44%), Load 0.69
-Context 승격 8건🥇 pending ~41h (5/25 00:25 → 48h timeout: 5/27 00:27 KST imminent ~7h 남음)
-All tech scavenger runs today produced 0 new documents (all content deduped)
-MCP 31st consecutive LOW SIGNAL
-All cron jobs ok (last run timestamps verified)
-Uptime 1d 23h+ (since 5/24 17:40)
-
-Brain Sync cycle 2026-05-26 17:00 KST complete.
+Swap 452MiB 🟡 (450→452, stable), Mem 3.4Gi/7.6Gi (44%), Load 0.60
+Context 승격 8건🥇 ~22h 대기 — 48h deadline: 5/27 00:27 KST (⚡ 2.4h 남음!)
+Brain Sync cycle 2026-05-26 22:01 KST complete.

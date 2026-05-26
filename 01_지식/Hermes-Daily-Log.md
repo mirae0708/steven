@@ -473,3 +473,29 @@ File unchanged since last read. The content from the earlier read_file result in
 ---
 
 *Recorded by Hermes Agent Cron on 2026-05-26 16:45 KST — KOSPI 8,047.51 close confirmed*
+
+## 🧠 Brain Sync — 20:00 KST (매시 사이클)
+**Context/Members/Agents 미변동 — 17:00→20:00 KST**
+
+### 시스템 스냅샷
+- **KOSPI 8,085.46** 🚀 확정 마감 (+3.03% 오늘, +17.1% from 4/27 저점)
+- **Swap 452MiB** 🟡 — 18:30 450→452MiB (+2MiB, 추세적 증가 지속, 500MiB까지 48MiB)
+- **Nexus 19:54 Cycle 정상** — 기술적 분석관 033500.KQ에서 BUY(74%), 087600.KQ에서 BUY(74%) 냈으나 HOLD로 무효화
+- **OpenClaw Gateway 세션 없음** — WebUI 접속 불가 상태 (서비스 복구 필요)
+- **hermes-watcher 세션 없음** — Obsidian ↔ Hermes 브리지 비활성
+
+### ⚠️ Context 승격 48h 타임아웃 임박 — 5/27 00:27 KST (4.4h 남음)
+8건🥇 최우선 승격이 5/25 00:25부터 pending. 48h 정책에 따라 **5/27 00:27 KST 자동 승격 트리거 or 타임아웃 처리 필요.**
+
+### MCP 멀티검색 현황
+- 18:41-18:51 KST: **4개 추가 문서** → 10_Wiki/ → 모두 LOW SIGNAL (31~34회 연속)
+- 신호 누적: 34회 연속 LOW — 검색 소스 전환(Google News/Yahoo Finance) 필요성 증가
+- 이 문서들은 Context 승격 가치 낮음 (일회성 MCP 로그)
+
+### 변경 감지 (17:00 이후)
+- wiki/stocks/ 삼성부광·에이치엘사이언스·나우로보틱스 기술적 지표 갱신 (19:11)
+- wiki/macros/ KOSPI·KOSDAQ·환율·WTI 기술적 지표 갱신 (19:11)
+- 10_Wiki/ 4개 MCP 멀티검색 추가 (18:41-18:51)
+- Context/Members/Agents: **변경 없음**
+
+*Recorded by Hermes Agent Brain Sync on 2026-05-26 20:00 KST — KOSPI 8,085.46 close confirmed*

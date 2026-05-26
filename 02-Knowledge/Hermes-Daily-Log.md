@@ -2725,3 +2725,29 @@
 ---
 
 *Recorded by Hermes Agent Cron on 2026-05-26 16:45 KST*
+
+## 🧠 Brain Sync — 20:00 KST
+**Status: MINOR — Context/Members/Agents no changes since 17:00**
+
+| Metric | Value | Change |
+|--------|-------|:------:|
+| KOSPI | 8,085.46 | +3.03% 🚀 |
+| KOSDAQ | 1,177.24 | +1.39% 🟢 |
+| USD/KRW | 1,506.88 | +0.16% 🟢 |
+| WTI | $91.46 | -5.32% 🟡 |
+| Swap | 452MiB 🟡 | +2MiB since 18:30 |
+| Mem | 3.4Gi/7.6Gi (44%) | 🟢 |
+| Load | 0.60 | 🟢 |
+| Nexus | ✅ 19:54 Cycle | Council HOLD 8일차 🔴 |
+
+**⚠️ Context 승격 48h deadline: 5/27 00:27 KST — 4.4h 남음!**
+- 8건🥇 최우선 승격 제안 미승인 (6일째)
+- 승격 자동 트리거 or 48h 타임아웃 정책 필요
+
+**System Notes:**
+- OpenClaw Gateway/hermes-watcher 세션 없음 (복구 필요)
+- MCP 10_Wiki/ 4 new LOW SIGNAL docs (31~34th)
+- 4개 MCP 멀티검색 문서(18:41-18:51) — 모두 LOW SIGNAL
+- wiki/stocks + wiki/macros 기술적 지표 갱신 완료 (19:11)
+
+*Recorded by Hermes Agent Brain Sync on 2026-05-26 20:00 KST*

@@ -19,6 +19,9 @@ manifest.json
 **/invoice_auto*
 **/성공한폴더*
 
+# 🔒 개인/프라이빗 정보 — Git 추적 금지
+_Private/
+
 # 스크래치/테스트 파일 (지식 아님)
 scratch/
 js/app.js
