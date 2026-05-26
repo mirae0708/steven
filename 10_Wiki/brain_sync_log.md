@@ -891,3 +891,43 @@
 | **New since 08:00 KST** | **None** — only Hermes-Auto-Evolution-0830(.md) (08:30) and Hermes-Daily-Log append. Context/Members/Agents unchanged. |
 | **System** | WSL 1d15h up. Mem 3.3Gi/7.6Gi (43%). **Swap 371MiB 🟡** (from 361MiB at 08:00 — slight uptick, pre-open Nexus cycles). Load 0.61. **09:00 KST 개장 직후** — D-DAY+1 실거래일 시작. |
 | **Key Observations** | (1) No new knowledge in Context/Members/Agents this cycle. (2) 08:30 Auto-Evolution discovered self_heal.py 21일 중단 (dashboard CB Score ?/100). (3) WTI $90.91 🔴(전주 -5.9%), USD/KRW 1,517 🔴(원화 약세). (4) KOSPI 7,848 개장 — 8,000선 도전 여부 관건. (5) 8 Context 승격 후보 33h+ Steven 승인 대기. (6) Next cycle: 10:00 KST. |
+
+
+## 🧠 Brain Sync — 2026-05-26 14:00 KST
+
+| **Time** | 2026-05-26 14:00 KST |
+|---|---|
+| **Vault stats** | Context/ 11 files (stable, unchanged since 5/25 00:42), Members/ 1 draft, Agents/ 2 files, 10_Wiki/ ~495 files, wiki/ ~279 files |
+| **New since 12:45 KST** | **16 new arXiv papers (13:20 batch)** — all from arXiv 2026-05-25, now committed. **6 MarketData files refreshed** (KOSPI/KOSDAQ/USD_KRW/WTI/stock wikis). **3 MCP 멀티검색 reports (12:51~12:52)** — confirmed LOW SIGNAL (28th consecutive, Naver noise + ad content). |
+| **New Knowledge** | **Papers ingested (16, all committed):**<br>**HIGH SIGNAL (3):**<br>1. ⭐ **Anticipate and Learn (arXiv 2605.25971)** — AI agents can use idle time between user interactions for proactive computation (pre-compute, simulate, learn). Addresses the reactive-agent paradigm limitation. *Directly relevant to Hermes cron-based proactive behavior: idle-time compute between user sessions.*<br>2. ⭐ **From Model Scaling to System Scaling / Scaling the Harness (arXiv 2605.26112)** — Treats the structured execution layer (harness) around foundation models as the next scaling bottleneck. Auditable, persistent, modular agentic architectures. *Directly relevant to Hermes MCP + tool harness design.*<br>3. ⭐ **Language Models Need Sleep (arXiv 2605.26099)** — Context→fast-weight consolidation mechanism for long-horizon tasks. Periodic sleep cycles compress context into persistent weights. *Relevant to Hermes long-term memory consolidation strategy.*<br>**MODERATE SIGNAL (5):**<br>4. MAS as Mixtures of Experts (2605.25929) — FJ opinion dynamics model for multi-agent deliberation; stubbornness/influence analysis → Council agent opinion diversity design<br>5. When Gradients Collide (2605.26046) — Multi-objective prompt optimization failure modes for LLM judges → AI Council judge stability<br>6. Privacy-Preserving Cross-Institutional RAG (2605.25716) — Secure collaborative RAG with federated privacy → cross-knowledge-base querying patterns<br>7. Trustworthy SW Project Generation + Theorem Prover (2605.26017) — Formal verification for LLM-generated projects<br>8. Structure-Aware Code Change Labeling (2605.26100) — Code review patch type classification<br>**LOW SIGNAL (8):** remaining 8 papers (Squeezing Capacity MLLM, MIND humanoid control, Proof of Useful Attestation, PRISM scalable infrastructure, AnyScene driving, Joint Training-Inference FL, LRDDv3 drone detection, MobileGym sim platform) — domain-specific, low relevance to Hermes core. |
+| **Context/Members/Agents** | Stable — **no changes since 5/25 00:42 creation.** 8 Context 승격 후보 🥇 **still pending Steven approval (47h+ delayed).** No new draft ideas in Members/. |
+| **System snapshot** | WSL 1d 20h up. Mem 3.3Gi/7.6Gi (43%). **Swap ~441MiB 🟡** (장중 활동 — 5/25 피크 436MiB 소폭 상회, 500MiB까지 59MiB 여유). Load 0.68. All Trinity ✅. |
+| **Market** (KOSPI 8,115 confirmed close 🟢🟢) | KOSPI **8,115.10 🔥 (+3.41% today, +17.3% from 4/27 low)**. KOSDAQ **1,189.07 🔥 (+5.86%)**. USD/KRW **1,509.78 🟢** (1,500선 안정). WTI **$91.52 🟡** ($90선 지지 관건). Cash ₩4,929,810 HOLD (34d, 기회비용 ₩843K+ 추정). CB Score 22/100. |
+
+### 📊 Knowledge Absorption Assessment
+- ⭐ **Anticipate and Learn** (HIGH SIGNAL): Proactive agent paradigm — directly maps to Hermes' cron-based self-evolution. Idle-time compute between interactions is what the Brain Sync cron already does. *Cross-validate: existing Hermes auto-evolution cycles already leverage idle time; this paper validates the approach theoretically.*
+- ⭐ **From Model Scaling to System Scaling** (HIGH SIGNAL): The "harness" concept (auditable, persistent, modular agentic architecture) validates Hermes' MCP + tool registry + skill system direction. *No new skill needed — reinforces native-mcp and skill-as-optimizer direction.*
+- ⭐ **Language Models Need Sleep** (HIGH SIGNAL): Context→fast-weight consolidation aligns with Hermes' L0-L4 memory architecture aspiration. Sleep cycles = periodic knowledge distillation / context compression. *Evaluate: could inform Brain Sync's compression strategy.*
+- 🟡 **MAS as Mixtures of Experts + When Gradients Collide** (MODERATE): Both relevant to **AI Council diversity** and **LLM judge prompt stability**. The FJ opinion dynamics model could analytically explain Council's HOLD bias persistence (stubbornness parameter). *Actionable: inform Council v4.1 prompt redesign.*
+- 🟡 **Scaling the Harness** categorizes under MCP — validates Hermes' bet on MCP as the agentic abstraction layer.
+- 🔴 **MCP quality crisis: 28th consecutive LOW SIGNAL** — urgent source diversification needed (now 4 days of pure Naver noise).
+- 🔴 **Tavily API 401 key expired** (34일차 chronic) — impacts research capability.
+- 🟢 **Context/Members/Agents stable** — no drifts, no unauthorized changes.
+- 🟢 **Propose-Execute-Gap 진단 문서** created at 12:45 — important meta-insight: "제안만 100번 하는 시스템은 Observer일 뿐, Evolving System이 아니다." 📌
+
+### Key Takeaways
+1. **KOSPI 8,115.10 🔥 — confirmed close above 8,100!** 8,000선 확고히 안착. Council HOLD bias (7일차) is the single largest unrealized opportunity — ₩843K+ 누적 기회비용. 
+2. **3 HIGH SIGNAL arXiv papers** this batch — proactive agents (Anticipate and Learn), system scaling (Scaling the Harness), context consolidation (Language Models Need Sleep). All validate existing Hermes direction rather than requiring new skills.
+3. **28th consecutive LOW SIGNAL MCP batch** — MCP multi-search pipeline is fully degraded. Needs alternative source strategy.
+4. **16 new papers committed & pushed** (60fc741) — all tracked in 10_Wiki/.
+5. **Context 승격 47h+ 대기** — 8 🥇 candidates still pending Steven approval. Propose-Execute Gap 현실화.
+6. **Propose-Execute-Gap 진단 문서** — 가장 중요한 메타 발견: Auto-Evolution의 근본적 한계를 문서화.
+
+### Action Items (carried forward)
+- [ ] 🔴 **Council 프롬프트 v4.1** (5일차 제안 — KOSPI 8,115 confirmed momentum)
+- [ ] 🔴 **Context 자동 승격 기준** (48h timeout: 5/27 00:27 KST impending)
+- [ ] 🔬 **Anticipate and Learn** → Hermes proactive compute evaluation (idle-time enhancement)
+- [ ] 🔬 **Scaling the Harness** → MCP architecture validation review
+- [ ] 🔬 **Language Models Need Sleep** → Brain Sync compression strategy inspiration
+- [ ] 🟡 **MCP multi-search** source diversification (Naver → Google News + Yahoo Finance)
+
