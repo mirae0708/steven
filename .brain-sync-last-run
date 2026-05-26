@@ -1,12 +1,14 @@
-🧠 Brain Sync — 2026-05-26 15:00 KST
-Status: MINOR — No new content changes in Context/Members/Agents since 14:00 sync.
+🧠 Brain Sync — 2026-05-26 16:00 KST
+Status: MINOR — No new content changes in Context/Members/Agents since 15:00 sync.
 
-Today (5/26 Tue): KOSPI confirmed close revised to 8,085.46 (+3.03%), KOSDAQ 1,177.24 (+1.39%)
+Today (5/26 Tue): KOSPI confirmed close 8,085.46 (+3.03%), KOSDAQ 1,177.24 (+1.39%)
 USD/KRW 1,506.88 (+0.16%), WTI $91.46 (-5.32%)
-Context 승격 8건🥇 still pending ~50h+ (5/25 00:27)
-Propose-Execute Gap 진단 문서 지속 참조
-3 new MCP 멀티검색 reports (14:40~14:41) — confirmed LOW SIGNAL (29th consecutive Naver noise)
-Swap ~441MiB 🟡, CB Score 22/100 ✅
-Council HOLD 8일차 지속
+Swap 441MiB 🟡, Memory 3.3Gi/7.6Gi (43%), CB Score 22/100 ✅
+Nexus 8h+ stable, Council HOLD 8일차 지속
+Context 승격 8건🥇 pending ~52h (5/25 00:27)
+Propose-Execute Gap → 48h auto-promotion timeout: 5/27 00:27 KST imminent
+3 new MCP 멀티검색 reports (14:40 batch) — 31st consecutive Naver LOW SIGNAL
+MarketData uncommitted changes: KOSPI/KOSDAQ/WTI/USD-KRW wiki pages + 2 wiki macro pages
+Uptime 1d 22h+ (since 5/24 17:40 reboot)
 
-Brain Sync cycle 2026-05-26 15:00 KST complete.
+Brain Sync cycle 2026-05-26 16:00 KST complete.

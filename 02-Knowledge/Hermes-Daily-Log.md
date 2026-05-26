@@ -2622,3 +2622,106 @@
 - GitHub Trending: 14/15회 성공 (93%), 1회 Network Unreachable
 - arXiv: 8회 오류 (429/timeout 혼합) — cs.CL/SE/DC/MA/RO 취약
 - 캐시: 305개 URL — 대부분 중복 필터링 정상 동작
+
+## 2026-05-26 (Tue) 16:45 — Cron 지식 기록 (EOD 마감, KOSPI 8,047.51)
+
+### 📋 시스템 현황
+
+| 항목 | 상태 | 상세 |
+|:-----|:-----|:------|
+| WSL Uptime | 🟢 1일 22:50 | 5/24 17:40 부팅 이후 안정, **2일차 무재부팅** |
+| Memory | 🟢 3.4Gi / 7.6Gi (45%) | 정상 범위, 안정적 |
+| Swap | 🟡 441MiB / 2.0Gi (22%) | 3일째 증가 추세 (5/24 0MiB → 5/25 371MiB → 5/26 441MiB), 500MiB threshold 모니터링 |
+| Disk | 🟢 30Gi / 1007Gi (4%) | 충분한 여유 |
+| Load Avg | 🟢 1.25 / 0.49 / 0.28 | 안정적 |
+| Gateway (PID 306) | ✅ active | systemd 서비스 정상, 2일차 |
+| WebUI (port 3000) | ✅ | PID 305, 응답 정상 |
+| KeepAlive v7.3 | ✅ ALIVE | Watchdog 정상 작동 |
+| Nexus 배틀루프 | ✅ (16:29 Cycle Complete) | 10분 주기 사이클 정상, 8일차 |
+| Self_heal.py | 🔴 **22일 중단** | 5/5 마지막 로그 이후 미갱신 |
+| tmux 세션 | 6개 전원 정상 | hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign |
+| MCP 서버 | ✅ filesystem/fetch/tavily/time + Python MCP | 정상 |
+| 가상오피스 (port 8001) | ✅ uvicorn | 정상 |
+
+### 📊 시장 현황 (KOSPI Close: 8,047.51)
+
+| 지표 | 값 | 변동 | 비고 |
+|:-----|:---|:-----|:------|
+| KOSPI | **8,047.51** | **+2.55% 🟢** | **사상 첫 8,000선 안착 마감!** 4/27 대비 +16.6% |
+| KOSDAQ | ~1,172.52 | 소폭 상승 | KOSPI 대비 약세 |
+| USD/KRW | 1,503.39~1,503.78 | -0.6% 🟢 | 원화 강세 전환 (1,517→1,503) |
+| WTI | $92.54~$92.72 | $100 하회 7일차 🔴 | 전주 $96.60 대비 -4.2% 급락 |
+| CB Score | **21/100** ✅ | 5/25 22→**21 안정** | NORMAL MODE 유지 |
+| Market State | **NORMAL** | — | NORMAL 지속 |
+
+### 🔄 오늘의 주요 활동 (5/26 화)
+
+| 시간 | 활동 | 상세 |
+|:----|:-----|:------|
+| 06:40~06:53 | 🤖 MCP 멀티검색 8건 | AI 반도체, 미중 관세, 글로벌 물류 등 |
+| 07:00 | 🧠 Brain Sync (MINOR) | MCP 8건 LOW SIGNAL, Nexus 재시작 확인 |
+| 08:45 | 🧬 Daily Log Pre-Open | T-15m, Swap 371MiB 🟡, WTI $92 🔴 |
+| 09:00~10:00 | 🧠 Brain Sync (MINOR ×2) | Context 32~44h+ 대기 |
+| 10:41~12:51 | 🤖 MCP 멀티검색 4건 | 글로벌 증시, HBM4, AI 규제, AI 반도체 |
+| 12:00 | 🧬 Cron 지식 기록 | KOSPI 8,085 장중 반영 + Propose-Execute Gap 진단 |
+| 13:00 | 🧠 Brain Sync (MINOR) | 16개 arXiv 흡수, Context 44h+ |
+| 13:20 | 🔬 **Tech Scavenger: 16개 신규 논문 저장** | Anticipate and Learn ⭐ 등 |
+| 14:00 | 🧠 Brain Sync (MINOR) | 16개 논문 흡수 완료, MarketData 갱신 |
+| 14:41 | 🤖 MCP 멀티검색 3건 | AI 반도체 시장 전망 (31회 연속 LOW SIGNAL) |
+| 15:00 | 🧠 Brain Sync (MINOR) | 8 MCP LOW SIGNAL, Context 승격 8건🥇 ~52h 대기 |
+| 15:20~16:20 | Tech Scavenger ×2 | 모두 캐시 히트 (0개 신규) |
+| 16:29 | ✅ 배틀루프 Cycle Complete | Council HOLD 전원 |
+
+### 📚 오늘 지식 수집 하이라이트
+
+**🔬 Tech Scavenger (13:20 — 16개 신규 arXiv):**
+- **Anticipate and Learn: Proactive Agents ⭐** — Idle compute time 활용 사전계산 제안, Hermes idle CPU time에 Action Proposal 사전 생성 → `self-evolving system` 직접 적용 가능
+- **Language Models Need Sleep** — 연속 학습 시 LLM 성능 저하 패턴, long-running agent context 관리 참고
+- **From Model Scaling to System Scaling** — 시스템 아키텍처 최적화가 모델 규모보다 효율적
+- **Multi-Agent Systems are Mixtures of Experts** — MAS와 MoE 수학적 동형성 증명
+
+**🔬 Tech Scavenger 리포트 (14:21 배치, 17개 신규):**
+- Agentic Proving, CHRONOS (시간 인식 MAS), SkillOpt (자기 진화 스킬 최적화), Push Your Agent (정량적 목표 달성 측정), LLMs as Noisy Channels (Shannon 정보이론)
+
+**📊 KOSPI 8,000 시대 본격 개막:**
+- 4/27 저점 6,900 → 5/26 8,047 (+16.6%) — **30일 만에 8,000선 안착**
+- 삼성부광(014950): 8,210원 (+0.74%, cost 10,040 대비 -18.2%) — KOSPI 급등에도 소형주 디커플링 극심
+- USD/KRW 1,503 — 원화 강세 (1,517→1,503, +0.9% since 5/25)
+- WTI $92 — $100 하회 7일차, 글로벌 경기 침체 vs 인플레 완화 해석 충돌
+
+### 🐛 지속 이슈 (32일차 — 전일 대비 변화 없음)
+
+| # | 이슈 | 상태 |
+|:-:|:-----|:-----|
+| 1 | yfinance .KS ticker NaN 32일 | 🔴 |
+| 2 | KiwoomAuth 8050 blocked 32일 | 🔴 |
+| 3 | Tavily API key 401 expired 32일 | 🔴 |
+| 4 | Dashboard stale since May 7 (20일) | 🔴 |
+| 5 | MCP Python zombie on restart 32일 | 🔴 |
+| 6 | **Self_heal.py 22일 중단** | 🔴 |
+| 7 | Council HOLD bias 7일차 (KOSPI +16.6%에도 매수 0) | 🟡 |
+| 8 | Context 승격 8건🥇 48h+ 미승인 | 🟡 |
+| 9 | Swap 441MiB 재축적 (500MiB threshold 접근) | 🟡 |
+| 10 | MCP 멀티검색 31회 연속 LOW SIGNAL (Naver noise) | 🟡 |
+
+### 📖 핵심 인사이트
+
+1. 🟢 **KOSPI 8,000 시대**: 30일 +16.6% 상승. 포트폴리오 전액 현금 HOLD로 기회비용 약 ₩84만. Council DEFENSIVE 모드에서 NORMAL 전환되었으나 32일 매수 0건은 과도한 보수성.
+2. 🔴 **Propose-Execute Gap**: Context 승격 8건🥇 48h+ 대기. 자동 승격 타임아웃 5/27 00:27 KST 임박.
+3. 🔴 **WTI $92 저유가 7일차**: 글로벌 경기 침체(부정) vs 인플레 완화(긍정) — 해석 충돌. 저유가 → CB Score Oil Risk=False로 DEFENSIVE→NORMAL 전환에 기여.
+4. 🟡 **Swap 441MiB 재축적**: +70MiB/일 추세, 5/27 내 500MiB 도달 예상.
+5. 📚 **Anticipate and Learn 논문**: Hermes idle compute 활용. 대기 상태에서 Action Proposal 사전 생성 및 검증 아키텍처 도입 검토.
+
+### 📋 내일(5/27 수) 체크포인트
+
+- [ ] 🔴 Propose-Execute Gap 해소 (Context 승격 8건 자동 타임아웃)
+- [ ] 🔴 Swap 500MiB threshold 모니터링 (현재 441MiB, +70MiB/일)
+- [ ] 📊 KOSPI 8,000선 유지 방향성
+- [ ] 🟢 USD/KRW 1,500선 안착 여부
+- [ ] 🔴 WTI $92 저유가 지속 여부
+- [ ] 🟡 Council HOLD 바이어스 재평가 (32일간 매수 0건)
+- [ ] 🔴 Self_heal.py 복구 (22일 중단)
+
+---
+
+*Recorded by Hermes Agent Cron on 2026-05-26 16:45 KST*
