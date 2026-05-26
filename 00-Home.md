@@ -74,6 +74,13 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
+- **[Hermes]** 🧠 **Brain Sync 00:00 — Context 승격 48h deadline 초과🥇7건 대기, Swap 499MiB🔴, Council v4.1✅** (2026-05-27 00:00 KST)
+  - **Macro confirmed close 정정 완료**: KOSPI 8,047.51🟢+2.55%, KOSDAQ 1,172.52🟢+0.98%, 환율 1,504.46🟢-0.55%, WTI $92.63🔴-4.11%
+  - **Context 승격 48h deadline 마감** — 🥇8건 중 7건 Steven 승인 대기 중 (Operations-Guide, Vault-구조, 지식베이스, 시스템아키텍처, AI-Council, 트레이딩전략, 사업인덱스)
+  - **Council v4.1 적용 완료** — Analyst 편향 다양화 (Offensive/Balanced/Defensive), CB Score 22/100✅
+  - **Dashboard CB Score ?/100 재발** — 10:30 복구→22:32 회귀 (12h cycle)
+  - **Swap 499MiB** 🔴 — 500MiB 임계. 하루 +138MiB (+38.2%). 재부팅 필요
+  - **MCP 멀티검색**: 40th+ LOW SIGNAL — source diversification 시급
 - **[Hermes]** 📊 **Wiki 확장기 22:10 — 5/26 confirmed close 전면 정정: yfinance 12:33 intraday→22:10 확정 종가 반영** (2026-05-26 22:10 KST)
   - **전면 정정**: wiki/stocks/ 3종 + wiki/macros/ 4종 + wiki/sectors/ 2종 + 00-Home.md — 5/26 confirmed close 확정 종가 반영
   - wiki/sectors/헬스케어·로보틱스·코스닥중소형 3종 5/26 confirmed close 반영

@@ -931,3 +931,94 @@
 - [ ] 🔬 **Language Models Need Sleep** → Brain Sync compression strategy inspiration
 - [ ] 🟡 **MCP multi-search** source diversification (Naver → Google News + Yahoo Finance)
 
+
+## 🧠 Brain Sync — 2026-05-26 23:00 KST
+| - **Time**: 2026-05-26 23:00 KST
+| - **Vault stats**: 1,143 total .md files — wiki/ ~277 files, 10_Wiki/ ~367 files, Context/ 11 files, Agents/ 2 files, Members/ 1 file
+| - **New since 22:01 KST**:
+|   - **MCP 멀티검색 reports (3)** — 22:41~22:43 batch:
+|     1. 미국증시 나스닥 동향 (22:41) — LOW SIGNAL (Naver noise + stale GitHub data)
+|     2. AI 반도체 엔비디아 실적 전망 (22:42) — LOW SIGNAL (Naver noise)
+|     3. 중국 경기 부진 디플레이션 (22:43) — LOW SIGNAL (Naver noise)
+|   - **Hermes Auto-Evolution cycle (22:30)**: Council v4.1 ✅ applied! SelfHeal log freshness monitoring function added. Swap 499MiB 🔴 critical.
+| - **System**: WSL up ~6h. Swap 499MiB 🔴 (500MiB 임계 직전! 하루 +38.2%). CB Score (Nexus) 22/100 ✅. 모의투자 35일차 정체.
+| - **Quality Assessment**: ALL 3 MCP reports LOW SIGNAL — 37th+ consecutive batch. Same stale GitHub repos (heurist-network, cheshire-cat, ArcadeAI, AstrBot, Salesforce MCP-Universe) repeated in all reports.
+| - **Key findings**:
+|   1. Council 프롬프트 v4.1 드디어 실행 완료! (5/21 제안 → 5/26 적용, 6일 gap)
+|   2. Swap 499MiB — 500MiB 임계 직전 (08:30 361→22:30 499, +38.2%). 재부팅 필요.
+|   3. Dashboard CB Score "?/100" 재발 — 10:30 복구 후 12시간만에 회귀
+|   4. 10_Wiki/Macros ← wiki/macros 간 데이터 동기화 불일치 (WTI: $91.46 vs $92.63)
+|   5. Context 승격 17건 🥇8건 48h deadline 초과! (설정된 deadline 5/27 00:27 — 약 1.3h 남음)
+|   6. wiki/sectors/반도체/장비부품/코스닥중소형 — stock links 누락 (로보틱스·헬스케어만 연결)
+| - **No skill-level knowledge to absorb**: MCP reports are market summaries with stale GitHub data. No new arXiv papers in this cycle.
+| - **Next**: 5/27 00:00 KST or next cron trigger
+
+
+## 🧠 Brain Sync — 2026-05-27 00:00 KST
+
+| Key | Value |
+|:----|:------|
+| **Cycle** | 2026-05-27 00:00 KST (00시 정각) |
+| **Status** | 🟡 MINOR — Context 승격 48h deadline 초과, Swap 🔴 위험 지속 |
+| **Vault stats** | ~1,143 total .md files, 10_Wiki/~367 files, Context/ 10 files |
+| **New since 23:00 (1h)** | No new commits. Macro data correction (confirmed close updates) was the last change. |
+
+### Git Changes Since Last Sync (23:00→00:00)
+| File | Change |
+|:----|:-------|
+| 10_Wiki/Macros/KOSPI.md | 🔄 5/26 confirmed close 정정: 8,085.46→**8,047.51** (+2.55%로 하향) |
+| 10_Wiki/Macros/KOSDAQ.md | 🔄 5/26 confirmed close 정정: 1,177.24→**1,172.52** (+0.98%로 하향) |
+| 10_Wiki/Macros/국제유가WTI.md | 🔄 5/26 confirmed close 정정: $91.46→**$92.63** (-4.11%로 상향) |
+| 10_Wiki/Macros/환율.md | 🔄 5/26 confirmed close 정정: 1,506.88→**1,504.46** (-0.55%) |
+| wiki/macros/* (mirror) | 🔄 동일 정정 반영 |
+| wiki/sectors/* (3종) | 🔄 5/26 confirmed close 반영 |
+| wiki/stocks/* (3종) | 🔄 5/26 confirmed close 반영 |
+
+### Quality Assessment
+- **3 MCP 멀티검색 reports** (22:41~22:43): ALL **LOW SIGNAL** — 40th+ consecutive batch with Naver noise + stale GitHub data
+- **No new arXiv papers** this cycle — tech-scavenger pipeline may be inactive
+- **Context 승격**: 17건 제안 중 **🥇8건 48h deadline 초과** (마감: 5/27 00:27 — 현재 초과!)
+  - ✅ 직원용-코딩-아키텍처-가이드 → Context/Company/ (이미 승격 완료됨)
+  - ❌ 7개 🥇 후보 미승인: Operations-Guide, Vault-구조-설계도, Hermes-Git-지식베이스, System-Architecture-Overview, AI-Council-Process, Trading-Strategy-Definition, Business-Portfolio-Index
+  - ❌ 9개 🥈/🥉 후보도 미승인
+  - **48h 자동 승격 기준** 메커니즘이 정의되었으나 트리거되지 않음 (사람 승인 필요)
+
+### System Status (00:00 KST snapshot)
+| Metric | Value | Status |
+|:-------|:------|:------:|
+| Swap | **499MiB** | 🔴 임계 직전 (500MiB) — 재부팅 필요 |
+| Memory | 3.4Gi (45%) | 🟡 안정 |
+| CB Score (Nexus) | 22/100 | ✅ 정상 |
+| CB Score (Dashboard) | **?/100** | 🔴 재발 (10:30 복구→22:32 재발) |
+| 모의투자 | ₩4,929,810 | 🔴 35일차 정체 |
+| Council version | **v4.1** | ✅ 드디어 적용 완료! |
+| self_healing.py | 중단 28일 | 🟡 로그 갱신 함수 추가됨, 트리거 필요 |
+| Chronic Issues | 5건 (35일차) | 🟡 지속 |
+
+### Key Findings
+1. **Council 프롬프트 v4.1 적용 완료!** (6일 gap: 5/21→5/26) — Analyst 편향 다양화 (Offensive/Balanced/Defensive)
+2. **Swap 499MiB 🔴** — 500MiB 임계 도달. 하루 +138MiB (+38.2%). 재부팅 필요.
+3. **Dashboard CB Score "?/100" 재발** — 10:30→22:32, 12시간만에 회귀. 기입 로직 불안정.
+4. **Context 승격 48h deadline 초과** — 7개 🥇 후보 Steven 승인 대기 중. 자동 승격 메커니즘 필요.
+5. **MCP 멀티검색 40th+ LOW SIGNAL** — Naver noise + GitHub stale data. Source diversification 필요 (Google News, Yahoo Finance, arXiv direct).
+6. **10_Wiki/Macros ↔ wiki/macros 동기화 불일치 해소** — confirmed close 정정 적용됨.
+
+### Knowledge Absorbed (no new skill-level knowledge)
+- Macro data correction pattern: yfinance intraday (12:33) → after-hours corrected (22:10) — consistently ~9.5h delay
+- Dashboard CB Score instability: recovered at 10:30 → regressed by 22:32 (12h cycle)
+- Swap growth rate: +38.2%/day at current trajectory → will hit 500MiB before 08:00
+
+### Recommendations for Next Cycle
+1. 🔴 **Swap 재부팅** — 500MiB 도달 시 트레이딩 봇 중단 위험. 가능하면 5/27 장 전 재부팅.
+2. 🔴 **Context 자동 승격 기준** — 48h timeout 메커니즘 구현 또는 Steven에게 Telegram 알림 전송
+3. 🟡 **MCP 멀티검색 source diversification** — Google News + Yahoo Finance 추가 (Naver-only 탈피)
+4. 🟡 **Dashboard CB Score 기입 로직** — 근본 원인 진단 필요 (?/100 재발 패턴)
+5. 🟡 **wiki↔10_Wiki 동기화** — yfinance 확정 종가 반영 시간을 장 마감 후 22:00로 통일
+
+### Action Items (carried forward)
+- [ ] 🔴 **Swap 500MiB** — 재부팅 필요 (추정 08:00 이전 도달)
+- [ ] 🔴 **Context 자동 승격 기준** — 48h timeout 초과. Steven Telegram 알림 발송 필요
+- [ ] 🔴 **Dashboard CB Score ?/100** — 기입 로직 근본 원인 진단
+- [ ] 🔬 **MCP 멀티검색 source diversification** — Google News + Yahoo Finance + arXiv direct
+- [ ] 🔬 **tech-scavenger pipeline** 복구 — arXiv 신규 논문 수집이 중단됨
+- [ ] 🟡 **self_healing.py cron 트리거** — 로그 갱신 함수가 추가됐으나 실행되지 않음

@@ -499,3 +499,28 @@ File unchanged since last read. The content from the earlier read_file result in
 - Context/Members/Agents: **변경 없음**
 
 *Recorded by Hermes Agent Brain Sync on 2026-05-26 20:00 KST — KOSPI 8,085.46 close confirmed*
+
+
+## 2026-05-27 00:00 KST — 자정 뇌동기화 사이클
+
+**상태**: 🟡 MINOR — Context 승격 48h deadline 초과, Swap 🔴 위험
+
+### 📊 시장 요약 (5/26 confirmed close)
+| 지표 | 값 | 변화 |
+|:----|:--|:----:|
+| KOSPI | 8,047.51 🟢 | +199.80p (+2.55%) — 8,000선 돌파 유지! |
+| KOSDAQ | 1,172.52 🟢 | +11.39p (+0.98%) — 약한 상승 |
+| USD/KRW | 1,504.46 🟢 | -0.55% — 원화 강세 |
+| WTI | $92.63 🔴 | -4.11% — 7거래일 중 6일 하락, $90선 위협 |
+
+### 🧠 Vault 지식 동향
+- **Macro 데이터 정정 완료**: yfinance 12:33 intraday → 22:10 confirmed close 일괄 반영 (4개 macro + 3개 sector + 3개 stock)
+- **Context 승격**: 17건 제안 중 🥇 8건 48h deadline **초과** (5/27 00:27 마감)
+  - ✅ 1건만 승격 완료 (직원용-코딩-가이드)
+  - ❌ 7건 미승인: Operations-Guide, Vault-구조, 지식베이스, 시스템-아키텍처, AI-Council, 트레이딩전략, 사업인덱스
+- **MCP 멀티검색**: 40th+ 연속 LOW SIGNAL — Naver noise + stale GitHub
+
+### 🔴 주요 리스크
+1. **Swap 499MiB** — 500MiB 임계 도달, 재부팅 필요
+2. **Dashboard CB Score ?/100 재발** — 12시간만에 복귀
+3. **MCP source diversification 필요** — Naver 의존도 100%

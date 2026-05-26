@@ -2751,3 +2751,11 @@
 - wiki/stocks + wiki/macros 기술적 지표 갱신 완료 (19:11)
 
 *Recorded by Hermes Agent Brain Sync on 2026-05-26 20:00 KST*
+
+
+### 2026-05-27 00:00 KST — Brain Sync
+🟡 **MINOR**: 좌표 정정 4건 (Macro confirmed close 반영), Context 승격 48h timeout, Swap 499MiB 🔴
+- **시장**: KOSPI 8,047.51🟢+2.55%, KOSDAQ 1,172.52🟢+0.98%, 환율 1,504.46🟢-0.55%, WTI $92.63🔴-4.11%
+- **Context 승격 48h deadline 초과** — 🥇8건 중 1건만 승격 완료, 7건 Steven 대기
+- **System**: Swap 499MiB🔴, CB 22/100✅, Dashboard ?/100🔴(재발), Council v4.1✅
+- **MCP**: 40th+ LOW SIGNAL — source diversification 시급

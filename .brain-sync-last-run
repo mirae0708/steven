@@ -1,8 +1,12 @@
-🧠 Brain Sync — 2026-05-26 22:01 KST
-Status: MINOR — 10_Wiki/Macros data refresh only. No Context/Members/Agents changes.
+🧠 Brain Sync — 2026-05-27 00:00 KST
+Status: MINOR — 3 MCP 멀티검색 (LOW SIGNAL 40th+ batch), Context 승격 8건 48h deadline 도래!, Swap 499MiB 🔴 위험
 
-Today (5/26 Tue): KOSPI 8,085.46 (+3.03%), KOSDAQ 1,177.24 (+1.39%)
-USD/KRW 1,506.88, WTI $91.46 (-5.32%)
-Swap 452MiB 🟡 (450→452, stable), Mem 3.4Gi/7.6Gi (44%), Load 0.60
-Context 승격 8건🥇 ~22h 대기 — 48h deadline: 5/27 00:27 KST (⚡ 2.4h 남음!)
-Brain Sync cycle 2026-05-26 22:01 KST complete.
+Today (5/26 Tue): KOSPI 8,047.51 (+2.55%, 8,000선 돌파 유지), KOSDAQ 1,172.52 (+0.98%)
+USD/KRW 1,504.46, WTI $92.63 (-4.11%)
+Context 승격 8건🥇 48h deadline 초과 (5/27 00:00 — 마감!)
+Swap 499MiB 🔴 (500MiB 임계 — 재부팅 필요!)
+Chronic Issues: yfinance .KS NaN (35일), KiwoomAuth 8050 (35일), Dashboard CB ?/100 재발 (12h 재발)
+MCP 멀티검색: 40th+ 연속 LOW SIGNAL — Naver noise + GitHub stale data 반복 (source diversification 필요)
+
+Brain Sync cycle 2026-05-27 00:00 KST complete.
+
