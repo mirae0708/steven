@@ -954,6 +954,53 @@
 | - **Next**: 5/27 00:00 KST or next cron trigger
 
 
+## 🧠 Brain Sync — 2026-05-27 06:00 KST
+
+| Key | Value |
+|:----|:------|
+| **Cycle** | 2026-05-27 06:00 KST (석가탄신일 휴장) |
+| **Status** | 🟢 STANDARD — 정기 점검, 10_Wiki/_Index.md 갱신 (데이터 241→493건으로 대폭 수정) |
+| **Vault stats** | 1,146 total .md files (🗄️ 신기록), 10_Wiki 493 papers+reports, wiki/ 279 files |
+| **New since 00:46** | Tech Scavenger 배치 없음 (0 new arXiv/GitHub today). MCP reports only. |
+
+### Git Changes Since Last Sync (00:46→06:00)
+| File | Change |
+|:----|:-------|
+| 10_Wiki/_Index.md | 🟢 **전면 갱신** — 241→493 docs 반영, Market Data & Macros 섹션 신설 |
+| 10_Wiki/brain_sync_log.md | 🟢 본 세션 엔트리 추가 |
+| wiki_update_log.md | 🟡 루틴 갱신 예정 |
+
+### System Status (06:00 KST snapshot)
+| Metric | Value | Status |
+|:-------|:------|:------:|
+| Uptime | 2d 12h 20m | 🟢 안정 |
+| Memory | 3.4Gi/7.6Gi (45%) | 🟢 정상 |
+| Swap | **618MiB** | 🔴🔴 500MiB 크게 초과 (00:46 511→06:00 618, +107MiB/5h, 21MiB/h 가속) |
+| Load Avg | 0.39 (mild - 휴장일 조용) | 🟢 |
+| Gateway / WebUI | unknown (not checked in detail) | 🟡 |
+
+### Key Findings
+1. **10_Wiki/_Index.md 대폭 개선**: 실제 파일 기반 카운트 반영 (LI: 58→126, AI_Agents: 41→78, MCP: 3→15, Deep_Learning: 13→23, CV: 11→17, RL: 10→20, DevTools: 11→23 등). Market Data & Macros 섹션 신설.
+2. **Swap 618MiB 🔴** — 500MiB 임계 대비 +118MiB 초과. 21MiB/h 속도로 증가 중. 5/28(목) 장 마감 후 재부팅 권장.
+3. **오늘 석가탄신일 휴장** — 5/26 confirmed close (KOSPI 8,047.51 / KOSDAQ 1,172.52 / 환율 1,504.46 / WTI $92.63) 유지.
+4. **MCP 멀티검색 45회+ 연속 LOW SIGNAL** — 근본적 재설계 필요.
+5. **Tech Scavenger 미실행** — 5/26 13:20 배치 이후 신규 논문 수집 없음. 체크 필요.
+6. **Context 승격 48h deadline** — 5/27 00:27 마감, 현재 5h 30m 초과! 7개 🥇 후보 Steven 승인 대기 중.
+
+### Knowledge Absorbed from This Cycle
+- **"Language Models Need Sleep"** (arXiv 2605.26099): Sleep-like consolidation → 주기적 KV 캐시 정리 + SSM 빠른 가중치 업데이트. Hermes의 장기 맥락 관리에 직접 적용 가능. Periodic context consolidation 패턴으로 brain state 압축에 활용할 수 있음.
+- **"Anticipate and Learn"** (arXiv 2605.25971, ProAct): 유휴 시간 활용 사전 계산 아키텍처. Hermes의 idle-time (텔레그램 응답 대기 중)에 다음 태스크 예측/정보 수집. ProActEval 벤치마크에서 턴 수 -14.8%, 환각 -28.1% 개선. **직접 적용 가능**: Brain Sync idle time 활용.
+- **"From Model Scaling to System Scaling"** (arXiv 2605.26112): Harness 개념의 공식화 — memory substrate, context constructor, skill-routing layer, orchestration loop, verification-and-governance layer. **Hermes 6-server MCP 스택과 직접 대응**: 우리의 MetaClaw(두뇌)+CowAgent(입출력)+open-design(창작) 아키텍처가 harness 개념의 구체적 구현.
+- **"Multi-Agent Systems are Mixtures of Experts"**: Mixture of Experts 관점에서 다중 에이전트 시스템 해석.
+- **Swap 급가속 4단계 패턴**: S1(0~100MiB 완만) → S2(100~300MiB 가속) → S3(300~500MiB 급가속) → S4(500MiB+ 초가속 20MiB/h+). 현재 S4 단계.
+
+### Action Items
+- [ ] 🟢 10_Wiki/_Index.md 갱신 완료 (오래된 241→493 정정)
+- [ ] 🔴 Swap 618MiB — 5/28 장 마감 후 재부팅 예약
+- [ ] 🔴 Tech Scavenger pipeline 작동 확인
+- [ ] 🔴 Context 승격 자동화 — 48h deadline 초과 알림
+- [ ] 🟡 ProAct 패턴 Brain Sync 적용 검토
+
 ## 🧠 Brain Sync — 2026-05-27 00:00 KST
 
 | Key | Value |
