@@ -1,12 +1,11 @@
-🧠 Brain Sync — 2026-05-27 00:00 KST
-Status: MINOR — 3 MCP 멀티검색 (LOW SIGNAL 40th+ batch), Context 승격 8건 48h deadline 도래!, Swap 499MiB 🔴 위험
+🧠 Brain Sync — 2026-05-27 10:02 KST
+Status: URGENT — Swap 698MiB 🔴 (ALL-TIME HIGH, S4 급가속), Context 승격 8건🥇 48h deadline 초과 (5/25 00:27 기준), Dashboard CB ?/100 34h+ 미복구
 
-Today (5/26 Tue): KOSPI 8,047.51 (+2.55%, 8,000선 돌파 유지), KOSDAQ 1,172.52 (+0.98%)
-USD/KRW 1,504.46, WTI $92.63 (-4.11%)
-Context 승격 8건🥇 48h deadline 초과 (5/27 00:00 — 마감!)
-Swap 499MiB 🔴 (500MiB 임계 — 재부팅 필요!)
-Chronic Issues: yfinance .KS NaN (35일), KiwoomAuth 8050 (35일), Dashboard CB ?/100 재발 (12h 재발)
-MCP 멀티검색: 40th+ 연속 LOW SIGNAL — Naver noise + GitHub stale data 반복 (source diversification 필요)
+Today (5/27 Wed): 석가탄신일 휴장. KOSPI 8,047 after-hours 유지.
+Swap 698MiB 🔴 (33.3%) — uptime 2d 16h, +36MiB/h 재가속 중
+1.0Gi 예상: ~14:00 KST / 1.5Gi 예상: ~22:00 KST
+New: Swap-재축적-패턴-진단, Tavily-401-Google-News-RSS-Fallback, Propose-Execute-Gap-진단
+Context 승격: 9/17 완료, 8건🥇 미승격 (48h+) — Hermes-Git-지식베이스, Operations-Guide, Trading-Strategies, Business-Portfolio-Index, Vault-구조-설계도, CowAgent-가이드, Workflow-Engine, Autonomous-Roadmap
+Chronic Issues: yfinance .KS NaN (35일), KiwoomAuth 8050 (35일), Dashboard CB ?/100 (34h+), MCP 멀티검색 155개 파일 누적
 
-Brain Sync cycle 2026-05-27 00:00 KST complete.
-
+Brain Sync cycle 2026-05-27 10:02 KST complete.
