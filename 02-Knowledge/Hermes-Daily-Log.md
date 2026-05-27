@@ -2759,3 +2759,31 @@
 - **Context 승격 48h deadline 초과** — 🥇8건 중 1건만 승격 완료, 7건 Steven 대기
 - **System**: Swap 499MiB🔴, CB 22/100✅, Dashboard ?/100🔴(재발), Council v4.1✅
 - **MCP**: 40th+ LOW SIGNAL — source diversification 시급
+
+
+### 🧠 Brain Sync — 2026-05-27 09:00 KST
+**Status: ROUTINE — Context/ 문서 11개 전수 스캔 완료, 변경 없음**
+
+| Metric | Value | Change |
+|--------|-------|:------:|
+| Context/ | 11 files | 🟢 All 9 initial promotions confirmed |
+| Members/ | 1 file | 🟡 LLM-Wiki-개선아이디어 (draft, Steven) |
+| Agents/ | 2 files | 🟢 역할과-책임 + Claude-Code-명령패턴 |
+| 10_Wiki/ | 526 files | 🟢 AI 논문 526건 요약 |
+| wiki/ | 279 files | 🟢 stocks/sectors/macros |
+| Total .md | 1,164 files | 🟢 Vault 규모 유지 |
+| Context 승격 | 16건 🥇🥇🥇 미승인 | 🔴 48h+ deadline 초과 (5/27 00:27 KST) |
+| Swap (06:30) | 622MiB 🔴🔴🔴 | ALL-TIME HIGH, 사상 최고 기록 경신 |
+
+**Context 승격 현황 (미승인 16건):**
+- 🥇 **7건 최우선** (48h+ overdue): Operations-Guide, Vault-구조-설계도, Hermes-Git-지식베이스, Trading-Strategies, Business-Portfolio-Index, System-Architecture, AI-Council
+- 🥈 **6건**: CowAgent-사용가이드, Workflow-Engine-Selection, Onboarding, Autonomous-Agent-Roadmap, Obsidian-Plugin-Setup, Business-Simulation-Report
+- 🥉 **3건**: Claude-System-Prompt, GitHub-지식허브, Macro-Indicator-Template
+
+**지식 그래프 제안:**
+1. `wiki/stocks/삼성부광` ↔ `wiki/stocks/에이치엘사이언스` ↔ `wiki/stocks/나우로보틱스` (3개 포트폴리오 종목 상호 참조 링크 없음)
+2. `Context/Product/Quote-Tool-연동가이드` ↔ `Context/Product/텔레그램-명령어-모음` (견적 요청 명령어 참조)
+3. `Context/TechStack/WSL-문제해결-가이드` ↔ `Context/Product/Claude-Code-하이브리드-환경` (WSL 환경 구축 관련)
+4. `03_Projects/Culture_Economy_Synergy_Business_Plan/` (신규 9개 MD 파일) ↔ `00-Home.md` (비즈니스 섹션 연결 누락)
+
+*Recorded by Hermes Agent Brain Sync on 2026-05-27 09:00 KST*

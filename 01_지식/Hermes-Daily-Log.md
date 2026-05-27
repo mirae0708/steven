@@ -595,3 +595,151 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 5. **Hermes 3442 commits behind 🟡** — 업데이트 필요
 
 *Recorded by Hermes Agent on 2026-05-27 04:46 KST — Swap 608MiB 🔴🔴🔴 급가속 중 | 석가탄신일 휴장 | Council v4.1 ✅*
+
+---
+
+## 2026-05-27 08:45 KST — Pre-Market 점검 (휴장, Swap 698MiB 위기 고조)
+
+**상태**: 🔴🔴🔴 CRITICAL — Swap 698MiB, 90MiB/h 급가속!, 휴장일이라 시스템 부담 낮아도 증가 지속
+
+### 📊 시스템 현황 (08:45 KST)
+
+| 항목 | 04:46 | 08:45 | 변화 |
+|:-----|:-----:|:-----:|:----:|
+| **Swap** | 608MiB 🔴🔴🔴 | **698MiB 🔴🔴🔴🔴** | **+90MiB (+14.8%) in 4h** |
+| Memory | 3.4Gi (45%) | 3.3Gi (43%) | -100MiB (안정) |
+| Load Avg | 1.56 (Nexus 재시작) | 0.20 / 0.15 / 0.18 | 🟢 안정화 |
+| WSL Uptime | 2d 10h 50m | 2d 15h 4m | +4h 14m |
+
+### 📊 Swap 위기 — 시간별 증가율 추이
+
+| 시간 | Swap | 증가율 | 비고 |
+|:----|:----:|:------:|:-----|
+| 5/26 22:30 | 499MiB | 기준 | 임계 진입 직전 |
+| 5/27 00:46 | 511MiB | +6MiB/h | 500MiB 최초 초과 |
+| 5/27 04:30 | 608MiB | +26MiB/h (4x) | 급가속 시작 |
+| 5/27 06:00 | 618MiB | +5MiB/h (감속) | Brain Sync 사이클 |
+| **5/27 08:45** | **698MiB 🔴🔴🔴** | **+36MiB/h (재가속)** | **2.0Gi 대비 35% 사용** |
+
+**위기 분석**: 06:00→08:45, 2h 45m 동안 +80MiB 증가. 06:00 Brain Sync 사이클 이후 소폭 감속했으나 08:00 이후 재가속. 2.0Gi 제한 대비 35% 사용 — 아직 여유는 있지만 이 추세면 5/28 오전 중 1.0Gi 도달 예상. **5/28(목) 장 마감 후 재부팅 필수.**
+
+### 🗓️ 오늘의 주요 이벤트
+
+- **5/27(수) — 석가탄신일, 거래소 휴장** (다음 거래일: 5/28 목)
+- Council v4.1 첫 장중 분석은 5/28(목) 오픈으로 연기
+- **06:00 Brain Sync**: _Index.md 전면 갱신 완료 (241→493 docs, 실제 파일 기반으로 정정)
+- **06:00~06:52**: MCP 멀티검색 6건 실행 (KOSPI/KOSDAQ 마감 동향, OpenAI GPT-5, 환율, 트럼프 관세, HBM4, 글로벌 금융시장)
+- **06:11~**: 문화×경제 시너지 인텔리전스 수집 실행 — Tavily 401 에러 → Google News RSS fallback 성공, 42개 검색결과 → 9개 MD 파일 생성
+  - 수익모델 7개 (K-food 30개 허브, OliveYoung vs SILICON2 K-뷰티 美 유통, BTS 컴백 머천다이징, K-뷰티 유럽·중동·중남미 다각화, DHL SME 크로스보더, K-콘텐츠 수출, 글로벌 푸드 트레이드)
+  - 물류 연계 1개 (FedEx 한-대만 직항)
+  - 인사이트 1개 (K-컬처 글로벌 트렌드)
+
+### 🔴 주요 리스크 (08:45 기준)
+
+| # | 리스크 | 심각도 | 상태 |
+|:-:|:-------|:------:|:-----|
+| 1 | **Swap 698MiB** — 2.0Gi 대비 35%, 재가속 중 | 🔴🔴🔴🔴 | 2.0Gi 한도 도달 전 재부팅 필요 |
+| 2 | **Dashboard CB Score ?/100** — 12h+ 미복구 | 🔴🔴 | 04:46 이후 추가 복구 없음 |
+| 3 | **KiwoomAuth 8050** — 35일차 지속 | 🔴 | 지정단말기 인증 실패 |
+| 4 | **MCP 43+회 연속 LOW SIGNAL** | 🟡 | Google News 전환 시도했으나 Tavily 401 |
+| 5 | **Context 승격 7건 48h+ deadline 초과** | 🟡 | Steven 승인 대기 중 |
+
+### ✅ 정상 운영
+
+| 항목 | 상태 |
+|:-----|:------|
+| Council v4.1 | ✅ 정상 (5/28 목 첫 장중 분석 예정) |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 Alive |
+| Hermes Gateway (port 8642) | ✅ active |
+| Nexus | ✅ 정상 사이클 |
+| Cron Jobs | ✅ 9개 등록 |
+| Brain Sync | ✅ 06:00 정상 완료 |
+
+### 📋 문화×경제 시너지 신규 지식 (5/27 수집)
+
+| 파일 | 내용 |
+|:----|:------|
+| K-food 30개 신규 허브 | 글로벌 식품 수출 확대 전략 |
+| OliveYoung vs SILICON2 美 유통 전쟁 | K-뷰티 美 유통 채널 경쟁 격화 |
+| BTS 컴백 머천다이징 | 79회 투어 물류 기회 |
+| K-뷰티 글로벌 다각화 | 유럽·중동·중남미 진출 |
+| DHL + 알리바바 Trade Assurance | SME 크로스보더 물류 |
+| K-콘텐츠 수출 기록 | 팬덤 경제 분석 |
+| FedEx 한-대만 직항 | 동아시아 항공 물류 확장 |
+
+*Recorded by Hermes Agent on 2026-05-27 08:45 KST — Swap 698MiB 🔴🔴🔴🔴 위기 고조 | 석가탄신일 휴장 | 문화×경제 인텔리전스 9개 파일 신규 수집*
+
+
+---
+
+## 🧠 Brain Sync — 2026-05-27 09:00 KST
+
+### 📋 스캔 결과 요약
+
+| 항목 | 상태 | 상세 |
+|:-----|:----:|:-----|
+| Context/ (11개 파일) | 🟢 | 9개 문서 전수 독회 완료 — 내용 숙지 |
+| Members/ (1개 파일) | 🟡 | LLM-Wiki-개선아이디어 — Steven 초안, 6개 승격 완료 확인 |
+| Agents/ (2개 파일) | 🟢 | Hermes 역할과 책임 + Claude Code 명령패턴 |
+| 10_Wiki/ (526개) | 🟢 | AI 연구 논문 요약 — 규모 유지 |
+| wiki/ (279개) | 🟢 | 주식/섹터/매크로 — 00-Home 동기화 완료 |
+| _Private/ (1개) | 🟢 | 건강 주치의 — 대장님 전용 |
+| 총 1,164개 .md | 🟢 | Vault 정상 운영 중 |
+
+### 🔴 Context 승격 48h Deadline 초과 (5/27 00:27 KST)
+
+**16건 미승인 현황:**
+
+| 우선순위 | 건수 | 문서명 |
+|:--------:|:----:|:-------|
+| 🥇 최우선 | 7 | Operations-Guide, Vault-구조-설계도, Hermes-Git-지식베이스, Trading-Strategies, Business-Portfolio-Index, System-Architecture (중복 제안), AI-Council (중복 제안) |
+| 🥈 | 6 | CowAgent-사용가이드, Workflow-Engine-Selection, Onboarding, Auto-Agent-Roadmap (이미 Context 있음), Obsidian-Plugin-Setup, Simulation-Report |
+| 🥉 | 3 | Claude-System-Prompt, GitHub-지식허브, Macro-Indicator-Template |
+
+> ⚠️ System-Architecture, AI-Council, Auto-Agent-Roadmap은 이미 Context에 승격 완료됨 (중복 제안). 실제 미승인 신규 건수: **12건**
+
+### 🔴 최신 시스템 현황 (06:30 KST 기준)
+- Swap 622MiB 🔴🔴🔴 ALL-TIME HIGH! — 602MiB(5/22) 돌파
+- Council v4.1 정상 (SELL 18-19% 일관, HOLD 바이어스)
+- Dashboard CB Score ?/100 🔴 30h+ 미복구
+- KOSPI 8,047.51 🟢 after-hours 안정
+- 메모리 3.4Gi/7.6Gi (45%) 🟢
+- WSL Uptime 2d 12h 53m
+
+### 🟢 신규 지식 흡수 완료
+
+**Context/Company/**
+1. **직원용-코딩-아키텍처-가이드**: 6가지 아키텍처 패턴, Template Method, Circuit Breaker, 3단계 파이프라인, 단일 진입점 원칙, 네이밍 컨벤션, 테스트 전략, 안티패턴 금지 목록
+
+**Context/Product/**
+2. **시스템-아키텍처**: WSL2→tmux→서비스 계층, 통신 흐름(Telegram→Hermes→Nexus), CB Score(0-100), 6개 실행 모드
+3. **AI-Council-분석방법론**: 3분석가(기술적/뉴스모멘텀/리스크관리), 다수결 투표 테이블, CB Score 포지션 사이징
+4. **자율형-에이전트-로드맵**: 4단계 로드맵(Phase 1~4), MCP(25k⭐), LangGraph(12k⭐), Mastra, MS Agent Framework
+5. **Quote-Tool-연동가이드**: YOUNGLOG 견적 시스템 v9.0, 32국가/68항구/438운임레코드, 해상4모드+항공3티어
+6. **텔레그램-명령어-모음**: 시장/지식/물류/시스템 4개 카테고리 20+ 명령어, "대장님" 호칭, require_mention:false
+7. **Claude-Code-하이브리드-환경**: Cloud(Claude API)↔Local(Hermes) 전략, ACP 위임 패턴, 5개 시나리오
+
+**Context/TechStack/**
+8. **WSL-문제해결-가이드**: 브라우저/파일시스템/성능/네트워크/서비스 7개 카테고리, tmux 세션 구조(8개), 복구 절차
+9. **물류-ERP-연동가이드**: MRCloud ERP, 인보이스 자동화 3단계, SEA1002/AIR1002/EXP1002 필드 매핑, Double OK 필수, 5대 Master Directive
+
+**Agents/Hermes/**
+10. **역할과-책임**: 절대 기다리지 않는다 원칙, 트리거 7종, 매시 30분 Brain Sync, 매일 16시 Daily Log
+11. **Claude-Code-명령패턴**: 4가지 호출 패턴(Print/tmux/Review/Bulk), 실제 명령어 템플릿
+
+### 🟡 지식 그래프 연결 제안
+
+1. **wiki/stocks/삼성부광 ↔ wiki/stocks/에이치엘사이언스 ↔ wiki/stocks/나우로보틱스**: 포트폴리오 3종목, 상호 참조 [[링크]] 전무. 최근 KOSPI 8,000 급등에도 보유 종목 3개 모두 적자 — 공통 원인 분석 링크 필요
+2. **Context/Product/Quote-Tool-연동가이드 ↔ 텔레그램-명령어-모음**: 견적 요청 명령어(`견적 내줘`) 문서에 Quote Tool 상세 문서 링크 없음
+3. **Context/TechStack/WSL-문제해결-가이드 ↔ Claude-Code-하이브리드-환경**: WSL 환경 구축 섹션(Claude Code 설치, LM Studio)이 WSL 문서에 참조 없음
+4. **03_Projects/Culture_Economy_Synergy_Business_Plan/ ↔ 00-Home.md**: 신규 9개 K-컬처 물류 사업 분석 문서 (5/27 07:03 KST 생성) — 00-Home.md 비즈니스 섹션에 링크 누락
+5. **01_지식/Hermes-Auto-Evolution-*.md (30+개) ↔ 02-Knowledge/Hermes-Daily-Log.md**: 자동 진화 로그가 방대해졌으나 Daily Log와 상호 참조 없음. 타임라인 통합 검색을 위한 인덱스 페이지 제안
+
+### 📋 다음 Brain Sync 체크포인트 (00:00 KST)
+- [ ] Context 승격 자동화 — 48h 타임아웃 정책 시행 여부
+- [ ] Swap 700MiB+ threshold 모니터링
+- [ ] KOSPI 8,000선 유지 + 오늘 장 분석 결과
+- [ ] 신규 Culture_Economy_Synergy 문서 9건 00-Home.md 등록
+- [ ] Council v4.1 장중 첫 분석 결과
+
+*Recorded by Hermes Agent Brain Sync on 2026-05-27 09:00 KST*

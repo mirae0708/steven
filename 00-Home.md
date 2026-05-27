@@ -74,6 +74,11 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
+- **[Hermes]** 🧠 **Brain Sync 09:00 — Context 11개 문서 전수 스캔 완료, 12건 승격 대기🚨, 지식 그래프 5개 제안** (2026-05-27 09:00 KST)
+  - **Context 승격 12건 대기** (48h+ overdue): Operations-Guide, Vault-구조, 지식베이스, 트레이딩전략, 사업인덱스 등
+  - **지식 그래프 제안**: 포트폴리오 3종목 상호참조, Culture_Economy 9건 00-Home 등록, Auto-Evolution 인덱스
+  - **Swap 622MiB 🔴🔴🔴 ALL-TIME HIGH!** — 602MiB(5/22) 기록 경신. WSL 재부팅 시급
+  - **Council v4.1** — 장중 첫 분석 대기 (09:00 KST 오픈 후)
 - **[Hermes]** 🧠 **자정 점검 사이클 — Swap 511MiB🔴🔴 500MiB 임계 초과!, Council v4.1✅** (2026-05-27 00:46 KST)
   - **Swap 511MiB 🔴🔴** — 500MiB 최초 초과! 22:30 499→00:46 511 (+12MiB/2h). 08:00 pre-market 540MiB+ 전망.
   - **Council v4.1** — 첫 장중 분석 대기 중. 오늘(5/27) 09:00 오픈 후 평가.
@@ -166,6 +171,14 @@
   - 삼성부광 8,480→8,460원 (RSI 22.7), 에이치엘 16,900→16,660원 (RSI 32.1)
   - KOSPI/KOSDAQ 5/11 지수 NaN (post-midnight regression) — 5/8 확정가 유지
   - WTI $99.03→$98.06 (5/11 신규 거래일), USD_KRW 1,470.78→1,470.44
+- **[Hermes]** 🔴 08:45 시스템 점검 — Swap 698MiB 위기 고조, 휴장일 안정 (2026-05-27 08:45 KST, 수요일 석가탄신일 휴장)
+  - **Swap 698MiB 🔴🔴🔴🔴** — 2.0Gi 대비 35%, 06:00→08:45 +80MiB 재가속, 5/28(목) 장 마감 후 재부팅 필수
+  - **06:00 Brain Sync**: _Index.md 전면 갱신 (241→493 docs, 실제 파일 기반 정정)
+  - **문화×경제 시너지 인텔리전스 9건 신규 수집**: Tavily 401→Google News RSS fallback 성공
+    - K-food 30개 허브, OliveYoung vs SILICON2 美 유통, BTS 컴백 79회 투어 물류, K-뷰티 유럽·중동·중남미, DHL+SME 크로스보더, FedEx 한-대만 직항 등
+  - **MCP 멀티검색 6건** (KOSPI·HBM4·환율·트럼프관세·GPT-5·연준금리) — 전원 LOW SIGNAL
+  - Trinity ✅, Gateway ✅, Nexus ✅, Council v4.1 첫 분석 5/28(목) 예정
+  - 미해결 이슈 36일차 (Kiwoom 8050, Dashboard ?/100, Context 승격 7건 48h+ 지연)
 - **[Hermes]** 🔥 LLM Wiki 주식 분석 시스템 확장 완료 (2026-05-11)
   - wiki/stocks/ + wiki/macros/ 구조로 전환
   - 거시경제 지표 4종 주기적 갱신 (KOSPI/KOSDAQ/환율/WTI)
