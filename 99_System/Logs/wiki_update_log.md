@@ -1,6 +1,7 @@
           1|     1|     1|| Date | Time | Action | Details |
      1|     1|     1||:-----|:-----|:-------|:--------|
-     1|     1|     1||2026-05-26 | 13:00 | 🧠 Brain Sync (매시) | **MINOR — Context/Members/Agents 미변동 (12:01 이후). KOSPI 8,108(+3.32% 8,100돌파), WTI $91.62, USD/KRW 1,506.68. CB Score 22/100 ✅, Swap 441MiB 🟡. Propose-Execute Gap 진단 신규 생성. Context 승격 17건 44h+ 미승인. |
+     1|     1|     1||2026-05-27 | 14:11 | 📊 Wiki 확장기 — 5/27 Intrada yfinance 12:11→14:11 반영: KOSPI 8,436🟢🟢+4.82% 사상 최고치!, KOSDAQ 1,147🔴-2.19%, 개별종목 전반 하락 (삼성부광 7,070🔴-2.08%, 에이치엘 14,670🔴-2.40%, 나우로보틱스 24,250🔴-7.27% 급락), USD/KRW 1,500🟢-0.97%, WTI $92.25🔴. **변경: 12건** (KOSPI, KOSDAQ, 삼성부광, 에이치엘, 나우로보틱스, sectors헬스케어·로보틱스, 00-Home.md 지표7종, 10_Wiki/Macros 4종 dual sync). (12:11 KST intraday snapshot, 미확정) |
+||2026-05-26 | 13:00 | 🧠 Brain Sync (매시) | **MINOR — Context/Members/Agents 미변동 (12:01 이후). KOSPI 8,108(+3.32% 8,100돌파), WTI $91.62, USD/KRW 1,506.68. CB Score 22/100 ✅, Swap 441MiB 🟡. Propose-Execute Gap 진단 신규 생성. Context 승격 17건 44h+ 미승인. |
      2|     2|     2||:-----|:-----|:-------|:--------|
      3|     3|     3||2026-05-05 | 13:10 | 📊 Wiki 확장기 Raw 갱신 스캔 | **yfinance 5/5 USD_KRW/WTI 재정정 감지**: USD_KRW **1,475.24원**(RSI 53.1, BB 44.6%, +0.24%), WTI **$104.34**(5/5, RSI 62.6, BB 82.2%, -1.95%). 5/5 어린이날 휴장 — 신규 거래일 없음. 개별종목(9,540·17,550)·KOSPI(6,937)·KOSDAQ(1,214) 일치 — 변경 없음. 환율·국제유가WTI·KOSPI(WTI/환율 참조) 3개 문서 갱신 완료. 변경: 3건 (환율, 국제유가WTI, KOSPI). |
      4|     4|     4||2026-05-05 | 16:10 | 📊 Wiki 확장기 Raw 재집계 스캔 | **USD_KRW 5/5 yfinance 재정정 반영**: 1,475.24→**1,473.27원**(RSI 52.1, BB 38.3%, +0.10%), WTI **$104.42**(5/5, RSI 62.7, BB 82.5%, -1.88%). 개별종목(삼성부광·에이치엘사이언스)·KOSPI(6,937)·KOSDAQ(1,214) 변동 없음. 환율·국제유가WTI·KOSPI 3개 문서 재갱신 완료. 변경: 3건 (환율, 국제유가WTI, KOSPI). |
