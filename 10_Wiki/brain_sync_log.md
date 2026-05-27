@@ -1170,3 +1170,17 @@
 | **Context 승격 후보 검토**: NO NEW candidates found. 10_Wiki/ is MCP auto-search logs (research papers) — already categorized as low-value for Context promotion per Context_승격_제안서.
 | **Next**: Brain Sync at next scheduled interval
 
+
+## 🧠 Brain Sync — 2026-05-28 07:00 KST
+
+| 항목 | 내용 |
+|:-----|:------|
+| **Time** | 2026-05-28 07:00 KST |
+| **Vault stats** | Context/ 11 docs, Members/ 1 doc, Agents/ 2 docs. 10_Wiki/ 530+ docs. Total: ~1200 .md files. |
+| **Changes since 05:02 KST** | 6 new MCP multi-search reports committed (git HEAD~1..6 commits): 글로벌증시, AI-MCP생태계, 해상운임, K-배터리, 반도체규제, 원달러환율. Context/Members/Agents content hashes unchanged. 00-Home.md updated (04:45 entry). |
+| **Context absorbed** | All 11 Context docs stable and unchanged. Knowledge: (1) CB Score ?/100 버그 — tmux 패턴 "Score=" 미존재 (5/17 이후). (2) GUARDIAN ERROR 지속 — 229000.KQ buy_price=0. (3) Council v4.1→v3.0 Fallback 지속. |
+| **MCP reports** | 6 new reports (all 06:41~06:51 batch). Key signals: AI Agent MCP ecosystem trending (AstrBot 33K⭐, Cheshire Cat 3K⭐). WTI $89.89 급락. KOSPI 8,228.70 사상최고. 원화 강세 1,500선. |
+| **Context 승격 status** | 12건🥇 still overdue (7일+). 제안서 작성된 지 3일. 사람 승인 대기 중. |
+| **00-Home.md** | Market link: [[05_시장현황_20260528]] ✅ (5/28로 갱신됨) |
+| **Current System State** | WSL 재부팅 성공 (03:35) → Swap 0B ✅. But GUARDIAN ERROR 🔴🔴🔴, Council Fallback 🟡, CB Score ?/100 🔴 지속. |
+| **Next** | Scheduled brain sync. |
