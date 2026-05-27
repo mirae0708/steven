@@ -1,17 +1,11 @@
-🧠 Brain Sync — 2026-05-27 16:00 KST
-Status: NO_CHANGE — Context/Members/Agents 변경 없음
-Chapter 18: 장 마감 후 첫 사이클 — Swap 852MiB 회복 모니터링 중
+🧠 Brain Sync — 2026-05-27 17:04 KST
+Status: CHANGES_DETECTED — 00-Home.md 거시경제 섹션 5/26→5/27 confirmed close 정정 (KOSPI 8,436, KOSDAQ 1,147, 환율 1,500, WTI $92.25)
+Chapter 19: 5/27 장 마감 후 — KOSPI 8,435.77 사상최고!
 
-Today (5/27 Wed): KOSPI 8,438 장중 사상최고 🟢🟢 (석가탄신일 오해 정정 → 정상 거일).
-Swap 852MiB 🔴 (42.6%) — uptime 2d 22h. Gateway 1,303MB RSS ALL-TIME HIGH.
-장 마감 후 Gateway 부하 감소 예상 → Swap 회복 패턴 관찰 구간.
-MCP 멀티검색 158회 LOW SIGNAL — 크론 중단 지속.
-Context 승격: 8건🥇 미승인 (48h deadline 38h+ 초과)
-Council v4.1: HOLD 9일차 — 장 마감 후 재평가 예상.
+Today (5/27 Wed): KOSPI 8,435.77 🟢🟢 사상최고 (+4.82%)! Swap 912MiB 🔴 (46%).
+KOSDAQ 1,146.8 🔴 -2.19% — KOSPI 대비 이원화 심화.
+개별종목 전멸: 삼성부광 7,070(-2.08%), 에이치엘 14,670(-2.40%), 나우로보틱스 24,250(-7.27%)
+환율 1,500.11(-0.97%) 원화강세, WTI $92.25(-4.50% 5/26).
+Vault stats: Context 11, Members 1, Agents 2 (변경 없음 - 5/25 이후 정적)
 
-New since last sync (13:02 KST → 16:00 KST): 변경 없음. 모든 Context/Members/Agents 정적.
-Vault stats: Context 11, Members 1, Agents 2, 10_Wiki ~542, Total ~1182 .md
-
-Key Insights: (1) 장 마감 후 Swap 회복 여부가 핵심 — Gateway 부하 감소 시 Swap 852→600MiB 이하 회복 예상. (2) Context 승격 86h+ 지연 — 타임아웃 정책 시행 여부 Steven 결정 필요. (3) MCP 멀티검색 중단 유지 — 대체 소스 전환 미진행. (4) 2건 HIGH SIGNAL 논문(MUSE-Autoskill, ReMoE) — 추후 Hermes 업그레이드 참고.
-
-Brain Sync cycle 2026-05-27 16:00 KST complete.
+Context 승격: 🥇8건 대기 (86h+ 지연) — Steven 결정 필요.

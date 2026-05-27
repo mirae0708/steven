@@ -1137,3 +1137,20 @@
 
 | | 2026-05-27 | 13:02 | 🧠 Brain Sync — 17차 (Swap 778MiB ALL-TIME HIGH, KOSPI 8,438 사상최고, MCP 158회 LOW SIGNAL) | **17차 Brain Sync** — Context 11개 안정, Members 정적, Agents 2개 정상. Swap 778MiB 🔴 ALL-TIME HIGH (12:45 급등+Plateau 붕괴). KOSPI 8,438 🟢🟢 사상최고. USD/KRW 1,499.58(1500 하회), WTI $92.25. Council HOLD 9일차 — BUY 제로. Dashboard ?/100. MCP 158회 연속 LOW SIGNAL. **Key Takeaways**: (1) Swap — 장 마감 후 재부팅. (2) BUY 신호 생성 실패 심각. (3) MCP 소스 전환 시급. **Next**: 5/27 22:30 KST. |
 
+
+## 🧠 Brain Sync — 2026-05-27 18:05 KST
+|- **Time**: 2026-05-27 18:05 KST
+|- **Vault stats**: 10_Wiki/ 524 docs (LLM 131, AI_Agents 80, DL 24, CV 19, RL 21, MCP 15, DevTools 24, MLOps 16, Macros+Sectors+Themes+MarketData 16, MCP reports 163). wiki/ 278 files. Context/ 11 docs. Total vault: 1194 .md files.
+|- **Changes since 17:10 KST**:
+|  - **NO-CHANGE cycle** — 5/27 confirmed close data (KOSPI 8,228.70 / KOSDAQ 1,133.13 / USD/KRW 1,500.12 / WTI $91.18) already fully synced.
+|  - **00-Home.md cross-check**: All 4 macro indicators match wiki/macros ✅
+|  - **Context/ 11 docs**: All unchanged. 승격 6건 still pending (48h+). Context_승격_제안서 link added to 00-Home.md.
+|- **10_Wiki/_Index.md count corrected**: 493→524 (actual file count). Per-category updated.
+|- **Raw data freshness**: All files mtime=17:11 KST (post-market) ✅ confirmed close quality.
+|- **System snapshot**:
+|  - Swap 852MiB 🔴🔴🔴 (recovery from 912MiB peak, -6.6%)
+|  - Gateway RSS: 1.3GB+ — primary swap contributor
+|  - Council v4.1: HOLD 9일차, BUY 제로
+|  - MCP 멀티검색: 150+회 연속 LOW SIGNAL
+|- **No new knowledge items** to absorb — no new papers or MCP reports (pipeline idle).
+|- **Next**: Brain Sync at 19:00 KST

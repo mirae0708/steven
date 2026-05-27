@@ -895,3 +895,84 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 > 50%(1.0Gi)까지 148MiB 남음 — 장중 16:00~15:30 동안 도달 가능
 
 *🕐 2026-05-27 15:02 KST | Hermes Brain Sync | Swap 852MiB 🔴🔴🔴 42.6% 긴급! | Gateway 1.3GB RSS 기록 경신 | 장 마감 후 재부팅 필수*
+
+
+---
+
+## 🧬 Hermes Post-Close Snapshot — 2026-05-27 (Wed) 16:46 KST (Swap 912MiB 🔴🔴🔴 Post-Market)
+
+### 📋 시스템 현황 — 16:46 KST (장 마감 후 1h 16m)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | **2d 23h** (5/24 17:40 이후 — 4일차) |
+| tmux 세션 | 7개 — all normal |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 |
+| Hermes Gateway (port 8642) | ✅ 200 OK |
+| **Gateway RSS** | **1,593MB 🔴🔴🔴** (15:00 1,303MB → +290MB 추가 증가) |
+| Memory | 4.2Gi / 7.6Gi (55%) 🟡 |
+| **Swap** | **912MiB 🔴🔴🔴 (45.6%)** — 800MiB 초과 지속, 1.0Gi 임박! |
+| Load Avg | 0.24 / 0.26 / 0.41 — 매우 안정 |
+| Disk (WSL) | 4% ✅ |
+| Disk (C:) | 84% 🔴 (383/456GB) |
+| Cron Jobs | 9개 등록 정상 |
+| Portfolio | ₩4,929,810 (현금 전량, 38일차) |
+| CB Score (Nexus) | 22/100 confirmed |
+| CB Score (Dashboard) | ?/100 🔴 (self_heal 30일차 중단) |
+
+### 📊 시간별 Swap 추이 — 5/27 KST
+
+| 시간 (KST) | Swap 사용량 | 증가율 | 비고 |
+|:-----------|:----------:|:------:|:-----|
+| 00:46 | 511MiB 🔴 | +6MiB/h | 500MiB 최초 초과 |
+| 04:30 | 608MiB 🔴🔴 | +26MiB/h (4x) | 급가속 시작 |
+| 06:30 | 622MiB 🔴🔴 | +7MiB/h | 감속 |
+| 08:45 | 698MiB 🔴🔴🔴 | +33MiB/h | 재가속 |
+| 10:30 | 700MiB 🔴🔴🔴 | +1MiB/h (P2 Plateau) | 일시 안정 |
+| 12:30 | 702MiB 🔴🔴🔴 | +1MiB/h (P2 Plateau) | Plateau 지속 |
+| 12:45 | **780MiB 🔴🔴🔴** | **+312MiB/h 급등** | Plateau 붕괴! |
+| 15:00 | **852MiB 🔴🔴🔴** | +32MiB/h | Gateway 1.3GB RSS |
+| **16:46** | **912MiB 🔴🔴🔴** | +27MiB/h | **2.0Gi의 45.6%, 1.0Gi까지 88MiB** |
+
+> **분석**: 15:02 사이클 이후 1h 44m 동안 +60MiB 증가 (912-852). Gateway RSS 1,593MB (15:00 1,303MB → +290MB). 장 마감 후 부하 감소에도 Swap 증가율 유지 — **메모리 누수 구조적 심화**. WSL 4일차 uptime. **1.0Gi(50%)까지 88MiB 남음 — 오늘 밤~내일 새벽 도달 예상.**
+
+### 🛑 Swap 긴급 평가
+
+| 메트릭 | 위험도 | 설명 |
+|:-------|:------:|:------|
+| 912MiB / 2.0Gi | 🔴🔴🔴🔴 | 45.6% 사용 — 50% 임계 육박 |
+| Gateway RSS 1.6GB | 🔴🔴🔴🔴 | 단일 프로세스 1.6GB — 사상 최대 |
+| S1→S4 주기 가속 | 🔴🔴 | 4일(S1)→2일(S2)→1일(S3)→12h(S4) |
+| 1.0Gi 도달 예상 | 🔴🔴🔴🔴 | 오늘 밤~내일 새벽 (T-6~12h) |
+| 재부팅 필요성 | 🔴🔴🔴🔴 | **즉시 재부팅 강력 권장** |
+
+### 🧠 금일 주요 사항
+
+1. **🟢🟢 KOSPI 8,047.51 확정 마감** (+2.55%, 5/26 close) — 사상 첫 8,000 마감 확정. 4/27 저점 6,900 대비 +16.6%. USD/KRW **1,504.46** 원화 강세 유지. WTI $92.63 ($100 하회 7일차).
+
+2. **🔴🔴🔴 Swap 912MiB ALL-TIME HIGH** — 5/24 17:40 재부팅 이후 4일차에 912MiB(45.6%) 도달. Gateway RSS 1.6GB로 누수 가속. **1.0Gi(50%) 임계 도달 시 시스템 불안정 위험.** 장 마감 후 재부팅 최적 시점 도래.
+
+3. **🔴 Gateway 1.6GB RSS — 단일 프로세스 최대 기록 경신** — 12:30 768MB → 15:00 1,303MB → 16:46 **1,593MB**. 4시간 만에 2배 증가. 매주 정기 재시작 메커니즘 필요.
+
+4. **🟡 Council HOLD 바이어스 10일차** — KOSPI 8,000 마감에도 단 1건 BUY 없음. CB Score 22/100가 모든 기술적 BUY를 무효화. 모의투자 기회비용 지속.
+
+5. **🟡 MCP 멀티검색 158회 정지 확인** — 크론 중단. 158개 파일 잔존.
+
+6. **🔴 Self_heal.py 30일차 중단** — 5/5 마지막 로그 이후 갱신 없음. Dashboard CB Score ?/100 지속.
+
+7. **🟢 기술적 지식 신규 수집** — 15:00 Brain Sync에서 MUSE-Autoskill(HIGH SIGNAL), ReMoE(HIGH SIGNAL) 발견.
+
+### 🚧 Action Items (Priority)
+
+| # | 항목 | 우선도 | 비고 |
+|:-:|:-----|:-----:|:------|
+| 1 | **WSL 재부팅 (wsl --shutdown)** | 🔴🔴🔴🔴 | Swap 912MiB, 1.0Gi 도달 전. Gateway 1.6GB 누수 해소 |
+| 2 | **Gateway 정기 재시작 스크립트** | 🔴🔴🔴 | 매주 목요일 자정 Gateway 재시작 cron 등록 |
+| 3 | **Self_heal.py 진단/수리** | 🔴🔴 | 30일차 중단. Dashboard CB Score ?/100 |
+| 4 | **Council BUY 바이어스 복구** | 🟡 | CB Score 22→30+ 상향 후 HOLD→BUY 전환 가능 |
+| 5 | **C: 드라이브 84% 정리** | 🟡 | clawsweeper 또는 수동 정리 |
+| 6 | **Context 승격 12건 86h+ 지연** | 🟡 | Steven 승인 대기 |
+
+---
+*Recorded by Hermes Agent Cron on 2026-05-27 16:46 KST — KOSPI 8,047.51 confirmed close, Swap 912MiB 🔴🔴🔴 45.6% ALL-TIME HIGH, Gateway 1.6GB RSS 🔴🔴🔴*
+
