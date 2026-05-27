@@ -1051,5 +1051,34 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 | 3 | C: 드라이브 85% 정리 | 🟡 | 384/456GB |
 | 4 | Context 승격 12건 지연 | 🟡 | Steven 승인 대기 |
 
-*Recorded by Hermes Agent Cron on 2026-05-28 00:46 KST — Swap 1.5Gi/75% 🔴🔴🔴🔴 (24h+), Gateway 1.8GB RSS, 10_Wiki MCP 2건 저장 완료*
+---
+
+## 🧬 Hermes Knowledge Cron — 2026-05-28 (Thu) 05:00 KST
+
+### 📋 수행 작업
+- **00-Home.md 업데이트**: 5/27 confirmed close 반영, 최근 업데이트 로그 갱신, 시장현황 링크 5/27로 업데이트
+- **05_시장현황_20260528.md 생성**: Pre-Market 분석 리포트 (KOSPI 8,500 도전 전망, WTI $90 붕괴, KOSDAQ -3.36% 디커플링)
+- **GUARDIAN-ERROR-해결가이드.md 생성**: float division by zero 원인 분석 및 핫픽스 방법
+- **CB-Score-버그-분석.md 생성**: Dashboard ?/100 근본 원인 (tmux 패턴 미스) 및 해결 방법
+
+### 📊 시스템 현황 (05:00 KST)
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | **1h 10m** (5/28 03:35 재부팅 성공) |
+| Swap | **0B ✅ 완전 회복!** (1.6Gi→재부팅→0B) |
+| Memory | **4.6Gi/7.6Gi (61%)** 🟡 (증가 추세) |
+| Gateway RSS | ~811MB 🟢 (재부팅 후 안정) |
+| Disk (WSL) | 4% ✅ |
+| **Disk (C: 드라이브)** | **381/456GB (84%)** ⚠️ |
+| tmux 세션 | 6개 정상 |
+| Load Avg | 0.29 / 0.25 / 0.28 |
+
+### 🔴 미해결 Critical 이슈
+1. **GUARDIAN ERROR 🔴** — float division by zero, 10초 간격, 229000.KQ buy_price=0
+2. **Council v3.0 Fallback 🟡** — JSON parse error line 2002 (12h+)
+3. **CB Score ?/100 🔴** — tmux 패턴 미스 (코드 버그 확정)
+4. **Context 승격 12건 🟡** — 72h+ 지연
+5. **C: 드라이브 84% ⚠️** — docker prune + cleanmgr 필요
+
+*Recorded by Hermes Knowledge Cron on 2026-05-28 05:00 KST — WSL 재부팅 성공✅ Swap 0B, GUARDIAN ERROR🔴 Council Fallback🟡, WTI $89.89 $90 붕괴🔴*
 

@@ -27,7 +27,7 @@
 - [[01_지식/Hermes|🤖 Hermes — AI 어시스턴트]]
 - [[01_지식/System-Architecture|🏗️ 시스템 아키텍처]]
 - [[01_지식/AI-Council|🧠 AI Council 분석]]
-- [[03_경제/05_시장현황_20260518|📊 시장현황 2026-05-18]] ⭐
+- [[03_경제/05_시장현황_20260528|📊 시장현황 2026-05-28]] ⭐
 - [[03_경제/Trading-Strategies|📊 트레이딩 전략]]
 - [[03_경제/Operations-Guide|⚙️ 운영 가이드]]
 - [[01-Projects/Freight-Quote-System|🚢 Freight Quote — 견적 시스템]]
@@ -45,7 +45,7 @@
 ### 📈 종목
 - [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **6,960원** 🔴 **-3.60%** (5/27 confirmed close 17:10, 신저가! RSI 28.6 과매도 심화, BB% 15.0% 하단 근접, 포트폴리오 -30.68%)
 - [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **14,760원** 🔴 **-1.80%** (5/27 confirmed close 17:10, RSI 35.4 약세, BB% 10.4% 하단 근접)
-- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **23,850원** 🔴 **-8.80%** (5/27 confirmed close 17:10, RSI 37.1 약세, SMA20(27,310) 대폭 하회, 포트폴리오 -21.93%)
+- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **23,850원** 🔴 **-8.80%** (5/27 confirmed close 17:10, RSI 37.1 약세, SMA20(27,310) 대폭 하회, 포트폴리오 -21.93%, 베어마켓 진입! 5/18 고점 31,150 대비 -23.4%)
 
 ### 🧠 최근 Brain Sync (18:00)
 - [[10_Wiki/Artificial_Intelligence/AI_Agents/ATLAS-Agentic-or-Latent-Visual-Reasoning-One-Word-is-Enoug_20260517_1800|ATLAS: Agentic Visual Reasoning]]
@@ -62,8 +62,8 @@
 ### 💵 거시경제
 - [[wiki/macros/KOSPI|📊 KOSPI (8,229 확정)]] 🟢 **+2.25% 상승! 사상 최고치!** (RSI 65.1 강세, confirmed close 8,228.70, BB% 90.5% 상단 근접. 16:10(8,436)→17:10(8,229) settlement revision)
 - [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,133)]] 🔴 **-3.36% 하락** (RSI 39.2 약세, BB% 31.1% 중립~약세, 16:10(1,147)→17:10(1,133) 추가 하락 정정)
-| [[wiki/macros/환율|💵 환율 (1,500원)]] 🟢 **-0.97% 원화 강세** (5/27 forex 1,500.12, 1500선 유지, 외국인 매수 유입 지속)
-| [[wiki/macros/국제유가WTI|🛢️ WTI ($91.18)]] 🔴 **-2.89% 하락** (RSI 44.3 약세, BB% 4.3% 하단 직전! $100선 하회 8일째, $90선 위협! 5/27 신규 거래일)
+- [[wiki/macros/환율|💵 환율 (1,500원)]] 🟢 **-0.92% 원화 강세** (5/27 forex 1,500.81, 1500선 유지, 외국인 매수 유입 지속)
+- [[wiki/macros/국제유가WTI|🛢️ WTI ($89.89)]] 🔥 **-4.26% 하락! $90선 붕괴!**
 
 ### 🧠 시스템
 - [[99_System/GEMINI.md|🧠 시스템 스키마 (GEMINI.md)]]
@@ -75,16 +75,15 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
-- **[Hermes]** 🧬 **16:46 Market Update — KOSPI 8,047.51 🟢 5/26 확정! 8,000선 첫 마감! Swap 912MiB 🔴🔴🔴 All-Time High 재경신** (2026-05-27 16:46 KST)
-  - **KOSPI 8,047.51 🟢** (5/26 confirmed close, 장중 8,438(5/27) 피크 이후 차익실현 — 5/26 실적보다 5/27 더 상승)
-  - **Swap 912MiB 🔴🔴🔴** (2.0Gi의 45.6%) — Gateway RSS 1,593MB 폭등이 주 원인. 1.0Gi(50%)까지 88MiB 남음.
-  - **Gateway 1.6GB RSS 🔴🔴🔴** — 12:30(768MB)→15:00(1,303MB)→16:46(1,593MB), 4시간 만에 2배 증가
-  - **재부팅 시급**: 장 마감 후 WSL 재부팅 강력 권장. 1.0Gi 도달 시 시스템 불안정 위험.
-  - **USD/KRW 1,499.58 🟡** 1500선 하회 (원화 강세, 외국인 매수 유입)
-  - **WTI $92.11 🔴** ($100선 하회 9일째, 에너지 비용 하락=증시 긍정)
-  - **Council v4.1 HOLD 9일차** — KOSPI 8,400에도 BUY 0건
-  - **self_heal.py 28일 중단** 마지막 로그 5/11, Dashboard CB Score ?/100
-  - **5/27 confirmed close (17:10 settlement revision)**: KOSPI **8,228.70 (+2.25%) 사상최고!**, KOSDAQ **1,133.13 (-3.36%)**, 환율 **1,500.12 (-0.97%)**, WTI **$91.18 (-2.89%)** ⚠️ 16:10(8,436)→17:10(8,229) 대폭 하향 정정
+- **[Hermes]** 🧬 **05:28 Knowledge Snapshot — WSL 재부팅 성공! Swap 0B, GUARDIAN ERROR 지속, WTI $89.89 confirmed** (2026-05-28 04:45 KST)
+  - **WSL 재부팅 성공 🎉** (5/28 03:35 KST) — Swap 1.6Gi(80%) 위기 → **Swap 0B 완전 회복!** Gateway 811MB(-47%), Memory 38%, tmux 6개 세션 정상
+  - **GUARDIAN ERROR 🔴🔴🔴** — `float division by zero` 매 10초 반복 (229000.KQ qty=100, buy_price=0 포지션)
+  - **CB Score ?/100 🔴** — 근본 버그 확정: tmux 패턴 "Score=" 미존재 → 항상 ?/100 반환
+  - **Council v4.1→v3.0 Fallback 🟡** — JSON parse error line 2002로 가중치 무효화 (12h+ 지속)
+  - **5/27 confirmed close**: KOSPI **8,228.70 (+2.25%) 사상최고!**🏆, KOSDAQ 1,133.13(-3.36%)⚠️, 환율 1,500.81(-0.92%), WTI **$89.89(-4.26%) $90선 붕괴!**
+  - **시스템**: Uptime 1h10m, Load 0.29, Disk 4% ✅. **C: 드라이브 84%** ⚠️ 필요 청소
+  - **Jongdari Nexus**: Cycle Complete 정상 실행하나 GUARDIAN ERROR로 Council 판단력 저하
+  - **오늘 5/28(목) 전망**: KOSPI 8,500 돌파 시도 예상. Council 복구 + GUARDIAN ERROR 핫픽스 시급.
 - **[Hermes]** 🧠 **Brain Sync 09:00 — Context 11개 문서 전수 스캔 완료, 12건 승격 대기🚨, 지식 그래프 5개 제안** (2026-05-27 09:00 KST)
   - **Context 승격 12건 대기** (48h+ overdue): Operations-Guide, Vault-구조, 지식베이스, 트레이딩전략, 사업인덱스 등
   - **지식 그래프 제안**: 포트폴리오 3종목 상호참조, Culture_Economy 9건 00-Home 등록, Auto-Evolution 인덱스

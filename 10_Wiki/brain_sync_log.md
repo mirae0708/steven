@@ -1154,3 +1154,19 @@
 |  - MCP 멀티검색: 150+회 연속 LOW SIGNAL
 |- **No new knowledge items** to absorb — no new papers or MCP reports (pipeline idle).
 |- **Next**: Brain Sync at 19:00 KST
+
+## 🧠 Brain Sync — 2026-05-28 03:02 KST
+| **Time**: 2026-05-28 03:02 KST
+| **Status**: NO_CHANGES — Context/Members/Agents content unchanged since 00:46
+| **Tracked files**: 14 (Context/ 11, Members/ 1, Agents/ 2)
+| **Content-hash**: Initialized — first full scan with sha256 tracking
+| **Git**: @c5ca0da (🌙 Night Check 00:46) — no new commits, no uncommitted changes
+| **Context knowledge absorbed**: 
+|   - Company: 코딩가이드 (6 rules, 6 patterns, 코딩컨벤션, 테스트전략, 보안수칙)
+|   - Product: System Architecture, AI Council (3 analysts + CB Score), Agent Roadmap (MCP/LangGraph/Mastra), Telegram commands, Claude Code hybrid guide, Quote Tool
+|   - TechStack: WSL troubleshooting (8 categories), Logistics ERP automation (MRCloud, 3 modes)
+|   - Agents: Hermes 역할/책임, Claude Code 명령패턴 (4 patterns)
+|   - Members: Steven's LLM Wiki 개선아이디어 (5 docs already promoted ✅)
+| **Context 승격 후보 검토**: NO NEW candidates found. 10_Wiki/ is MCP auto-search logs (research papers) — already categorized as low-value for Context promotion per Context_승격_제안서.
+| **Next**: Brain Sync at next scheduled interval
+

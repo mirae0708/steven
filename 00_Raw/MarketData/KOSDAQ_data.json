@@ -401,11 +401,11 @@
   },
   {
     "Date": "2026-05-27",
-    "Open": 1173.800048828125,
-    "High": 1173.800048828125,
-    "Low": 1128.75,
-    "Close": 1133.1300048828125,
-    "Volume": 1212399,
+    "Open": NaN,
+    "High": NaN,
+    "Low": NaN,
+    "Close": NaN,
+    "Volume": 1228979,
     "Dividends": 0.0,
     "Stock Splits": 0.0
   }
