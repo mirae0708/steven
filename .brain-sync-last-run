@@ -1,15 +1,17 @@
-🧠 Brain Sync — 2026-05-27 13:02 KST
-Status: CRITICAL — Swap 778MiB 🔴🔴 (ALL-TIME HIGH, 39% of 2Gi), KOSPI 8,438 intraday 사상최고 🟢🟢, Context/Members/Agents 변경 없음
+🧠 Brain Sync — 2026-05-27 16:00 KST
+Status: NO_CHANGE — Context/Members/Agents 변경 없음
+Chapter 18: 장 마감 후 첫 사이클 — Swap 852MiB 회복 모니터링 중
 
-Today (5/27 Wed): **정상 거일** (석가탄신일 오해 정정). KOSPI 8,438 장중 🟢🟢 (+4.85%).
-Swap 778MiB 🔴 (39.0%) — uptime 2d 19h 20m. 12:45 급등(702→780MiB) 후 Plateau 붕괴 확인.
-1.0Gi 예상: 장 마감 전 도달 가능 / 재부팅: 장 마감(15:30) 후 권장
-New since last sync (10:02 KST → 13:02 KST): 6 MCP 멀티검색 LOW SIGNAL 추가(158회 연속), 6개 arXiv 논문(1220 batch) 신규, KOSPI 8,438 confirmed
-Context 승격: 12건🥇 미승인 (48h deadline 12h+ 초과) — 변경 없음
-Chronic Issues: MCP 멀티검색 158개 파일 누적, Tavily 401, self_heal.py 28일 중단, Dashboard CB ?/100
-Council v4.1: HOLD 9일차 — KOSPI 8,400에도 BUY 제로 (완전 방어적 모드)
-Vault stats: Context 11, Members 1, Agents 2, 10_Wiki 542, Total 1182 .md
+Today (5/27 Wed): KOSPI 8,438 장중 사상최고 🟢🟢 (석가탄신일 오해 정정 → 정상 거일).
+Swap 852MiB 🔴 (42.6%) — uptime 2d 22h. Gateway 1,303MB RSS ALL-TIME HIGH.
+장 마감 후 Gateway 부하 감소 예상 → Swap 회복 패턴 관찰 구간.
+MCP 멀티검색 158회 LOW SIGNAL — 크론 중단 지속.
+Context 승격: 8건🥇 미승인 (48h deadline 38h+ 초과)
+Council v4.1: HOLD 9일차 — 장 마감 후 재평가 예상.
 
-Key Insights: (1) Swap 778MiB — 12:30 702→12:45 780MiB 급등, Plateau 붕괴 메커니즘 재현 확인 (2) KOSPI 8,438 사상최고 — 원화강세(1,499.58), WTI 약세($92.11) 호재 (3) MCP 158번째 LOW SIGNAL — 근본적 개선 필요 (4) Context 승격 12건🥇 미승인 — 48h 타임아웃 정책 시행 여부 Steven 결정 대기
+New since last sync (13:02 KST → 16:00 KST): 변경 없음. 모든 Context/Members/Agents 정적.
+Vault stats: Context 11, Members 1, Agents 2, 10_Wiki ~542, Total ~1182 .md
 
-Brain Sync cycle 2026-05-27 13:02 KST complete.
+Key Insights: (1) 장 마감 후 Swap 회복 여부가 핵심 — Gateway 부하 감소 시 Swap 852→600MiB 이하 회복 예상. (2) Context 승격 86h+ 지연 — 타임아웃 정책 시행 여부 Steven 결정 필요. (3) MCP 멀티검색 중단 유지 — 대체 소스 전환 미진행. (4) 2건 HIGH SIGNAL 논문(MUSE-Autoskill, ReMoE) — 추후 Hermes 업그레이드 참고.
+
+Brain Sync cycle 2026-05-27 16:00 KST complete.
