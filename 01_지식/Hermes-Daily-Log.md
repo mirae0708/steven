@@ -976,3 +976,38 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 ---
 *Recorded by Hermes Agent Cron on 2026-05-27 16:46 KST — KOSPI 8,047.51 confirmed close, Swap 912MiB 🔴🔴🔴 45.6% ALL-TIME HIGH, Gateway 1.6GB RSS 🔴🔴🔴*
 
+
+---
+
+## 🧬 Hermes Night Check — 2026-05-27 (Wed) 20:46 KST (Post-20:30 사이클)
+
+### 📋 시스템 현황 — 20:46 KST
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | **3d 3h** (5/24 17:40 이후 — 4일차) |
+| Memory | 4.1Gi / 7.6Gi (54%) 🟡 |
+| **Swap** | **1.5Gi 🔴🔴🔴🔴 (75%)** — 20:30(1.6Gi/80%) 대비 -0.1Gi 소폭 감소 |
+| Gateway RSS | **1.9GB 🔴🔴🔴🔴** (24.0% MEM) — 사상 최대! |
+| Load Avg | 0.35 / 0.45 / 0.54 — 안정 |
+| Disk (WSL) | 4% ✅ |
+| Disk (C:) | 85% 🔴🔴 (384/456GB) |
+| Portfolio | ₩4,929,810 (현금 전량, 38일차) |
+
+### ⚡ 핵심 포인트
+
+1. **🔴🔴🔴🔴 Swap 1.5Gi (75%) — 임계 위기 지속** — 20:30(1.6Gi, 80%) 대비 소폭 감소했으나 75%는 극도로 위험. Gateway RSS 1.9GB (24% MEM)가 주 원인. **즉시 wsl --shutdown 필요.**
+2. **🟢 KOSPI 8,228.70 (+2.25%) 사상 최고 마감** — 변경 없음 (장 마감 상태).
+3. **🟢 기본 서비스 정상** — MetaClaw 233MB, Nexus 361+349MB, Open WebUI 144MB — 모두 정상 응답.
+4. **📊 20:30 Auto-Evolution 보고서 작성 완료** — 16차 사이클, 지식 기록 정상 수행됨.
+5. **10_Wiki Brain Sync** — 5/27 배치 11건 저장 완료 (20:30 기준, HIGH SIGNAL 2건 포함).
+
+### 🚧 긴급 Action Item
+
+| # | 항목 | 우선도 |
+|:-:|:-----|:------:|
+| 1 | **WSL 즉시 재부팅 (wsl --shutdown)** — Swap 75%, Gateway 1.9GB RSS. **현재 속도로 ~22:30 90% 도달** | 🔴🔴🔴🔴 |
+| 2 | Gateway 정기 재시작 cron 등록 | 🔴🔴🔴 |
+| 3 | Self_heal.py 진단/수리 (30일차 중단) | 🔴🔴 |
+
+*Recorded by Hermes Agent Cron on 2026-05-27 20:46 KST — Swap 1.5Gi/75% 🔴🔴🔴🔴, Gateway 1.9GB RSS 사상 최대, 20:30 Auto-Evolution 16차 완료*
