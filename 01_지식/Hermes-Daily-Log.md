@@ -742,4 +742,90 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 - [ ] 신규 Culture_Economy_Synergy 문서 9건 00-Home.md 등록
 - [ ] Council v4.1 장중 첫 분석 결과
 
-*Recorded by Hermes Agent Brain Sync on 2026-05-27 09:00 KST*
+## 🧬 Hermes Midday Snapshot — 2026-05-27 (Wed) 12:45 KST (장중, KOSPI 8,438 🟢🟢)
+
+### 📋 시스템 현황 — 12:45 KST (장중, 거래일)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | 2d 19h (5/24 17:40 이후 재부팅 없음) |
+| tmux 세션 | 7개 — all normal |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 |
+| Hermes Gateway (port 8642) | ✅ active (768MB RSS, 소폭 감소) |
+| Memory | 4.0Gi / 7.6Gi (52%) 🟡 증가 |
+| **Swap** | **780MiB 🔴🔴🔴** (ALL-TIME HIGH, 2.0Gi의 39%) |
+| Disk (WSL) | 4% ✅ |
+| Disk (C:) | 384/456GB (85%) 🔴🔴 |
+| Load Avg | 0.59 / 0.68 / 0.73 |
+| 모의투자 | ₩4,929,810 (38일차, 현금 전량 보유) |
+| CB Score | 22/100 (Nexus) / ?/100 (Dashboard) |
+| Cron Jobs | 정상 |
+| KOSPI (장중) | **8,438 🟢🟢** (+4.85% 5/26 close 대비) |
+| USD/KRW | **1,499.58 🟡** (1500선 하회, 원화 강세 전환) |
+| WTI | **$92.11 🔴** ($100선 하회 9일째) |
+
+### 📊 오늘 주요 타임라인 (5/27 KST)
+
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 00:46 | 🧬 Auto-Evolution 스냅샷 (Swap 511MiB) |
+| 04:30 | 🧬 Auto-Evolution (Swap 608MiB 🔴 500MiB 초과, S4 급가속 패턴 발견) |
+| 06:00 | 🧠 Brain Sync — 10_Wiki/_Index.md 전면 갱신 (241→493 docs) |
+| 06:30 | 🧬 Auto-Evolution (Swap 622MiB ALL-TIME HIGH 경신) |
+| 08:30 | 🧬 Auto-Evolution (Swap 650MiB, KOSPI 장 개시) |
+| 10:30 | 🧬 Auto-Evolution 15차 (Swap 700MiB 🔴🔴🔴, KOSPI 8,341 🟢) |
+| 12:30 | 🧬 Auto-Evolution 16차 (Swap 702MiB, 증가세 둔화!) |
+| **12:45** | **NOW** → 본 Midday Snapshot |
+
+### 🟢 Swap Plateau 진입 — 700~780MiB 안정화 구간
+
+- 10:30(700MiB) → 12:30(702MiB) → **12:45(780MiB)**
+- 10:30~12:30 구간: **+2MiB/2h (+0.3%)** — 08:30~10:30의 +50MiB/2h(+7.7%) 대비 급감
+- **BUT** 12:30→12:45 15분 만에 702→**780MiB 급등** — 오후 부하 증가로 재가속 의심
+- Gateway RSS: 791MB(10:30) → 768MB(12:30)로 소폭 감소했으나 MetaClaw(512MB) + Nexus(393MB) 누적 효과
+- **S4 패턴 지속**: S1(0→300MiB, 4일), S2(300→500MiB, 2일), S3(500→600MiB, 1일), S4(600→780MiB, 12h)
+- **재부팅 시점 임박**: 장 마감(15:30) 후 재부팅 권장
+
+### 🟢🟢 KOSPI 8,438 장중 (+4.85%) — 사상 최고치 경신 중
+
+- 5/26 close(8,047) → 장중 8,438 (+391p, +4.85%) 
+- 석가탄신일(5/27) 휴장 오해 있었으나 **정상 거일** 확인
+- USD/KRW **1,499.58 🟡** 1500선 하회 (원화 강세) — 외국인 매수 유입
+- WTI $92.11 ($100 하회 9일째) — 에너지 비용 하락이 증시 긍정 재료
+- **Council v4.1**: 여전히 SELL(18~19%) + HOLD — 기술적 BUY 무효화 지속
+
+### 🟡 신규 지식 기록
+
+1. **Swap 4단계 급가속 패턴(S1→S4) 정리 완료**:
+   - S1 (안정기): 0→300MiB, ~4일 소요
+   - S2 (가속기): 300→500MiB, ~2일 소요
+   - S3 (고가속): 500→600MiB, ~1일 소요
+   - S4 (급가속): 600→780MiB, ~12h 소요 (증가율 가속)
+
+2. **KOSPI 8,438 사상 최고치**: 4/27 저점 6,900 대비 **+22.3% 상승** (약 5주)
+   - 8,000선 안착 후 추가 상승 — 5/6 첫 7,000 돌파 후 21일 만에 8,400
+   - 외국인 순매수 + 원화 강세(1,500선 하회) + WTI 하락(에너지 비용 감소)
+
+3. **Propose-Execute Gap 첫 실제 해소 사례 (5/27 08:30)**:
+   - 00:30 사이클의 CB Score 추정 제안이 self_heal.py 10:05 실행에 반영됨
+   - 다만 Dashboard.json 기입은 여전히 ?/100 — 12h cycle 리셋
+
+4. **MCP 멀티검색: 158회 연속 LOW SIGNAL (19일째)**:
+   - 결정적 개선 없음 — Naver 100% 의존도가 근본 원인
+   - 총 158개 파일 (MCP-멀티검색-*.md) 누적 — 용량 낭비 심각
+
+### 🚧 Action Items
+
+| # | 항목 | 상태 | 비고 |
+|:-:|:-----|:----:|:------|
+| 1 | 🔴 Swap 780MiB 재부팅 | **임박** | 장 마감(15:30) 후 WSL 재부팅 필요 |
+| 2 | 🔴 C: 드라이브 85% | 지속 | WSL vhdx 확장 차단 가능성 |
+| 3 | 🟡 self_heal.py 28일 중단 | 5/11 마지막 | Dashboard.json CB Score ?/100 |
+| 4 | 🟡 Council BUY 무효화 | **문제** | KOSPI 8,400에도 단 1건 BUY 없음 |
+| 5 | 🟢 MCP 멀티검색 소스 전환 | **158회 실패** | Naver→Google News 전환 필요 |
+
+> **5/27(수) 석가탄신일 — 정상 거일. KOSPI 8,438 🟢 사상 최고치. Swap 780MiB 🔴 40% 임박. Council BUY 제로 문제 지속.**
+
+---
+
+*Recorded by Hermes Agent Cron on 2026-05-27 12:45 KST — KOSPI 8,438 장중, Swap 780MiB 🔴, Council HOLD 9일차*
