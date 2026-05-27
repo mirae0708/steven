@@ -1184,3 +1184,15 @@
 | **00-Home.md** | Market link: [[05_시장현황_20260528]] ✅ (5/28로 갱신됨) |
 | **Current System State** | WSL 재부팅 성공 (03:35) → Swap 0B ✅. But GUARDIAN ERROR 🔴🔴🔴, Council Fallback 🟡, CB Score ?/100 🔴 지속. |
 | **Next** | Scheduled brain sync. |
+
+## 🧠 Brain Sync — 2026-05-28 08:00 KST
+
+| 항목 | 내용 |
+|:-----|:------|
+| **Time** | 2026-05-28 08:00 KST |
+| **Vault stats** | Context/ 11 docs, Members/ 1 doc, Agents/ 2 docs. 10_Wiki/ 530+ docs. Total: ~1200 .md files. |
+| **Changes since 07:00** | MarketData wiki refresh committed (8 files, +155/-98). KOSPI updated to **8,047.51** (+47.96% Q2) with RSI/SMA20/BB indicators. KOSDAQ **1,172.52** (+2.71%). USD/KRW **1,500.81** (-0.50%). WTI **$89.89** (-9.79%). 014950 Biotech **7,220** (-34.12%), 459510 **26,150** (+33.90%), 473980 **15,030** (-14.01%). Context/Members/Agents content hashes unchanged. |
+| **Context absorbed** | All 11 Context docs stable. Key knowledge reinforcement: (1) AI Council — 3 analysts (Technical/News/Risk), CB Score 0-100 position sizing, Majority voting process. (2) System Architecture — WSL2/tmux, NexusOrchestrator, AI Council pipeline. (3) Quote Tool — v9.0, SQLite 438 rates, 32 countries, 68 ports. (4) Claude Code command patterns — Print/Interactive/Tmux/Bulk modes. (5) Context 승격 17건 proposal pending (3일차, 12🥇 still overdue). |
+| **System State** | WSL uptime 4h 25m (since 03:35 reboot). Memory 3.2Gi/7.6Gi (42%). **Swap 0B ✅** — clean. tmux: 6 sessions (hermes, hermes-mcp, jongdari, metaclaw, cowagent, opendesign) ✅. Gateway port 8642 ✅ (HTTP 200). Disk 4%. Load avg 0.60. |
+| **Chronic Issues** | Context 승격 17건 still pending (12🥇 overdue). GUARDIAN ERROR 🔴🔴🔴 status. CB Score ?/100. Council v4.1→v3.0 Fallback 🟡. |
+| **Next** | Scheduled brain sync at next interval. |
