@@ -2787,3 +2787,11 @@
 4. `03_Projects/Culture_Economy_Synergy_Business_Plan/` (신규 9개 MD 파일) ↔ `00-Home.md` (비즈니스 섹션 연결 누락)
 
 *Recorded by Hermes Agent Brain Sync on 2026-05-27 09:00 KST*
+
+
+### 🧠 Brain Sync 15:00 — Swap 852MiB 긴급! 🔴🔴🔴
+- Swap: 702MiB(12:30) → 852MiB(15:00) = +150MiB/2.5h (+21%%)
+- Gateway RSS: 768MB → 1,303MB 폭등 — 사상 최대!
+- MetaClaw: 474MB / Nexus: 425MB
+- C: 드라이브: 383/456GB (84%%) — 74GB 남음
+- **결론**: 15:30 장 마감 직후 WSL 재부팅 필수! Gateway 재시작 포함
