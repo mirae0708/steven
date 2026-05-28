@@ -46,3 +46,16 @@
 ### 💾 Memory Storage
 
 No new durable facts to save. Vault state, system configuration, and knowledge structures are stable.
+
+
+## 🧠 Brain Sync — 2026-05-28 22:45 KST
+- **상태**: Context/Members/Agents — 변경 없음 (5/25 이후 안정)
+- **볼트**: 1,247 .md 파일 (22시 대비 +31, 주로 10_Wiki MCP 검색 결과)
+- **Context/ 11개 문서**: Company(1), Product(6), TechStack(2), INDEX+승격제안서 — 전일 동일
+- **Agents/Hermes/** 2개: 역할과-책임, Claude-Code-명령패턴 — 전일 동일
+- **Members/Steven/** 1개 초안: LLM-Wiki-개선아이디어 (5/23 draft)
+- **🔄 지식 승격 120h+ 지연 🚨** — 12건 대기중 (🥇8건: Operations-Guide, Hermes-Git-지식베이스, Trading-Strategies, AI-Council, System-Architecture, Vault-구조, Business-Portfolio-Index + 🥈4건)
+- **🔴 지속 이슈**: GUARDIAN ERROR (float division by zero), Council v3.0 fallback, Dashboard ?/100
+- **✅ 안정 요소**: WSL 재부팅 D+1, Swap 1.0Gi 🟡, Load 평균 정상, Cron 18개 정상
+- **🌍 Windows**: C: 드라이브 86% ⚠️ (65GB 잔여)
+- **학습 완료**: Context/ 전체 구조 흡수, Agents/Hermes/ 역할 정의 숙지, 승격 지연 현황 파악
