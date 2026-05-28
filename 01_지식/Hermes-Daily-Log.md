@@ -1082,3 +1082,67 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 
 *Recorded by Hermes Knowledge Cron on 2026-05-28 05:00 KST — WSL 재부팅 성공✅ Swap 0B, GUARDIAN ERROR🔴 Council Fallback🟡, WTI $89.89 $90 붕괴🔴*
 
+---
+
+## 🧬 Hermes Daily Snapshot — 2026-05-28 (Thu) 16:45 KST (EOD Post-Close)
+
+### 📋 수행 작업
+- **EOD 시스템 스냅샷 기록**: 5/28 장 마감 후 시스템 상태 점검
+- **장중 평가**: KOSPI 7,985.74 급락 장중 기록 → 8,000선 붕괴 후 반등 여부 미확인 (EOD 종가 데이터 대기)
+- **기존 Auto-Evolution 수집**: 19차(14:30 Afternoon Scan) 정상 생성됨 → `01_지식/Hermes-Auto-Evolution-20260528-1430.md` (11,658 bytes)
+
+### 📊 시스템 현황 (16:45 KST — Post-Close)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | **10h 51m** (5/28 03:35 재부팅 → 10.9h 경과) |
+| **Swap** | **30.9MiB 🟢  소폭 축적 시작** (0900: 0B → 1645: 30.9MiB — 장중 14:30 16.6MiB 대비 +14.3MiB/2h, 정상 범위) |
+| Memory | **3.7Gi/7.6Gi (49%)** 🟢 |
+| Gateway RSS | **758 MiB 🟢** (14:30 725MB → 16:45 758MB, +33MB/2h 정상) |
+| Disk (WSL) | 4% ✅ |
+| Disk (C:) | **85% ⚠️** (14:30 84% → 16:45 85%, +1% — 73GB 여유) |
+| Load Avg | **0.27 / 0.37 / 0.28** 🟢 |
+| tmux 세션 | 6개 정상 (hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign) |
+
+### 🔍 이번 사이클 분석 (14:30 Afternoon → 16:45 EOD, +2h15m)
+
+**1. 🟡 KOSPI 7,985.74 급락 (장중 14:30 기록 기준) — 8,000선 붕괴!**
+- Pre-Market 전망: Bull 8,500 / Base 8,200~8,400 / Bear 8,000
+- **실제: 7,985 — Bear 시나리오 발동! 사상 최고 8,457(5/27) 대비 -5.6%**
+- 단 하루 만의 급락 — 외국인 차익실현 + KOSDAQ 디커플링 심화 원인 추정
+- EOD 종가는 yfinance 17:10~22:00 KST 확정 데이터 대기
+
+**2. 🟢 Swap 30.9MiB — 14:30 16.6MiB 대비 정상적 증가**
+- 재부팅 후 10.9h 경과, 30.9MiB — 이전 사이클 500MiB+ 대비 매우 양호
+- 100MiB 이하 유지 시 재부팅 필요 없음
+- Gateway RSS 758MB로 안정적
+
+**3. 🟢 시스템 전체 안정 상태**
+- Gateway 758MB RSS 정상, Memory 49%, Load Avg 0.27
+- C: 드라이브 85% (73GB 여유) — 당장 위험 수준 아님
+
+**4. 🔴 지속 이슈 — GUARDIAN ERROR 12h+ (14:34:55에도 발생 확인됨)**
+- 14:30 스냅샷 기준 여전히 `float division by zero` 반복
+- Council v3.0 Fallback 20h+ 지속
+- CB Score Dashboard ?/100 버그
+- Context 승격 110h+ 지연 (8건 🥇)
+
+### 📋 장 마감 후 체크리스트
+
+| 작업 | 상태 | 비고 |
+|:-----|:----:|:-----|
+| KOSPI 5/28 EOD 종가 확인 | ⏳ 대기 | yfinance 17:10~22:00 KST 확정 |
+| GUARDIAN ERROR 핫픽스 | ❌ 미실행 | 장 마감 후 실행 기회 |
+| Council JSON parse error 수리 | ❌ 미실행 | 20h+ Fallback 지속 |
+| CB Score 패턴 수정 | ❌ 미실행 | ?/100 버그 지속 |
+| Context 승격 스크립트 | ❌ 미실행 | 110h+ 지연 |
+| C: 드라이브 정리 (docker prune) | ❌ 미실행 | 85% 유지 |
+
+### 📌 다음 사이클 전망
+- **다음 데이터 갱신**: 17:10~22:00 KST — yfinance 5/28 EOD confirmed close 반영
+- **Jongdari**: 장 마감 후 포트폴리오 정산 + 6/1(월) Pre-Market 계획 수립
+- **주말 대비**: 5/29(금) 거래일 → 5/30(토)~5/31(일) 휴장 → 6/1(월) 재개
+- **주간 요약**: 5/28 Auto-Evolution 20차 (Evening/주간요약) 예정
+
+*Recorded by Hermes Knowledge Cron on 2026-05-28 16:45 KST (EOD Post-Close) — System Stable 🟢 Swap 30.9MiB, KOSPI 7,985.74 급락🔴, GUARDIAN ERROR 12h+🔴, Council Fallback 20h+🔴*
+

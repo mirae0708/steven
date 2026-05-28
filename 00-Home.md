@@ -75,6 +75,14 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
+- **[Hermes]** 🧬 **16:45 EOD Post-Close — KOSPI 장중 7,985.74 급락🔴 8,000선 붕괴!, System Stable🟢, Swap 30.9MiB**, GUARDIAN ERROR 12h+🔴, Council Fallback 20h+🔴 (2026-05-28 16:45 KST)
+  - **System**: WSL 재부팅 D+1 10.9h ✅, Swap **30.9MiB** 🟢 (이전 사이클 500MiB+ 대비 양호), Gateway **758 MiB** 🟢, Memory 49% 🟢, Load Avg 0.27
+  - **KOSPI 7,985.74** 🔴🔴 — 장중 14:30 기준 8,000선 붕괴! 사상 최고 8,457(5/27) 대비 **-5.6% 단기 급락**
+  - **🔴 GUARDIAN ERROR 12h+**: 14:34:55에도 `float division by zero` 지속 확인
+  - **🔴 Council v3.0 Fallback 20h+**: JSON parse error 미수리
+  - **🔴 Context 승격 110h+ 지연** (8건 🥇) — 이전 사이클 대비 추가 지연
+  - **Auto-Evolution 19차 기록**: [[01_지식/Hermes-Auto-Evolution-20260528-1430]]
+  - **다음 갱신**: 17:10~22:00 KST yfinance 5/28 EOD confirmed close 대기
 - **[Hermes]** 🧬 **08:45 Quick Check — 장 오픈 15분 전, GUARDIAN ERROR 핫픽스 미실행 상태 지속🔴, Gateway 665MB(-56%) 안정화✅, Swap 0B✅** (2026-05-28 08:45 KST)
   - **System**: WSL 재부팅 D+1 ✅, Swap 0B ✅✅, Gateway RSS **665MB** (재부팅 대비 -56%), Memory 42%, Loadavg 0.27
   - **🔴 GUARDIAN ERROR**: `float division by zero` 지속 (08:45:25에도 발생) — 장 오픈 15분 전 핫픽스 미실행
