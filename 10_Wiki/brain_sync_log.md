@@ -1,4 +1,19 @@
 
+## 🧠 Brain Sync — 2026-05-29 02:33 KST
+
+| 항목 | 상태 |
+|:-----|:-----|
+| **Vault total** | 1,216+ .md files |
+| **금회 작업** | ✅ meta_rules.md JSON 변환 (크론 호환성), ✅ Session DB VACUUM + 3.7GB 정리, 🔴 GUARDIAN ERROR 72h+ 미해결 |
+| **System Health** | |
+| **DB 상태** | 🟢 복구 완료 — PRAGMA wal_checkpoint + VACUUM 수행, FTS 재구축 |
+| **meta_rules.md** | 🟢 JSON 배열로 변환 완료 — 하루 240+ 크론 경고 제거 |
+| **C: Disk** | 🟡 86% (65GB) — 3.7GB 정리했으나 사용률 유지 |
+| **Swap** | 🟡 1.0Gi/2.0Gi (50%) — 장 마감 후 재부팅 필요 |
+| **Memory** | 🟡 2,200/2,200 chars 꽉 참 |
+| **GUARDIAN ERROR** | 🔴 72h+ 지속 |
+| **Context 승격** | 🔴 118h+ 지연 |
+
 ## 🧠 Brain Sync — 2026-05-28 22:00 KST
 
 | 항목 | 상태 |

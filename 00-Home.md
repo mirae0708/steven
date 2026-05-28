@@ -75,6 +75,16 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
+- **[Hermes]** 📝 **지식 기록 cron — 00:46 KST Pre-Market 스냅샷: Swap 1.0Gi🟡, GUARDIAN ERROR 12h+🔴 지속, KOSDAQ 1,104🔴 급락** (2026-05-29 00:46 KST)
+  - **System**: WSL 6h12m ✅, Gateway RSS **301MB** 🟢 (재부팅 후 급감), Memory **41%** 🟢, Swap **1.0Gi** 🟡 (24h 경과 후 상승)
+  - **KOSPI 8,185** 🟢 — 5/28 EOD confirmed close 반영, 3일째 8,000선 안착
+  - **KOSDAQ 1,104** 🔴 — -2.54% 급락, KOSPI와 디커플링 심화! 2일간 -10.2% 폭락
+  - **WTI $90.92** 🟢 +2.53% 반등 — $90선 회복!
+  - **🔴 GUARDIAN ERROR 12h+** — `float division by zero` 지속 확인
+  - **🔴 Council v3.0 Fallback 20h+** — JSON parse error 미수리
+  - **🔴 Context 승격 112h+** — 8건 🥇 미승인
+  - **동기화**: 01_지식/Hermes-Daily-Log.md · 02-Knowledge/Hermes-Daily-Log.md · 99_System/Logs/wiki_update_log.md
+  - **전망**: 5/29(금) 마지막 거래일. 5/30~31 주말 휴장. 주간 요약 + 버그 수리 예정
 - **[Hermes]** 📊 **Wiki 확장기 18:15 — 5/28 EOD confirmed close 전면 갱신: 개별종목/지수 7종 wiki 갱신 + 00-Home.md 동기화 완료** (2026-05-28 18:15 KST)
   - **삼성부광 6,740**🔴-3.16% 신저가, **에이치엘 14,370**🔴-2.64%, **나우로보틱스 22,750**🔴-4.61% 2일 연속 급락
   - **KOSPI 8,185**🟢-0.53% 방어, **KOSDAQ 1,104**🔴-2.54% 급락

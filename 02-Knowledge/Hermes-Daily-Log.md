@@ -2795,3 +2795,56 @@
 - MetaClaw: 474MB / Nexus: 425MB
 - C: 드라이브: 383/456GB (84%%) — 74GB 남음
 - **결론**: 15:30 장 마감 직후 WSL 재부팅 필수! Gateway 재시작 포함
+
+
+## 2026-05-29 (Fri) 00:46 KST — 🔄 Pre-market Snapshot
+
+### System
+- WSL Uptime: 6h 12m (D+1), Swap: **1.0Gi** 🔴, Memory: 3.1Gi/7.6Gi (41%)
+- Gateway: 301MB RSS ✅, Load Avg: 0.61
+- C: drive: 86% ⚠️ (65GB 여유)
+- tmux: 6 sessions all normal
+
+### Market (5/28 EOD Confirmed Close)
+- KOSPI 8,185.29 🟢 -0.53% (8,000선 안착), KOSDAQ 1,104.36 🔴 -2.54% 급락
+- USD/KRW 1,503.06 🟢 -0.16%, WTI $90.92 🟢 +2.53% 반등
+
+### Portfolio (5/28 Close)
+- 삼성부광 6,740🔴 -3.16% (-32.87%), 에이치엘 14,370🔴 -2.64% (-10.56%), 나우로보틱스 22,750🔴 -4.61% (-25.53%)
+
+### Issues
+- 🔴 GUARDIAN ERROR 12h+ — `float division by zero` 지속
+- 🔴 Council v3.0 Fallback 20h+ — JSON parse error 미수리
+- 🔴 Context 승격 112h+ — 8건 🥇 미승인
+- 🟡 Swap 1.0Gi — 장 마감 후 재부팅 검토 필요
+
+### Outlook
+- 5/29(금) 마지막 거래일. KOSPI 8,000~8,200, KOSDAQ 1,100선 방어 관건
+- 주말(5/30~31) 휴장. 주간 요약 + 버그 수리 계획
+
+*Hermes Knowledge Cron 2026-05-29 00:46 KST*
+
+
+## 🔍 Tech Scavenger — 2026-05-29
+**실행 상태**: 정상 (매시간 실행, 마지막 02:20 KST)
+**최근 24시간 신규**: 1개 저장
+- 🆕  — GitHub Trending, autonomous deep research agent
+
+**주요 동향** (5/27~5/28):
+- AI Agents 분야 활발: MUSE-Autoskill (self-evolving agents), SwarmHarness (decentralized routing), How VLAs Fail Differently
+- LLM Alignment: Alignment Tampering (RLHF gaming 연구), Self-Improving LMs (양방향 진화)
+- arXiv API 간헐적 장애 지속 (특히 cs.RO/cs.MA 타임아웃), GitHub/HF는 정상
+- **5/4~5/29 누적 99건 신규 저장**
+
+
+
+## 5/29 04:46 KST — Pre-Market #2
+
+🟢 System: Uptime 10h12m, Memory 41%, Load 0.70
+🔴 Swap 1.1Gi (1.0Gi→1.1Gi, +100MiB/4h)
+🔴🔴🔴 GUARDIAN ERROR 76h+ (`float division by zero`)
+🔴🔴 Council Fallback 24h+ (JSON parse)
+🔴🔴 Context 승격 116h+ (8건🥇)
+
+**오늘 (금) 마지막 거래일** — KOSPI 8,185 / KOSDAQ 1,104 / WTI $90.92 (5/28 EOD 유지)
+5/29 EOD 후: Weekly Summary + WSL 재부팅 + 버그 핫픽스 예정

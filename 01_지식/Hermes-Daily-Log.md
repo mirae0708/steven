@@ -1146,3 +1146,123 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 
 *Recorded by Hermes Knowledge Cron on 2026-05-28 16:45 KST (EOD Post-Close) — System Stable 🟢 Swap 30.9MiB, KOSPI 7,985.74 급락🔴, GUARDIAN ERROR 12h+🔴, Council Fallback 20h+🔴*
 
+
+
+## 🧬 Hermes Auto-Evolution — 2026-05-29 (Fri) 00:46 KST (Pre-Market Open 전 스냅샷)
+
+### 📋 시스템 현황 — 00:46 KST (금요일, 마지막 거래일)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | 6h 12m (5/28 18:08 이후 재부팅 없음) |
+| tmux 세션 | 6개 — all normal (hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign) |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 |
+| Hermes Gateway (port 8642) | ✅ active, RSS **301MB** |
+| Memory | 3.1Gi / 7.6Gi (41%) |
+| **Swap** | **1.0Gi** 🔴🔴 (사용량 50%, 24h 경과 후 상승 추세) |
+| Disk (WSL home) | 4% ✅ |
+| Disk (C:) | 86% ⚠️ (65GB 여유) |
+| Load Avg | 0.61 / 0.48 / 0.46 |
+| KOSPI (야후 실시간) | **8,185.29** 🟢 (5/28 18:15 confirmed close 18:15 반영 — 8,000선 안착) |
+
+### 📋 지난 24시간 타임라인 (5/28 00:46 → 5/29 00:46)
+
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 5/28 04:30 | 🧬 Auto-Evolution 18차 — WSL 재부팅 성공✅ Swap 0B 완전 회복!, KOSPI 8,228 Intraday🔴, WTI $89.73 confirmed🔥 |
+| 5/28 08:30 | 🧬 Auto-Evolution 18.5차 — 08:45 Quick Check, 장 오픈 15분 전—GUARDIAN ERROR 미실행🔴, Gateway 665MB✅ |
+| 5/28 14:30 | 🧬 Auto-Evolution 19차 — KOSPI 7,985.74 급락🔴🔴 8,000선 붕괴!, Swap 16.6MiB🟢 |
+| 5/28 16:45 | 🧬 Auto-Evolution 20차 (EOD Post-Close) — System Stable🟢 Swap 30.9MiB, GUARDIAN ERROR 12h+🔴 |
+| 5/28 18:15 | 📊 Wiki 확장기 — 5/28 EOD confirmed close 전면 갱신: 개별종목 3종 + Macro 4종 동기화 |
+| 5/29 00:46 | 📝 지식 기록 cron 실행 (본 문서) |
+
+### 📊 EOD 5/28 Confirmed Close 요약
+
+| 지표 | 가격 | 변동 | 기술적 분석 |
+|:-----|:----|:----:|:----------|
+| **KOSPI** | **8,185.29** 🟢 | -0.53% | RSI 62.7 강세, BB% 85.1% 고점권, 3일째 8,000선 안착 |
+| **KOSDAQ** | **1,104.36** 🔴 | -2.54% 급락 | RSI 37.3 약세, 1,100선 위협 — KOSPI와 디커플링 심화 |
+| **USD/KRW** | **1,503.06** 🟢 | -0.16% | 1,500선 지지 테스트 중 |
+| **WTI** | **$90.92** 🟢 | +2.53% 반등 | BB 하단($88.60)서 반등, RSI 45.0 중립, $90선 회복 |
+
+### 📈 포트폴리오 (5/28 Confirmed Close)
+
+| 종목 | 가격 | 등락 | 손익률 | 기술적 상태 |
+|:-----|:---:|:----:|:------:|:----------|
+| **삼성부광** (014950) | **6,740원** 🔴 | -3.16% | -32.87% | RSI 30.4 과매도, BB% 12.9% 하단 근접, 신저가 재경신 |
+| **에이치엘사이언스** (473980) | **14,370원** 🔴 | -2.64% | -10.56% | RSI 34.9 과매도 임박, BB% 7.7% 하단 근접 |
+| **나우로보틱스** (459510) | **22,750원** 🔴 | -4.61% | -25.53% | RSI 24.8 극단 과매도!, BB% 5.6% 하단 극근접 |
+
+### ⚠️ 지속 이슈 트래커
+
+| 이슈 | 지속 시간 | 최종 상태 | 긴급도 |
+|:----|:--------:|:---------|:-----:|
+| GUARDIAN ERROR | 12h+ (5/28 14:34 확인) | `float division by zero` | 🔴🔴 |
+| Council v3.0 Fallback | 20h+ (5/27 20:00 추정) | JSON parse error 미수리 | 🔴🔴 |
+| CB Score Dashboard | 주기적 | ?/100 패턴 재발 | 🔴 |
+| Context 승격 | 112h+ | 8건 🥇 미승인 | 🔴 |
+| Swap 누적 | 6h → 1.0Gi | 재부팅 필요 검토 | 🟡 |
+| C: 드라이브 (86%) | 지속 | 65GB 여유 — 정리 필요 | 🟡 |
+
+### 📌 전망 — 5/29(금) 마지막 거래일
+
+- **KOSPI**: 8,000~8,200 레인지 예상. EOD 8,185로 8,000선 안착 확인. 금요일 차익실현/포지션 정리 가능.
+- **KOSDAQ**: 1,100선 방어 여부가 핵심. 2일간 -10.2% 급락 후 반등 시도 예상.
+- **주말 대비**: 5/30(토)~5/31(일) 휴장 → 6/1(월) 재개. 주간 요약 작성 예정.
+- **시스템**: Swap 1.0Gi — 재부팅 D+1. 5/29 장 마감 후 재부팅 검토.
+
+*Recorded by Hermes Knowledge Cron on 2026-05-29 00:46 KST (Pre-market Snapshot) — System Stable🟢, KOSPI 8,185🟢, KOSDAQ 1,104🔴 급락, GUARDIAN ERROR 12h+🔴, Swap 1.0Gi🟡*
+
+---
+
+## 5/29 04:46 KST — Pre-Market 스냅샷 (21차-2)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | 10h 12m (5/28 18:08 이후 재부팅 없음) |
+| tmux 세션 | 6개 — 정상 (hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign) |
+| Hermes Gateway | ✅ active, 439MB RSS |
+| Memory | 3.1Gi / 7.6Gi (41%) |
+| **Swap** | **1.1Gi** 🔴🔴 (00:46 1.0Gi→04:46 1.1Gi, +100MiB/4h, 55% 사용) |
+| Load Avg | 0.70 / 0.66 / 0.41 |
+| Disk (C:) | 86% ⚠️ (65GB 여유, 5/28 3.7GB 정리 효과 유지) |
+
+### ⏱ 00:46→04:46 Timeline
+
+| KST | 이벤트 |
+|:----|:--------|
+| 00:46 | 📝 21차 Pre-Market 스냅샷 기록 |
+| 02:33 | 🧬 Auto-Evolution 21차 (Session DB 복구✅, meta_rules 변환✅, C: 정리✅) |
+| 04:20 | 🔍 Tech Scavenger 22회차 — 신규 발견 0건 (캐시 안정) |
+
+### 📊 Swap 추이 (5/29)
+
+| 시간 | Swap | 증감 | 속도 |
+|:----|:---:|:----:|:----:|
+| 00:46 | 1.0Gi | 기준 | — |
+| 02:33 | 1.0Gi | +0MiB | 0MiB/h |
+| 04:46 | **1.1Gi** | +100MiB | +25MiB/h |
+
+- Swap 증가 속도 25MiB/h로 둔화 (5/27 S4 단계 26MiB/h와 유사)
+- 08:00 Pre-Market 전망: **~1.2Gi** 도달 예상, 50%→60% 사용률
+- 재부팅 권장 시점: 장 종료 후 (5/29 15:30 KST)
+
+### ⚠️ 지속 이슈 동향
+
+| 이슈 | 경과 | 현황 |
+|:----|:----:|:----|
+| GUARDIAN ERROR | **76h+** 🔴🔴🔴 | `float division by zero` — 핫픽스 미실행 |
+| Council v3.0 Fallback | **24h+** 🔴🔴 | JSON parse error 미수리 |
+| Context 승격 | **116h+** 🔴🔴 | 8건🥇 대기 중 |
+| CB Score ?/100 | 주기적 🔴 | 패턴 재발 |
+| Swap 1.1Gi | **10h** 🟡 | 증가 속도 둔화 |
+
+### 📌 오늘 5/29(금) — 주간 마지막 거래일 전망
+
+- **KOSPI**: 8,000~8,200 레인지. 전일 8,185 close. 금요일 차익실현/주말 포지션 정리 가능.
+- **KOSDAQ**: 1,100선 방어 여부 핵심. 2일간 -10.2% 급락 후 기술적 반등 가능.
+- **5/28 EOD confirmed close 유지**: 삼성부광 6,740🔴-3.16%, 에이치엘 14,370🔴-2.64%, 나우로보틱스 22,750🔴-4.61%
+- **주간 마감**: 15:30 KST 종료 → 18:00+ KST yfinance confirmed close 수집 예정
+- **주말 계획**: Weekly Summary + 버그 핫픽스(GUARDIAN ERROR + Council Fallback) + WSL 재부팅
+
+*Recorded by Hermes Knowledge Cron on 2026-05-29 04:46 KST (Pre-Market Snapshot #2) — System Stable🟢, Swap 1.1Gi🔴, GUARDIAN ERROR 76h+🔴🔴🔴*
