@@ -1,60 +1,48 @@
-|## 🧠 Brain Sync — 2026-05-28 15:00 KST
-||- **Time**: 2026-05-28 15:00 KST
-||- **Vault stats**: Context/ 11 files approved, 01_지식/ 50+ files, 10_Wiki/ 180+ papers
-||- **New since 12:01 KST**:
-||  - **arXiv papers (3)** — 11:21 batch:
-||    1. **OmniVerifier-M1** (2605.28805) — Multimodal meta-verifier with structured recalibration for visual outcomes. MODERATE SIGNAL.
-||    2. **Calibrating Conservatism** (2605.28807) — Scalable oversight calibration for agentic AI systems. MODERATE SIGNAL.
-||    3. **Beyond Binary** (2605.28812) — Sim-to-real dexterous manipulation with physics-grounded contact. LOW SIGNAL (robotics, not directly applicable).
-||  - **Auto-Evolution cycle (14:30)**: Detailed intraday scan completed
-||- **System snapshot**:
-||  - WSL up ~9h (from ~06:00) — stable
-||  - Memory 3.6Gi/7.6Gi (47%), Swap 30MiB ✅
-||  - Gateway RSS ~725MB (정상)
-||  - CB Score ~25/100 CAUTION MODE — GUARDIAN ERROR still active (10h+) 🔴
-||  - Council v4.1→v3.0 Fallback (21h+) — JSON parse error line 2002 🔴
-||  - Kiwoom 8050 error persisting (yfinance fallback active)
-||- **Context promotion**: 17 candidates still pending from 5/25 proposal (3 days overdue)
-||- **No new knowledge to absorb from 10_Wiki**: 3 new papers are interesting but not directly actionable (OmniVerifier for Hermes vision evaluation, Conservatism for oversight design)
-||- **Memory update**: Stored GUARDIAN ERROR root cause (229000.KQ buy_price=0), Council v4.1 Fallback issue, and Context promotion backlog
-|File unchanged since last read. The content from the earlier read_file result in this conversation is still current — refer to that instead of re-reading.
-## 🧠 Brain Sync — 2026-05-28 17:00 KST
-- **Time**: 2026-05-28 17:00 KST
-- **Vault stats**: Context/ 11 files (unchanged), Members/ 1 file (unchanged), Agents/ 2 files (unchanged)
-- **Changes since 15:00 KST**: 
-  - **None** — Context/Members/Agents completely static (last modification 5/23-5/25)
-  - 1 new commit: EOD Post-Close Sync (KOSPI 7,985.74, GUARDIAN ERROR 12h+, Council Fallback 20h+)
-  - 14 new arXiv papers absorbed to 10_Wiki/ (15:21 batch) — all LOW signal, no actionable knowledge
-- **System snapshot**:
-  - WSL ~11h up (from ~06:00), Swap 30.9MiB 🟢 (D+1, 양호)
-  - Memory 3.8Gi/7.6Gi (49%), Loadavg 0.27, Gateway RSS 758MB
-  - KOSPI 7,985.74 🔴 (8,000선 붕괴, 사상최고 대비 -5.6%)
-  - GUARDIAN ERROR 12h+ 🔴 (division by zero, 229000.KQ buy_price=0)
-  - Council v3.0 Fallback 20h+ 🔴 (JSON parse error line 2002)
-  - CB Score ?/100 🔴 (tmux pattern mismatch bug)
-  - Kiwoom 8050 persisting (yfinance fallback active)
-  - C: drive 85% ⚠️ (73GB 여유)
-- **Context promotion**: 17 candidates, 8🥇, 112h+ overdue from 5/25 proposal
-- **Knowledge absorption assessment**: NO new knowledge to absorb. All Context/Members/Agents files unchanged. 10_Wiki papers all LOW-MODERATE signal (robotics, fine-tuning benchmarks, memory connectivity — not directly applicable to Hermes ops). MCP 158+ consecutive LOW SIGNAL (Naver dependency 100%, needs source diversification).
 
-## 🧠 Brain Sync — 2026-05-28 19:20 KST
-- **Time**: 2026-05-28 19:20 KST
-- **Vault stats**: Context/ 11 files (unchanged), Members/ 1 file (unchanged), Agents/ 2 files (unchanged)
-- **Since 17:00 KST**:
-  - **7 new MCP files** (18:40~19:17 batch):
-    1. **US Market** (S&P 7,520 사상최고, WTI 반등)
-    2. **K-Food/K-Beauty** (K-뷰티 美수출 31억달러 역대최대, 40.9% 급증)
-    3. **BTC/ETH** (BTC $74K~$75K, ETH $2,000, CLARITY Act)
-    4. **AI Agent Frameworks** (시장 2조→61조 2030, 175% CAGR)
-    5. **LLM Trends** (OpenRouter랭킹: Xiaomi Mimo V2 Pro 1위 3.5조토큰)
-    6. **Stock Market Outlook** (KOSPI 7,800, KOSDAQ 사이드카)
-    7. **Freight/Shipping** (포워딩 50.7% 시장점유율)
-  - **Wiki 확장기 18:15**: 00-Home.md + wiki files 5/28 EOD confirmed close 반영
-- **System snapshot**:
-  - WSL ~1h (재부팅 후 43min from 18:33), Memory 4.1Gi/7.6Gi (54%), Swap 30.9MiB 🟢
-  - Gateway/OpenWebUI/MetaClaw/CowAgent 모두 정상 실행 중
-  - GUARDIAN ERROR 12h+ 🔴 (division by zero, 229000.KQ buy_price=0)
-  - Council v3.0 Fallback 20h+ 🔴 (JSON parse error)
-  - C: drive 85% ⚠️ (72GB 여유)
-- **Context promotion**: 17 candidates, 8🥇, 118h+ overdue from 5/25 proposal — NO PROGRESS
-- **Knowledge absorption assessment**: NO NEW actionable knowledge. All MCP files are LOW SIGNAL automated searches (Naver SEO noise). Context/Members/Agents unchanged.
+## 🧠 Brain Sync — 2026-05-28 22:00 KST
+
+| 항목 | 상태 |
+|:-----|:-----|
+| **Vault total** | 1,216 .md files (sources/ 70 + wiki/ 278 + outputs/ 37 + 10_Wiki/ 563 + 01_지식/ 52 + 기타 216) |
+| **새 파일** | 없음 (20:00 이후 변화 없음) |
+| **미처리 논문** | 없음 (모든 Key Takeaways 채워짐) |
+| **Context/ 승격** | 11개 파일, 5/25 이후 변화 없음 — 17개 후보, 120h+ 지연 🔴 |
+| **Members/** | Steven/Ideas/LLM-Wiki-개선아이디어.md — 변화 없음 |
+| **Agents/** | 2개 파일 — 변화 없음 |
+
+### 📊 System Health
+
+| 서비스 | 상태 | 비고 |
+|:-------|:----:|:-----|
+| **WSL** | 🟢 | 3.5h uptime after reboot. Memory 2.4Gi/7.6Gi (32%) |
+| **Swap** | 🟡 | 1.0Gi/2.0Gi used (50%) — up from 30.9MiB at EOD |
+| **Disk C:** | ⚠️ | 86% (65GB free) |
+| **Gateway (8642)** | 🔴 | Offline — not responding |
+| **OpenWebUI (3000)** | 🟢 | 200 OK |
+| **Metaclaw (8001)** | 🟢 | 200 OK on port 8001 |
+| **CowAgent (9899)** | 🟢 | Running |
+| **GUARDIAN ERROR** | 🔴 | 지속 — division by zero (buy_price=0) |
+| **Context Promotion** | 🔴 | 120h+ 지연 |
+
+### 🔍 Knowledge Absorption Assessment
+
+**NO NEW actionable knowledge.** All knowledge bases stable since last sync at 20:00:
+
+1. **Context/** — 11 files, last modified 5/25 00:25~00:42. Promotion proposal has 17 candidates (8🥇, 5🥈, 4🥉). No progress made in 120h+.
+2. **10_Wiki/** — 563 papers across 19 categories. Largest: LLM(138), AI_Agents(84), Deep_Learning(25), RL(23), CV(19), MCP(16). All papers processed (no unfilled placeholders).
+3. **wiki/** — 278 files. Stock macros and market data last updated 5/28 18:15 EOD sync. KOSPI 7,985.74 🔴 (8,000선 붕괴), WTI $89.89 ($90 붕괴).
+4. **MCP batch (18:40~19:17)** — 7 multi-search files. All LOW SIGNAL automated Naver searches. No actionable insights.
+5. **sources/** — 70 files (papers, news, github, mcp_reports, news). Stable.
+
+### 📌 Persistent Issues
+
+| Issue | Days | Status |
+|:------|:----:|:-------|
+| GUARDIAN ERROR (division by zero) | 18일차 | 🔴 buy_price=0 for 229000.KQ |
+| Context Promotion Stalled | 5일차 | 🔴 120h+ since 5/25 proposal |
+| C: Drive 86% | 지속 | ⚠️ 65GB free |
+| Gateway 8642 offline | 재발 | 🔴 |
+
+### 💾 Memory Storage
+
+No new durable facts to save. Vault state, system configuration, and knowledge structures are stable.
