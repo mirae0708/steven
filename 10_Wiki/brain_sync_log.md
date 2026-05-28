@@ -36,3 +36,25 @@
   - C: drive 85% ⚠️ (73GB 여유)
 - **Context promotion**: 17 candidates, 8🥇, 112h+ overdue from 5/25 proposal
 - **Knowledge absorption assessment**: NO new knowledge to absorb. All Context/Members/Agents files unchanged. 10_Wiki papers all LOW-MODERATE signal (robotics, fine-tuning benchmarks, memory connectivity — not directly applicable to Hermes ops). MCP 158+ consecutive LOW SIGNAL (Naver dependency 100%, needs source diversification).
+
+## 🧠 Brain Sync — 2026-05-28 19:20 KST
+- **Time**: 2026-05-28 19:20 KST
+- **Vault stats**: Context/ 11 files (unchanged), Members/ 1 file (unchanged), Agents/ 2 files (unchanged)
+- **Since 17:00 KST**:
+  - **7 new MCP files** (18:40~19:17 batch):
+    1. **US Market** (S&P 7,520 사상최고, WTI 반등)
+    2. **K-Food/K-Beauty** (K-뷰티 美수출 31억달러 역대최대, 40.9% 급증)
+    3. **BTC/ETH** (BTC $74K~$75K, ETH $2,000, CLARITY Act)
+    4. **AI Agent Frameworks** (시장 2조→61조 2030, 175% CAGR)
+    5. **LLM Trends** (OpenRouter랭킹: Xiaomi Mimo V2 Pro 1위 3.5조토큰)
+    6. **Stock Market Outlook** (KOSPI 7,800, KOSDAQ 사이드카)
+    7. **Freight/Shipping** (포워딩 50.7% 시장점유율)
+  - **Wiki 확장기 18:15**: 00-Home.md + wiki files 5/28 EOD confirmed close 반영
+- **System snapshot**:
+  - WSL ~1h (재부팅 후 43min from 18:33), Memory 4.1Gi/7.6Gi (54%), Swap 30.9MiB 🟢
+  - Gateway/OpenWebUI/MetaClaw/CowAgent 모두 정상 실행 중
+  - GUARDIAN ERROR 12h+ 🔴 (division by zero, 229000.KQ buy_price=0)
+  - Council v3.0 Fallback 20h+ 🔴 (JSON parse error)
+  - C: drive 85% ⚠️ (72GB 여유)
+- **Context promotion**: 17 candidates, 8🥇, 118h+ overdue from 5/25 proposal — NO PROGRESS
+- **Knowledge absorption assessment**: NO NEW actionable knowledge. All MCP files are LOW SIGNAL automated searches (Naver SEO noise). Context/Members/Agents unchanged.
