@@ -60,10 +60,10 @@
 - [[wiki/sectors/로보틱스|🤖 로보틱스]]
 
 ### 💵 거시경제
-- [[wiki/macros/KOSPI|📊 KOSPI (8,229 확정)]] 🟢 **+2.25% 상승! 사상 최고치!** (RSI 65.1 강세, confirmed close 8,228.70, BB% 90.5% 상단 근접. 16:10(8,436)→17:10(8,229) settlement revision)
-- [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,133)]] 🔴 **-3.36% 하락** (RSI 39.2 약세, BB% 31.1% 중립~약세, 16:10(1,147)→17:10(1,133) 추가 하락 정정)
-- [[wiki/macros/환율|💵 환율 (1,500원)]] 🟢 **-0.92% 원화 강세** (5/27 forex 1,500.81, 1500선 유지, 외국인 매수 유입 지속)
-- [[wiki/macros/국제유가WTI|🛢️ WTI ($89.89)]] 🔥 **-4.26% 하락! $90선 붕괴!**
+|- [[wiki/macros/KOSPI|📊 KOSPI]] 🟡 yfinance 5/27 지수 NaN (개별종목 정상 거래, 5/26 8,048 확정)
+|- [[wiki/macros/KOSDAQ|📈 KOSDAQ]] 🟡 yfinance 5/27 지수 NaN (개별종목 정상 거래, 5/26 1,173 확정)
+|- [[wiki/macros/환율|💵 환율 (1,505원)]] 🟢 **-0.62% 원화 강세** (5/27 forex 1,505.44, 17:10 revision 1,500.81→1,505.44)
+|- [[wiki/macros/국제유가WTI|🛢️ WTI ($89.73)]] 🔥 **-4.43% 하락! $90선 붕괴! BB 하단 이탈!**
 
 ### 🧠 시스템
 - [[99_System/GEMINI.md|🧠 시스템 스키마 (GEMINI.md)]]
@@ -75,15 +75,22 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
-- **[Hermes]** 🧬 **05:28 Knowledge Snapshot — WSL 재부팅 성공! Swap 0B, GUARDIAN ERROR 지속, WTI $89.89 confirmed** (2026-05-28 04:45 KST)
+- **[Hermes]** 🧬 **08:45 Quick Check — 장 오픈 15분 전, GUARDIAN ERROR 핫픽스 미실행 상태 지속🔴, Gateway 665MB(-56%) 안정화✅, Swap 0B✅** (2026-05-28 08:45 KST)
+  - **System**: WSL 재부팅 D+1 ✅, Swap 0B ✅✅, Gateway RSS **665MB** (재부팅 대비 -56%), Memory 42%, Loadavg 0.27
+  - **🔴 GUARDIAN ERROR**: `float division by zero` 지속 (08:45:25에도 발생) — 장 오픈 15분 전 핫픽스 미실행
+  - **🔴 Council v3.0 Fallback**: 16h+ 지속 — JSON parse error 미수리
+  - **🏆 KOSPI 8,228.70 유지** — 오늘 8,500 돌파 시도 예상
+  - **🔴 WTI $89.89** — $90선 붕괴 지속, $85선 테스트 가능
+  - **Auto-Evolution 18.5차 기록**: [[01_지식/Hermes-Auto-Evolution-20260528-0845]]
+- **[Hermes]** 🧬 **05:28 Knowledge Snapshot — WSL 재부팅 성공! Swap 0B, GUARDIAN ERROR 지속, WTI $89.73 confirmed** (2026-05-28 04:45 KST)
   - **WSL 재부팅 성공 🎉** (5/28 03:35 KST) — Swap 1.6Gi(80%) 위기 → **Swap 0B 완전 회복!** Gateway 811MB(-47%), Memory 38%, tmux 6개 세션 정상
   - **GUARDIAN ERROR 🔴🔴🔴** — `float division by zero` 매 10초 반복 (229000.KQ qty=100, buy_price=0 포지션)
   - **CB Score ?/100 🔴** — 근본 버그 확정: tmux 패턴 "Score=" 미존재 → 항상 ?/100 반환
   - **Council v4.1→v3.0 Fallback 🟡** — JSON parse error line 2002로 가중치 무효화 (12h+ 지속)
-  - **5/27 confirmed close**: KOSPI **8,228.70 (+2.25%) 사상최고!**🏆, KOSDAQ 1,133.13(-3.36%)⚠️, 환율 1,500.81(-0.92%), WTI **$89.89(-4.26%) $90선 붕괴!**
+  - **5/27 confirmed close**: KOSPI **yfinance 지수 NaN** 🟡 (5/26 8,048 확정, 개별종목 정상 거래), KOSDAQ **yfinance 지수 NaN** 🟡 (5/26 1,173 확정), 환율 **1,505.44원** 🟢(-0.62%, 17:10 revision), WTI **$89.73** 🔥(-4.43%, $90선 붕괴! BB 이탈!)
   - **시스템**: Uptime 1h10m, Load 0.29, Disk 4% ✅. **C: 드라이브 84%** ⚠️ 필요 청소
   - **Jongdari Nexus**: Cycle Complete 정상 실행하나 GUARDIAN ERROR로 Council 판단력 저하
-  - **오늘 5/28(목) 전망**: KOSPI 8,500 돌파 시도 예상. Council 복구 + GUARDIAN ERROR 핫픽스 시급.
+  - **오늘 5/28(목) 전망**: KOSPI 8,200~8,500 예상. Council 복구 + GUARDIAN ERROR 핫픽스 시급. KOSPI 지수 5/27 데이터 yfinance 복구 대기.
 - **[Hermes]** 🧠 **Brain Sync 09:00 — Context 11개 문서 전수 스캔 완료, 12건 승격 대기🚨, 지식 그래프 5개 제안** (2026-05-27 09:00 KST)
   - **Context 승격 12건 대기** (48h+ overdue): Operations-Guide, Vault-구조, 지식베이스, 트레이딩전략, 사업인덱스 등
   - **지식 그래프 제안**: 포트폴리오 3종목 상호참조, Culture_Economy 9건 00-Home 등록, Auto-Evolution 인덱스
