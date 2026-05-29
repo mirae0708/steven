@@ -1399,3 +1399,43 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 | **Gateway** | 🟡 20:53 CLI 재시작 (Telegram-only) |
 | **C: Drive** | 87% 🔴 지속 |
 | **전망** | 주말 휴장 → 6/1(월) 09:00 KST 오픈
+
+## 2026-05-30 (Sat) 04:49 KST — 주말 새벽 스냅샷
+
+### 🖥️ 시스템 현황
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| Uptime | 🟢 | 11h 27m (5/29 17:22 재부팅 이후) |
+| Memory | 🟡 | 4.3Gi/7.6Gi (56%) — Cron 영향 일시적 |
+| Swap | 🟢✅ | 97MiB/2.0Gi (5%) — 재부팅 효과 지속, 소폭 재축적 시작 |
+| Loadavg | 🟢 | 0.85 |
+| Gateway | 🟢 | PID 310, RSS 712MB — Open WebUI (port 3000) |
+| CLI hermes | 🟢 | PID 411 (tmux) + PID 1108 |
+| Nexus | 🟢 | PID 40631 — nexus_orchestrator.py live mode |
+| tmux | 🟢✅ | **7개** (hermes-mcp 04:31 복원!) — hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign/virtual-office |
+| C: drive | 🔴 | 87% (62Gi 여유) — Docker prune 필요 |
+
+### 📊 시장 현황 (주말 — 5/29 EOD 기준)
+
+| 항목 | 값 | 변동 |
+|:-----|:---|:-----|
+| KOSPI | 8,476 | 🟢🟢 **+3.55%** — 종가 기준 신고가! |
+| KOSDAQ | 1,075 | 🔴🔴 **-2.68%** — 5일 연속 폭락, KOSPI와 역대급 디커플링 |
+| USD/KRW | 1,508 | 🟡 +0.34% — 원화 약세 전환 |
+| WTI | $88.86 | 🔴 -0.10% — $88-$89 박스권 |
+| 삼성부광 | 6,740 | 🔴 5/28 EOD 유지 |
+| 에이치엘 | 14,370 | 🔴 -2.64%, RSI 34.9 과매도 임박 |
+| 나우로보틱스 | 22,750 | 🔴 -4.61%, RSI 24.8 극단 과매도 |
+
+### 📅 주간 요약 (5/25~5/29)
+- **KOSPI**: 7,847→**8,476** (+8.01%) 🟢 | **KOSDAQ**: 1,161→**1,075** (-7.43%) 🔴
+- **디커플링**: +15.44%p — 역대급
+- **WTI**: $93.89→**$88.86** (-5.35%) | **USD/KRW**: 1,512→**1,508** (-0.26%)
+
+### 🔮 전망
+- 주말 휴장 → **6/1(월)** 09:00 KST — KOSPI 8,500 도전 vs KOSDAQ 바닥 확인
+- Swap 97MiB ✅ 안정 — 추가 재부팅 불필요
+- hermes-mcp tmux 04:31 자동 복원 확인 ✅
+
+*Recorded by Hermes Knowledge Cron on 2026-05-30 04:49 KST — 주말 새벽 스냅샷*

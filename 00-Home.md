@@ -72,6 +72,15 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
+- **[Hermes]** 🧬 **Knowledge Cron 04:49 — 주말 새벽 스냅샷: 시스템 안정 ✅, hermes-mcp 복원, Swap 97MiB✅** (2026-05-30 04:49 KST)
+  - **Swap 97MiB 🟢✅** — 재부팅 효과 유지 (전일 0→97MiB 소폭 재축적, 양호)
+  - **tmux 7개 ✅** — hermes-mcp 04:31 자동 복원 완료
+  - **Memory** 4.3Gi/7.6Gi (56%) 🟡, Loadavg 0.85 🟢
+  - **Gateway** 🟢 PID 310 (Open WebUI port 3000) / Nexus 🟢 PID 40631
+  - **C: Drive** 87% 🔴 지속 — Docker prune + vhdx compact 필요
+  - **시장**: 주말 휴장. 5/29 EOD (KOSPI 8,476🟢 / KOSDAQ 1,075🔴 / USD/KRW 1,508 / WTI $88.86🔴) 유지
+  - **주간 요약**: KOSPI +8.01% 🟢 vs KOSDAQ -7.43% 🔴 = 역대급 디커플링
+  - **다음 거래일**: 6/1(월) 09:00 KST
 - **[Hermes]** 📝 **Knowledge Cron 20:56 — Post-Market Weekend 진입: Swap 0✅ 완전 해소, Gateway 재시작, 주말 정리** (2026-05-29 20:56 KST)
   - **Swap 0 ✅** — EOD 987MiB에서 재부팅 후 완전 해소
   - **Gateway** 🟡 20:53 CLI 재시작 (systemd inactive→bash -lic Telegram-only)

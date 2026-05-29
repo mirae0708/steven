@@ -2894,4 +2894,55 @@
 | **C: Drive** | 87% 🔴 |
 | **Portfolio** | 주말 휴장, 6/1(월) 09:00 KST 오픈까지 미갱신 |
 
+## 2026-05-30 (Sat) 04:49 KST — 주말 새벽 스냅샷
+
+### 시스템 현황
+
+| 항목 | 상태 |
+|:-----|:------|
+| Uptime | 11h 27m (5/29 17:22 재부팅 이후) — 전일 20:56 Post-Market 이후 안정 유지 |
+| Memory | 4.3Gi/7.6Gi (56%) 🟡 — Brain Sync 제외 평시 대비 높음 (Nightly cron 영향) |
+| Swap | 97MiB/2.0Gi (5%) 🟢✅ — 전일 0에서 소폭 재축적 시작했으나 매우 낮은 수준 |
+| Loadavg | 0.85 🟢 |
+| Gateway (port 3000) | 🟢 PID 310, RSS 712MB — Open WebUI serving (5/29 17:03 시작) |
+| CLI hermes | 🟢 PID 411 (tmux hermes) + PID 1108 (tmux) |
+| Nexus | 🟢 PID 40631 — nexus_orchestrator.py live mode |
+| tmux 세션 | 7개 ✅ (hermes / hermes-mcp / jongdari / metaclaw / cowagent / opendesign / virtual-office) |
+| hermes-mcp | 🟢✅ 복원됨 (전일 20:56 소멸 → 04:31 재생성) |
+| C: Drive | 87% 🔴 (62Gi 여유) — Docker prune/vhdx compact 필요 |
+| Brain Sync | 마지막: 5/30 04:04 UTC (13:04 KST? .hermes_last_brain_sync 타임스탬프 부정확) |
+
+### 시장 현황 (주말 — 5/29 EOD confirmed close 기준)
+
+| 항목 | 값 | 변동 |
+|:-----|:---|:-----|
+| KOSPI | 8,476 | 🟢🟢 +3.55% — 종가 기준 신고가! (5/27 장중 8,457 돌파) |
+| KOSDAQ | 1,075 | 🔴🔴 -2.68% — 5일 연속 폭락 (KOSPI와 역대급 디커플링) |
+| USD/KRW | 1,508 | 🟡 +0.34% — 원화 약세 전환 신호 |
+| WTI | $88.86 | 🔴 -0.10% — $88-$89 박스권 정체, $90선 재돌파 실패 |
+| 삼성부광 (014950) | 6,740 | 🔴 (5/28 EOD 유지, 5/29 intraday 6,280까지 하락했다 회복) |
+| 에이치엘사이언스 (473980) | 14,370 | 🔴 -2.64% (RSI 34.9 과매도 임박, 52주 최저 13,840 기록) |
+| 나우로보틱스 (459510) | 22,750 | 🔴 -4.61% (RSI 24.8 극단 과매도, 3일 -19.37% 폭락) |
+
+### 📅 주간 요약 (5/25 Mon ~ 5/29 Fri)
+- **KOSPI**: 7,847 → 8,476 = **+8.01%** 주간 강력 상승
+- **KOSDAQ**: 1,161 → 1,075 = **-7.43%** 주간 폭락
+- **디커플링**: +15.44%p 역대급 괴리 — 대형주 Rally vs 중소형주 이탈
+- **WTI**: $93.89 → $88.86 = **-5.35%** 주간 하락 (5/26 기준 → 5/29)
+- **USD/KRW**: 1,512 → 1,508 = **-0.26%** 변동 미미
+
+### 🔴 지속 이슈
+- C: Drive 87% — Windows disk 공간 부족, Docker 이미지 정리 필요
+- Context 승격 120h+ 5일차 — 9건 미승인 지속
+- Swap 97MiB — 재축적 시작 감지 (주말 중 재부팅 후 최소화 중)
+- GUARDIAN ERROR · CB Score ?/100 — 수리 지연
+
+### 🔮 전망
+- 주말 휴장 (5/30~5/31)
+- **다음 거래일**: 6/1(월) 09:00 KST — KOSPI 8,500 돌파 시도 vs KOSDAQ 바닥 확인
+- WSL 재부팅 완료 후 안정 상태 — 추가 재부팅 불필요 (Swap 97MiB, uptime 11h)
+- hermes-mcp tmux 복원 완료 (7개 세션 안정)
+
+*Recorded by Hermes Knowledge Cron on 2026-05-30 04:49 KST — 주말 새벽 스냅샷*
+
 **주말 전망**: Swap 완전 해소 확인 ✅. C: 87%는 WSL 재부팅으로도 해결 불가 (Windows 디스크 문제) — Docker prune + vhdx compact 필요. Gateway 재시작 후 안정적. 주말 동안 cron self-heal 유지. 다음 업데이트: 6/1(월) Pre-Market.
