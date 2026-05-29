@@ -2867,3 +2867,31 @@
 
 **Swap 감소 분석**: Gateway(8642) 다운으로 인한 착시효과로 추정. Gateway 재시작 시 Swap 1.0Gi+ 재증가 예상됨.
 **전망**: 5/29(금) 마지막 거래일. 15:30 EOD 후 Weekly Summary + Gateway 재시작 + WSL 재부팅 필요.
+
+
+## 2026-05-29 (Fri) 16:50 KST — 5/29 EOD Confirmed Close
+
+**KOSPI 8,476.15 🟢🟢 +3.55%** — 5/27 사상최고 8,457 돌파! 5/28 8,185 급락을 단 하루 만에 회복+α. **신고가 종가!**
+**KOSDAQ 1,074.80 🔴🔴 -2.68%** — 5일 연속 폭락 (5/22 1,161→5/29 1,075 = -7.43%). KOSPI와 +6.23%p 역대급 디커플링.
+**USD/KRW 1,508.28** — 3일 연속 원화 강세 추세 꺾임 (+0.34%).
+**WTI $88.86 🔴** — $90선 재돌파 실패. 5일째 $88-$89 박스권.
+
+**System**: Uptime 21h✅, Swap 987Mi🟡, Memory 43%🟢, Gateway 596MB🟢, C: 87%🔴, tmux 5개🟡(mcp 소멸).
+
+**Weekly Recap**: KOSPI +8.01% 대폭발 but KOSDAQ -7.43% 폭락 = 극단적 'K-디커플링'. 다음 거래일 6/1(월) 09:00 KST.
+
+
+## 2026-05-29 (Fri) 20:56 KST — Post-Market / Weekend 진입
+
+| 항목 | 상태 |
+|:-----|:------|
+| **시장** | KOSPI 8,476 🟢 종가 기준 신고가 • KOSDAQ 1,075 🔴 5일 연속 폭락 • USD/KRW 1,508 • WTI $88.86 🔴 |
+| **Uptime** | 3h35m (재부팅 후) — 5/29 16:50→20:56 사이 재부팅 또는 시스템 재시작 있음 |
+| **Memory** | 3.0Gi/7.6Gi (39%) 🟢 |
+| **Swap** | 0 🟢✅ — 완전 해소! (EOD 987MiB→0, 재부팅 효과) |
+| **Loadavg** | 1.14 🟢 |
+| **Gateway** | 🟡 20:53 CLI 재시작 (systemd inactive→bash -lic) — Telegram-only 모드, port 8642 unbound |
+| **C: Drive** | 87% 🔴 |
+| **Portfolio** | 주말 휴장, 6/1(월) 09:00 KST 오픈까지 미갱신 |
+
+**주말 전망**: Swap 완전 해소 확인 ✅. C: 87%는 WSL 재부팅으로도 해결 불가 (Windows 디스크 문제) — Docker prune + vhdx compact 필요. Gateway 재시작 후 안정적. 주말 동안 cron self-heal 유지. 다음 업데이트: 6/1(월) Pre-Market.

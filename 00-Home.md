@@ -43,7 +43,7 @@
 
 ## 📊 LLM Wiki 주식 분석 시스템
 ### 📈 종목
-- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **6,740원** 🔴 **-3.16%** (5/28 confirmed close, 신저가 재경신! RSI 30.4 과매도) → 5/29 intraday **6,280원 (-6.82%, 6,000선 위협!)**
+|- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **6,740원** 🔴 (5/28 close 유지 — 5/29 yfinance data 미확보)
 - [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **14,370원** 🔴 **-2.64%** (5/28 confirmed close, RSI 34.9 과매도 임박) → 5/29 intraday **13,840원 (-3.69%, 52주 최저 경신!)**
 - [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **22,750원** 🔴 **-4.61%** (5/28 confirmed close, RSI 24.8 극단 과매도!) → 5/29 intraday **21,300원 (-6.37%, 3일간 -19.37% 폭락!)**
 
@@ -60,7 +60,7 @@
 - [[wiki/sectors/로보틱스|🤖 로보틱스]]
 
 ### 💵 거시경제
-|- [[wiki/macros/KOSPI|📊 KOSPI (8,185)]] 🟢 **5/28 -0.53% → 5/29 intraday +2.21% (8,366, 반등!)** | [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,104)]] 🔴 **5/28 -2.54% → 5/29 intraday -4.02% (1,060, 1,100선 붕괴!)** | [[wiki/macros/환율|💵 환율 (1,503원)]] 🟢 **5/28 -0.16% → 5/29 1,500.72** | [[wiki/macros/국제유가WTI|🛢️ WTI ($90.92)]] 🟡 **+2.53% 반등 → 5/29 $87.70 재이탈**
+| [[wiki/macros/KOSPI|📊 KOSPI (8,476)]] 🟢🟢 **5/29 EOD +3.55% (8,476, 신고가 종가!)** | [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,075)]] 🔴🔴 **5/29 EOD -2.68% (1,075, 5일 연속 하락!)** | [[wiki/macros/환율|💵 환율 (1,508원)]] 🔴 **5/29 +0.34% (1,508, 원화 약세 전환)** | [[wiki/macros/국제유가WTI|🛢️ WTI ($88.86)]] 🔴 **-0.10% (5/29, $88-$89 박스권 정체)**
 
 ### 🧠 시스템
 - [[99_System/GEMINI.md|🧠 시스템 스키마 (GEMINI.md)]]
@@ -72,6 +72,24 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
+- **[Hermes]** 📝 **Knowledge Cron 20:56 — Post-Market Weekend 진입: Swap 0✅ 완전 해소, Gateway 재시작, 주말 정리** (2026-05-29 20:56 KST)
+  - **Swap 0 ✅** — EOD 987MiB에서 재부팅 후 완전 해소
+  - **Gateway** 🟡 20:53 CLI 재시작 (systemd inactive→bash -lic Telegram-only)
+  - **Memory** 3.0Gi/7.6Gi (39%) 🟢, Loadavg 1.14
+  - **C: Drive** 87% 🔴 지속 (Windows disk — Docker prune + vhdx compact 필요)
+  - **시장**: 주말 휴장중. 5/29 EOD (KOSPI 8,476🟢 / KOSDAQ 1,075🔴 / USD/KRW 1,508 / WTI $88.86🔴) 유지
+  - **전망**: 6/1(월) 09:00 KST 오픈. 주말 동안 cron self-heal 유지
+  - **변경**: 01_지식/Hermes-Daily-Log.md·02-Knowledge/Hermes-Daily-Log.md·00-Home.md·99_System/Logs/wiki_update_log.md
+- **[Hermes]** 📝 **Knowledge Cron 16:50 — 5/29 EOD Confirmed Close: KOSPI 8,476🟢🟢+3.55% 신고가! KOSDAQ 1,075🔴🔴-2.68% 5일 연속 폭락•K-디커플링 극대화** (2026-05-29 16:50 KST, 금 마지막 거래일)
+  - **KOSPI 8,476.15 🟢🟢 +3.55%** — 5/27 사상최고 8,457 돌파! 5/28 8,185 급락을 단 하루 만에 회복+α. **종가 기준 신고가!**
+  - **KOSDAQ 1,074.80 🔴🔴 -2.68%** — 5일 연속 폭락 (5/22 1,161→5/29 1,075 = -7.43%). 대형주 쏠림 현상 극심
+  - **KOSPI +3.55% vs KOSDAQ -2.68% = 6.23%p 차이 — 역대급 K-디커플링**
+  - **USD/KRW 1,508.28** — 3일 연속 원화 강세 추세 꺾임 (+0.34% 약세 전환)
+  - **WTI $88.86 🔴** — $90선 재돌파 실패, 5일째 $88-$89 박스권 정체
+  - **System**: Uptime 21h✅, Swap 987Mi🟡, Mem 43%🟢, Gateway 596MB🟢, C: 87%🔴, tmux 5개🟡
+  - **Weekly Recap (5/25~5/29)**: KOSPI +8.01% 대폭발 but KOSDAQ -7.43% 폭락
+  - **전망**: 주말 휴장(5/30~31) → WSL 재부팅 → 6/1(월) 09:00 KST 오픈
+  - **변경**: 01_지식/Hermes-Daily-Log.md·02-Knowledge/Hermes-Daily-Log.md·00-Home.md·99_System/Logs/wiki_update_log.md
 - **[Hermes]** 📊 **Wiki 확장기 11:11 — 5/28 confirmed close 유지 + 5/29 intraday 반영: KOSPI +2.21% 반등·KOSDAQ -4.02% 추가 급락·개별종목 3~7% 폭락·WTI $90.92→$87.70 재이탈** (2026-05-29 11:11 KST)
   - **KOSPI 8,366 (+2.21%) intraday**: 8,400선 접근, KOSPI만 강력 반등
   - **KOSDAQ 1,060 (-4.02%) intraday**: 1,100선 붕괴! 52주 저가 재시험!
