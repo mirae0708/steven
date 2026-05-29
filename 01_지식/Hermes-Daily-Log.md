@@ -1266,3 +1266,28 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 - **주말 계획**: Weekly Summary + 버그 핫픽스(GUARDIAN ERROR + Council Fallback) + WSL 재부팅
 
 *Recorded by Hermes Knowledge Cron on 2026-05-29 04:46 KST (Pre-Market Snapshot #2) — System Stable🟢, Swap 1.1Gi🔴, GUARDIAN ERROR 76h+🔴🔴🔴*
+
+---
+
+## 5/29 08:00 KST — Pre-Market #3 (Swap 906MiB 감소 분석)
+
+🟢 **System**: Uptime 11h58m ✅, Memory 42% (3.2Gi/7.6Gi) ✅, Loadavg 0.78 ✅
+🟢 **Swap 906MiB/2.0Gi (45%)** — ✅ **감소!** (04:30 1.0Gi→08:00 906MiB, -94MiB)
+🟢 **Agent DB**: 복구 완료 (Session DB creation failed 없음)
+🔴 **Gateway(8642)**: 응답 없음 지속 (12h+)
+🔴 **C: 드라이브 87%** (64Gi 여유) — 점진적 악화 (86%→87%)
+🔴 **GUARDIAN ERROR**: ?h+ 미확인
+🔴 **CB Score**: ?/100 미복구 지속
+🔴 **Memory**: 2,200/2,200 chars 꽉 참 (5일째)
+🔴 **Context 승격**: 120h+ 지연 (5일차)
+🟡 **Trinity 서비스**: CowAgent ✅, MetaClaw/open-design 404
+🟡 **Swap 감소 분석**: Gateway(8642) 다운으로 인한 메모리 500MB+ 해제가 원인일 가능성 높음 — Gateway 재시작 시 Swap 다시 1.0Gi+ 증가 예상
+
+**Market (5/28 EOD 유지)**: KOSPI 8,185 🟢, KOSDAQ 1,104 🔴, USD/KRW 1,503 🟢, WTI $90.92 🟢
+**Portfolio**: 삼성부광 6,740 🔴 -3.16%, 에이치엘 14,370 🔴 -2.64%, 나우로보틱스 22,750 🔴 -4.61%
+
+**New insight**: Swap 감소 추세는 Gateway 다운으로 인한 착시효과일 가능성 높음. Gateway 재시작을 최우선으로, 이후 Swap 추이 재관찰 필요. C: 드라이브 87% 지속 악화 중 — 90% 도달 전 Docker prune + temp 정리 필요.
+
+**Open issues**: Gateway 재시작(🔴🔴), 48h auto-reboot cron(🔴🔴), CB Score 핫픽스(🔴), GUARDIAN ERROR(🔴), Memory 정리(🟡), C: drive 정리(🟡), Context 승격 자동화(🟡)
+
+*Recorded by Hermes Knowledge Cron on 2026-05-29 08:00 KST (Pre-Market Snapshot #3) — Swap 감세 관찰, Gateway 12h+ down, C: drive 87% 악화*

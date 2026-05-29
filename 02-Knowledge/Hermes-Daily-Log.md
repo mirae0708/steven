@@ -2848,3 +2848,22 @@
 
 **오늘 (금) 마지막 거래일** — KOSPI 8,185 / KOSDAQ 1,104 / WTI $90.92 (5/28 EOD 유지)
 5/29 EOD 후: Weekly Summary + WSL 재부팅 + 버그 핫픽스 예정
+
+
+## 5/29 08:00 KST — Pre-Market #3
+
+| 지표 | 값 | 변화 |
+|:-----|:---|:----:|
+| Uptime | 11h58m 🟢 | 안정 |
+| Memory | 3.2Gi/7.6Gi (42%) 🟢 | 안정 |
+| Swap | 906MiB/2.0Gi (45%) ✅ | **-94MiB** (04:30→08:00) |
+| Loadavg | 0.78 🟢 | 저부하 |
+| Gateway(8642) | down 🔴 | 12h+ |
+| C: Drive | 87% 🔴 | 64Gi 여유 |
+| GUARDIAN ERROR | ?h+ 🔴 | 미확인 |
+| CB Score | ?/100 🔴 | 지속 |
+| Memory | 2,200/2,200 🔴 | 5일째 꽉참 |
+| Context 승격 | 120h+ 🔴 | 5일차 |
+
+**Swap 감소 분석**: Gateway(8642) 다운으로 인한 착시효과로 추정. Gateway 재시작 시 Swap 1.0Gi+ 재증가 예상됨.
+**전망**: 5/29(금) 마지막 거래일. 15:30 EOD 후 Weekly Summary + Gateway 재시작 + WSL 재부팅 필요.

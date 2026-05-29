@@ -75,6 +75,14 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ## 최근 업데이트
+- **[Hermes]** 🧬 **지식 기록 cron — 08:00 KST Pre-Market #3: Swap 906MiB 감세 관측·Gateway 12h+ down·C: drive 87% 악화** (2026-05-29 08:00 KST)
+  - **Swap 906MiB ✅** — 04:30→08:00 KST -94MiB 감소! But Gateway(8642) down으로 인한 착시효과 추정
+  - **Gateway(8642) 다운 12h+** 🔴 — 텔레그램 연동 두절, Council 판단 미전달
+  - **C: drive 87%** 🔴 — 64Gi 여유, 전일 86%→87% +1%p 악화 지속
+  - **GUARDIAN ERROR** 🔴 **CB Score ?/100** 🔴 **Memory 꽉참** 🔴 지속
+  - **Context 승격 120h+** 🔴 5일차 — 8건🥇 미승인
+  - **Swap 감소 진단**: Gateway 다운으로 인한 일시적 메모리 해제 효과. 재시작 시 1.0Gi+ 복귀 예상
+  - **전망**: 5/29(금) 마지막 거래일. 15:30 EOD 후 Gateway 재시작 + WSL 재부팅 필요
 - **[Hermes]** 📝 **지식 기록 cron — 00:46 KST Pre-Market 스냅샷: Swap 1.0Gi🟡, GUARDIAN ERROR 12h+🔴 지속, KOSDAQ 1,104🔴 급락** (2026-05-29 00:46 KST)
   - **System**: WSL 6h12m ✅, Gateway RSS **301MB** 🟢 (재부팅 후 급감), Memory **41%** 🟢, Swap **1.0Gi** 🟡 (24h 경과 후 상승)
   - **KOSPI 8,185** 🟢 — 5/28 EOD confirmed close 반영, 3일째 8,000선 안착
