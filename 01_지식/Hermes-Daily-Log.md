@@ -1291,3 +1291,34 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 **Open issues**: Gateway 재시작(🔴🔴), 48h auto-reboot cron(🔴🔴), CB Score 핫픽스(🔴), GUARDIAN ERROR(🔴), Memory 정리(🟡), C: drive 정리(🟡), Context 승격 자동화(🟡)
 
 *Recorded by Hermes Knowledge Cron on 2026-05-29 08:00 KST (Pre-Market Snapshot #3) — Swap 감세 관찰, Gateway 12h+ down, C: drive 87% 악화*
+
+
+## 2026-05-29 (Fri) 13:28 KST — 장중 Mid-Afternoon 스냅샷 (5/29 마지막 거래일 T-2h)
+
+### 📊 시장 (장중 — 13:28 KST, 15:30 EOD 미확정)
+- **5/28 confirmed close 유지**: KOSPI 8,185.29(-0.53%), KOSDAQ 1,104.36(-2.54%), 환율 1,503.06, WTI $90.92
+- **5/29 intraday (11:11 스냅샷)**: KOSPI 8,366(+2.21%), KOSDAQ 1,060(-4.02% 1,100선 붕괴!), 환율 1,500.72(1,500선 근접), WTI $87.70($90선 재이탈)
+- **개별종목 5/29 intraday**: 삼성부광 6,280(-6.82% 6,000선 위협), 에이치엘 13,840(-3.69% 52주 최저), 나우로보틱스 21,300(-6.37% 3일 -19.37%)
+- **KOSPI vs KOSDAQ 디커플링 극심**: +2.21% vs -4.02%
+
+### 🖥️ 시스템 현황
+| 항목 | 상태 | 상세 |
+|:-----|:----:|:-----|
+| WSL Uptime | 🟢 17h 40m | 5/28 18:08 재부팅 이후 |
+| Memory | 🟢 3.8Gi/7.6Gi (50%) | 정상 범위 |
+| Swap | 🟡 980MiB/2.0Gi (49%) | 전일 1.0Gi와 유사 수준 |
+| Gateway | 🟢 PID 270859, RSS 476MB | Running (port 8642 down - Telegram-only mode) |
+| tmux 세션 | 🟢 6개 | hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign |
+| Loadavg | 🟢 1.69 | 정상 |
+| Disk (C:) | 🔴 87% (64Gi 여유) | 전일 대비 동일 |
+
+### 🔴 지속 이슈
+- Swap 980MiB — 500MiB 임계 초과 지속
+- C: 드라이브 87% — 점진적 악화
+- Context 승격 120h+ 5일차 — 8건🥇 미승인
+- Memory 2,200/2,200 chars 꽉 참
+
+### 🔮 전망
+- **15:30 KST EOD 마감 T-2h**
+- **주말(5/30~5/31) 휴장** — 주간 요약 + WSL 재부팅 예정
+- **다음 거래일**: 6/1(월) 09:00 KST

@@ -223,3 +223,5 @@
 |||2026-05-29 | 08:00 | 🧬 Hermes Knowledge Cron — Pre-Market #3 스냅샷 (Swap 906MiB 감세 관측, Gateway 12h+ down, C: drive 87% 악화) | **Swap 906MiB (-94MiB/2h) 감소 확인** — 단, Gateway(8642) 다운으로 인한 일시적 현상으로 추정됨. Gateway 재시작 시 1.0Gi+ 회귀 예상. C: drive 87% (86%→87%, +1%p). GUARDIAN ERROR · CB Score ?/100 · Memory 꽉참 지속. Context 승격 120h+ 5일차. **변경: 3건** (01_지식/Hermes-Daily-Log.md, 02-Knowledge/Hermes-Daily-Log.md, 99_System/Logs/wiki_update_log.md). |
 
 |2026-05-29 | 11:11 | 📊 Wiki 확장기 — 5/28 confirmed close 유지 + 5/29 intraday 전면 반영: KOSPI 8,366🟢+2.21%, KOSDAQ 1,060🔴-4.02%(1,100선 붕괴!), 삼성부광 6,280🔴-6.82%(6,000선 위협), 나우로보틱스 21,300🔴-6.37%(3일 -19.37% 폭락), 에이치엘 13,840🔴-3.69%(52주 최저), USD/KRW 1,500.72🟢(1,500선 근접), WTI $90.92→$87.70🔴($90선 재이탈). **변경: 9건** (wiki/macros 4종 + wiki/stocks 3종 + _Index.md + 00-Home.md). (11:11 KST intraday snapshot, 15:30 EOD 미확정) |
+
+2026-05-29 | 13:28 | 📝 Knowledge Cron — 장중 Mid-Afternoon 스냅샷 | System: Uptime 17h40m✅, Swap 980MiB🟡, Gateway 476MB🟢(8642 down-desired), C: 87%🔴. Market: 5/28 confirmed close 유지. 5/29 intraday: KOSPI +2.21%·KOSDAQ -4.02% 극단 디커플링. Context 승격 120h+🔴. 변경: 2건 (01_지식/Hermes-Daily-Log.md, wiki_update_log.md).
