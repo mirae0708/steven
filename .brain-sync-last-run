@@ -1,8 +1,8 @@
-🧠 Brain Sync — 2026-05-29 09:05 KST
-Status: No changes to Context/Members/Agents since 08:01.
+🧠 Brain Sync — 2026-05-29 11:00 KST
+Status: No changes to Context/Members/Agents since 10:15.
 Context/ 11 files unchanged. Members/ 1 file unchanged. Agents/ 2 files unchanged.
-✅ Gateway re-started at 08:41 KST (PID 235665, Telegram polling mode).
+✅ Gateway running (PID 270859, 220MB RSS, Telegram polling mode).
 PORT 8642 NOT bound — confirmed: api_server.enabled: false in config (intentional).
-Swap 931MiB, Loadavg 0.76, Memory 2.9Gi/7.6Gi (38%).
-⚠️ Jongdari stop-loss triggered on 229000.KQ (-22.3%), sell rejected (oversize).
-🔴 Open: GUARDIAN ERROR, Council Fallback, CB Score ?/100, Context 120h+ stalled.
+Swap 950MiB, Loadavg 0.31, Memory 2.9Gi/7.6Gi (38%), uptime 16h26m.
+C: drive 87% (64Gi free) — stable since last check.
+New: 3 MCP-멀티검색 reports (AI trends, KOSPI outlook, logistics) + 2 arXiv papers (OptSkills, Knowledge Editing MLLM) + 1 Tools paper (Simplicity via Polynomial).
