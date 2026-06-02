@@ -42,10 +42,10 @@
 - [[01_지식/Tech Stack]]
 
 ## 📊 LLM Wiki 주식 분석 시스템
-### 📈 종목
-|- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **6,740원** 🔴 (5/28 close 유지 — 5/29 yfinance data 미확보)
-- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **14,370원** 🔴 **-2.64%** (5/28 confirmed close, RSI 34.9 과매도 임박) → 5/29 intraday **13,840원 (-3.69%, 52주 최저 경신!)**
-- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **22,750원** 🔴 **-4.61%** (5/28 confirmed close, RSI 24.8 극단 과매도!) → 5/29 intraday **21,300원 (-6.37%, 3일간 -19.37% 폭락!)**
+|## 📈 종목
+|- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **6,020원** 🔴 **-4.60%** (6/1 confirmed close, 6,000선 위협, 포트폴리오 -28.05%)
+|- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **13,220원** 🔴 **-4.55%** (6/1 close, 거래량 6/2 96,221주 +28.5% 급증)
+|- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **21,550원** 🔴 **-2.05%** (6/1 close)
 
 ### 🧠 최근 Brain Sync (18:00)
 - [[10_Wiki/Artificial_Intelligence/AI_Agents/ATLAS-Agentic-or-Latent-Visual-Reasoning-One-Word-is-Enoug_20260517_1800|ATLAS: Agentic Visual Reasoning]]
@@ -60,7 +60,7 @@
 - [[wiki/sectors/로보틱스|🤖 로보틱스]]
 
 ### 💵 거시경제
-| [[wiki/macros/KOSPI|📊 KOSPI (8,476)]] 🟢🟢 **5/29 EOD +3.55% (8,476, 신고가 종가!)** | [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,075)]] 🔴🔴 **5/29 EOD -2.68% (1,075, 5일 연속 하락!)** | [[wiki/macros/환율|💵 환율 (1,508원)]] 🔴 **5/29 +0.34% (1,508, 원화 약세 전환)** | [[wiki/macros/국제유가WTI|🛢️ WTI ($88.86)]] 🔴 **-0.10% (5/29, $88-$89 박스권 정체)**
+| [[wiki/macros/KOSPI|📊 KOSPI (8,788)]] 🟢🟢🟢 **6/1 +3.68% (8,788, 사상 최고 신고가!)** | [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,050)]] 🔴🔴 **-2.30% (6거래일 연속 하락, 5/22 1,161→6/1 1,050)** | [[wiki/macros/환율|💵 환율 (1,517원)]] 🔴 **6/2 +1.35% (1,517, 원화 약세 전환)** | [[wiki/macros/국제유가WTI|🛢️ WTI ($92.14)]] 🟢 **+5.49% 반등! $90선 회복 (5/29 $87.36→6/1 $92.16)** |
 
 ### 🧠 시스템
 - [[99_System/GEMINI.md|🧠 시스템 스키마 (GEMINI.md)]]
@@ -71,16 +71,18 @@
 - [[03_경제/04_비즈니스_사업분석/99_시뮬레이션리포트|📊 시뮬레이션 리포트 (낙관적/보수적)]]
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
-## 최근 업데이트
-- **[Hermes]** 🧬 **Knowledge Cron 04:49 — 주말 새벽 스냅샷: 시스템 안정 ✅, hermes-mcp 복원, Swap 97MiB✅** (2026-05-30 04:49 KST)
-  - **Swap 97MiB 🟢✅** — 재부팅 효과 유지 (전일 0→97MiB 소폭 재축적, 양호)
-  - **tmux 7개 ✅** — hermes-mcp 04:31 자동 복원 완료
-  - **Memory** 4.3Gi/7.6Gi (56%) 🟡, Loadavg 0.85 🟢
-  - **Gateway** 🟢 PID 310 (Open WebUI port 3000) / Nexus 🟢 PID 40631
-  - **C: Drive** 87% 🔴 지속 — Docker prune + vhdx compact 필요
-  - **시장**: 주말 휴장. 5/29 EOD (KOSPI 8,476🟢 / KOSDAQ 1,075🔴 / USD/KRW 1,508 / WTI $88.86🔴) 유지
-  - **주간 요약**: KOSPI +8.01% 🟢 vs KOSDAQ -7.43% 🔴 = 역대급 디커플링
-  - **다음 거래일**: 6/1(월) 09:00 KST
+|## 최근 업데이트
+|- **[Hermes]** 📝 **Knowledge Cron 00:46 — Pre-Market 스냅샷 (6/3 수): KOSPI 8,788🟢 사상 최고! KOSDAQ 1,050🔴 7거래일 연속 하락 임박! Swap 3.8MiB ✅** (2026-06-03 00:46 KST)
+|  - **KOSPI 8,788.38 🟢🟢🟢 +3.68%** — 5/29 8,476→6/1 8,788. 장중 8,874 고점! **연저점(4/27 6,900) 대비 +27.4%!**
+|  - **KOSDAQ 1,050.03 🔴🔴 -2.30%** — 6거래일 연속 하락(5/22 1,161→6/1 1,050 = -9.6%). KOSPI와 +9.0%p 디커플링 심화
+|  - **USD/KRW 1,517 🔴 +1.35%** (6/2) — 원화 약세 전환, 1,520선 위협
+|  - **WTI $92.14 🟢** — +5.49% 급반등! $90선 회복 (5/29 $87.36→6/1 $92.16)
+|  - **System**: Swap **3.8MiB ✅** (사실상 0B), Memory 43% 🟢, C: drive **82%** (87Gi 여유, 87%→82% 개선!), tmux 5개 정상
+|  - **삼성부광 6,020 🔴 -4.60%** — 6,000선 위협, 포트폴리오 -28.05% 추정
+|  - **에이치엘 13,220 🔴 -4.55%** — 거래량 6/2 96,221주 (+28.5% 급증) — 저가 매수 or 손절
+|  - **나우로보틱스 21,550 🔴 -2.05%** — KOSDAQ 추종 하락
+|  - **전망**: 6/3(수) KOSPI 9,000선 도전. KOSDAQ 1,000선 붕괴 시 패닉 가능성
+|  - **변경**: 01_지식/Hermes-Daily-Log.md · 02-Knowledge/Hermes-Daily-Log.md · 00-Home.md · 03_경제/05_시장현황_20260603.md · 99_System/Logs/wiki_update_log.md
 - **[Hermes]** 📝 **Knowledge Cron 20:56 — Post-Market Weekend 진입: Swap 0✅ 완전 해소, Gateway 재시작, 주말 정리** (2026-05-29 20:56 KST)
   - **Swap 0 ✅** — EOD 987MiB에서 재부팅 후 완전 해소
   - **Gateway** 🟡 20:53 CLI 재시작 (systemd inactive→bash -lic Telegram-only)
