@@ -1647,3 +1647,77 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 - **.hermes_last_check 갱신**: 2026-06-04 12:46
 
 *Recorded by Hermes Knowledge Cron on 2026-06-04 12:46 KST — Knowledge Snapshot (Thu, Pre-Market)*
+
+
+---
+
+## 2026-06-04 (Thu) 20:46 KST — Knowledge Cron: Evening 스냅샷 + 가상오피스 첫가동 + Harness/Hermes 적용가이드
+
+### 🖥️ 시스템 현황 (6/4 20:46 KST)
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| Uptime | 🟢 | 9h 41m (6/4 11:04 부팅 지속) |
+| Memory | 🟡 | 4.0Gi/7.6Gi (53%) — 12:46 대비 +500MiB |
+| **Swap** | 🟡 | **89MiB/2.0Gi (4.3%)** — 재축적 시작! |
+| Loadavg | 🟢 | 0.48 / 0.34 / 0.41 |
+| Gateway | 🟢 | PID 155185, RSS — --replace 모드 20:16 KST 재시작 |
+| C: drive | 🟢 | **82%** (87Gi 여유) — 81%(12:46) 대비 1%p 상승 |
+| tmux | 🟢✅ | **7개** — +vo (가상오피스) 16:39 신규 추가! |
+| Self-Heal | 🟢 | 20:16 Gateway --replace 재시작 완료 |
+
+### 🆕 오늘 신규 생성된 문서 (20:00 이후)
+
+| 문서 | 설명 |
+|:-----|:------|
+| **01_지식/Daily-Log-20260604-가상오피스-첫가동.md** | 가상오피스 Supervisor 하네스 구축 + 견적 엔진 v2 완료 (달성률 90%). 5명 VP 모두 정상 가동 |
+| **01_지식/Harness-to-Hermes-적용-가이드-20260604.md** | Bloom AI Harness 100 사례 기반 → Hermes 스킬/에이전트/후크 매핑 가이드. L0~L5 계층 분석 |
+| **01_지식/n8n-문서생성-검증리포트-20260604.md** | n8n 물류문서 자동화 백엔드 4종(HBL/AWB/DO/DN) API 정상 확인. 프론트엔드 버튼/UI 누락 발견 |
+| **03_경제/05_시장현황_20260604.md** | KOSPI 8,801 사상최고 지속 / KOSDAQ 1,026 극단 디커플링 / WTI $95.96 반등 / USD/KRW 1,528 급등 |
+| **10_Wiki/ 20개+ 신규 arXiv 논문** | 02:21~14:20 수집: AI Agents 9편 + LLM 7편 + RL 2편 + DL 1편 + DevTools 2편 |
+| **10_Wiki/ MCP-멀티검색 7건** | 12:52~18:53 KST — MCP 기반 자동 검색 결과 |
+
+### 📊 시장 현황 (6/2~6/3 confirmed close — 장 마감 후)
+
+| 항목 | 최신값 | 변동 | 분석 |
+|:-----|:------:|:----:|:-----|
+| **KOSPI** | **8,801.30** 🟢🟢 | +0.15% (6/1→6/2) | **사상최고!** 연저점 대비 +27.6%. 9,000선 목전 |
+| **KOSDAQ** | **1,026.15** 🔴🔴 | -2.28% (6/1→6/2) | **7~8일 연속 하락!** KOSPI와 +10.5%p 극단 디커플링 |
+| **USD/KRW** | **1,528.60** 🔴🔴 | +0.79% (6/2→6/3) | 3일간 +21원 급등! 원화 약세 가속 |
+| **WTI** | **$95.96** 🟢🟢 | +2.35% (6/2→6/3) | $87→$96 V자 반등! $90선 확정 회복 |
+| 삼성부광 | **6,010원** 🔴 | -0.17% | 포트폴리오 -40.14% 최악. 6,000선 사수중 |
+| 에이치엘 | **14,060원** 🟢 | +6.35% | 반등 성공! 거래량 급증 확인 |
+| 나우로보틱스 | **22,000원** 🟢 | +2.09% | 반등, 22,000선 회복 |
+
+### 🔑 핵심 인사이트
+
+1. **🏆 KOSPI 8,801 사상최고 — 9,000선 2.2% 남음.** 4/27 저점 6,900 대비 +27.6% 상승!
+2. **🔴🔴 KOSDAQ 1,026 — KOSPI와 +10.5%p 극단 디커플링.** 1,000선 붕괴 시 패닉 우려
+3. **🟢 WTI $95.96 — $90선 확정 회복, V자 반등 성공!** OPEC+ 감산 기대
+4. **🔴 USD/KRW 1,528 원화 약세 가속** — 3일간 +21원 (+1.4%). KOSPI 9,000 차익실현+외국인 환전 가능성
+5. **🟡 Swap 89MiB 재축적 시작** — 12:46 0B→20:46 89MiB. Gateway RSS 512MB 이내이나 재축적 추세 주시
+6. **🆕 tmux 7번째 vo 세션 추가** — 가상오피스 독립 세션 16:39 KST 생성
+7. **🟢 C: drive 82% (87Gi) — 지속 개선 유지**
+8. **🔴 포트폴리오**: 삼성부광 -40.14%, 나우로보틱스 -25.55%, 에이치엘 -11.57%
+
+### 🏗️ 오늘 주요 활동 요약
+
+- **가상오피스 첫가동**: Supervisor 하네스 구축 완료! 5명 VP(Operations/Sales/Finance/Tech/Growth) 최초 실행. 견적 엔진 v2 완료 (schedule_rates 276건→879건 route_id 연결, +603건 67% 달성)
+- **Harness 아키텍처 분석**: Bloom AI Harness 100 사례 → Hermes 매핑 완료. L0~L5 6계층, Skills/AGENTS.md/Hooks/MCP 구성 분석. Hermes Skill.md vs Harness Skill.md 비교 문서화
+- **n8n 문서검증**: 백엔드 API(HBL/AWB/DO/DN) 4종 정상 확인. 프론트엔드(Booking/LogisticsSidePanel/LogisticsModals) UI 버튼 누락 발견 — `--debug` 모드로 activation 필요
+- **MCP 멀티검색**: 7건 실행 (12:52~18:53 KST). AI/물류/시장 트렌드 자동 수집
+
+### 🔮 전망
+
+- **6/5(금)** : KOSPI 9,000선 돌파 시도 가능. KOSDAQ 기술적 반등 or 1,000선 붕괴 결정적 주. USD/KRW 1,530선 위협
+- **가상오피스**: 견적 엔진 고도화 (v3), 미커버 루트 운임 수집 cron 등록 필요
+- **Swap**: 0B→89MiB 재축적 중. Gateway --replace 재시작 후 512MB 이내 유지 확인 필요
+- **Harness**: Hermes Skill 구조 개선에 적용 검토 (트리거 최적화, 후크 시스템, AGENTS.md 통합)
+
+### 📝 시스템 변경사항
+- Gateway: 20:16 KST `--replace` 재시작 (텔레그램 + MCP)
+- MCP 서버: fetch + time + filesystem 정상 기동 (hermes-mcp tmux에서)
+- **vo tmux 세션**: 16:39 KST 신규 생성 (가상오피스 Supervisor 하네스)
+- **.hermes_last_check 갱신**: 2026-06-04 20:46
+
+*Recorded by Hermes Knowledge Cron on 2026-06-04 20:46 KST — Knowledge Snapshot (Thu, Evening)*

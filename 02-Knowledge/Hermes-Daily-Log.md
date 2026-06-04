@@ -1647,3 +1647,47 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 - **.hermes_last_check 갱신**: 2026-06-04 12:46
 
 *Recorded by Hermes Knowledge Cron on 2026-06-04 12:46 KST — Knowledge Snapshot (Thu, Pre-Market)*
+
+
+---
+
+## 2026-06-04 (Thu) 20:46 KST — Evening Snapshot: Swap 89MiB 재축적, tmux 7개(vo 신규), 가상오피스 첫가동
+
+### 🖥️ 시스템
+
+| 항목 | 상태 |
+|:-----|:------|
+| Uptime | 🟢 9h41m |
+| Memory | 🟡 4.0Gi/7.6Gi (53%) |
+| **Swap** | 🟡 **89MiB** (재축적 시작) |
+| Loadavg | 🟢 0.48 |
+| Gateway | 🟢 `--replace` 20:16 재시작 |
+| C: drive | 🟢 82% (87Gi) |
+| tmux | 🟢✅ **7개** (+vo 가상오피스 16:39) |
+
+### 📊 시장 (6/1~6/3 confirmed)
+
+| 항목 | 값 | 분석 |
+|:-----|:---:|:------|
+| KOSPI | **8,801** 🟢🟢 | 사상최고, 9,000선 2.2% |
+| KOSDAQ | **1,026** 🔴🔴 | 7~8일 연속 하락! |
+| USD/KRW | **1,528** 🔴🔴 | 3일간 +1.4% 급등 |
+| WTI | **$95.96** 🟢🟢 | V자 반등 확정 |
+| 삼성부광 | 6,010 🔴 | -40.14% |
+| 에이치엘 | 14,060 🟢 | +6.35% 반등 |
+| 나우로보틱스 | 22,000 🟢 | +2.09% |
+
+### 🆕 신규 문서 (6/4 저녁)
+
+- **가상오피스 첫가동** — Supervisor 하네스 구축, 5명 VP 실행, 견적 v2 완료 (route 879건, 67%)
+- **Harness→Hermes 적용가이드** — L0~L5 6계층 매핑, Skills/Hooks/MCP 비교
+- **n8n 문서검증 리포트** — 4종 API 정상, 프론트엔드 UI 버튼 누락
+- **시장현황 6/4** — KOSPI 8,801 사상최고, KOSDAQ 1,026 극단 디커플링
+
+### 🔑 인사이트
+- **Swap 89MiB 재축적** — 0B→89MiB/8h. Gateway--replace 후 512MB 이내 유지 확인 필요
+- **가상오피스 첫가동 성공** — 5명 VP 하네스 최초 실행. 내일: 견적 v3, 미커버 루트 cron 등록
+- **KOSPI 9,000선 목전** vs KOSDAQ 1,000선 붕괴 위기 — 역대급 극단
+- **C: drive 82% 개선 유지** — 87%→81%→82%. 여전히 주기적 청소 필요
+
+*Recorded by Hermes Knowledge Cron on 2026-06-04 20:46 KST — Evening Snapshot*
