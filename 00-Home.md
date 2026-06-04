@@ -72,14 +72,19 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 |||## 최근 업데이트
-|||- **[Hermes]** 📝 **Knowledge Cron 20:46 — 6/4(목) Evening 스냅샷: Swap 89MiB 재축적, tmux 7개(+vo), 가상오피스 첫가동, n8n 검증** (2026-06-04 20:46 KST)
-|||  - **System**: Uptime 9h41m 🟢, Swap **89MiB 🟡** (0B→재축적 시작), Mem 53% 🟡, C: **82%** (87Gi), tmux **7개** ✅ (+vo 가상오피스 16:39)
-|||  - **Gateway**: 20:16 `--replace` 재시작 (텔레그램+MCP), RSS 512MB 이내
-|||  - **가상오피스 첫가동!** 🚀 — Supervisor 하네스 구축 완료. 5명 VP(Operations/Sales/Finance/Tech/Growth) 정상 실행. 견적 엔진 v2 (route 879건, 67% 달성)
-|||  - **Harness→Hermes 적용가이드** 🆕 — Bloom AI Harness 100 사례 분석, L0~L5 6계층 매핑. Skills/Hooks/AGENTS.md/MCP 구조 비교
-|||  - **n8n 문서검증 리포트** 🆕 — 4종 API(HBL/AWB/DO/DN) 정상 확인. 프론트엔드 UI 버튼 누락 발견
-|||  - **시장**: KOSPI **8,801 🟢🟢 사상최고** (9,000선 2.2%), KOSDAQ **1,026 🔴🔴** (7~8일 하락), WTI **$95.96 🟢🟢** ($90선 확정 회복), USD/KRW **1,528 🔴🔴** (3일 +1.4% 급등)
-|||  - **삼성부광 6,010 🔴 — -40.14%**, 에이치엘 14,060 🟢 +6.35%, 나우로보틱스 22,000 🟢 +2.09%
+- **[Hermes]** 📝 **Knowledge Cron 00:48 — 6/5(금) Pre-Market: Gateway 756MB⚠️, Swap 315MiB 급증🟡, Trinity 정상** (2026-06-05 00:48 KST)
+  - **System**: Uptime 13h43m 🟢, Swap **315MiB 🟡🔺** (89MiB→315MiB, 4h 3.5배!), Mem 54% 🟡, C: **81%** 🟢 (87Gi), tmux **7개** ✅
+  - **Gateway**: RSS **756MB ⚠️** PID 268531 — 512MB MemoryMax 초과. API 서버 disabled (정상, port 8642 not listening)
+  - **Trinity**: CowAgent(9899) ✅ MetaClaw(30000) ✅ open-design(17456) ✅ — 3개 모두 13h+ 정상
+  - **메모**: Tavily API 키 만료 (401) → market data 대체 경로 필요 | KOSPI 8,801🟢 vs KOSDAQ 1,026🔴 디커플링 지속
+- **[Hermes]** 📝 **Knowledge Cron 20:46 — 6/4(목) Evening 스냅샷: Swap 89MiB 재축적, tmux 7개(+vo), 가상오피스 첫가동, n8n 검증** (2026-06-04 20:46 KST)
+  - **System**: Uptime 9h41m 🟢, Swap **89MiB 🟡** (0B→재축적 시작), Mem 53% 🟡, C: **82%** (87Gi), tmux **7개** ✅ (+vo 가상오피스 16:39)
+  - **Gateway**: 20:16 `--replace` 재시작 (텔레그램+MCP), RSS 512MB 이내
+  - **가상오피스 첫가동!** 🚀 — Supervisor 하네스 구축 완료. 5명 VP(Operations/Sales/Finance/Tech/Growth) 정상 실행. 견적 엔진 v2 (route 879건, 67% 달성)
+  - **Harness→Hermes 적용가이드** 🆕 — Bloom AI Harness 100 사례 분석, L0~L5 6계층 매핑. Skills/Hooks/AGENTS.md/MCP 구조 비교
+  - **n8n 문서검증 리포트** 🆕 — 4종 API(HBL/AWB/DO/DN) 정상 확인. 프론트엔드 UI 버튼 누락 발견
+  - **시장**: KOSPI **8,801 🟢🟢 사상최고** (9,000선 2.2%), KOSDAQ **1,026 🔴🔴** (7~8일 하락), WTI **$95.96 🟢🟢** ($90선 확정 회복), USD/KRW **1,528 🔴🔴** (3일 +1.4% 급등)
+  - **삼성부광 6,010 🔴 — -40.14%**, 에이치엘 14,060 🟢 +6.35%, 나우로보틱스 22,000 🟢 +2.09%
 |||  - **전망**: 6/5(금) KOSPI 9,000 도전. KOSDAQ 1,000선 위기 지속. Swap 추이 주시
 |||- **[Hermes]** 📝 **Knowledge Cron 12:46 — 6/4(목) Pre-Market 스냅샷: KOSPI 8,801🟢 사상최고! KOSDAQ 1,026🔴 -11.6% 폭락! WTI $96🟢, 환율 1,528🔴, 삼성부광 -40.14%🔴, Swap 0B✅** (2026-06-04 12:46 KST)
 ||  - **KOSPI 8,801.30 🟢** (+0.15%, 6/1→6/2). 연저점 대비 +27.6%! 9,000선 목전

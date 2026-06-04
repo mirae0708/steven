@@ -1691,3 +1691,59 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 - **C: drive 82% 개선 유지** — 87%→81%→82%. 여전히 주기적 청소 필요
 
 *Recorded by Hermes Knowledge Cron on 2026-06-04 20:46 KST — Evening Snapshot*
+
+---
+
+## 2026-06-05 (Fri) 00:48 KST — Knowledge Cron: Pre-Market, Gateway 756MB RSS 경계, Trinity 정상
+
+### 🖥️ 시스템 현황 (6/5 00:48 KST)
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| Uptime | 🟢 | 13h 43m (6/4 11:04 부팅 유지) |
+| Memory | 🟡 | 4.1Gi/7.6Gi (54%) — 6/4 20:46 53%와 유사 |
+| **Swap** | 🟡🔺 | **315MiB/2.0Gi (15%) — 6/4 20:46 89MiB→315MiB, 4시간만에 3.5배 증가!** |
+| Loadavg | 🟢 | 1.06 / 0.87 / 0.89 |
+| Gateway | 🟡 | PID 268531, RSS **756MB** ⚠️ — 512MB 임계 상회. API 서버 disabled (port 8642 not listening, 정상) |
+| C: drive | 🟢 | **81%** (87Gi 여유) — 6/4 20:46 82%에서 변동 없음 |
+| tmux | 🟢✅ | **7개** — hermes/hermes-mcp/jongdari/cowagent/metaclaw/opendesign/vo |
+| Self-Heal | 🟢 | 00:41 KST 완료 — Trinity 3개 모두 정상 |
+| Trinity | 🟢 | CowAgent(8727, 13:18h), MetaClaw(8982, 13:17h), open-design(274949, 34:13h) |
+
+### 📊 시장 현황 (6/1~6/3 confirmed, 6/4 데이터 미갱신)
+
+| 항목 | 6/1 (월) | 6/2 (화) | 6/3 (수) | 분석 |
+|:-----|:--------:|:--------:|:--------:|:-----|
+| **KOSPI** | **8,788** 🟢 | **8,801** 🟢🟢 | NaN | 사상최고, 9,000선 2.2% |
+| **KOSDAQ** | **1,050** 🔴 | **1,026** 🔴🔴 | NaN | 7~8거래일 연속 하락, KOSPI와 +10.5%p 디커플링 |
+| **USD/KRW** | 1,507 | **1,517** 🔴 | **1,528** 🔴🔴 | 원화 약세 지속 (6/3 종가 5.29 1,507.9→5.29 기준) |
+| **WTI** | **$92.16** | **$92.14** | **$95.96** 🟢 | $95선 반등 유지, 6/4 $95 부근 등락 |
+| 삼성부광 | 6,020 🔴 | 6,010 🔴 | — | 신저가, -40.14% |
+| 에이치엘 | 13,220 🔴 | 14,060 🟢 | — | +6.35% 반등 유지 |
+| 나우로보틱스 | 21,550 🔴 | 22,000 🟢 | — | +2.09% 반등 |
+
+### 🔑 핵심 인사이트
+
+1. **🟡 Swap 315MiB — 4시간만에 3.5배 급증!** 89MiB(20:46)→315MiB(00:48). 재축적 가속. Gateway RSS 756MB가 주요 원인으로 추정 (512MB 임계 상회)
+2. **🟡 Gateway RSS 756MB — 512MB MemoryMax 초과** systemd MemoryMax=512M 설정에도 RSS가 756MB까지 증가. MemoryHigh throttle이 덜 작동하거나 systemd 설정 drift 가능성. watchdog cron이 있었으나 현재 756MB까지 증가 — 재시작 없이 버티는 중
+3. **🟢 Trinity 3개 모두 정상** (00:41 Self-Heal + 00:25 Trinity Auto-Heal 2회 확인). CowAgent/MetaClaw/open-design 13h+ 정상 운용 중
+4. **🟢 tmux 7개 전원 정상** — vo(가상오피스) 신규 포함, hermes-mcp 00:39 신규 생성 확인
+5. **🔴 USD/KRW 1,528 급등 지속** — 5/29 1,507.9 종가→6/3 1,528, 원화 약세 추세
+6. **🟢 WTI $95선 유지** — 6/3 $95.96 반등 후 6/4 $95 부근 등락. OPEC+ 요인 지속
+7. **🟢 C: drive 81% 안정 유지** (87Gi 여유) — 전일 82%와 유사, 87%→81% 청소 효과 유지
+
+### 🏗️ 가상오피스 현황 (6/4~6/5)
+
+- **vo tmux 세션 생성** (00:26 KST) — Supervisor 하네스 (5명 VP) 첫가동 후 유지 중
+- **Harness→Hermes 적용가이드** 작성 완료 (01_지식/)
+- **n8n 문서검증 리포트** 생성 완료 (4종 API 정상)
+- 견적 v3, 미커버 루트 cron 등록 예정
+
+### ⚠️ 관찰/주의사항
+
+1. **Gateway RSS 756MB — MemoryMax 512M 초과 지속**. systemd가 SIGTERM으로 강제 재시작할 가능성 있음. self-heal 2시간 간격 모니터링 유지
+2. **Swap 315MiB 급증 추세** — 6/4 12:46 0B→20:46 89MiB→00:48 315MiB. 4시간만에 3.5배. 재축적 속도 증가
+3. **00-Home.md 30KB** — Brain Sync 6/4 20:46 KST 마지막 갱신
+4. **Tavily API 키 만료 확인** (401 Unauthorized) — 오늘 web_search/market data 수집에 Tavily MCP 불가. 대체 검색 경로 필요
+
+*Recorded by Hermes Knowledge Cron on 2026-06-05 00:48 KST — Pre-Market Snapshot (Fri)*

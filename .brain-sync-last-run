@@ -1,8 +1,6 @@
-🧠 Brain Sync — 2026-05-29 11:00 KST
-Status: No changes to Context/Members/Agents since 10:15.
-Context/ 11 files unchanged. Members/ 1 file unchanged. Agents/ 2 files unchanged.
-✅ Gateway running (PID 270859, 220MB RSS, Telegram polling mode).
-PORT 8642 NOT bound — confirmed: api_server.enabled: false in config (intentional).
-Swap 950MiB, Loadavg 0.31, Memory 2.9Gi/7.6Gi (38%), uptime 16h26m.
-C: drive 87% (64Gi free) — stable since last check.
-New: 3 MCP-멀티검색 reports (AI trends, KOSPI outlook, logistics) + 2 arXiv papers (OptSkills, Knowledge Editing MLLM) + 1 Tools paper (Simplicity via Polynomial).
+🧠 Brain Sync — 2026-06-04 20:46 KST
+Status: Knowledge Cron 완료 — Evening Snapshot 저장.
+System: Uptime 9h41m, Swap 89MiB 🟡 재축적 시작, Mem 53%, Gateway --replace 20:16 재시작, C: 82% (87Gi), tmux 7개 (+vo 가상오피스 16:39).
+Key Events: 가상오피스 첫가동 (5명 VP 하네스 최초 실행), Harness→Hermes 적용가이드 작성, n8n 문서검증 리포트 생성, MCP 7건+20개 arXiv 수집.
+Market: KOSPI 8,801 사상최고, KOSDAQ 1,026 7~8일 연속 하락, USD/KRW 1,528 급등, WTI $95.96 반등.
+Files updated: 00-Home.md, 01_지식/Hermes-Daily-Log.md, 02-Knowledge/Hermes-Daily-Log.md, 99_System/Logs/wiki_update_log.md (4 files committed).

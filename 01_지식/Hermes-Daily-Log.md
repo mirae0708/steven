@@ -1721,3 +1721,56 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 - **.hermes_last_check 갱신**: 2026-06-04 20:46
 
 *Recorded by Hermes Knowledge Cron on 2026-06-04 20:46 KST — Knowledge Snapshot (Thu, Evening)*
+
+---
+
+## 2026-06-05 (Fri) 00:48 KST — Knowledge Cron: Gateway 756MB RSS 경계, Swap 315MiB 급증, Trinity 정상
+
+### 🖥️ 시스템 현황
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| Uptime | 🟢 | 13h 43m (6/4 11:04 부팅 유지) |
+| Memory | 🟡 | 4.1Gi/7.6Gi (54%) |
+| **Swap** | 🟡🔺 | **315MiB/2.0Gi (15%)** — 89MiB(20:46)→315MiB(00:48), 4시간만에 3.5배! |
+| Loadavg | 🟢 | 1.06 / 0.87 / 0.89 |
+| Gateway | 🟡 | PID 268531, RSS **756MB** ⚠️ — 512MB MemoryMax 초과. API 서버 disabled |
+| C: drive | 🟢 | **81%** (87Gi 여유) |
+| tmux | 🟢✅ | **7개** — hermes/hermes-mcp/jongdari/cowagent/metaclaw/opendesign/vo |
+| Self-Heal | 🟢 | 00:41 KST 완료 — 모든 서비스 정상 |
+| Trinity (9899/30000/17456) | 🟢✅ | 3개 모두 정상 (00:41 + 00:25 2회 확인) |
+
+### 📊 시장 (6/1~6/3 confirmed, Yahoo rate-limit)
+
+| 항목 | 6/1 (월) | 6/2 (화) | 6/3 (수) |
+|:-----|:--------:|:--------:|:--------:|
+| KOSPI | 8,788 🟢🟢 | **8,801** 🟢🟢 | NaN |
+| KOSDAQ | 1,050 🔴 | **1,026** 🔴🔴 | NaN |
+| USD/KRW | 1,507 | **1,517** 🔴 | **1,528** 🔴🔴 |
+| WTI | $92.16 | $92.14 | **$95.96** 🟢 |
+| 삼성부광 | 6,020 🔴 | 6,010 🔴 | -40.14% |
+| 에이치엘 | 13,220 🔴 | 14,060 🟢 | +6.35% |
+| 나우로보틱스 | 21,550 🔴 | 22,000 🟢 | +2.09% |
+
+### 🔑 핵심 인사이트
+
+1. **🟡 Gateway RSS 756MB — 512MB MemoryMax 초과 지속**. systemd MemoryHigh/MemoryMax 설정이 충분히 적용되지 않거나 drift 발생. watchdog cron 없이도 버티는 중
+2. **🟡 Swap 315MiB 급증 가속** — 0B(12:46)→89MiB(20:46)→315MiB(00:48). 4시간 3.5배 증가
+3. **🟢 Trinity 3개 모두 정상** — 13h+ 연속 가동. Self-Heal 00:41, Trinity Auto-Heal 00:25 정상 확인
+4. **🟢 tmux 7개 전원 정상** — vo(가상오피스), hermes-mcp(00:39 생성) 포함
+5. **🔴 USD/KRW 1,528 급등 지속** — 원화 약세 심화
+6. **🟢 C: drive 81% 안정 유지** — 청소 효과 유지
+
+### 🏗️ 가상오피스 현황
+
+- **vo tmux 세션**: 00:26 KST 신규 생성 (Supervisor 하네스 유지 중)
+- Harness→Hermes 적용가이드 완료, n8n 문서검증 리포트 완료
+
+### ⚠️ 관찰사항
+
+1. Gateway 756MB RSS — self-heal 2시간 간격 모니터링 유지, systemd 강제 재시작 가능성
+2. Swap 315MiB — 재축적 속도 증가 추세
+3. Tavily API 키 만료 확인 (401) — market data 수집 대체 경로 필요
+4. **.hermes_last_check 갱신**: 2026-06-05 00:48
+
+*Recorded by Hermes Knowledge Cron on 2026-06-05 00:48 KST — Pre-Market Snapshot (Fri)*
