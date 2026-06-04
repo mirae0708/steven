@@ -1,2978 +1,1649 @@
-     1|     1|
-     2|     2|## 2026-05-03 (Sun) 04:01 — 자동 주말 스냅샷
-     3|     3|
-     4|     4|### 시스템 현황
-     5|     5|| 항목 | 상태 |
-     6|     6||:-----|:------|
-     7|     7|| Hermes Gateway | 정상 (PID 186539, 03:33 재시작) |
-     8|     8|| Hermes CLI | tmux hermes 세션 유지 |
-     9|     9|| Jongdari 배틀루프 | 정상 (PID 784, 1개 세션) |
-    10|    10|| tmux 세션 | hermes / hermes-mcp / jongdari 각 1개 |
-    11|    11|| MCP 서버 8개 | 모두 정상 |
-    12|    12|| 메모리 | 1,926MB / 7,748MB (24.9%) |
-    13|    13|
-    14|    14|### 포트폴리오
-    15|    15|- 삼성부광(014950.KQ): 34주 @10,040원 -> 9,710원 (-3.29%)
-    16|    16|- 나우로보틱스(459510.KQ): 10주 @30,550원 -> 미갱신
-    17|    17|- 현금: 4,349,470원 | 총 평가: 약 4,985,110원 (-0.30%)
-    18|    18|
-    19|    19|### Macro
-    20|    20|- KOSPI: 6,598.87 (3d +1.9%) | KOSDAQ: 1,192.35
-    21|    21|- WTI: $101.94 ($100+ 지속) | USD/KRW: 1,471.22 (안정)
-    22|    22|
-    23|    23|### 이슈
-    24|    24|- 삼성부광 -3.29% 임박, 9,400원 지지선 관찰
-    25|    25|- 나우로보틱스 current_price 미갱신
-    26|    26|- Gateway 03:33 재시작 (정기 재시작)
-    27|    27|- Jongdari 단일 세션 유지, 중복 해소
-    28|    28|- MCP 서버 전원 정상
-    29|    29|
-    30|    30|### 2026-05-03 (Sun) 05:31 — Brain Sync 스냅샷 (일요일)
-    31|    31|- **변경 감지**: 0개 파일 (주말 변동 없음)
-    32|    32|- **시장**: KOSPI 6,598.87 / KOSDAQ 1,192.35 (장 마감)
-    33|    33|- WTI $101.94 (↓$3.13, $100 하향 임박) | USD/KRW 1,471.22 (원화 강세)
-    34|    34|- **포트폴리오**: 삼성부광 -3.59% / 나우로보틱스 flat
-    35|    35|- **결론**: 새로운 정보 없음. 다음 거래일: 5/4(월)
-    36|    36|
-    37|    37|## 2026-05-03 (Sun) 08:00 — 일요일 아침 스냅샷
-    38|    38|
-    39|    39|### 시스템 현황
-    40|    40|| 항목 | 상태 |
-    41|    41||:-----|:------|
-    42|    42|| Hermes Gateway | 정상 (PID 201039, 06:33 nuke 후 재시작) |
-    43|    43|| Hermes CLI | tmux hermes 세션 유지 |
-    44|    44|| Jongdari 배틀루프 | 정상 (proc=2, CB Score 16/100) |
-    45|    45|| tmux 세션 | hermes / hermes-mcp / jongdari 각 1개 |
-    46|    46|| OpenWebUI | 정상 (port 3000) |
-    47|    47|| MetaClaw | 정상 (port 30000) |
-    48|    48|| 메모리  | 2,060MB / 7,748MB (27%) |
-    49|    49|| 디스크 | 2% |
-    50|    50|
-    51|    51|### 포트폴리오 (paper_portfolio)
-    52|    52|- 자본: 5,000,000원 | 현금: 0 | 포지션: 2개
-    53|    53|- KOSPI: 6,599 | KOSPI 1M 모멘텀: +20.4%
-    54|    54|
-    55|    55|### 🚨 복구 기록: 06:30~06:33 KeepAlive v7
-    56|    56|- 06:30 **SLEEP_DETECTED** (gap ~2.4h) → **MetaClaw 3회 재시작 실패** → **Hermes-WebUI 3회 재시작 실패**
-    57|    57|- 06:33 **Nuke & Restart**: Gateway 재시작 → 08:01 keepalive v7("BULLETPROOF") 전환
-    58|    58|- **Windows 전원 설정 → NEVER SLEEP** (재발 방지)
-    59|    59|- 현재 08:00 모든 서비스 정상 복구 완료
-    60|    60|
-    61|    61|### 배틀루프 동향
-    62|    62|- KBI메탈(024840.KQ), 나우로보틱스(459510.KQ) 분석 중
-    63|    63|- 시장 Intel: 뉴스 8건, 모멘텀 5개, Market State: NORMAL
-    64|    64|- CB Score 16/100 (낮음, 리스크 회피 모드) — 단기 추세 +20.4%에도 불구하고 변동성 3.7%, 오일/환율 리스크 반영
-    65|    65|
-    66|    66|### 이슈
-    67|    67|- 삼성부광 9,400원 지지선 관찰 지속 (일요일 미갱신)
-    68|    68|- 나우로보틱스 현재가 미갱신 상태
-    69|    69|- CB Score 16/100 — 낮은 신호로 당분간 진입 없음
-    70|    70|- 다음 거래일: 5/4(월) 장 개시
-    71|    71|
-    72|    72|## 2026-05-03 (Sun) 12:01 — 점심 스냅샷
-    73|    73|
-    74|    74|### 시스템 현황
-    75|    75|| 항목 | 상태 |
-    76|    76||:-----|:------|
-    77|    77|| Hermes Gateway | 정상 (PID 216671, 09:33 재시작) |
-    78|    78|| Hermes CLI | tmux hermes 세션 유지 |
-    79|    79|| Jongdari 배틀루프 | 정상 (proc=2, CB Score 16/100) |
-    80|    80|| tmux 세션 | hermes / hermes-mcp / jongdari 각 1개 |
-    81|    81|| OpenWebUI | ❌ 다운 (keepalive 3회 실패 후 복구 안 됨) |
-    82|    82|| MetaClaw | ❌ 다운 (keepalive 3회 실패 후 복구 안 됨) |
-    83|    83|| MCP 서버 9개 | 정상 (time/fetch/filesystem + 6 Python-based) |
-    84|    84|| 메모리 | 2,137MB / 7,748MB (28%) |
-    85|    85|| 디스크 | 2% |
-    86|    86|| KeepAlive v7 | BULLETPROOF 모드, 12:02 재시작됨 |
-    87|    87|
-    88|    88|### 🔴 지속적 이슈: MetaClaw & OpenWebUI 다운
-    89|    89|- 09:30 keepalive v7 재시작 후 MetaClaw 3회 재시작 실패 → CRITICAL
-    90|    90|- OpenWebUI도 동일 패턴으로 3회 실패 → CRITICAL
-    91|    91|- BULLETPROOF 모드로 keepalive 재시작 루프 중 (12:02 최신 기동)
-    92|    92|- Windows NEVER SLEEP 설정 이후에도 재발 — 근본 원인은 WSL 환경 내 서비스 자체 기동 실패로 추정
-    93|    93|
-    94|    94|### 🔴 MCP Python 서버 CancelledError 지속 (1,658회)
-    95|    95|- antigravity/vscode/docker/obsidian/anythingllm/googledrive — 6개 Python 기반 MCP 서버
-    96|    96|- Gateway 재시작 시 `python3` subprocess가 CancelledError로 연결 실패
-    97|    97|- `uvx` 기반 MCP(time/fetch)와 Node 기반(filesystem)은 정상
-    98|    98|- **원인 추정**: Gateway의 MCP 서버 기동 타이밍 이슈 — Python 서버가 준비되기 전에 타임아웃
-    99|    99|
-   100|   100|### 배틀루프 동향
-   101|   101|- 30분 간격으로 KOSDAQ 종목 Deep Dive 진행 중 (주말 모드)
-   102|   102|- 11:30 이후 분석: 진바이오텍, 엔젤로보틱스, 덴티스, 케이씨티, 참좋은여행
-   103|   103|- Market State: NORMAL | KOSPI: 6,599
-   104|   104|- CB Score: 16/100 (지속) — 리스크 회피 모드 유지
-   105|   105|
-   106|   106|### 포트폴리오
-   107|   107|- paper_portfolio: 자본 5,000,000 / 현금 0 / 포지션 2개
-   108|   108|- root portfolio: 자본 0 / 현금 0 / 포지션 1개 (삼성부광 추정)
-   109|   109|- 신규 진입 없음 (일요일, CB Score 낮음)
-   110|   110|
-   111|   111|### 결론
-   112|   112|- 주말 유지보수 모드 — 시스템 정상 작동 중이나 MetaClaw/WebUI 다운 상태
-   113|   113|- 다음 거래일(5/4 월) 전까지 MetaClaw/WebUI 복구 필요
-   114|   114|- Python MCP 서버 CancelledError — 근본 원인 분석 필요
-   115|   115|- 정보 변동 없음: 기록 완료
-   116|   116|
-   117|   117|---
-   118|   118|
-   119|   119|## 2026-05-03 (Sun) 16:02 — 오후 스냅샷 (Gateway 재시작 + OpenWebUI 복구)
-   120|   120|
-   121|   121|### 시스템 현황
-   122|   122|| 항목 | 상태 |
-   123|   123||:-----|:------|
-   124|   124|| Hermes Gateway | 정상 (PID 271100, 15:33 재시작) |
-   125|   125|| Hermes CLI | tmux hermes 세션 유지 |
-   126|   126|| Jongdari 배틀루프 | 정상 (PID 784, proc=2, 62h 가동) |
-   127|   127|| tmux 세션 | hermes / hermes-mcp / jongdari 각 1개 |
-   128|   128|| OpenWebUI | ✅ **복구됨** (PID 273200, port 3000, 16:02 재시작) |
-   129|   129|| MetaClaw | ❌ 다운 (port 30000 미청취) |
-   130|   130|| MCP 서버 8개 | 모두 정상 (15:31 Gateway nuke 후 재시작) |
-   131|   131|| 메모리 | 2,092MB / 7,748MB (27%) |
-   132|   132|| 디스크 | 2% |
-   133|   133|
-   134|   134|### 포트폴리오
-   135|   135|- (주말 — 데이터 미갱신, 이전 스냅샷 참조)
-   136|   136|- 현금: 4,349,470원 추정
-   137|   137|
-   138|   138|### Macro
-   139|   139|- CB Score: 16/100 (극단 공포 지속) | KOSPI 1M +20.4% | Vol 3.7%
-   140|   140|- WTI: $102 | USD/KRW: ₩1,471
-   141|   141|- Market State: NORMAL | KOSPI 3일 +1.90%
-   142|   142|
-   143|   143|### AI Council
-   144|   144|- 나우로보틱스(459510.KQ): HOLD(신뢰도 14%) — 기술적:HOLD(50%) / 뉴스:HOLD(50%) / 리스크:SELL(30%)
-   145|   145|- 성우(458650.KQ): HOLD(신뢰도 15%) — 기술적:HOLD(60%) / 뉴스:HOLD(50%) / 리스크:HOLD(40%)
-   146|   146|- Deep Dive 사이클 정상: 1분 간격 15개 코스닥 종목 순환
-   147|   147|
-   148|   148|### 이슈
-   149|   149|1. Gateway 15:33 재시작 (MCP 서버 전면 재시작 동반) — 약 1시간 다운
-   150|   150|2. OpenWebUI 자동 복구됨 (16:02 재시작 감지)
-   151|   151|3. MetaClaw 여전히 다운 — 수동 복구 필요
-   152|   152|4. MCP 서버 중복: antigravity/vscode/docker/obsidian/anythingllm/googledrive 각 2개 인스턴스 (이전 + 신규) — 부하 없음
-   153|   153|5. 다음 거래일 5/4(월) 오전 9시 개장
-   154|   154|
-   155|   155|---
-   156|   156|
-   157|   157|## 2026-05-04 (Mon) 00:01 — 새벽 스냅샷 (거래일 D-DAY)
-   158|   158|
-   159|   159|### 시스템 현황
-   160|   160|| 항목 | 상태 |
-   161|   161||:-----|:------|
-   162|   162|| Hermes Gateway | 정상 (PID 297188, May03 15:33 구동, 8.5h 가동) |
-   163|   163|| Hermes CLI | tmux hermes 세션 유지 (May02~) |
-   164|   164|| Jongdari 배틀루프 | 정상 (PID 784, May02~, 46h+ 가동) |
-   165|   165|| tmux 세션 | hermes / hermes-mcp / jongdari 각 1개 |
-   166|   166|| OpenWebUI | ✅ 정상 (port 3000, 200 응답) |
-   167|   167|| MetaClaw | ❌ 다운 (port 30000 미청취, 프로세스 없음) |
-   168|   168|| MCP 서버 8종 | 정상 (uvx 2 + Python 6) — **단, 18개 인스턴스 중복** (이전 9 + 신규 9) |
-   169|   169|| 메모리 | 2,155MB / 7,748MB (28%) |
-   170|   170|| 디스크 | 2% |
-   171|   171|
-   172|   172|### 포트폴리오 (주말 데이터 기준)
-   173|   173|- **삼성부광(014950.KQ)**: 34주, previousClose 9,920원 (estimated cost 10,040원, 약 -1.2%)
-   174|   174|- **나우로보틱스(473980.KQ)**: 10주, previousClose 17,970원 (cost 30,550원 → 약 -41%)
-   175|   175|- **현금**: 4,349,470원 추정
-   176|   176|- **paper_portfolio**: 자본 5,000,000 / 현금 0 / 포지션 2개
-   177|   177|
-   178|   178|### Macro
-   179|   179|- KOSPI: 6,598.87 (4/30 종가) | KOSDAQ: 1,192.35
-   180|   180|- WTI: $101.94 | USD/KRW: ₩1,471.22
-   181|   181|- 주말 데이터 미갱신, 5/4(월) 9시 개장 시 실시간 반영 예정
-   182|   182|
-   183|   183|### 📌 오늘(5/4 월) 주요 체크포인트
-   184|   184|1. **장 개시 모니터링**: KOSPI 6,600선 유지 여부, 삼성부광 9,400원 지지선
-   185|   185|2. **나우로보틱스 급락 심화**: cost 대비 -41%, 손절 판단 필요
-   186|   186|3. **MetaClaw 복구**: 24h+ 다운 상태, 재설치/재시작 필요
-   187|   187|4. **MCP 서버 중복**: 18개 인스턴스 (정상 8개 × 2 set) — 리소스 영향은 미미하나 추후 정리
-   188|   188|5. **CB Score**: 16/100 (극단 공포, 지속) — 신규 진입 보류
-   189|   189|
-   190|   190|### 이슈
-   191|   191|- MetaClaw가 토요일 이후 계속 다운 — keepalive 3회 실패 후 BULLETPROOF 모드로 복구 루프 중이었으나 현재 프로세스 자체 없음
-   192|   192|- OpenWebUI는 16:02 재시작 후 정상 복구
-   193|   193|- MCP 서버 중복 이슈 지속 (18개 > 정상 8개)
-   194|   194|- 오늘 9시 장 개시 전까지 MetaClaw 복구 시도 필요
-   195|   195|
-   196|   196|---
-   197|   197|
-   198|   198|## 2026-05-04 (Mon) 04:01 — 장 개시 전 새벽 스냅샷
-   199|   199|
-   200|   200|### 시스템 현황
-   201|   201|| 항목 | 상태 |
-   202|   202||:-----|:------|
-   203|   203|| Hermes Gateway | ✅ 정상 (PID 316995, May03 15:33 KST~, 12h+ 가동) |
-   204|   204|| Hermes CLI | tmux hermes 세션 유지 (May02~) |
-   205|   205|| Jongdari 배틀루프 | ⚠️ PID 712, yfinance 014950/459510 "possibly delisted" 오류 반복 |
-   206|   206|| OpenWebUI | ✅ 정상 (PID 319500, port 3000, 방금 keepalive가 재시작) |
-   207|   207|| MetaClaw | ❌ **다운** (port 30000 미청취, 프로세스 없음) |
-   208|   208|| Hermes WebUI | ⚠️ port 8642 Gateway는 listen중이나 404 응답 |
-   209|   209|| tmux 세션 | hermes / hermes-mcp / jongdari 각 1개 |
-   210|   210|| keepalive v7 | ✅ BULLETPROOF — 2개 프로세스 정상 작동 |
-   211|   211|| 메모리 | 2,126MB / 7,748MB (27%) |
-   212|   212|| 디스크 | 2% |
-   213|   213|
-   214|   214|### 🚨 Critical: yfinance KOSPI/KOSDAQ 종목 "possibly delisted" 오류
-   215|   215|- **삼성부광(014950.KS)**와 **나우로보틱스(459510.KS)** 모두 yfinance에서 `"No data found, symbol may be delisted"` 오류
-   216|   216|- 종가 데이터(5d)를 전혀 가져오지 못함 — 이전 **014950.KQ** 티커 변환(→ .KS)에 실패한 것으로 보임
-   217|   217|- `473980.KS` (나우로보틱스 실제 티커)도 동일 패턴 확인 필요
-   218|   218|- 배틀루프가 사실상 데이터 없는 상태로 반복 루프 중 → **수동 티커 검증 및 수정 필요**
-   219|   219|
-   220|   220|### 포트폴리오
-   221|   221|- **삼성부광(014950.KQ/KS)**: 34주, 데이터 미갱신 (yfinance 오류로 previousClose 미확인)
-   222|   222|- **나우로보틱스(459510.KQ → 473980.KQ?)**: 10주, cost 30,550원, 데이터 미갱신
-   223|   223|- **paper_portfolio**: 자본 5,000,000 / 현금 0 / 포지션 2개
-   224|   224|- **현금**: 4,349,470원 추정
-   225|   225|
-   226|   226|### Macro (4/30 종가 기준, 장 개시 전)
-   227|   227|| 지표 | 값 |
-   228|   228||:-----|:----|
-   229|   229|| KOSPI | 6,598.87 (4/30 종가, 전일대비 -1.38%) |
-   230|   230|| KOSDAQ | 1,192.35 (4/30 종가, 전일대비 -2.29%) |
-   231|   231|| CB Score | 16/100 — 극단 공포 지속 |
-   232|   232|| 장 개시 | **5/4(월) 09:00 KST** — 약 5시간 후 |
-   233|   233|
-   234|   234|### 🎯 오늘(5/4 월) 체크포인트
-   235|   235|1. **yfinance 티커 문제**: 014950.KS 대신 014950.KQ 복원 또는 Yahoo Finance 티커 확인 (Yahoo는 .KQ 접미사 사용)
-   236|   236|2. **나우로보틱스 티커 실제 확인**: 459510은 코스닥 신규상장 (2025~) — Yahoo에 473980.KQ로 등록되어 있을 가능성
-   237|   237|3. **MetaClaw 복구**: 48h+ 다운 상태 — 수동 개입 필요
-   238|   238|4. **장 개시 모니터링**: 09:00 KOSPI/KOSDAQ 오프닝, 삼성부광 9,400원 지지선
-   239|   239|5. **CB Score 16**: 극단 공포 — 신규 진입 보류
-   240|   240|
-   241|   241|### 알려진 문제
-   242|   242|- MetaClaw 다운 (48h+)
-   243|   243|- yfinance 티커 오류 → 포트폴리오 가치 계산 불가
-   244|   244|- MCP 서버 18개 인스턴스 중복 (정상 8set × 2)
-   245|   245|- Gateway port 8642 404 (API server 연결됨 상태이나 라우트 미설정)
-   246|   246|- Hermes WebUI (port 8648) 미작동
-   247|   247|
-   248|   248|---
-   249|   249|
-   250|   250|## 2026-05-04 (Mon) 08:00 — 개장 전 아침 스냅샷 (거래일 D-DAY, 1시간 전)
-   251|   251|
-   252|   252|### 시스템 현황
-   253|   253|| 항목 | 상태 |
-   254|   254||:-----|:------|
-   255|   255|| Hermes Gateway | ✅ 정상 (PID 332941, 06:33 재시작, 1.5h 가동) |
-   256|   256|| Hermes CLI | tmux hermes 세션 유지 (May02~) |
-   257|   257|| Jongdari 배틀루프 | ✅ 정상 (PID 784, May02~, 79h+ 가동) |
-   258|   258|| OpenWebUI | ⚠️ 프로세스 기동됨 (PID 338471, 08:00) but port 3000 미청취 |
-   259|   259|| MetaClaw | ❌ **72h+ 다운** (port 30000, 프로세스 없음) |
-   260|   260|| MCP 서버 | 8종 정상 (18개 인스턴스 중복 지속) |
-   261|   261|| 메모리 | 2,164MB / 7,748MB (28%) |
-   262|   262|| 디스크 | 2% |
-   263|   263|| WSL Uptime | 54.9h |
-   264|   264|
-   265|   265|### 📊 Macro (4/30~5/3 종가)
-   266|   266|| 지표 | 값 | 비고 |
-   267|   267||:-----|:----|:------|
-   268|   268|| KOSPI | 6,598.87 (4/30) | 전주대비 +1.90% |
-   269|   269|| KOSDAQ | 1,192.35 (4/30) | 전주대비 -0.96% |
-   270|   270|| WTI | **$100.96** (5/3) | ⚠️ $100선 임박 |
-   271|   271|| USD/KRW | ₩1,471.22 (5/2) | 안정적 |
-   272|   272|| CB Score | 16/100 | 극단 공포 지속 |
-   273|   273|
-   274|   274|### 포트폴리오
-   275|   275|- **삼성부광(014950.KQ)**: 34주 @9,710원 (cost 10,040원, -3.29%)
-   276|   276|- **나우로보틱스(473980.KQ)**: 10주 @17,650원 (cost 30,550원, **-42.2%**)
-   277|   277|- **현금**: 4,349,470원 추정
-   278|   278|- **paper_portfolio**: 자본 5,000,000 / 현금 0 / 포지션 2개
-   279|   279|
-   280|   280|### 🚨 주요 포인트
-   281|   281|1. **나우로보틱스 -42.2%**: 473980.KQ(Yahoo 정식 티커) 17,650원 확인. 459510.KQ는 Yahoo 미등록. cost 대비 -42.2%로 손절 기준 초과.
-   282|   282|2. **WTI $100.96**: 전주 고점 $106.88에서 $6 하락. $100 이탈 시 CRISIS MODE 전환 가능.
-   283|   283|3. **MetaClaw 72h+ 다운**: keepalive 3회 실패 후 프로세스 자체 없음. 수동 복구 필요.
-   284|   284|4. **OpenWebUI 재기동 중**: 08:00 keepalive가 시작, 개장 전까지 정상화 예상.
-   285|   285|5. **yfinance 티커 확정**: 014950.**KQ**=9,710원 정상, 473980.**KQ**=17,650원 정상. 459510 → 473980 수정 필요.
-   286|   286|
-   287|   287|### 🎯 개장 체크리스트 (1시간 후 09:00)
-   288|   288|- [ ] KOSPI 6,600선 유지 여부
-   289|   289|- [ ] 삼성부광 9,400원 지지선 모니터링
-   290|   290|- [ ] 나우로보틱스 손절/보유 판단 (-42.2%)
-   291|   291|- [ ] WTI $100선 이탈 감시
-   292|   292|- [ ] Jongdari 티커 473980.KQ로 수정
-   293|   293|- [ ] MetaClaw 복구 시도
-   294|   294|
-   295|   295|---
-   296|   296|
-   297|   297|## 2026-05-04 (Mon) 16:30 — 장 마감 스냅샷 (사상 최고치: KOSPI 6,936.99)
-   298|   298|
-   299|   299|### 🏆 시장 요약 (5/4 월 거래일)
-   300|   300|
-   301|   301|| 지표 | 값 | 변동 |
-   302|   302||:-----|:----|:------|
-   303|   303|| KOSPI 종가 | **6,936.99** | **+338.12p (+5.12%)** — 사상 최초 6,900선 돌파 |
-   304|   304|| KOSDAQ 종가 | ~1,213.74 | +21.39p (+1.79%) |
-   305|   305|| USD/KRW | 1,462.8 | **↓20.5원** (원화 급강세) |
-   306|   306|| WTI | $100.96 (5/3) | $100선 유지 |
-   307|   307|| CB Score | 16→? → 극단 공포 → **5%↑에도 공포 유지 (추정)** |
-   308|   308|
-   309|   309|- **외국인 순매수**: 3.2조원 / **기관 순매수**: 1.9조원 / 개인 순매도: 5.1조원
-   310|   310|- SK하이닉스 **시총 1,000조 돌파** (최초), 삼성전자와 '1000조 클럽' 2개
-   311|   311|- SK하이닉스 +11.9%, 삼성전자 +4.1%, 삼성전자우 +5.9%, SK스퀘어 +14.4%
-   312|   312|- **코스피 4월 한 달 +30.6%** — 세계 최고 월간 상승률
-   313|   313|
-   314|   314|### 시스템 현황
-   315|   315|
-   316|   316|| 항목 | 상태 |
-   317|   317||:-----|:------|
-   318|   318|| Hermes Gateway | ✅ 정상 (PID 378667, 14:30 chat 세션) |
-   319|   319|| Hermes CLI | tmux hermes 세션 유지 (May02~) |
-   320|   320|| Jongdari 배틀루프 | ✅ PID 784 (May02~, 87h+ 가동) |
-   321|   321|| tmux 세션 | hermes / hermes-mcp / jongdari / **cowagent** (신규) 각 1개 |
-   322|   322|| OpenWebUI | ✅ 정상 (PID 371246, port 3000, 200 OK) |
-   323|   323|| MetaClaw | ❌ **~96h+ 다운** (port 30000 미청취, keepalive에서 permanently skipped) |
-   324|   324|| keepalive v7.1 | ✅ BULLETPROOF — 정상 작동 |
-   325|   325|| MCP 서버 8종 | 정상 (18개 인스턴스 중복) |
-   326|   326|| 메모리 | 4,322MB / 7,748MB (56% — OpenWebUI 사용량 포함) |
-   327|   327|| 디스크 | 2% |
-   328|   328|| WSL Uptime | 63h+ |
-   329|   329|| Windows 전원 | NEVER SLEEP 설정 유지 |
-   330|   330|
-   331|   331|### 포트폴리오
-   332|   332|
-   333|   333|- **삼성부광(014950.KQ)**: 34주 @9,710원 추정 (cost 10,040원) → 장중 KOSPI 5%↑로 반등 가능
-   334|   334|- **나우로보틱스(473980.KQ)**: 10주 @17,650원 추정 (cost 30,550원, **-42.2%**) — 지속적 손실
-   335|   335|- **paper_portfolio**: 자본 5,000,000 / 현금 0 / 포지션 2개
-   336|   336|- **현금**: 4,349,470원 추정
-   337|   337|
-   338|   338|### 🚨 주요 이슈
-   339|   339|
-   340|   340|1. **🔴 MetaClaw ~96h+ 다운**: keepalive v7.1에서 `permanently skipped` 처리 — 복구 시도 없이 지속적 생략 중
-   341|   341|2. **🔴 MCP Python 서버 중복 (18개)**: 6개 Python MCP 서버 × 3세트 (PID 472~482 → 256104~256114 → 378710~378720)
-   342|   342|3. **🔴 cowagent session 등장**: tmux에 `cowagent` 세션 생성됨 (16:20) — 정체 확인 필요
-   343|   343|4. **🟡 DingTalk 인증 실패**: cowagent 세션 로그에서 `[authFailed] 鉴权失败` 반복 — DingTalk 채널 토큰 문제
-   344|   344|5. **🟡 Gateway port 8642 404**: Hermes WebUI API 미연결
-   345|   345|6. **✅ yfinance 티커**: 014950.KQ / 473980.KQ 정상 확인 — 459510.KQ→473980.KQ 수정 완료
-   346|   346|
-   347|   347|### 배운 점
-   348|   348|
-   349|   349|- KOSPI가 단기간에 6,600→6,936으로 5.12%↑ 폭등, 7,000선 눈앞 — AI 반도체 밸류체인 멜트업
-   350|   350|- USD/KRW 1,462.8로 **20.5원 급락** (원화 강세) — 외국인 자금 유입에 따른 강달러 완화
-   351|   351|- MetaClaw는 keepalive v7.1에서 permanently skipped — 수동 복구 외에는 자동화 불가
-   352|   352|- cowagent 세션 + DingTalk authFailed 로그 — 새로운 에이전트가 DingTalk 채널 연결 시도 중?
-   353|   353|
-   354|   354|### 📋 내일(5/5 화) 할 일
-   355|   355|
-   356|   356|- [ ] 삼성부광 9,400원 지지선 재확인 (KOSPI 6,936 상승 반영)
-   357|   357|- [ ] 나우로보틱스 손절/재평가: cost 대비 -42.2%, KOSPI 급등도 못 따라옴
-   358|   358|- [ ] WTI $100선 모니터링 (5/3 $100.96) — 이탈 시 CRISIS MODE
-   359|   359|- [ ] MetaClaw 수동 복구 시도 (keepalive bypass)
-   360|   360|- [ ] cowagent session 정체 확인 및 DingTalk authFailed 해결
-   361|   361|- [ ] MCP 서버 중복 인스턴스 정리
-   362|   362|- [ ] Hermes WebUI (port 8642/8648) 복구
-   363|   363|
-   364|   364|## 2026-05-04 (Mon) 17:00 — Brain Sync
-   365|   365|
-   366|   366|### 수집 결과
-   367|   367|| 항목 | 발견 | 저장 | 중복 |
-   368|   368||:-----|:----:|:----:|:----:|
-   369|   369|| arXiv 논문 | 12 | 0 | 12 |
-   370|   370|| GitHub 트렌딩 | 10 | 0 | 5 |
-   371|   371|
-   372|   372|→ 신규 콘텐츠 없음. 82개 파일이 16:00 배치로 업데이트됨.
-   373|   373|
-   374|   374|### Vault 핵심 콘텐츠 요약
-   375|   375|1. **Hermes 진화 전략 보고서** (414줄) — MCP 통합 #1, 멀티-에이전트, 의미론적 메모리 3대 업그레이드
-   376|   376|2. **CowAgent 기술 분석** — Dream Distillation, 하이브리드 메모리 검색 이식 가능
-   377|   377|3. **GitHub 지식허브** — HIVE(10K⭐/102 MCP tools), CCXT(42K⭐), nexu-io/open-design(20.5K⭐)
-   378|   378|4. **arXiv** — RunAgent, LLM procedural execution, Affordance Agent Harness, RAG security
-   379|   379|
-   380|   380|### Vault 통계
-   381|   381|- 전체: 118개 문서 (AI_Agents 13, LLM 31, Agent_LLM 5, MCP 리포트 33)
-   382|   382|
-   383|   383|---
-   384|   384|
-   385|   385|## 2026-05-04 (Mon) 17:20 — Tech Scavenger Scan
-   386|   386|
-   387|   387|### 📡 수집 결과 (15:20 최초 실행, 38개 신규 저장)
-   388|   388|
-   389|   389|| 소스 | 수집 |
-   390|   390||:----|:----:|
-   391|   391|| GitHub 트렌딩 | 30개 (저장: 17개) |
-   392|   392|| arXiv 논문 | 21개 (저장: 14개) |
-   393|   393|| HuggingFace Daily Papers | 10개 (저장: 1개) |
-   394|   394|| **신규 저장 합계** | **38개** |
-   395|   395|| 16:20/17:20 재실행 | 0개 신규 (중복 스킵) |
-   396|   396|
-   397|   397|### 🔥 주목할 만한 발견
-   398|   398|
-   399|   399|**헤르메스 즉시 적용 가능:**
-   400|   400|
-   401|   401|1. **affaan-m/everything-claude-code** (⭐172K) — 완전범용 Agent Harness. Instincts(능동행동), 메모리 아키텍처, 시큐리티 모델이 Hermes의 자가발전 시스템과 유사한 패턴. `instincts` 시스템 → Hermes의 proactive behavior와 mapping 가능
-   402|   402|
-   403|   403|2. **ComposioHQ/awesome-claude-skills** (⭐57K) — Claude Skills 생태계 큐레이션. MCP 서버 설정, Skill 패턴, 프롬프트 전략 추출 가능
-   404|   404|
-   405|   405|3. **wshobson/agents** (⭐34K) — Claude Code용 멀티-에이전트 오케스트레이션. subtask 조정 패턴 참고
-   406|   406|
-   407|   407|4. **shareAI-lab/learn-claude-code** (⭐57K) — bash 기반 미니멀 Agent Harness. Hermes의 tool loop 코어 프리미티브 이해에 유용
-   408|   408|
-   409|   409|**아카이브 논문 (High Relevance):**
-   410|   410|
-   411|   411|5. **Affordance Agent: Verification-Gated Skill Orchestra** — OpenAI/DeepMind 계열. Skill 실행 전 verification gate(신뢰도 임계값)로 오류 캐스케이드 방지. Hermes tool loop에 `confidence gate` 도입 가능
-   412|   412|
-   413|   413|6. **RunAgent: Constraint-Guided NL Plan Execution** — Plan step 추적 + constraint (rubric) 기반 실행. Hermes plan-following 강화에 적용
-   414|   414|
-   415|   415|7. **Persistent Visual Memory** — Visual Signal Dilution 문제 해결을 위한 영구 메모리. Hermes의 long agentic chain에서 context dilution 방지 패턴
-   416|   416|
-   417|   417|8. **Themis: Multilingual Code Reward Model** — 정확성+효율성+스타일+안전성 다중 평가. Hermes 코드 생성 self-critique 용도
-   418|   418|
-   419|   419|**보안 경고:**
-   420|   420|
-   421|   421|9. **When RAG Chatbots Expose Their Backend** — RAG 시스템 백엔드 노출 및 PII 유출 사례 연구. Hermes의 웹/채널 인터페이스에 적용되는 보안 교훈
-   422|   422|
-   423|   423|### 📋 Action Items
-   424|   424|
-   425|   425|- [ ] `affaan-m/everything-claude-code` instincts architecture → Hermes self-evolving 시스템과 비교/이식 검토
-   426|   426|- [ ] `awesome-claude-skills` 저장소 크롤링하여 MCP server config + skill 패턴 추출
-   427|   427|- [ ] Affordance Agent verification gate → Hermes tool loop에 도입 가능성 평가
-   428|   428|- [ ] RAG 보안 리뷰: Hermes Telegram/API 인터페이스 취약점 진단
-   429|   429|
-   430|   430|---
-   431|   431|
-   432|   432|## 2026-05-04 (Mon) 21:05 — 저녁 스냅샷 (MetaClaw 복구, 장 마감 후)
-   433|   433|
-   434|   434|### 시스템 현황
-   435|   435|
-   436|   436|| 항목 | 상태 |
-   437|   437||:-----|:------|
-   438|   438|| Hermes Gateway | ✅ 정상 (PID 404633, 15:32~, 6h+ 가동) |
-   439|   439|| Hermes CLI | tmux hermes 세션 유지 (May02~) |
-   440|   440|| Jongdari 배틀루프 | ✅ 정상 (PID 784, May02~, **91h+ 가동**) |
-   441|   441|| OpenWebUI | ✅ 정상 (PID 371246, port 3000) |
-   442|   442|| MetaClaw | ✅ **복구됨** (PID 460779, port 30000, 18:32 기동) — ~96h 다운 후 최초 복구 |
-   443|   443|| CowAgent/Vite | ✅ port 5173, OpenDesign dev server |
-   444|   444|| tmux 세션 | hermes / hermes-mcp / jongdari 각 1개 |
-   445|   445|| MCP 서버 | 8종 정상 (중복 18개 인스턴스 지속) |
-   446|   446|| 메모리 | 4,700MB / 7,748MB (61%) — OpenWebUI + MetaClaw + CowAgent 부하 |
-   447|   447|| 디스크 | 2% |
-   448|   448|| WSL Uptime | **2d 20h** |
-   449|   449|
-   450|   450|### 🔔 MetaClaw 복구 경과
-   451|   451|- **18:32** MetaClaw `skills_only` 모드로 기동 성공 (port 30000 listen)
-   452|   452|- keepalive v7.1에서 `permanently skipped` 상태였으나 수동 기동으로 복구
-   453|   453|- 이전: 토요일경 ~96h+ 크래시 후 지속적 기동 실패
-   454|   454|- 현재: 정상 작동 확인
-   455|   455|
-   456|   456|### 시장 (장 마감, 5/4 월)
-   457|   457|- KOSPI: **6,936.99** (+5.12%, 사상 최고) | KOSDAQ: ~1,213.74 (+1.79%)
-   458|   458|- USD/KRW: 1,462.8 (원화 강세)
-   459|   459|- 장 마감 후 추가 변동 없음
-   460|   460|
-   461|   461|### 포트폴리오 (데이터 미갱신, 장 마감 기준)
-   462|   462|- 삼성부광(014950.KQ): 34주, 전일종가 9,710원 — KOSPI 5%↑ 반영 시 반등 예상
-   463|   463|- 나우로보틱스(473980.KQ): 10주, cost 대비 -42.2% 지속
-   464|   464|- 현금: 4,349,470원 추정
-   465|   465|
-   466|   466|### 지속적 이슈
-   467|   467|- MCP 서버 18개 인스턴스 중복 (정상 8set × 2~3) — 리소스 영향 미미
-   468|   468|- Gateway port 8642 404 (Hermes WebUI API 미연결)
-   469|   469|- 나우로보틱스 -42.2% 손절 판단 미결
-   470|   470|- MetaClaw `skills_only` 모드로 기동 — full mode 복구 여부 확인 필요
-   471|   471|
-   472|   472|## 2026-05-05 (Tue) 04:05 — Brain Sync + 시장 점검 (어린이날 휴장)
-   473|   473|
-   474|   474|### Brain Sync
-   475|   475|| 항목 | 상태 |
-   476|   476||:-----|:------|
-   477|   477|| arXiv | 12 papers found → **0 new** (all duplicates) |
-   478|   478|| GitHub Trending | 10 repos → **0 new** (4 duplicates skipped) |
-   479|   479|| 전체 기술 문서 | **129개** 유지 |
-   480|   480|
-   481|   481|### 시장 현황 (5/4 마감 기준, 오늘 5/5 어린이날 휴장)
-   482|   482|- **KOSPI**: **6,936.99** (+5.12% 사상 최고!) — wiki에 미반영 (마지막 데이터 4/30 6,598.87)
-   483|   483|- **KOSDAQ**: **1,213.74** (+1.79%)
-   484|   484|- **WTI**: **$105.26** (+3.26%, $100선 확실 방어)
-   485|   485|- **USD/KRW**: **1,476.10** (원화 소폭 약세, 1,480 미만)
-   486|   486|
-   487|   487|### 포트폴리오
-   488|   488|| 종목 | 평가 | 상태 |
-   489|   489||:-----|:-----|:------|
-   490|   490|| 삼성부광(014950.KQ) | 34주 @10,040 → 9,540원 (-4.98%) | 🚨 **±3% 초과 — 9,400 지지선 근접** |
-   491|   491|| 나우로보틱스(459510.KQ) | 10주 @30,550 → ~29,950 (-1.96%) | 🟡 4/30 상한가 이후 조정 |
-   492|   492|| 총 평가 | 약 4,973,330원 (-0.53%) | 🟢 소폭 손실 |
-   493|   493|
-   494|   494|### 알림
-   495|   495|1. 🔴 **삼성부광 -4.98%** — -3% 임계치 초과, 9,400원 지지선 관찰 필요
-   496|   496|2. 🟢 **KOSPI 5/4 +5.12% 사상 최고** — 하지만 wiki KOSPI 페이지 미갱신 (4/30 6,598.87로 표시)
-   497|   497|3. 🟢 **WTI $105.26** — $100선 방어, 고유가 리스크 완화
-   498|   498|4. 🟢 **USD/KRW 1,476** — 1,480 미만 안정
-   499|   499|5. 🟡 **나우로보틱스** — 5/4 장중 29,950원까지 하락, -2% 조정
-   500|   500|
-   501|
+File unchanged since last read. The content from the earlier read_file result in this conversation is still current — refer to that instead of re-reading.
 
 ---
 
-## 2026-05-05 (Tue) 16:30 — 오후 스냅샷 (어린이날 휴장, self_heal.py 복구)
+## 🧬 Hermes Auto-Evolution — 2026-05-25 (Mon) 00:46 KST D-DAY 오픈 전 스냅샷
 
-### 시스템 현황
+### 📋 시스템 현황 — 00:46 KST (월요일, 거래일)
+
 | 항목 | 상태 |
 |:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 17151, 15:08 gateway run 재시작, 1.4h 가동) |
-| Hermes CLI | tmux hermes 세션 유지 (04:04 재시작) |
-| Jongdari 배틀루프 | ✅ 정상 — nexus_orchestrator (PID 2811, 04:11~, **12h+ 가동**) |
-| OpenWebUI | ✅ 정상 (PID 785, port 3000, 12h+ 가동) |
-| MetaClaw | ✅ 정상 (PID 188742, port 30000, 13:55 trinity-meta 세션) |
-| CowAgent | ✅ 정상 (PID 182793, 13:41 실행, trinity-cow 세션) |
-| tmux 세션 | hermes / jongdari / trinity-cow / trinity-meta / trinity-od — 총 5개 |
-| MCP 서버 | Filesystem(6개 인스턴스), Fetch(4), Time(4) — 모두 정상 (중복 증가) |
-| 메모리 | **3,846MB / 7,748MB (50%)** — MetaClaw+CowAgent+OpenWebUI+CLI 부하 |
-| 디스크 | 3% |
-| WSL Uptime | **12.4h** (04:04 재부팅) |
-| Windows 전원 | NEVER SLEEP 유지 |
+| WSL Uptime | 7h 6m (5/24 17:40 이후 재부팅 없음) |
+| tmux 세션 | 6개 — all normal (hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign) |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 |
+| Hermes Gateway (port 8642) | ✅ active |
+| Memory | 3.5Gi / 7.6Gi (46%) |
+| **Swap** | **780KiB ✅** (사실상 0B, 재부팅 효과 유지) |
+| Disk | 4% ✅ |
+| Load Avg | 1.26 / 1.19 / 1.13 |
+| Cron Jobs | 9개 등록 |
+| Brain Sync | 5/24 12:00 KST (24h+ 경과) |
 
-### 📊 시장 현황 (5/4 종가 기준, 어린이날 휴장)
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI 종가 | **6,936.99** (+5.12%, 사상 최고) | 5/4 마감, Wiki 미갱신 |
-| KOSDAQ | 1,213.74 (+1.79%) | — |
-| WTI | **$105.26** (5/5) | $100선 확고 방어, 고유가 리스크 완화 |
-| USD/KRW | **1,471.73** (5/5) | 안정적, 1,480 미만 |
-| CB Score | **27/100** CAUTION MODE | 이전 16→27 상승, 여전히 극단 공포 |
+### 📋 지난 24시간 타임라인 (5/24 00:45 → 5/25 00:46)
 
-### 포트폴리오 (paper_portfolio 기준)
-| 종목 | 평가 | 상태 |
-|:-----|:-----|:------|
-| 삼성부광(014950.KQ) | 34주 @10,040 → 9,610원 (-4.28%) | 🟡 9,400 지지선 근접 |
-| 나우로보틱스(459510.KQ) | 10주 @30,550 → 30,300원 (-0.82%) | 🟢 5/4 상한가 후 안정 |
-| 현금 | 4,349,470원 | — |
-| **총 평가** | **5,007,910원 (+0.16%)** | 🟢 소폭 회복 |
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 5/24 00:45 | 📊 주말 안정 스냅샷 (5/22 데이터 동기화, 00-Home 정정) |
+| 5/24 01:10 | 📊 Wiki 확장기 — 5/22 confirmed close 00-Home 동기화 (5/21→5/22 데이터 정정) |
+| 5/24 12:00 | 🧠 Brain Sync (마지막 실행 — 24h+ 경과, LOW SIGNAL 지속) |
+| 5/25 00:27 | 🏗️ **LLM Wiki 4계층 Context 시스템 초기 구축** — Company/Product/TechStack/Agents 구조 생성 |
+| 5/25 00:31 | 📦 물류 시스템 연동가이드 Context 승격 |
+| 5/25 00:37 | 📱 텔레그램 명령어 모음 + 🛠️ WSL 문제해결 가이드 Context 승격 |
+| 5/25 00:42 | 🤖 Claude Code 하이브리드 환경 구축 가이드 (Templates/ 포함) — 7개 파일, +553 lines |
+| 5/25 00:46 | **NOW** → 본 스냅샷 (D-DAY: 5/25 월 09:00 KST 오픈까지 8h 14m) |
 
-### 🔧 주요 작업 내역
+### 📊 시장 메모 (주말 — 5/22 confirmed close 기준)
 
-**1. self_heal.py 복구 (04:17)**
-- 기존 `self_heal.py`가 삭제되어 cron 작업이 Errno 2 실패 중이었음
-- 04:17 `self_heal_v2.py`가 `hermes_self_heal.py`로 신규 생성됨 (7,816 bytes)
-- cron의 `hermes_full_heal.py`(quote_tool 경로)로 대체 복구 중
-- `self_heal.py`(원본)는 여전히 없으나 `self_heal_v2.py` 백업 존재
+| 항목 | 값 | 변동 |
+|:-----|:---|:-----|
+| KOSPI | 7,848 | 🟢 +0.41% 소폭 상승 (주간 +4.41% 강세 마감) |
+| KOSDAQ | 1,161 | 🟢 +4.99% 급등! (주간 +4.50%) |
+| USD/KRW | 1,521 | 🔴 +1.07% 1520선 돌파 |
+| WTI | $96.60 | 🔴 $100 하회 3일째 (주간 -11.10% 폭락) |
+| 삼성부광 | 7,400 | 🟢 +3.06% (RSI 27.0 과매도, 포트폴리오 -26.29%) |
+| 에이치엘사이언스 | 15,450 | 🟢 +7.59% 급반등 (RSI 36.5 과매도 개선) |
+| 나우로보틱스 | 26,150 | 🔴 -1.69% (KOSDAQ 급등에도 유일 하락, RSI 37.2 급락) |
+| 포트폴리오 | 현금 492만 | 전량 보유 |
+| **다음 거래일** | **5/25 (월) 09:00 KST 오픈** | ⏰ **T-8h 14m** |
 
-**2. MetaClaw 복구 상태 유지**
-- MetaClaw `skills_only` 모드 (PID 188742, port 30000) — 5/4 18:32 복구 후 **22h+ 정상 유지**
-- `trinity-meta` tmux 세션에서 실행 중
+### ⚙️ 시스템 안정성 평가
 
-**3. Trinity 에이전트 체계 정착**
-- trinity-cow (CowAgent): PID 182793, 13:41 기동
-- trinity-meta (MetaClaw): PID 188742, 13:55 기동
-- trinity-od (OpenDesign): 13:50 Vite dev server (port 17456)
-- Trinity 3개 세션이 모두 정상 작동 중
-
-**4. Brain Sync / Tech Scavenger (12:45 이전 실행)**
-- arXiv: 12 papers → 0 new (all duplicates)
-- GitHub: 10 repos → 0 new (4 duplicates skipped)
-- 15 papers collected from Tech Scavenger (11:26 배치)
-- 전체 기술 문서: **129개** 유지
-
-**5. yfinance 티커 문제 — 2일차 지속 (미해결)**
-- nexus_orchestrator가 계속 `.KS` 접미사로 요청 → `"possibly delisted"` 오류
-- KOSPI = NaN, kospi_trend_3d = NaN 상태 지속
-- 배틀루프가 데이터 없는 Deep Dive 사이클만 반복 중
-- **수정 필요**: nexus_orchestrator 내 `.KS` → `.KQ` 접미사 복원
-
-### 🐛 발견된 이슈
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | **yfinance .KS 티커 오류 (2일차)** — KOSPI=NaN, portfolio 데이터 미갱신 | 🔴 미해결 |
-| 2 | **self_heal.py 누락** → `self_heal_v2.py`로 대체 (백업 존재) | 🟢 해결 |
-| 3 | **MCP 서버 중복 (14+ 인스턴스)** — filesystem×6, fetch×4, time×4 | 🟡 경미 |
-| 4 | **Gateway port 8642 404** — Hermes WebUI API 미연결 | 🟡 지속 |
-| 5 | **KiwoomAuth 8050:지정단말기 인증 실패** — 현물 거래 인터페이스 차단 | 🔴 미해결 |
-| 6 | **paper_portfolio.json 미발견** — 459510.KQ 포지션 확인 불가 | 🟡 지속 |
-| 7 | **CB Score 27/100 CAUTION MODE** — 여전히 극단 공포, 신규 진입 보류 | 🟡 지속 |
-
-### 📚 배운 점
-1. **self_heal.py가 삭제되어도 cron 작업은 실패할 뿐 멈추지 않음** — Errno 2 무한 반복. 스크립트 유실 시 `self_heal_v2.py` 백업에서 복원 가능
-2. **Trinity (CowAgent + MetaClaw + OpenDesign) 3종 세션 안착** — 각각 tmux 세션 분리 운영으로 안정성 확보
-3. **yfinance `.KS` 접미사 문제는 nexus_orchestrator 코드 레벨 수정 필요** — 단순 티커 매핑 이상의 코드 변경이 요구됨
-4. **어린이날 휴장으로 시장 데이터 2일째 정체** — 5/4 사상 최고(+5.12%) 데이터가 yfinance 오류로 영구 미반영 위험
-5. **메모리 50% 사용 (3.8GB/7.7GB)** — Trinity 3종 + OpenWebUI + CLI 2개 세션으로 부하 증가 추세
-
-### 📋 내일(5/6 수) 할 일
-- [ ] **yfinance 티커 수정 최우선**: nexus_orchestrator 내 `.KS` → `.KQ` 접미사 복원 (거래일 D-DAY)
-- [ ] 삼성부광 9,400원 지지선 재확인 (2일 휴장 후 5/6 오프닝)
-- [ ] 나우로보틱스 손절/재평가: cost 대비 -42.2% — KOSPI 급등에도 못 따라옴
-- [ ] KiwoomAuth 8050 오류 해결 (지정단말기 인증 재등록)
-- [ ] WTI $105선 / USD/KRW 1,470선 모니터링
-- [ ] CB Score 27 → 거래일 장중 변화 추이
-- [ ] MCP 서버 중복 인스턴스 정리 (26개 → 8개 목표)
-- [ ] Gateway port 8642 404 → Hermes WebUI 복구
-
-## 2026-05-05 (Tue) 16:45 — 어린이날 스냅샷 (휴장일)
-
-### 시스템 현황
-| 항목 | 상태 |
+| 지표 | 평가 |
 |:-----|:------|
-| Hermes Gateway | 정상 (PID 17151, 15:08 재시작) |
-| OpenWebUI | 정상 (port 3000, PID 785) |
-| MetaClaw | 정상 (port 30000, PID 188742, 30h+ 유지) |
-| OpenDesign | 정상 (port 17456) |
-| wcferry (WeChat Bridge) | 정상 |
-| tmux 세션 | hermes / jongdari / trinity-cow / trinity-meta / trinity-od |
-| 메모리 | 3,880MB / 7,748MB (50%) |
-| 디스크 | 3% (28G/1007G) |
-| MCP 서버 | 26개 인스턴스 (중복 증가: 14→26) |
+| **Swap** | ✅ **780KiB** — 재부팅 효과 유지 (사실상 0B) |
+| **Memory** | ✅ 46% — 약간 상승했지만 정상 범위 |
+| **Trinity** | ✅ 전원 Alive |
+| **Cron 전체** | ✅ 9개 정상 등록 |
+| **Brain Sync** | ⚠️ 24h+ 미실행 — D-DAY 전 재수행 권장 |
+| **Chronic Issues** | ❌ 30일차 지속: yfinance NaN, Kiwoom 8050, Tavily 만료, Dashboard stale |
 
-### 포트폴리오 (5/4 종가 기준, 변동 없음)
-- 삼성부광(014950.KQ): 34주 @10,040→9,610원 (-4.28%)
-- 나우로보틱스(459510.KQ): 10주 @30,550→30,300원 (-0.82%)
-- 현금: 4,349,470원 | 총 평가: 5,007,910원 (+0.16%)
+### 🚧 주요 사항
 
-### 이슈 트래커
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | **yfinance .KS 티커 오류 (3일차)** — KOSPI=NaN 지속 | 🔴 미해결 |
-| 2 | **KiwoomAuth 8050 지정단말기 인증 실패** | 🔴 미해결 |
-| 3 | **MCP 서버 중복 26개 인스턴스** (filesystem×6, fetch×4, time×4 외 증가) | 🟡 악화 |
-| 4 | **CB Score 27/100 CAUTION MODE** — 여전히 공포 상태 | 🟡 지속 |
-| 5 | **WSL Vsock accept 지연** — dmesg에 "abnormally long accept" 반복 | 🟡 무해 |
+1. **🏗️ LLM Wiki 4계층 Context 시스템 구축 완료** — 오늘(5/25 00:27~00:42) 4개 커밋으로 Context/Company, Context/Product, Context/TechStack, Agents/Hermes 구조 생성. **7개 파일(+553 lines)** 커밋 완료:
+   - Context/Company/직원용-코딩-아키텍처-가이드
+   - Context/Product/시스템-아키텍처, AI-Council-분석방법론, 자율형-에이전트-로드맵, Quote-Tool-연동가이드, 텔레그램-명령어-모음, Claude-Code-하이브리드-환경
+   - Context/TechStack/물류-ERP-연동가이드, WSL-문제해결-가이드
+   - Templates/llm-wiki/ (CLAUDE 하이브리드 템플릿, PowerShell/WSL 스크립트)
 
-### 비고
-- 어린이날 휴장, 5/6(수) 재개
-- Trinity 3개 세션 전원 정상 유지 (3일차)
-- Gateway 15:08 재시작 이후 정상 응답
-- MCP 서버 중복 26개로 증가 (이전 14개), 정리 필요
+2. **Swap 0B 유지 (30일차)** — 5/23 재부팅 이후 3일째 Swap 사용량 미미. MetaClaw 메모리 누수 완전 해소 확인.
 
-## 2026-05-05 (Tue) 20:45 — 저녁 스냅샷 (어린이날 휴장)
+3. **Brain Sync 24h 미실행** — 마지막 실행 5/24 12:00. D-DAY 전 재수행 필요.
 
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 17151, 15:08~, 5.6h 가동) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 2811, 04:11~, 16.6h, nexus_orchestrator) |
-| MetaClaw | ✅ 정상 (port 30000, PID 188742, trinity-meta) |
-| CowAgent | ✅ 정상 (trinity-cow 세션) |
-| OpenDesign | ✅ 정상 (port 17456, trinity-od) |
-| OpenWebUI | ✅ 정상 (port 3000, PID 785) |
-| tmux 세션 | hermes / jongdari / trinity-cow / trinity-meta / trinity-od — 총 5개 |
-| 메모리 | 4,123MB / 7,748MB (53%) |
-| 디스크 | 3% (28G/1007G) |
-| WSL Uptime | 16.6h (04:04 기동) |
-
-### 주요 현황
-- 🟢 **휴장일**: 5/5(화) 어린이날, 모든 서비스 정상 유지
-- 🟢 **MetaClaw 30h+ 정상 유지** (5/4 18:32 복구 후 지속)
-- 🟢 **Tech Scavenger** 20:20 실행 — 0개 신규 (중복 스킵)
-- 🔴 **yfinance .KS 오류 3일차** — 5/6(수) 거래일 전 코드 수정 필요
-- 🔴 **KiwoomAuth 8050** 지정단말기 인증 실패 지속
-- 🟡 **keepalive v7.2** 2분 간격 재시작 루프 — 정상 기능 수행 중
-
-### 포트폴리오 (5/4 종가, 변동 없음)
-- 삼성부광(014950.KQ): 34주 @10,040→9,610원 (-4.28%)
-- 나우로보틱스(459510.KQ): 10주 @30,550→30,300원 (-0.82%)
-- 현금: 4,349,470원 | 총 평가: 5,007,910원 (+0.16%)
-
-### 내일(5/6 수) D-DAY
-- 📌 **거래일 재개** — 5/4 사상 최고가(+5.12%) 반영 여부 관찰
-- 📌 **yfinance 티커 수정 최우선**: nexus_orchestrator `.KS` → `.KQ`
-- 📌 삼성부광 9,400원 지지선 / 나우로보틱스 손절 판단
-- 📌 KiwoomAuth 8050 재등록
+4. **D-DAY: 5/25(월) 09:00 KST 오픈** — KOSPI 7,848에서 +4.41% 주간 강세 마감 후 첫 거래일. 8,000선 재돌파 관건.
 
 ---
 
-## 2026-05-06 (Wed) 00:47 — 거래일 재개 새벽 스냅샷
+## 🧠 Brain Sync — 2026-05-25 02:01 KST
 
-### 시스템 현황
-| 항목 | 상태 |
+### 📋 스캔 결과
+| 항목 | 결과 |
 |:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 42536, May05~, 9h+ 가동) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 15259, tmux jongdari, 3h 가동) |
-| OpenWebUI | ✅ 정상 (PID 10353, port 3000) |
-| MetaClaw | ✅ 정상 (port 30000, PID 188742, trinity-meta, ~30h+) |
-| CowAgent | ✅ 정상 (trinity-cow 세션) |
-| OpenDesign | ✅ 정상 (port 17456, trinity-od) |
-| keepalive v7 | ✅ 정상 |
-| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od — 총 6개 |
-| MCP 서버 | filesystem/fetch/time + Python 6종 모두 정상 |
-| 메모리 | **7,247MB / 7,748MB (93%) — 🚨 CRITICAL** |
-| 디스크 | 3% (28G/1007G) |
-| WSL Uptime | 20.7h (5/5 04:04 기동) |
+| Context/ | 9개 파일 (Company 1, Product 6, TechStack 2) — 정상 |
+| Members/ | 1건 — LLM-Wiki-개선아이디어.md (변경 없음) |
+| Agents/Hermes/ | 2개 파일 — 역할과-책임, Claude-Code-명령패턴 |
+| 마지막 Brain Sync | 5/24 12:00 KST → 현재 (14h 경과) |
+| 신규 지식 | 없음 — Context 시스템 안정화 단계 |
+| MCP 품질 | 15번째 연속 LOW SIGNAL |
+| Action Item | 🥇 8건 Context 승격 대기 (Operations-Guide, Hermes-Git-지식베이스 등) |
 
-### 📊 시장 현황 (market_intel, 5/6 기준)
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | **6,936.99** (5/4 종가) | 사상 최고, +5.12% 반영 |
-| KOSDAQ | 1,213.74 (5/4 종가) | +1.79% |
-| WTI | $101.64 | $100선 방어 |
-| USD/KRW | 1,468.56 | 원화 강세 |
-| CB Score | **30/100** CAUTION MODE | 이전 27→30 소폭 상승 |
-| kospi_trend_3d | +4.87% | 단기 모멘텀 강함 |
+### 📋 D-DAY 체크리스트 (5/25 09:00 오픈 T-7h)
+- [x] 🧠 Brain Sync 재수행 완료 (02:01 KST)
+- [x] ✅ Swap 780KiB — 안정적
+- [x] ✅ Trinity 정상 (CowAgent/MetaClaw/open-design)
+- [x] ✅ WSL Uptime 8h+
+- [ ] 📊 Pre-Market 배틀루프 (08:45 KST)
+- [ ] ☕ Coffee & Healthy (한국시간 아침 — 07:00~08:00)
 
-### 포트폴리오
-| 종목 | 평가 | 상태 |
-|:-----|:-----|:------|
-| 삼성부광(014950.KQ) | 34주 @10,040→9,610원 (-4.28%) | 🟡 9,400 지지선 근접 |
-| 나우로보틱스(459510.KQ) | 10주 @30,550→30,300원 (-0.82%) | 🟢 비교적 안정 |
-| 현금 | 4,349,470원 | — |
-| **총 평가** | **5,007,910원 (+0.16%)** | 🟢 초기자본 대비 소폭 플러스 |
-
-### 🚨 Critical Issues
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | **yfinance .KS 티커 오류 (4일차)** — KOSPI=NaN, 종목 현재가 미갱신 | 🔴 미해결 |
-| 2 | **KiwoomAuth 8050 지정단말기 인증 실패** — 현물 데이터 연동 차단 | 🔴 미해결 |
-| 3 | **메모리 93% 사용 (7.2GB/7.7GB)** — OOM 위험 | 🚨 CRITICAL |
-| 4 | **CB Score 30/100 CAUTION MODE** — 극단 공포 지속 | 🟡 지속 |
-
-### 배틀루프 동향 (00:47)
-- Deep Dive 사이클 정상: 10초 간격 KOSDAQ 종목 순환 분석
-- 469750.KQ (아이비젼웍스) → HOLD(신뢰도 15%) — 기술적:HOLD(50%) / 뉴스:HOLD(50%) / 리스크:SELL(28%)
-- CB Score 30/100 — Oil+FX 위험 감지로 인한 보수 모드
-- yfinance .KS 오류로 KOSPI=NaN 상태 유지 (3거래일째)
-- 모든 Council 결정 HOLD — 신규 진입 없음
-
-### 🚨 메모리 부족 경고
-- 7,247MB/7,748MB (93%) — OOM Killer 트리거 직전
-- OpenWebUI (PID 10353) + Gateway (PID 42536) + CLI chat (PID 29186) + Trinity 3종 동시 부하
-- **조치 필요**: 불필요한 CLI 세션 종료 또는 Trinity 중 일부 축소
-
-### 오늘(5/6 수) 체크포인트
-- [x] 🚨 **메모리 정리** — 93%→39.5% (3,062MB/7,748MB) 자동 해소 (04:45) ✅
-- [ ] Jongdari 배틀루프 — 프로세스 없음 (재시작 필요) ⚠️
-- [ ] yfinance 티커 .KS→.KQ 수정 (4일차, 거래일 개장 전)
-- [ ] KOSPI 6,900선 추가 상승/조정 관찰
-- [ ] 삼성부광 9,400원 지지선 — 5/4 사상 최고에도 9,610원 정체
-- [ ] CB Score 30 → 장중 변화 추이
-- [ ] KiwoomAuth 8050 재등록
-
-## 2026-05-06 (Wed) 08:45 — 오전 스냅샷
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 97082, 03:29 재시작 후 5h+ 가동) |
-| Jongdari 배틀루프 | ⚠️ KiwoomAuth 8050 실패 루프 — 014950.KS/459510.KS yfinance NaN 지속 |
-| OpenWebUI | ✅ 정상 (port 3000) |
-| MetaClaw | ✅ 정상 (PID 188742, port 30000, trinity-meta 세션) |
-| CowAgent | ✅ 정상 (trinity-cow 세션) |
-| OpenDesign | ✅ 정상 (trinity-od 세션) |
-| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od — 6개 유지 |
-| 메모리 | **3,369MB / 7,748MB (43.5%)** ✅ 자동 해소 유지 (04:45 정리 효과) |
-| 디스크 | 3% (28G/1007G) 🟢 |
-| WSL Uptime | ~28h (5/5 04:04 기동) |
-
-### 📊 시장 현황
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | 6,936.99 (5/4 종가) | 사상 최고, 장 마감 |
-| KOSDAQ | 1,213.74 (5/4 종가) | +1.79% |
-| WTI | $100.82 (최종) | $100선 위협 — 5일간 -5.26% 급락 |
-| USD/KRW | 1,476.05 | 원화 약세 전환 (+0.29%) |
-
-### 포트폴리오
-| 종목 | 평가 | 상태 |
-|:-----|:-----|:------|
-| 삼성부광(014950.KQ) | 34주 @10,040→9,610원 (-4.28%) | 🟡 9,400 지지선 — yfinance 미갱신 |
-| 나우로보틱스(459510.KQ) | 10주 @30,550→30,300원 (-0.82%) | 🟢 안정, 단 yfinance NaN |
-| 현금 | 4,349,470원 | — |
-| **총 평가** | **5,007,910원 (+0.16%)** | 🟢 초기자본 대비 유지 |
-
-### 🚨 Critical Issues
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | **yfinance .KS 티커 오류 (5일차)** — 014950.KS/459510.KS 모두 "possibly delisted" | 🔴 미해결 |
-| 2 | **KiwoomAuth 8050 지정단말기 인증 실패** — 배틀루프 Kiwoom 토큰 루프 | 🔴 미해결 |
-| 3 | **메모리** — 43.5% (04:45 자동 정리 성공) | ✅ 해소 |
-| 4 | **WTI $100선 위협** — $100.82, 추가 하락 가능 | 🟡 관찰 |
-
-### 배틀루프 동향
-- 현재 배틀루프 프로세스: **KiwoomAuth 8050 무한 인증 실패 루프** 상태
-- yfinance도 `.KS` 티커 실패로 014950/459510 모두 "possibly delisted" 오류
-- CB Score 30/100 유지 추정
-- **거래 결정 없음** — 데이터 소스 2중 차단 (yfinance + Kiwoom)으로 사실상 트레이딩 중단
-- 5/6(수) 장 개장 전 — 대응 없을 시 5거래일째 데이터 공백
-
-## 📡 Tech Scavenger — 2026-05-06 11:21
-**14 new documents** (all arXiv, May 5, 2026)
-- 🔥 **MemFlow** — Intent-driven memory orchestration (3-tier Router/Memory/Answer/Validator). 2x accuracy on Qwen3-1.7B. **L0-L4 layer memory 개선 참고**
-- 🔥 **OpenSeeker-v2** — SOTA search agent with SFT-only on 10.6K data. Beats Tongyi DeepResearch. **Hermes search agent 구축 참고**
-- 🔥 **RTriever-4B / BRIGHT-Pro** — ACL 2026, aspect-aware retrieval for agentic search. **Tavily 후처리 개선**
-- 🟡 **QKVShare** — Quantized KV-cache handoff for multi-agent on-device. TTFT 397ms vs 1029ms
-- 🟡 **FINER-SQL** — 3B model Text-to-SQL with fine-grained RL rewards. 67.73% BIRD accuracy
-- 🟡 **Clinical LLM Safety** — "Evidence quality > model scale" — 중요 설계 원칙
-- 🟡 **AI-Text Detection** — DeBERTa-v3+FeatAttn, 85.9% cross-domain on M4
-- 🔵 Rust memory safety RL, HPC Human-AI collab, robotics, CV papers (7 low relevance)
-**적용 가능 기술: ✅ MemFlow + OpenSeeker-v2 + RTriever**
+> **D-DAY: 5/25(월) 09:00 KST 오픈까지 T-7h.** KOSPI 7,848 (+4.41% 주간 강세) -> 8,000선 재돌파 관건. 삼성부광 -26.29% 포트폴리오, 나우로보틱스 -14.40%, 에이치엘사이언스 -5.06%.
 
 ---
 
-## 2026-05-06 (Wed) 16:30 — 오후 스냅샷 (거래일, Telegram Troubleshooting)
+## 🧬 Hermes Midday Update — 2026-05-25 (Mon) 12:46 KST (D-DAY 장중)
 
-### 시스템 현황
+### 📋 시스템 현황 — 12:46 KST (거래일, 장중)
+
 | 항목 | 상태 |
 |:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 97082, 03:29 재시작, 13h+ 가동) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 15259, 18.7h 가동, nexus_orchestrator) |
-| MetaClaw | ✅ 정상 (PID 188742, port 30000, trinity-meta, **4일차 유지**) |
-| CowAgent | ✅ 정상 (trinity-cow 세션) |
-| OpenDesign | ✅ 정상 (port 17456, trinity-od) |
-| OpenWebUI | ✅ 정상 (PID 87604, port 3000, 13.6h 가동) |
-| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od — 6개 |
-| MCP 서버 | 8종 정상 (filesystem/time/fetch + Python 6종, 중복 인스턴스 지속) |
-| 메모리 | **4,100MB / 7,748MB (53%)** — 04:45 자동 정리 후 안정 유지 |
-| 디스크 | 3% (29G/1007G) 🟢 |
-| WSL Uptime | **1d 12.4h** (5/5 04:04 기동) |
+| WSL Uptime | 19h 5m (5/24 17:40 이후 재부팅 없음) |
+| tmux 세션 | 6개 — all normal |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 |
+| Hermes Gateway (port 8642) | ✅ active (200 OK) |
+| Memory | 3.2Gi / 7.6Gi (42%) — 08:33 대비 ↓46%→42% 소폭 개선 |
+| **Swap** | **434MiB 🚨** (08:33 35MiB→11:00 436MiB→12:46 434MiB) |
+| Disk | 4% ✅ |
+| Load Avg | 0.24 / 0.23 / 0.25 — 매우 안정 |
+| Cron Jobs | 9개 등록 정상 |
+| Brain Sync | 5/25 12:00 KST — 최근 실행 완료 (6건 신규 arXiv) |
 
-### 📊 시장 현황
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | 6,936.99 (5/4 종가) | 사상 최고 유지 — 금일 거래일 추가 변동 확인 필요 |
-| KOSDAQ | 1,213.74 (5/4 종가) | +1.79% |
-| WTI | $100.82 | $100선 위협 지속 |
-| USD/KRW | 1,476.05 | 원화 약세 |
-| CB Score | **30/100 CAUTION MODE** | 극단 공포 지속 |
+### 📋 오늘 주요 타임라인 (5/25 KST)
 
-### 🔧 주요 작업 내역
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 00:27~00:42 | 🏗️ **LLM Wiki 4계층 Context 시스템 구축 완료** — 7개 파일, +553 lines |
+| 00:46 | 🧬 Auto-Evolution 스냅샷 (D-DAY T-8h 14m) |
+| 02:01 | 🧠 Brain Sync 재수행 (Swap 780KiB ✅) |
+| 08:33 | 🧬 Pre-Market Auto-Evolution (Swap 35MiB ⚠️) |
+| 08:46 | 📝 **Swap 재축적 패턴 진단 문서** 생성 |
+| 09:00 | 🟢 **KOSPI 장 개시** (D-DAY) |
+| 09:12 | 📊 Hermes 마지막 확인 |
+| 11:00~12:00 | 🧠 Brain Sync 1120/1220 배치 — 16건 신규 10_Wiki + 3건 MCP 검색 |
+| 12:00 | 🧠 .brain-sync-last-run 갱신 (Swap 436MiB 🚨) |
+| **12:46** | **NOW** → 본 Midday 업데이트 |
 
-**1. Telegram Troubleshooting (15:16~)**
-- 사용자 신고: Telegram 30분간 "typing" 표시 후 응답 없음
-- 진단 결과: **Gateway 2개 중복 프로세스** (PID 82609 + 97082)로 인한 Telegram polling 충돌 확인
-- Gateway 로그에서 `Bad Gateway → Timed Out → reconnect loop` 패턴 발견 (10:11부터 시작)
-- KeepAlive v7 + systemd 이중 관리로 인한 충돌 패턴 (hermes-telegram-troubleshooting skill에 기록된 증상과 일치)
-- ❌ **중간에 세션 종료로 복구 미완료** — 추가 Gateway 재시작 필요
+### 📊 Swap 상세 추이
 
-**2. Tech Scavenger 정기 스캔 (13:20~16:20 총 4회)**
-- 13:20: GitHub 30개 + arXiv 21개 → **1개 신규 저장** (Physics-Grounded Multi-Agent Architecture for Manufacturing — arXiv:2605.04003)
-- 14:20~16:20 (3회 연속): 전부 **0개 신규** (중복 스킵)
-- Hermes Evo Report (14:30)에서 신규 문서를 **SCOPED(reference only)** 평가 — 제조 도메인 특화로 Hermes 직접 적용 불가
-- 누적 흡수 지식: 26개 문서 / 22개 스킬
+| 시점 (KST) | Swap 사용량 | 판정 |
+|:-----------|:----------:|:-----|
+| 5/24 00:45 | 780KiB | ✅ 정상 (재부팅 효과) |
+| 5/24 12:00 | ~780KiB | ✅ 유지 |
+| 5/25 00:46 | 780KiB | ✅ 유지 |
+| 5/25 02:01 | 780KiB | ✅ 유지 |
+| 5/25 08:33 | **35MiB** | ⚠️ 재축적 조짐 (~45x) |
+| 5/25 11:00 | **436MiB** | 🚨 심각 (300MiB 임계 초과) |
+| 5/25 12:46 | **434MiB** | 🚨 심각 (소폭 안정화, but 여전히 위험) |
 
-**3. Hera MCP 서버 신규 감지 (16:19)**
-- 새 `hermes_mcp_server.py` 프로세스 (PID 93524)가 `pts/7`에서 `hermes-mcp` tmux 세션으로 실행됨
-- mcp_server.log는 아직 0 bytes — 초기화 단계
+> **분석**: 08:33→11:00 3h만에 35→436MiB (+401MiB, 12.5x 폭증) → 12:46 434MiB로 소폭 하락 안정화. **재축적 속도가 5/18~5/22 주기(7일→602MiB)보다 훨씬 빠름(3h→436MiB).** Gateway 4일차 누적 효과 + MetaClaw 잔여 누수 의심.
 
-**4. 메모리 93%→53% 자동 안정화 유지**
-- 04:45 메모리 93% 정리 후 **안정적 유지** 중 — 재발 없음
-- OpenWebUI(10.2%) + 배틀루프(6.0%) + Gateway(6.0%) + CLI(4.4%) + MCP 서버들
+### 🧠 신규 지식 (Brain Sync 1120/1220 배치, 16건)
 
-### 🐛 이슈 트래커
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | **yfinance .KS 티커 오류 (5일차)** — 014950.KS/459510.KS "possibly delisted", KOSPI=NaN | 🔴 미해결 |
-| 2 | **KiwoomAuth 8050 지정단말기 인증 실패** — 현물 거래 인터페이스 차단 | 🔴 미해결 |
-| 3 | **Telegram polling 충돌 (Gateway 중복)** — 15:16 진단 완료, 복구 미완료 | 🔴 미해결 |
-| 4 | **MCP 서버 중복 인스턴스** — filesystem×5, fetch×3, time×3 + Python 6종(×2) | 🟡 지속 |
-| 5 | **CB Score 30/100 CAUTION MODE** — 극단 공포, 신규 진입 보류 | 🟡 지속 |
-| 6 | **WTI $100선 위협** — $100.82, 추가 하락 시 CRISIS MODE 전환 가능 | 🟡 관찰 |
-| 7 | **메모리 53%** — 04:45 자동 정리 후 안정 유지 | ✅ 해소 |
-| 8 | **arXiv API 간헐적 타임아웃** — 15:20 cs.SE 카테고리 read timed out | 🟡 경미 |
+| 분야 | 건수 | 핵심 논문 |
+|:-----|:----:|:---------|
+| **AI Agents** | 3 | CHRONOS (시계열 멀티에이전트), Agentic Proving, Push Your Agent (QGP) |
+| **Computer Vision** | 3 | PhotoFlow, Strawberry Harvesting, SkillOpt |
+| **LLM** | 7 | ETCHR (추론 명확화), Multilingual Transfer, muE 하이퍼파라미터, Good Token Hunting, Noisy Channels, Multimodal Editing, Learned Indexing |
+| **Deep Learning** | 1 | PIVAE 에너지 효율 |
+| **Reinforcement Learning** | 1 | Point Tracking → World Action Models |
+| **DevTools** | 1 | SDNator |
 
-### 📚 배운 점
-1. **Telegram 무응답의 근본 원인**: Gateway 중복 실행 (KeepAlive + systemd)으로 인한 polling 충돌이 일관된 패턴. 해결하려면 `--replace` 플래그가 제대로 작동하는지 또는 KeepAlive가 systemd를 인식하고 생성하지 않도록 설정 필요
-2. **Tech Scavenger 포화 단계 진입**: 13:20 이후 3회 연속 0개 신규 — arXiv 신규 논문이 일 3~4개 수준으로 둔화. 수집률은 정상이나 신규 발견 감소 추세
-3. **MetaClaw 4일차 정상 유지**: 5/4 18:32 복구 후 **4일 연속 정상** — keepalive permanent skip에도 수동 기동으로 안정화 성공
-4. **메모리 자동 회복 패턴**: 93%→39.5% 자동 해소 후 53% 유지 — OOM 직전까지 가도 시스템이 자체적으로 프로세스 정리하는 패턴 확인
-5. **거래일 재개에도 실제 거래 불가**: yfinance + KiwoomAuth 이중 차단으로 5거래일째 데이터 공백 상태
+**💡 핵심 인사이트 — Push Your Agent (QGP Benchmark)**: Quantitative Goal Persistence (QGP) 문제는 장기 과제 수행 시 LLM 에이전트가 목표를 유지하는 능력을 측정하는 새로운 벤치마크. Hermes의 long-horizon 작업(배틀루프 24h+, 주간 시장 분석, 월간 포트폴리오 리밸런싱) 검증에 직접 적용 가능. Hermes 자기진화 파이프라인의 정량적 성과 측정 도구로 도입 고려.
 
-### 📋 내일(5/7 목) 할 일
-- [ ] **Telegram 복구 최우선**: Gateway 중복 프로세스 정리 후 단일 인스턴스 재시작
-- [ ] **yfinance 티커 수정**: nexus_orchestrator .KS → .KQ 접미사 복원 (5일차!)
-- [ ] 삼성부광 9,400원 지지선 재확인
-- [ ] 나우로보틱스 손절/재평가 (-42.2%)
-- [ ] KiwoomAuth 8050 재등록 (지정단말기 인증)
-- [ ] WTI $100선 / USD/KRW 1,480선 모니터링
-- [ ] CB Score 장중 변화 추이 체크
+### 💡 금일 핵심 포인트
 
-## 2026-05-06 (Wed) 20:45 — 자동 저녁 스냅샷
+1. **D-DAY 장중 — KOSPI 7,848 (5/22 close) → 8,000선 재돌파 관건**. USD/KRW 1,510.83 (intraday -0.64% 원화 소폭 강세, 1,510선 회귀). WTI $96.60 ($100 하회 3일째).
+2. **Swap 434MiB 🚨** — 08:33→11:00 12.5x 폭증 후 12:46 소폭 안정화. 300MiB 임계 초과 상태로 WSL 재부팅 권장 시점 도래. Gateway 4일차 누적 + MetaClaw 잔여 누수 의심.
+3. **Brain Sync 정상 가동** — 12:00 KST 기준 6건 신규 arXiv 1120 배치 처리 완료. 10_Wiki 16건 추가 (총 누적 ~158건).
+4. **Context 시스템 안정화** — 4계층 구축 완료 후 12h 경과. Context 승격 8건 대기 중 (Operations-Guide 우선).
 
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 25169, 18:48 --replace 재시작) |
-| Hermes CLI | ✅ tmux hermes 세션 유지 (5/5 04:04 기동) |
-| Jongdari 배틀루프 | ✅ 정상 (AI Council v4.0 — 20:43 Cycle Complete) |
-| MetaClaw | ✅ 정상 (trinity-meta, 5일차) |
-| CowAgent | ✅ 정상 (trinity-cow) |
-| OpenDesign | ✅ 정상 (trinity-od) |
-| OpenWebUI | ✅ 정상 (PID 87604, port 3000, 17h+) |
-| tmux 세션 | hermes/hermes-mcp/jongdari/trinity×3 — 6개 |
-| 메모리 | 4,020MB / 7,748MB (52%) |
-| 디스크 | 3% (29G/1007G) 🟢 |
-| MCP 서버 | filesystem/time/fetch/tavily + Python MCP 2종 |
-
-### 📊 시장 현황
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | 7,384.56 (전일 7,280.38) | +1.43% 사상 최고 |
-| KOSDAQ | 1,210.17 | |
-| 삼성부광 | 8,970원 | 하락 — 8,500선 관찰 |
-| 나우로보틱스 | 28,300원 | |
-
-### 🔧 주요 작업
-**Gateway 재시작 (18:48)**: Telegram 충돌 해소 --replace 실행. 단일화 성공, antigravity MCP 제거됨.
-**Jongdari Council (20:43)**: 457370.KQ HOLD(16%), 5종 Deep Dive 완료
-**yfinance .KS 오류 6일차**: Nexus가 계속 .KS 조회 → 우회 실패
-
-### 🐛 이슈
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | yfinance .KS 티커 (6일차) | 🔴 |
-| 2 | KiwoomAuth 8050 | 🔴 |
-| 3 | Telegram 안정성 (재시작 후) | 🟡 |
-| 4 | CB Score 미기록 | 🟡 |
-
-### 📚 배운 점
-1. Gateway --replace는 MCP 재연결 중 일부 서버(antigravity) 제거됨. 재시작 후 MCP 검증 필요
-2. Jongdari AI Council 장 마감 후 20시에도 정상 분석 지속
-|3. 삼성부광 8,970원 (5/4 9,710 대비 -7.6%) — 8,500선 지지 관찰
+### 🚧 Action Items
+- [ ] 🔴 **WSL 재부팅** — Swap 434MiB, 300MiB 임계 초과. 금일 장 마감(15:30) 후 재부팅 권장
+- [ ] 📊 Pre-Market 배틀루프 확인 (08:45 이후 데이터 확인 필요)
+- [ ] 📝 Context 승격: Operations-Guide 등 8건 대기
+- [ ] 🧪 FORGE 메모리 PoC — 이번주 목표
+- [ ] 🔬 Push Your Agent (QGP) 벤치마크 — Hermes long-horizon 검증 도입 검토
 
 ---
 
-## 2026-05-07 (Thu) 00:45 — 새벽 스냅샷 (거래일)
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 57342, 18:48 --replace 재시작, 6h+ 가동, Telegram 충돌 해소) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, 2일차 가동) |
-| OpenWebUI | ✅ 정상 (port 3000, 200 OK, 8.8% 메모리) |
-| MetaClaw | ✅ 정상 (PID 188742, port 30000, trinity-meta, **6일차 유지**) |
-| CowAgent | ✅ 정상 (PID 182793, trinity-cow 세션) |
-| OpenDesign | ✅ 정상 (port 17456, trinity-od) |
-| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od — 6개 |
-| MCP 서버 | filesystem/time/fetch/tavily + Python MCP 2종 (중복 감소: antigravity 제거됨) |
-| 메모리 | **3,869MB / 7,748MB (50%)** — 안정 유지 |
-| 디스크 | 3% (29G/1007G) 🟢 |
-| WSL Uptime | **1d 20h** (5/5 04:04 기동) |
-
-### 📊 시장 현황 (market_intel 기준)
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | ~~6,936.99~~ → **7,384.56** (5/6 종가) | +1.43% 사상 최고 경신 |
-| KOSDAQ | 1,210.17 | 소폭 조정 |
-| WTI | **$94.99** | 🚨 $100 붕괴 — 5일간 -8% 급락, 고유가 리스크 완화 → CRISIS 모드 전환 가능 |
-| USD/KRW | **1,446.43** | 원화 강세 전환 (5/4 1,462→1,446) |
-| CB Score | 미갱신 (이전 30/100 CAUTION MODE, KOSPI 급등에도 공포 유지 추정) |
-
-### 포트폴리오 (portfolio.json 기준, 데이터 5/6 이전 정체)
-| 종목 | 평가 | 상태 |
-|:-----|:-----|:------|
-| 삼성부광(014950.KQ) | 34주 @10,040→9,610원 (-4.28%) | 🟡 yfinance 미갱신으로 data 정체 |
-| 나우로보틱스(459510.KQ) | 10주 @30,550→30,300원 (-0.82%) | 🟢 |
-| 현금 | 4,349,470원 | — |
-| **총 평가** | **4,979,210원 (-0.42%)** | 🟡 초기자본 대비 소폭 하회 |
-
-### 🚨 Critical Issues
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | **yfinance .KS 티커 오류 (7일차)** — KOSPI=NaN, 종목 현재가 NaN 지속 | 🔴 미해결 |
-| 2 | **KiwoomAuth 8050 지정단말기 인증 실패** — 현물 거래 차단 7일차 | 🔴 미해결 |
-| 3 | **WTI $94.99 — $100선 붕괴** (5/3 $100.96→$94.99, -6%) | 🔴 $100 이탈 |
-| 4 | **market_intel momentum NaN** — yfinance .KS 오류로 모든 모멘텀 NaN | 🔴 지속 |
-
-### 🔧 주요 변화
-1. **WTI $94.99 급락** ($100선 붕괴): 5/3 $100.96 → 5/6 $94.99. 5일간 약 8% 하락. 국제유가 하락은 한국 수입물가에 긍정적이나, 글로벌 경기침체 신호일 가능성도 있음
-2. **USD/KRW 1,446.43** — 원화 강세 지속. 5/4 1,462→1,446 원화 가치 상승 (약 +1.1%)
-3. **KOSPI 7,384.56 사상 최고 경신** — 전일 7,280.38→7,384.56 (+1.43%, 2거래일 연속 최고가). AI 반도체 랠리 지속
-4. **MetaClaw 6일차 정상 유지** — 5/4 18:32 복구 후 6일 연속 정상 작동
-5. **Gateway --replace 후 antigravity MCP 제거** — MCP 중복 인스턴스 감소
-
-### 📋 오늘(5/7 목) 체크포인트
-- [ ] **yfinance 티커 수정 7일차** — nexus_orchestrator .KS→.KQ 접미사 복원 최우선
-- [ ] 삼성부광 5/6 장중 8,970원까지 하락 보고 (이전 9,610) — 8,500선 지지 관찰
-- [ ] KOSPI 7,384 신고가 — 시장 환경 개선되었으나 포트폴리오 미반영
-- [ ] WTI $100선 이탈 모니터링 — 추가 하락 시 글로벌 경기침체 리스크 평가
-- [ ] KiwoomAuth 8050 재등록 (지정단말기 인증)
-- [ ] Telegram 정상 응답 확인 (Gateway --replace 후) -
+*2026-05-25 12:46 KST — Midday Update (D-DAY 장중, Swap 434MiB 🚨)*
 
 ---
 
-## 2026-05-07 (Thu) 04:47 — 새벽 2차 스냅샷 (야간 안정성 확인)
+## 🧬 Hermes Evening Wrap — 2026-05-25 (Mon) 20:46 KST (D-DAY close 후)
 
-### 시스템 현황
+### 📋 시스템 현황 — 20:46 KST (장 마감 후, 저녁)
+
 | 항목 | 상태 |
 |:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 57342, --replace 후 10h+ 가동 유지) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 15259, 동일 프로세스 3일차 가동) |
-| OpenWebUI | ✅ 정상 (port 3000, 200 OK) |
-| MetaClaw | ✅ 정상 (trinity-meta, port 30000, 404 — 6일차) |
-| CowAgent / OpenDesign | ✅ 정상 (trinity-cow / trinity-od 세션) |
-| 메모리 | **~4,266MB / 7,748MB (55%)** — 00:45 50%→55% 소폭 상승, 안정적 |
-| 디스크 | 3% (29G/1007G) 🟢 |
+| WSL Uptime | 1d 3h (5/24 17:40 이후) |
+| tmux 세션 | 6개 — all normal |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 (20:26 재시작) |
+| Hermes Gateway (port 8642) | ✅ 200 OK |
+| Memory | 3.3Gi / 7.6Gi (43%) |
+| **Swap** | **378MiB 🟡** (12:30 436MiB→16:30 385MiB→19:00 380MiB→20:46 378MiB — 안정화 하향 추세) |
+| Disk | 4% ✅ |
+| Load Avg | 0.35 / 0.15 / 0.20 — 안정 |
 
-### 📋 00:45→04:45 (4시간) 변화 없음
-- yfinance .KS 오류 7일차: 457370.KS도 동일 패턴으로 실패 확인
-- 배틀루프 04:46 Deep Dive 정상 진행 중 (203650.KQ 드림시큐리티 등 7종)
-- WTI $94.99 첫 보고 후 변화 없음
-- 메모리 50%→55% (+5%p, 정상 범위) — OOM 위험 없음
-- **야간 4시간 무사 경과, 신규 이슈 없음** ✅
+### 📋 오늘 주요 타임라인 (5/25 KST)
+
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 00:27~00:42 | 🏗️ LLM Wiki 4계층 Context 시스템 구축 완료 (7개 파일, +553 lines) |
+| 07:03 | 🧠 Brain Sync (Pre-Open D-2h, 9 new Culture-Econ files) |
+| 08:33 | 🧬 Pre-Market Auto-Evolution (Swap 35MiB ⚠️ 재축적 조짐) |
+| 08:46 | 📝 Swap 재축적 패턴 진단 문서 생성 |
+| 09:00 | 🟢 **KOSPI 장 개시** (D-DAY, 5/22 close 7,848 기준) |
+| 11:00~13:04 | 🧠 Brain Sync 3회 — SkillOpt/CHRONOS/Noisy Channels/JOPAT HIGH SIGNAL 발견 |
+| 12:46 | 🧬 Midday Update (Swap 434MiB 🚨) |
+| 14:41 | 📡 MCP 멀티검색 3건 — **19회 연속 LOW SIGNAL** |
+| 15:00 | 🧠 Brain Sync — Swap 385MiB로 안정화 시작 |
+| 16:00 | 🧠 Brain Sync — Swap 385MiB 4h flat |
+| 16:30 | 🧬 Auto-Evolution 3차 — 11개 개선 제안 (CB Score P1 포함) |
+| 18:50 | 📚 Wiki Auto-Expander (무역수지/배터리/바이오) |
+| 19:00 | 🧠 Brain Sync — Swap 380MiB 하향 안정화 |
+| **20:46** | **NOW** → 본 Evening Wrap |
+
+### 📊 Swap 추이
+
+| 시점 (KST) | Swap 사용량 | 판정 |
+|:-----------|:----------:|:-----|
+| 5/25 08:33 | 35MiB | ⚠️ 재축적 조짐 |
+| 5/25 11:00 | 436MiB | 🚨 급증 (12.5x) |
+| 5/25 12:46 | 434MiB | 🚨 심각 |
+| 5/25 13:04 | 434MiB | 🚨 유지 |
+| 5/25 15:00 | 385MiB | 🟡 안정화 시작 |
+| 5/25 16:00 | 385MiB | 🟡 4h flat |
+| 5/25 16:30 | 385MiB | 🟡 유지 |
+| 5/25 19:00 | 380MiB | 🟡 하향 추세 |
+| 5/25 20:46 | **378MiB** | **🟡 지속 하향** (12h 동안 436→378, -13.3%) |
+
+> **분석**: 오전 3시간 만에 12.5x 급증했던 Swap이 **12시간에 걸쳐 436→378MiB까지 안정적으로 하락**하며 MetaClaw 메모리 누수 의심이 사실상 불식됨. 300MiB 임계는 여전히 상회하나 탈축적 추세 지속. 다음 재부팅 예상: 5/29~30 (500MiB 도달 시)
+
+### 💡 금일 핵심 포인트
+
+1. **D-DAY KOSPI 7,848 마감** (5/22 close +0.41%) — 5/14 고점(7,981) 대비 -1.7%. 8,000선 재돌파 관건.
+2. **Swap 378MiB 🟡 12시간 연속 하향 안정화** — 12x 급증 이후 안정적 탈축추세. 재부팅 위험 완화.
+3. **MCP 멀티검색 Quality Crisis**: 19회 연속 LOW SIGNAL = **결정 시점 도래**. 하루 3회×6.3일 동안 무의미한 Naver 노이즈.
+4. **CB Score 데이터 파이프라인 결함**: self_heal.py가 WTI($0)/FX(₩0) 수집 실패로 CB Score 10/100 고정. **가장 긴급한 Priority 1** (16h+ 경과).
+5. **🧠 신규 HIGH SIGNAL 지식**: SkillOpt(스킬 학습 최적화), Push Your Agent/QGP(양적 목표 지속성), LLMs as Noisy Channels(Shannon Scaling Law) — 3개 논문 직접 적용 가능.
+
+### 🚧 Action Items (이월)
+- [ ] 🔴 **CB Score 파이프라인 복구**: self_heal.py WTI/FX 직접 수집 코드 추가 (최우선)
+- [ ] 🔴 **MCP 멀티검색 Quality 결정**: 19회 연속 LOW SIGNAL → 소스 변경(B+C: Google News + Yahoofinance/Bloomberg)
+- [ ] 🟡 **Context 승격**: 8개 🥇 우선순위 문서 대기 (Operations-Guide 우선)
+- [ ] 🟡 **SkillOpt (arXiv 2605.23904)**: skill.md `evolution_strategy` 필드 PoC 설계
+- [ ] 🟡 **QGP (arXiv 2605.23574)**: 배틀루프 n-step 검증 도입 연구
+- [ ] 🟢 **Swap 모니터링**: 378MiB 하향 추세, 500MiB 도달 시 재부팅
 
 ---
 
-## 2026-05-07 (Thu) 08:45 — 오전 스냅샷 (거래일, 04:47 이후 정적 유지)
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 20920, 01:19 --replace 실행, 7.4h 가동) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, **3일차 가동**) |
-| OpenWebUI | ✅ 정상 (port 3000, 7.4% 메모리, 31h+ 가동) |
-| MetaClaw | ✅ 정상 (port 30000, trinity-meta, **7일차 유지**) |
-| CowAgent | ✅ 정상 (trinity-cow 세션) |
-| OpenDesign | ✅ 정상 (port 17456, trinity-od) |
-| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od — 6개 |
-| MCP 서버 | filesystem/fetch/tavily/time + Python MCP 정상 |
-| 메모리 | **4,203MB / 7,748MB (54%)** — 안정 유지 |
-| 디스크 | 3% (29G/1007G) 🟢 |
-| WSL Uptime | **2d 4h** |
-
-### 📊 시장 현황 (5/6 종가 기준)
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | **7,384.56** (5/6) | 사상 최고, RSI 92.4 — 과열 극대 |
-| KOSDAQ | 1,210.17 (5/6) | -0.29%, KOSPI 대비 디커플링 |
-| 삼성부광 | **8,970원** (5/6) | 🚨 -5.97%, 9,000선 이탈, BB 하단 돌파 |
-| 나우로보틱스 | 28,300원 (5/6) | 변동 없음 |
-| WTI | **$95.87** (5/6) | $100선 이탈 2일차, 3일 -9.91% 폭락 |
-| USD/KRW | **1,473.96** (5/6) | 1,474선 보합 |
-| CB Score | 미갱신 (30→추정 40~50, KOSPI 급등 반영 예상) | 🟡 |
-
-### 🔧 주요 변화 (04:47 이후 4시간)
-1. **변동 없음** — 야간/아침 시간대 시스템 정적 상태
-2. Hermes Evo Report (08:30) — 0개 신규 문서, 29개 스킬 유지, 모든 문서 처리 완료 보고
-3. MetaClaw 7일차 정상 유지 (기록 경신) 🏆
-4. yfinance .KS 오류 7일차 지속 — 배틀루프 Deep Dive 사이클만 반복
-
-### 🐛 이슈 트래커
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | **yfinance .KS 티커 오류 (7일차)** — 모든 종목/지수 NaN | 🔴 미해결 |
-| 2 | **KiwoomAuth 8050 지정단말기 인증 실패 (7일차)** | 🔴 미해결 |
-| 3 | **삼성부광 8,970원 (-5.97%)** — 9,000선 이탈, BB 하단 돌파 | 🟡 악화 |
-| 4 | **WTI $95.87 — $100선 이탈 2일차** — 글로벌 경기침체 리스크 평가 필요 | 🟡 관찰 |
-| 5 | **CB Score 미갱신** — KOSPI 7,384 신고가 반영 시 40대 예상 | 🟡 |
-| 6 | **메모리 54%** — 04:45 자동 정리 후 안정 유지 (재발 없음) | ✅ 해소 |
-| 7 | **Telegram** — Gateway --replace 후 안정성 확인 중 | 🟡 관찰 |
-
-### 🔧 주요 변화 (08:30→12:45 오후 스냅샷)
-1. **KOSPI 7,364 (-20pt, -0.3%)** — 사상 최고 7,384에서 소폭 조정, 장중 하락
-2. **KOSDAQ 1,199 (-11pt, -0.9%)** — KOSDAQ 추가 하락, KOSPI 대비 디커플링 심화
-3. **USD/KRW 1,451원 🔽** — 원화 강세 전환 (-22.6원, 1,470선 이탈). 무섭게 하락
-4. **메모리 3,663MB (47%)** — 오전 대비 7%p 추가 감소, 매우 안정적 🟢
-5. **Jongdari 2.5일차** — nexus_orchestrator 52분 CPU 사용, 건재함
-6. **기타 서비스** — Gateway/Python MCP/Virtual Office/Quote Web 모두 정상
-7. **Tavily API 401 에러 확인** — 검색 키 만료 또는 무효, 크론 작업에 영향 가능
-
-### 🐛 이슈 업데이트 (12:45)
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | **yfinance .KS 티커 오류 (7일차)** | 🔴 미해결 |
-| 2 | **KiwoomAuth 8050 인증 실패 (7일차)** | 🔴 미해결 |
-| 3 | **삼성부광 8,970원 (-5.97%) — 9,000선 이탈** | 🟡 악화 |
-| 4 | **WTI $95.87 — $100선 이탈 2일차** | 🟡 관찰 |
-| 5 | **Tavily Search API key expired** — 401 Unauthorized | 🔴 신규 |
-| 6 | **원화 급강세 (1,474→1,451, -22.6원)** — 수출주/달러자산 영향 | 🟡 관찰 |
-| 7 | **메모리 47% 안정** | ✅ 해소 |
-
-### 📋 오늘(5/7 목) 체크리스트
-- [ ] **yfinance 티커 수정 최우선**: nexus_orchestrator .KS→.KQ (7일차!)
-- [ ] **Tavily API 키 갱신 필요** — 401 에러 발생 중
-- [ ] 삼성부광 8,500선 지지 여부 — 8,970원에서 추가 하락 시 손절 검토
-- [ ] KOSPI 7,384 신고가 — 장 마감 후 시장 환경 재평가
-- [ ] 원화 강세(1,451원) — 포트폴리오 영향 분석
-- [ ] Telegram 정상 응답 확인
+*2026-05-25 20:46 KST — Evening Wrap (D-DAY close, Swap 378MiB 하향 안정화 🟡)*
 
 ---
 
-## 2026-05-07 (Thu) 16:30 — 오후 스냅샷 (거래일 마감, 포지션 전량 청산)
+## 🧬 Hermes Auto-Evolution — 2026-05-26 (Tue) 00:46 KST (Post-Market D-DAY+1)
 
-### 시스템 현황
+### 📋 시스템 현황 — 00:46 KST (화요일, D-DAY+1)
+
 | 항목 | 상태 |
 |:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 20920, 01:19 --replace, 15h+ 가동, Telegram 안정화 지속) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, **3일차 가동**, CPU 60분 사용) |
-| OpenWebUI | ✅ 정상 (PID 87604, port 3000, 7.4% 메모리, 32h+ 가동) |
-| MetaClaw | ✅ 정상 (PID 188742, port 30000, trinity-meta, **7일차 유지 🏆**) |
-| CowAgent | ✅ 정상 (trinity-cow 세션) |
-| OpenDesign | ✅ 정상 (port 17456, trinity-od) |
-| tmux 세션 | hermes / hermes-mcp *(16:16 신규 생성)* / jongdari / trinity-cow / trinity-meta / trinity-od — 6개 |
-| MCP 서버 | filesystem/fetch/tavily/time + Python MCP 2종 정상 (중복 감소: antigravity 제거됨) |
-| 메모리 | **3,765MB / 7,748MB (49%)** — 12:45 47%→49% 소폭 상승, 안정적 🟢 |
-| 디스크 | 3% (29G/1007G) 🟢 |
-| WSL Uptime | **2d 12h** (5/5 04:04 기동) |
+| WSL Uptime | 1d 7h (5/24 17:40 이후 재부팅 없음) |
+| tmux 세션 | 6개 — all normal |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 (5/25 20:26 재시작 유지) |
+| Hermes Gateway (port 8642) | ✅ active (health 200) |
+| Memory | 3.3Gi / 7.6Gi (43%) |
+| **Swap** | **369MiB 🟡** (20:46 378MiB→00:46 369MiB, 지속 하향 안정화) |
+| Disk | 4% ✅ |
+| Load Avg | 0.70 / 0.34 / 0.25 — 안정 |
+| Cron Jobs | 9개 등록 |
+| Brain Sync | 5/26 00:02 KST (44min 경과) |
 
-### 📊 시장 현황 (5/7 거래일 마감)
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | **7,398.99** (+0.20%, 사상 최고 경신) | 12:45 7,364 → 마감 7,398 — 추가 상승 마감 |
-| KOSDAQ | **1,199.22** (-0.90%) | KOSPI 대비 디커플링 심화, 1,200선 이탈 |
-| 삼성부광 (014950.KQ) | **8,520원** (-5.02%) | 🚨 9,000선 이탈 가속, 8,500선 위협 |
-| 나우로보틱스 (459510→473980.KQ) | **27,400원** (손절가) | 포지션 청산 완료 |
-| WTI | **$95.56** (+0.50%) | $100선 이탈 3일차, 5/3 $100.96→$95.56 (-5.3%) |
-| USD/KRW | **1,451.29** (-1.54%) | 원화 강세 지속, BB 하단 이탈 |
-| KOSPI RSI | **91.9** | 🚨 극단 과열 — 90 돌파 |
-| CB Score | 추정 40~50 (KOSPI 급등 반영) | 🟡 이전 30→상승 추정 |
+### 📋 지난 12시간 타임라인 (5/25 12:46 → 5/26 00:46)
 
-### 🔧 주요 작업 내역
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 5/25 12:46 | 🧬 Midday Update (Swap 434MiB 🚨) |
+| 5/25 14:41 | 📡 MCP 멀티검색 3건 — 19회 연속 LOW SIGNAL |
+| 5/25 15:00 | 🧠 Brain Sync — Swap 385MiB로 안정화 시작 |
+| 5/25 16:30 | 🧬 Auto-Evolution 3차 — 11개 개선 제안 |
+| 5/25 18:50 | 📚 Wiki Auto-Expander (무역수지/배터리/바이오) |
+| 5/25 20:26 | 🔄 Trinity 재시작 (CowAgent/MetaClaw/open-design 재시작 완료) |
+| 5/25 20:46 | 🧬 Evening Wrap (Swap 378MiB 🟡 하향 안정화 확인) |
+| 5/25 22:42 | 🤖 MCP 멀티검색 3건 최종 배치 — **27회 연속 LOW SIGNAL** |
+| 5/25 23:10 | 📊 Wiki 확장기 — 00-Home.md 스냅샷 정리 (환율 1,511, WTI 보합) |
+| 5/26 00:02 | 🧠 Brain Sync (Swap 371MiB, CB Score 10/100 frozen ~28h) |
+| **5/26 00:46** | **NOW** → 본 스냅샷 |
 
-#### 1. 📌 모의투자 포트폴리오 전량 청산 (14:00 Brain Sync 확인)
-- **paper_portfolio.json** 분석 결과: **모든 포지션 청산 완료**
-  - 삼성부광(014950.KQ): 34주 @9,010원 손절 (-10.3%, 손실 35,020원)
-  - 나우로보틱스(459510→473980.KQ): 10주 @27,400원 손절 (-10.3%, 손실 31,500원)
-- **portfolio 잔고**: **4,929,810원** (초기자본 500만원 대비 -1.4%)
-- **현금 전환 완료** — 포지션 0개, 신규 진입 보류 상태
+### 📊 Swap 추이 (5/25→5/26)
 
-#### 2. 🔴 Tavily Search API 키 만료 확인 (신규 Critical)
-- **401 Unauthorized** 에러 확인 — Tavily 검색 API 키 만료 또는 무효화
-- 영향: 문화×경제 인텔, Brain Sync, 기타 Tavily 의존 크론 작업 검색 불가
-- **대응**: 키 갱신 필요 (Tavily Dashboard)
+| 시점 (KST) | Swap 사용량 | 판정 |
+|:-----------|:----------:|:-----|
+| 5/25 08:33 | 35MiB | ⚠️ 재축적 조짐 |
+| 5/25 11:00 | 436MiB | 🚨 급증 (12.5x) |
+| 5/25 12:46 | 434MiB | 🚨 심각 |
+| 5/25 15:00 | 385MiB | 🟡 안정화 시작 |
+| 5/25 16:30 | 385MiB | 🟡 유지 |
+| 5/25 20:46 | **378MiB** | 🟡 하향 추세 |
+| 5/25 23:02 | **374MiB** | 🟡 지속 하향 |
+| 5/26 00:02 | **371MiB** | 🟡 안정적 개선 |
+| **5/26 00:46** | **369MiB** | **🟡 16시간 연속 하향 (436→369MiB, -15.4%)** |
 
-#### 3. Tech Scavenger 정상 스캔 (13:21~16:22 총 4회)
-- 13:21: GitHub 30 + arXiv 21 → **2개 신규 저장**
-- 14:20~16:22 (3회 연속): **전부 0개 신규** (중복 스킵, 포화 단계)
-- 누적 기술 문서: **305개** (129→305, 대량 증가)
+> **분석**: Swap 369MiB — 436MiB 피크 대비 16시간 연속 하향 안정화(-15.4%). MetaClaw 재시작(20:26) 후에도 하향 추세 유지되어 메모리 누수 가설 사실상 기각. **다음 재부팅 예상: 5/29~30 (500MiB 도달 시)** — 현재 탈축적 속도로는 2~3일 추가 안정 가능.
 
-#### 4. Hermes Evo Report (08:30) — 0개 신규 문서, 29개 스킬 유지
+### 💡 핵심 포인트
 
-#### 5. Hermes-mcp tmux 세션 신규 생성 (16:16)
-- `hermes-mcp` 세션 16:16에 새로 생성됨
-- 로그: `mcp_server.log`(0 bytes 초기화), `mcp_github.log`(0 bytes), `mcp_sequential_thinking.log`
+1. **D-DAY+1 (화요일) — KOSPI 7,848 (5/22 close 기준)**. 오늘(5/26) 장 개시 전. 5/25 휴일효과 소멸. 5/22 KOSPI +0.41%, KOSDAQ +4.99% 급등 이후 첫 거래일. 8,000선 재돌파 관건.
+2. **Swap 369MiB 🟡 안정적 하향 추세** — 12시간 연속 자발적 탈축적. MetaClaw 잔여 누수 의심 해소. 재부팅 시점 완화.
+3. **MCP 멀티검색 Quality Crisis: 27회 연속 LOW SIGNAL** — 5/24~5/26 3일째. 결정 시점 도래. 매일 3회 배치에도 0건 HIGH SIGNAL.
+4. **CB Score 10/100 frozen (28h+)** — self_heal.py WTI/FX 수집 실패로 Priority 1 상태 지속.
+5. **Context 승격 8건 대기 중** — 24h+ 경과. Operations-Guide 우선.
 
-#### 6. Gateway --replace 안정성
-- PID 20920, 01:19 실행 후 **15h+ 무중단 가동**
-- Telegram 충돌 해소 상태 유지
-- antigravity MCP 제거됨 (중복 감소)
+### 🚧 Action Items (누적)
 
-### 🐛 이슈 트래커
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | **yfinance .KS 티커 오류 (7일차)** — 014950.KS/459510.KS 모두 "possibly delisted", KOSPI=NaN | 🔴 미해결 |
-| 2 | **KiwoomAuth 8050 지정단말기 인증 실패 (7일차)** — 현물 거래 인터페이스 차단 | 🔴 미해결 |
-| 3 | **Tavily Search API 키 만료** — 401 Unauthorized, 검색 기능 마비 | 🔴 신규 |
-| 4 | **삼성부광 8,520원 (-5.02%)** — 9,000선 이탈 후 8,500선 근접, 손절 완료 | 🟡 악화 |
-| 5 | **WTI $95.56 — $100선 이탈 3일차** | 🟡 관찰 |
-| 6 | **KOSPI RSI 91.9 — 극단 과열** — 단기 조정 가능성 | 🟡 관찰 |
-| 7 | **원화 급강세 (1,474→1,451, -22.6원)** — BB 하단 이탈 | 🟡 관찰 |
-| 8 | **메모리 49%** — 04:45 자동 정리 후 안정 유지 | ✅ 해소 |
-| 9 | **Telegram** — Gateway --replace 후 안정성 유지 중 | 🟡 관찰 |
-
-### 📚 배운 점
-1. **모의투자 포트폴리오 전량 청산**: KOSPI가 7,398 사상 최고를 경신하는 동안 삼성부광(-5.02%)과 나우로보틱스(-10.3%)는 각각 손절가에 도달. KOSPI와 소형주의 **극단적 디커플링(decoupling)** 확인 — AI 반도체 랠리가 코스닥 소형주로 전혀 확산되지 않음
-2. **Tavily API 키 만료**: 401 에러로 검색 기능 전체 마비. API 키 순환 관리 필요성 확인
-3. **yfinance .KS 오류 7일차 지속**: 배틀루프 Deep Dive 사이클만 반복하며 실질적 트레이딩 불가
-4. **MetaClaw 7일 연속 정상 유지** 🏆: 5/4 18:32 수동 복구 후 **7일 무중단** — 가장 긴 uptime 기록
-5. **Tech Scavenger 포화**: 13:21 이후 4회 연속 0~2개 신규. 신규 발견 감소 추세
-6. **KOSPI RSI 91.9**: 극단 과열 구간. 상승 동력 약화 추세 — 단기 조정 가능성
-
-### ⚠️ 특이사항
-- KOSPI 사상 최고 **7,398.99**에도 포트폴리오 전량 청산 — 지수와 개별 종목 간 괴리 극대화
-- paper_portfolio 잔고 **4,929,810원**, 현금 100% 보유
-- CB Score 추정 40~50 (KOSPI 급등 반영)
-- KOSPI RSI 91.9 — 기술적 과열, 단기 조정(7,000~7,200) 가능성
-
-### 📋 내일(5/8 금) 할 일
-- [ ] **Tavily API 키 갱신 최우선** — 401 에러 해결, Tavily Dashboard에서 키 재발급
-- [ ] **yfinance 티커 수정**: nexus_orchestrator .KS→.KQ (8일차 — 더 이상 미룰 수 없음!)
-- [ ] **KiwoomAuth 8050 재등록 (8일차)** — 수동 개입 필요
-- [ ] **삼성부광 8,500선 지지 여부** (5/7 8,520원, 금일 오프닝 확인)
-- [ ] **모의투자 포트폴리오 재진입 검토** (현금 100%, CB Score 40~50 추정)
-- [ ] **KOSPI RSI 91.9 과열 — 조정 리스크 관리**
-- [ ] **WTI $95선 / USD/KRW 1,450선 모니터링**
-- [ ] **🔴 KeepAlive v7.3 crash loop** — 1분마다 재시작/자살 반복, wsl_keepalive.sh만 생존
-- [ ] **🔴 Trinity: CowAgent + OpenDesign 프로세스 다운** — MetaClaw만 생존 중
-- [ ] **🔴 Jongdari 배틀루프 종료** — 프로세스 없음, 복구 필요
-
-## 2026-05-07 (Thu) 16:47 — 저녁 스냅샷
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | 정상 (PID 20920, 01:19 재시작, 15h+ uptime) |
-| Hermes CLI | tmux hermes 세션 유지 |
-| OpenWebUI | ✅ 정상 (port 3000, PID 87604, May06 시작) |
-| MetaClaw | ⚠️ 프로세스 존재 (PID 188742) but HTTP 404 on port 30000 |
-| CowAgent (Trinity) | ❌ 다운 (프로세스 없음) |
-| OpenDesign (Trinity) | ❌ 다운 (프로세스 없음) |
-| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-* 각 1개 |
-| MCP 서버 10개 | 정상 (time/fetch/filesystem + 7 Python 기반) |
-| 메모리 | 3,469MB / 7,748MB (44.8%) |
-| 디스크 | 3% |
-| KeepAlive v7.3 | 🔴 **CRASH LOOP** — 1분마다 재시작→자살 반복 |
-| WSL KeepAlive | ✅ 정상 (PID 197839, May05 시작, /tmp/wsl_keepalive.sh) |
-
-### 🔴 신규 이슈: KeepAlive v7.3 Crash Loop
-- 16:40~16:47 사이 **1분 간격으로 재시작/자살 반복** (v7.3 hardened)
-- 패턴: start → "keepalive already running (PID=X), exiting" → stop → 재시작 → 무한루프
-- **pidfile 충돌로 추정** — keepalive가 자신의 PID를 감지하고 자살
-- WSL keepalive (/tmp/wsl_keepalive.sh)는 별도로 정상 작동 중
-
-### 🔴 Trinity 서비스 2개 다운
-- **CowAgent**: run_cowagent 프로세스 없음, 5/5 이후 종료
-- **OpenDesign**: run_opendesign 프로세스 없음
-- **MetaClaw**: 프로세스는 있으나 port 30000 HTTP 404 — 응답 불가 상태
-
-### 포트폴리오 (paper_portfolio)
-- 현금: 4,655,810원 | 총 평가: 4,936,810원 (-1.26%)
-- 포지션: **나우로보틱스(459510.KQ)** 10주 @30,550원 → 28,100원 (-8.02%)
-- 삼성부광: 전량 청산 완료 (이전 손절)
-- 현금 비중: 94.3%
-
-### Macro
-- USD/KRW: **1,447.35** (dashboard 1,447.23, 00:17 기준)
-- WTI: **$94.93** ($95선 하회, 전일비 소폭 하락)
-- KOSPI: dashboard NaN (데이터 미수집)
-
-### 📚 배운 점 / 발견
-1. **KeepAlive v7.3 pidfile 충돌** — 1분 간격 재시작 루프. v7.3 hardened가 이전 인스턴스 PID를 잡아서 자살. 근본 원인: cron 기반 keepalive가 Bash `while true` WSL keepalive와 충돌
-2. **Trinity 3개 서비스 중 1개만 생존** — MetaClaw만 간신히 버티고 CowAgent/OpenDesign는 프로세스 종료. Trinity 재가동 필요
-3. **Jongdari 배틀루프 종료** — 더 이상 트레이딩 루프 실행되지 않음. 복구 또는 재설정 판단 필요
-
-### ⚠️ 특이사항
-- OpenWebUI가 전일 12:01 다운에서 **정상 복구**됨 (keepalive v7.3 crash loop에도 불구)
-- MCP 서버 10개 전원 정상 (Python 기반 7개 + uvx 기반 time/fetch + Node 기반 filesystem)
-- Jongdari 폴더에 telegram_webui_sync.py만 존재 — data/ 디렉토리 없음
-- MCP Python 서버 7개 Zombie 상태 (PID 존재, RSS 1,000~1,664바이트, 실행 안 됨)
+- [ ] 🔴 **CB Score 파이프라인 복구**: self_heal.py WTI/FX 직접 수집 코드 추가 (P1, 28h+)
+- [ ] 🔴 **MCP 멀티검색 Quality 결정**: 27회 연속 LOW SIGNAL → 소스 전환(B+C: Google News + Yahoofinance/Bloomberg)
+- [ ] 🟡 **Context 승격**: 8건 대기 (Operations-Guide 우선, Brain Sync 기준 문서)
+- [ ] 🟡 **SkillOpt (arXiv 2605.23904)**: skill.md `evolution_strategy` 필드 PoC
+- [ ] 🟡 **QGP (arXiv 2605.23574)**: 배틀루프 n-step 검증 도입 연구
+- [ ] 🟢 **Swap 모니터링**: 369MiB 하향 추세, 500MiB 도달 시 재부팅
 
 ---
 
-## 2026-05-07 (Thu) 20:45 — 저녁 스냅샷
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 20920, 19h+ 가동, --replace 유지) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, **3일차 가동**) |
-| OpenWebUI | ✅ 정상 (port 3000, PID 87604, May06 기동) |
-| MetaClaw | ⚠️ 프로세스 존재 (PID 188742) but HTTP 404 on port 30000 |
-| CowAgent (Trinity) | ❌ 다운 (프로세스 없음) |
-| OpenDesign (Trinity) | ❌ 다운 (프로세스 없음) |
-| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od / **vo 7개** |
-| MCP 서버 10개 | 정상 (filesystem/fetch/tavily/time + 6 Python 기반) |
-| **⚠️ MCP Python Zombie** | vscode/docker/obsidian/anythingllm/googledrive/opendesign — 6개 RSS~1KB 실행 안 됨 |
-| 메모리 | **3,533MB / 7,748MB (45.6%)** 🟢 |
-| 디스크 | 3% (29G/1007G) 🟢 |
-| Swap | 1,512MB / 2,048MB (73.8%) — 🟡 높음 |
-| WSL Uptime | **2d 16.5h** (5/5 04:04 기동) |
-| WSL KeepAlive | ✅ 정상 (PID 197839, May05 시작, bash 루프) |
-
-### 🔴 지속 이슈 (16:47 이후 변화 없음)
-1. **KeepAlive v7.3 Crash Loop** — 1분 간격 재시작/자살 반복 (pidfile 충돌)
-2. **Trinity: CowAgent + OpenDesign 다운** — MetaClaw만 프로세스 생존 (HTTP 404)
-3. **yfinance .KS 오류 8일차** — 014950.KS/459510.KS NaN
-4. **KiwoomAuth 8050 인증 실패 8일차**
-5. **Tavily API 키 만료 (401)** — 검색 기능 마비
-6. **MCP Python 서버 6개 Zombie** — RSS 1KB로 실행 중단 (Gateway 재시작 필요)
-
-### 포트폴리오
-- 전량 현금 보유 (5/7 14:00 Brain Sync 확인)
-- paper_portfolio.json 파일 존재하지 않음 (청산 후 삭제된 것으로 추정)
-
-### Macro (20:45 기준)
-- USD/KRW: 1,447~1,451 (원화 강세 지속)
-- WTI: $94~$95 ($95선 등락, $100 이탈 3일차)
-
-### 📚 배운 점
-1. **vo (Virtual Office) tmux 세션 신규 생성** (20:33) — 가상오피스 재가동 시도
-2. **hermes-mcp tmux 세션 정상 유지** (20:33 생성, 12분 가동)
-3. **Swap 74% 사용** — 물리 메모리는 46%로 여유있으나 Swap에 밀린 프로세스 존재
-4. **MCP Zombie 문제 지속** — Gateway 재시작 없이 해결 어려움 (Python subprocess 타임아웃)
-5. **16:47→20:45 4시간 동안 시스템 변화 없음** — 안정적 유지 중
+*2026-05-26 00:46 KST — Auto-Evolution (D-DAY+1, Swap 369MiB 🟡, MCP 27×LOW SIGNAL)*
 
 ---
 
-## 2026-05-08 (Fri) 00:46 — 새벽 스냅샷 (5/7 20:45 이후 4시간, 야간 유지)
+## 🧬 Hermes Pre-Open Update — 2026-05-26 (Tue) 08:45 KST (D-DAY+1, Pre-Open T-15m)
 
-### 시스템 현황
+### 📋 시스템 현황 — 08:45 KST
+
 | 항목 | 상태 |
 |:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 20920, 01:19 --replace, **23h+ 가동**) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, 3일차) |
-| OpenWebUI | ✅ 정상 (PID 87604, port 3000, May06~) |
-| MetaClaw | ⚠️ PID 188742, port 30000 유지 (HTTP 404, 프로세스 생존) |
-| CowAgent (Trinity) | ❌ 다운 |
-| OpenDesign (Trinity) | ❌ 다운 |
-| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od / vo — 7개 |
-| MCP 서버 10개 | filesystem/fetch/time + Python 7 Zombie (RSS ~1KB) |
-| 메모리 | **3,933MB / 7,748MB (51%)** — 안정 🟢 |
-| 디스크 | 3% (29G/1007G) 🟢 |
-| Swap | 1,512MB / 2,048MB (73.8%) 🟡 |
-| WSL Uptime | **2d 20.5h** (5/5 04:04 기동) |
-| WSL KeepAlive | ✅ 정상 (PID 197839, bash 루프, 3일차) |
+| WSL Uptime | 1d 15h (5/24 17:40 이후 재부팅 없음) |
+| tmux 세션 | 6개 — all normal (hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign) |
+| Trinity | ✅ 전원 정상 (5/25 20:26 재시작 유지) |
+| Hermes Gateway (port 8642) | ✅ 200 OK |
+| Memory | 3.3Gi / 7.6Gi (43%) |
+| **Swap** | **371MiB 🟡** (08:30 361MiB→08:45 371MiB, 안정적 유지) |
+| Disk | 4% ✅ |
+| Load Avg | 0.30 / 0.30 / 0.39 — 매우 안정 |
+| BattleLoop (Nexus) | ✅ 실행 중 (08:42 사이클 정상 완료, 20+ 사이클 안정) |
+| Self-Evolve | ✅ 정상 (08:45 사이클 완료) |
+| CB Score (Dashboard) | **?/100** 🔴 — self_heal.py 21일 중단 지속 |
+| CB Score (Nexus) | 22/100 추정 — 프로세스 내부 정상 |
+| 모의투자 | ₩4,929,810 (0 포지션, 34일차) |
 
-### 🔔 신규 발견
-1. **hermes_mcp_server.py 신규 기동 (00:19)** — PID 58315, `pts/11`에서 `mcp_server.log`로 실행 중. 20:45 스냅샷 이후 약 4시간 만에 새 MCP 서버 프로세스가 자동 기동됨. 이전 `hermes-mcp` tmux 세션(16:16 생성, 0 bytes 로그)과는 별도의 프로세스로 추정.
-2. **vo (Virtual Office) tmux 세션 유지** — 20:33 생성 후 4h+ 유지 중. 가상오피스 재가동 지속 확인.
+### 📊 대시보드 데이터 (08:44 KST)
 
-### 🔴 지속 이슈 (변화 없음)
-- KeepAlive v7.3 Crash Loop (1분 간격 재시작/자살) — pidfile 충돌
-- yfinance .KS 오류 8일차
-- KiwoomAuth 8050 인증 실패 8일차
-- Tavily API 키 만료 (401)
-- MCP Python 서버 6개 Zombie 상태 지속
-- Trinity: CowAgent + OpenDesign 다운 (MetaClaw만 생존)
+| 항목 | 값 | 분석 |
+|:-----|:---|:------|
+| **KOSPI** | 7,847.71 (5/22 close) | D-DAY+1, 오늘(5/26) 09:00 개장. 전주 +0.41% 마감 후 첫 거래일. |
+| **USD/KRW** | **1,517.23** | 🔴 전일 Brain Sync(1,511) 대비 +6원 상승. 1520선 재돌파 가능성. |
+| **WTI** | **$91.02** | 🔴🔴 전주 마감($96.60) 대비 **-5.8% 추가 하락!** $100선 하회 **6일차**, $90선 위협. |
+| **삼성부광** | 7,400 (5/22 close) | 포트폴리오 -26.29% 심화, RSI 27.0 과매도, 오늘 반등 여부 관건. |
+| **에이치엘** | 15,450 (5/22 close) | 5/22 +7.59% 급반등 후 첫 거래일, RSI 36.5 과매도 개선 테스트. |
+| **나우로보틱스** | 26,150 (5/22 close) | 5/22 KOSDAQ +4.99%에도 유일 하락, 포트폴리오 -14.40%. |
 
-### 포트폴리오
-- 전량 현금 보유 (5/7 14:00 청산 완료, paper_portfolio 미발견)
-- 현금 잔고: 약 4,929,810원 (초기 대비 -1.4%)
+### ⏰ 금일 타임라인 (5/26 KST)
 
-### Macro (20:45 기준 변화 없음)
-- USD/KRW: 1,447~1,451 (원화 강세 지속)
-- WTI: $94~$95 ($100 이탈 3일차)
-- KOSPI: 7,398.99 (5/7 마감, 사상 최고)
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 00:46 | 🧬 Auto-Evolution 스냅샷 (Swap 369MiB 🟡, CB Score 48h 결함) |
+| 02:00 | 🧠 Brain Sync (Context 안정, Freight-Quote link 추가) |
+| 02:30 | 🧬 Auto-Evolution (CB Score 48h 결함 수리: self_heal.py + nexus 대시보드 fallback) |
+| 04:30 | 🧬 Auto-Evolution 6차 (Swap 385→361MiB 하향 안정화, WTI $90.91 발견) |
+| 05:00 | 🧠 Brain Sync (00-Home.md pipe 포맷 수리) |
+| 06:41~06:53 | 📡 MCP 멀티검색 8건 — **35회 연속 LOW SIGNAL** (결정적 타협점 초과) |
+| 07:00 | 🧠 Brain Sync (MarketData refresh, Nexus 재시작 확인) |
+| 08:30 | 🧬 Auto-Evolution 7차 Pre-Open (self_heal 21일 중단 신규 발견, WTI $90.91 위험) |
+| **08:45** | **NOW** → 본 Pre-Open 업데이트 |
+| **09:00** | 🔵 **KOSPI 장 개시** (D-DAY+1) |
 
-### 비고
-- 20:45→00:46 4시간 경과, 시스템 전반적 정적 상태 유지
-- 신규 이슈 없음, 기존 6개 Critical 이슈 변화 없음
-- 오늘(5/8 금) 거래일 — 5/7 전량 청산 후 현금 보유 상태로 개장
+### 💡 Pre-Open 핵심 포인트 (08:45)
+
+1. **🔴🔴 WTI $91.02 — 전주 대비 -5.8% 급락 지속, $100 하회 6일차**
+   전주 마감($96.60) 대비 $5.58(-5.8%) 추가 하락. $90선 위협. 글로벌 경기 침체 신호 vs 스태그플레이션 완화 해석 충돌. Council 분석에 WTI 급락 리스크 반영 필요.
+
+2. **🔴 USD/KRW 1,517.23 — 1520선 재돌파 가능성**
+   전일 대비 +6원 상승. WTI 급락에도 원화 약세 지속 — 원자재 수출국 대비 원화 디커플링 심화. 1520선 돌파 시 추가 약세 재료.
+
+3. **🔴 Self_heal.py 21일 중단 — CB Score 대시보드 미기입**
+   08:30 사이클에서 신규 발견. `self_heal.log` 5/5 04:11 이후 갱신 없음. 02:30 사이클에서 CB Score 결함 수리 시도(nexus 내부 fallback) 했으나 dashboard.json의 CB Score는 계속 `?/100`. **대시보드의 자가 진단 데이터는 여전히 missing.**
+
+4. **🟢 Swap 371MiB 안정적 유지 — 18시간 연속 300~385MiB 범위**
+   5/25 11:00 436MiB 피크 이후 18시간 연속 300~385MiB 안정. MetaClaw 재시작(20:26) 후 12시간 경과, 메모리 누수 의심 해소 확정. 다음 재부팅 예상: 5/29~30 (500MiB 도달 시).
+
+5. **🟡 MCP 멀티검색 35회 연속 LOW SIGNAL — 결정적 타협점 초과**
+   5/24~5/26 3일간 35회 연속 LOW SIGNAL = 리소스 100% 낭비. 8개 파일 새벽 배치(06:41~06:53) 모두 Naver 지식iN/쇼핑 노이즈. Google News API + Yahoo Finance 조합 전환 필요.
+
+6. **🟡 모의투자 34일차 정체 — KOSPI 4/27 저점(6,900) 대비 +13.7% 상승에도 현금 보유**
+   CB Score 미복구로 Council 신뢰도 17% 유지 → HOLD 바이어스 고정. 기회비용 13.7% 누적 손실 중. **Nexus 자체 CB Score(22/100)는 DEFENSIVE로 HOLD가 합리적이지만, 대시보드 반영 실패가 전체 시스템 신뢰도 저하의 근본 원인.**
+
+### 🚧 Action Items (오픈 전 체크리스트)
+
+| # | 항목 | 상태 | 비고 |
+|:--|:-----|:-----|:------|
+| 1 | 🔴 CB Score 대시보드 복구 | **21일 지속** | self_heal.py 재가동 + dashboard.json CB Score fallback 경로 수리 |
+| 2 | 🔴 MCP 멀티검색 소스 전환 | **결정 시점** | 35회 LOW SIGNAL → Google News + Yahoo Finance로 전환 |
+| 3 | 🟡 WTI $91 급락 Council 반영 | 미반영 | 배틀루프 Council 분석 시 WTI 급락 리스크 가중치 반영 필요 |
+| 4 | 🟡 Context 승격 8건 대기 | **48h+** | Operations-Guide 우선, Brain Sync 기준 문서 Context 승격 |
+| 5 | 🟡 SkillOpt/QGP PoC | 연구 단계 | skill.md `evolution_strategy` 필드 + 배틀루프 n-step 검증 |
+| 6 | 🟢 Swap 모니터링 | 371MiB 🟡 | 500MiB 도달 시 재부팅, 현재 추세로 5/29~30 예상 |
+
+> **D-DAY+1: 5/26(화) 09:00 KST 오픈까지 T-15m.** KOSPI 7,848에서 시작. WTI $91 급락, USD/KRW 1,517 약세, 삼성부광 -26.29% 포트폴리오 부담.
 
 ---
 
-## 2026-05-08 (Fri) 04:46 — 새벽 스냅샷 (00:46 이후 4시간)
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 20920, May07~, **28h+ 가동**) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, 3일차) |
-| OpenWebUI | ✅ 정상 (PID 87604, port 3000, May06~) |
-| MetaClaw | ⚠️ PID 188742, port 30000 생존 (404 지속) |
-| CowAgent (Trinity) | ❌ 세션만 생존, 서비스 다운 |
-| OpenDesign (Trinity) | ❌ 세션만 생존, 서비스 다운 |
-| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od — **6개** (vo 세션 소멸) |
-| MCP Python Zombie | 5개 Zombie (RSS ~1KB), hermes_mcp_server.py 신규 기동 (PID 12015, 04:16) |
-| 메모리 | **3,594MB / 7,748MB (46.4%)** 🟢 (00:46 51%→개선) |
-| 디스크 | 3% (29G/1007G) 🟢 |
-| Swap | 1,503MB / 2,048MB (73.4%) 🟡 |
-| Load Average | 0.12/0.17/0.31 🟢 (심야 정적) |
-| WSL Uptime | **3d 0.7h** (5/5 04:04 기동) |
-| WSL KeepAlive v7.3 | 🔄 PID 17897, 04:46 신규 시작 (이전 PID 소멸) |
-
-### 🔔 4시간간 변화
-1. **vo (Virtual Office) tmux 세션 소멸** — 00:33 생성 후 4h 유지되다 04:46 이전 사라짐. 서비스 종료 또는 충돌.
-2. **hermes-mcp 세션 신규 생성 (04:16)** — 이전 세션(0-byte 로그) 대체, MCP 서버 재기동 확인.
-3. **WSL vsock 경고 (04:41~)** — `UtilAcceptVsock:244: Waiting for abnormally long accept(11)` 5회 연속. 네트워크 릴레이 지연, 부하 극저 상태와 무관. WSL 경량 이슈로 판단.
-4. **Keepalive v7.3 재시작** — 04:46 정상 기동, Windows 절전 모드 차단 설정 완료.
-5. **Gateway/MCP 로그 에러 없음** — 야간 4시간 동안 CRITICAL/WARNING 0건. 청정 상태.
-
-### 🟡 지속 이슈 (변화 없음)
-- KeepAlive v7.3 Crash Loop (1분 간격) — pidfile 충돌 원인, 재시작 반복
-- Trinity: CowAgent + OpenDesign 서비스 다운 (MetaClaw만 404 생존)
-- MetaClaw HTTP 404 — 프로세스 생존하나 API 응답 불가
-- MCP Python Zombie 5개 지속
-- KiwoomAuth 8050 인증 실패
-- Tavily API 키 만료 (401)
-
-### 비고
-- 심야 4시간, 사용자 활동 없음. 시스템 안정적 정적 유지
-- WSL vsock 경고는 신규 이슈이나 심각도 낮음 (Relay 타임아웃, 서비스 영향 없음)
-- 금일(5/8) 거래일 — 현금 보유 상태로 장 개시
-
----
-
-## 2026-05-08 (Fri) 08:45 — 장중 스냅샷 (금요일)
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 20920, 5/7 재시작) |
-| Hermes CLI | ✅ tmux hermes 세션 유지 (5/5~, 3일차) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 15259, 10분 주기 스캔) |
-| WebUI | ✅ 정상 (PID 87604, 포트 3000) |
-| KeepAlive v7.3 | 🔄 PID 68425, 활성 |
-| tmux 세션 | 6개 (hermes/hermes-mcp/jongdari/trinity-cow/trinity-meta/trinity-od) |
-| MCP 서버 8개 | 모두 정상 |
-| 메모리 | 3,660MB / 7,748MB (47.2%) 🟡 |
-| 디스크 | 3% (29G/1007G) 🟢 |
-| WSL Uptime | 3d 4.7h (5/5 04:04 기동) |
-
-### 포트폴리오
-- **현금**: 4,929,810원 (전주 대비 -1.4% 감소)
-- **포지션**: 없음 (5/3 삼성부광 34주 + 나우로보틱스 10주 → 모두 청산됨)
-- **총 평가**: 4,929,810원 (-1.4% vs 5/3 4,985,110원)
-
-### Macro (08:43 기준)
-- **KOSPI**: 7,384.56 (5/3 6,598→7,384, +10.37% 3일간 폭등)
-- **KOSDAQ**: 1,210.17
-- **WTI**: $97.05 ($100 아래 하락)
-- **USD/KRW**: ₩1,455.62 (안정)
-- **CB Score**: 22/100 (이전 6→22 개선, KOSPI 1M +37.3%)
-- **Market State**: NORMAL
-
-### AI Council 분석 (08:43)
-| 종목 | 결정 | 신뢰도 | 분석관 |
-|:-----|:------|:-------|:-------|
-| 457370.KQ (한켐) | ✅ HOLD | 17% | 기술적:HOLD/뉴스:HOLD/리스크:HOLD(47%) |
-| 336680.KQ (탑런토탈솔루션) | ✅ HOLD | 14% | 기술적:BUY(74%)/뉴스:HOLD/리스크:HOLD(47%) |
-- 336680.KQ: 기술적 분석관 BUY(74% 강력)이나 리스크관이 HOLD로 제동
-- 전체 포지션 없어 실제 매매 없음
-
-### 시장 특이사항
-- **KOSPI 3일 +10.37% 급등** — 극단적 상승, CB Score 22/100 (아직 공포 영역이나 개선 중)
-- KOSPI 7,384 — 사상 최고치 근접 또는 돌파
-- 모멘텀: POSCO(005490.KS)+5.7%, 현대차+4.0%, SK하이닉스+3.3%
-
-### Tomorrow Strategy (5/8)
-1. 삼성전자(005930) — Score 92, 진입 64,200 / 목표 68,500
-2. SK하이닉스(000660) — Score 88, 진입 172,000 / 목표 185,000
-3. 현대차(005380) — Score 85, 진입 235,000 / 목표 258,000
-
-### 🟡 지속 이슈 (변화 없음)
-- Trinity: CowAgent + OpenDesign 서비스 다운
-- MetaClaw HTTP 404
-- Tavily API 키 만료 (401)
-- MCP Python Zombie 5개
-- KiwoomAuth 8050 인증 실패
-
-### Action Required
-- [ ] KOSPI 7,384 급등 — 조정 리스크 대비, 현금 보유 전략 유효
-- [ ] 포트폴리오 청산 원인 확인 (portfolio.json 초기화됨)
-- [ ] 336680.KQ 기술적 분석관 BUY(74%) — 리스크 해소 시 진입 검토
-- [ ] Tavily API 키 갱신 필요
-
----
-
-## 2026-05-09 (Sat) 00:45 — 토요일 새벽 스냅샷 (주말, 휴장)
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 20920, 5/7 01:19 --replace, **47h+ 가동**) |
-| Hermes CLI | ✅ tmux hermes 세션 유지 (5/5~, 4일차) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, 4일차) |
-| OpenWebUI | ✅ 정상 (PID 87604, port 3000, 5/6~) |
-| MetaClaw | ⚠️ PID 188742 생존 (port 30000, 404 지속, 8일차) |
-| CowAgent (Trinity) | ❌ 다운 |
-| OpenDesign (Trinity) | ❌ 다운 |
-| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-* — 6개 |
-| MCP 서버 | filesystem/fetch/tavily/time + Python 6종 (Zombie) |
-| MCP Python Zombie | 6개 RSS ~1KB, 실행 중단 상태 |
-| 메모리 | **3,730MB / 7,748MB (48%)** 🟢 안정 |
-| 디스크 | 3% (29G/1007G) 🟢 |
-| Swap | 1,503MB / 2,048MB (73.4%) 🟡 |
-| WSL Uptime | **3d 20.7h** (5/5 04:04 기동) |
-| WSL KeepAlive | ✅ 정상 (bash 루프, 4일차) |
-
-### 📊 Macro (KOSPI_data.json 기준)
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | **7,490.05** (5/7 종가, +1.43%) | 사상 최고 경신, 5/8 NaN (휴장/미수집) |
-| KOSDAQ | 1,199 (5/7) | 1,200선 이탈 |
-| USD/KRW | 1,447~1,451 | 원화 강세 지속 |
-| WTI | $94~$97 | $100 이탈 5일차 |
-
-### 포트폴리오
-- **현금 100%**: 4,929,810원 (초기자본 대비 -1.4%)
-- **포지션**: 없음 (5/7 전량 청산 완료)
-- 삼성부광(014950.KQ): 5/7 장중 8,520원까지 하락 후 손절
-- 나우로보틱스(473980.KQ): 5/7 27,400원 손절
-
-### 🐛 지속 이슈 (변화 없음, 5/7 08:45 이후)
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | **yfinance .KS 티커 오류 (9일차)** — KOSPI=NaN, 종목 데이터 미수집 | 🔴 미해결 |
-| 2 | **KiwoomAuth 8050 지정단말기 인증 실패 (9일차)** | 🔴 미해결 |
-| 3 | **Tavily API 키 만료 (401)** — 검색 기능 마비 | 🔴 미해결 |
-| 4 | **MCP Python Zombie 6개** — RSS 1KB, Gateway 재시행 필요 | 🔴 지속 |
-| 5 | **Trinity: CowAgent + OpenDesign 서비스 다운** | 🔴 지속 |
-| 6 | **MetaClaw HTTP 404** — 프로세스 생존하나 API 응답 불가 | 🟡 지속 |
-| 7 | **Swap 73.4% 사용** — 물리 메모리는 48% 여유 | 🟡 관찰 |
-
-### 비고
-- 5/7 08:45→5/9 00:45, 약 40시간 경과. 시스템 정적 상태 유지.
-- KOSPI 5/7 마감 7,490.05 (08:45 스냅샷의 7,384→7,490으로 상향 조정) — KOSPI_data.json 갱신됨
-- 5/8(금) 데이터 NaN — 휴장 또는 데이터 미수집
-- KOSPI RSI 91.9 극단 과열에도 5/7 추가 상승 마감 (7,384→7,490)
-- 주말(5/9~5/10) 휴장, 다음 거래일 5/11(월)
-- 기록학 내용: 기존 6개 Critical 이슈 전부 미해결 상태로 주말 진입
-
----
-
-## 2026-05-09 (Sat) 04:45 — 토요일 새벽 스냅샷 (주말, 00:45 이후 4시간)
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 20920, 5/7 01:19 --replace, **51h+ 가동**, 연속 uptime 경신) |
-| Hermes CLI | ✅ tmux hermes 세션 유지 (5/5~, 4일차) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 15259, nexus_orchestrator, 5/5~, **4일차**, CPU 79분 누적) |
-| OpenWebUI | ✅ 정상 (PID 87604, port 3000, 5/6~, 3일차) |
-| MetaClaw (Trinity) | ⚠️ PID 188742 생존 (port 30000, 404 지속, 5/4 복구 후 8일차) |
-| **CowAgent MCP 신규** | ✅ PID 83776, 02:01 기동 — cowagent MCP server tool |
-| **MetaClaw MCP 신규** | ✅ PID 84102, 02:02 기동 — metaclaw MCP server tool |
-| CowAgent (Trinity 서비스) | ❌ 세션만 생존 |
-| OpenDesign (Trinity) | ❌ 세션만 생존 |
-| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od — **6개 유지** |
-| MCP 서버 | filesystem×6 / time×5 / fetch×5 — MCP 중복 증가 |
-| 메모리 | **4,200MB / 7,748MB (54%)** 🟢 (00:45 48%→소폭 상승, 정상 범위) |
-| 디스크 | 3% (29G/1007G) 🟢 |
-| Swap | 1,312MB / 2,048MB (64%) 🟡 (00:45 73.4%→64% 개선) |
-| WSL Uptime | **4일 35분** (5/5 04:04 기동) |
-| WSL KeepAlive | ✅ 정상 (bash 루프, 4일차) |
-
-### 🔔 00:45→04:45 변화점
-1. **CowAgent/MetaClaw MCP 서버 신규 기동** (02:01~02:02) — `~/.hermes/mcp-tools/cowagent/server.py` 및 `metaclaw/server.py`가 각각 기동되어 MCP tool로 등록됨. 이전에는 없던 신규 프로세스로, Trinity 서비스 복구 시도의 일환으로 추정.
-2. **Swap 73.4%→64% 개선** — 1,503MB→1,312MB로 약 191MB 해소. 물리 메모리는 안정적 유지.
-3. **Gateway 51h+ uptime 경신** — 5/7 01:19 --replace 재시작 후 연속 가동 기록 갱신 중.
-4. **야간 4시간, 신규 Critical 이슈 없음** — 시스템 전반 정적 상태 유지.
-
-### 📊 Macro (00:45 기준 변화 없음)
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | **7,490.05** (5/7 종가) | 사상 최고 유지, 주말 휴장 |
-| KOSDAQ | 1,199 (5/7) | 1,200선 이탈 |
-| USD/KRW | 1,447~1,451 | 원화 강세 지속 |
-| WTI | $94~$97 | $100 이탈 5일차 |
-
-### 포트폴리오
-- **현금 100%**: 4,929,810원 (초기자본 대비 -1.4%)
-- **포지션**: 없음 (5/7 전량 청산 완료)
-- 다음 거래일: 5/11(월)
-
-### 🐛 지속 이슈 (00:45 이후 변화 없음)
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | **yfinance .KS 티커 오류 (9일차)** — KOSPI=NaN, 종목 데이터 미수집 | 🔴 미해결 |
-| 2 | **KiwoomAuth 8050 지정단말기 인증 실패 (9일차)** | 🔴 미해결 |
-| 3 | **Tavily API 키 만료 (401)** — 검색 기능 마비 | 🔴 미해결 |
-| 4 | **MCP Python Zombie 5~6개** — RSS ~1KB 실행 중단 | 🔴 지속 |
-| 5 | **Trinity: CowAgent + OpenDesign 서비스 다운** | 🔴 지속 |
-| 6 | **MetaClaw HTTP 404** — 프로세스 생존하나 API 응답 불가 | 🟡 지속 |
-
-### 비고
-- 주말(5/9 토~5/10 일) 휴장, 다음 거래일 5/11(월)
-- Gateway 51h+ 무중단 기록, Jongdari 배틀루프 4일 연속 정상
-- CowAgent/MetaClaw MCP tool 신규 기동 — Trinity 생태계 복원 시도로 보이나 Trinity 서비스 자체는 미복구
-- 기록학 내용: 6개 Critical 이슈 전부 주말로 이월
-
----
-
-## 2026-05-09 (Sat) 16:45 — 토요일 오후 스냅샷 (04:45 이후 +12시간)
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 20920, 5/7~, **63h+** 연속 가동) |
-| Hermes CLI | ✅ tmux hermes 세션 유지 (5/5~, 4일차) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 15259, 5/5~, 4일차) |
-| OpenWebUI | ✅ 정상 (PID 87604, port 3000, 5/6~, 3일차) |
-| MetaClaw (Trinity) | ⚠️ PID 188742 생존 (port 30000, 404 지속) |
-| CowAgent/MetaClaw MCP | ✅ MCP tool 8개 정상 (02:01 기동) |
-| CowAgent/OpenDesign 서비스 | ❌ 다운 상태 유지 |
-| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od / cad / cargo / vo — **9개** (+cad, cargo, vo 신규) |
-| 메모리 | **3,830MB / 7,748MB (49%)** 🟢 (04:45 54%→49% 개선) |
-| 디스크 | 3% (26G/1007G) 🟢 |
-| Swap | 1,429MB / 2,048MB (70%) 🟡 (04:45 64%→70% 소폭 상승) |
-| WSL Uptime | **4.5일** (5/5 04:04 기동) |
-| WSL KeepAlive | ✅ 정상 (PID 25986, bash 루프) |
-
-### 🔔 04:45→16:45 변화점
-1. **KOSPI 5/8 종가 7,498.0** (+0.1%, 5/7 대비 소폭 상승) — 신규 데이터 수집 완료
-2. **메모리 54%→49% 개선** — 약 370MB 해소 (MCP 프로세스 안정화 효과)
-3. **tmux 세션 6→9개 증가** — `cad`, `cargo`, `vo` 신규 세션 발견 (16:36~16:46 생성)
-4. **Swap 64%→70% 소폭 상승** — 1,312→1,429MB (+117MB), 안정 범위
-5. **Gateway 51h→63h uptime 경신** — 추가 12시간 무중단
-6. **주말 오후, 신규 Critical 이슈 없음**
-
-### 📊 Macro (5/8 업데이트 반영)
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | **7,498.0** (5/8 종가) | 사상 최고, +0.1% 소폭 상승 |
-| KOSDAQ | 1,199 (5/7) | 1,200선 이탈 유지 |
-| USD/KRW | 1,447~1,451 | 변화 없음 |
-| WTI | $94~$97 | 지속 하락권 |
-
-### 포트폴리오 (변동 없음)
-- **현금 100%**: 4,929,810원 (초기자본 대비 -1.4%)
-- **포지션**: 없음
-- 다음 거래일: **5/11(월)**
-
-### 🐛 지속 이슈 (변화 없음, 10일차 진입)
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | **yfinance .KS 티커 오류** — KOSPI=NaN | 🔴 미해결 |
-| 2 | **KiwoomAuth 8050 지정단말기 인증 실패** | 🔴 미해결 |
-| 3 | **Tavily API 키 만료 (401)** — 검색 마비 | 🔴 미해결 |
-| 4 | **MCP Python Zombie 5~6개** — RSS ~1KB | 🔴 지속 |
-| 5 | **Trinity: CowAgent+OpenDesign 다운** | 🔴 지속 |
-| 6 | **MetaClaw HTTP 404** — 프로세스 생존 | 🟡 지속 |
-
-### 비고
-- 토요일 주말, 전일 대비 특이사항 없음. 6개 이슈 10일차 진입.
-- KOSPI 5/8 종가 7,498 — 추가 상승 없이 소폭 안정화. RSI 극단 과열권.
-- Gateway 63h+ 최장 uptime 기록 중. Jongdari 4일 연속 정상 운영.
-- 신규 tmux 세션(cad/cargo/vo) 확인 — 외부 작업 또는 자동화 프로세스로 추정.
-- 다음 거래일 5/11(월) 오픈까지 약 40시간 남음.
-
-## 2026-05-10 (Sun) 15:03 — 자동 주말 스냅샷
-
-### 시스템 현황 (전일 대비 변화 없음)
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | 정상 (PID 20920, uptime 3일 15h) |
-| Jongdari 배틀루프 | 비활성 (주말) |
-| MCP 서버 8개 | 모두 정상 |
-| Open WebUI | 정상 (:3000) |
-| 메모리 | 778MB / 7,748MB (~10%) — 안정적 |
-| Uptime | 5일 9h 50m |
-
-### 포트폴리오 (변동 없음)
-- **현금 100%**: 4,929,810원
-- **포지션**: 없음
-- 다음 거래일: **5/11(월)**
-
-### 📊 Macro
-| 지표 | 값 |
-|:-----|:----|
-| KOSPI (5/8) | 7,498.0 |
-| USD/KRW | 1,447~1,451 |
-| WTI | $94~$97 |
-
-### 지속 이슈 (11일차 진입, 변화 없음)
-1. yfinance .KS 티커 오류 (KOSPI=NaN) 🔴
-2. KiwoomAuth 8050 지정단말기 인증 실패 🔴
-3. Tavily API 키 만료 (401) 🔴
-4. MCP Python Zombie 5~6개 🔴
-5. Trinity: CowAgent+OpenDesign 다운 🔴
-6. MetaClaw HTTP 404 🟡
-
-### 비고
-- 일요일 주말, 전일 대비 특이사항 없음. 6개 이슈 11일차 진입.
-- Gateway 63h+ uptime 지속. KOSPI 7,498 — RSI 과열권 유지.
-- 신규 학습/기록할 기술 팁이나 버그 해결 사항 없음.
+*2026-05-26 08:45 KST — Pre-Open Update (D-DAY+1, Swap 371MiB 🟡, WTI $91 🔴, CB Score ?/100 🔴)*
 |
-## 2026-05-11 (Mon) 04:45 — 새벽 스냅샷 (00:45 이후 4시간, 거래일 D-DAY)
+## 🧠 Brain Sync — 2026-05-26 12:01 KST
 
-### 시스템 현황 (변화 없음, 00:45 기준 동일)
-| 항목 | 상태 |
+### 📋 스캔 결과
+| 항목 | 결과 |
 |:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 298, ~13h 가동) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 1884, 10분 주기 사이클) |
-| OpenWebUI | ✅ 정상 (port 3000, PID 307) |
-| MetaClaw | ✅ 정상 (port 30000, PID 3626) |
-| CowAgent/OpenDesign | ❌ 다운 (세션만 유지) |
-| 가상오피스(port 8001) | ✅ 정상 (PID 76154) |
-| 메모리 | 4,100MB/7,748MB (53%) 🟢 |
-| Swap | 0B 🟢 (완전 해소 유지) |
-| 디스크 | 3% (26G/1007G) 🟢 |
-| WSL Uptime | ~9.9h (5/10 재부팅) |
+| Context/ | 11개 파일, 40h+ 미변경 (5/25 00:42 이후) |
+| Members/ | Steven/Ideas 정적, LLM-Wiki-개선아이디어.md 마지막 변경 5/25 00:27 |
+| Agents/ | Hermes 2개 파일 정적 |
+| 00-Home.md | 5/26 Today 갱신됨 (Wiki 확장기 10:10 스캔) |
+| Git Changes (4h) | 35개 파일 — MCP 멀티검색 3건 (1045~4121), Daily Log 08:45, Auto-Evolution 0830·1030, wiki/macros·stocks 일괄 갱신 |
+| Context 승격 후보 | 17건 제안 (8건 🥇, 7건 🥈, 3건 🥉) — 33h+ 미승인 |
+| Brain Sync 이전 | 5/26 09:00 KST (3h 전) |
 
-### 00:45→04:45 변화
-- **4시간간 신규 이슈 없음** — 시스템 전반 정적 상태 유지
-- Swap 0B 유지, 메모리 47%→53% 소폭 상승 (정상 범위)
-- 금일(5/11 월) 09:00 거래일 재개
+### 💡 신규 발견 (금일)
+1. **🟢🟢 KOSPI 8,000선 돌파 (8,055 intraday)** — 4/27 저점 6,900 대비 +16.7% 상승. 현금 보유 기회비용 약 82만원 추정.
+2. **🔴 WTI $90.91 → $91.77 소폭 반등** — 전주 $96.60 대비 -5.9% 하락, $100선 하회 6일차.
+3. **🔴 Swap 371MiB 재축적** — 5/23 재부팅 후 3일째 35MiB→371MiB 증가. MetaClaw 468MB RSS 확인.
+4. **🔴 Self_heal.py 22일 중단** — 5/5 마지막 로그 이후 갱신 없음. CB Score 미기입 지속.
+5. **MCP 35회 연속 LOW SIGNAL** — 결정적 타협점 초과. MCP 검색 품질 개선 필요.
 
-### 포트폴리오 (변동 없음)
-- **현금 100%**: 4,929,810원 (초기자본 대비 -1.4%), 포지션 없음
+### 📊 시장 현황 (5/26 Tue 장중)
+| 항목 | 값 |
+|:-----|:---|
+| KOSPI | 8,055 (+2.65% 오늘, 8,000선 돌파! 🟢) |
+| WTI | $91.77 ($100 하회 6일차 🔴) |
+| USD/KRW | 1,507 (전주 1,511 대비 소폭 안정 🟡) |
+| 포트폴리오 | 현금 ₩492만 전량 보유 (34일차) |
 
-### Macro
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | 7,498.0 (5/8 종가) | 사상 최고, RSI 91.7 과열 |
-| USD/KRW | ₩1,461 | 중립권 |
-| WTI | $95 | $100 이탈 6일차 |
-| CB Score | 22/100 | 개선 중 |
-
-### 지속 이슈 (12일차 진입, 변화 없음)
-1. yfinance .KS 티커 오류 🔴
-2. KiwoomAuth 8050 지정단말기 인증 실패 🔴
-3. Tavily API 키 만료 (401) 🔴
-4. MCP Python Zombie 5~6개 🔴
-5. Trinity: CowAgent+OpenDesign 다운 🔴
-6. MetaClaw HTTP 404 🟡
-
-### 비고
-- 5/11(월) 09:00 거래일 재개. KOSPI 7,500 고점 테스트 관찰.
-- 00:45 이후 4시간, 시스템 정적 상태 — 기록할 신규 내용 없음.
+### 🔄 Context 승격 상태
+- **8건 🥇 우선순위** 제안 (33시간 경과) — 미승인 상태 지속
+- 승격 진행이 안 되어 Context/ 파일 목록 5/25 00:42 이후 변화 없음
+- 제안서(Context_승격_제안서.md)에 승격 기준, 경로, 사유까지 상세 작성됨
 
 ---
 
-## 2026-05-11 (Mon) 00:45 — 거래일 재개 새벽 스냅샷
+## 🧬 16:30 KST 마감 업데이트 — KOSPI 8,047.51 (+2.55%) 8,000선 안착
 
-### 시스템 현황
+### 시스템
 | 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 298, 5/10 15:44 --replace 재시작, ~9h 가동) |
-| Hermes CLI | ✅ tmux hermes 세션 유지 (5/10 15:45~) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 1884, nexus_orchestrator, 10분 주기 사이클, 00:40 Cycle Complete) |
-| OpenWebUI | ✅ 정상 (PID 307, port 3000, 200 OK, 10% 메모리) |
-| MetaClaw | ✅ 정상 (PID 3626, port 30000, trinity-metaclaw 세션) |
-| CowAgent (Trinity) | ⚠️ tmux 세션만 유지, 서비스 다운 |
-| OpenDesign (Trinity) | ⚠️ tmux 세션만 유지, 서비스 다운 |
-| tmux 세션 | hermes / hermes-mcp / jongdari / trinity-cow / trinity-meta / trinity-od — 6개 |
-| MCP 서버 5+종 | ✅ 정상 (time/fetch/filesystem/tavily + Python MCP) |
-| 가상오피스(port 8001) | ✅ 정상 (uvicorn, PID 76154) |
-| 메모리 | **3,600MB / 7,748MB (47%)** 🟢 안정 |
-| 디스크 | 3% (26G/1007G) 🟢 |
-| Swap | 0B 사용 🟢 (이전 73% → 완전 해소) |
-| Load Average | 0.14/0.33/0.41 🟢 |
-| WSL Uptime | **5h 51m** (5/10 19:00 WSL 재부팅) |
-| Gateway Uptime | ~9h (5/10 15:44 재시작) |
+|:-----|:-----|
+| WSL | 🟢 1일 22:50 업타임 |
+| Memory | 🟢 3.4Gi/7.6Gi (45%) |
+| Swap | 🟡 441MiB/2.0Gi (22%) — 500MiB 모니터링 |
+| Gateway/WebUI/Watchdog | ✅ 모두 정상 |
+| Nexus Battle Loop | ✅ 16:29 사이클 완료 (Council 전원 HOLD) |
 
-### 포트폴리오
-- **현금 100%**: 4,929,810원 (초기자본 대비 -1.4%)
-- **포지션**: 없음 (5/7 전량 청산 완료)
-- **paper_portfolio**: 청산 후 미발견
+### 시장 마감
+| 항목 | 값 |
+|:-----|:---|
+| KOSPI | **8,047.51** (+2.55%) 🟢🟢 — 사상 첫 8,000 마감 |
+| WTI | $92.72 (100달러 하회 7일차 🔴) |
+| USD/KRW | 1,503.39 (원화 강세 🟢) |
 
-### Macro (Jongdari 배틀루프 마지막 수집 기준)
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | **7,498.0** (5/8 종가) | 사상 최고 유지, 주말 간 정체 |
-| KOSDAQ | 1,207.72 (5/8) | 소폭 회복 |
-| CB Score | **22/100** | 이전 30→22 소폭 개선, 여전히 공포 |
-| KOSPI 1M 모멘텀 | **+36.5%** | 극단적 상승 |
-| WTI | **$95** | $100 이탈 6일차 |
-| USD/KRW | **₩1,461** | 중립권, 안정적 |
-| 시장데이터 | 뉴스 8건 / 모멘텀 5개 | 정상 수집 |
+### 금일 활동 요약
+- **Git 21개 커밋** — Brain Sync 7회, MCP 검색 9건, Cron 지식 2건, Wiki 업데이트 3건
+- **Tech Scavenger 16개 신규 논문 저장** (13:20 배치) — "Anticipate and Learn" ⭐
+- **MCP 멀티검색 18건** 생성
+- **자기 진화 8+ 사이클** 완료
+- **자세한 활동 내역:** `outputs/2026-05-26-daily-log.md`
 
-### AI Council (00:40 기준)
-- **061090.KQ → SELL(신뢰도 19%)** — 기술적:STRONG_SELL(25%) / 뉴스:HOLD(50%) / 리스크:HOLD(47%)
-- Deep Dive 사이클 정상: 10분 주기로 15개 KOSDAQ 종목 순환 분석 중
-
-### 📌 오늘(5/11 월) 체크포인트
-- 🔴 **6개 Critical 이슈 그대로 주말 이월** — 12일차 진입
-  1. yfinance .KS 티커 오류 (KOSPI=NaN)
-  2. KiwoomAuth 8050 지정단말기 인증 실패
-  3. Tavily API 키 만료 (401)
-  4. MCP Python Zombie 5~6개
-  5. Trinity: CowAgent+OpenDesign 다운
-  6. MetaClaw HTTP 404 (port 30000 생존)
-- 📊 KOSPI 7,500 고점 테스트 — RSI 91.7 과열, 단기 조정 가능성
-- 🟢 Swap 완전 해소 (0B) — 메모리 상태 최적
-- 🟢 가상오피스 재가동 (port 8001, uvicorn)
-
-### 비고
-- 5/11(월) 거래일 재개. KOSPI 5/8 7,498 마감 후 2일 휴장.
-- Gateway 5/10 15:44 재시작 후 정상 유지. CLI 세션 2개 활성.
-- 주말 간 시스템 전반 안정적. 신규 학습/기술 팁/버그 없음.
-
-### 2026-05-10 (Sun) — Tech Scavenger DNS Failure
-- **17:20 KST**: `hermes_tech_scavenger.py` timed out after 120s
-- **Root cause**: Transient DNS failure (`Temporary failure in name resolution`) at 17:20 UTC
-- **Impact**: All 3 channels (GitHub 0/30, arXiv partial, HF 0/10) failed to collect
-- **Fix applied (v1.2)**: Early-abort on DNS failure — if DNS error detected, skip remaining queries instead of timing out on each one sequentially
-- **Script fixed**: `~/.hermes/scripts/hermes_tech_scavenger.py` — `dns_ok` flag in `scavenge_github()` and `scavenge_arxiv()`
-- **Skill updated**: `devops/hermes-tech-scavenger` — DNS failure section added
-
-## 2026-05-10 (Sun) 20:45 — 주말 저녁 스냅샷
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | 정상 (PID 298, 15:44 재시작) |
-| Hermes CLI | tmux hermes 세션 유지 |
-| MetaClaw | 정상 (port 30000, PID 3626) |
-| Jongdari 배틀루프 | 정상 — 10분 주기 사이클 완료 |
-| WebUI | 정상 (port 3000, PID 307) |
-| MCP 서버 5개 | 모두 정상 |
-| 메모리 | 3,641MB / 7,748MB (47%) |
-| 디스크 | 26G/1007G (3%) |
-| Gateway Uptime | ~5시간 (15:44 재시작) |
-
-### 포트폴리오 (Dashboard 5/7 기준 — 미갱신)
-- 현금: 4,655,810원 | 총 평가: 4,936,810원 (-1.26%)
-- 나우로보틱스(459510.KQ): 10주 @30,550원 → 28,100원 (-8.02%)
-- **참고**: 실제 포지션은 5/8(금) 청산 후 100% 현금(4,929,810원) 상태로 확인됨. Dashboard 갱신 필요.
-
-### 시장 (5/8 마감 기준 — 휴장)
-- KOSPI: 7,498.00 (RSI 91.7, 과열) | KOSDAQ: 1,207.72
-- USD/KRW: 1,461.48 (중립) | WTI: $95.42 (중립, 주간 -10%)
-- 삼성부광: 8,980원 (+6.02%) | 에이치엘사이언스: 17,700원 (+4.49%)
-
-### 지속 이슈 (11일차)
-- 6건 미해결: KiwoomAuth 8050, yfinance NaN, Tavily API 만료, MCP 좀비, MetaClaw 404, CowAgent/OpenDesign 다운
-- Dashboard 3일 이상 미갱신 (마지막: 5/7 00:17)
-
-### 주말 요약
-- DNS 장애(fix v1.2) 적용 확인. Tech Scavenger 정상화.
-- Skill 라이브러리 47개 유지 (신규 흡수 없음)
-
-## 2026-05-11 (Mon) 08:30 — 프리마켓 스냅샷 (T-30min)
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | 정상 (PID 298, 17h uptime) |
-| Memory | 4.1Gi/7.6Gi (53%) |
-| Disk | 26G/1007G (3%) |
-| Swap | ~0MiB (완전 해소) |
-| Dashboard | ✅ **갱신 완료 (5/7→5/11 08:30)** |
-| WTI | **$98.33 (+3.05% 주말 반등)** — 5/8 $95.42→5/10 $98.33 |
-| KOSPI | 7,498.00 — RSI 91.7 과매수, 7,500선 테스트 imminent |
-
-### 금일 관찰 포인트
-- KOSPI 7,500 고점 테스트 — RSI 91.7 과열, 단기 조정 가능성
-- 삼성부광 5/8 +6.02% 반등 이후 추세 지속 여부
-- WTI $100선 재돌파 시도 — 에너지 섹터 영향
-- 포트폴리오: 100% 현금 (₩4,929,810)
-
-### 신규 지식 흡수 (07:07 KST)
-- **Culture Economy 8건** — K-구독박스/Alibaba B2B/K-뷰티 유럽/BTS 머천다이징/K-Food 공급망 등 물류 연계 기회 매핑
-- **Key Takeaways 3건 보완 완료** — agent-skills-eval/CodexSaver/yt-dlp
-|- **47개 스킬 유지** (신규 스킬 흡수 없음), Dashboard 갱신 완료
-|- 월요일(5/11) 개장 준비: KOSPI 7,500 고점 테스트 관찰, Dashboard 갱신
-
-## 2026-05-12 (Tue) 00:30 — Evolution Cycle (Market Close + 12h)
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 |
-| 메모리 | 🟢 ~50% |
-| 디스크 | 🟢 3% (26G/1007G) |
-| MetaClaw | ✅ 정상 (port 30000) |
-| OpenWebUI | ✅ 정상 (port 3000) |
-| Jongdari 배틀루프 | ✅ 정상 |
-| MCP 서버 | ✅ 정상 |
-| Dashboard JSON | 🔴 **5일차 스테일** (5/7 데이터) |
-
-### 지식 흡수
-- **1개 신규 문서**: MCP-멀티검색-20260511_1040.md (올리브영 2026 인기상품 리서치)
-- **0개 신규 스킬** — 47개 스킬 유지 (변동 없음)
-- Key Takeaways 3건 모두 해결 (이전 사이클)
-
-### 시장 리뷰 (5/11 거래일)
-- **KOSPI**: 10:10 스캔 기준 7,867 (+4.93% 급등, RSI 95.0 극단 과매수)
-- **KOSDAQ**: 1,194 (-1.11%) — 대형주와 소형주 극심한 괴리
-- **삼성부광**: 8,480원 (-5.57% 당일) — 청산 결정의 적절성 재확인
-- **WTI**: $99.03 (+3.78%) — $100선 임박
-- **USD/KRW**: 1,470.78 (+1.10%)
-- **포트폴리오**: **현금 100% 유지** (₩4,929,810) — 청산 결정 적절했음
-
-### 🐛 지속 이슈 (13일차, 변화 없음)
-| # | 이슈 | 상태 |
-|:-:|:-----|:----:|
-| 1 | yfinance .KS 티커 오류 (KOSPI=NaN) | 🔴 미해결 |
-| 2 | KiwoomAuth 8050 인증 실패 | 🔴 미해결 |
-| 3 | Tavily API 키 만료 (401) | 🔴 미해결 |
-| 4 | MCP Python Zombie 5~6개 | 🔴 지속 |
-| 5 | Trinity: CowAgent+OpenDesign 다운 | 🔴 지속 |
-- 신규 지식 흡수: 1개 (비즈니스 인텔리전스), 스킬 변화 없음
-
-## 2026-05-12 (Tue) 00:45 — Cron 스냅샷 (15분 경과, 변경 없음)
-
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 298, 5/10 시작) |
-| OpenWebUI | ✅ 정상 (port 3000) |
-| MetaClaw | ✅ 정상 (port 30000, PID 3626) |
-| Jongdari 배틀루프 | ✅ 정상 (tmux 세션 유지) |
-| MCP 서버 | 🟡 3개 확인 (기존 8개→3개, 일부 유실 가능) |
-| Dashboard JSON | 🔴 5일차 스테일 (5/7 데이터, 파일 타임스탬프만 갱신) |
-| 메모리 | 🟡 4.4Gi/7.6Gi (58%, 전일比 상승) |
-| 디스크 | 🟢 3% (26G/1007G) |
-| Uptime | 1일 5:56 |
-
-### 이슈 현황 (14일차 진입, 모두 변동 없음)
-1. yfinance .KS 티커 오류 (KOSPI=NaN) — 🔴 미해결
-2. KiwoomAuth 8050 인증 실패 — 🔴 미해결
-3. Tavily API 키 만료 (401) — 🔴 미해결
-4. MCP Python Zombie (5~6개→현재 3개 추정) — 🔴 지속
-5. Trinity: CowAgent+OpenDesign 다운 — 🔴 지속
-6. MetaClaw HTTP 404 — 🟡 지속
-
-### 비고
-- 00:44:35 MCP fetch/fetch transient error 1회 발생 (자동 복구)
-- 00:30 대비 신규 이슈·변화 없음 — 모든 지속 이슈 14일차
-- 포트폴리오: 현금 100% 유지 (₩4,929,810)
-- KOSPI 7,867 RSI 95.0 — 5/12 조정 리스크 여전
+### 지속적 이슈 (32일차)
+- 🔴 Self_heal.py 22일 중단 → CB Score ?/100
+- 🟡 Council HOLD bias 7일차 (KOSPI +16.6%에도 매수 없음)
+- 🟡 Context 승격 8건🥇 48h+ 미승인
+- 🟡 MCP 35회 연속 LOW SIGNAL (Naver noise)
 
 ---
 
-### 결론 (00:30 사이클)
-- KOSPI 7,867 RSI 95.0 — 극단적 과매수, 5/12 조정 가능성 높음
-- 포트폴리오 현금 100% 유지 — 시장 급등에도 소형주 디커플링으로 진입 자제 타당
-- 6개 Critical 이슈 13일차 진입 — 수동 개입 필요
-- 신규 지식 흡수: 1개 (비즈니스 인텔리전스), 스킬 변화 없음
+*Recorded by Hermes Agent Cron on 2026-05-26 16:45 KST — KOSPI 8,047.51 close confirmed*
 
-## 2026-05-12 (Tue) 11:00 — 🧠 Brain Sync
+## 🧠 Brain Sync — 20:00 KST (매시 사이클)
+**Context/Members/Agents 미변동 — 17:00→20:00 KST**
 
-### 시스템 현황
+### 시스템 스냅샷
+- **KOSPI 8,085.46** 🚀 확정 마감 (+3.03% 오늘, +17.1% from 4/27 저점)
+- **Swap 452MiB** 🟡 — 18:30 450→452MiB (+2MiB, 추세적 증가 지속, 500MiB까지 48MiB)
+- **Nexus 19:54 Cycle 정상** — 기술적 분석관 033500.KQ에서 BUY(74%), 087600.KQ에서 BUY(74%) 냈으나 HOLD로 무효화
+- **OpenClaw Gateway 세션 없음** — WebUI 접속 불가 상태 (서비스 복구 필요)
+- **hermes-watcher 세션 없음** — Obsidian ↔ Hermes 브리지 비활성
+
+### ⚠️ Context 승격 48h 타임아웃 임박 — 5/27 00:27 KST (4.4h 남음)
+8건🥇 최우선 승격이 5/25 00:25부터 pending. 48h 정책에 따라 **5/27 00:27 KST 자동 승격 트리거 or 타임아웃 처리 필요.**
+
+### MCP 멀티검색 현황
+- 18:41-18:51 KST: **4개 추가 문서** → 10_Wiki/ → 모두 LOW SIGNAL (31~34회 연속)
+- 신호 누적: 34회 연속 LOW — 검색 소스 전환(Google News/Yahoo Finance) 필요성 증가
+- 이 문서들은 Context 승격 가치 낮음 (일회성 MCP 로그)
+
+### 변경 감지 (17:00 이후)
+- wiki/stocks/ 삼성부광·에이치엘사이언스·나우로보틱스 기술적 지표 갱신 (19:11)
+- wiki/macros/ KOSPI·KOSDAQ·환율·WTI 기술적 지표 갱신 (19:11)
+- 10_Wiki/ 4개 MCP 멀티검색 추가 (18:41-18:51)
+- Context/Members/Agents: **변경 없음**
+
+*Recorded by Hermes Agent Brain Sync on 2026-05-26 20:00 KST — KOSPI 8,085.46 close confirmed*
+
+
+## 2026-05-27 00:00 KST — 자정 뇌동기화 사이클
+
+**상태**: 🟡 MINOR — Context 승격 48h deadline 초과, Swap 🔴 위험
+
+### 📊 시장 요약 (5/26 confirmed close)
+| 지표 | 값 | 변화 |
+|:----|:--|:----:|
+| KOSPI | 8,047.51 🟢 | +199.80p (+2.55%) — 8,000선 돌파 유지! |
+| KOSDAQ | 1,172.52 🟢 | +11.39p (+0.98%) — 약한 상승 |
+| USD/KRW | 1,504.46 🟢 | -0.55% — 원화 강세 |
+| WTI | $92.63 🔴 | -4.11% — 7거래일 중 6일 하락, $90선 위협 |
+
+### 🧠 Vault 지식 동향
+- **Macro 데이터 정정 완료**: yfinance 12:33 intraday → 22:10 confirmed close 일괄 반영 (4개 macro + 3개 sector + 3개 stock)
+- **Context 승격**: 17건 제안 중 🥇 8건 48h deadline **초과** (5/27 00:27 마감)
+  - ✅ 1건만 승격 완료 (직원용-코딩-가이드)
+  - ❌ 7건 미승인: Operations-Guide, Vault-구조, 지식베이스, 시스템-아키텍처, AI-Council, 트레이딩전략, 사업인덱스
+- **MCP 멀티검색**: 40th+ 연속 LOW SIGNAL — Naver noise + stale GitHub
+
+### 🔴 주요 리스크
+1. **Swap 499MiB** — 500MiB 임계 도달, 재부팅 필요
+2. **Dashboard CB Score ?/100 재발** — 12시간만에 복귀
+3. **MCP source diversification 필요** — Naver 의존도 100%
+
+## 2026-05-27 00:46 KST — 자정 후 상태 점검 사이클
+
+**상태**: 🔴 CRITICAL — Swap 500MiB 임계 초과!, 나머지 MINOR
+
+### 📊 시스템 스냅샷 (00:46 KST)
 | 항목 | 상태 |
 |:-----|:------|
-| Hermes Gateway | ✅ 정상 |
-| Tech Brain Sync | ✅ 70개 문서 유지, 9개 arXiv + 2개 GitHub 처리 |
-| 신규 문서 | 11개 (9 arXiv + 2 GitHub) — 모두 기존 중복 → 스킵 |
-| 중복 스킵 | 9개 arXiv (429 rate limit 복구 후 기존 데이터 활용) |
-| Brain Sync 상태 | Key Takeaways 작성 완료, AI_Agents Index 업데이트 |
+| WSL Uptime | 2d 7h (5/24 17:40 재부팅 이후, 3일차) |
+| Memory | 3.2Gi/7.6Gi (42%) |
+| **Swap** | **511MiB 🔴🔴 — 500MiB 초과!** |
+| Load Avg | 0.74 / 0.43 / 0.42 |
+| Disk | 4% |
+| KOSPI | 8,047.51 🟢 (5/26 confirmed close) |
+| CB Score (Nexus) | 22/100 🟢 (v4.1 정상) |
+| CB Score (Dashboard) | ?/100 🔴 (재발) |
+| Portfolios | ₩4,929,810 (포지션 0, 35일차) |
 
-### Today's Paper Batch Analysis
+### 📋 22:30→00:46 사이 타임라인
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 22:30 | 🧬 Auto-Evolution 11차 — Council v4.1 첫 적용 완료 |
+| 22:41-22:43 | 📡 MCP 멀티검색 3건 (모두 LOW SIGNAL — 43회 연속) |
+| 23:12 | 📊 10_Wiki/Macros/ 4개 confirmed close 갱신 |
+| 00:03 | 🧠 Brain Sync log + 00-Home + Daily Log 동기화 batch |
+| 00:11 | 📊 wiki/sectors/코스닥중소형 갱신 |
+| **00:46** | **NOW — Swap 511MiB 🔴🔴 500MiB 임계 초과 확인** |
 
-| Paper | Category | Verdict |
-|-------|----------|---------|
-| **LLMs Improving LLMs: Agentic Discovery for TTS** (2605.08083) | AI_Agents | ✅ HIGH — Hermes self-evolution pattern |
-| **The Memory Curse** (2605.08060) 🔴 | AI_Agents | 🚨 CRITICAL — multi-agent cooperation risk |
-| **VecCISC: Confidence-Informed Self-Consistency** (2605.08070) | LLM | ✅ HIGH — consensus mechanism upgrade |
-| **Conformal Path Reasoning for KGQA** (2605.08077) | LLM | 🟡 Medium — structured retrieval calibration |
-| **Flow-OPD: On-Policy Distillation** (2605.08063) | NLP | 🟡 Medium — gradient interference concept |
-| **EmambaIR** (2605.08073) | CV | ⏭️ Skipped — CV domain |
-| **Normalizing Trajectory Models** (2605.08078) | DL | ⏭️ Skipped — generative |
-| **123D: Autonomous Driving Data** (2605.08084) | Robotics | ⏭️ Skipped — driving domain |
-| **Zero-Shot Imagined Speech Decoding** (2605.08075) | BCI | ⏭️ Skipped — neuroscience |
+### 🔴 주요 리스크
+1. **Swap 511MiB 🔴🔴** — 500MiB 임계 최초 초과! 22:30 499→00:46 511 (+12MiB/2h). 추세 유지 시 08:00 pre-market 540MiB+ 전망. 재부팅 시급.
+2. **Dashboard CB Score ?/100 재발** — 12h cycle 패턴 입증 (10:30 복구→22:32 재발)
+3. **Council v4.1 첫 장중 분석** — 오늘(5/27) 09:00 오픈 후 첫 분석. 포지션 진입 가능성 평가 필요.
+4. **MCP 43회 연속 LOW SIGNAL** — Google News 전환 필요
 
-### GitHub Trending
-| Repo | Stars | Notes |
-|------|-------|-------|
-| haydenbleasel/files-sdk | ⭐337 | Unified storage SDK for blob/object backends |
-| shareAI-lab/learn-claude-code | ⭐59,773 | Bash-only nano agent harness (0→1) |
-
-### Key Insight — The Memory Curse
-**⚠️ This is the most important finding today.** The paper empirically demonstrates that LLM agents with *more* context history become *less* cooperative in multi-agent settings. This is counterintuitive — we assume more memory helps — but the data shows it doesn't. For Hermes' AI Council (multiple agents voting/negotiating), this means:
-- Shared context windows between council members may *worsen* consensus quality
-- Bounded, scoped memory per interaction may outperform full-history sharing
-- Implement cooperative intent verification gates between agent handoffs
-
-### 지속 이슈 (14일차)
-1. yfinance .KS 티커 오류 (KOSPI=NaN) — 🔴 미해결
-2. KiwoomAuth 8050 인증 실패 — 🔴 미해결
-3. Tavily API 키 만료 (401) — 🔴 미해결
-4. MCP Python Zombie — 🔴 지속
-5. Trinity: CowAgent+OpenDesign 다운 — 🔴 지속
-6. MetaClaw HTTP 404 — 🟡 지속
-
-### 포트폴리오
-- 현금 100% 유지 (₩4,929,810)
-- KOSPI 7,867 RSI 95.0 — 5/12 조정 리스크 지속
+*Recorded by Hermes Agent on 2026-05-27 00:46 KST — Swap 511MiB 🔴🔴 임계 초과 | Council v4.1 ✅ | KOSPI 8,047 🟢*
 
 ---
 
-## 2026-05-12 (Tue) 12:00 — 🧠 Brain Sync (2차 — 1120~1200 배치)
+## 2026-05-27 04:46 KST — Pre-Market 새벽 점검 (Swap 위기 심화)
 
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Tech Brain Sync | ✅ 99개 문서 유지, 10개 신규 저장 (2개 중복 스킵) |
-| 신규 문서 | 10개 (arXiv + GitHub Trending) |
-| 10_Wiki Index | ✅ 갱신 완료 (12→75 docs, AI_Agents/MCP 카테고리 추가) |
+**상태**: 🔴 CRITICAL — Swap 608MiB, 500MiB 임계 대폭 초과, 급가속 중
 
-### Today's 2nd Batch Analysis
+### 📊 시스템 현황 (04:46 KST)
+| 항목 | 00:46 | 04:46 | 변화 |
+|:-----|:-----:|:-----:|:----:|
+| **Swap** | 511MiB 🔴🔴 | **608MiB 🔴🔴🔴** | **+97MiB (+19%) in 3.7h** |
+| Memory | 3.2Gi (42%) | 3.4Gi (45%) | +200MiB |
+| Load Avg | 0.74 | 1.56 | Nexus 재시작 영향 |
+| WSL Uptime | 2d 7h | 2d 10h 50m | +3h 45m |
 
-| Paper/Source | Category | Verdict |
-|-------------|----------|---------|
-| **Agentic MIP Research** (2605.09186) | AI_Agents | 🟡 Medium — LLM-driven MIP constraint handler generation |
-| **Beyond Autonomy: Tiered AgentRunner** (2605.10223) | AI_Agents | ✅ HIGH — Enterprise governable agent framework (write-review gates, acceptance verification) |
-| **FusionRCG** (2605.10312) | HPC | ⏭️ Skipped — GPU memory for quantum chemistry |
-| **RADAR: Redundancy-Aware Diffusion** (2605.09907) | AI_Agents | ✅ HIGH — Multi-agent comm structure generation via diffusion |
-| **STAR: Failure-Aware Markov Routing** (2605.10057) | AI_Agents | ✅ HIGH — Multi-agent spatiotemporal reasoning with failure recovery |
-| **GELATO: Adaptive Token Offloading** (2605.10124) | LLM | 🟡 Medium — Device-edge speculative LLM inference |
-| **Open Ontologies** (2605.09184) | MCP | ✅ HIGH — Rust-based ontology engineering via MCP protocol |
-| **DP-LAC: Adaptive Clipping** (2605.10272) | LLM | 🟡 Medium — Federated fine-tuning DP-SGD optimization |
-| **Usability as a Weapon** (2605.10133) | LLM/Security | ✅ HIGH — Usability requirements used to bypass LLM code safety |
-| **Positive Alignment: AI for Human Flourishing** (2605.10310) | RL/Alignment | 🟡 Medium — Beyond safety to positive AI design |
-| **shareAI-lab/learn-claude-code** (⭐59,773) | GitHub | 🟡 Medium — Bash-only nano agent harness 0→1 |
-| **PixelFlowCast** (2605.10046) | DL/CV | ⏭️ Skipped — weather nowcasting domain |
-| **MARGIN: Vulnerability Detection** (2605.10240) | LLM/Security | 🟡 Medium — Imbalanced vulnerability detection via geometry |
-| **Nano-U: Terrain Segmentation** (2605.10265) | MLOps | ⏭️ Skipped — tiny robot navigation |
-| **PaMoSplat: Gaussian Splatting** (2605.10099) | CV | ⏭️ Skipped — 3D reconstruction |
-| **Emergent Semantic Role Understanding** (2605.10290) | CV | ⏭️ Skipped |
-| **Active Tabular Augmentation via Diffusion** (2605.10304) | DL | ⏭️ Skipped |
-| **GRAPHLCP: Conformal Prediction** (2605.10262) | Tools | 🟡 Medium — Structure-aware localized conformal prediction |
-| **Signature Approach for Contextual Bandits** (2605.10283) | LLM | ⏭️ Skipped |
-| **MCP-멀티검색: 올리브영 2026 인기상품** | MCP | 📊 Culture-Economy intelligence report |
+### 🗓️ 거래일 현황
+- **5/27(수) — 석가탄신일 휴장** (wiki log 기준, 다음 거래일 5/28 목)
+- Council v4.1 첫 장중 분석은 5/28(목) 오픈으로 연기
 
-### Key Findings for Hermes
+### 🚨 Swap 긴급 — 가속 패턴 발견
+| 시간 | Swap | 증가율 |
+|:-----|:----:|:------:|
+| 5/26 22:30 | 499MiB | 기준 |
+| 5/27 00:46 | 511MiB | +6MiB/h |
+| 5/27 04:30 | 608MiB | **+26MiB/h (4x 가속!)** |
 
-1. **🔴 Memory Curse confirmed** (already in 11:00 log) — the most critical paper this cycle for Hermes AI Council
-2. **🟢 Beyond Autonomy/AgentRunner** — enterprise agent frameworks converging on 3-tier architecture: independent review gates, acceptance verification, tiered compute allocation → aligns with Hermes' constraint_decay_awareness and execution_lineage_dag patterns
-3. **🟢 RADAR** — multi-agent communication optimization via redundancy-aware structure generation → applicable to Hermes Trinity coordination optimization
-4. **🟢 STAR** — failure-aware routing with MARL for multi-agent systems → applicable to Hermes delegation failure recovery
-5. **🟢 Open Ontologies** — MCP-based ontology engineering in Rust → MCP protocol expanding into knowledge engineering domain
-6. **🟢 Usability as a Weapon** — usability requirements (high-signal) override implicit security requirements (low-signal) in LLM code gen → defensive coding guidance for Hermes' own code generation
+Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 — 5/28(목) 장 마감 후 재부팅 최적.
 
-### 지속 이슈 (14일차 — 변화 없음)
-1. yfinance .KS 티커 오류 (KOSPI=NaN) — 🔴
-2. KiwoomAuth 8050 인증 실패 — 🔴
-3. Tavily API 키 만료 (401) — 🔴
-4. MetaClaw HTTP 404 — 🟡
-5. Trinity: CowAgent+OpenDesign — 🔴
-6. Dashboard JSON stale (5/7) — 🔴
-7. MCP Python Zombie — 🔴
+### 🔴 주요 리스크 (업데이트)
+1. **Swap 608MiB 🔴🔴🔴** — 500MiB 임계 +108MiB 초과. 증가율 4배 가속. 08:00 ~700MiB 예상.
+2. **Dashboard CB Score ?/100 🔴** — 12h+ 미복구 (00:46→04:46)
+3. **Nexus Council v4.1 정상 운영** ✅ — 04:05 재시작 이후 27분 정상 사이클 (457370→SELL(19%), 474650→SELL(18%))
+4. **KiwoomAuth 8050 🔴 35일차** — 지정단말기 인증 실패 지속
+5. **Hermes 3442 commits behind 🟡** — 업데이트 필요
 
-### 포트폴리오
-- 현금 100% 유지 (₩4,929,810)
-- KOSPI 7,948 (+6.00%) RSI 84.9 — 극단 과매수 유지
-- 삼성부광 8,240원 RSI 29.4 — 과매도 진입 (포트폴리오 -17.93%)
-- USD/KRW 1,482.63 (+1.51%) — 4일 연속 원화 약세
-- WTI $98.54 — $100 저항 재확인
-|
+*Recorded by Hermes Agent on 2026-05-27 04:46 KST — Swap 608MiB 🔴🔴🔴 급가속 중 | 석가탄신일 휴장 | Council v4.1 ✅*
 
 ---
 
-## 2026-05-13 (Wed) 00:46 — 새벽 스냅샷 (5/12 12:00 이후 +12h)
+## 2026-05-27 08:45 KST — Pre-Market 점검 (휴장, Swap 698MiB 위기 고조)
 
-### 시스템 현황
+**상태**: 🔴🔴🔴 CRITICAL — Swap 698MiB, 90MiB/h 급가속!, 휴장일이라 시스템 부담 낮아도 증가 지속
+
+### 📊 시스템 현황 (08:45 KST)
+
+| 항목 | 04:46 | 08:45 | 변화 |
+|:-----|:-----:|:-----:|:----:|
+| **Swap** | 608MiB 🔴🔴🔴 | **698MiB 🔴🔴🔴🔴** | **+90MiB (+14.8%) in 4h** |
+| Memory | 3.4Gi (45%) | 3.3Gi (43%) | -100MiB (안정) |
+| Load Avg | 1.56 (Nexus 재시작) | 0.20 / 0.15 / 0.18 | 🟢 안정화 |
+| WSL Uptime | 2d 10h 50m | 2d 15h 4m | +4h 14m |
+
+### 📊 Swap 위기 — 시간별 증가율 추이
+
+| 시간 | Swap | 증가율 | 비고 |
+|:----|:----:|:------:|:-----|
+| 5/26 22:30 | 499MiB | 기준 | 임계 진입 직전 |
+| 5/27 00:46 | 511MiB | +6MiB/h | 500MiB 최초 초과 |
+| 5/27 04:30 | 608MiB | +26MiB/h (4x) | 급가속 시작 |
+| 5/27 06:00 | 618MiB | +5MiB/h (감속) | Brain Sync 사이클 |
+| **5/27 08:45** | **698MiB 🔴🔴🔴** | **+36MiB/h (재가속)** | **2.0Gi 대비 35% 사용** |
+
+**위기 분석**: 06:00→08:45, 2h 45m 동안 +80MiB 증가. 06:00 Brain Sync 사이클 이후 소폭 감속했으나 08:00 이후 재가속. 2.0Gi 제한 대비 35% 사용 — 아직 여유는 있지만 이 추세면 5/28 오전 중 1.0Gi 도달 예상. **5/28(목) 장 마감 후 재부팅 필수.**
+
+### 🗓️ 오늘의 주요 이벤트
+
+- **5/27(수) — 석가탄신일, 거래소 휴장** (다음 거래일: 5/28 목)
+- Council v4.1 첫 장중 분석은 5/28(목) 오픈으로 연기
+- **06:00 Brain Sync**: _Index.md 전면 갱신 완료 (241→493 docs, 실제 파일 기반으로 정정)
+- **06:00~06:52**: MCP 멀티검색 6건 실행 (KOSPI/KOSDAQ 마감 동향, OpenAI GPT-5, 환율, 트럼프 관세, HBM4, 글로벌 금융시장)
+- **06:11~**: 문화×경제 시너지 인텔리전스 수집 실행 — Tavily 401 에러 → Google News RSS fallback 성공, 42개 검색결과 → 9개 MD 파일 생성
+  - 수익모델 7개 (K-food 30개 허브, OliveYoung vs SILICON2 K-뷰티 美 유통, BTS 컴백 머천다이징, K-뷰티 유럽·중동·중남미 다각화, DHL SME 크로스보더, K-콘텐츠 수출, 글로벌 푸드 트레이드)
+  - 물류 연계 1개 (FedEx 한-대만 직항)
+  - 인사이트 1개 (K-컬처 글로벌 트렌드)
+
+### 🔴 주요 리스크 (08:45 기준)
+
+| # | 리스크 | 심각도 | 상태 |
+|:-:|:-------|:------:|:-----|
+| 1 | **Swap 698MiB** — 2.0Gi 대비 35%, 재가속 중 | 🔴🔴🔴🔴 | 2.0Gi 한도 도달 전 재부팅 필요 |
+| 2 | **Dashboard CB Score ?/100** — 12h+ 미복구 | 🔴🔴 | 04:46 이후 추가 복구 없음 |
+| 3 | **KiwoomAuth 8050** — 35일차 지속 | 🔴 | 지정단말기 인증 실패 |
+| 4 | **MCP 43+회 연속 LOW SIGNAL** | 🟡 | Google News 전환 시도했으나 Tavily 401 |
+| 5 | **Context 승격 7건 48h+ deadline 초과** | 🟡 | Steven 승인 대기 중 |
+
+### ✅ 정상 운영
+
 | 항목 | 상태 |
 |:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 298, 5/10~, **3일차 가동**) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 1884, nexus_orchestrator) |
-| OpenWebUI | ✅ 정상 (port 3000, PID 307) |
-| MetaClaw | ✅ 정상 (port 30000, PID 3626) |
-| CowAgent/OpenDesign (Trinity) | ❌ 세션만 생존, 서비스 다운 |
-| MCP 서버 | ✅ filesystem/time/fetch/tavily + Python MCP 정상 |
-| 메모리 | 4,300MB / 7,748MB (55%) 🟢 |
-| 디스크 | 3% (26G/1007G) 🟢 |
-| Swap | 799MB / 2,048MB (39%) 🟡 |
-| WSL Uptime | 2d 6h (5/10 19:00 재부팅) |
-| Dashboard JSON | 🔴 **6일차 스테일** (5/7 데이터) |
+| Council v4.1 | ✅ 정상 (5/28 목 첫 장중 분석 예정) |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 Alive |
+| Hermes Gateway (port 8642) | ✅ active |
+| Nexus | ✅ 정상 사이클 |
+| Cron Jobs | ✅ 9개 등록 |
+| Brain Sync | ✅ 06:00 정상 완료 |
 
-### 📊 Macro (5/12 종가 기준)
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | **7,643.15** | RSI 86.2 과매수, 7,500→7,643 반등 |
-| KOSDAQ | 1,207 (5/8) | 데이터 정체 |
-| 삼성부광 | 8,240원 | RSI 29.4 과매도 진입 |
-| USD/KRW | 1,482.63 | 4일 연속 원화 약세 |
-| WTI | $98.54 | $100 저항 재확인 |
+### 📋 문화×경제 시너지 신규 지식 (5/27 수집)
 
-### 포트폴리오 (변동 없음)
-- **현금 100%**: 4,929,810원 (초기자본 대비 -1.4%)
-- **포지션**: 없음 (5/7 전량 청산)
-- KOSPI 7,643에도 현금 보유 — 소형주 디커플링 지속
+| 파일 | 내용 |
+|:----|:------|
+| K-food 30개 신규 허브 | 글로벌 식품 수출 확대 전략 |
+| OliveYoung vs SILICON2 美 유통 전쟁 | K-뷰티 美 유통 채널 경쟁 격화 |
+| BTS 컴백 머천다이징 | 79회 투어 물류 기회 |
+| K-뷰티 글로벌 다각화 | 유럽·중동·중남미 진출 |
+| DHL + 알리바바 Trade Assurance | SME 크로스보더 물류 |
+| K-콘텐츠 수출 기록 | 팬덤 경제 분석 |
+| FedEx 한-대만 직항 | 동아시아 항공 물류 확장 |
 
-### 지속 이슈 (15일차 진입, 변화 없음)
-1. yfinance .KS 티커 오류 (KOSPI=NaN) 🔴
-2. KiwoomAuth 8050 지정단말기 인증 실패 🔴
-3. Tavily API 키 만료 (401) 🔴
-4. Dashboard 6일차 스테일 (5/7) 🔴
-5. MCP Python Zombie 5~6개 🔴
-6. Trinity: CowAgent+OpenDesign 다운 🔴
-7. MetaClaw HTTP 404 🟡
-
-### 비고
-- 5/12 12:00 이후 12시간, 시스템 정적 상태 유지. 신규 버그/기술팁 없음.
-- KOSPI 5/12 7,643 마감 (wiki 갱신 완료). RSI 86.2 여전히 과매수권.
-- 삼성부광 8,240원 RSI 29.4 과매도 — 청산 결정 (5/7 @9,010) 적절했음.
-- Dashboard JSON 5/7 이후 미갱신 (6일차) — 수동 갱신 필요.
-- 6개 Critical 이슈 15일차 진입, 모두 미해결 상태로 주중 지속.
+*Recorded by Hermes Agent on 2026-05-27 08:45 KST — Swap 698MiB 🔴🔴🔴🔴 위기 고조 | 석가탄신일 휴장 | 문화×경제 인텔리전스 9개 파일 신규 수집*
 
 
 ---
 
-## 2026-05-13 (Wed) 04:45 — 새벽 스냅샷 (00:46 이후 +4h)
+## 🧠 Brain Sync — 2026-05-27 09:00 KST
 
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:------|
-| Hermes Gateway | ✅ 정상 (PID 298, 5/10~, **3일차 가동**) |
-| Jongdari 배틀루프 | ✅ 정상 (PID 1884, 10분 주기 스캔, 04:43 Cycle Complete) |
-| OpenWebUI | ✅ 정상 (port 3000, PID 307) |
-| MetaClaw | 🟡 HTTP 404 — 프로세스 생존하나 API 미응답 |
-| CowAgent/OpenDesign (Trinity) | ❌ 세션만 생존 |
-| MCP Python 서버 | ✅ 정상 (PID 23958, 03:35 재시작) |
-| 메모리 | 2,830MB / 7,748MB (36%) 🟢 |
-| Swap | 921MB / 2,048MB (45%) 🟡 |
-| 디스크 | 3% (26G/1007G) 🟢 |
-| WSL Uptime | 2d 9h 58m (5/10 19:00 재부팅) |
-| Dashboard JSON | 🔴 **7일차 스테일** (5/7 데이터) |
-
-### 📊 Macro (실시간)
-| 지표 | 값 | 비고 |
-|:-----|:----|:------|
-| KOSPI | **7,822.24** | 5/12 종가 7,643→7,822, +2.34% 급등 |
-| KOSDAQ | 1,207.34 | 데이터 정체 |
-| USD/KRW | **1,491.19** | 원화 약세 심화 (1,482→1,491) |
-| WTI | **$102.28** | $100 재돌파, CRISIS MODE 재진입 |
-| CB Score | **47/100** 🔶 | KOSPI 1M=33.2%, Vol=3.7%, Oil=$102(True), FX=₩1,491(True) |
-
-### 🔶 CB Score 47 — DEFENSIVE MODE 진입
-- 5/13 04:42 Nexus 로그: **CB Score=47/100** (5/8 22/100 → **+25p 상승**)
-- KOSPI 1M 수익률 33.2% 반영, Vol 3.7% 안정
-- 그러나 WTI $102(True) + USD/KRW ₩1,491(True) — **2개 붉은 깃발**
-- DEFENSIVE MODE: 제한적 매수, 방산/에너지만 허용
-
-### 포트폴리오 (변동 없음)
-- **현금 100%**: 4,929,810원 (초기자본 대비 -1.4%)
-- **포지션**: 없음 (portfolio.json cash 4,929,810, positions {}, history [])
-- KOSPI 7,822에도 현금 보유 — DEFENSIVE MODE + 소형주 디커플링 지속
-
-### 지속 이슈 (16일차 진입)
-1. yfinance .KS 티커 오류 (KOSPI=NaN) 🔴
-2. KiwoomAuth 8050 지정단말기 인증 실패 🔴
-3. Tavily API 키 만료 (401) 🔴
-4. Dashboard 7일차 스테일 (5/7) 🔴
-5. MCP Python Zombie 🔴
-6. Trinity: CowAgent+OpenDesign 다운 🔴
-7. MetaClaw HTTP 404 🟡
-
-### 비고
-- CB Score 47/100 — DEFENSIVE MODE 전환. KOSPI 급등에도 포트폴리오 현금 유지 정당화.
-- WTI $102 재돌파: 이전 4/29 $101→5/5 $104→5/12 $98→5/13 $102, $100 내왕 반복 중.
-- USD/KRW 1,491: 1,480 임계치 돌파 지속, 수입물가 상승 압력.
-- KOSPI 7,822 — RSI 과매수권에 WTI+환율 악재, 단기 조정 리스크 상존.
-- MetaClaw HTTP 404 여전. Trinity 3종 모두 불완전.
-
-## 2026-05-13 (Wed) 16:30 — 일일 로그 자동 생성
-
-### 시스템 현황
-| 항목 | 상태 |
-|:-----|:-----:|
-| Gateway | ✅ (PID 298, 3일차) |
-| 배틀루프 | ✅ (사이클 정상) |
-| KeepAlive | ✅ |
-| 메모리 | 🟢 2.4Gi/7.6Gi (31%) |
-| Swap | 🟡 739Mi/2.0Gi (36%) — 전일 1%→재악화 |
-
-### 오늘의 주요 활동
-- **00:15**: 의무 점검 — 전원 ✅, KeepAlive PID 파일 누락 버그 발견
-- **00:30~04:00**: CB Score 47 — DEFENSIVE MODE 전환. KOSPI 7,822 현금 100%.
-- **04:21~07:20**: Tech Scavenger 4회 — 모두 0개 신규 (중복)
-- **15:20**: **Tech Scavenger 대규모 수집 — 19개 신규 문서** (arXiv)
-  - AlphaGRPO, LongMemEval-V2, MEME 외 15편
-  - **첫 MCP 카테고리 논문 수집** 🏆
-- **07:21~15:20**: 8시간 실행 갭 — 프로세스 중단 추정
-
-### 포트폴리오
-- 현금 100% (₩4,929,810) — DEFENSIVE MODE 유지
-
-### 이슈
-- 7개 지속 이슈 (16일차) + Swap 36% 재악화 신규
-- Tech Scavenger Cron job 미실행 (`last_run_at: null`)
-
-### 2026-05-13 (Wed) 20:45 — 저녁 Cron Wiki Update
-
-### 📋 시스템 현황
-| 항목 | 상태 | 비고 |
-|:-----|:----:|:-----|
-| Hermes Gateway (systemd) | ✅ | PID 298, 3일차 (5/10~) |
-| Jongdari 배틀루프 | ✅ | PID 57763, 사이클 정상 |
-| Open WebUI | ✅ | port 3000, PID 307 |
-| MetaClaw | 🟡 | HTTP 404, PID 3626 생존 |
-| CowAgent (Trinity) | ❌ | 세션만 유지 |
-| OpenDesign (Trinity) | ❌ | 세션만 유지 |
-| tmux 세션 (6개) | ✅ | hermes / hermes-mcp / jongdari / trinity-3종 |
-| 메모리 | 🟢 | 2.5Gi / 7.6Gi (33%) |
-| Swap | 🟡 | 720Mi / 2.0Gi (35%) |
-| 디스크 | 🟢 | 33Gi / 1007Gi (4%) |
-| Uptime | 🟢 | 3d 1h |
-
-### 📊 시장 현황 (5/13 close 기준, 변동 없음)
-| 지표 | 값 | 비고 |
-|:-----|:----:|:-----|
-| KOSPI | 7,822.24 | RSI 86.2 과매수, 사상 최고 근접 |
-| KOSDAQ | 1,207.34 | 데이터 정체 |
-| WTI | $102.28 | $100 재돌파, CRISIS MODE |
-| USD/KRW | 1,491.19 | 원화 약세 심화 |
-| 삼성부광 | 7,840원 (-2.00%) | RSI 21.8 심각 과매도, 포트폴리오 **-21.91%** |
-| CB Score | 47/100 🔶 | DEFENSIVE MODE — WTI+FX 붉은깃발 2개 |
-
-### 포트폴리오
-- **현금 100%**: ₩4,929,810 (초기자본 대비 -1.4%)
-- **포지션**: 없음 (5/7 전량 청산)
-
-### 📋 16:30→20:45 변화 요약 (4시간)
-1. **MCP 멀티검색 3건 연속 수집** (18:41~18:52) — AI 에이전트 오픈소스 트렌드 2026 주제, 5.5초 avg latency
-2. **MetaClaw HTTP 404 지속** — PID 3626 생존하나 API 미응답 (16일차)
-3. **Swap 36%→35% 소폭 개선** — 739Mi→720Mi, 안정 범위
-4. **메모리 31%→33% 소폭 상승** — 정상 변동 범위
-5. **Gateway 3일차 무중단 유지** — PID 298, May10 19:00부터 71h+ 가동
-6. **Jongdari 재시작 감지** — 이전 PID 1884(3일차)→PID 57763(16:07 신규), 배틀루프 사이클 정상
-7. **대시보드 8일차 스테일** — 5/7 이후 미갱신 (수동 갱신 필요)
-8. **신규 지식 발견 없음** — 기존 7개 Critical 이슈 변화 없음
-
-### 🐛 지속 이슈 (16일차, 변화 없음)
-| # | 이슈 | 심각도 |
-|:-:|:-----|:------:|
-| 1 | yfinance .KS 티커 오류 (KOSPI=NaN) | 🔴 |
-| 2 | KiwoomAuth 8050 지정단말기 인증 실패 | 🔴 |
-| 3 | Tavily API 키 만료 (401) | 🔴 |
-| 4 | Dashboard 8일차 스테일 | 🔴 |
-| 5 | MCP Python Zombie | 🔴 |
-| 6 | Trinity: CowAgent+OpenDesign 다운 | 🔴 |
-| 7 | MetaClaw HTTP 404 | 🟡 |
-
----
-
-## 2026-05-14 (Thu) 16:30 — 오후 스냅샷 (KOSPI 7,981, 삼성부광 반등 +3.95%)
-
-### 시스템 현황 (16:30 KST)
-| 항목 | 상태 | 비고 |
-|:-----|:----:|:-----:|
-| Gateway (systemd) | ✅ active | PID 305, WSL 재부팅 후 복구 완료 |
-| MetaClaw | ✅ | PID 61328, port 30000 정상 |
-| OpenWebUI | ✅ | PID 312, port 3000 |
-| Jongdari 배틀루프 | ✅ | PID 5941 (nexus_orchestrator, 14.5h+) |
-| KeepAlive v7.3 | ✅ | 최근 사이클 정상 |
-| tmux 6개 세션 | ✅ | all 복구 |
-| 메모리 | 🟢 3.3Gi/7.6Gi (43%) | 안정 |
-| Swap | 🟢 268KiB/2.0Gi (~0%) | 재부팅 효과 유지 |
-| WSL Uptime | 🟢 14h 35m (01:58→) | |
-
-### 시장 현황 (5/14 actual close)
-| 지표 | 값 | 전일 대비 |
-|:-----|:-------:|:---------:|
-| KOSPI | **7,981.41** | 🟢 +137.40p (+1.75%) |
-| KOSDAQ | **1,191.09** | 🟢 +14.16p (+1.20%) |
-| USD/KRW | **1,490.26원** | 🔴 +0.72원 |
-| WTI | **$101.00** | 🔴 -$2.49 (-2.41%) |
-| 삼성부광 | **8,150원** | 🟢 +310원 (+3.95%) |
-| 에이치엘 | **17,200원** | 🟢 +780원 (+4.75%) |
-| 나우로보틱스 | **27,900원** | 🟢 +50원 (+0.18%) |
-
-### 오늘의 주요 활동
-1. **WSL 재부팅 (01:58)** — 14.5h 전, 전면 복구 완료
-2. **Tech Scavenger 4회 (21건 신규)** — SkillOps, Phasor Memory, EVA-Bench, Good Agentic Friends 등
-3. **MCP 멀티검색 7건** — 삼성전자 파업, 알테오젠, 삼성SDI-GM, US 트렌드
-4. **Auto Evolution Cycle (15:00)** — IDLE, 스킬 47개 유지
-5. **삼성부광 강한 반등 (+3.95%)** — 5일 연속 하락 마감 후 첫 반등
-6. **KOSPI 7,981** — 8,000선 눈앞, RSI 87.1 극단 과매수
-
-### 포트폴리오
-| 종목 | 수량 | 매입가 | 현재가 | 손익률 |
-|:-----|:----:|:------:|:------:|:------:|
-| 삼성부광 | 34주 | 10,040원 | 8,150원 | -18.82% |
-| 나우로보틱스 | 10주 | 30,550원 | 27,900원 | -8.67% |
-| **합계** | | **5,012,470원** | **4,905,570원** | **-2.13%** |
-
-### 지속 이슈 (20일차)
-| # | 이슈 | 심각도 | 상태 |
-|:-:|:-----|:------:|:----:|
-| 1 | yfinance .KS 티커 오류 | 🔴 | 20일차 |
-| 2 | KiwoomAuth 8050 | 🔴 | 20일차 |
-| 3 | Tavily API 키 만료 (401) | 🔴 | 20일차 |
-| 4 | Dashboard 8일 스테일 | 🔴 | 5/7 이후 미갱신 |
-| 5 | MCP Python Zombie | 🔴 | 20일차 |
-| 6 | Trinity: CowAgent+OpenDesign | 🟡 | **tmux 복구 완료** (12:47) |
-| 7 | MetaClaw HTTP 404 | 🟡 | **port 30000 정상 복구** |
-| 8 | ✅ Gateway inactive | ✅ | **복구 완료** |
-
-### 변화 요약 (12:46→16:30)
-1. ✅ **Gateway inactive 해결**: systemd active (PID 305)
-2. ✅ **MetaClaw 정상 복구**: port 30000 응답
-3. ✅ **Swap 0% 유지**: 재부팅 효과 지속
-4. 🔴 **3개 Critical 이슈 20일차**: yfinance/KiwoomAuth/Tavily
-5. 🔴 **Dashboard 8일 스테일**: 여전히 미갱신
-6. 🔴 **KOSPI RSI 87.1**: 극단 과매수, 8,000선 조정 위험
-7. 🟢 **삼성부광 첫 반등**: RSI 23.7에서 회복 중
-
-## 2026-05-14 (Thu) 20:45 — 야간 스냅샷 + 지식 기록
-
-> **Watchdog Cron (05:46 KST 5/15 실행)** — 전일 데이터 통합 기록 완료
-
-### 📊 시장 요약 (5/14 확정)
-
-| 지표 | 확정가 | 전일비 |
-|:-----|-------:|:------:|
-| KOSPI | 7,981.41 | +1.75% 🟢 |
-| KOSDAQ | 1,191.09 | +1.20% 🟢 |
-| USD/KRW | 1,490.26 | 보합 |
-| WTI | $101.00 | -2.41% 🔴 |
-| 삼성부광 | 8,150원 | +3.95% 🟢 |
-| 에이치엘사이언스 | 17,200원 | +4.75% 🟢 |
-| 나우로보틱스 | 27,900원 | 보합 |
-
-### 🔬 오늘의 지식 수집 (21건 신규)
-
-**주요 논문 요약:**
-
-| 논문 | 의의 | Hermes 적용 |
-|:-----|:-----|:------------|
-| **SkillOps** (arXiv 2605.13716) | 스킬 라이브러리 유지보수 프레임워크. Skill Contract(P,O,A,V,F) + 계층적 의존성 그래프. 4차원 건강도 진단 | Hermes 47개 스킬 라이브러리 자동 유지보수 도입 검토 |
-| **Good Agentic Friends** (arXiv 2605.13839) | Multi-agent weight-space 통신 (TFlow). Token 83% 절감, 속도 4.6× | Trio Brainstorming Lab 통신 효율화 |
-| **Phasor Memory Networks** (arXiv 2605.13370) | NTM gradient 불안정성 해결. 안정적 BPTT + 확장 가능한 명시적 메모리 | Layer Memory System L0-L4 참고 |
-| **EconAI** (arXiv 2605.13762) | 동적 페르소나 진화 + 메모리 인식 에이전트 | 가상오피스 경제 시뮬레이션 연계 |
-| **EVA-Bench** (arXiv 2605.13841) | Voice Agent 최초 end-to-end 평가 프레임워크 | 향후 음성 에이전트 도입 시 참고 |
-| **WARDEN** (arXiv 2605.13846) | 6시간 데이터로 멸종위기 언어 전사/번역 | Few-shot NLP 참고 |
-
-**기술 트렌드:**
-- **MCP 첫 보안 논문** (5/13 arXiv) — Attacks/Mitigations on MCP. 생태계 성숙 신호
-- **GRIP-VLM** — VLM 그룹별 중요도 기반 프루닝, 효율적 비전 모델 경량화
-- **R-DMesh** — Video-guided 3D Animation via Rectified Dynamic Mesh
-
-### 🏢 비즈니스 사업분석 — 8개 아이템 인덱스 갱신 완료
-- 모든 시뮬레이션 리포트(낙관적/보수적) 및 워크플로우 엔진 선택 문서 최종 갱신
-- AI 물류 에이전트 SaaS (⭐1순위), 중국-한국 물류 브릿지 (⭐1순위), 인보이스 OCR (🥈2순위) 업데이트
-- 사업성 평가 공식 확립: (시장규모×수요강도×진입장벽) / (초기투자×운영복잡성)
-
-### 📋 지속 이슈 트래커 (20일차)
-- 🔴 yfinance KOSPI NaN (20일) | KiwoomAuth 8050 (20일) | Tavily API 401 (20일) | Dashboard 8일 스테일
-- 🟡 MetaClaw port 30000 복구됨 | Trinity tmux 복구완료
-- ✅ WSL 14.5h+ 정상 | Gateway active | Swap 0% 리셋 유지
-
-
-## 2026-05-17 (Sun) 00:45 — Midnight Snapshot (Weekend)
-
-### System Status
-| Item | Status | Note |
-|:-----|:----:|:-----|
-| Hermes Gateway | OK | /health responding |
-| OpenWebUI | OK | PID 312, port 3000 |
-| tmux sessions (6) | OK | All Trinity + jongdari |
-| WSL Uptime | OK | 1d 8h |
-| Memory | OK | 3.3Gi / 7.6Gi (43%) |
-| Swap | OK | ~0% |
-| Disk | OK | 27Gi / 1007Gi (3%) |
-| Cron | OK | All active |
-
-### Activity Summary (May 16-17)
-- **MCP Multi-Search 1**: Global stock outlook (22:40)
-- **Brain Sync**: 00:01 KST — May 15-16 knowledge integrated
-- **Self-Heal**: 2 runs normal
-- **MetaClaw**: Unreachable (ongoing)
-
-### Market (May 15 close, weekend hold)
-- KOSPI 7,493 (-6.12%) | KOSDAQ 1,130 (-5.14%)
-- USD/KRW 1,498 (+0.30%) | WTI $105.42 (+4.20%)
-- Samsung Bookgwang 7,700 (-5.52%, new low) | HL Science 17,010 (-1.10%) | Now Robotics 28,400 (+1.79%)
-
-### Portfolio
-- Cash: 4,929,810 won (fully liquidated - crash avoidance successful, Day 22)
-
-### Issues Tracker (23 days persistent)
-- RED: yfinance NaN | KiwoomAuth 8050 | Tavily 401 | Dashboard stale | MCP Zombie
-- YELLOW: Trinity services (recovered but MetaClaw unreachable)
-
-
-### 🔬 Tech Scavenger Update (05/17 12:20 KST)
-| Source | Scanned | New Docs |
-|:-------|:-------:|:--------:|
-| GitHub Trending | 30 repos | 0 |
-| arXiv (6 cats) | 21 papers | 0 |
-| HuggingFace Daily | 10 papers | 0 |
-| **Total** | **61** | **0** |
-
-**Latest batch** (05/16 18:21): 16 new arXiv papers saved to Wiki
-- **EntityBench** — Entity-Consistent Long-Range Multi-Shot
-- **ATLAS** — Agentic or Latent Visual Reasoning
-- **FutureSim** — Replaying World Events for Adaptive Agents
-- **RefDecoder** — Visual Generation with Conditional Video Decoder
-- **Is Grep All You Need** — Agent Harnesses Reshape Agentic Search
-- **Veritas** — Semantically Grounded Agentic Framework for Memory
-- **Viverra** — Text-to-Code with Guarantees
-- **APWA** — Distributed Parallelizable Agentic Workflows
-- **AI Knows When It's Being Watched** — Strategic Action in Audits
-- **Articraft** — Scalable Articulated 3D Asset Generation
-- **Hand-in-the-Loop** — Dexterous VLA with Seamless Interaction
-- **Pelican-Unified 1.0** — Unified Embodied Intelligence Model
-
-**API Issues Today**: arXiv rate-limiting (HTTP 429 cs.SE/DC/MA) and timeouts (cs.RO) — 9 categories affected across several runs. GitHub Trending stable.
-
-**Cumulative**: 174 runs since May 4, ~230+ papers/projects documented in Wiki.
-
-## 2026-05-17 (Sun) 15:00 — Brain Sync
-- **Swap 급증 경고**: 33MiB→411MiB (4h, 12.4x), MetaClaw 468MB RSS
-- **MCP 5건**: 모두 noisy/Naver 광고 — pipeline quality degradation
-- **5th Auto-Evolution cycle**: Swap monitoring 신규 제안
-- **Monday 대비**: KOSPI 3개 시나리오, USD/KRW 1,500 경계, WTI $105.42
-- **미해결**: 23일차 5건 RED, Tech Scavenger 캐시 미리셋
-
-## 2026-05-17 (Sun) 16:00 — Brain Sync
-- **Swap**: 452MiB (+41MiB since 14:30, growth slowing from ~95→~27MiB/h)
-- **MCP 2건**: 2차전지 + 바이오헬스케어 — 모두 LOW SIGNAL (Naver 광고 오염)
-- **Tech Scavenger**: 8일차 캐시 스턱 지속
-- **내일 09:00 KST**: KOSPI -6.12% crash 후 첫 거래일 — 3 entry scenarios ready
-- **시스템**: Trinity ✅ 3/3, KeepAlive ✅, 9 tmux, WSL up 1d22h+
-
-### 2026-05-17 20:22 — 🔍 Tech Scavenger 리포트
-
-**실행 현황 (5/17)**
-- 총 22회 실행 완료
-- GitHub Trending: 30개/회 수집 (모두 캐시 히트 — 신규 없음)
-- arXiv: ⚠️ **41개** 429/timeout 오류 (올해 최다)
-- HF Daily Papers: 10개/회 수집 (모두 캐시 히트)
-- 신규 저장: 0개 (캐시 163개 URL 보유)
-
-**arXiv 상태 악화 ⚠️**
-어제(5/16 토) 0개였던 arXiv 에러가 오늘 41개로 폭증. 역대 최고치 갱신.
-- 최다 오류 카테고리: cs.MA(9), cs.SE(8), cs.RO(8), cs.DC(8)
-- 주말 효과로 추정: 주중 대비 arXiv 서버 부하 증가
-- 2s 간격에도 7개 카테고리 중 평균 5~6개 실패
-
-**최근 신규 발견 이력**
-- 5/16(토): 16개 신규 문서 저장 (마지막 성공)
-- 5/15: 0개 (arXiv 4회 에러)
-- 5/14: 21개 저장
-- 이후 2일 연속 0개
-
-**조치 필요**
-1. arXiv 카테고리 7개 → 주력 3~4개로 축소 검토 (cs.AI/cs.LG/cs.CL 유지, cs.MA/cs.DC/cs.RO 제거)
-2. 또는 429 발생 시 지수 백오프 재시도 로직 추가
-3. GitHub: 캐시 정상 동작 — trending set 변화 시 자동 수집됨
-
-## 2026-05-18 (Mon) 04:45 — Pre-Market Delta (T-4h15m)
-
-### 🧬 Overnight Summary: WSL Double-Reboot Event
-
-**Critical event**: WSL was rebooted **twice** overnight (between 22:30 May 17 and 03:10 May 18):
-- 1st reboot (between 20:45~22:30): Cleared 602MiB swap
-- 2nd reboot (between 22:30~03:10): Likely triggered by swap re-accumulation or OOM
-- **Effect**: All services auto-recovered both times. Swap fully cleared to 0MiB. Memory leanest observed (3.0Gi/7.6Gi = 39%).
-
-### Process Landscape (Post-2nd-Reboot, 04:45 KST)
-
-| Process | PID | RSS | Status |
-|:--------|:---:|:---:|:------:|
-| OpenWebUI (:3000) | 315 | 799MiB | ✅ Running |
-| MetaClaw (skills_only) | 1985 | 515MiB | ✅ Running |
-| Hermes Gateway | 306 | 388MiB | ✅ Running (leaner: 406→388MiB) |
-| Nexus Orchestrator | 4162 | 327MiB | ✅ Single instance |
-| Hermes CLI (×2) | 470, 825 | ~254MiB each | ✅ Running |
-| Quote Web App | 4258 | 148MiB | ✅ Running |
-| MCP servers (4×) | — | ~61–86MiB each | ✅ All normal |
-
-### Overnight Knowledge Intake
-
-| Source | Items | Details |
-|:-------|:-----:|:--------|
-| GitHub Trending (23:23) | 12 repos | High-signal: OpenSquilla (⭐951), tokenspeed (⭐1035), Photo-agents (⭐918), awesome-agentic-ai-zh (⭐1494), elephant-agent (⭐275) |
-| GitHub Trending (00:20) | 4 repos | okx-agent-trade-kit, DeepSeek-Code-Whale, CloakBrowser, solana-trading-bot |
-| GitHub Trending (03:20) | 2 repos | SD WebUI guide (low signal), Roblox FPS unlocker (noise) |
-| MCP multi-search | 2 reports | Crypto market, K-Food/K-Beauty export |
-| **Total new intake** | **~18 items** | All logged in brain_sync_log and 10_Wiki/ |
-
-### 🏆 Top-Signal Repos (Overnight Batch)
-
-1. **opensquilla/opensquilla** (⭐951) — Token-efficient AI agents, "higher intelligence density" on same budget
-2. **lightseekorg/tokenspeed** (⭐1035) — Speed-of-light LLM inference; potential backend candidate
-3. **jmerelnyc/Photo-agents** (⭐918) — Self-evolving agents with vision-grounded layered memory + self-written skills
-4. **agentic-in/elephant-agent** (⭐275) — "Personal-Model First Self Evolving AI Agent"
-5. **WenyuChiou/awesome-agentic-ai-zh** (⭐1494) — Trilingual AI learning roadmap (8 stages, 145+ curated projects)
-
-### 📊 Portfolio & Entry Scenarios (Mon May 18, First Trading Day After -6.12% Crash)
-
-| Ticker | Price (5/15) | Change | RSI | Note |
-|:-------|:-----------:|:------:|:---:|:-----|
-| 삼성부광 (014950.KQ) | 7,700원 | -5.52% | 22.4 | 🔴 Severe oversold |
-| 나우로보틱스 (459510.KQ) | 28,400원 | +1.79% | 65.8 | 🟢 Defensive strength |
-| 에이치엘사이언스 (473980.KQ) | 17,010원 | -1.10% | 44.6 | 🟡 Neutral |
-| **Cash** | **~4,930,000원** | — | — | **100% liquid** |
-
-**Entry Strategy (Cash: ~4.93M won):**
-- KOSPI >7,500 (gap-up): HOLD — dead-cat bounce risk
-- KOSPI 7,300~7,500: 25% entry (~1.23M won)
-- KOSPI <7,200: 50% entry (~2.46M won)
-- USD/KRW >1,500 & WTI >$105: DELAY ALL (stagflation)
-
-### 🚨 Persistent Issues Tracker (24 Days and Counting)
-
-| Issue | Age | Status | Notes |
-|:------|:---:|:------:|:------|
-| yfinance .KS NaN | 24d | ❌ | KOSDAQ ticker suffix on Yahoo Finance |
-| KiwoomAuth 8050 blocked | 24d | ❌ | Windows firewall / WSL port conflict |
-| Tavily API key expired | 24d | ❌ | Need re-registration |
-| Dashboard stale | 11d | ❌ | Stale since May 7; NaN for KOSPI |
-| MCP Python Zombie on restart | 24d | ❌ | CancelledError on Gateway restart |
-| Tech Scavenger cache | 9d | ❌ | Stuck since May 9; arXiv 429 errors |
-| **WSL reboot pattern (new)** | **~6h** | ⚠️ | 2 reboots overnight; root cause unknown |
-
-### ⏰ Pre-Market Checklist
-
-| Time (KST) | Remaining | Action |
-|:-----------|:---------:|:-------|
-| **04:45 NOW** | T-4h15m | 🧬 Evolution cycle complete |
-| 08:00 | T-1h00m | US futures check (S&P500, Nasdaq, VIX) |
-| 08:15 | T-0h45m | USD/KRW Asia open |
-| 08:30 | T-0h30m | WTI pre-market (>$105 = stagflation) |
-| 08:45 | T-0h15m | AI Council simulation |
-| **09:00** | **D-DAY** | **KOSPI OPEN — execute or hold** |
-
----
-
-## 2026-05-18 (Mon) 15:00 — Hourly Brain Sync
-
-### 🧬 Knowledge Absorption Summary
-- **6 new arXiv papers** (14:20 batch) — all single-instance ingests, no skill-worthy
-- **3 MCP reports** (14:40) — LOW SIGNAL (Naver noise, 5th consecutive batch)
-- **FORGE paper** (arXiv 2605.16233): Self-evolving agent memory via population broadcast — HIGH SIGNAL but covered by existing layer-memory-system and recursive-agent-optimization skills
-- **GitHub**: 12 repos overnight (highlights: OpenSquilla ⭐951, Photo-agents ⭐918, tokenspeed ⭐1035)
-- **GitHub Hub**: Updated 05:00 KST (+1 DeepSeek-TUI entry)
-
-### 📊 Market (wiki refresh 12:10 KST, already absorbed)
-| Ticker | Price | Change | RSI | Note |
-|:-------|:-----:|:------:|:---:|:-----|
-| KOSPI | 7,562 | +0.92% | 70.9 | HOLD zone confirmed |
-| KOSDAQ | 1,110 | -1.76% | 30.1 | BB 하단 이탈 |
-| USD/KRW | **1,505.08** 🔴 | **+0.79%** | 61.9 | **1500선 돌파! 연중 신고가** |
-| WTI | $103.20 | -2.11% | 53.8 | $100선 유지 |
-| 삼성부광 | 7,480원 🔴 | -2.86% | 21.7 | 신저가 2일, 포트폴리오 -25.50% |
-| 나우로보틱스 | 28,800원 🟢 | +1.41% | 65.2 | 2일 연속 상승, ROE -75.89% 주의 |
-| 에이치엘사이언스 | 16,380원 | -3.70% | 36.5 | 하단 근접 |
-
-### 🔄 System
-- All Trinity services green. WSL uptime ~12h.
-- brain_state.json updated ✅ (598 docs, 20 new insights)
-
-### 🚨 Issues Tracker
-| Issue | Age | Status |
-|:------|:---:|:------|
-| yfinance .KS NaN | 25d | ❌ |
-| Tavily API key expired | 25d | ❌ |
-| Tech Scavenger stalled | 10d | ❌ |
-| MCP 멀티검색 quality | 5+ batches | ⚠️ Degraded |
-
-*Recorded by Hermes Cron on 2026-05-18 15:05 KST — Brain Sync v2.0*
-
-*Recorded by Hermes Cron on 2026-05-18 04:45 KST — Pre-market delta snapshot, Mon May 18*
-
-## 🧠 Brain Sync — 2026-05-18 16:00 KST
-- **Status**: Zero-knowledge cycle (no new content since 15:05)
-- **Vault stats**: wiki/ 277 files, 10_Wiki/ 321 files = 598 total
-- **Latest commit**: 2a50409 — MCP 멀티검색 14:41 batch (already absorbed at 15:05)
-- **No new papers/MCP reports** — last brain sync fully captured all content
-| **Next cycle**: Hourly brain sync
-
-## 🧠 Brain Sync — 2026-05-18 20:46 KST
-- **Status**: Steady-state — no new content (EOD 16:00 captured)
-- **System**: All services healthy, CB Score 47/100 DEFENSIVE ✅ (N/A fixed)
-- **MCP 18:40~18:55 batch**: 8 reports, ALL LOW SIGNAL (Naver noise only) — 7th batch today
-- **Trinity**: Post-15:47 crash recovery stable for 5h+
-- **Market**: KOSPI 7,562 (-0.92%), KOSDAQ 1,110 (-1.76%), USD/KRW 1,505, WTI $103.20
-- **Key event**: CB Score N/A hotfix confirmed working
-- **Cash held**: ₩4,929,810 (0 positions, CB DEFENSIVE)
-- **Next**: Hourly brain sync / 5/19 Pre-market prep
-
-
-## 2026-05-19 (Tue) 00:00 — Midnight Brain Sync
-
-### System Snapshot
-| Item | Status |
-|:-----|:-------|
-| WSL Uptime | ~21h (from 03:10) — stable |
-| Memory | 3.1Gi/7.6Gi (41%) |
-| Swap | 3.5MiB ✅ (no leak) |
-| Trinity | ✅ All green (post-15:47 recovery) |
-| CB Score | 47/100 DEFENSIVE (N/A fix stable) |
-
-### Vault Status
-- **3 new MCP reports** (22:40~22:41) — ALL LOW SIGNAL (8th batch today with 0 high-signal)
-- **Total vault**: 277 wiki/ + 296 10_Wiki/ = 598 processed files
-
-### Key Issues
-1. MCP 멀티검색 quality crisis: 8 batches today = 0 actionable reports. Naver noise pattern confirmed.
-2. KOSPI 7,562 / USD/KRW 1,505 — USD 1,500 돌파로 진입 유보 조건 충족
-3. 금일 Trinity 15:47 crash 원인 미확인 (WSL CPU throttling 추정)
-
-### 5/19(화) Pre-Market Watch
-|- KOSPI 7,500 지지 여부
-|- USD/KRW 1,500 방향성 (원화 약세 지속?)
-|- NVDA 실적 주간 시작 (화요일)
-|- FOMC 의사록 (수요일)
-
----
-
-## 2026-05-21 (Thu) 12:45 — Cron 지식 기록 + Brain Sync 갱신
-
-### System Snapshot
-| Item | Status |
-|:-----|:-------|
-| WSL Uptime | 1d 17h (안정) |
-| Memory | 3.0Gi/7.6Gi (39%) ✅ |
-| Swap | 0B ✅ (완전 정상) |
-| Load Avg | 0.25 (유휴) |
-| Git | Clean — 모든 파일 커밋 완료 |
-
-### Vault Status
-- **wiki/**: 277 files — 5/21 intraday update 완료 (10건 수정: stocks 3 + macros 4 + sectors 3)
-- **10_Wiki/**: 389 papers+reports (+18 from 1120/1220 batch today)
-- **Brain Sync 12:02 KST**: 62개 신규 파일 인제스트, 10_Wiki/AI_Agents·LLM·RL·CV·MLOps 전 영역 신규 논문 반영
-
-### 📄 18 New arXiv Papers (5/21 Batch) — Key Highlights
-1. **Equilibrium Reasoners** 🔥 — 어트랙터 기반 상태 공간 추론, Test-time scaling via iterative latent updates
-2. **ProCrit** 🔥 — 자기 유도 다관점 추론 + Critic-guided revision (Multi-LLM Roundtable 패턴)
-3. **Lost in Fog** 🔥 — 센서 교란으로 LLM 추론 취약성 노출 (Perturbation-based reasoning fragility)
-4. **DeepWeb-Bench** — 대규모 딥 리서치 벤치마크 (Massive context demanding benchmark)
-5. **TIDE** — I/O-aware expert offload for MoE Diffusion LLM (로컬 LLM 배포 최적화)
-6. **DashAttention** — 미분 가능 적응형 희소 주의 (Top-k 대신 learned sparsity)
-7. **DelTA** — 판별적 토큰 신용 할당을 통한 강화 학습
-8. **SMoA** — 스펙트럼 변조 어댑터 PEFT (LoRA 주파수 도메인 대안)
-9. **Frontier** — 포괄적·정확한 LLM 추론 시스템
-10. **PALS** — Power-Aware MoE 모델 서빙 (전력 효율 인지)
-11. **Agentic Model Checking** — formal verification meets LLM agents
-12. **AI-Generated Python Refactoring Quality** — 생성 코드의 품질·보안 신호
-13. **Leveraging LLMs for Grammar Adaptation** — 메타모델 기반 문법 적응
-14. **You Only Need Minimal RLVR Training** — 최소 RLVR로 LLM 추론 확장
-15. **AiraXiv** — AI-Driven 오픈액세스 학술 플랫폼 (HuggingFace)
-16. **HITL-D** — Human-In-The-Loop Diffusion 공유 제어
-17. **Variance Reduction for Diffusion Teachers** — 확산 모델 기댓값 분산 감소
-18. **Detecting Trojaned DNNs** — Spectral Regression 분석
-
-### Market (5/20 confirmed close, 5/21 intraday)
-| 지표 | 5/20 종가 | 5/21 장중 | 비고 |
-|:-----|:---------:|:---------:|:-----|
-| KOSPI | 7,209 (-0.86%) | **7,688 (+6.64%)** ⚡ | 3일 연속 조정 후 급반등 |
-| KOSDAQ | 1,056 (-2.61%) | **+4.80% 반등** | RSI 19.0 극단 과매도→반등 |
-| USD/KRW | 1,508 (+1.04%) | 1,502 (-0.40%) | 1500선 유지, BB 상단 근접 |
-| WTI | $98.62 (-8.49%) | 미갱신 | $100선 하회 급락 |
-| 삼성부광 | 7,290 (-7.13%) | 7,270 (-0.27%) | KOSPI 급등에도 약세 지속 |
-| 에이치엘 | 14,740 (-8.28%) | 14,820 (+0.54%) | 소폭 반등 |
-| 나우로보틱스 | 24,400 (-9.63%) | 25,800 (+5.74%) | 급반동 주도 |
-
-### Portfolio
-- 삼성부광(014950.KQ): 34주 @10,040 → 7,290원 (-27.39%) — RSI 25.0 과매도 심화
-- 나우로보틱스(459510.KQ): 10주 @30,550 → 24,400원 (-20.13%) — 2거래일 누적 -14.0% 후 +5.74% 반등
-- 현금: ~492만원 전량 대기 (CB Score DEFENSIVE, 진입 유보)
-
-### Knowledge Highlights
-- 🔴 P1: "When Skills Don't Help" (arXiv) — 기존 Hermes Skill 시스템에 per-task validation 부재. Skills가 특정 태스크(offensive cybersecurity 등)에 오히려 해가 될 수 있음 → Skill loading architecture audit 필요
-- 🟡 P2: Equilibrium Reasoners — n-step-reasoning skill에 어트랙터 기반 접목 가능성
-- 🟡 P2: PRO TEA — 오프라인 멀티에이전트 워크플로우 평가 패턴 (Trinity 디버깅 활용)
-- 🟢 P3: TIDE / DashAttention / UniPool / EMO — MoE 추론 최적화 기술, 로컬 LLM 배포 역량 빠른 발전
-- ⚪ MCP 멀티검색: 11연속 LOW SIGNAL 배치 — Naver noise 크라이시스 지속
-
-### Key Concerns
-- 🔴 삼성부광 절대적 약세: KOSPI +6.64%에도 불구하고 -0.27% — 대형주 랠리에도 포트폴리오 종목 미참여
-- 🟡 KOSDAQ 1,056 (RSI 19.0) — 극단 과매도이나 반등 시 KOSPI 주도일 가능성
-- 🟡 WTI $98.62 $100선 하회 급락 — 글로벌 경기 침체 리스크 시그널
-- 🟡 USD/KRW 1,508 — BB 상단 근접, 원화 약세 지속 시 수입물가 상승 압력
-- ✅ WSL 1d17h 안정, Swap 0B, 메모리 39% — 시스템 최상 상태
-
-### 🔍 Tech Scavenger 리포트 — 2026-05-25 14:21 KST
-
-**오늘 수집된 신규 문서: 17개**
-
-| 시간 | 수량 | 비고 |
-|:---:|:----:|:----|
-| 11:20 | 6개 | arXiv — Agentic Proving, Push Your Agent 등 |
-| 12:20 | 11개 | arXiv — PhotoFlow, CHRONOS, LLMs as Noisy Channels 등 |
-
-**하이라이트:**
-- 🤖 **Agentic Proving for Program Verification** — LLM이 프로그램 증명 자동화
-- ⏱️ **CHRONOS** — 시간 인식 멀티에이전트 조정 (진화하는 환경 대응)
-- 📸 **PhotoFlow** — 에이전트 기반 3D 가상 사진술
-- 🔧 **SkillOpt** — 자기 진화 에이전트 스킬 최적화 전략
-- 🎯 **Push Your Agent** — LLM 에이전트의 정량적 목표 달성 측정
-- 📡 **LLMs as Noisy Channels** — Shannon 정보이론 관점 LLM 용량
-
-**상태:**
-- GitHub Trending: 14/15회 성공 (93%), 1회 Network Unreachable
-- arXiv: 8회 오류 (429/timeout 혼합) — cs.CL/SE/DC/MA/RO 취약
-- 캐시: 305개 URL — 대부분 중복 필터링 정상 동작
-
-## 2026-05-26 (Tue) 16:45 — Cron 지식 기록 (EOD 마감, KOSPI 8,047.51)
-
-### 📋 시스템 현황
+### 📋 스캔 결과 요약
 
 | 항목 | 상태 | 상세 |
-|:-----|:-----|:------|
-| WSL Uptime | 🟢 1일 22:50 | 5/24 17:40 부팅 이후 안정, **2일차 무재부팅** |
-| Memory | 🟢 3.4Gi / 7.6Gi (45%) | 정상 범위, 안정적 |
-| Swap | 🟡 441MiB / 2.0Gi (22%) | 3일째 증가 추세 (5/24 0MiB → 5/25 371MiB → 5/26 441MiB), 500MiB threshold 모니터링 |
-| Disk | 🟢 30Gi / 1007Gi (4%) | 충분한 여유 |
-| Load Avg | 🟢 1.25 / 0.49 / 0.28 | 안정적 |
-| Gateway (PID 306) | ✅ active | systemd 서비스 정상, 2일차 |
-| WebUI (port 3000) | ✅ | PID 305, 응답 정상 |
-| KeepAlive v7.3 | ✅ ALIVE | Watchdog 정상 작동 |
-| Nexus 배틀루프 | ✅ (16:29 Cycle Complete) | 10분 주기 사이클 정상, 8일차 |
-| Self_heal.py | 🔴 **22일 중단** | 5/5 마지막 로그 이후 미갱신 |
-| tmux 세션 | 6개 전원 정상 | hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign |
-| MCP 서버 | ✅ filesystem/fetch/tavily/time + Python MCP | 정상 |
-| 가상오피스 (port 8001) | ✅ uvicorn | 정상 |
+|:-----|:----:|:-----|
+| Context/ (11개 파일) | 🟢 | 9개 문서 전수 독회 완료 — 내용 숙지 |
+| Members/ (1개 파일) | 🟡 | LLM-Wiki-개선아이디어 — Steven 초안, 6개 승격 완료 확인 |
+| Agents/ (2개 파일) | 🟢 | Hermes 역할과 책임 + Claude Code 명령패턴 |
+| 10_Wiki/ (526개) | 🟢 | AI 연구 논문 요약 — 규모 유지 |
+| wiki/ (279개) | 🟢 | 주식/섹터/매크로 — 00-Home 동기화 완료 |
+| _Private/ (1개) | 🟢 | 건강 주치의 — 대장님 전용 |
+| 총 1,164개 .md | 🟢 | Vault 정상 운영 중 |
 
-### 📊 시장 현황 (KOSPI Close: 8,047.51)
+### 🔴 Context 승격 48h Deadline 초과 (5/27 00:27 KST)
 
-| 지표 | 값 | 변동 | 비고 |
-|:-----|:---|:-----|:------|
-| KOSPI | **8,047.51** | **+2.55% 🟢** | **사상 첫 8,000선 안착 마감!** 4/27 대비 +16.6% |
-| KOSDAQ | ~1,172.52 | 소폭 상승 | KOSPI 대비 약세 |
-| USD/KRW | 1,503.39~1,503.78 | -0.6% 🟢 | 원화 강세 전환 (1,517→1,503) |
-| WTI | $92.54~$92.72 | $100 하회 7일차 🔴 | 전주 $96.60 대비 -4.2% 급락 |
-| CB Score | **21/100** ✅ | 5/25 22→**21 안정** | NORMAL MODE 유지 |
-| Market State | **NORMAL** | — | NORMAL 지속 |
+**16건 미승인 현황:**
 
-### 🔄 오늘의 주요 활동 (5/26 화)
+| 우선순위 | 건수 | 문서명 |
+|:--------:|:----:|:-------|
+| 🥇 최우선 | 7 | Operations-Guide, Vault-구조-설계도, Hermes-Git-지식베이스, Trading-Strategies, Business-Portfolio-Index, System-Architecture (중복 제안), AI-Council (중복 제안) |
+| 🥈 | 6 | CowAgent-사용가이드, Workflow-Engine-Selection, Onboarding, Auto-Agent-Roadmap (이미 Context 있음), Obsidian-Plugin-Setup, Simulation-Report |
+| 🥉 | 3 | Claude-System-Prompt, GitHub-지식허브, Macro-Indicator-Template |
 
-| 시간 | 활동 | 상세 |
-|:----|:-----|:------|
-| 06:40~06:53 | 🤖 MCP 멀티검색 8건 | AI 반도체, 미중 관세, 글로벌 물류 등 |
-| 07:00 | 🧠 Brain Sync (MINOR) | MCP 8건 LOW SIGNAL, Nexus 재시작 확인 |
-| 08:45 | 🧬 Daily Log Pre-Open | T-15m, Swap 371MiB 🟡, WTI $92 🔴 |
-| 09:00~10:00 | 🧠 Brain Sync (MINOR ×2) | Context 32~44h+ 대기 |
-| 10:41~12:51 | 🤖 MCP 멀티검색 4건 | 글로벌 증시, HBM4, AI 규제, AI 반도체 |
-| 12:00 | 🧬 Cron 지식 기록 | KOSPI 8,085 장중 반영 + Propose-Execute Gap 진단 |
-| 13:00 | 🧠 Brain Sync (MINOR) | 16개 arXiv 흡수, Context 44h+ |
-| 13:20 | 🔬 **Tech Scavenger: 16개 신규 논문 저장** | Anticipate and Learn ⭐ 등 |
-| 14:00 | 🧠 Brain Sync (MINOR) | 16개 논문 흡수 완료, MarketData 갱신 |
-| 14:41 | 🤖 MCP 멀티검색 3건 | AI 반도체 시장 전망 (31회 연속 LOW SIGNAL) |
-| 15:00 | 🧠 Brain Sync (MINOR) | 8 MCP LOW SIGNAL, Context 승격 8건🥇 ~52h 대기 |
-| 15:20~16:20 | Tech Scavenger ×2 | 모두 캐시 히트 (0개 신규) |
-| 16:29 | ✅ 배틀루프 Cycle Complete | Council HOLD 전원 |
+> ⚠️ System-Architecture, AI-Council, Auto-Agent-Roadmap은 이미 Context에 승격 완료됨 (중복 제안). 실제 미승인 신규 건수: **12건**
 
-### 📚 오늘 지식 수집 하이라이트
+### 🔴 최신 시스템 현황 (06:30 KST 기준)
+- Swap 622MiB 🔴🔴🔴 ALL-TIME HIGH! — 602MiB(5/22) 돌파
+- Council v4.1 정상 (SELL 18-19% 일관, HOLD 바이어스)
+- Dashboard CB Score ?/100 🔴 30h+ 미복구
+- KOSPI 8,047.51 🟢 after-hours 안정
+- 메모리 3.4Gi/7.6Gi (45%) 🟢
+- WSL Uptime 2d 12h 53m
 
-**🔬 Tech Scavenger (13:20 — 16개 신규 arXiv):**
-- **Anticipate and Learn: Proactive Agents ⭐** — Idle compute time 활용 사전계산 제안, Hermes idle CPU time에 Action Proposal 사전 생성 → `self-evolving system` 직접 적용 가능
-- **Language Models Need Sleep** — 연속 학습 시 LLM 성능 저하 패턴, long-running agent context 관리 참고
-- **From Model Scaling to System Scaling** — 시스템 아키텍처 최적화가 모델 규모보다 효율적
-- **Multi-Agent Systems are Mixtures of Experts** — MAS와 MoE 수학적 동형성 증명
+### 🟢 신규 지식 흡수 완료
 
-**🔬 Tech Scavenger 리포트 (14:21 배치, 17개 신규):**
-- Agentic Proving, CHRONOS (시간 인식 MAS), SkillOpt (자기 진화 스킬 최적화), Push Your Agent (정량적 목표 달성 측정), LLMs as Noisy Channels (Shannon 정보이론)
+**Context/Company/**
+1. **직원용-코딩-아키텍처-가이드**: 6가지 아키텍처 패턴, Template Method, Circuit Breaker, 3단계 파이프라인, 단일 진입점 원칙, 네이밍 컨벤션, 테스트 전략, 안티패턴 금지 목록
 
-**📊 KOSPI 8,000 시대 본격 개막:**
-- 4/27 저점 6,900 → 5/26 8,047 (+16.6%) — **30일 만에 8,000선 안착**
-- 삼성부광(014950): 8,210원 (+0.74%, cost 10,040 대비 -18.2%) — KOSPI 급등에도 소형주 디커플링 극심
-- USD/KRW 1,503 — 원화 강세 (1,517→1,503, +0.9% since 5/25)
-- WTI $92 — $100 하회 7일차, 글로벌 경기 침체 vs 인플레 완화 해석 충돌
+**Context/Product/**
+2. **시스템-아키텍처**: WSL2→tmux→서비스 계층, 통신 흐름(Telegram→Hermes→Nexus), CB Score(0-100), 6개 실행 모드
+3. **AI-Council-분석방법론**: 3분석가(기술적/뉴스모멘텀/리스크관리), 다수결 투표 테이블, CB Score 포지션 사이징
+4. **자율형-에이전트-로드맵**: 4단계 로드맵(Phase 1~4), MCP(25k⭐), LangGraph(12k⭐), Mastra, MS Agent Framework
+5. **Quote-Tool-연동가이드**: YOUNGLOG 견적 시스템 v9.0, 32국가/68항구/438운임레코드, 해상4모드+항공3티어
+6. **텔레그램-명령어-모음**: 시장/지식/물류/시스템 4개 카테고리 20+ 명령어, "대장님" 호칭, require_mention:false
+7. **Claude-Code-하이브리드-환경**: Cloud(Claude API)↔Local(Hermes) 전략, ACP 위임 패턴, 5개 시나리오
 
-### 🐛 지속 이슈 (32일차 — 전일 대비 변화 없음)
+**Context/TechStack/**
+8. **WSL-문제해결-가이드**: 브라우저/파일시스템/성능/네트워크/서비스 7개 카테고리, tmux 세션 구조(8개), 복구 절차
+9. **물류-ERP-연동가이드**: MRCloud ERP, 인보이스 자동화 3단계, SEA1002/AIR1002/EXP1002 필드 매핑, Double OK 필수, 5대 Master Directive
 
-| # | 이슈 | 상태 |
-|:-:|:-----|:-----|
-| 1 | yfinance .KS ticker NaN 32일 | 🔴 |
-| 2 | KiwoomAuth 8050 blocked 32일 | 🔴 |
-| 3 | Tavily API key 401 expired 32일 | 🔴 |
-| 4 | Dashboard stale since May 7 (20일) | 🔴 |
-| 5 | MCP Python zombie on restart 32일 | 🔴 |
-| 6 | **Self_heal.py 22일 중단** | 🔴 |
-| 7 | Council HOLD bias 7일차 (KOSPI +16.6%에도 매수 0) | 🟡 |
-| 8 | Context 승격 8건🥇 48h+ 미승인 | 🟡 |
-| 9 | Swap 441MiB 재축적 (500MiB threshold 접근) | 🟡 |
-| 10 | MCP 멀티검색 31회 연속 LOW SIGNAL (Naver noise) | 🟡 |
+**Agents/Hermes/**
+10. **역할과-책임**: 절대 기다리지 않는다 원칙, 트리거 7종, 매시 30분 Brain Sync, 매일 16시 Daily Log
+11. **Claude-Code-명령패턴**: 4가지 호출 패턴(Print/tmux/Review/Bulk), 실제 명령어 템플릿
 
-### 📖 핵심 인사이트
+### 🟡 지식 그래프 연결 제안
 
-1. 🟢 **KOSPI 8,000 시대**: 30일 +16.6% 상승. 포트폴리오 전액 현금 HOLD로 기회비용 약 ₩84만. Council DEFENSIVE 모드에서 NORMAL 전환되었으나 32일 매수 0건은 과도한 보수성.
-2. 🔴 **Propose-Execute Gap**: Context 승격 8건🥇 48h+ 대기. 자동 승격 타임아웃 5/27 00:27 KST 임박.
-3. 🔴 **WTI $92 저유가 7일차**: 글로벌 경기 침체(부정) vs 인플레 완화(긍정) — 해석 충돌. 저유가 → CB Score Oil Risk=False로 DEFENSIVE→NORMAL 전환에 기여.
-4. 🟡 **Swap 441MiB 재축적**: +70MiB/일 추세, 5/27 내 500MiB 도달 예상.
-5. 📚 **Anticipate and Learn 논문**: Hermes idle compute 활용. 대기 상태에서 Action Proposal 사전 생성 및 검증 아키텍처 도입 검토.
+1. **wiki/stocks/삼성부광 ↔ wiki/stocks/에이치엘사이언스 ↔ wiki/stocks/나우로보틱스**: 포트폴리오 3종목, 상호 참조 [[링크]] 전무. 최근 KOSPI 8,000 급등에도 보유 종목 3개 모두 적자 — 공통 원인 분석 링크 필요
+2. **Context/Product/Quote-Tool-연동가이드 ↔ 텔레그램-명령어-모음**: 견적 요청 명령어(`견적 내줘`) 문서에 Quote Tool 상세 문서 링크 없음
+3. **Context/TechStack/WSL-문제해결-가이드 ↔ Claude-Code-하이브리드-환경**: WSL 환경 구축 섹션(Claude Code 설치, LM Studio)이 WSL 문서에 참조 없음
+4. **03_Projects/Culture_Economy_Synergy_Business_Plan/ ↔ 00-Home.md**: 신규 9개 K-컬처 물류 사업 분석 문서 (5/27 07:03 KST 생성) — 00-Home.md 비즈니스 섹션에 링크 누락
+5. **01_지식/Hermes-Auto-Evolution-*.md (30+개) ↔ 02-Knowledge/Hermes-Daily-Log.md**: 자동 진화 로그가 방대해졌으나 Daily Log와 상호 참조 없음. 타임라인 통합 검색을 위한 인덱스 페이지 제안
 
-### 📋 내일(5/27 수) 체크포인트
+### 📋 다음 Brain Sync 체크포인트 (00:00 KST)
+- [ ] Context 승격 자동화 — 48h 타임아웃 정책 시행 여부
+- [ ] Swap 700MiB+ threshold 모니터링
+- [ ] KOSPI 8,000선 유지 + 오늘 장 분석 결과
+- [ ] 신규 Culture_Economy_Synergy 문서 9건 00-Home.md 등록
+- [ ] Council v4.1 장중 첫 분석 결과
 
-- [ ] 🔴 Propose-Execute Gap 해소 (Context 승격 8건 자동 타임아웃)
-- [ ] 🔴 Swap 500MiB threshold 모니터링 (현재 441MiB, +70MiB/일)
-- [ ] 📊 KOSPI 8,000선 유지 방향성
-- [ ] 🟢 USD/KRW 1,500선 안착 여부
-- [ ] 🔴 WTI $92 저유가 지속 여부
-- [ ] 🟡 Council HOLD 바이어스 재평가 (32일간 매수 0건)
-- [ ] 🔴 Self_heal.py 복구 (22일 중단)
+## 🧬 Hermes Midday Snapshot — 2026-05-27 (Wed) 12:45 KST (장중, KOSPI 8,438 🟢🟢)
+
+### 📋 시스템 현황 — 12:45 KST (장중, 거래일)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | 2d 19h (5/24 17:40 이후 재부팅 없음) |
+| tmux 세션 | 7개 — all normal |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 |
+| Hermes Gateway (port 8642) | ✅ active (768MB RSS, 소폭 감소) |
+| Memory | 4.0Gi / 7.6Gi (52%) 🟡 증가 |
+| **Swap** | **780MiB 🔴🔴🔴** (ALL-TIME HIGH, 2.0Gi의 39%) |
+| Disk (WSL) | 4% ✅ |
+| Disk (C:) | 384/456GB (85%) 🔴🔴 |
+| Load Avg | 0.59 / 0.68 / 0.73 |
+| 모의투자 | ₩4,929,810 (38일차, 현금 전량 보유) |
+| CB Score | 22/100 (Nexus) / ?/100 (Dashboard) |
+| Cron Jobs | 정상 |
+| KOSPI (장중) | **8,438 🟢🟢** (+4.85% 5/26 close 대비) |
+| USD/KRW | **1,499.58 🟡** (1500선 하회, 원화 강세 전환) |
+| WTI | **$92.11 🔴** ($100선 하회 9일째) |
+
+### 📊 오늘 주요 타임라인 (5/27 KST)
+
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 00:46 | 🧬 Auto-Evolution 스냅샷 (Swap 511MiB) |
+| 04:30 | 🧬 Auto-Evolution (Swap 608MiB 🔴 500MiB 초과, S4 급가속 패턴 발견) |
+| 06:00 | 🧠 Brain Sync — 10_Wiki/_Index.md 전면 갱신 (241→493 docs) |
+| 06:30 | 🧬 Auto-Evolution (Swap 622MiB ALL-TIME HIGH 경신) |
+| 08:30 | 🧬 Auto-Evolution (Swap 650MiB, KOSPI 장 개시) |
+| 10:30 | 🧬 Auto-Evolution 15차 (Swap 700MiB 🔴🔴🔴, KOSPI 8,341 🟢) |
+| 12:30 | 🧬 Auto-Evolution 16차 (Swap 702MiB, 증가세 둔화!) |
+| **12:45** | **NOW** → 본 Midday Snapshot |
+
+### 🟢 Swap Plateau 진입 — 700~780MiB 안정화 구간
+
+- 10:30(700MiB) → 12:30(702MiB) → **12:45(780MiB)**
+- 10:30~12:30 구간: **+2MiB/2h (+0.3%)** — 08:30~10:30의 +50MiB/2h(+7.7%) 대비 급감
+- **BUT** 12:30→12:45 15분 만에 702→**780MiB 급등** — 오후 부하 증가로 재가속 의심
+- Gateway RSS: 791MB(10:30) → 768MB(12:30)로 소폭 감소했으나 MetaClaw(512MB) + Nexus(393MB) 누적 효과
+- **S4 패턴 지속**: S1(0→300MiB, 4일), S2(300→500MiB, 2일), S3(500→600MiB, 1일), S4(600→780MiB, 12h)
+- **재부팅 시점 임박**: 장 마감(15:30) 후 재부팅 권장
+
+### 🟢🟢 KOSPI 8,438 장중 (+4.85%) — 사상 최고치 경신 중
+
+- 5/26 close(8,047) → 장중 8,438 (+391p, +4.85%) 
+- 석가탄신일(5/27) 휴장 오해 있었으나 **정상 거일** 확인
+- USD/KRW **1,499.58 🟡** 1500선 하회 (원화 강세) — 외국인 매수 유입
+- WTI $92.11 ($100 하회 9일째) — 에너지 비용 하락이 증시 긍정 재료
+- **Council v4.1**: 여전히 SELL(18~19%) + HOLD — 기술적 BUY 무효화 지속
+
+### 🟡 신규 지식 기록
+
+1. **Swap 4단계 급가속 패턴(S1→S4) 정리 완료**:
+   - S1 (안정기): 0→300MiB, ~4일 소요
+   - S2 (가속기): 300→500MiB, ~2일 소요
+   - S3 (고가속): 500→600MiB, ~1일 소요
+   - S4 (급가속): 600→780MiB, ~12h 소요 (증가율 가속)
+
+2. **KOSPI 8,438 사상 최고치**: 4/27 저점 6,900 대비 **+22.3% 상승** (약 5주)
+   - 8,000선 안착 후 추가 상승 — 5/6 첫 7,000 돌파 후 21일 만에 8,400
+   - 외국인 순매수 + 원화 강세(1,500선 하회) + WTI 하락(에너지 비용 감소)
+
+3. **Propose-Execute Gap 첫 실제 해소 사례 (5/27 08:30)**:
+   - 00:30 사이클의 CB Score 추정 제안이 self_heal.py 10:05 실행에 반영됨
+   - 다만 Dashboard.json 기입은 여전히 ?/100 — 12h cycle 리셋
+
+4. **MCP 멀티검색: 158회 연속 LOW SIGNAL (19일째)**:
+   - 결정적 개선 없음 — Naver 100% 의존도가 근본 원인
+   - 총 158개 파일 (MCP-멀티검색-*.md) 누적 — 용량 낭비 심각
+
+### 🚧 Action Items
+
+| # | 항목 | 상태 | 비고 |
+|:-:|:-----|:----:|:------|
+| 1 | 🔴 Swap 780MiB 재부팅 | **임박** | 장 마감(15:30) 후 WSL 재부팅 필요 |
+| 2 | 🔴 C: 드라이브 85% | 지속 | WSL vhdx 확장 차단 가능성 |
+| 3 | 🟡 self_heal.py 28일 중단 | 5/11 마지막 | Dashboard.json CB Score ?/100 |
+| 4 | 🟡 Council BUY 무효화 | **문제** | KOSPI 8,400에도 단 1건 BUY 없음 |
+| 5 | 🟢 MCP 멀티검색 소스 전환 | **158회 실패** | Naver→Google News 전환 필요 |
+
+> **5/27(수) 석가탄신일 — 정상 거일. KOSPI 8,438 🟢 사상 최고치. Swap 780MiB 🔴 40% 임박. Council BUY 제로 문제 지속.**
 
 ---
 
-*Recorded by Hermes Agent Cron on 2026-05-26 16:45 KST*
-
-## 🧠 Brain Sync — 20:00 KST
-**Status: MINOR — Context/Members/Agents no changes since 17:00**
-
-| Metric | Value | Change |
-|--------|-------|:------:|
-| KOSPI | 8,085.46 | +3.03% 🚀 |
-| KOSDAQ | 1,177.24 | +1.39% 🟢 |
-| USD/KRW | 1,506.88 | +0.16% 🟢 |
-| WTI | $91.46 | -5.32% 🟡 |
-| Swap | 452MiB 🟡 | +2MiB since 18:30 |
-| Mem | 3.4Gi/7.6Gi (44%) | 🟢 |
-| Load | 0.60 | 🟢 |
-| Nexus | ✅ 19:54 Cycle | Council HOLD 8일차 🔴 |
-
-**⚠️ Context 승격 48h deadline: 5/27 00:27 KST — 4.4h 남음!**
-- 8건🥇 최우선 승격 제안 미승인 (6일째)
-- 승격 자동 트리거 or 48h 타임아웃 정책 필요
-
-**System Notes:**
-- OpenClaw Gateway/hermes-watcher 세션 없음 (복구 필요)
-- MCP 10_Wiki/ 4 new LOW SIGNAL docs (31~34th)
-- 4개 MCP 멀티검색 문서(18:41-18:51) — 모두 LOW SIGNAL
-- wiki/stocks + wiki/macros 기술적 지표 갱신 완료 (19:11)
-
-*Recorded by Hermes Agent Brain Sync on 2026-05-26 20:00 KST*
+*Recorded by Hermes Agent Cron on 2026-05-27 12:45 KST — KOSPI 8,438 장중, Swap 780MiB 🔴, Council HOLD 9일차*
 
 
-### 2026-05-27 00:00 KST — Brain Sync
-🟡 **MINOR**: 좌표 정정 4건 (Macro confirmed close 반영), Context 승격 48h timeout, Swap 499MiB 🔴
-- **시장**: KOSPI 8,047.51🟢+2.55%, KOSDAQ 1,172.52🟢+0.98%, 환율 1,504.46🟢-0.55%, WTI $92.63🔴-4.11%
-- **Context 승격 48h deadline 초과** — 🥇8건 중 1건만 승격 완료, 7건 Steven 대기
-- **System**: Swap 499MiB🔴, CB 22/100✅, Dashboard ?/100🔴(재발), Council v4.1✅
-- **MCP**: 40th+ LOW SIGNAL — source diversification 시급
+---
+
+## 🔴🔴🔴 긴급 Brain Sync — 2026-05-27 15:02 KST (15:00 사이클)
+
+### Swap 위기 실시간 현황
+| 메트릭 | 12:30 예측 | 15:00 실제 | 차이 | 상태 |
+|--------|:---------:|:---------:|:----:|:----:|
+| Swap | ~720MiB | 852MiB | +132MiB (+18%) | 🔴🔴🔴 |
+| Swap % | 36% | 42.6% | +6.6%p | 🔴🔴🔴 |
+| Gateway RSS | ~770MB | 1,303MB | +533MB (69%↑!) | 🔴🔴🔴 |
+| MetaClaw RSS | ~510MB | 474MB | 정상 | 🟢 |
+| Nexus RSS | ~390MB | 425MB | 소폭 증가 | 🟡 |
+| Memory | 3.4Gi/7.6Gi | 3.9Gi/7.6Gi | +0.5Gi | 🟡 |
+| C: 드라이브 | 384GB/456GB | 383GB/456GB (84%) | -1GB | 🔴 |
+| Load Avg | 1.40/0.83/0.54 | 0.91/0.56/0.43 | 안정 | 🟢 |
+| WSL Uptime | 2d 18h 50m | 2d 21h 20m | +2.5h | 🟡 |
+
+### 주요 발견 — 15:00 KST Brain Sync
+
+**1. 🔴🔴🔴 Swap 852MiB — 12:30 예측 720MiB 대비 +18% 급등! 긴급 재부팅 필요**
+- 12:30 702MiB(P2 Plateau) → 15:00 852MiB (+150MiB/2.5h, 60MiB/h)
+- 2.0Gi 스왑의 42.6% 사용 — 800MiB(40%) 임계 초과!
+- 원인: Gateway RSS가 768MB(12:30) → 1,303MB(15:00)로 +533MB 폭등
+- 이는 cron/Brain Sync 작업이 Gateway에 추가 부하를 준 것으로 추정
+- 15:30 장 마감 후 즉시 재부팅 필수 — 그 전에 900MiB+ 도달 가능
+
+**2. 🔴🔴 Gateway 1.3GB RSS — 단일 프로세스 최대 기록 경신**
+- Gateway RSS가 사상 처음으로 1.3GB 돌파
+- VSZ 5.1GB — 가상 메모리 할당도 급증
+- 2d 21h uptime 동안 지속적 메모리 누수
+
+**3. 🟢 MCP 멀티검색: 158회 LOW SIGNAL — 추가 없음**
+- 12:30 158회에서 15:00 158회 유지 — 크론 정지된 것으로 보임
+
+**4. 🔴 12:30 예측 부정확 — Swap 예측 모델 개선 필요**
+- 예측: 15:00 ~720MiB → 실제: 852MiB (+18%)
+- 예측 실패 원인: Gateway RSS 급증(768→1,303MB) 간과
+- Plateau가 아닌 P3급 급가속 재개
+
+### 개선 제안
+1. 🔴🔴🔴 15:30 장 마감 후 WSL wsl --shutdown 즉시 실행 — Swap 852MiB
+2. 🔴🔴 Gateway 메모리 누수 조사 — pid 297, 1.3GB RSS. 매주 정기 재시작 필요
+3. 🟡 Swap 예측 모델 개선 — Gateway RSS를 핵심 변수로 포함. Plateau 가정 제거
+4. 🟡 12:30→15:00 예측 오차 분석 — Gateway 변수 추가로 모델 정확도 향상
+
+### Swap Timeline (5/24 17:40 재부팅 이후)
+| 시간 | Swap | 속도 |
+|:----|:---:|:---:|
+| 5/26 08:30 | 361MiB | 기준 |
+| 5/26 22:30 | 499MiB | ~10MiB/h |
+| 5/27 00:46 | 511MiB | ~6MiB/h |
+| 5/27 04:30 | 608MiB | ~26MiB/h |
+| 5/27 06:30 | 622MiB | ~7MiB/h |
+| 5/27 08:45 | 698MiB | ~33MiB/h |
+| 5/27 10:30 | 700MiB | ~1MiB/h (P2) |
+| 5/27 12:30 | 702MiB | ~1MiB/h (P2) |
+| 5/27 12:45 | 780MiB | ~312MiB/h 급등 |
+| 5/27 15:00 | 852MiB | ~32MiB/h |
+
+> 5/24 17:40 → 5/27 15:00 = 69h 20m, 852MiB 사용
+> 2.0Gi의 42.6% — 40% 임계(800MiB) 돌파!
+> 50%(1.0Gi)까지 148MiB 남음 — 장중 16:00~15:30 동안 도달 가능
+
+*🕐 2026-05-27 15:02 KST | Hermes Brain Sync | Swap 852MiB 🔴🔴🔴 42.6% 긴급! | Gateway 1.3GB RSS 기록 경신 | 장 마감 후 재부팅 필수*
 
 
-### 🧠 Brain Sync — 2026-05-27 09:00 KST
-**Status: ROUTINE — Context/ 문서 11개 전수 스캔 완료, 변경 없음**
+---
 
-| Metric | Value | Change |
-|--------|-------|:------:|
-| Context/ | 11 files | 🟢 All 9 initial promotions confirmed |
-| Members/ | 1 file | 🟡 LLM-Wiki-개선아이디어 (draft, Steven) |
-| Agents/ | 2 files | 🟢 역할과-책임 + Claude-Code-명령패턴 |
-| 10_Wiki/ | 526 files | 🟢 AI 논문 526건 요약 |
-| wiki/ | 279 files | 🟢 stocks/sectors/macros |
-| Total .md | 1,164 files | 🟢 Vault 규모 유지 |
-| Context 승격 | 16건 🥇🥇🥇 미승인 | 🔴 48h+ deadline 초과 (5/27 00:27 KST) |
-| Swap (06:30) | 622MiB 🔴🔴🔴 | ALL-TIME HIGH, 사상 최고 기록 경신 |
+## 🧬 Hermes Post-Close Snapshot — 2026-05-27 (Wed) 16:46 KST (Swap 912MiB 🔴🔴🔴 Post-Market)
 
-**Context 승격 현황 (미승인 16건):**
-- 🥇 **7건 최우선** (48h+ overdue): Operations-Guide, Vault-구조-설계도, Hermes-Git-지식베이스, Trading-Strategies, Business-Portfolio-Index, System-Architecture, AI-Council
-- 🥈 **6건**: CowAgent-사용가이드, Workflow-Engine-Selection, Onboarding, Autonomous-Agent-Roadmap, Obsidian-Plugin-Setup, Business-Simulation-Report
-- 🥉 **3건**: Claude-System-Prompt, GitHub-지식허브, Macro-Indicator-Template
+### 📋 시스템 현황 — 16:46 KST (장 마감 후 1h 16m)
 
-**지식 그래프 제안:**
-1. `wiki/stocks/삼성부광` ↔ `wiki/stocks/에이치엘사이언스` ↔ `wiki/stocks/나우로보틱스` (3개 포트폴리오 종목 상호 참조 링크 없음)
-2. `Context/Product/Quote-Tool-연동가이드` ↔ `Context/Product/텔레그램-명령어-모음` (견적 요청 명령어 참조)
-3. `Context/TechStack/WSL-문제해결-가이드` ↔ `Context/Product/Claude-Code-하이브리드-환경` (WSL 환경 구축 관련)
-4. `03_Projects/Culture_Economy_Synergy_Business_Plan/` (신규 9개 MD 파일) ↔ `00-Home.md` (비즈니스 섹션 연결 누락)
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | **2d 23h** (5/24 17:40 이후 — 4일차) |
+| tmux 세션 | 7개 — all normal |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 |
+| Hermes Gateway (port 8642) | ✅ 200 OK |
+| **Gateway RSS** | **1,593MB 🔴🔴🔴** (15:00 1,303MB → +290MB 추가 증가) |
+| Memory | 4.2Gi / 7.6Gi (55%) 🟡 |
+| **Swap** | **912MiB 🔴🔴🔴 (45.6%)** — 800MiB 초과 지속, 1.0Gi 임박! |
+| Load Avg | 0.24 / 0.26 / 0.41 — 매우 안정 |
+| Disk (WSL) | 4% ✅ |
+| Disk (C:) | 84% 🔴 (383/456GB) |
+| Cron Jobs | 9개 등록 정상 |
+| Portfolio | ₩4,929,810 (현금 전량, 38일차) |
+| CB Score (Nexus) | 22/100 confirmed |
+| CB Score (Dashboard) | ?/100 🔴 (self_heal 30일차 중단) |
 
-*Recorded by Hermes Agent Brain Sync on 2026-05-27 09:00 KST*
+### 📊 시간별 Swap 추이 — 5/27 KST
 
+| 시간 (KST) | Swap 사용량 | 증가율 | 비고 |
+|:-----------|:----------:|:------:|:-----|
+| 00:46 | 511MiB 🔴 | +6MiB/h | 500MiB 최초 초과 |
+| 04:30 | 608MiB 🔴🔴 | +26MiB/h (4x) | 급가속 시작 |
+| 06:30 | 622MiB 🔴🔴 | +7MiB/h | 감속 |
+| 08:45 | 698MiB 🔴🔴🔴 | +33MiB/h | 재가속 |
+| 10:30 | 700MiB 🔴🔴🔴 | +1MiB/h (P2 Plateau) | 일시 안정 |
+| 12:30 | 702MiB 🔴🔴🔴 | +1MiB/h (P2 Plateau) | Plateau 지속 |
+| 12:45 | **780MiB 🔴🔴🔴** | **+312MiB/h 급등** | Plateau 붕괴! |
+| 15:00 | **852MiB 🔴🔴🔴** | +32MiB/h | Gateway 1.3GB RSS |
+| **16:46** | **912MiB 🔴🔴🔴** | +27MiB/h | **2.0Gi의 45.6%, 1.0Gi까지 88MiB** |
 
-### 🧠 Brain Sync 15:00 — Swap 852MiB 긴급! 🔴🔴🔴
-- Swap: 702MiB(12:30) → 852MiB(15:00) = +150MiB/2.5h (+21%%)
-- Gateway RSS: 768MB → 1,303MB 폭등 — 사상 최대!
-- MetaClaw: 474MB / Nexus: 425MB
-- C: 드라이브: 383/456GB (84%%) — 74GB 남음
-- **결론**: 15:30 장 마감 직후 WSL 재부팅 필수! Gateway 재시작 포함
+> **분석**: 15:02 사이클 이후 1h 44m 동안 +60MiB 증가 (912-852). Gateway RSS 1,593MB (15:00 1,303MB → +290MB). 장 마감 후 부하 감소에도 Swap 증가율 유지 — **메모리 누수 구조적 심화**. WSL 4일차 uptime. **1.0Gi(50%)까지 88MiB 남음 — 오늘 밤~내일 새벽 도달 예상.**
 
+### 🛑 Swap 긴급 평가
 
-## 2026-05-29 (Fri) 00:46 KST — 🔄 Pre-market Snapshot
+| 메트릭 | 위험도 | 설명 |
+|:-------|:------:|:------|
+| 912MiB / 2.0Gi | 🔴🔴🔴🔴 | 45.6% 사용 — 50% 임계 육박 |
+| Gateway RSS 1.6GB | 🔴🔴🔴🔴 | 단일 프로세스 1.6GB — 사상 최대 |
+| S1→S4 주기 가속 | 🔴🔴 | 4일(S1)→2일(S2)→1일(S3)→12h(S4) |
+| 1.0Gi 도달 예상 | 🔴🔴🔴🔴 | 오늘 밤~내일 새벽 (T-6~12h) |
+| 재부팅 필요성 | 🔴🔴🔴🔴 | **즉시 재부팅 강력 권장** |
 
-### System
-- WSL Uptime: 6h 12m (D+1), Swap: **1.0Gi** 🔴, Memory: 3.1Gi/7.6Gi (41%)
-- Gateway: 301MB RSS ✅, Load Avg: 0.61
-- C: drive: 86% ⚠️ (65GB 여유)
-- tmux: 6 sessions all normal
+### 🧠 금일 주요 사항
 
-### Market (5/28 EOD Confirmed Close)
-- KOSPI 8,185.29 🟢 -0.53% (8,000선 안착), KOSDAQ 1,104.36 🔴 -2.54% 급락
-- USD/KRW 1,503.06 🟢 -0.16%, WTI $90.92 🟢 +2.53% 반등
+1. **🟢🟢 KOSPI 8,047.51 확정 마감** (+2.55%, 5/26 close) — 사상 첫 8,000 마감 확정. 4/27 저점 6,900 대비 +16.6%. USD/KRW **1,504.46** 원화 강세 유지. WTI $92.63 ($100 하회 7일차).
 
-### Portfolio (5/28 Close)
-- 삼성부광 6,740🔴 -3.16% (-32.87%), 에이치엘 14,370🔴 -2.64% (-10.56%), 나우로보틱스 22,750🔴 -4.61% (-25.53%)
+2. **🔴🔴🔴 Swap 912MiB ALL-TIME HIGH** — 5/24 17:40 재부팅 이후 4일차에 912MiB(45.6%) 도달. Gateway RSS 1.6GB로 누수 가속. **1.0Gi(50%) 임계 도달 시 시스템 불안정 위험.** 장 마감 후 재부팅 최적 시점 도래.
 
-### Issues
-- 🔴 GUARDIAN ERROR 12h+ — `float division by zero` 지속
-- 🔴 Council v3.0 Fallback 20h+ — JSON parse error 미수리
-- 🔴 Context 승격 112h+ — 8건 🥇 미승인
-- 🟡 Swap 1.0Gi — 장 마감 후 재부팅 검토 필요
+3. **🔴 Gateway 1.6GB RSS — 단일 프로세스 최대 기록 경신** — 12:30 768MB → 15:00 1,303MB → 16:46 **1,593MB**. 4시간 만에 2배 증가. 매주 정기 재시작 메커니즘 필요.
 
-### Outlook
-- 5/29(금) 마지막 거래일. KOSPI 8,000~8,200, KOSDAQ 1,100선 방어 관건
-- 주말(5/30~31) 휴장. 주간 요약 + 버그 수리 계획
+4. **🟡 Council HOLD 바이어스 10일차** — KOSPI 8,000 마감에도 단 1건 BUY 없음. CB Score 22/100가 모든 기술적 BUY를 무효화. 모의투자 기회비용 지속.
 
-*Hermes Knowledge Cron 2026-05-29 00:46 KST*
+5. **🟡 MCP 멀티검색 158회 정지 확인** — 크론 중단. 158개 파일 잔존.
 
+6. **🔴 Self_heal.py 30일차 중단** — 5/5 마지막 로그 이후 갱신 없음. Dashboard CB Score ?/100 지속.
 
-## 🔍 Tech Scavenger — 2026-05-29
-**실행 상태**: 정상 (매시간 실행, 마지막 02:20 KST)
-**최근 24시간 신규**: 1개 저장
-- 🆕  — GitHub Trending, autonomous deep research agent
+7. **🟢 기술적 지식 신규 수집** — 15:00 Brain Sync에서 MUSE-Autoskill(HIGH SIGNAL), ReMoE(HIGH SIGNAL) 발견.
 
-**주요 동향** (5/27~5/28):
-- AI Agents 분야 활발: MUSE-Autoskill (self-evolving agents), SwarmHarness (decentralized routing), How VLAs Fail Differently
-- LLM Alignment: Alignment Tampering (RLHF gaming 연구), Self-Improving LMs (양방향 진화)
-- arXiv API 간헐적 장애 지속 (특히 cs.RO/cs.MA 타임아웃), GitHub/HF는 정상
-- **5/4~5/29 누적 99건 신규 저장**
+### 🚧 Action Items (Priority)
 
+| # | 항목 | 우선도 | 비고 |
+|:-:|:-----|:-----:|:------|
+| 1 | **WSL 재부팅 (wsl --shutdown)** | 🔴🔴🔴🔴 | Swap 912MiB, 1.0Gi 도달 전. Gateway 1.6GB 누수 해소 |
+| 2 | **Gateway 정기 재시작 스크립트** | 🔴🔴🔴 | 매주 목요일 자정 Gateway 재시작 cron 등록 |
+| 3 | **Self_heal.py 진단/수리** | 🔴🔴 | 30일차 중단. Dashboard CB Score ?/100 |
+| 4 | **Council BUY 바이어스 복구** | 🟡 | CB Score 22→30+ 상향 후 HOLD→BUY 전환 가능 |
+| 5 | **C: 드라이브 84% 정리** | 🟡 | clawsweeper 또는 수동 정리 |
+| 6 | **Context 승격 12건 86h+ 지연** | 🟡 | Steven 승인 대기 |
 
-
-## 5/29 04:46 KST — Pre-Market #2
-
-🟢 System: Uptime 10h12m, Memory 41%, Load 0.70
-🔴 Swap 1.1Gi (1.0Gi→1.1Gi, +100MiB/4h)
-🔴🔴🔴 GUARDIAN ERROR 76h+ (`float division by zero`)
-🔴🔴 Council Fallback 24h+ (JSON parse)
-🔴🔴 Context 승격 116h+ (8건🥇)
-
-**오늘 (금) 마지막 거래일** — KOSPI 8,185 / KOSDAQ 1,104 / WTI $90.92 (5/28 EOD 유지)
-5/29 EOD 후: Weekly Summary + WSL 재부팅 + 버그 핫픽스 예정
+---
+*Recorded by Hermes Agent Cron on 2026-05-27 16:46 KST — KOSPI 8,047.51 confirmed close, Swap 912MiB 🔴🔴🔴 45.6% ALL-TIME HIGH, Gateway 1.6GB RSS 🔴🔴🔴*
 
 
-## 5/29 08:00 KST — Pre-Market #3
+---
 
-| 지표 | 값 | 변화 |
-|:-----|:---|:----:|
-| Uptime | 11h58m 🟢 | 안정 |
-| Memory | 3.2Gi/7.6Gi (42%) 🟢 | 안정 |
-| Swap | 906MiB/2.0Gi (45%) ✅ | **-94MiB** (04:30→08:00) |
-| Loadavg | 0.78 🟢 | 저부하 |
-| Gateway(8642) | down 🔴 | 12h+ |
-| C: Drive | 87% 🔴 | 64Gi 여유 |
-| GUARDIAN ERROR | ?h+ 🔴 | 미확인 |
-| CB Score | ?/100 🔴 | 지속 |
-| Memory | 2,200/2,200 🔴 | 5일째 꽉참 |
-| Context 승격 | 120h+ 🔴 | 5일차 |
+## 🧬 Hermes Night Check — 2026-05-27 (Wed) 20:46 KST (Post-20:30 사이클)
 
-**Swap 감소 분석**: Gateway(8642) 다운으로 인한 착시효과로 추정. Gateway 재시작 시 Swap 1.0Gi+ 재증가 예상됨.
-**전망**: 5/29(금) 마지막 거래일. 15:30 EOD 후 Weekly Summary + Gateway 재시작 + WSL 재부팅 필요.
+### 📋 시스템 현황 — 20:46 KST
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | **3d 3h** (5/24 17:40 이후 — 4일차) |
+| Memory | 4.1Gi / 7.6Gi (54%) 🟡 |
+| **Swap** | **1.5Gi 🔴🔴🔴🔴 (75%)** — 20:30(1.6Gi/80%) 대비 -0.1Gi 소폭 감소 |
+| Gateway RSS | **1.9GB 🔴🔴🔴🔴** (24.0% MEM) — 사상 최대! |
+| Load Avg | 0.35 / 0.45 / 0.54 — 안정 |
+| Disk (WSL) | 4% ✅ |
+| Disk (C:) | 85% 🔴🔴 (384/456GB) |
+| Portfolio | ₩4,929,810 (현금 전량, 38일차) |
+
+### ⚡ 핵심 포인트
+
+1. **🔴🔴🔴🔴 Swap 1.5Gi (75%) — 임계 위기 지속** — 20:30(1.6Gi, 80%) 대비 소폭 감소했으나 75%는 극도로 위험. Gateway RSS 1.9GB (24% MEM)가 주 원인. **즉시 wsl --shutdown 필요.**
+2. **🟢 KOSPI 8,228.70 (+2.25%) 사상 최고 마감** — 변경 없음 (장 마감 상태).
+3. **🟢 기본 서비스 정상** — MetaClaw 233MB, Nexus 361+349MB, Open WebUI 144MB — 모두 정상 응답.
+4. **📊 20:30 Auto-Evolution 보고서 작성 완료** — 16차 사이클, 지식 기록 정상 수행됨.
+5. **10_Wiki Brain Sync** — 5/27 배치 11건 저장 완료 (20:30 기준, HIGH SIGNAL 2건 포함).
+
+### 🚧 긴급 Action Item
+
+| # | 항목 | 우선도 |
+|:-:|:-----|:------:|
+| 1 | **WSL 즉시 재부팅 (wsl --shutdown)** — Swap 75%, Gateway 1.9GB RSS. **현재 속도로 ~22:30 90% 도달** | 🔴🔴🔴🔴 |
+| 2 | Gateway 정기 재시작 cron 등록 | 🔴🔴🔴 |
+| 3 | Self_heal.py 진단/수리 (30일차 중단) | 🔴🔴 |
+
+*Recorded by Hermes Agent Cron on 2026-05-27 20:46 KST — Swap 1.5Gi/75% 🔴🔴🔴🔴, Gateway 1.9GB RSS 사상 최대, 20:30 Auto-Evolution 16차 완료*
 
 
-## 2026-05-29 (Fri) 16:50 KST — 5/29 EOD Confirmed Close
+---
 
-**KOSPI 8,476.15 🟢🟢 +3.55%** — 5/27 사상최고 8,457 돌파! 5/28 8,185 급락을 단 하루 만에 회복+α. **신고가 종가!**
-**KOSDAQ 1,074.80 🔴🔴 -2.68%** — 5일 연속 폭락 (5/22 1,161→5/29 1,075 = -7.43%). KOSPI와 +6.23%p 역대급 디커플링.
-**USD/KRW 1,508.28** — 3일 연속 원화 강세 추세 꺾임 (+0.34%).
-**WTI $88.86 🔴** — $90선 재돌파 실패. 5일째 $88-$89 박스권.
+## 🌙 Hermes Night Check — 2026-05-28 (Thu) 00:46 KST (새벽)
 
-**System**: Uptime 21h✅, Swap 987Mi🟡, Memory 43%🟢, Gateway 596MB🟢, C: 87%🔴, tmux 5개🟡(mcp 소멸).
+### 📋 시스템 현황 — 00:46 KST
 
-**Weekly Recap**: KOSPI +8.01% 대폭발 but KOSDAQ -7.43% 폭락 = 극단적 'K-디커플링'. 다음 거래일 6/1(월) 09:00 KST.
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | **3d 6h** (5/24 17:40 이후 — 4일차) |
+| Memory | 4.2Gi / 7.6Gi (55%) 🟡 |
+| **Swap** | **1.5Gi 🔴🔴🔴🔴 (75%)** — 20:46(1.5Gi/75%)과 동일 유지 |
+| Gateway RSS | **1.8GB 🔴🔴🔴🔴** (23.0% MEM) — 20:46(1.9GB) 대비 -0.1GB 소폭 감소 |
+| Load Avg | 0.38 / 0.75 / 0.63 — 안정 (야간 저부하) |
+| Disk (WSL) | 4% ✅ |
+| Disk (C:) | 85% 🔴🔴 (384/456GB) |
+| Portfolio | ₩4,929,810 (현금 전량, 38일차) |
+
+### ⚡ 금일 요약 (5/27 → 5/28 자정 기준)
+
+1. **🔴🔴🔴🔴 Swap 1.5Gi (75%) 지속** — 20:46 대비 4시간 동안 변화 없음. Gateway RSS 1.8GB로 소폭 감소(1.9→1.8GB). **재부팅 없이 3일 6시간 경과. 50% 임계 초과 상태 지속 24h+.** 안정적인 야간 부하로 당장 악화되진 않았으나, 장 시작 전 재부팅 권장.
+
+2. **🟡 KOSPI 8,228.70 사상 최고 마감 유지** — 장 마감 후 변동 없음. 미국 장 마감 및 야간 선물 추이는 아침 사이클에서 확인 예정.
+
+3. **🔴 Gateway 1.8GB RSS — 여전히 위험 수준** — 20:46 1.9GB 대비 0.1GB 감소했으나 여전히 사상 최대 수준 유지. Gateway 재시작 cron 미등록 상태.
+
+4. **🟢 MCP 멀티검색 2건 저장 완료** (22:40) — 해상운임 해운 물류 시장 동향 2025, AI Agent MCP 생태계 2025. 10_Wiki에 정상 기록됨.
+
+5. **🟢 차기 Brain Sync 예정** — 00시~06시 사이 변동 없음. 미국 장 종료 후 데이터 반영은 아침 사이클에서 수행.
+
+### 🚧 Action Items
+
+| # | 항목 | 우선도 | 비고 |
+|:-:|:-----|:------:|:------|
+| 1 | **WSL 재부팅 (wsl --shutdown)** | 🔴🔴🔴🔴 | **75% 24h+ 지속. 장 시작 전 필수.** |
+| 2 | Gateway 정기 재시작 cron 등록 | 🔴🔴🔴 | 미등록 상태 |
+| 3 | C: 드라이브 85% 정리 | 🟡 | 384/456GB |
+| 4 | Context 승격 12건 지연 | 🟡 | Steven 승인 대기 |
+
+---
+
+## 🧬 Hermes Knowledge Cron — 2026-05-28 (Thu) 05:00 KST
+
+### 📋 수행 작업
+- **00-Home.md 업데이트**: 5/27 confirmed close 반영, 최근 업데이트 로그 갱신, 시장현황 링크 5/27로 업데이트
+- **05_시장현황_20260528.md 생성**: Pre-Market 분석 리포트 (KOSPI 8,500 도전 전망, WTI $90 붕괴, KOSDAQ -3.36% 디커플링)
+- **GUARDIAN-ERROR-해결가이드.md 생성**: float division by zero 원인 분석 및 핫픽스 방법
+- **CB-Score-버그-분석.md 생성**: Dashboard ?/100 근본 원인 (tmux 패턴 미스) 및 해결 방법
+
+### 📊 시스템 현황 (05:00 KST)
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | **1h 10m** (5/28 03:35 재부팅 성공) |
+| Swap | **0B ✅ 완전 회복!** (1.6Gi→재부팅→0B) |
+| Memory | **4.6Gi/7.6Gi (61%)** 🟡 (증가 추세) |
+| Gateway RSS | ~811MB 🟢 (재부팅 후 안정) |
+| Disk (WSL) | 4% ✅ |
+| **Disk (C: 드라이브)** | **381/456GB (84%)** ⚠️ |
+| tmux 세션 | 6개 정상 |
+| Load Avg | 0.29 / 0.25 / 0.28 |
+
+### 🔴 미해결 Critical 이슈
+1. **GUARDIAN ERROR 🔴** — float division by zero, 10초 간격, 229000.KQ buy_price=0
+2. **Council v3.0 Fallback 🟡** — JSON parse error line 2002 (12h+)
+3. **CB Score ?/100 🔴** — tmux 패턴 미스 (코드 버그 확정)
+4. **Context 승격 12건 🟡** — 72h+ 지연
+5. **C: 드라이브 84% ⚠️** — docker prune + cleanmgr 필요
+
+*Recorded by Hermes Knowledge Cron on 2026-05-28 05:00 KST — WSL 재부팅 성공✅ Swap 0B, GUARDIAN ERROR🔴 Council Fallback🟡, WTI $89.89 $90 붕괴🔴*
+
+---
+
+## 🧬 Hermes Daily Snapshot — 2026-05-28 (Thu) 16:45 KST (EOD Post-Close)
+
+### 📋 수행 작업
+- **EOD 시스템 스냅샷 기록**: 5/28 장 마감 후 시스템 상태 점검
+- **장중 평가**: KOSPI 7,985.74 급락 장중 기록 → 8,000선 붕괴 후 반등 여부 미확인 (EOD 종가 데이터 대기)
+- **기존 Auto-Evolution 수집**: 19차(14:30 Afternoon Scan) 정상 생성됨 → `01_지식/Hermes-Auto-Evolution-20260528-1430.md` (11,658 bytes)
+
+### 📊 시스템 현황 (16:45 KST — Post-Close)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | **10h 51m** (5/28 03:35 재부팅 → 10.9h 경과) |
+| **Swap** | **30.9MiB 🟢  소폭 축적 시작** (0900: 0B → 1645: 30.9MiB — 장중 14:30 16.6MiB 대비 +14.3MiB/2h, 정상 범위) |
+| Memory | **3.7Gi/7.6Gi (49%)** 🟢 |
+| Gateway RSS | **758 MiB 🟢** (14:30 725MB → 16:45 758MB, +33MB/2h 정상) |
+| Disk (WSL) | 4% ✅ |
+| Disk (C:) | **85% ⚠️** (14:30 84% → 16:45 85%, +1% — 73GB 여유) |
+| Load Avg | **0.27 / 0.37 / 0.28** 🟢 |
+| tmux 세션 | 6개 정상 (hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign) |
+
+### 🔍 이번 사이클 분석 (14:30 Afternoon → 16:45 EOD, +2h15m)
+
+**1. 🟡 KOSPI 7,985.74 급락 (장중 14:30 기록 기준) — 8,000선 붕괴!**
+- Pre-Market 전망: Bull 8,500 / Base 8,200~8,400 / Bear 8,000
+- **실제: 7,985 — Bear 시나리오 발동! 사상 최고 8,457(5/27) 대비 -5.6%**
+- 단 하루 만의 급락 — 외국인 차익실현 + KOSDAQ 디커플링 심화 원인 추정
+- EOD 종가는 yfinance 17:10~22:00 KST 확정 데이터 대기
+
+**2. 🟢 Swap 30.9MiB — 14:30 16.6MiB 대비 정상적 증가**
+- 재부팅 후 10.9h 경과, 30.9MiB — 이전 사이클 500MiB+ 대비 매우 양호
+- 100MiB 이하 유지 시 재부팅 필요 없음
+- Gateway RSS 758MB로 안정적
+
+**3. 🟢 시스템 전체 안정 상태**
+- Gateway 758MB RSS 정상, Memory 49%, Load Avg 0.27
+- C: 드라이브 85% (73GB 여유) — 당장 위험 수준 아님
+
+**4. 🔴 지속 이슈 — GUARDIAN ERROR 12h+ (14:34:55에도 발생 확인됨)**
+- 14:30 스냅샷 기준 여전히 `float division by zero` 반복
+- Council v3.0 Fallback 20h+ 지속
+- CB Score Dashboard ?/100 버그
+- Context 승격 110h+ 지연 (8건 🥇)
+
+### 📋 장 마감 후 체크리스트
+
+| 작업 | 상태 | 비고 |
+|:-----|:----:|:-----|
+| KOSPI 5/28 EOD 종가 확인 | ⏳ 대기 | yfinance 17:10~22:00 KST 확정 |
+| GUARDIAN ERROR 핫픽스 | ❌ 미실행 | 장 마감 후 실행 기회 |
+| Council JSON parse error 수리 | ❌ 미실행 | 20h+ Fallback 지속 |
+| CB Score 패턴 수정 | ❌ 미실행 | ?/100 버그 지속 |
+| Context 승격 스크립트 | ❌ 미실행 | 110h+ 지연 |
+| C: 드라이브 정리 (docker prune) | ❌ 미실행 | 85% 유지 |
+
+### 📌 다음 사이클 전망
+- **다음 데이터 갱신**: 17:10~22:00 KST — yfinance 5/28 EOD confirmed close 반영
+- **Jongdari**: 장 마감 후 포트폴리오 정산 + 6/1(월) Pre-Market 계획 수립
+- **주말 대비**: 5/29(금) 거래일 → 5/30(토)~5/31(일) 휴장 → 6/1(월) 재개
+- **주간 요약**: 5/28 Auto-Evolution 20차 (Evening/주간요약) 예정
+
+*Recorded by Hermes Knowledge Cron on 2026-05-28 16:45 KST (EOD Post-Close) — System Stable 🟢 Swap 30.9MiB, KOSPI 7,985.74 급락🔴, GUARDIAN ERROR 12h+🔴, Council Fallback 20h+🔴*
+
+
+
+## 🧬 Hermes Auto-Evolution — 2026-05-29 (Fri) 00:46 KST (Pre-Market Open 전 스냅샷)
+
+### 📋 시스템 현황 — 00:46 KST (금요일, 마지막 거래일)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | 6h 12m (5/28 18:08 이후 재부팅 없음) |
+| tmux 세션 | 6개 — all normal (hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign) |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 |
+| Hermes Gateway (port 8642) | ✅ active, RSS **301MB** |
+| Memory | 3.1Gi / 7.6Gi (41%) |
+| **Swap** | **1.0Gi** 🔴🔴 (사용량 50%, 24h 경과 후 상승 추세) |
+| Disk (WSL home) | 4% ✅ |
+| Disk (C:) | 86% ⚠️ (65GB 여유) |
+| Load Avg | 0.61 / 0.48 / 0.46 |
+| KOSPI (야후 실시간) | **8,185.29** 🟢 (5/28 18:15 confirmed close 18:15 반영 — 8,000선 안착) |
+
+### 📋 지난 24시간 타임라인 (5/28 00:46 → 5/29 00:46)
+
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 5/28 04:30 | 🧬 Auto-Evolution 18차 — WSL 재부팅 성공✅ Swap 0B 완전 회복!, KOSPI 8,228 Intraday🔴, WTI $89.73 confirmed🔥 |
+| 5/28 08:30 | 🧬 Auto-Evolution 18.5차 — 08:45 Quick Check, 장 오픈 15분 전—GUARDIAN ERROR 미실행🔴, Gateway 665MB✅ |
+| 5/28 14:30 | 🧬 Auto-Evolution 19차 — KOSPI 7,985.74 급락🔴🔴 8,000선 붕괴!, Swap 16.6MiB🟢 |
+| 5/28 16:45 | 🧬 Auto-Evolution 20차 (EOD Post-Close) — System Stable🟢 Swap 30.9MiB, GUARDIAN ERROR 12h+🔴 |
+| 5/28 18:15 | 📊 Wiki 확장기 — 5/28 EOD confirmed close 전면 갱신: 개별종목 3종 + Macro 4종 동기화 |
+| 5/29 00:46 | 📝 지식 기록 cron 실행 (본 문서) |
+
+### 📊 EOD 5/28 Confirmed Close 요약
+
+| 지표 | 가격 | 변동 | 기술적 분석 |
+|:-----|:----|:----:|:----------|
+| **KOSPI** | **8,185.29** 🟢 | -0.53% | RSI 62.7 강세, BB% 85.1% 고점권, 3일째 8,000선 안착 |
+| **KOSDAQ** | **1,104.36** 🔴 | -2.54% 급락 | RSI 37.3 약세, 1,100선 위협 — KOSPI와 디커플링 심화 |
+| **USD/KRW** | **1,503.06** 🟢 | -0.16% | 1,500선 지지 테스트 중 |
+| **WTI** | **$90.92** 🟢 | +2.53% 반등 | BB 하단($88.60)서 반등, RSI 45.0 중립, $90선 회복 |
+
+### 📈 포트폴리오 (5/28 Confirmed Close)
+
+| 종목 | 가격 | 등락 | 손익률 | 기술적 상태 |
+|:-----|:---:|:----:|:------:|:----------|
+| **삼성부광** (014950) | **6,740원** 🔴 | -3.16% | -32.87% | RSI 30.4 과매도, BB% 12.9% 하단 근접, 신저가 재경신 |
+| **에이치엘사이언스** (473980) | **14,370원** 🔴 | -2.64% | -10.56% | RSI 34.9 과매도 임박, BB% 7.7% 하단 근접 |
+| **나우로보틱스** (459510) | **22,750원** 🔴 | -4.61% | -25.53% | RSI 24.8 극단 과매도!, BB% 5.6% 하단 극근접 |
+
+### ⚠️ 지속 이슈 트래커
+
+| 이슈 | 지속 시간 | 최종 상태 | 긴급도 |
+|:----|:--------:|:---------|:-----:|
+| GUARDIAN ERROR | 12h+ (5/28 14:34 확인) | `float division by zero` | 🔴🔴 |
+| Council v3.0 Fallback | 20h+ (5/27 20:00 추정) | JSON parse error 미수리 | 🔴🔴 |
+| CB Score Dashboard | 주기적 | ?/100 패턴 재발 | 🔴 |
+| Context 승격 | 112h+ | 8건 🥇 미승인 | 🔴 |
+| Swap 누적 | 6h → 1.0Gi | 재부팅 필요 검토 | 🟡 |
+| C: 드라이브 (86%) | 지속 | 65GB 여유 — 정리 필요 | 🟡 |
+
+### 📌 전망 — 5/29(금) 마지막 거래일
+
+- **KOSPI**: 8,000~8,200 레인지 예상. EOD 8,185로 8,000선 안착 확인. 금요일 차익실현/포지션 정리 가능.
+- **KOSDAQ**: 1,100선 방어 여부가 핵심. 2일간 -10.2% 급락 후 반등 시도 예상.
+- **주말 대비**: 5/30(토)~5/31(일) 휴장 → 6/1(월) 재개. 주간 요약 작성 예정.
+- **시스템**: Swap 1.0Gi — 재부팅 D+1. 5/29 장 마감 후 재부팅 검토.
+
+*Recorded by Hermes Knowledge Cron on 2026-05-29 00:46 KST (Pre-market Snapshot) — System Stable🟢, KOSPI 8,185🟢, KOSDAQ 1,104🔴 급락, GUARDIAN ERROR 12h+🔴, Swap 1.0Gi🟡*
+
+---
+
+## 5/29 04:46 KST — Pre-Market 스냅샷 (21차-2)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | 10h 12m (5/28 18:08 이후 재부팅 없음) |
+| tmux 세션 | 6개 — 정상 (hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign) |
+| Hermes Gateway | ✅ active, 439MB RSS |
+| Memory | 3.1Gi / 7.6Gi (41%) |
+| **Swap** | **1.1Gi** 🔴🔴 (00:46 1.0Gi→04:46 1.1Gi, +100MiB/4h, 55% 사용) |
+| Load Avg | 0.70 / 0.66 / 0.41 |
+| Disk (C:) | 86% ⚠️ (65GB 여유, 5/28 3.7GB 정리 효과 유지) |
+
+### ⏱ 00:46→04:46 Timeline
+
+| KST | 이벤트 |
+|:----|:--------|
+| 00:46 | 📝 21차 Pre-Market 스냅샷 기록 |
+| 02:33 | 🧬 Auto-Evolution 21차 (Session DB 복구✅, meta_rules 변환✅, C: 정리✅) |
+| 04:20 | 🔍 Tech Scavenger 22회차 — 신규 발견 0건 (캐시 안정) |
+
+### 📊 Swap 추이 (5/29)
+
+| 시간 | Swap | 증감 | 속도 |
+|:----|:---:|:----:|:----:|
+| 00:46 | 1.0Gi | 기준 | — |
+| 02:33 | 1.0Gi | +0MiB | 0MiB/h |
+| 04:46 | **1.1Gi** | +100MiB | +25MiB/h |
+
+- Swap 증가 속도 25MiB/h로 둔화 (5/27 S4 단계 26MiB/h와 유사)
+- 08:00 Pre-Market 전망: **~1.2Gi** 도달 예상, 50%→60% 사용률
+- 재부팅 권장 시점: 장 종료 후 (5/29 15:30 KST)
+
+### ⚠️ 지속 이슈 동향
+
+| 이슈 | 경과 | 현황 |
+|:----|:----:|:----|
+| GUARDIAN ERROR | **76h+** 🔴🔴🔴 | `float division by zero` — 핫픽스 미실행 |
+| Council v3.0 Fallback | **24h+** 🔴🔴 | JSON parse error 미수리 |
+| Context 승격 | **116h+** 🔴🔴 | 8건🥇 대기 중 |
+| CB Score ?/100 | 주기적 🔴 | 패턴 재발 |
+| Swap 1.1Gi | **10h** 🟡 | 증가 속도 둔화 |
+
+### 📌 오늘 5/29(금) — 주간 마지막 거래일 전망
+
+- **KOSPI**: 8,000~8,200 레인지. 전일 8,185 close. 금요일 차익실현/주말 포지션 정리 가능.
+- **KOSDAQ**: 1,100선 방어 여부 핵심. 2일간 -10.2% 급락 후 기술적 반등 가능.
+- **5/28 EOD confirmed close 유지**: 삼성부광 6,740🔴-3.16%, 에이치엘 14,370🔴-2.64%, 나우로보틱스 22,750🔴-4.61%
+- **주간 마감**: 15:30 KST 종료 → 18:00+ KST yfinance confirmed close 수집 예정
+- **주말 계획**: Weekly Summary + 버그 핫픽스(GUARDIAN ERROR + Council Fallback) + WSL 재부팅
+
+*Recorded by Hermes Knowledge Cron on 2026-05-29 04:46 KST (Pre-Market Snapshot #2) — System Stable🟢, Swap 1.1Gi🔴, GUARDIAN ERROR 76h+🔴🔴🔴*
+
+---
+
+## 5/29 08:00 KST — Pre-Market #3 (Swap 906MiB 감소 분석)
+
+🟢 **System**: Uptime 11h58m ✅, Memory 42% (3.2Gi/7.6Gi) ✅, Loadavg 0.78 ✅
+🟢 **Swap 906MiB/2.0Gi (45%)** — ✅ **감소!** (04:30 1.0Gi→08:00 906MiB, -94MiB)
+🟢 **Agent DB**: 복구 완료 (Session DB creation failed 없음)
+🔴 **Gateway(8642)**: 응답 없음 지속 (12h+)
+🔴 **C: 드라이브 87%** (64Gi 여유) — 점진적 악화 (86%→87%)
+🔴 **GUARDIAN ERROR**: ?h+ 미확인
+🔴 **CB Score**: ?/100 미복구 지속
+🔴 **Memory**: 2,200/2,200 chars 꽉 참 (5일째)
+🔴 **Context 승격**: 120h+ 지연 (5일차)
+🟡 **Trinity 서비스**: CowAgent ✅, MetaClaw/open-design 404
+🟡 **Swap 감소 분석**: Gateway(8642) 다운으로 인한 메모리 500MB+ 해제가 원인일 가능성 높음 — Gateway 재시작 시 Swap 다시 1.0Gi+ 증가 예상
+
+**Market (5/28 EOD 유지)**: KOSPI 8,185 🟢, KOSDAQ 1,104 🔴, USD/KRW 1,503 🟢, WTI $90.92 🟢
+**Portfolio**: 삼성부광 6,740 🔴 -3.16%, 에이치엘 14,370 🔴 -2.64%, 나우로보틱스 22,750 🔴 -4.61%
+
+**New insight**: Swap 감소 추세는 Gateway 다운으로 인한 착시효과일 가능성 높음. Gateway 재시작을 최우선으로, 이후 Swap 추이 재관찰 필요. C: 드라이브 87% 지속 악화 중 — 90% 도달 전 Docker prune + temp 정리 필요.
+
+**Open issues**: Gateway 재시작(🔴🔴), 48h auto-reboot cron(🔴🔴), CB Score 핫픽스(🔴), GUARDIAN ERROR(🔴), Memory 정리(🟡), C: drive 정리(🟡), Context 승격 자동화(🟡)
+
+*Recorded by Hermes Knowledge Cron on 2026-05-29 08:00 KST (Pre-Market Snapshot #3) — Swap 감세 관찰, Gateway 12h+ down, C: drive 87% 악화*
+
+
+## 2026-05-29 (Fri) 13:28 KST — 장중 Mid-Afternoon 스냅샷 (5/29 마지막 거래일 T-2h)
+
+### 📊 시장 (장중 — 13:28 KST, 15:30 EOD 미확정)
+- **5/28 confirmed close 유지**: KOSPI 8,185.29(-0.53%), KOSDAQ 1,104.36(-2.54%), 환율 1,503.06, WTI $90.92
+- **5/29 intraday (11:11 스냅샷)**: KOSPI 8,366(+2.21%), KOSDAQ 1,060(-4.02% 1,100선 붕괴!), 환율 1,500.72(1,500선 근접), WTI $87.70($90선 재이탈)
+- **개별종목 5/29 intraday**: 삼성부광 6,280(-6.82% 6,000선 위협), 에이치엘 13,840(-3.69% 52주 최저), 나우로보틱스 21,300(-6.37% 3일 -19.37%)
+- **KOSPI vs KOSDAQ 디커플링 극심**: +2.21% vs -4.02%
+
+### 🖥️ 시스템 현황
+| 항목 | 상태 | 상세 |
+|:-----|:----:|:-----|
+| WSL Uptime | 🟢 17h 40m | 5/28 18:08 재부팅 이후 |
+| Memory | 🟢 3.8Gi/7.6Gi (50%) | 정상 범위 |
+| Swap | 🟡 980MiB/2.0Gi (49%) | 전일 1.0Gi와 유사 수준 |
+| Gateway | 🟢 PID 270859, RSS 476MB | Running (port 8642 down - Telegram-only mode) |
+| tmux 세션 | 🟢 6개 | hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign |
+| Loadavg | 🟢 1.69 | 정상 |
+| Disk (C:) | 🔴 87% (64Gi 여유) | 전일 대비 동일 |
+
+### 🔴 지속 이슈
+- Swap 980MiB — 500MiB 임계 초과 지속
+- C: 드라이브 87% — 점진적 악화
+- Context 승격 120h+ 5일차 — 8건🥇 미승인
+- Memory 2,200/2,200 chars 꽉 참
+
+### 🔮 전망
+- **15:30 KST EOD 마감 T-2h**
+- **주말(5/30~5/31) 휴장** — 주간 요약 + WSL 재부팅 예정
+- **다음 거래일**: 6/1(월) 09:00 KST
+
+
+## 2026-05-29 (Fri) 16:50 KST — 5/29 EOD Confirmed Close (금 마지막 거래일)
+
+### 📈 시장 (5/29 EOD — yfinance 16:50 KST settlement)
+
+| 지표 | 값 | 전일대비 | 해석 |
+|:-----|:--:|:--------:|:----|
+| **KOSPI** | **8,476.15** 🟢🟢 | **+3.55%** (5/28 8,185→8,476) | 대폭발! 8,000선→8,476선 3일 만에 회복, 5/27 사상최고(8,457) **돌파!** |
+| **KOSDAQ** | **1,074.80** 🔴🔴 | **-2.68%** (5/28 1,104→1,075) | KOSPI와 역대급 디커플링 — 5/22 1,161→1,075, 5일 연속 하락 |
+| **USD/KRW** | **1,508.28** | **+5.17원** (+0.34%) | 원화 약세 전환 (5/28 1,503→1,508) |
+| **WTI** | **$88.86** 🔴 | **-$0.04** (-0.04%) | $89선 부근 정체, 5/27 $88.68-$88.90 구간 유지 |
+
+### 🔑 핵심 분석
+
+**KOSPI 8,476 🟢🟢 — 5월 고점 재돌파!**
+- 5/27 사상최고 8,457을 능가하는 **8,476 신고가!**
+- 장중 고가 8,476 / 저가 8,273 — 변동폭 203p (2.45%)
+- 5/28 8,185(-2.99%) 급락을 **단 하루 만에 전부 회복 +α**
+- 종가 기준으로는 신고가 (5/27 8,228 close → 5/29 8,476 close)
+
+**KOSDAQ 1,074 🔴🔴 — 5일 연속 폭락**
+- 5/22 1,161 → 5/29 1,075 = **-7.43% 폭락**
+- KOSPI +3.55% vs KOSDAQ -2.68% = **6.23%p 차이** — 역대급 디커플링
+- 대형주로 쏠림 현상 극심 (삼성전자 등 대형주 Rally, 중소형주 대량 이탈)
+
+**USD/KRW 1,508 — 원화 약세 전환 신호**
+- 5/26 1,515 → 5/27 1,505 → 5/28 1,503 (=3일 연속 강세)
+- 5/29 1,508 (+0.34%) — 원화 강세 추세 꺾임
+
+**WTI $88.86 — $90선 재돌파 실패, $88-$89 박스권**
+- 5/26 $93.89 → 5/27 $88.68 → 5/28 $88.90 → 5/29 $88.86
+- 5일째 $90선 하회. 5/29 장중 회복 시도 있었으나 미달.
+
+### 🖥️ 시스템 현황 (16:50 KST)
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| Uptime | 🟢 | 21h 02m (5/28 18:08 재부팅 이후) |
+| Memory | 🟢 | 3.3Gi/7.6Gi (43%) |
+| Swap | 🟡 | 987MiB/2.0Gi (49%) |
+| Loadavg | 🟢 | 0.96 |
+| Gateway | 🟢 | PID 270859, RSS 596MB (Telegram-only) |
+| tmux | 🟡 | 5개 (hermes-mcp 소멸 - 이슈) |
+| C: drive | 🔴 | 87% (63Gi 여유) |
+
+### 🔴 지속 이슈
+- Swap 987MiB — 전일(16:30 기준 988Mi)과 유사, 악화 정체
+- C: drive 87% — 점진적 악화 (5/28 86%→87%)
+- Context 승격 120h+ 5일차
+- hermes-mcp tmux 소멸 (16:30→16:50 확인)
+
+### 💡 이번 주 요약 (5/25 Mon ~ 5/29 Fri, 5거래일)
+- **KOSPI**: 7,847 (5/22) → 8,476 (5/29) = **+8.01%** 주간 강력 상승
+- **KOSDAQ**: 1,161 (5/22) → 1,075 (5/29) = **-7.43%** 주간 폭락
+- **USD/KRW**: 1,512 (5/25) → 1,508 (5/29) = **-0.26%** 거의 변동 없음
+- **WTI**: $93.89 (5/26) → $88.86 (5/29) = **-5.35%** 주간 하락
+- **핵심 테마**: KOSPI 대형주 Rally vs KOSDAQ 대량 이탈 = 극단적인 'K-디커플링'
+
+### 🔮 전망
+- **주말(5/30~5/31) 휴장** — 주간 리캡 예정
+- **다음 거래일**: 6/1(월) 09:00 KST
+- WSL 재부팅 검토: Swap 987MiB, C: 87%, Uptime 21h — 주말 중 재부팅 권장
+
+*Recorded by Hermes Knowledge Cron on 2026-05-29 16:50 KST — 5/29 EOD Confirmed Close*
 
 
 ## 2026-05-29 (Fri) 20:56 KST — Post-Market / Weekend 진입
 
 | 항목 | 상태 |
 |:-----|:------|
-| **시장** | KOSPI 8,476 🟢 종가 기준 신고가 • KOSDAQ 1,075 🔴 5일 연속 폭락 • USD/KRW 1,508 • WTI $88.86 🔴 |
-| **Uptime** | 3h35m (재부팅 후) — 5/29 16:50→20:56 사이 재부팅 또는 시스템 재시작 있음 |
+| **시장** | KOSPI 8,476 🟢 종가 신고가 • KOSDAQ 1,075 🔴 5일 연속 폭락 • USD/KRW 1,508 • WTI $88.86 🔴 |
 | **Memory** | 3.0Gi/7.6Gi (39%) 🟢 |
-| **Swap** | 0 🟢✅ — 완전 해소! (EOD 987MiB→0, 재부팅 효과) |
-| **Loadavg** | 1.14 🟢 |
-| **Gateway** | 🟡 20:53 CLI 재시작 (systemd inactive→bash -lic) — Telegram-only 모드, port 8642 unbound |
-| **C: Drive** | 87% 🔴 |
-| **Portfolio** | 주말 휴장, 6/1(월) 09:00 KST 오픈까지 미갱신 |
+| **Swap** | 0 🟢✅ (EOD 987MiB→0, 재부팅 효과) |
+| **Gateway** | 🟡 20:53 CLI 재시작 (Telegram-only) |
+| **C: Drive** | 87% 🔴 지속 |
+| **전망** | 주말 휴장 → 6/1(월) 09:00 KST 오픈
 
 ## 2026-05-30 (Sat) 04:49 KST — 주말 새벽 스냅샷
 
-### 시스템 현황
+### 🖥️ 시스템 현황
 
-| 항목 | 상태 |
-|:-----|:------|
-| Uptime | 11h 27m (5/29 17:22 재부팅 이후) — 전일 20:56 Post-Market 이후 안정 유지 |
-| Memory | 4.3Gi/7.6Gi (56%) 🟡 — Brain Sync 제외 평시 대비 높음 (Nightly cron 영향) |
-| Swap | 97MiB/2.0Gi (5%) 🟢✅ — 전일 0에서 소폭 재축적 시작했으나 매우 낮은 수준 |
-| Loadavg | 0.85 🟢 |
-| Gateway (port 3000) | 🟢 PID 310, RSS 712MB — Open WebUI serving (5/29 17:03 시작) |
-| CLI hermes | 🟢 PID 411 (tmux hermes) + PID 1108 (tmux) |
-| Nexus | 🟢 PID 40631 — nexus_orchestrator.py live mode |
-| tmux 세션 | 7개 ✅ (hermes / hermes-mcp / jongdari / metaclaw / cowagent / opendesign / virtual-office) |
-| hermes-mcp | 🟢✅ 복원됨 (전일 20:56 소멸 → 04:31 재생성) |
-| C: Drive | 87% 🔴 (62Gi 여유) — Docker prune/vhdx compact 필요 |
-| Brain Sync | 마지막: 5/30 04:04 UTC (13:04 KST? .hermes_last_brain_sync 타임스탬프 부정확) |
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| Uptime | 🟢 | 11h 27m (5/29 17:22 재부팅 이후) |
+| Memory | 🟡 | 4.3Gi/7.6Gi (56%) — Cron 영향 일시적 |
+| Swap | 🟢✅ | 97MiB/2.0Gi (5%) — 재부팅 효과 지속, 소폭 재축적 시작 |
+| Loadavg | 🟢 | 0.85 |
+| Gateway | 🟢 | PID 310, RSS 712MB — Open WebUI (port 3000) |
+| CLI hermes | 🟢 | PID 411 (tmux) + PID 1108 |
+| Nexus | 🟢 | PID 40631 — nexus_orchestrator.py live mode |
+| tmux | 🟢✅ | **7개** (hermes-mcp 04:31 복원!) — hermes/hermes-mcp/jongdari/metaclaw/cowagent/opendesign/virtual-office |
+| C: drive | 🔴 | 87% (62Gi 여유) — Docker prune 필요 |
 
-### 시장 현황 (주말 — 5/29 EOD confirmed close 기준)
+### 📊 시장 현황 (주말 — 5/29 EOD 기준)
 
 | 항목 | 값 | 변동 |
 |:-----|:---|:-----|
-| KOSPI | 8,476 | 🟢🟢 +3.55% — 종가 기준 신고가! (5/27 장중 8,457 돌파) |
-| KOSDAQ | 1,075 | 🔴🔴 -2.68% — 5일 연속 폭락 (KOSPI와 역대급 디커플링) |
-| USD/KRW | 1,508 | 🟡 +0.34% — 원화 약세 전환 신호 |
-| WTI | $88.86 | 🔴 -0.10% — $88-$89 박스권 정체, $90선 재돌파 실패 |
-| 삼성부광 (014950) | 6,740 | 🔴 (5/28 EOD 유지, 5/29 intraday 6,280까지 하락했다 회복) |
-| 에이치엘사이언스 (473980) | 14,370 | 🔴 -2.64% (RSI 34.9 과매도 임박, 52주 최저 13,840 기록) |
-| 나우로보틱스 (459510) | 22,750 | 🔴 -4.61% (RSI 24.8 극단 과매도, 3일 -19.37% 폭락) |
+| KOSPI | 8,476 | 🟢🟢 **+3.55%** — 종가 기준 신고가! |
+| KOSDAQ | 1,075 | 🔴🔴 **-2.68%** — 5일 연속 폭락, KOSPI와 역대급 디커플링 |
+| USD/KRW | 1,508 | 🟡 +0.34% — 원화 약세 전환 |
+| WTI | $88.86 | 🔴 -0.10% — $88-$89 박스권 |
+| 삼성부광 | 6,740 | 🔴 5/28 EOD 유지 |
+| 에이치엘 | 14,370 | 🔴 -2.64%, RSI 34.9 과매도 임박 |
+| 나우로보틱스 | 22,750 | 🔴 -4.61%, RSI 24.8 극단 과매도 |
 
-### 📅 주간 요약 (5/25 Mon ~ 5/29 Fri)
-- **KOSPI**: 7,847 → 8,476 = **+8.01%** 주간 강력 상승
-- **KOSDAQ**: 1,161 → 1,075 = **-7.43%** 주간 폭락
-- **디커플링**: +15.44%p 역대급 괴리 — 대형주 Rally vs 중소형주 이탈
-- **WTI**: $93.89 → $88.86 = **-5.35%** 주간 하락 (5/26 기준 → 5/29)
-- **USD/KRW**: 1,512 → 1,508 = **-0.26%** 변동 미미
-
-### 🔴 지속 이슈
-- C: Drive 87% — Windows disk 공간 부족, Docker 이미지 정리 필요
-- Context 승격 120h+ 5일차 — 9건 미승인 지속
-- Swap 97MiB — 재축적 시작 감지 (주말 중 재부팅 후 최소화 중)
-- GUARDIAN ERROR · CB Score ?/100 — 수리 지연
+### 📅 주간 요약 (5/25~5/29)
+- **KOSPI**: 7,847→**8,476** (+8.01%) 🟢 | **KOSDAQ**: 1,161→**1,075** (-7.43%) 🔴
+- **디커플링**: +15.44%p — 역대급
+- **WTI**: $93.89→**$88.86** (-5.35%) | **USD/KRW**: 1,512→**1,508** (-0.26%)
 
 ### 🔮 전망
-- 주말 휴장 (5/30~5/31)
-- **다음 거래일**: 6/1(월) 09:00 KST — KOSPI 8,500 돌파 시도 vs KOSDAQ 바닥 확인
-- WSL 재부팅 완료 후 안정 상태 — 추가 재부팅 불필요 (Swap 97MiB, uptime 11h)
-- hermes-mcp tmux 복원 완료 (7개 세션 안정)
+- 주말 휴장 → **6/1(월)** 09:00 KST — KOSPI 8,500 도전 vs KOSDAQ 바닥 확인
+- Swap 97MiB ✅ 안정 — 추가 재부팅 불필요
+- hermes-mcp tmux 04:31 자동 복원 확인 ✅
+
+*Recorded by Hermes Knowledge Cron on 2026-05-30 04:49 KST — 주말 새벽 스냅샷*
+
+
+## 2026-05-31 (Sun) 20:45 KST — 주말 저녁 스냅샷
+
+### 🖥️ 시스템 현황
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| Uptime | 🟢 | 7h 22m (5/31 13:24 부팅, 하루 1회 재부팅 패턴) |
+| Memory | 🟢 | 3.1Gi/7.6Gi (41%) |
+| Swap | 🟡 | 605MiB/2.0Gi (29%) — 재축적 진행 중 |
+| Loadavg | 🟢 | 0.60 |
+| Gateway | 🟡 | PID 92611 - `gateway run --replace` (20:35 재시작) — Telegram + MCP fetch/time |
+| CLI hermes | 🟢 | tmux session 정상 (PID 387 + 1075 + 68207) |
+| Nexus | 🟢 | PID 86588 — nexus_orchestrator.py live mode |
+| Open WebUI | 🟢 | PID 311, port 3000 — 정상 |
+| tmux | 🟢✅ | **7개** — hermes/hermes-mcp(20:16 복원)/jongdari/metaclaw/cowagent/opendesign |
+| C: drive | 🔴 | 87% (61Gi 여유) |
+
+### 📊 시장 현황 (주말 — 5/29 EOD 기준)
+
+| 항목 | 값 | 변동 |
+|:-----|:---|:-----|
+| KOSPI | 8,476 | 🟢🟢 **+3.55%** 주간 — 종가 신고가 |
+| KOSDAQ | 1,075 | 🔴🔴 **-7.43%** 주간 — 5일 연속 폭락, KOSPI와 역대급 디커플링 |
+| USD/KRW | 1,508 | 🟡 보합 |
+| WTI | $88.86 | 🔴 주간 -5.35% |
+
+### 📝 오늘의 변경사항
+
+- **Gateway 재시작**: 20:35 KST `--replace` 모드로 재기동 (이전 PID 소멸)
+- **MCP 서버 복원**: fetch + time MCP 서버가 gateway와 함께 기동됨
+- **Nexus Orchestrator**: live mode 정상 유지 (PID 86588, RSS 297MB)
+- **tmux 7개 완전 복원**: 모든 세션 정상 — hermes-mcp는 20:16 복원 (주간 5개 → 7개 복구)
+- **10_Wiki 지식**: 5/30 신규 11건 MCP-멀티검색 리포트 + Front-End-Checklist GitHub
+
+### 🔮 전망
+
+- **다음 거래일**: **6/1(월)** 09:00 KST — KOSPI 8,500 도전 vs KOSDAQ 반등 여부
+- Swap 605MiB: 5/30 97MiB 대비 6배 증가. 48h 주기 재부팅 고려 시점 도래 (마지막 부팅 5/31 13:24, ~48h = 6/2 13:24)
+- C: 61Gi 여유 (87%) — Docker 없어 vhdx compact 불가, WSL 재부팅 + 드라이브 정리 검토
+- `last_check`: 2026-05-30 14:10 KST 이후 약 30h 경과
 
 *Recorded by Hermes Knowledge Cron on 2026-05-31 20:45 KST — 주말 저녁 스냅샷 (5/31 일요일)*
 
 ---
 
-## 2026-06-01 (Mon) EOD — KOSPI **8,788 🟢🟢 +3.68% 신고가!**
+## 2026-06-01 (Mon) 09:00 KST — D-DAY: 신규 거래주 개시!
+
+### 📊 시장 현황 — Pre-Market (5/29 EOD 기준)
+
+| 항목 | 값 | 변동 |
+|:-----|:---|:-----|
+| KOSPI | **8,476** | 🟢🟢 **+3.55%** — 종가 신고가! |
+| KOSDAQ | **1,075** | 🔴🔴 -2.68% — 5일 연속 폭락 |
+| USD/KRW | **1,508** | 🟡 +0.34% |
+| WTI | **$88.86** | 🔴 -0.10% |
+
+### 🔮 금주 전망
+- KOSPI 8,500 도전 vs KOSDAQ 바닥 확인 — **역대급 디커플링의 향방**
+- Swap 605MiB (5/31) → 48h 주기 재부팅 고려
+
+---
+
+## 2026-06-01 (Mon) 22:15 KST — EOD Post-Market: KOSPI **8,788 🟢🟢 +3.68% 신고가!**
 
 ### 📊 시장 (6/1 confirmed close)
-- **KOSPI** **8,788.38** 🟢🟢🟢 **+3.68%** — 사상 최고 신고가 갱신
-- **KOSDAQ** **1,050.03** 🔴🔴 **-2.30%** — KOSPI와 디커플링 심화, 6거래일 연속 하락
-- **USD/KRW** 1,506.84 🟢 원화 강세 (-0.78%)
-- **WTI** **$92.16** 🟢🟢 **+5.49% 급반등!** $90선 회복
-- 삼성부광 6,020 🔴 -4.60%, 에이치엘 13,220 🔴 -4.55%, 나우로보틱스 21,550 🔴 -2.05%
 
-## 2026-06-02 (Tue) — KOSPI 9,000선 공방
-- USD/KRW 1,517 🔴 +1.35% — 원화 약세 전환, 1,520선 위협
-- WTI $92.14 🟡 보합 — $90선 안착
-- 에이치엘 거래량 96,221주 (+28.5% 급증) — 저가 매수 or 손절
+| 항목 | 값 | 변동 |
+|:-----|:---|:-----|
+| **KOSPI** | **8,788.38** | 🟢🟢🟢 **+3.68%** (5/29 8,476→6/1 8,788) — **사상 최고 신고가 갱신!** |
+| KOSDAQ | **1,050.03** | 🔴🔴 **-2.30%** (5/29 1,075→6/1 1,050) — KOSPI와 디커플링 심화 |
+| USD/KRW | **1,506.84** | 🟢 원화 강세 (+0.78%, 5/29 1,508→6/1 1,507) |
+| WTI | **$92.16** | 🟢🟢 **+5.49% 급반등!** (5/29 $87.36→6/1 $92.16, $90선 회복!) |
+| 삼성부광 | **6,020** | 🔴 -4.60% (5/29 6,310→6/1 6,020) — 6,000선 위협, 신저가 위험 |
+| 에이치엘사이언스 | **13,220** | 🔴 -4.55% (5/29 13,850→6/1 13,220) — 13,000선 위협 |
+| 나우로보틱스 | **21,550** | 🔴 -2.05% (5/29 22,000→6/1 21,550) — 21,000선 위협 |
 
-## 2026-06-03 (Wed) 00:46 KST — Pre-Market 스냅샷
+### 📈 주요 분석
+1. **KOSPI 8,788 사상 최고 신고가!** — 5/29 8,476→6/1 8,788 (+3.68%). 주말 효과 + 외국인 매수세 지속. 장중 8,874까지 상승! **6/2 9,000선 돌파 시도 예상!**
+2. **KOSDAQ 1,050 추가 하락 🔴** — KOSPI 사상 최고와 병행되는 6거래일 연속 하락(5/22 1,161→6/1 1,050, -9.6%). **자금 이탈 지속 — KOSPI 쏠림 현상 정점**
+3. **WTI $92.16 급반등 (+5.49%)** — $87.36→$92.16, $90선 회복! OPEC+ 감산 기대 + 글로벌 수급 조정
+4. **개별종목 3종 모두 하락** — KOSPI 대형주 랠리 속 중소형주·바이오·로보틱스 약세 지속
+5. **포트폴리오**: 삼성부광 포트폴리오 -28.05% 추정, 나우로보틱스 -25.55%, 에이치엘 -11.57%
 
-### 🖥️ 시스템
-- Swap **3.8MiB ✅** (사실상 0B, 재부팅 효과 유지)
-- Memory 3.3Gi/7.6Gi (43%) 🟢
-- C: drive **82%** (87Gi 여유) — 87%→82% 개선!
-- Gateway 🟢, tmux 5개 정상
+---
 
-### 🔑 Insights
-- KOSPI 8,788 (연저점 대비 +27.4%) — 9,000선 1차 도전
-- KOSDAQ 1,050 — 7거래일 연속 하락 임박 (5/22→6/1 -9.6%)
-- WTI $92 — $90선 회복, 추세 전환 신호
-- 포트폴리오: 삼성부광 -28.05% 추정 (6,000선 위협)
+## 2026-06-02 (Tue) 15:30 KST — KOSPI 9,000선 공방 + KOSDAQ 반등 시도
 
-**주말 전망**: Swap 완전 해소 확인 ✅. C: 87%는 WSL 재부팅으로도 해결 불가 (Windows 디스크 문제) — Docker prune + vhdx compact 필요. Gateway 재시작 후 안정적. 주말 동안 cron self-heal 유지. 다음 업데이트: 6/1(월) Pre-Market.
+### 📊 시장 (6/2 trading — yfinance 지수 NaN, 개별종목 거래량 확인)
+
+| 항목 | 값 | 변동 |
+|:-----|:---|:-----|
+| USD/KRW | **1,517.12** | 🔴 **+1.35%** (6/1 1,507→6/2 1,517) — 원화 약세 전환, 1,520선 재돌파 위협 |
+| WTI | **$92.14** | 🟡 보합 (6/1 $92.16→6/2 $92.14) — $92선 안정화 |
+| 삼성부광 거래량 | **75,945주** | 6/1 71,565 대비 +6.1% 증가 |
+| 에이치엘 거래량 | **96,221주** | 6/1 74,870 대비 +28.5% 급증 |
+| 나우로보틱스 거래량 | **117,574주** | 6/1 147,332 대비 -20.2% 감소 |
+
+### 📈 분석 (6/2)
+- **KOSPI 6/2 지수 NaN** (yfinance post-midnight regression, pitfall #26) — 개별종목 정상 거래 확인
+- **USD/KRW 1,517로 급등 (+1.35%)** — 원화 약세 전환! 5/29 1,508→6/2 1,517. 외국인 자금 유출 or KOSPI 9,000 차익실현 원화 매도 가능성
+- **WTI $92.14 보합** — $90선 안착 확인, 추가 상승 모멘텀 대기
+- **에이치엘 거래량 28.5% 급증** — 저가 매수 유입 or 손절 매물 팽창, 6/3 방향성 중요
+- **KOSPI 9,000선 공방 중** — 6/1 장중 8,874 고점 후 6/2 조정 가능성. 9,000선이 강한 저항
+
+---
+
+## 2026-06-03 (Wed) 00:46 KST — Knowledge Cron 스냅샷
+
+### 🖥️ 시스템 현황
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| Uptime | 🟢 | 15h 28m (6/2 09:18 부팅 추정) |
+| Memory | 🟢 | 3.3Gi/7.6Gi (43%) |
+| **Swap** | 🟢✅ | **3.8MiB/2.0Gi (0.2%)** — 거의 0B! 재부팅 효과 유지 |
+| Loadavg | 🟢 | 0.64 / 0.71 / 0.72 |
+| Gateway | 🟢 | PID 118229, `gateway run --replace` (00:26 재시작) |
+| CLI hermes | 🟢 | tmux 세션 정상 (PID 502 + 1081) |
+| Open WebUI | 🟢 | PID 327, port 3000 — 정상 |
+| tmux | 🟢✅ | **5개** — hermes/hermes-mcp(06:15)/jongdari(06:19)/metaclaw/cowagent/opendesign |
+| C: drive | 🟡 | 82% (87Gi 여유) — 개선! 이전 87%→82% |
+
+### 📊 시장 현황 (6/1~6/2 거래 데이터 기준)
+
+| 항목 | 5/29 (금) | 6/1 (월) | 6/2 (화) | 분석 |
+|:-----|:--------:|:--------:|:--------:|:-----|
+| **KOSPI** | 8,476 | **8,788** 🟢🟢 | NaN (조정중) | +3.68% 신고가! 9,000선 도전 |
+| **KOSDAQ** | 1,075 | **1,050** 🔴🔴 | NaN (거래 지속) | -2.30%, 6일 연속 하락 |
+| **USD/KRW** | 1,508 | 1,507 | **1,517** 🔴 | +1.35% 원화 약세 전환 |
+| **WTI** | $87.36 | **$92.16** 🟢🟢 | **$92.14** 🟢 | +5.49% 반등, $90선 회복 |
+| 삼성부광 | 6,310 | **6,020** 🔴 | NaN (75,945주) | -4.60%, 6,000선 위협 |
+| 에이치엘 | 13,850 | **13,220** 🔴 | NaN (96,221주) | -4.55%, 거래량 급증 |
+| 나우로보틱스 | 22,000 | **21,550** 🔴 | NaN (117,574주) | -2.05%, KOSDAQ 추종 |
+
+### 🔑 핵심 인사이트
+
+1. **🏆 KOSPI 8,788 신고가 — 9,000선 눈앞!** (5/29~6/1 +3.68%). 연저점(4/27 6,900) 대비 **+27.4% 상승!**
+2. **🔴 KOSDAQ 1,050 — 7거래일 연속 하락 임박** (5/22 1,161→6/1 1,050 = -9.6%). KOSPI와 +9.0%p 디커플링 심화
+3. **🟢 WTI $92.14 — $90선 회복!** (5/29 $87.36→6/1 $92.16, +5.49%). OPEC+ 기대+수요 우려 완화
+4. **🟡 USD/KRW 1,517 급등 — 원화 약세 전환!** KOSPI 9,000 차익실현 후 외국인 환전 가능성
+5. **🟢 Swap 3.8MiB ✅ — 거의 0B!** 재부팅 효과 완전 유지 (5/29 1.6Gi 위기→6/3 3.8MiB). Gateway 재시작 효과
+6. **🟡 C: drive 82% (87Gi 여유)** — 이전 87%→82% 개선! Docker prune 또는 자동 정리 효과
+7. **🔴 포트폴리오**: 삼성부광 -28.05% 추정 (6,020원, 6,000선 위협), 에이치엘 -11.57%, 나우로보틱스 -25.55%. KOSPI 8,788 신고가에도 보유종목 전멸!
+
+### 🔮 전망
+- **6/3(수)**: KOSPI 9,000선 1차 도전. 차익실현 vs 추세 매수. WTI $90선 방어 관건
+- **KOSDAQ**: 1,000선 붕괴 시 심각한 패닉셀 가능성. 기술적 반등 시급
+- **USD/KRW 1,520선 돌파 시**: 원화 약세 가속 → 외국인 매수세 둔화 위험
+- **포트폴리오**: 6,000선 붕괴 시 삼성부광 손절/추가매수 판단 필요
+
+### 📝 시스템 변경사항
+- Gateway: 6/3 00:26 KST `--replace` 재시작 (텔레그램 + MCP)
+- MCP 서버: fetch + time + filesystem 서버 정상 기동
+- C: drive 82% — 87%→82% 개선 (자동 정리 또는 사용자의 수동 청소)
+- **.hermes_last_check 갱신**: 2026-06-03 00:46
+
+|*Recorded by Hermes Knowledge Cron on 2026-06-03 00:46 KST — Knowledge Snapshot (Wed, Pre-Market)*
+
+---
+
+## 2026-06-04 (Thu) 12:46 KST — Knowledge Cron: Post-Reboot 안정화 + KOSPI 8,801 사상최고 지속
+
+### 🖥️ 시스템 현황 (6/4 12:46 KST)
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| Uptime | 🟢 | 1h 42m (6/4 11:04 부팅 추정) |
+| Memory | 🟢 | 3.5Gi/7.6Gi (46%) |
+| **Swap** | 🟢✅ | **0B/2.0Gi (0.0%) — 완전 해소!** |
+| Loadavg | 🟢 | 0.79 / 0.53 / 0.55 |
+| Gateway | 🟢 | PID 289, RSS 479MB — systemd 정상 (MemoryMax 512M) |
+| C: drive | 🟢 | **81%** (88Gi 여유) — 개선! 87%→81% |
+| tmux | 🟢✅ | **6개** — hermes/hermes-mcp/jongdari/cowagent/metaclaw/opendesign |
+| Self-Heal | 🟢 | 12:38 KST 완료 — 모든 서비스 정상 |
+
+### 📊 시장 현황 (6/1~6/3 거래 데이터)
+
+| 항목 | 6/1 (월) | 6/2 (화) | 6/3 (수) | 분석 |
+|:-----|:--------:|:--------:|:--------:|:-----|
+| **KOSPI** | **8,788** 🟢🟢 | **8,801** 🟢 | NaN (미갱신) | +0.15%, 사상최고 지속. 9,000선 목전 |
+| **KOSDAQ** | **1,050** 🔴🔴 | **1,026** 🔴🔴 | NaN (미갱신) | -2.28%, 7~8거래일 연속 하락! KOSPI와 +10.5%p 디커플링 |
+| **USD/KRW** | 1,507 | **1,517** 🔴 | **1,528** 🔴🔴 | 3일간 +1.4% 급등! 원화 약세 가속 |
+| **WTI** | **$92.16** 🟢🟢 | **$92.14** 🟢 | **$95.96** 🟢🟢 | +2.35% 반등 지속, $90선 확정 회복, V자 반등 |
+| 삼성부광 | **6,020** 🔴 | **6,010** 🔴 | — | 신저가 지속, 포트폴리오 -40.14% |
+| 에이치엘 | **13,220** 🔴 | **14,060** 🟢 | — | +6.35% 급반등! 거래량 28.5% 급증 |
+| 나우로보틱스 | **21,550** 🔴 | **22,000** 🟢 | — | +2.09% 반등, 22,000선 회복 |
+
+### 🔑 핵심 인사이트
+
+1. **🏆 KOSPI 8,801 — 사상 최고 연속 갱신** (6/1 8,788→6/2 8,801, +0.15%). 연저점(4/27 6,900) 대비 **+27.6%!** 9,000선까지 2.2% 남음
+2. **🔴 KOSDAQ 1,026 — 7~8거래일 연속 하락** (5/22 1,161→6/2 1,026, -11.6%). KOSPI와 **+10.5%p 극단적 디커플링** — 사상 최대
+3. **🟢🟢 WTI $95.96 — $90선 확정 회복!** 5/29 $87.36 저점→6/3 $95.96 (+9.8%). OPEC+ 감산+기술적 반등
+4. **🔴 USD/KRW 1,528 — 원화 약세 가속** 3일간 1,507→1,528 (+21원, +1.4%). 1,520선 돌파 확인
+5. **🟢 Swap 0B ✅ 완전 해소!** Gateway RSS 479MB 안정 (512MB 임계 이내). C: drive **81%** (88Gi) 개선!
+6. **🟢 Trinity 6개 tmux 세션 정상** (12:38 self-heal 완료 확인)
+7. **🔴 삼성부광 -40.14% — 최대 손실 심화**. 6,010원, 6,000선 사수중
+8. **🟢 에이치엘사이언스 +6.35% 급반등!** 13,220→14,060. 거래량 급증 유효
+
+### 📝 시스템 변경사항
+- WSL: 6/4 11:04 KST 재부팅 (약 1h 42m uptime)
+- Gateway: systemd 관리 중, RSS 479MB 정상 (512MB 이내)
+- C: drive 81% (88Gi 여유) — 87%→81% 지속 개선
+- Self-Heal 12:38 KST 완료: Trinity 6개 tmux 정상, Gateway 정상, Swap 0B
+- **.hermes_last_check 갱신**: 2026-06-04 12:46
+
+*Recorded by Hermes Knowledge Cron on 2026-06-04 12:46 KST — Knowledge Snapshot (Thu, Pre-Market)*
