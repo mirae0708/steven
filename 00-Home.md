@@ -43,9 +43,9 @@
 
 ## 📊 LLM Wiki 주식 분석 시스템
 |## 📈 종목
-|- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **6,010원** 🔴 **-0.17%** (6/2 confirmed close, 52주 신저가 6,010, 포트폴리오 -40.14%)
-|- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **14,060원** 🟢 **+6.35%** (6/2 confirmed close, 6/1 13,220→6/2 14,060 반등)
-|- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **22,000원** 🟢 **+2.09%** (6/2 confirmed close, 22,000 회복 반등)
+|- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **6,060원** 🟢 **+0.83%** (6/4 confirmed close, 52주 신저가 6,010→6,060 반등)
+|- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **14,000원** 🔴 **-0.43%** (6/4 confirmed close, 6/2 14,060→6/4 14,000 소폭 하락)
+|- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **21,050원** 🔴 **-4.32%** (6/4 confirmed close, 22,000→21,050 급락, 4일 연속 하락)
 
 ### 🧠 최근 Brain Sync (18:00)
 - [[10_Wiki/Artificial_Intelligence/AI_Agents/ATLAS-Agentic-or-Latent-Visual-Reasoning-One-Word-is-Enoug_20260517_1800|ATLAS: Agentic Visual Reasoning]]
@@ -60,7 +60,7 @@
 - [[wiki/sectors/로보틱스|🤖 로보틱스]]
 
 ### 💵 거시경제
-| [[wiki/macros/KOSPI|📊 KOSPI (8,801)]] 🟢🟢🟢 **+7.53% 3일 급등! (5/28 8,185→6/2 8,801, 사상 최고!)** | [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,026)]] 🔴🔴 **-7.09% 3일 폭락! (5/28 1,104→6/2 1,026, 역대급 디커플링!)** | [[wiki/macros/환율|💵 환율 (1,528원)]] 🔴 **6/3 +1.08% (1,528, 원화 약세 전환)** | [[wiki/macros/국제유가WTI|🛢️ WTI ($95.96)]] 🟢 **+2.35% 반등! $90선 확정 회복 (5/29 $87.77→6/3 $95.96)** |
+| [[wiki/macros/KOSPI|📊 KOSPI (8,639)]] 🔴 **-1.84%** (6/4 close, 6/2 8,801→6/4 8,639, 2일 연속 하락) | [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,050)]] 🟢 **+2.31%** (6/4 close, 6/2 1,026→6/4 1,050, 반등!) | [[wiki/macros/환율|💵 환율 (1,534원)]] 🔴 **+1.13%** (6/4 close, 1,517→1,534, 원화 약세 지속) | [[wiki/macros/국제유가WTI|🛢️ WTI ($94.59)]] 🔴 **-1.49%** (6/4 close, $96.02→$94.59, 유가 하락) |
 
 ### 🧠 시스템
 - [[99_System/GEMINI.md|🧠 시스템 스키마 (GEMINI.md)]]
