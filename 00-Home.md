@@ -43,9 +43,9 @@
 
 ## 📊 LLM Wiki 주식 분석 시스템
 |## 📈 종목
-|- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **6,060원** 🟢 **+0.83%** (6/4 confirmed close, 52주 신저가 6,010→6,060 반등)
-|- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **14,000원** 🔴 **-0.43%** (6/4 confirmed close, 6/2 14,060→6/4 14,000 소폭 하락)
-|- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **21,050원** 🔴 **-4.32%** (6/4 confirmed close, 22,000→21,050 급락, 4일 연속 하락)
+|- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **6,140원** 🟢 **+1.32%** (6/5 confirmed close, 시장 대폭락 속 유일 반등! 6,000선 사수 ✅)
+|- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **13,540원** 🔴 **-3.29%** (6/5 confirmed close, 6/1 저점 13,220 재시험 위기!)
+|- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **20,100원** 🔴 **-4.51%** (6/5 confirmed close, 연중 신저가! 20,000선 붕괴 위기!)
 
 ### 🧠 최근 Brain Sync (18:00)
 - [[10_Wiki/Artificial_Intelligence/AI_Agents/ATLAS-Agentic-or-Latent-Visual-Reasoning-One-Word-is-Enoug_20260517_1800|ATLAS: Agentic Visual Reasoning]]
@@ -60,7 +60,7 @@
 - [[wiki/sectors/로보틱스|🤖 로보틱스]]
 
 ### 💵 거시경제
-| [[wiki/macros/KOSPI|📊 KOSPI (8,639)]] 🔴 **-1.84%** (6/4 close, 6/2 8,801→6/4 8,639, 2일 연속 하락) | [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,050)]] 🟢 **+2.31%** (6/4 close, 6/2 1,026→6/4 1,050, 반등!) | [[wiki/macros/환율|💵 환율 (1,534원)]] 🔴 **+1.13%** (6/4 close, 1,517→1,534, 원화 약세 지속) | [[wiki/macros/국제유가WTI|🛢️ WTI ($94.59)]] 🔴 **-1.49%** (6/4 close, $96.02→$94.59, 유가 하락) |
+| [[wiki/macros/KOSPI|📊 KOSPI (8,160)]] 🔴 **-5.54%** (6/5 close, 6/2 8,801→6/5 8,160 대폭락! 3거래일 -7.28%) | [[wiki/macros/KOSDAQ|📈 KOSDAQ (1,002)]] 🔴 **-4.50%** (6/5 close, 1,000선 붕괴 위기! 10거래일 -13.66% 폭락) | [[wiki/macros/환율|💵 환율 (1,558원)]] 🔴 **+1.68%** (6/6 forex, 1,550선 돌파! 연중 신고점! 원화 폭락!) | [[wiki/macros/국제유가WTI|🛢️ WTI ($90.54)]] 🔴 **-2.69%** (6/5 close, $90선 위협! 5/29 저점 재시험 위기) |
 
 ### 🧠 시스템
 - [[99_System/GEMINI.md|🧠 시스템 스키마 (GEMINI.md)]]
@@ -72,7 +72,20 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 |||## 최근 업데이트
-- **[Hermes]** 📝 **Knowledge Cron 00:48 — 6/5(금) Pre-Market: Gateway 756MB⚠️, Swap 315MiB 급증🟡, Trinity 정상** (2026-06-05 00:48 KST)
+|- **[Hermes]** 📝 **Knowledge Cron 20:46 — 6/6(토) Weekend 스냅샷: KOSPI 8,160🔴🔴 대폭락! 6/5 -5.54%!!! 환율 1,558🛑 연중신고! KOSDAQ 1,000선 위기! WTI $90.54 위협! Swap 1.0Gi🟡** (2026-06-06 20:46 KST)
+|  - **System**: Uptime 1d4h45m 🟢, Swap **1.0Gi 🟡** (재축적 가속!), Mem 39% 🟢, C: **82%** 🟢 (87Gi), tmux **6개** ✅, Gateway 243MB ✅ (20:40 `--replace` 재시작)
+|  - **Trinity**: CowAgent(9899) ✅ MetaClaw(30000) ✅ open-design(17456) ✅ — 3개 모두 정상
+|  - **Open WebUI**: port 3000 정상 운용 중 🟢
+|  - **Hermes Unified Hub(8650)**: live 운용 중 🟢
+|  - **🔴🔴🔴 KOSPI 8,160 — 6/5 대폭락(-5.54%)! 6/2 사상최고 8,801에서 3거래일 -7.28% 급락! 5/28 저점(8,185) 이탈 — 8,000선 사수 관건!**
+|  - **🔴 KOSDAQ 1,002 — 1,000선 붕괴 위기! 10거래일 -13.66% 폭락! RSI 20.4 극단적 과매도!**
+|  - **🛑 USD/KRW 1,558 — 연중 신고점! 7거래일 +4.2% 원화 폭락! 외국인 자금 이탈 악순환!**
+|  - **🟡 WTI $90.54 — $90선 위협! 5/29 저점($87.36) 재시험 위험**
+|  - **🟢 삼성부광 6,140 (+1.32%) — 시장 대폭락 속 유일 반등! 6,000선 사수 ✅**
+|  - **🔴 나우로보틱스 20,100 (-4.51%) — 연중 신저가! 20,000선 붕괴 위기!**
+|  - **🔴 에이치엘사이언스 13,540 (-3.29%) — 6/1 저점 재시험**
+|  - **전망**: 6/8(월) KOSPI 8,000선 사수 vs 붕괴. KOSDAQ 1,000선 패닉 가능. 원화 1,550+ 약세 지속. Swap 1.0Gi 추이 주시.
+|- **[Hermes]** 📝 **Knowledge Cron 00:48 — 6/5(금) Pre-Market: Gateway 756MB⚠️, Swap 315MiB 급증🟡, Trinity 정상** (2026-06-05 00:48 KST)
   - **System**: Uptime 13h43m 🟢, Swap **315MiB 🟡🔺** (89MiB→315MiB, 4h 3.5배!), Mem 54% 🟡, C: **81%** 🟢 (87Gi), tmux **7개** ✅
   - **Gateway**: RSS **756MB ⚠️** PID 268531 — 512MB MemoryMax 초과. API 서버 disabled (정상, port 8642 not listening)
   - **Trinity**: CowAgent(9899) ✅ MetaClaw(30000) ✅ open-design(17456) ✅ — 3개 모두 13h+ 정상
