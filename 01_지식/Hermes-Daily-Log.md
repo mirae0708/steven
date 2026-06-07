@@ -1883,3 +1883,120 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 ---
 
 *Recorded by Hermes Knowledge Cron on 2026-06-07 21:00 KST — Weekend summary (no market data, system maintenance day)*
+
+
+## 🧬 Hermes Knowledge Cron — 2026-06-08 (Mon) 00:46 KST — Pre-Market Snapshot: KOSPI 8,000선 오픈 D-DAY
+
+### 📋 시스템 현황 — 00:46 KST (월요일, 6/5 대폭락 후 첫 거래일 D-DAY)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | **2d 38min** (6/5 22:08 이후 재부팅 없음) |
+| tmux 세션 | **6개** — hermes/hermes-mcp/jongdari/cowagent/metaclaw/opendesign |
+| Trinity (9899/30000/17456) | ✅ 전원 정상 (00:45 auto-heal 확인) |
+| Hermes Gateway (port 8642) | ✅ active, **RSS 375MB** (정상 범위, MemoryMax 1.5G drift 없음) |
+| Open WebUI (port 3000) | ✅ 정상 운용 |
+| Hermes Unified Hub (port 8650) | ✅ live 운용 |
+| 가상오피스 (port 8000) | ✅ 정상 (vo tmux 유지) |
+| Memory | **3.7Gi / 7.6Gi (49%)** 🟢 |
+| **Swap** | **353MiB 🟡** (6/7 21:00 1.0Gi→353MiB 감소? **재확인 필요**) |
+| C: Drive | **83%** (80Gi 여유) 🟡 |
+| Load Avg | 0.53 / 0.45 / 0.55 🟢 |
+| 10_Wiki 저장소 | **750 .md 파일** (6/7 748→750, +2 증가) |
+| Brain Sync | 6/7 23:07 KST (약 1.5h 전) |
+
+### 📋 지난 24시간 타임라인 (6/7 21:00 → 6/8 00:46)
+
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 6/7 19:37~23:00 | 🔧 **n8n 물류자동화 구조 분석·수정** — Telegram 세션(276메시지). Booking.jsx 서버 SQL 검색 연동, 입력폼 수정. ERP 서버(tmux n8n_server, port 8082) 정상 |
+| 6/7 20:46 | 📊 Brain Sync 완료 (마지막 동기화) |
+| 6/7 21:00 | 📝 Knowledge Cron: 일요일 주말 스냅샷 기록 완료 |
+| 6/7 23:07 | 🧠 .hermes_last_brain_sync 갱신 |
+| 6/8 00:45 | 🔄 Trinity Auto-Heal 3/3 정상 확인 (cron) |
+| 6/8 00:46 | **NOW** → 본 스냅샷 |
+
+### 🔑 핵심 인사이트
+
+1. **n8n Booking.jsx 수정 완료**: 서버 SQL 검색(port 8082), 신규 부킹 버튼 정상화, 검색/필터 서버 연동. 콘솔 에러 0개.
+2. **🟡 Swap 353MiB** — 6/6 1.0Gi→6/7~6/8 353MiB로 감소. WSL이 gc/page reclaim을 한 것으로 보이나 여전히 0B가 아님. 지속 모니터링 필요.
+3. **🟢 Gateway RSS 375MB** — 안정적. MemoryMax 1.5G drift 없음 (override.conf 유지).
+4. **🟢 Trinity 3/3 정상** — 2일째 안정 운용.
+5. **🔴🔴🔴 6/8(월) 09:00 KST 오픈** — **6/5 KOSPI -5.54% 대폭락 후 첫 거래일.** 8,000선 사수 vs 패닉셀. KOSDAQ 1,000선 붕괴 위기. USD/KRW 1,558 연중 신고점.
+6. **10_Wiki**: 750개 .md 파일 유지. Tech Scavenger 계속 수집 중.
+
+### ⚠️ 관찰사항
+
+| 항목 | 상태 | 비고 |
+|:-----|:----:|:------|
+| Swap | 🟡 353MiB | 6/6 1.0Gi→감소, 0B 아닌 상태 지속 |
+| Gateway | 🟢 375MB | 정상 범위, drift 없음 |
+| C: Drive | 🟡 83% (377Gi/456Gi) | 6/6 82%→83% 소폭 증가 |
+| Trinity | 🟢 전원 정상 | 2일 연속 |
+| tmux | 🟢 6개 | 전원 정상 (n8n_server는 Telegram 세션 관리) |
+
+### 📊 전망
+
+- **6/8(월) 09:00 KST 오픈**: KOSPI 8,000선 사수 vs 패닉셀 (6/5 -5.54% 대폭락 후 첫 거래일). 외국인 자금 이탈 가속 예상.
+- KOSDAQ 1,000선 붕괴 위기 — 기술적 반등 시급 (RSI 20.4 극단 과매도)
+- USD/KRW 1,550+ 지속 — 1,560선 돌파 가능성
+- Swap: 0B 복귀 전까지 WSL 재부팅 보류. 현재 353MiB로 1.0Gi보다 양호하나 추이 주시.
+- Gateway: RSS 375MB 안정적이나 500MB+ 도달 시 watchdog 개입 예상.
+
+---
+
+*Recorded by Hermes Knowledge Cron on 2026-06-08 00:46 KST — Pre-Market Snapshot (Mon, D-DAY after -5.54% Black Friday)*
+
+---
+
+## 🧬 Hermes Knowledge Cron — 2026-06-08 (Mon) 04:46 KST — Pre-Market Quick Check
+
+### 📋 시스템 현황 — 04:46 KST (장 오픈 T-4h 14m)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | **2d 4h 38m** (6/5 22:08 이후 재부팅 없음) |
+| tmux 세션 | **7개** (n8n_server 추가됨) |
+| Trinity | ✅ 전원 정상 (04:45 auto-heal) |
+| Gateway (port 8642) | ✅ Telegram-only (platforms.api_server.enabled=false), RSS **420MB** 🟢 |
+| Open WebUI (3000) / 가상오피스 (8000) / n8n (8082) / Hub (8650) | ✅ 전원 HTTP 200 |
+| Memory | **3.9Gi / 7.6Gi (51%)** 🟡 |
+| **Swap** | **544MiB 🟡** (00:46 353MiB→04:46 544MiB, **+191MiB/4h = ~48MiB/h**) |
+| C: Drive | 83% (80Gi 여유) 🟡 |
+| Load Avg | 0.26 / 0.20 / 0.22 🟢 |
+| 10_Wiki 저장소 | **750 .md 파일** (unchanged) |
+
+### 📋 모니터링 포인트
+
+| 항목 | 변화 | 비고 |
+|:-----|:----:|:------|
+| Swap | 353MiB→**544MiB** (+191MiB/4h) | **가속 증가 조짐** — 00:46 353MiB에서 4h만에 544MiB 도달. 일일 로그 기록 이후 15분 지연으로도 실제 압력을 과소평가할 수 있음. 1.0Gi까지 ~9.5h 예상 (현재 속도 유지 시). |
+| Gateway RSS | 375MB→420MB (+45MB/4h) | 정상 범위, 소폭 증가 |
+| Memory | 49%→51% | 정상 범위 내 변동 |
+| tmux | 6→7 | n8n_server 세션 신규 추가 |
+
+### ⏱ 타임라인 (00:46 → 04:46)
+
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 00:46 | 📝 Pre-Market Snapshot 기록 (Swap 353MiB) |
+| 02:08 | 🔄 n8n_server tmux 세션 신규 생성 |
+| 02:08 | 🔄 hermes-mcp 세션 갱신 |
+| 04:45 | 🔄 Trinity Auto-Heal 3/3 정상 확인 |
+
+### 🔑 핵심 포인트
+
+1. **🟡 Swap 가속 증가 — 544MiB, 48MiB/h** — 00:46 353MiB에서 4h만에 544MiB로 +54% 증가. 이 속도가 유지되면 09:00 KST 오픈 시점엔 ~740MiB, 15:30 마감 시점엔 **1.0Gi 초과** 예상. 장 종료 후 WSL 재부팅 검토 필요.
+2. **🟢 Gateway 420MB RSS** — Telegram-only 모드에서 안정적. MemoryMax drift 없음.
+3. **🟢 Trinity + n8n_server 7개 tmux 전원 정상** — 금일 오픈 대비 서비스 인프라 문제 없음.
+4. **🔴🔴 KOSPI 8,160.59 (6/5 Black Friday -5.54% close) — 첫 거래일 D-DAY** — 09:00 KST 오픈 시 8,000선 사수 vs 패닉셀. KOSDAQ 1,000선 위기. VKOSPI 74.26 (5/29 기준) 급등 상태.
+
+### 📊 전망
+
+- **6/8(월) 09:00 KST 오픈**: KOSPI 8,160 대비 8,000선 방어 여부 관건. 6/5 -5.54% Black Friday의 후폭풍.
+- **Swap**: 544MiB 가속 증가 — 09:00 ~740MiB / 15:30 마감 1.0Gi+ 예상. 장 종료 후 재부팅 권장.
+- **n8n_server tmux 세션 신규 확인**: 8082 포트에서 정상 서빙 중.
+- **다음 기록 예정**: 08:46 Pre-Market Auto-Evolution (장 오픈 전 마지막 스냅샷).
+
+*Recorded by Hermes Knowledge Cron on 2026-06-08 04:46 KST — Pre-Market Quick Check: Swap 544MiB 🟡 가속 증가, KOSPI D-DAY T-4h 14m*
+
