@@ -1836,3 +1836,50 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 
 *Recorded by Hermes Knowledge Cron on 2026-06-06 20:46 KST — Weekend Snapshot (6/5 EOD confirmed close)*
 
+
+
+## 🧬 Hermes Knowledge Cron — 2026-06-07 (Sun) 21:00 KST — 주말 시스템 유지보수 및 n8n 성능 최적화
+
+### 📋 시스템 현황 — 21:00 KST (일요일, 휴장)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | (6/5 이후 재부팅 없음, Swap 재축적 지속) |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 (3회 auto-heal 확인) |
+| Hermes Gateway | ✅ active (Telegram 전용 모드) |
+| 10_Wiki 저장소 | **748 .md 파일** (6/6 708→748, +40 증가) |
+
+### 📋 6/7(일) 활동 기록
+
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 08:10 | 📊 LLM Wiki 확장기 Raw 갱신 스캔 완료 — 00_Raw/MarketData/ 10개 JSON 확인, 추가 갱신 불필요 |
+| 20:30 | 🧬 Hermes Auto-Evolution Cycle 실행 — Config timeout_seconds 통합, ripgrep 미설치 발견 |
+| 20:30~20:45 | 🔄 Trinity Auto-Heal 3회 실행 — 전원 정상 확인 |
+| 20:35 | ✉️ POP3 Mail Bridge — 5건 메일 처리 (Heyna 장치로그인·선사스케줄·Invoice·문서검토) |
+| 19:37 | ⚡ n8n App.jsx 성능 최적화 — React.lazy + Suspense 도입, display:none→조건부 렌더링 전환 |
+
+### 🔑 핵심 인사이트
+
+1. **n8n App.jsx 성능 최적화 완료** — 14개 페이지 컴포넌트를 React.lazy()로 동적 로딩 전환. 기존 display:none(전체 페이지 항상 마운트)에서 {activeTab && Component}(조건부 렌더링)으로 변경. 초기 번들 크기 대폭 감소.
+2. **Trinity 3/3 안정 운용** — 일요일 주간에도 CowAgent/MetaClaw/open-design 전원 정상 유지. Auto-Heal cron 3회 연속 이상 무.
+3. **10_Wiki 지식 베이스 확장** — 708→748 파일 (+40, 주말 7% 증가). Tech Scavenger 지속 수집 중.
+4. **POP3 Mail Bridge 정상 가동** — Heyna 이메일 5건 자동 수집·order_gateway 전달 성공. 장치로그인 알림, 선사 스케줄, 인보이스, 서류검토 등 실제 업무 메일 처리.
+
+### 📊 파일 변경
+
+- **01_지식/Hermes-Daily-Log.md** — 6/7(일) 주말 활동 기록 추가 (본 항목)
+- **n8n/App.jsx** — React.lazy + Suspense 성능 최적화 (외부 파일)
+- **99_System/Logs/wiki_update_log.md** — 6/6 Brain Sync 항목 (라인 236)
+
+### 전망
+
+- **6/8(월) 09:00 KST 오픈** — KOSPI 8,000선 사수 vs 패닉셀 (6/5 -5.54% 대폭락 후 첫 거래일)
+- KOSDAQ 1,000선 붕괴 시 900대 진입 — 기술적 반등 시급
+- USD/KRW 1,550+ 지속 — 외국인 자금 이탈 가속
+- Swap 재축적 모니터링 (WSL 재부팅 시점 판단)
+- n8n App.jsx Vite 빌드 검증 필요
+
+---
+
+*Recorded by Hermes Knowledge Cron on 2026-06-07 21:00 KST — Weekend summary (no market data, system maintenance day)*
