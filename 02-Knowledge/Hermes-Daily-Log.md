@@ -2068,3 +2068,23 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 | 5 | Cross-Agent Memory Injection 취약점 분석 | 🟡 |
 
 *Recorded by Hermes Knowledge Cron on 2026-06-08 16:46 KST — Evening Auto-Evolution: 179건 지식+Self-Heal 2건 성공+KOSPI 8,000붕괴*
+
+---
+
+## 🧬 Hermes Evening Wrap — 2026-06-08 (Mon) 20:46 KST (Post-Market, Swap 99MiB ✅ 급감!)
+
+**📋 System**: Uptime 2d20h 🟢, Swap **99MiB ✅ 급감!** (16:46 448MiB→20:47 99MiB, -78%), Mem 46% 🟢, C: 83% (79Gi) 🟡, tmux 6개 ✅, Trinity✅
+
+**📋 지난 4시간 (16:46→20:46)**: Brain Sync 20:02 ✅, MCP 멀티검색 3건 (19:14~19:27: K-바이오/배터리/글로벌경제)
+
+**📊 Swap 추이 (6/8)**: 00:46 353MiB→04:46 544MiB→08:46 410MiB→12:45 **796MiB🔴🔴**→16:30 448MiB→20:47 **99MiB ✅ (-87.6% from peak!)**
+
+> **분석**: Gateway 복구 후 Swap 4h만에 -78% 급감. 12:45 796MiB 피크 이후 -87.6% 탈축적. Gateway 메모리 누수가 Swap 급증의 근본 원인임을 입증.
+
+**💡 핵심**: 🟢Swap 99MiB 재부팅 불필요🔴KOSPI 7,811 8,000붕괴🔴KOSDAQ 941 1,000붕괴🟢Self-Heal 2건🟡C:83%
+
+**🚧 Actions**: 🔴C:드라이브 정리(docker prune)✅Swap 99MiB 안정⏰6/9 Pre-Market T-12h
+
+**전망**: 6/9(화) 7,500선 지지. 포트폴리오 현금 방어 유지. 다음: 6/9 08:46 Pre-Market
+
+*Recorded by Hermes Knowledge Cron on 2026-06-08 20:46 KST — Evening Wrap: Swap 99MiB ✅ 급감!*

@@ -72,15 +72,22 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ||||## 최근 업데이트
-|||- **[Hermes]** 🧬 **Knowledge Cron 16:46 — 6/8(월) Evening Auto-Evolution + EOD Wrap: Self-Heal 2건 성공✅, 179건 지식 흡수🧬, KOSPI 7,811(-4.29%)·KOSDAQ 941(-6.15%) 듀얼 붕괴🔴🔴** (2026-06-08 16:46 KST)
-|||  - **🟢 Self-Heal 자동 복구 2건 성공 (14:35)**: Jongdari tmux 소멸→13초복구, 가상오피스(8000) 다운→8초복구 — 시스템 신뢰성 입증
-|||  - **🟢 Gateway 복구 완료**: PID 1060326, 505MB RSS — Telegram + Hub(8650) 정상. hermes-mcp 세션도 복원
-|||  - **🟡 Swap 448MiB 안정화**: 12:45 796MiB 급증→16:30 448MiB 감소. Gateway RSS 안정화 반영
-|||  - **🧬 Auto-Evolution 21차 완료**: 179건 신규 지식 흡수 (10_Wiki 708 papers total). Top 인사이트: Cross-Agent Memory Injection 취약점·Self-Reflective API·StreamMA·Harness→Hermes 매핑
-|||  - **🔴 C: 드라이브 83% (79Gi)** — docker prune + vhdx compact 필요
-|||  - **📊 6/8 EOD Key**: KOSPI 7,811(-4.29%) 8,000붕괴·KOSDAQ 941(-6.15%) 1,000붕괴·USD/KRW 1,549(-0.64%)·WTI $93.82(+3.62%)·삼성부광 5,840(-4.89%)·에이치엘 12,680(-6.35%)·나우로보틱스 18,790(-6.52%)
-|||  - **📈 CB Score 32/100 🟡 CAUTION MODE**: 포트폴리오 현금 492만 방어 성공 (미체결 포지션 없음)
-|||  - **전망**: 6/9(화) 7,500선 지지 여부가 관건. CB Safety 모드 전환 가능. 자정 재부팅 고려
+||||- **[Hermes]** 🧬 **Knowledge Cron 20:46 — 6/8(월) Evening Wrap: Swap 급감 99MiB✅ (-78%!), MCP 3건 신규, Brain Sync 20:02 정상, 시스템 안정** (2026-06-08 20:46 KST)
+||||  - **🟢 Swap 99MiB ✅ — 급감 (-349MiB, -78%)**: 16:46 448MiB→20:47 99MiB. 12:45 피크(796MiB) 대비 -87.6% 탈축적. Gateway 복구 후 메모리 관리 정상화 확정. 100MiB 임계 하회 — 재부팅 불필요
+||||  - **🟢 System**: Uptime 2d20h 🟢, Mem 3.5Gi/46% 🟢, Load 0.42 🟢, C: 83% (79Gi) 🟡, tmux 6개 ✅
+||||  - **🟢 Brain Sync 20:02 완료** — 정상 사이클 유지
+||||  - **🤖 MCP 멀티검색 3건 (19:14~19:27)**: K-바이오/배터리/글로벌경제 동향 — 10_Wiki 저장 완료
+||||  - **📊 6/8 EOD 유지**: KOSPI 7,811(-4.29%)·KOSDAQ 941(-6.15%)·USD/KRW 1,549(-0.64%)·WTI $93.82(+3.62%) — 장 마감 후 변동 없음
+||||  - **전망**: 6/9(화) 09:00 개장 전 Pre-Market 점검. Swap 100MiB 이하 안정 유지 관건. C: 드라이브 정리(docker prune) 권장
+||||- **[Hermes]** 🧬 **Knowledge Cron 16:46 — 6/8(월) Evening Auto-Evolution + EOD Wrap: Self-Heal 2건 성공✅, 179건 지식 흡수🧬, KOSPI 7,811(-4.29%)·KOSDAQ 941(-6.15%) 듀얼 붕괴🔴🔴** (2026-06-08 16:46 KST)
+||||  - **🟢 Self-Heal 자동 복구 2건 성공 (14:35)**: Jongdari tmux 소멸→13초복구, 가상오피스(8000) 다운→8초복구 — 시스템 신뢰성 입증
+||||  - **🟢 Gateway 복구 완료**: PID 1060326, 505MB RSS — Telegram + Hub(8650) 정상. hermes-mcp 세션도 복원
+||||  - **🟡 Swap 448MiB 안정화**: 12:45 796MiB 급증→16:30 448MiB 감소. Gateway RSS 안정화 반영
+||||  - **🧬 Auto-Evolution 21차 완료**: 179건 신규 지식 흡수 (10_Wiki 708 papers total). Top 인사이트: Cross-Agent Memory Injection 취약점·Self-Reflective API·StreamMA·Harness→Hermes 매핑
+||||  - **🔴 C: 드라이브 83% (79Gi)** — docker prune + vhdx compact 필요
+||||  - **📊 6/8 EOD Key**: KOSPI 7,811(-4.29%) 8,000붕괴·KOSDAQ 941(-6.15%) 1,000붕괴·USD/KRW 1,549(-0.64%)·WTI $93.82(+3.62%)·삼성부광 5,840(-4.89%)·에이치엘 12,680(-6.35%)·나우로보틱스 18,790(-6.52%)
+||||  - **📈 CB Score 32/100 🟡 CAUTION MODE**: 포트폴리오 현금 492만 방어 성공 (미체결 포지션 없음)
+||||  - **전망**: 6/9(화) 7,500선 지지 여부가 관건. CB Safety 모드 전환 가능. 자정 재부팅 고려
 |||- **[Hermes]** 📝 **Knowledge Cron 08:46 — 6/8(월) Pre-Market Opening D-DAY T-14m! Gateway DOWN⚠️, Swap 410MiB🟡, hermes-mcp 세션 소실** (2026-06-08 08:46 KST)
 ||  - **🔴 D-DAY OPEN — 6/5 Black Friday(-5.54%) 후 첫 거래일! KOSPI 8,000선 방어 전쟁 시작!**
 ||  - **System**: Uptime 2d8h38m 🟢, Swap **410MiB 🟡** (04:46→08:46 -134MiB — Gateway DOWN 영향), Mem 54% 🟡, C: **83%** 🟡 (80Gi), tmux **6개** ⚠️ (hermes-mcp 소실)

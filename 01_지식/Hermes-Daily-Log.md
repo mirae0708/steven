@@ -2228,3 +2228,72 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 - **다음 기록**: 08:00 KST 6/9 Pre-Market 스냅샷
 
 *Recorded by Hermes Knowledge Cron on 2026-06-08 16:46 KST — Evening Auto-Evolution + EOD Wrap: KOSPI 7,811(-4.29%) 8,000붕괴🔴·KOSDAQ 941(-6.15%) 1,000붕괴🔴🔴·Self-Heal 2건 성공✅·179건 지식 흡수🧬*
+
+---
+
+## 🧬 Hermes Evening Wrap — 2026-06-08 (Mon) 20:46 KST (Post-Market, Swap 99MiB ✅ 급감!)
+
+### 📋 시스템 현황 — 20:46 KST
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | 2d 20h (6/5 23:45 이후) |
+| tmux 세션 | 6개 — all normal |
+| Trinity (CowAgent/MetaClaw/open-design) | ✅ 전원 정상 |
+| Hermes Gateway (port 8642) | ✅ active (복구 유지) |
+| Memory | 3.5Gi / 7.6Gi (46%) |
+| **Swap** | **99MiB ✅** (16:46 448MiB→20:47 99MiB, **-78% 급감!**) |
+| C: Drive | 83% (79Gi) 🟡 |
+| Load Avg | 0.42 / 0.32 / 0.37 |
+| Brain Sync | 20:02 KST — 최근 실행 완료 |
+
+### 📋 지난 4시간 타임라인 (16:46 → 20:46 KST)
+
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 16:46 | 🧬 **EOD Auto-Evolution 21차 완료** — 179건 신규 지식 흡수 (10_Wiki 708 papers) |
+| 16:52 | 📝 Hermes-Daily-Log.md EOD 엔트리 최종 저장 |
+| 19:14 | 🤖 MCP 멀티검색 — 글로벌 경제 전망 실물경제 금리 |
+| 19:14 | 🤖 MCP 멀티검색 — K-배터리 전기차 시장 2026년 6월 동향 |
+| 19:27 | 🤖 MCP 멀티검색 — 2026년 6월 바이오헬스 제약산업 K-바이오 트렌드 |
+| 20:02 | 🧠 **Brain Sync 완료** — 정상 사이클 |
+| **20:46** | **NOW** → 본 Evening Wrap |
+
+### 📊 Swap 상세 추이 (6/8)
+
+| 시점 (KST) | Swap 사용량 | 판정 |
+|:-----------|:----------:|:-----|
+| 00:46 | 353MiB | 🟡 재축적 |
+| 04:46 | 544MiB | 🟡🔺 상승 |
+| 08:46 | 410MiB | 🟡 하향 (Gateway DOWN 영향) |
+| 12:45 | **796MiB** | 🔴🔴 **ALL-TIME HIGH!** |
+| 14:30 | 480MiB | 🟡 Gateway 복구 후 감소 |
+| 16:30 | **448MiB** | 🟡 안정화 |
+| **20:47** | **99MiB** | **✅ 급감! 12:45 피크 대비 -87.6%!** |
+
+> **분석**: Gateway 복구(PID 1060326, 505MB RSS) 후 Swap이 4시간 만에 448→99MiB로 급감(-78%). Gateway 다운 기간 중 축적된 메모리 압력이 해소되며 정상화. 100MiB 임계 하회 — **재부팅 불필요 판정**. 12:45 796MiB 피크 이후 -87.6% 탈축적은 Gateway 메모리 누수(중단 전 1.6GB)가 Swap 급증의 근본 원인이었음을 입증.
+
+### 💡 금일 핵심 포인트
+
+1. **🟢 Swap 99MiB ✅ — 급감 확인!** 16:46 448MiB→20:47 99MiB. 12:45 피크(796MiB) 대비 -87.6%. Gateway 복구 후 본격적 메모리 정상화. 100MiB 임계 하회로 재부팅 불필요.
+2. **🔴🔴 KOSPI 7,811(-4.29%) — 8,000선 붕괴!** KOSDAQ 941(-6.15%) — 1,000·950선 붕괴! 6/2 고점(8,801) 대비 -11.2% 하락. 6/5 Black Friday(-5.54%) 이어 연속 대폭락.
+3. **🟢 Self-Heal 2건 자동 복구 성공** — Jongdari tmux 소멸(13초) + 가상오피스(8초). 시스템 신뢰성 입증.
+4. **🤖 MCP 멀티검색 3건 신규** — K-바이오/배터리/글로벌경제 (19:14~19:27). 10_Wiki 저장 완료.
+5. **🟡 C: 드라이브 83% (79Gi)** — 지속적 경고. docker prune + vhdx compact 필요.
+
+### 🚧 Action Items
+
+| # | 항목 | 긴급도 | 상태 |
+|:--|:-----|:-----:|:----:|
+| 1 | **C: 드라이브 정리** (docker prune + vhdx compact) | 🔴 | ❌ (83%, 79Gi) |
+| 2 | 🔴 Swap 모니터링 — 100MiB 이하 안정 유지 확인 | 🟢 | ✅ **99MiB 안정** |
+| 3 | 📊 6/9(화) Pre-Market 체크 (08:46 KST) | 🟡 | ⏰ **T-12h** |
+| 4 | 🧠 6/9 Brain Sync Pre-Open | 🟡 | ⏰ |
+
+### 📋 전망
+
+- **KOSPI**: 6/9(화) 7,500선 지지 여부가 단기 관건. 추가 하락 시 7,000선까지 가능. 포트폴리오 현금 방어 전략 유효.
+- **Swap**: 99MiB ✅ 안정 — Gateway 정상화로 인한 자연 탈축적 완료. 재부팅 불필요.
+- **다음 기록**: 6/9(화) 08:46 KST Pre-Market 스냅샷
+
+*Recorded by Hermes Knowledge Cron on 2026-06-08 20:46 KST — Evening Wrap: Swap 99MiB ✅ 급감! KOSPI 7,811🔴·KOSDAQ 941🔴·MCP 3건·Brain Sync 20:02*
