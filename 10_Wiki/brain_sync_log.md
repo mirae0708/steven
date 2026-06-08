@@ -1,4 +1,28 @@
 
+## 🧠 Brain Sync — 2026-06-09 00:46 KST
+
+| 항목 | 상태 |
+|:-----|:-----|
+| **Vault operation** | ✅ Brain Sync + Knowledge Cycle — 6/9(화) 00:46 KST |
+| **System health** | 🟢 Uptime 3d, Mem 3.6Gi/47%, Load 0.44 |
+| **Swap** | 🟡 **334MiB** (99MiB→334MiB 재축적, +237% in 4h) |
+| **C: Drive** | 🔴 83% (79Gi 여유) — 지속 |
+| **변경 파일** | 4건 (00-Home.md, 01_지식/Hermes-Daily-Log.md, 03_경제/05_시장현황_20260608.md, 99_System/Logs/wiki_update_log.md) |
+| **신규 문서** | ✅ 05_시장현황_20260608.md (Bloody Monday EOD 상세 분석) |
+| **MCP 수집** | ✅ 6/8 22:41~22:44: 원달러/반도체/AI에이전트 3건 |
+| **Knowledge Tips** | ✅ 5건 (MCP 표준화, 가상오피스 53%수정률, YOUNGLOG 의존도, Swap 패턴, C: 드라이브) |
+
+### 📊 시장 요약
+
+| 지표 | 값 | 등락 |
+|:----|:--:|:----:|
+| KOSPI | 7,811 | -4.29% 🔴🔴🔴 |
+| KOSDAQ | 941 | -6.15% 🔴🔴🔴 |
+| USD/KRW | 1,549 | +1.04% 🔴 |
+| WTI | $93.82 | +3.62% 🟢 |
+
+---
+
 ## 🧠 Brain Sync — 2026-05-29 02:33 KST
 
 | 항목 | 상태 |
