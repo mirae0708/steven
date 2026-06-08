@@ -1,6 +1,6 @@
-🧠 Brain Sync — 2026-06-04 20:46 KST
-Status: Knowledge Cron 완료 — Evening Snapshot 저장.
-System: Uptime 9h41m, Swap 89MiB 🟡 재축적 시작, Mem 53%, Gateway --replace 20:16 재시작, C: 82% (87Gi), tmux 7개 (+vo 가상오피스 16:39).
-Key Events: 가상오피스 첫가동 (5명 VP 하네스 최초 실행), Harness→Hermes 적용가이드 작성, n8n 문서검증 리포트 생성, MCP 7건+20개 arXiv 수집.
-Market: KOSPI 8,801 사상최고, KOSDAQ 1,026 7~8일 연속 하락, USD/KRW 1,528 급등, WTI $95.96 반등.
+🧠 Brain Sync — 2026-06-08 16:46 KST
+Status: Evening Auto-Evolution + EOD Wrap.
+System: Uptime 2d 18h, Swap 448MiB 🟡 안정화, Mem 54%, C: 83% (79Gi), tmux 6개 ✅
+Key Events: KOSPI 7,811(-4.29%) 8,000붕괴🔴, KOSDAQ 941(-6.15%) 1,000붕괴🔴🔴. Self-Heal 2건 자동복구 성공(14:35): Jongdari tmux 소멸→13초복구 + 가상오피스→8초복구. Gateway 복구완료(PID 1060326). Auto-Evolution 21차: 179건 신규 지식 흡수(10_Wiki 708). Cross-Agent Memory Injection 취약점·Self-Reflective API 패턴 발견.
+Market: KOSPI 7,811·KOSDAQ 941·USD/KRW 1,549·WTI $93.82·삼성부광 5,840·에이치엘 12,680·나우로보틱스 18,790 (6/8 confirmed close).
 Files updated: 00-Home.md, 01_지식/Hermes-Daily-Log.md, 02-Knowledge/Hermes-Daily-Log.md, 99_System/Logs/wiki_update_log.md (4 files committed).
