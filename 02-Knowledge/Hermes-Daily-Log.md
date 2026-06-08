@@ -1934,3 +1934,35 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 2. Gateway 420MB - normal Telegram-only mode.
 3. n8n_server tmux session confirmed on port 8082.
 4. KOSPI D-DAY T-4h: 6/5 Black Friday -5.54% close at 8,160 -> 09:00 open awaits.
+
+
+---
+
+## 08:46 KST Pre-Market Opening - D-DAY T-14m
+
+### System Status
+
+| Item | Status |
+|:-----|:------|
+| Swap | 410MiB (04:46 544MiB->410MiB, **-134MiB/4h 감소** — Gateway DOWN 영향) |
+| Gateway 8642 | ❌ **HTTP 000** (Telegram-only down since ~08:xx) |
+| Memory | 4.1Gi/7.6Gi (54%) |
+| tmux | **6개** (hermes-mcp 세션 소실 ⚠️) |
+| C: Drive | 83% (80Gi free) |
+| Load Avg | 0.29 stable |
+| All Services | Ports 3000/8000/8082/8650 = HTTP 200 ✅ |
+
+### Key Events (04:46→08:46)
+
+1. 🔴 **Gateway 8642 DOWN** — Telegram-only 프로세스 종료. hermes-mcp tmux 세션도 소실.
+2. 🟡 **Swap 410MiB** — 04:46 544MiB→08:46 410MiB. Gateway 420MB RSS 해제로 일시 감소. 재시작 시 복귀.
+3. 🟢 **나머지 5개 서비스 정상** — Open WebUI·가상오피스·n8n·Hub·Trinity 전원 HTTP 200.
+4. 🟢 **Tech Scavenger** — 3회 실행 0건 신규 (캐시 최신).
+5. 📈 **문화×경제 9건 신규 문서** (K-Food, BTS 투어, K-뷰티 물류 등).
+6. 🔴🔴 **KOSPI D-DAY 8,160** — 09:00 KST 오픈 14분 전. 8,000선 방어 vs 패닉셀.
+
+### Outlook
+
+- **09:00 Open**: 6/5 -5.54% 후폭풍. 8,000선 사수 관건. KOSDAQ 1,000선 위기.
+- **Gateway 복구 필요** (텔레그램 기능 + hermes-mcp 세션).
+- **Swap**: Gateway 재시작 후 500MiB+ 복귀 예상. 장 종료 후 WSL 재부팅 권장.

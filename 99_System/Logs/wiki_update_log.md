@@ -239,3 +239,5 @@
 
 | 2026-06-08 | 03:14 KST | wiki 업데이트 (6/5 종가 기준) | 삼성부광·나우로보틱스·에이치엘사이언스 주식 RSI/SMA/BB 재계산 + KOSPI(8,160.59)·KOSDAQ(1,002.44)·환율(1,559)·WTI($90.54) 업데이트 + 섹터(헬스케어·로보틱스·코스닥중소형) 동기화 |
 |2026-06-08|04:46|01_지식: Pre-Market Quick Check appended|Swap 353->544MiB, D-DAY T-4h, Gateway 420MB|hermes-cron|
+|2026-06-08 08:16 | 📊 Wiki 확장기 Pre-Market 점검 | **6/5 confirmed close 유지. USD/KRW 1,559.00(6/7, +1.69%) 반영 완료. 6/8(월) 09:00 개장 대기 중. 모든 지표 기존값과 일치 — 변경 없음.** |
+|2026-06-08 | 08:46 | 📝 Knowledge Cron — Pre-Market Opening D-DAY T-14m: Gateway DOWN⚠️, Swap 410MiB🟡, hermes-mcp 세션 소실, 문화×경제 9건 신규 | **Swap 410MiB🟡(-134MiB/4h — Gateway DOWN 영향), Gateway(8642) HTTP 000❌, tmux 6개⚠️(hermes-mcp 소실), Mem 54%🟡, C:83%🟡, 10_Wiki 756→750 files(.md+6). KOSPI D-DAY T-14m: 8,000선 방어 vs 패닉셀. 나머지 서비스 5개 HTTP 200✅. Tech Scavenger 3회 0건 신규. 변경: 4건 (01_지식/Hermes-Daily-Log.md, 02-Knowledge/Hermes-Daily-Log.md, 00-Home.md, wiki_update_log.md). |

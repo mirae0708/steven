@@ -71,8 +71,18 @@
 - [[03_경제/04_비즈니스_사업분석/99_시뮬레이션리포트|📊 시뮬레이션 리포트 (낙관적/보수적)]]
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
-|||## 최근 업데이트
-|- **[Hermes]** 📝 **Knowledge Cron 20:46 — 6/6(토) Weekend 스냅샷: KOSPI 8,160🔴🔴 대폭락! 6/5 -5.54%!!! 환율 1,558🛑 연중신고! KOSDAQ 1,000선 위기! WTI $90.54 위협! Swap 1.0Gi🟡** (2026-06-06 20:46 KST)
+||||## 최근 업데이트
+||- **[Hermes]** 📝 **Knowledge Cron 08:46 — 6/8(월) Pre-Market Opening D-DAY T-14m! Gateway DOWN⚠️, Swap 410MiB🟡, hermes-mcp 세션 소실** (2026-06-08 08:46 KST)
+||  - **🔴 D-DAY OPEN — 6/5 Black Friday(-5.54%) 후 첫 거래일! KOSPI 8,000선 방어 전쟁 시작!**
+||  - **System**: Uptime 2d8h38m 🟢, Swap **410MiB 🟡** (04:46→08:46 -134MiB — Gateway DOWN 영향), Mem 54% 🟡, C: **83%** 🟡 (80Gi), tmux **6개** ⚠️ (hermes-mcp 소실)
+||  - **Gateway 8642: ❌ DOWN (HTTP 000)** — Telegram-only 프로세스 04:46~08:46 사이 종료. 텔레그램 봇 기능 중단!
+||  - **Trinity**: CowAgent✅ MetaClaw✅ open-design✅ — 3개 모두 12h+ 정상
+||  - **나머지 서비스**: Open WebUI(3000)·가상오피스(8000)·n8n(8082)·Hub(8650) 전원 HTTP 200 ✅
+||  - **Tech Scavenger**: 오늘 3회 실행 0건 신규 (캐시 최신)
+||  - **문화×경제 9건 신규**: 현대글로비스 코리아 물류·K-뷰티 콜드체인·BTS 컴백 5.3B·K-Food 80B 글로벌·K-Pop 팬덤 커머스·K-콘텐츠 수출
+||  - **10_Wiki**: 750→756 파일 (6건 MCP 멀티검색 + 문화×경제 콘텐츠)
+||  - **전망**: KOSPI 8,160 대비 8,000선 방어 vs 패닉셀. KOSDAQ 1,000선 위기. Gateway 복구+WSL 재부팅(장 종료 후) 필요.
+||- **[Hermes]** 📝 **Knowledge Cron 20:46 — 6/6(토) Weekend 스냅샷: KOSPI 8,160🔴🔴 대폭락! 6/5 -5.54%!!!
 |  - **System**: Uptime 1d4h45m 🟢, Swap **1.0Gi 🟡** (재축적 가속!), Mem 39% 🟢, C: **82%** 🟢 (87Gi), tmux **6개** ✅, Gateway 243MB ✅ (20:40 `--replace` 재시작)
 |  - **Trinity**: CowAgent(9899) ✅ MetaClaw(30000) ✅ open-design(17456) ✅ — 3개 모두 정상
 |  - **Open WebUI**: port 3000 정상 운용 중 🟢

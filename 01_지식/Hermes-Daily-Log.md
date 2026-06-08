@@ -2000,3 +2000,65 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 
 *Recorded by Hermes Knowledge Cron on 2026-06-08 04:46 KST — Pre-Market Quick Check: Swap 544MiB 🟡 가속 증가, KOSPI D-DAY T-4h 14m*
 
+
+
+## 🧬 Hermes Knowledge Cron — 2026-06-08 (Mon) 08:46 KST — Pre-Market Opening Snapshot (D-DAY T-14m)
+
+### 📋 시스템 현황 — 08:46 KST (장 오픈 T-14분!)
+
+| 항목 | 상태 |
+|:-----|:------|
+| WSL Uptime | **2d 8h 38m** (6/5 22:08 이후 재부팅 없음) |
+| tmux 세션 | **6개** (hermes-mcp 세션 사라짐 ⚠️ — 04:46에는 7개였음) |
+| Trinity | ✅ 전원 정상 (cowagent·metaclaw·opendesign 모두 6/7 20:35 생성, 12h+ 정상) |
+| Gateway (port 8642) | ❌ **HTTP 000 — Telegram-only 다운!** (04:46에는 420MB 정상) |
+| Open WebUI (3000) | ✅ HTTP 200 |
+| 가상오피스 (8000) | ✅ HTTP 200 |
+| n8n (8082) | ✅ HTTP 200 |
+| Hermes Hub (8650) | ✅ HTTP 200 |
+| Memory | **4.1Gi / 7.6Gi (54%)** 🟡 |
+| **Swap** | **410MiB 🟡** (04:46 544MiB→08:46 410MiB, **-134MiB/4h 감소**!) |
+| C: Drive | 83% (80Gi 여유) 🟡 |
+| Load Avg | 0.29 / 0.22 / 0.24 🟢 |
+| 10_Wiki 저장소 | 756 .md 파일 |
+
+### 📋 모니터링 포인트
+
+| 항목 | 변화 | 비고 |
+|:-----|:----:|:------|
+| Swap | 544MiB→**410MiB** (-134MiB/4h) | **반전!** 가속증가에서 감소로 전환. Gateway 다운(420MB RSS 해제)으로 인한 일시적 Swap 해소로 추정. Gateway 재시작 시 500MiB+ 복귀 예상. |
+| Gateway | **420MB→DOWN (HTTP 000)** | Telegram-only 프로세스가 04:46~08:46 사이 종료됨. RSS 420MB가 Swap에 반영된 것으로 보임. |
+| tmux | 7→6 | **hermes-mcp 세션 소실** — 6/7 20:35 생성되었으나 08:46 기준 사라짐. Gateway 다운과 연관 가능성. |
+| Memory | 51%→54% (+3%p) | 정상 범위 내 미세 증가 |
+| 10_Wiki | 750→756 | 6건의 MCP 멀티검색 결과 + 9건의 문화×경제 콘텐츠 신규 추가 (6/7~6/8) |
+
+### ⏱ 타임라인 (04:46 → 08:46)
+
+| 시간 (KST) | 이벤트 |
+|:-----------|:--------|
+| 04:46 | 📝 Pre-Market Quick Check 기록 (Swap 544MiB, Gateway 420MB) |
+| 06:20 | 🔄 Tech Scavenger — arXiv 0건 신규 |
+| 07:20 | 🔄 Tech Scavenger — GitHub+arXiv 총 0건 신규 |
+| 07:40 | 🧠 Brain Sync Auto-Scan (마지막) |
+| 08:20 | 🔄 Tech Scavenger — 전원 0건 신규 (중복 캐시 정상) |
+| ~08:xx | ⚠️ **Gateway (8642) 프로세스 종료 + hermes-mcp tmux 세션 소실** |
+| 08:46 | 📝 Pre-Market Opening 스냅샷 기록 (T-14m) |
+
+### 🔑 핵심 포인트 (D-DAY T-14분)
+
+1. **🔴 6/5 Black Friday (-5.54%) 후 첫 거래일 — 09:00 KST 오픈 대기** — KOSPI 8,160 대비 8,000선 방어가 가장 중요한 관전 포인트. KOSDAQ 1,002는 1,000선 사수 위기. VKOSPI 74.26 (5/29 기준)은 역대 최고 변동성 구간.
+2. **🟡 Swap 410MiB — Gateway 다운으로 인한 감소** — 04:46 544MiB→08:46 410MiB (-134MiB/4h)는 긍정적 신호가 아님. Gateway(8642) Telegram-only 프로세스가 420MB RSS를 차지하다 종료되면서 해당 메모리가 Swap에서 해제된 것으로 추정. Gateway 재시작 시 500MiB+ 복귀 예상.
+3. **⚠️ Gateway 8642 DOWN + hermes-mcp 세션 소실** — 04:46에는 정상(420MB RSS)이었으나 08:46 기준 HTTP 000. 텔레그램 봇 기능 중단 상태. hermes-mcp tmux 세션도 사라짐. Gateway watchdog 복구 필요.
+4. **🟢 나머지 5개 서비스 전원 HTTP 200** — Open WebUI, 가상오피스, n8n, Hermes Hub, Trinity 전원 정상.
+5. **🟢 Trinity Auto-Heal** — 04:45 auto-heal 이후 08:46까지 3개 모두 정상 유지 중.
+6. **🟢 Tech Scavenger** — 오늘 3회 실행 모두 0건 신규 = 캐시 최신 상태. 중복 제거 정상.
+7. **📈 문화×경제 시너지 9건 신규 문서 (6/7~6/8)** — 현대글로비스 코리아 물류, K-뷰티 콜드체인, BTS 컴백 투어 5.3B, K-Food 80B 산업, K-Pop 팬덤 커머스 등.
+
+### 📊 전망
+
+- **09:00 KST 오픈**: KOSPI 8,160 대비 8,000선 방어 여부가 첫 시간 내 결정. 6/5 -5.54%의 후폭풍으로 장 초반 변동성 극대 예상. VKOSPI 74.26 수준.
+- **Gateway 복구**: 장 중 Gateway 재시작 필요. 텔레그램 봇 기능 복원 + hermes-mcp 세션 재생성.
+- **Swap 전망**: Gateway 재시작 시 Swap 500~600MiB 복귀 예상. 장 종료 후 WSL 재부팅 계획 유지.
+- **다음 기록**: 09:30 KST 장 초반 스냅샷 (첫 30분) 또는 15:30 EOD Confirmed Close.
+
+*Recorded by Hermes Knowledge Cron on 2026-06-08 08:46 KST — Pre-Market Opening: D-DAY T-14m! Gateway DOWN⚠️, Swap 410MiB🟡, hermes-mcp 소실*
