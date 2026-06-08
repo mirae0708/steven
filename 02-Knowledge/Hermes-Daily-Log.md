@@ -1966,3 +1966,38 @@ Swap 증가율이 4배 급가속. 08:00 KST 예상: ~700MiB. 재부팅 시급 �
 - **09:00 Open**: 6/5 -5.54% 후폭풍. 8,000선 사수 관건. KOSDAQ 1,000선 위기.
 - **Gateway 복구 필요** (텔레그램 기능 + hermes-mcp 세션).
 - **Swap**: Gateway 재시작 후 500MiB+ 복귀 예상. 장 종료 후 WSL 재부팅 권장.
+
+
+---
+
+## 12:45 KST Mid-Session Crash Snapshot
+
+### Market — Real-time (T+3h45m)
+
+| Item | Value | Change | Status |
+|:-----|:-----:|:------:|:------:|
+| **KOSPI** | **7,779.76** | **-4.67%** (8,160→7,779) | 🔴🔴 **8,000선 붕괴! 연속 폭락** |
+| **KOSDAQ** | **940.02** | **-6.23%** (1,002→940) | 🔴🔴🔴 **1,000선 붕괴! 패닉셀** |
+| USD/KRW | 1,549.02 | -0.63% | 🟢 환율 안정 |
+| WTI | $93.50 | +3.27% | 🔴 원자재 반등 |
+
+### System
+
+- **Swap 796MiB 🟡🔺** — 08:46 410MiB→12:45 796MiB (+386MiB, +94% 급증!)
+- **Gateway 8642 DOWN 지속** (~4h), PID alive 525MB RSS
+- **Memory** 4.1Gi/7.6Gi (54%), **tmux** 6개
+- **10_Wiki 775** files (+19 since 08:46)
+
+### Key Events
+
+1. 🔴🔴🔴 **KOSPI 8,000선 붕괴!** — Black Friday(-5.54%) 이어 -4.67% 추가 폭락. 2일 누적 -9.95%.
+2. 🔴🔴🔴 **KOSDAQ 1,000선 완전 붕괴** — 940(-6.23%). 패닉셀 진행 중.
+3. 🟡🔺 **Swap 796MiB** — 08:46 예측(500~600MiB) 상회. Gateway 525MB RSS 주 원인.
+4. ⚠️ **Gateway 8642 DOWN 4h+** — 텔레그램 봇 중단. 프로세스만 생존.
+
+### Outlook
+
+- **KOSPI 7,500선 사수 vs 7,000선 하향**: 2020.3 코로나 이후 최대 낙폭. VKOSPI 폭등.
+- **Swap**: EOD 재부팅이 유일한 해결책. Gateway RSS 정상화 필요.
+- **다음 기록**: 15:30 EOD Confirmed Close.
+
