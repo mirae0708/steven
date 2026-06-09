@@ -186,7 +186,7 @@ Swap이 **99MiB(20:46) → 334MiB(00:46)** (+235MiB, +237%) 증가. 4시간 만�
 | **Loadavg** | 🟢 | 0.25 — 매우 양호 |
 | **C: 드라이브** | 🔴 | **83%** (79Gi 여유) — 지속적 주의 필요 |
 | **WSL Disk** | 🟢 | 4% (919Gi 여유) |
-| **Gateway** | 🟢 | 정상 (port 8642) |
+| **Gateway** | 🟢 | 정상 (PID 1196684, 421MB RSS) — Telegram-only mode [corrected by Brain Sync 14:02: port 8642는 Telegram-only 정책상 미사용(api_server.enabled=false), Gateway 프로세스는 정상] |
 | **tmux 세션** | 🟢 | 6개 — 전원 정상 (hermes/hermes-mcp/cowagent/jongdari/metaclaw/opendesign) |
 
 ### 📊 금일 이벤트 타임라인 (00:00→08:45 KST)
