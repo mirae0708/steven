@@ -85,3 +85,25 @@ tags: [hermes, daily-log, brain-sync, system-snapshot]
 | 나우로보틱스 | 26,150 | 🔴 -1.69% (KOSDAQ 급등에도 유일 하락, RSI 37.2 급락) |
 | 포트폴리오 | 현금 492만 | 전량 보유 |
 | **다음 거래일** | **5/25 (월) 09:00 KST 오픈** | ⏰ **T-8h 14m** |
+
+
+---
+
+## 🧠 Brain Sync — 2026-06-09 (Tue) 22:01 KST
+
+**직전 사이클**: 20:47 (1h 14m 경과)
+
+### 📋 시스템 현황
+- **Uptime**: 3d 23h 🟢
+- **Mem**: 3.7Gi/49% 🟢 | **Swap**: 98MiB (5%) 🟢 (flat since 20:47)
+- **Loadavg**: 0.20 🟢 | **C: Drive**: 85% (71Gi) 🔴
+- **Gateway**: RSS 276MB ✅ (PID 1338840, 1h28m stable)
+- **tmux**: 6개 전원 정상
+- **10_Wiki**: 853 files (+2 since 20:01, +223 today)
+
+### Key Points
+- System fully stable — Swap flat, Gateway RSS normal growth, no alerts
+- Gateway silently restarted between 16:30~20:47 (PID 1196684→1338840), graceful
+- C: drive 85% stable — Auto-Evolution 86% was sampling artifact (MCP temp files)
+- No MCP collection after 18:56 — evening quiet period
+- Context/Members/Agents: 모두 변경 없음

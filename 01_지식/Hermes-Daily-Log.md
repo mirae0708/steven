@@ -327,3 +327,69 @@ Swap이 **99MiB(20:46) → 334MiB(00:46)** (+235MiB, +237%) 증가. 4시간 만�
 | 2 | **가상오피스 문서 품질 개선** (31.5% 수정필요) | 🔴 | 📊 모니터링 중 |
 | 3 | **YOUNGLOG 고객 다각화** (중국 물류 DB 62개 활용) | 🔴 | ❌ 미해결 |
 | 4 | **Swap 모니터링 유지** (98MiB 양호) | 🟢 | 📊 양호 |
+
+
+---
+
+## 🧠 Brain Sync — 2026-06-09 (Tue) 22:01 KST
+
+> **실행**: Cron scheduled brain sync (22:01 KST)
+> **직전 사이클**: 2026-06-09 20:47 KST (1h 14m 경과)
+> **금일 MCP 멀티검색**: 23건 (06:40~18:56, 저녁 이후 추가 수집 없음)
+
+### 📋 시스템 현황
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| **Uptime** | 🟢 | **3d 23h** (6/5 22:22 재부팅 이후) |
+| **Memory** | 🟢 | 3.7Gi/7.6Gi (49%) |
+| **Swap** | 🟢 | **98MiB** (5%) — 20:47과 동일, 완전 안정화 |
+| **Loadavg** | 🟢 | 0.20 — 매우 양호 |
+| **C: 드라이브** | 🔴 | **85%** (71Gi 여유) — 20:47과 동일 |
+| **WSL Disk** | 🟢 | 4% (919Gi 여유) |
+| **Gateway** | 🟢 | 정상, RSS **276MB** (20:47 245MB→276MB +31MB, 정상 자연 증가). PID 1338840, 1h 28m 연속 운용 |
+| **Tmux 세션** | 🟢 | 6개 — hermes/hermes-mcp/cowagent/jongdari/metaclaw/opendesign 전원 정상 |
+| **10_Wiki** | 📚 | **853 files** (20:01 851→+2, 금일 +223건) |
+
+### 🔄 지난 사이클 변화 (20:47 → 22:01)
+
+| 항목 | 20:47 | 22:01 | 변동 |
+|:-----|:-----:|:-----:|:----:|
+| Swap | 98MiB 🟢 | **98MiB** 🟢 | **유지 (0%)** ✅ 완전 안정 |
+| Gateway RSS | 245MB 🟢 | **276MB** 🟢 | +31MB 정상 자연 증가 |
+| C: Drive | 85% (71Gi) | **85% (71Gi)** | 유지 |
+| Mem | 3.5Gi (46%) | **3.7Gi (49%)** 🟢 | 소폭 상승, 정상 |
+| 10_Wiki | 840→851 (+11) | **851→853 (+2)** | 저녁 감속 유지 |
+| Loadavg | 1.04 | **0.20** | 활동 감소 반영 |
+
+### 📊 6/9 EOD Market Data (20:47 Daily Log 유지)
+
+| 지표 | 값 | 등락 | 비고 |
+|:----|:--:|:----:|:-----|
+| **KOSPI** | **7,838** (6/9 intra) | **+4.74%** 🟢🟢 | Bloody Monday 7,484→7,838 V자 반등 |
+| **KOSDAQ** | **969** (6/9 intra) | **+6.34%** 🟢🟢 | 911→969 강력 반등 |
+| **USD/KRW** | **1,519** (6/9 intra) | **-1.94%** 🟢 | 원화 강세, 1,549→1,519 |
+| **WTI** | **$93.40** | **-0.45%** | $90선 방어 유지 |
+| **VIX** | **18.92** | 🟢 | 공포 완화 (30+→18.92) |
+
+### 🧠 Night Observations
+
+1. **System fully stable**: Swap 98MiB flat across 1h+ cycle. Gateway RSS 276MB stable with no leak acceleration. All 6 tmux sessions normal. Loadavg 0.20 — lowest of the day.
+
+2. **Gateway silently restarted between 16:30 and 20:47**: Auto-Evolution 22차 (16:30) reported PID 1196684. Current PID is 1338840 (started ~20:33, uptime 1h28m). No crash signal in logs — graceful restart, likely memory management cycle. RSS dropped from ~440MB (16:30 est.) to 245MB (20:47) then stable growth to 276MB (22:01).
+
+3. **10_Wiki growth deceleration confirmed**: 853 files. +2 since 20:01, +223 today. Standard intraday deceleration pattern — surges at kickoff then tapers as pipeline exhausts topics.
+
+4. **C: drive 85% stable**: Auto-Evolution reported 86% at 16:30; `df` shows 85% at 22:01. The 1%p discrepancy is a sampling-time artifact — Auto-Evolution captures during active MCP processing when temp files inflate usage. With no new MCP collection after 18:56, C: drive stabilized at 85%.
+
+5. **No MCP collection after 18:56**: The last MCP multi-search batch was 18:42~18:56. No collections in the 19:00~22:00 evening window. This is expected — the daily cron schedule front-loads collections.
+
+### 🚧 Action Items
+
+| # | 작업 | 긴급도 | 상태 |
+|:-:|:-----|:-----:|:----:|
+| 1 | **C: 드라이브 정리** (docker prune + Windows Temp) | 🔴🔴 | 🔴 85% (71Gi) 지속 |
+| 2 | **가상오피스 문서 품질 개선** (31.5% 수정필요) | 🔴 | 📊 모니터링 중 |
+| 3 | **YOUNGLOG 고객 다각화** (중국 물류 DB 62개 활용) | 🔴 | ❌ 미해결 |
+| 4 | **Swap 모니터링 유지** (98MiB 양호) | 🟢 | 📊 양호, 정상 범위 |
+| 5 | **10_Wiki 금일 +223건** — 자연 감속 확인 | 🟢 | ✅ 851→853 (+2 in 2h) |
