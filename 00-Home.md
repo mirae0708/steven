@@ -42,10 +42,10 @@
 - [[01_지식/Tech Stack]]
 
 ## 📊 LLM Wiki 주식 분석 시스템
-|## 📈 종목
-|- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **5,840원** 🔴 **-4.89%** (6/8 confirmed close, 6,000선 붕괴! 연중 신저가! KOSPI 8,000·KOSDAQ 1,000 동반 붕괴)
-|- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **12,680원** 🔴 **-6.35%** (6/8 confirmed close, 13,000선 붕괴! 연중 신저가! 6/1 저점 13,220 이탈!)
-|- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **18,790원** 🔴 **-6.52%** (6/8 confirmed close, 연중 신저가! 19,000선 붕괴! KOSDAQ 1,000선 붕괴 속 최대 피해)
+## 📈 종목
+||- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **5,960원** 🟢 **+2.06%** (6/9 intraday, 6,000선 재탈환 시도! KOSPI 7,838 +4.74% 반등 동반)
+||- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **12,490원** 🔴 **-1.50%** (6/9 intraday, KOSDAQ +6.34% 급등에도 역행 — 주의 필요)
+||- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **18,790원** ❓ (6/8 confirmed close, 6/9 intraday 데이터 미확인)
 
 ### 🧠 최근 Brain Sync (18:00)
 - [[10_Wiki/Artificial_Intelligence/AI_Agents/ATLAS-Agentic-or-Latent-Visual-Reasoning-One-Word-is-Enoug_20260517_1800|ATLAS: Agentic Visual Reasoning]]
@@ -60,7 +60,7 @@
 - [[wiki/sectors/로보틱스|🤖 로보틱스]]
 
 ### 💵 거시경제
-| [[wiki/macros/KOSPI|📊 KOSPI (7,811)]] 🔴 **-4.29%** (6/8 close, 8,000선 붕괴! 5거래일 -11.25%! 6/5→6/8 연속 대폭락) | [[wiki/macros/KOSDAQ|📈 KOSDAQ (941)]] 🔴 **-6.15%** (6/8 close, 1,000선·950선 붕괴! 11거래일 -18.96% 폭락) | [[wiki/macros/환율|💵 환율 (1,549원)]] 🟢 **-0.64%** (6/8 close, 주말 고점 1,559에서 소폭 진정, 1,550선 재시험) | [[wiki/macros/국제유가WTI|🛢️ WTI ($93.82)]] 🟢 **+3.62%** (6/7 close, $90선 회복 반등! 6/5 저점에서 기술적 반등 성공) |
+| [[wiki/macros/KOSPI|📊 KOSPI (7,838)]] 🟢 **+4.74%** 🔥 (6/9 intraday 12:30, Bloody Monday 후 강력 반등! 7,484→7,838 +354p) | [[wiki/macros/KOSDAQ|📈 KOSDAQ (969)]] 🟢🟢 **+6.34%** (6/9 intraday 12:30, 911→969 +58p 급반등! 1,000선 회복 시도) | [[wiki/macros/환율|💵 환율 (1,519원)]] 🟢 **-1.94%** (6/9 intraday, 1,549→1,519 원화 강세! VIX 18.92로 공포 완화) | [[wiki/macros/국제유가WTI|🛢️ WTI ($93.40)]] 🔴 **-0.45%** (6/9 intraday, 소폭 조정) |
 
 ### 🧠 시스템
 - [[99_System/GEMINI.md|🧠 시스템 스키마 (GEMINI.md)]]
@@ -72,7 +72,14 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ||||## 최근 업데이트
-|||||- **[Hermes]** 🧠 **Brain Sync 00:46 — 6/9(화) 00:46 KST: Uptime 3d🟢, Swap 334MiB🟡, Mem 47%🟢, 6/8 EOD Bloody Monday 데이터 확정** (2026-06-09 00:46 KST)
+|||||||- **[Hermes]** 🧠 **Midday Update 12:30 — 6/9(화) Intraday: KOSPI +4.74%·KOSDAQ +6.34% 강력 반등! Bloody Monday 후 V자 회복** (2026-06-09 12:30 KST)
+||||||||  - **🟢 KOSPI 7,838 (+4.74%): 7,484→7,838 +354p** — 삼성전자 +4.73% 주도. 개장 7,598 저점 후 V자 반등
+||||||||  - **🟢 KOSDAQ 969 (+6.34%): 911→969 +58p** — 1,000선 회복 시도. KOSPI보다 강한 반등세
+||||||||  - **🟢 USD/KRW 1,519 (-1.94%)** — 원화 급강세! 전일 1,549에서 1,519로 하락. 외국인 수급 개선 기대
+||||||||  - **🟢 VIX 18.92 (-12.04%)** — 공포지수 급락, 시장 안정화 신호
+||||||||  - **📊 포트폴리오**: 삼성부광 5,960(+2.06%) 6,000선 재탈환 시도 / 에이치엘 12,490(-1.50%) KOSDAQ 역행 주의
+||||||||  - **📝 05_시장현황_20260609.md 업데이트** — Pre-Market→Intraday 반등 데이터 추가
+||||||- **[Hermes]** 🧠 **Brain Sync 00:46 — 6/9(화) 00:46 KST: Uptime 3d🟢, Swap 334MiB🟡, Mem 47%🟢, 6/8 EOD Bloody Monday 데이터 확정** (2026-06-09 00:46 KST)
 |||||  - **🟢 System**: Uptime 3d 1m 🟢, Mem 3.6Gi/47% 🟢, Load 0.44 🟢, C: 83% (79Gi) 🟡, tmux 6개 ✅
 |||||  - **🟡 Swap 334MiB** — 20:46 99MiB에서 4h만에 +235MiB 재축적. 300~500MiB가 정상 범위로 추정
 |||||  - **📊 6/8 EOD Bloody Monday 확정**: KOSPI 7,811(-4.29%)·KOSDAQ 941(-6.15%)·USD/KRW 1,549(+1.04%)·WTI $93.82(+3.62%)

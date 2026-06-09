@@ -1,10 +1,28 @@
 ---
 created: 2026-06-09 00:46
-updated: 2026-06-09 00:46
-tags: [knowledge-tip, mcp, virtual-office, swap-pattern, c-drive, bloody-monday]
+updated: 2026-06-09 12:30
+tags: [knowledge-tip, mcp, virtual-office, swap-pattern, c-drive, bloody-monday, intraday-rebound, github-trends, k-battery]
 ---
 
 # 🧠 Knowledge Tips — 2026-06-09 수집
+
+## 0. 🚨 긴급 — KOSPI +4.74%·KOSDAQ +6.34% Bloody Monday 후 강력 반등 (Intraday 12:30 KST)
+
+**관찰 시점**: 2026-06-09 12:30 KST 장중
+**발견 내용**:
+- **KOSPI 7,838 (+4.74%): 7,484→7,838 +354p** — 삼성전자 +4.73% 주도. 개장 7,598 저점 후 V자 반등
+- **KOSDAQ 969 (+6.34%): 911→969 +58p** — KOSPI보다 강한 반등세, 1,000선 회복 시도
+- **USD/KRW 1,519 (-1.94%)** — 전일 1,549→1,519 원화 급강세. 외국인 수급 개선 기대
+- **VIX 18.92 (-12.04%)** — 전일 21.51→18.92 급락, 시장 공포 완화
+- **삼성전자 309,500원 (+4.73%)** — 반도체 대형주 반등 주도
+
+**의미**: Black Monday(6/8, KOSPI -8.29%) 후 하루 만에 강한 기술적 반등. 장초반 7,598(-1.4%) 패닉 셀링 후 V자 회복. 6/10~11 미국 CPI 발표가 추가 방향성 결정.
+
+**포트폴리오 영향**:
+- 삼성부광 5,960(+2.06%) — 6,000선 재탈환 시도
+- 에이치엘사이언스 12,490(-1.50%) — KOSDAQ 급등에도 역행, 주의 필요
+
+---
 
 ## 1. MCP 생태계 표준화 가속 확인
 
@@ -76,3 +94,34 @@ tags: [knowledge-tip, mcp, virtual-office, swap-pattern, c-drive, bloody-monday]
   - `docker system prune -a --volumes` (C: 드라이브 Docker 이미지 정리)
   - Windows Temp 정리 (`%TEMP%`, `C:\Windows\Temp`)
   - WSL `/tmp/` 내 불필요 파일 정리
+
+---
+
+## 6. GitHub 오픈소스 동향 — 6/9 MCP 멀티검색 수집
+
+**관찰 시점**: 2026-06-09 10:41 MCP 멀티검색 (K-배터리/환율 2건)
+
+**주목할 프로젝트**:
+| 프로젝트 | ⭐ | 설명 |
+|:---------|:-:|:------|
+| **AstrBotDevs/AstrBot** | ⭐34,188 | AI Agent Assistant & 통합 개발 프레임워크 |
+| **cheshire-cat-ai/core** | ⭐3,042 | AI agent 마이크로서비스 |
+| **ArcadeAI/arcade-mcp** | ⭐915 | MCP Server Framework & Tool Development 라이브러리 |
+| **heurist-network/heurist-agent-framework** | ⭐817 | 멀티인터페이스 AI 에이전트 프레임워크 |
+| **SalesforceAIResearch/MCP-Universe** | ⭐588 | 강화학습 트레이닝용 MCP 통합 프레임워크 |
+
+**관찰**: MCP 생태계 관련 GitHub 프로젝트가 지속 성장 중. ArcadeAI/arcade-mcp는 MCP 서버 개발 전용 라이브러리로 실용적. Salesforce의 MCP-Universe는 RL 트레이닝에 MCP 활용 — 새로운 응용 분야.
+
+---
+
+## 7. K-배터리·전력전자 — AI 발 ESS 공급 부족
+
+**관찰 시점**: 2026-06-09 10:41 MCP 멀티검색
+
+**발견 내용**:
+- AI 데이터센터로 인한 ESS(에너지저장장치) 공급 부족 현상 가속화
+- 차세대 900V/1300V 고전압 SiC 전력반도체 진화
+- 삼성SDI 1분기 글로벌 ESS 시장 78%↑ (주가 -11.09% 하락 — 역설적)
+- 유럽 전력망 인프라 교체 수요 극대 — 초고압 변압기 및 배전 시장 기회
+
+**시사점**: AI 인프라 확장이 단순히 반도체·서버 뿐 아니라 전력 인프라 전반으로 수요 확산 중. ESS·전력반도체·변압기 등 관련 섹터 주목 필요.
