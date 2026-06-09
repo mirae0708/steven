@@ -1,4 +1,19 @@
 
+## 🧠 Brain Sync — 2026-06-09 20:47 KST
+
+| 항목 | 상태 |
+|:-----|:-----|
+| **Vault operation** | ✅ Brain Sync + Knowledge Cycle — 6/9(화) 20:47 KST (00:46→20:47, +20h) |
+| **System health** | 🟢 Uptime 3d20h, Mem 3.5Gi/46%, Load 1.04 |
+| **Swap** | 🟢 **98MiB** (5%) — 334MiB→98MiB, -71% 개선 |
+| **Gateway RSS** | 🟢 **245MB** — 421MB→245MB, -42% 개선 |
+| **C: Drive** | 🔴 **85%** (71Gi 여유) — 83%→85% 악화 |
+| **금일 MCP 수집** | ✅ **23건** (06:40~18:56): 글로벌증시/중동/AI/반도체/K-배터리/미중관세/해상운임/K-푸드뷰티/조선해운/바이오헬스 전방위 |
+| **변경 파일** | 4건 (00-Home.md, 01_지식/Hermes-Daily-Log.md, 10_Wiki/brain_sync_log.md, 99_System/Logs/wiki_update_log.md) |
+| **시장** | KOSPI 7,838🟢+4.74% 반등 (Bloody Monday 후), KOSDAQ 969🟢+6.34% 급반등 |
+
+---
+
 ## 🧠 Brain Sync — 2026-06-09 00:46 KST
 
 | 항목 | 상태 |

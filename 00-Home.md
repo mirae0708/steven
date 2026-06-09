@@ -42,7 +42,9 @@
 - [[01_지식/Tech Stack]]
 
 ## 📊 LLM Wiki 주식 분석 시스템
-## 📈 종목
+### 🧠 최근 Brain Sync (20:47)
+- [[10_Wiki/brain_sync_log.md|🧠 Brain Sync 20:47 — Swap 98MiB🟢, Gateway RSS 245MB✅, KOSPI 반등🔥, MCP 23건📚]]
+### 📈 종목
 ||- [[wiki/stocks/삼성부광|📈 삼성부광 (014950.KQ)]] — **5,960원** 🟢 **+2.06%** (6/9 intraday, 6,000선 재탈환 시도! KOSPI 7,838 +4.74% 반등 동반)
 ||- [[wiki/stocks/에이치엘사이언스|📈 에이치엘사이언스 (473980.KQ)]] — **12,490원** 🔴 **-1.50%** (6/9 intraday, KOSDAQ +6.34% 급등에도 역행 — 주의 필요)
 ||- [[wiki/stocks/나우로보틱스|📈 나우로보틱스 (459510.KQ)]] — **18,790원** ❓ (6/8 confirmed close, 6/9 intraday 데이터 미확인)
