@@ -1,5 +1,20 @@
 
 
+## 🧠 Brain Sync -- 2026-06-10 12:46 KST
+
+| 항목 | 상태 |
+|:-----|:-----|
+| **Vault operation** | ✅ Quick Check -- 6/10(수) 12:46 KST (12:00->12:46, +46m) -- 시스템 안정, 신규 논문 4건 📚 |
+| **System health** | 🟢 Uptime 11h43m(재부팅 01:03), Mem 5.0Gi/66%, Load 0.41 |
+| **Swap** | 🟢 **30MiB** (1.5%) -- 12:00 5.8MiB→30MiB 소폭 축적 |
+| **Gateway RSS** | 🟢 **796MB** (Open WebUI 3000) |
+| **C: Drive** | 🟡 **83%** (82Gi 여유) -- 유지 |
+| **시장** | 🔴🔴 **KOSPI 7,796(-3.71%):** 8,000선 붕괴 유지, EOD 15:30 확인 대기 |
+| **10_Wiki** | 🟢 **889 files** (12:00 885->+4 신규 arXiv 논문) |
+| **변경 파일** | 2건 (01_지식/Hermes-Daily-Log.md, 10_Wiki/brain_sync_log.md) |
+
+---
+
 ## 🧠 Brain Sync -- 2026-06-10 12:00 KST
 
 | 항목 | 상태 |
