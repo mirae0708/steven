@@ -74,7 +74,17 @@
 - [[03_경제/04_비즈니스_사업분석/99_워크플로우_엔진_선택|⚙️ 워크플로우 엔진 선택 분석]]
 
 ||||||## 최근 업데이트
-||||||||||- **[Hermes]** 🧠 **EOD 16:01 — KOSPI 7,730(-4.52%)🔴🔴 7,500 방어! SWAP EMERGENCY 1.4Gi(68%)🔥🔥, 10_Wiki 901📚** (2026-06-10 16:01 KST)
+||||||||- **[Hermes]** 🧠 **Brain Sync 16:50 — SWAP 87%(1.78Gi/2Gi)🔴🔴⚠️ 2Gi 한계 임박! 10_Wiki 900+📚, K-Food/조선 Enrichment** (2026-06-10 16:50 KST)
+  - **🔴🔴🔴 Swap 1,782MiB (87%)** — 16:01 1,411MiB→+371MiB/50m. 2Gi 한계 13% 잔여. 비선형 폭발 패턴 최초 관측
+  - **🟢 System**: Uptime 15h47m(재부팅 01:03), Mem 4.3Gi/57%, Load 0.35, tmux 6개 ✅
+  - **🟢 Gateway** 정상
+  - **📚 10_Wiki ~903+ files** (금일 +40건) — LLM/AI Agents/CV/RL/MLOps 분산 수집
+  - **🟡 C: 드라이브 83% (79Gi)** — 유지
+  - **🟢 KOSPI EOD 7,730(-4.52%)**: 7,500 방어. CPI 발표 결과 대기중
+  - **🍜 Mid-Day Enrichment**: K-Food $13.6B·K-Beauty $11.4B 수출, 조선 HD현대 $23.31B 목표, 바이오헬스 심층
+  - **📝 Context/Members/Agents**: 모두 변경 없음 (16:01 이후)
+  - **Watch**: 20:00 Evening Brain Sync, Swap OOM 리스크(~20분 내 2Gi full), CPI 발표(6/10~11)
+|||||||||- **[Hermes]** 🧠 **EOD 16:01 — KOSPI 7,730(-4.52%)🔴🔴 7,500 방어! SWAP EMERGENCY 1.4Gi(68%)🔥🔥, 10_Wiki 901📚** (2026-06-10 16:01 KST)
   - **🟢 System**: Uptime 15h🟢, Mem 53%🟡, Load 0.24🟢, C: 83%🟡, tmux 6개 ✅
   - **🔴🔴 Swap 1.4Gi (68%)** — 14:02 118MiB→1,411MiB (+1,293MiB/2h=~647MiB/h) 폭발! 2Gi 한계 임박
   - **🟢 Gateway** PID 86488, 415MB (08:36 이후 동일, 재시작 없음)

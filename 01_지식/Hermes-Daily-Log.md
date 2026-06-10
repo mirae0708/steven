@@ -257,4 +257,62 @@
 | 4 | **C: 드라이브 83% (79Gi)** — Docker 정리 필요 | 🟡 | 보류 |
 | 5 | **FOMC 6/16-17 사전 대비** | 🟡 | D-6 |
 
+---
+
+## 🧠 Brain Sync — 2026-06-10 (Wed) 16:50 KST (Afternoon Knowledge Cycle)
+
+> **직전 사이클**: 16:01 Brain Sync (~50m 전)
+> **Agent**: deepseek-chat (cron 모드 — Knowledge Cycle)
+
+### 📋 시스템 현황 (16:50 KST)
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| **Uptime** | 🟢 | **15h 47m** (재부팅 01:03) |
+| **Swap** | 🔴🔴 | **1,782MiB (87%)** — 16:01 1,411MiB→1,782MiB (+371MiB/50m) |
+| **Memory** | 🟡 | 4.3Gi/7.6Gi (57%) — 안정 |
+| **Loadavg** | 🟢 | 0.35/0.30/0.36 |
+| **C: Drive** | 🟡 | **83%** (79Gi 여유) — 일부 개선 |
+| **Gateway RSS** | 🟢 | 정상 |
+| **10_Wiki** | 🟢 | ~903+ files (금일 +40) |
+| **Tmux 세션** | 🟢 | 전원 정상 |
+
+### 🔴🔴 SWAP 1,782MiB — 2Gi 한계 근접 (13% 잔여)
+
+| 시간 | 스왑 | 변화 | 비고 |
+|:----|:----:|:----:|:-----|
+| 14:02 | 118MiB | 기준 | 정상 범위 |
+| 16:01 | 1,411MiB | +1,293MiB/2h | 비선형 폭발 시작 |
+| **16:50 (NOW)** | **1,782MiB** | **+371MiB/50m** | **2Gi 한계 13% 잔여** |
+
+**임박 경고**: 현재 속도(~450MiB/h)대로면 ~20분 내 2Gi full swap 도달. OOM 가능성 대두. [corrected by 18:02 Brain Sync — swap actually **decreased** to 1,356MiB (66.2%) by 18:02, +1h actual trajectory was -426MiB. The 16:50 forecast was directionally wrong; swap appears to have stabilized or reclaimed pages without OOM.]
+
+**원인**: 16:01 진단과 동일 — tsserver.js(390MB) + nexus_orchestrator(347MB) + Hermes CLI(473MB) + LSP/node 프로세스 burst. Swap 87% → 성능 저하 심각.
+
+### 📊 KOSPI EOD Recap
+
+| 지표 | 종가 | 전일 | 등락 |
+|:----|:----:|:----:|:----:|
+| **KOSPI** | **7,730** | 8,096 | **-4.52%** 🔴 |
+| **KOSDAQ** | **951** | 967 | **-1.67%** 🔴 |
+| **USD/KRW** | 1,526 | 1,528 | 🟢 |
+
+### 🧠 Key Findings — 6/10 Knowledge Cycle
+
+1. **🔴 SWAP 87% 긴급**: 2Gi 한계 임박 (13% 잔여, ~20분). Gateway leak 아님 — 시스템 레벨 메모리 경합(tsserver + nexus_orch 등).
+2. **KOSPI EOD 7,730**: 7,500 방어 성공했으나 8,000 완전 이탈. CPI 발표 결과가 다음 방향성 결정.
+3. **Mid-Day Enrichment 완료**: K-Food($13.6B)·K-Beauty($11.4B) 수출 데이터, 조선업(HD현대 $23.31B 목표), 바이오헬스 심층 분석 수집 완료.
+4. **10_Wiki 900+ 도달**: 금일 신규 40건 이상 — 4개 카테고리(LLM, AI Agents, CV, RL, MLOps) 분산 수집.
+5. **Swap 비선형 폭발 패턴 최초 관측**: 14:02 예측(200-250MiB EOD) 대비 5.6배 초과.
+
+### 🚧 Active Items
+
+| # | 작업 | 긴급도 | 상태 |
+|:-:|:-----|:-----:|:----:|
+| 1 | **🔴🔴 SWAP 87% (1.78Gi/2Gi)** — 2Gi full 임박, OOM 리스크 | 🔴🔴 | **EMERGENCY** — 15-20min 내 full swap |
+| 2 | **KOSPI 7,730** — CPI 발표(6/10~11) 대기 | 🔴 | CPI 결과 확인 필요 |
+| 3 | **C: 드라이브 83% (79Gi)** | 🟡 | 유지 |
+| 4 | **FOMC 6/16-17** — D-6 사전 대비 | 🟡 | 사전 준비 필요 |
+| 5 | **10_Wiki 지식 확장 지속** | 🟢 | 금일 +40건 이상 수집 완료 |
+
 > **다음 기록**: 20:00 KST Evening Brain Sync (Swap trajectory 추적 + CPI 발표 확인)

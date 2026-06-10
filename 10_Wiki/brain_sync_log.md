@@ -1,5 +1,19 @@
 
 
+## 🧠 Brain Sync -- 2026-06-10 16:50 KST
+
+| 항목 | 상태 |
+|:-----|:-----|
+| **Vault operation** | ✅ Afternoon Knowledge Cycle — 6/10(수) 16:50 KST (16:01->16:50, +49m) — SWAP 87% 긴급, K-Food/조선 Enrichment, 10_Wiki 900+ 📚 |
+| **System health** | 🟢 Uptime 15h47m(재부팅 01:03), Mem 4.3Gi/57%, Load 0.35 |
+| **Swap** | 🔴🔴 **1,782MiB (87%)** — 16:01 1,411MiB→+371MiB/50m, 2Gi 한계 임박 |
+| **C: Drive** | 🟡 **83%** (79Gi 여유) — 소폭 개선 |
+| **시장** | 🔴 KOSPI EOD **7,730(-4.52%):** 7,500 방어, 8,000 완전 이탈 |
+| **10_Wiki** | 🟢 **~903+ files** (금일 +40건) |
+| **변경 파일** | 3건 (01_지식/Hermes-Daily-Log.md, 10_Wiki/brain_sync_log.md, 00-Home.md) |
+
+---
+
 ## 🧠 Brain Sync -- 2026-06-10 12:46 KST
 
 | 항목 | 상태 |
