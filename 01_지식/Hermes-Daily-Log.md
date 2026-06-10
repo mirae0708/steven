@@ -386,3 +386,45 @@
 | 5 | **10_Wiki 확장 지속** — 금일 +43건 | 🟢 | 정상 |
 
 > **다음 기록**: 21:30 CPI 발표 후 다음 Brain Sync 또는 08:00 KST Pre-Market Brain Sync
+
+
+---
+
+## 🧠 Evening Check — 2026-06-10 (Wed) 20:46 KST (Knowledge Tips Update)
+
+> **직전 사이클**: 20:01 Brain Sync (~45m 전)
+> **Agent**: deepseek-chat (cron 모드 — Knowledge Writing)
+> **Boot**: 01:03 KST (19h 45m uptime — post-reboot fresh cycle)
+
+### 📋 시스템 현황 (20:46 KST)
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| **Uptime** | 🟢 | **19h 45m** (재부팅 01:03) |
+| **Swap** | 🟡 | **1,300MiB (63.5%)** — 20:01 1,356MiB→1,300MiB, -56MiB/45m 완만 하향 |
+| **Memory** | 🟡 | 4.4Gi/7.7Gi (57%) — 유지 |
+| **Loadavg** | 🟢 | 0.98/0.66/0.82 — 정상 |
+| **C: Drive** | 🟡 | **83%** (79Gi 여유) — 유지 |
+| **Gateway RSS** | 🟢 | PID 86488, 정상 (08:36 이후 12h+ 안정) |
+| **10_Wiki** | 🟢 | **906 files** (금일 +43건) |
+| **Tmux 세션** | 🟢 | 6개 전원 정상 |
+
+### ✅ 수행 작업
+
+1. **Knowledge-Tips-20260610.md 업데이트** → Sections 7-8 추가:
+   - 🚗 저녁 수직산업 확장 (K-자동차·게임·건설)
+   - 📊 저녁 Brain Sync Highlights (Swap 87%→66% 회복)
+   - 📰 CPI Preview (21:30 KST, 컨센서스 4.2%)
+
+2. **.hermes_last_check 갱신** → 2026-06-10 20:46 KST
+
+### 🚧 Active Items
+
+| # | 작업 | 긴급도 | 상태 |
+|:-:|:-----|:-----:|:----:|
+| 1 | **CPI 발표 (21:30 KST)** — 컨센서스 4.2% | 🔴🔴 | ~45m 후 발표 |
+| 2 | **SWAP 63.5% (1,300MiB)** — Plateau 안정 유지 | 🟡 | 모니터링 지속 |
+| 3 | **FOMC 6/16-17** — D-6 사전 대비 | 🟡 | 사전 준비 필요 |
+| 4 | **C: 드라이브 83% (79Gi)** | 🟡 | 유지 |
+
+> **다음 기록**: 21:30 CPI 발표 후 브리핑 또는 내일 08:00 KST Pre-Market Brain Sync
