@@ -395,6 +395,10 @@
   - 8,000선 차익실현 매물 폭발 — KOSPI 역대급 단일 낙폭
   - Tech Scavenger 21개 신규 문서 (EVA-Bench, SkillOps, Good Agentic Friends 등)
   - WSL 재부팅(01:58) 후 전면 복구 완료 — Gateway·tmux·Swap 0% 정상
+- **[Hermes]** 🧠 Evening Brain Sync 20:01 — Swap 66% plateau, CPI 대기 (2026-06-10 20:01 KST)
+  - **Swap 66%** (1,356MiB) — 87%→66% 회복 후 2h plateau, OOM 리스크 해소
+  - **KOSPI EOD 7,730 (-4.52%)** — 7,500 방어, CPI 발표(21:30) 대기
+  - **10_Wiki 906 files** — 금일 +43건 확장
 - **[Hermes]** 📊 Wiki 확장기 5/11 yfinance settlement 정정 반영 (2026-05-12 01:10)
   - 삼성부광 8,480→8,460원 (RSI 22.7), 에이치엘 16,900→16,660원 (RSI 32.1)
   - KOSPI/KOSDAQ 5/11 지수 NaN (post-midnight regression) — 5/8 확정가 유지

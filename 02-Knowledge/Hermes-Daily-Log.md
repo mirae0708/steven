@@ -172,3 +172,17 @@ tags: [hermes, daily-log, brain-sync, system-snapshot]
 **Active**: 🔴🔴 Swap 68% EMERGENCY / 🔴🔴 KOSPI CPI 리스크 / 🟡 C:83%, FOMC D-6
 
 > **Next**: 20:00 KST Evening Brain Sync
+
+
+## 🧠 Evening Brain Sync — 2026-06-10 (Wed) 20:01 KST
+
+**System**: Uptime 19h🟢, Swap **1,356MiB(66%)🔴**(Plateau 2h, OOM 위험 해소), Mem 4.4Gi🟡, Load 0.41🟢, C:83%🟡, tmux 6개✅
+**Gateway**: PID 86488, 449MB🟢 (17h 안정 — Telegram-only mode)
+**KOSPI EOD 7,730(-4.52%)🔴🔴**: 7,500 방어. 14:02 저점(7,590)→+140p 반등
+**KOSDAQ 951(-1.67%)🔴 / USD/KRW 1,522🟢 / WTI $87.96🟢**
+**CPI 발표 대기**: 21:30 KST (4.2% YoY 예상) — KOSPI 방향성 결정
+**10_Wiki**: 906 files (+5 since 16:01, +43 today)
+**Swap trajectory**: 87%→66% 회복→2h plateau. 안정화 중. 16:50 "~20min OOM" 예측은 방향성 오류로 판명 (이미 정정됨).
+**Active**: 🔴 Swap 66% Plateau / 🔴🔴 CPI 21:30 대기 / 🟡 C:83%, FOMC D-6
+
+> **Next**: 21:30 CPI 발표 후 다음 사이클
