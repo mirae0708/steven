@@ -118,3 +118,41 @@ tags: [hermes, daily-log, brain-sync, system-snapshot]
 
 📌 전체 내용: [[01_지식/Hermes-Daily-Log.md#Mid-Session UPDATE 12:00 KST]]
 📌 다음 기록: 15:30 EOD Confirmed Close
+
+
+---
+
+## 🧠 Brain Sync — 2026-06-10 (Wed) 14:02 KST (Afternoon Check)
+
+> **Mirror of 01_지식 — full entry there**
+
+### 📋 System Snapshot
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| **Uptime** | 🟢 | 12h 59m (재부팅 01:03) |
+| **Swap** | 🟢 | **118MiB (5.8%)** — 12:46 30MiB→118MiB (+88MiB/1h15m) |
+| **Memory** | 🟡 | 5.2Gi/7.6Gi (68%) |
+| **C: Drive** | 🟡 | 83% (80Gi) |
+| **Gateway RSS** | 🟢 | PID 86488, 484MB (12:46 796MB→감소) |
+| **10_Wiki** | 🟢 | **899 files** (12:46 889→+10) |
+| **Tmux** | 🟢 | 6개 정상 |
+
+### 🔴 KOSPI 7,590 (-6.25%) — Bloody Monday 저점 근접
+
+| 지표 | 값 | 등락 |
+|:----|:----:|:----:|
+| KOSPI | 7,590.69 | -6.25% 🔴🔴 |
+| KOSDAQ | 937.29 | -3.15% 🔴 |
+| USD/KRW | 1,524.88 | -0.03% 🟢 |
+| WTI | $88.76 | +0.63% 🟢 |
+
+- 12:00 7,796(-3.71%)→14:02 7,590(-6.25%): 206p 추가 하락
+- Bloody Monday 저점(7,484)에 106p 근접
+- CPI 발표(6/10~11)가 7,500 방어 vs 7,000 테스트 결정
+
+### Swap 가속 주시
+
+~70MiB/h 성장 (≥50MiB/h 임계). Gateway RSS 정상. EOD까지 200-250MiB 예상.
+
+> **Next**: 15:30 EOD Confirmed Close
