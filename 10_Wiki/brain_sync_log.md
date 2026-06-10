@@ -1,5 +1,17 @@
 
-## 🧠 Brain Sync — 2026-06-09 20:47 KST
+## 🧠 Brain Sync — 2026-06-10 08:46 KST
+
+| 항목 | 상태 |
+|:-----|:-----|
+| **Vault operation** | ✅ Brain Sync + Knowledge Cycle — 6/10(수) 08:46 KST (6/10 04:47→08:46, +4h) |
+| **System health** | 🟢 Uptime 7h43m, Mem 3.8Gi/50%, Load 0.26 |
+| **Swap** | 🟡 **371MiB** (18%) — 250MiB→371MiB 재축적 중 |
+| **Gateway RSS** | 🟢 **511MB** (PID 14229) — 정상 |
+| **C: Drive** | 🔴 **83%** (82Gi 여유) — 재부팅 효과 유지 |
+| **금일 핵심 이벤트** | 🔥 **KOSPI +8.18% (8,097):** 전일 블랙먼데이(-8.29%) 후 폭발적 반등! 젠슨황 HBM4 3사 퀄 승인 |
+| **가상오피스** | Docs 3,578📈 / Quotes 402📈 / Tax 1,406📈 / 중국메일 719📈 |
+| **변경 파일** | 2건 (01_지식/Hermes-Daily-Log.md, 00-Home.md) |
+
 
 | 항목 | 상태 |
 |:-----|:-----|
