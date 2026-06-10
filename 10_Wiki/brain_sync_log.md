@@ -1,4 +1,21 @@
 
+
+## 🧠 Brain Sync -- 2026-06-10 12:00 KST
+
+| 항목 | 상태 |
+|:-----|:-----|
+| **Vault operation** | ✅ Mid-Session Update -- 6/10(수) 12:00 KST (08:46->12:00, +3h) |
+| **System health** | 🟢 Uptime 11h(재부팅 01:02), Mem 4.9Gi/64%, Load 1.13 |
+| **Swap** | 🟢🟢 **5.8MiB** (0.3%) -- 사실상 초기화! |
+| **Gateway RSS** | 🟢 **332MB** (PID 86488) -- Telegram-only 정상 |
+| **C: Drive** | 🟡 **83%** (82Gi 여유) -- 유지 |
+| **시장** | 🔴🔴 **KOSPI 7,796(-3.71%):** 8,000선 재붕괴! 삼성전자 -5.43%, SK하이닉스 -5.64% |
+| **10_Wiki** | 🟢 **885 files** (08:00 863->+22, +5.5/h) |
+| **변경 파일** | 3건 (01_지식/Hermes-Daily-Log.md, 02-Knowledge/Hermes-Daily-Log.md, 00-Home.md) |
+
+---
+
+
 ## 🧠 Brain Sync — 2026-06-10 08:46 KST
 
 | 항목 | 상태 |

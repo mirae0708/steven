@@ -107,3 +107,14 @@ tags: [hermes, daily-log, brain-sync, system-snapshot]
 - C: drive 85% stable — Auto-Evolution 86% was sampling artifact (MCP temp files)
 - No MCP collection after 18:56 — evening quiet period
 - Context/Members/Agents: 모두 변경 없음
+
+
+
+### 📊 Mid-Session UPDATE -- 6/10(수) 12:00 KST: KOSPI 7,796 (-3.71%), 8,000선 붕괴 재진입! 🚨
+
+**6/10 12:00 KST**: KOSPI가 전일 +8.18% 반등 마감(8,097)에서 -3.71%(7,796) 급락, 8,000선 재붕괴. 삼성전자(-5.43%), SK하이닉스(-5.64%) 차익실현. CPI 발표(6/10~11) 앞둔 관망세. USD/KRW 1,524 안정. WTI $88.87.
+
+**시스템**: Swap **5.8MiB (0.3%) 🟢🟢** 사실상 초기화! Gateway 332MB 정상, C: 83%. 10_Wiki **885 files** (08:00→12:00 +22). tmux 7개 전원 정상.
+
+📌 전체 내용: [[01_지식/Hermes-Daily-Log.md#Mid-Session UPDATE 12:00 KST]]
+📌 다음 기록: 15:30 EOD Confirmed Close
