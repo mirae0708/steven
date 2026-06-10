@@ -156,3 +156,19 @@ tags: [hermes, daily-log, brain-sync, system-snapshot]
 ~70MiB/h 성장 (≥50MiB/h 임계). Gateway RSS 정상. EOD까지 200-250MiB 예상.
 
 > **Next**: 15:30 EOD Confirmed Close
+
+
+---
+
+## 🧠 EOD Confirmed Close — 2026-06-10 (Wed) 16:01 KST
+
+**System**: Uptime 15h🟢, Swap **1.4Gi/2.0Gi(68%)🔴🔴**, Mem 4.0Gi🟡, Load 0.24🟢, C:83%🟡, tmux 6개✅
+**Swap EMERGENCY**: 14:02 118MiB→16:01 1,411MiB(+1,293MiB/2h=~647MiB/h!!). 예측 대비 5.6x 초과 폭발.
+**Gateway**: PID 86488, 415MB🟢 (08:36 이후 동일, 재시작 없음)
+**KOSPI EOD 7,730(-4.52%)🔴🔴**: 7,500 방어 성공! 14:02 저점(7,590)→+140p 반등마감
+**KOSDAQ 951(-1.67%)🔴 / USD/KRW 1,526🟢 / WTI $88.04🟢**
+**10_Wiki**: 901 files (+2 since 14:02, +38/day)
+**Key**: Swap 비선형 폭발 최초 관측(post-reboot). 2Gi 한계 임박(636Mi 잔여). CPI 발표 대기.
+**Active**: 🔴🔴 Swap 68% EMERGENCY / 🔴🔴 KOSPI CPI 리스크 / 🟡 C:83%, FOMC D-6
+
+> **Next**: 20:00 KST Evening Brain Sync
