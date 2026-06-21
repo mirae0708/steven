@@ -186,3 +186,16 @@ tags: [hermes, daily-log, brain-sync, system-snapshot]
 **Active**: 🔴 Swap 66% Plateau / 🔴🔴 CPI 21:30 대기 / 🟡 C:83%, FOMC D-6
 
 > **Next**: 21:30 CPI 발표 후 다음 사이클
+
+
+## Brain Sync — 2026-06-22 (Mon) 08:46 KST
+
+**System**: Uptime 22h, Swap **918MiB(45.9%)**🟡 (04:46 1,126MiB→918MiB, **-208MiB recovery**, -52MiB/h), Mem 2.9Gi🟢, Load 0.13🟢, C:87%🟡, tmux 7개✅
+**Gateway**: PID 271176, 401MB🟢 (4h+ 안정, Port 8642 LISTENING)
+**KOSPI/KOSDAQ**: 장 전 (09:00 개장, 14분 전)
+**10_Wiki**: 1,090 files (정지, 6/19 이후 0건 — 4일차)
+**Swap trajectory**: 04:46 예측 "12h 내 90%+" → 실제 감소 -208MiB. 방향성 오류 — 예측 정정 완료.
+**Key**: 🟢 Swap 자가 회복 중(45.9%), 🔴 10_Wiki 4일 정지, 🔴 Unified Hub(8650) DOWN, 🟡 C:87%, 🟡 시장데이터 10일 갭
+
+> **Next**: 09:00 KST Pre-Market Brain Sync
+
