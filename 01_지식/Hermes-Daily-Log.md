@@ -668,3 +668,98 @@
 | 4 | **10_Wiki +26 (932)** — 목요일 수집 저조 원인 확인 | 🟢 | 모니터링 |
 
 > **다음 기록**: 08:00 KST Pre-Market Brain Sync (6/12 금요일 장 전)
+
+---
+
+## 🧠 Late-Night Brain Sync — 2026-06-22 (Mon) 04:46 KST
+
+> **직전 사이클**: 00:47 KST Brain Sync (~4h 전)
+> **⚠️ 10일 갭 복구 중**: 6/12 이후 크론 정지 → 6/22 00:47 재개. 00:47→04:46 첫 갭 내 사이클.
+> **Agent**: deepseek-v4-pro (cron 모드)
+> **Boot**: 2026-06-21 10:38 KST (18h 7m uptime)
+
+### 📋 시스템 현황 (04:46 KST)
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| **Uptime** | 🟢 | **18h 7m** (부트 6/21 10:38) |
+| **Swap** | 🔴 | **1.1GiB/2.0GiB (55%)** — 00:47 909MiB→1,126MiB, +217MiB/4h (~54MiB/h). 50% 임계 돌파 |
+| **Memory** | 🟢 | 2.6Gi/7.6Gi (34%) — 정상 |
+| **Loadavg** | 🟢 | 0.31/0.24/0.25 — 유휴 |
+| **C: Drive** | 🟡 | **87%** (63Gi 여유) — 00:47 대비 변동 없음, 61Gi→63Gi 약간 개선 |
+| **Gateway** | 🟢 | PID **271176**, RSS **322MB** — 4h 연속 안정 운용. Port 8642 LISTENING ✅ |
+| **Tmux 세션** | 🟢 | **7개** — cowagent/hermes-mcp/jongdari/metaclaw/omega-logistics-erp/opendesign/vo (전원 정상) |
+| **Open WebUI (3000)** | 🟢 | PID 304, RSS 274MB — 청취 중 |
+| **10_Wiki** | 🔴 | **1,087 files — 정지** (00:47 이후 0건, 6/19 이후 0건. 파이프라인 3일째 정지) |
+
+### 📊 Swap Trajectory — 50% 임계 돌파
+
+| 시간 | 스왑 | 변화 | 비고 |
+|:----|:----:|:----:|:-----|
+| 6/21 10:38 (부트) | 0MiB | — | 커널 리셋 |
+| 6/22 00:47 | 909MiB (44.4%) | — | 첫 측정, ~64MiB/h 누적 |
+| **6/22 04:46 (NOW)** | **1,126MiB (55%)** | **+217MiB/4h (~54MiB/h)** | **Post-reboot elevated zone 지속, 50% 돌파** |
+
+**분석**:
+- 00:47→04:46: +217MiB/4h = ~54MiB/h — 이전 ~64MiB/h 대비 약간 감소했으나 여전히 Post-reboot elevated zone (≥30MiB/h threshold)
+- 50% 임계 돌파 (55%). 더 이상 Early Warning 구간 아님
+- 상위 RSS: Open WebUI 274MB + hermes-web-ui 158MB + Gateway 322MB + nexus_orch 267MB + MetaClaw 179MB + hermes 226MB = ~1.4Gi active RSS
+- 18h post-boot 시점, 이전 사이클(6/10)의 같은 시점 swap 118MiB 대비 **9.5배 높음** — 동일 부트 사이클 아님 (다른 부트)
+- 현 속도(~54MiB/h) 유지 시 12h 내 1.8Gi (90%+) 도달 예상
+
+### 🔴 10_Wiki 파이프라인 — 3일째 정지
+
+| 기간 | 신규 파일 | 속도 |
+|:-----|:--------:|:----:|
+| 6/12→6/19 (7d) | +155 | ~22/d |
+| 6/19→6/20 (1d) | **0** | 정지 의심 |
+| 6/20→6/22 (3d) | **0** | **확인된 정지** 🔴 |
+
+- 마지막 파일: 2026-06-19 15:20 KST (Sovereign Execution Brokers 논문 외)
+- `tech_brain_sync.py` 또는 `wiki-expansion` 크론 확인 필요
+- 기술 스캐빈저 / arXiv 수집기 재가동 필요
+
+### 📊 시장 — 월요일 장 전 (09:00 개장)
+
+| 지표 | 6/12 종가 | 추세 |
+|:----|:--------:|:-----|
+| KOSPI | 7,730~ 추정 | 10일 갭 — 데이터 미수집 |
+| KOSDAQ | 951~ 추정 | 10일 갭 — 데이터 미수집 |
+
+⚠️ 10일 갭 동안 시장 데이터 수집/기록 없음. 장 전 브리핑 크론 재가동 필요.
+
+### 📝 00:47 Session Recap (반영되지 않은 사항 포함)
+
+1. **API_SERVER_KEY 이슈 해결** — Gateway port 8642 정상 청취, Dashboard 접속 가능 ✅
+2. **10_Wiki 1,087 돌파** — 6/19까지 +155건 신규 수집
+3. **Swap 909MiB → 1,126MiB** — 4시간 만에 +217MiB
+4. **C: Drive 87% → 87%** — 63Gi 유지
+5. **tmux 7개 세션 정상** — cowagent/hermes-mcp/jongdari/metaclaw/omega-logistics-erp/opendesign/vo
+
+### 📌 오늘의 주목 활동
+
+- **가상오피스 정오 브리핑** (03:03 KST, off-schedule): Unified Hub(8650) DOWN 감지, 운영 파이프라인 10일 정지, China Post Logistics 단일 타겟 편중. Finance 에이전트 역할 불일치.
+- **OCR 추출 대규모 개선** (6/21-22 세션): `ocr_extract.py` 4곳 패치 — `ON BOARD`/`N/M` boilerplate 필터링, HBL No. MRL/MRN 패턴 추가, NN 폼 cargo 건너뛰기, 24/24 배치 PASS 달성
+- **Gemma 4 모델 테스트** (6/22 03:36): LM Studio에서 deepseek-v4-pro → gemma-4-26b 전환 테스트
+
+### 🧠 Key Findings
+
+1. **Swap 55% (1.1GiB) — 50% 임계 돌파** 🔴: 00:47 909MiB→04:46 1,126MiB. ~54MiB/h 상승 지속. Post-reboot elevated zone — 18h post-boot 시점 비정상적 고수준.
+2. **10_Wiki 파이프라인 3일 정지** 🔴: 6/19 15:20 이후 0건. 기술 스캐빈저/arXiv 크론 중단 확인 필요.
+3. **Gateway 4h 연속 안정** 🟢: PID 불변(271176), RSS 322MB, port 청취 정상.
+4. **C: Drive 63Gi 안정** 🟡: 87% 유지. 00:47 대비 2Gi 회복.
+5. **가상오피스 Unified Hub 다운** 🔴: Port 8650 미작동 — 위챗/카톡/고객포털 연결 불가.
+6. **OCR Batch 24/24 PASS** 🟢: `ON BOARD`/`N/M` boilerplate 문제 해결. Shipper/Consignee 추출 정확도 대폭 개선.
+
+### 🚧 Active Items
+
+| # | 작업 | 긴급도 | 상태 |
+|:-:|:-----|:-----:|:----:|
+| 1 | **Swap 55% (1.1GiB) — 50% 임계 돌파** | 🔴 | ~54MiB/h, 12h 내 90%+ 예상 |
+| 2 | **10_Wiki 수집 파이프라인 재가동** — 6/19 이후 3일 정지 | 🔴 | 크론 점검 필요 |
+| 3 | **Unified Hub (8650) 복구** — 가상오피스 고객 채널 차단 | 🔴 | hermes-service-recovery-procedure |
+| 4 | **가상오피스 운영 파이프라인 정지** — 10일째 Booking/문서 없음 | 🟡 | auto_work_loop 진단 |
+| 5 | **C: 드라이브 87% (63Gi)** | 🟡 | 모니터링 |
+| 6 | **시장 데이터 수집 크론 복구** — 10일 갭 | 🟡 | 월요일 장 전까지 |
+
+> **다음 기록**: 09:00 KST Pre-Market Brain Sync (6/22 월요일 장 전)
