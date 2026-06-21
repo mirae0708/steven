@@ -511,3 +511,160 @@
 | 4 | **10_Wiki** — 금일 +43건, 심야 수집 중단 | 🟢 | 내일 재개 |
 
 > **다음 기록**: 08:00 KST Pre-Market Brain Sync (6/11 목요일 장 전)
+|
+
+## 🧠 Brain Sync — 2026-06-22 (Mon) 00:47 KST (10-Day Gap Recovery)
+
+> **직전 사이클**: 2026-06-12 00:48 KST (~10d 전, Late-Night Recovery)
+> **⚠️ 10일 갭**: 6/12 이후 첫 Brain Sync. Auto-Evolution 6/9 정지, Knowledge Tips 6/12 정지.
+> **Agent**: deepseek-v4-pro (cron 모드)
+> **Boot**: 2026-06-21 10:38 KST (14h 8m uptime — 신규 부트 사이클)
+
+### 📋 시스템 현황 (00:47 KST)
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| **Uptime** | 🟢 | **14h 8m** (신규 부트 6/21 10:38) |
+| **Swap** | 🟡 | **909MiB/2,048MiB (44.4%)** — 14h post-boot, ~64MiB/h 축적률. 10-50% 구간 상단 |
+| **Memory** | 🟢 | 3.0Gi/7.6Gi (40%) — 정상 |
+| **Loadavg** | 🟢 | 0.33/0.38/0.49 — 유휴 |
+| **C: Drive** | 🟡 | **87%** (61Gi 여유) — 6/12 84%→87%, +3% in 10d |
+| **Gateway** | 🟢 | PID **271176**, RSS **235MB** — 정상. Port 8642 LISTENING ✅. config: platforms.api_server.enabled=True |
+| **Gateway 사항** | 🟢 | 3-커맨드 검증 완료 (Pitfall #16): config enabled=True + 프로세스 생존 + port 8642 청취 — 모두 정상 |
+| **Tmux 세션** | 🟢 | **7개** — cowagent/hermes-mcp/jongdari/metaclaw/omega-logistics-erp/opendesign/vo (전원 정상) |
+| **Open WebUI (3000)** | 🟢 | 청취 중 |
+| **10_Wiki** | 🟢→🟡 | **1,087 files** (6/12 932→+155 in 10d, ~15.5/d). 단, 최근 24h: 0건 추가 — 수집 파이프라인 정지 의심 |
+
+### 📊 Swap Trajectory (신규 부트 사이클)
+
+| 시간 | 스왑 | 비고 |
+|:----|:----:|:-----|
+| 6/21 10:38 (부트) | 0MiB | 커널 세션 리셋 |
+| 6/22 00:47 (현재) | 909MiB (44.4%) | 14h, ~64MiB/h 축적률. Post-reboot elevated zone (≥30MiB/h threshold) |
+
+### 🔍 신규 발견
+
+**1. 10일 Brain Sync 갭 발생 (6/12→6/22)**
+- 마지막 Daily Log: 6/12 00:45
+- 마지막 Auto-Evolution: 6/9 22:30
+- 마지막 Knowledge Tips: 6/12
+- Cron 이 6/12 이후 실행되지 않았거나 실패했을 가능성
+- 10_Wiki 수집만 6/12~6/19 사이 지속되다 6/20 이후 정지
+
+**2. 10_Wiki 파이프라인 정지 감지**
+- 총 1,087 files (6/12 932 대비 +155)
+- 최근 5일: +88건, 3일: +33건, 1일: **0건** → 파이프라인이 6/20 이후 완전 정지
+- 6/12~6/19 사이 평균 ~19/d로 수집 지속, 6/20 이후 중단
+- 기술 스캐빈저 / wiki-expansion cron 확인 필요
+
+**3. Swap 44.4% — Post-Reboot Elevated Zone**
+- 14h post-boot에 909MiB (44.4%), 축적률 ~64MiB/h
+- Post-reboot accelerated threshold (≥30MiB/h) 상회
+- 상위 RSS 프로세스: Open WebUI 312MB, hermes_bridge 286MB, hermes-web-ui 249MB, Gateway 235MB, nexus_orch 236MB — 분산 RSS 패턴
+- Pitfall #29 적용: Post-reboot 분산 RSS 환경에서 swap 가속 가능성 주의. Memory 40%로 여유 있으나 swap 지속 증가 시 심야 고점 1.5Gi+ 가능
+
+**4. Gateway 정상 확인 (Pitfall #16 독립 검증)**
+- Config: `platforms.api_server.enabled: True`
+- 프로세스: PID 271176, RSS 235MB ✅
+- Port 8642: LISTENING ✅
+- 6/12 당시 Key 누락 이슈 해결됨 (Dashboard 접속 가능)
+
+**5. C: 드라이브 87% — 10일간 +3%**
+- 6/12 84% → 현재 87%, 여유 61Gi
+- 주간 +0.3%/day 추세 — 임계(90%)까지 약 10일
+- Docker/캐시 정리 권장
+
+### 🧠 Key Findings
+
+1. **10일 갭 회복** — 6/12 이후 첫 Brain Sync. Context/Members/Agents 변경 없음.
+2. **Swap 44.4%** — Post-reboot elevated zone. 10-50% 구간 상단. 가속 여부는 다음 사이클에서 판단.
+3. **10_Wiki +155 (932→1,087)** — 6/19까지 수집 지속 후 6/20 정지. 파이프라인 재가동 필요.
+4. **Gateway 완전 정상** — Key 이슈 해결, port 8642 청취, 3-커맨드 검증 통과.
+5. **C: 87%** — 10일간 +3%. 주간 모니터링 지속.
+6. **시장**: 월요일 00:47 — 장 전. 09:00 개장 예정.
+
+### 🚧 Active Items
+
+| # | 작업 | 긴급도 | 상태 |
+|:-:|:-----|:-----:|:----:|
+| 1 | **10_Wiki 수집 파이프라인 재가동** — 6/20 이후 0건 | 🟡 | 확인 필요 |
+| 2 | **Swap 44.4% (909MiB)** — post-reboot elevated, 가속 감시 | 🟡 | 모니터링 |
+| 3 | **C: 드라이브 87% (61Gi)** — 10일간 +3%, 캐시 정리 권장 | 🟡 | 정리 필요 |
+| 4 | **Brain Sync cron 복구** — 6/12 이후 10일 갭 | 🟡 | cron 설정 확인 |
+| 5 | **Auto-Evolution cron 복구** — 6/9 이후 정지 | 🟡 | 재활성화 |
+
+> **다음 기록**: 09:00 KST Pre-Market Brain Sync (6/22 월요일 장 전)
+|
+
+## 🧠 Brain Sync — 2026-06-12 (Fri) 00:45 KST (Late-Night Recovery)
+
+> **직전 사이클**: 2026-06-11 00:47 KST (~24h 전, Late-Night CPI Aftermath)
+> **Agent**: deepseek-chat (cron 모드)
+> **Boot**: 2026-06-11 19:12 KST (5h 33m uptime)
+
+### 📋 시스템 현황 (00:45 KST)
+
+| 항목 | 상태 | 값 |
+|:-----|:----:|:---|
+| **Uptime** | 🟢 | **5h 33m** (재부팅 19:12) |
+| **Swap** | 🟢 | **31MiB (1.5%)** — 거의 초기화 상태, 새 부트 사이클 시작 |
+| **Memory** | 🟡 | 3.6Gi/7.6Gi (47%) — 정상 범위 |
+| **Loadavg** | 🟢 | 0.03/0.18/0.25 — 유휴 상태 |
+| **C: Drive** | 🟡 | **84%** (74Gi 여유) — 지난주와 동일 |
+| **Gateway RSS** | 🟢 | PID **136956**, **279MB** — 정상 범위 (신규 부트 기준) |
+| **Gateway 사항** | 🟡 | api_server.enabled: True BUT key='' (빈 값) → port 8642 NOT listening. Gateway 로그: "Refusing to start: API_SERVER_KEY is required for the API server". 새로운 Hermes 버전에서 loopback-only 바인드에도 Key 요구. |
+| **Tmux 세션** | 🟢 | **7개** — hermes/hermes-mcp/cowagent/jongdari/metaclaw/omega-logistics-erp/opendesign (전원 정상) |
+| **Open WebUI (3000)** | 🟢 | 청취 중 |
+| **Wcferry 브릿지 (30002)** | 🟡 | Gateway 연결 실패 — wcferry WeChat 브릿지에 접속 불가 |
+| **10_Wiki** | 🟢 | **932 files** (6/11 00:47 906 대비 +26, 24h growth: ~+1.1/h — 낮은 증가율) |
+
+### 📊 Swap Recovery 추이 (신규 부트 사이클)
+
+| 시간 | 스왑 | 비고 |
+|:----|:----:|:-----|
+| 6/11 00:47 (이전 부트 마감) | 1,536MiB (75%) | CPI 이후 심야 고점 |
+| 6/11 19:12 (신규 부트 시작) | 0MiB | 커널 세션 리셋 |
+| 6/12 00:45 (현재) | 31MiB (1.5%) | 신규 부트 5.5h, 초기 정상 수준 |
+
+### 🔍 신규 발견
+
+**1. Gateway API_SERVER_KEY 누락으로 port 8642 미청취**
+- Config: `platforms.api_server.enabled: True` (6/11 23:59 수정) BUT key=''
+- Gateway 로그: `[Api_Server] Refusing to start: API_SERVER_KEY is required for the API server, including loopback-only binds on 127.0.0.1.`
+- Gateway 프로세스 자체는 정상(PID 136956, 279MB RSS) — Telegram 봇 기능은 정상
+- API Server 미가동 = Hermes WebUI Dashboard (8642) 접속 불가
+- **해결 필요**: `.env`에 `API_SERVER_KEY` 설정 후 Gateway 재시작
+
+**2. Gateway Silent Restart (PID 328351→136956)**
+- 6/11 00:47 당시 PID 328351 (RSS 236MB)
+- 현재 PID 136956 (RSS 279MB — 5.5h uptime 기준 정상)
+- 부트 사이클이 변경되어 Gateway도 자연스럽게 재시작됨 (6/11 19:12 재부팅)
+
+**3. 6/11(목) 전체 Brain Sync 미발생**
+- 마지막 Daily Log가 6/11 00:47 이후, 전일(6/11)은 Brain Sync 기록 없음
+- 10_Wiki +26건 수집 → 자동 수집 파이프라인은 정상 작동
+- 6/11(목)은 장중 활동이 적었거나 cron이 실행되지 않았을 가능성
+
+**4. Wcferry(WeChat 브릿지) 불통 상태**
+- Gateway 로그: 매 5분마다 `[Wcferry] wcferry bridge at http://127.0.0.1:30002 is not reachable`
+- WeChat(위챗) 클라이언트가 실행되지 않아 wcferry가 HTTP 30002에서 응답 없음
+- 텔레그램 봇은 정상 작동 중
+
+### 🧠 Key Findings
+
+1. **새 부트 사이클 (5.5h) — Swap 31MiB(1.5%)** 🟢 — 이전 사이클의 1,536MiB(75%) 급증 이후 리셋됨
+2. **Gateway API Server Key 누락** — `enabled: True`로 설정되었으나 Key 미설정으로 8642 NOT listening. 설정 완료 필요.
+3. **10_Wiki +26 (906→932)** — 목요일 수집량 낮음 (+1.1/h), 전주 패턴 대비 저조
+4. **C: 드라이브 84% 유지** — 변동 없음
+5. **Wcferry WeChat 브릿지 불통** — 위챗 클라이언트 미실행
+
+### 🚧 Active Items
+
+| # | 작업 | 긴급도 | 상태 |
+|:-:|:-----|:-----:|:----:|
+| 1 | **API_SERVER_KEY 설정** — port 8642 Dashboard 접속 복구 | 🔴 | 미해결 (key 누락) |
+| 2 | **C: 드라이브 84% (383Gi)** — 주간 모니터링 | 🟡 | 안정 |
+| 3 | **Wcferry WeChat 브릿지 불통** — 위챗 클라이언트 실행 필요 | 🟡 | 오프라인 |
+| 4 | **10_Wiki +26 (932)** — 목요일 수집 저조 원인 확인 | 🟢 | 모니터링 |
+
+> **다음 기록**: 08:00 KST Pre-Market Brain Sync (6/12 금요일 장 전)
